@@ -1,0 +1,16 @@
+---
+title: "Siyun Min"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      href: https://www.linkedin.com/in/kevinmin77/
+    - icon: github
+      href: https://github.com/sy9777m
+
+---
+
+# About this blog
+
+I'm still building this blog.
