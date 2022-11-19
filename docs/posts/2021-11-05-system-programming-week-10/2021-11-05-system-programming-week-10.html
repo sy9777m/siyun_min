@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-11-05">
+
+<title>Siyun Min - System Programming Week 10</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">System Programming Week 10</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 5, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="system-programming-week-10" class="level1">
+<h1>System Programming week 10</h1>
+<section id="random-access-memory-ram" class="level2">
+<h2 class="anchored" data-anchor-id="random-access-memory-ram">Random-Access Memory (RAM)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105044533457.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105044533457</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sram-vs.-dram-summary" class="level2">
+<h2 class="anchored" data-anchor-id="sram-vs.-dram-summary">SRAM vs.&nbsp;DRAM summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105044722848.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105044722848</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nonvolatile-memories" class="level2">
+<h2 class="anchored" data-anchor-id="nonvolatile-memories">Nonvolatile memories</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105044811282.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105044811282</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="traditional-bus-structure-connecting-cpu-and-memory" class="level2">
+<h2 class="anchored" data-anchor-id="traditional-bus-structure-connecting-cpu-and-memory">Traditional bus structure connecting CPU and memory</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045057795.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045057795</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="memory-read-transaction" class="level2">
+<h2 class="anchored" data-anchor-id="memory-read-transaction">Memory read transaction</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045208162.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045208162</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045212633.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045212633</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045222250.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045222250</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045228105.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045228105</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045233171.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045233171</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045237172.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045237172</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="whats-inside-a-disk-drive" class="level2">
+<h2 class="anchored" data-anchor-id="whats-inside-a-disk-drive">What’s inside a disk drive?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045349573.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045349573</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-geometry" class="level2">
+<h2 class="anchored" data-anchor-id="disk-geometry">Disk geometry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045402870.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045402870</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045523609.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045523609</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-capacity" class="level2">
+<h2 class="anchored" data-anchor-id="disk-capacity">Disk capacity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045534589.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045534589</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recording-zones" class="level2">
+<h2 class="anchored" data-anchor-id="recording-zones">Recording zones</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045825242.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045825242</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computing-disk-capacity" class="level2">
+<h2 class="anchored" data-anchor-id="computing-disk-capacity">Computing disk capacity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105045954225.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105045954225</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-operation-single-platter-view" class="level2">
+<h2 class="anchored" data-anchor-id="disk-operation-single-platter-view">Disk operation (single-platter view)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050057842.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050057842</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-operation-multi-platter-view" class="level2">
+<h2 class="anchored" data-anchor-id="disk-operation-multi-platter-view">Disk operation (multi-platter view)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050244248.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050244248</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-structure---top-view-of-single-platter" class="level2">
+<h2 class="anchored" data-anchor-id="disk-structure---top-view-of-single-platter">Disk structure - top view of single platter</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050303081.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050303081</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-access" class="level2">
+<h2 class="anchored" data-anchor-id="disk-access">Disk access</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050312625.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050312625</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050317570.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050317570</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050322008.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050322008</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050327362.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050327362</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050333026.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050333026</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050341107.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050341107</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050346698.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050346698</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050353387.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050353387</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050402110.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050402110</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-access-time" class="level2">
+<h2 class="anchored" data-anchor-id="disk-access-time">Disk access time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050412211.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050412211</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050619395.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050619395</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="logical-disk-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="logical-disk-blocks">Logical disk blocks</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105050750980.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105050750980</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="io-bus" class="level2">
+<h2 class="anchored" data-anchor-id="io-bus">I/O bus</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051056494.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051056494</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reading-a-disk-sector" class="level2">
+<h2 class="anchored" data-anchor-id="reading-a-disk-sector">Reading a disk sector</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051108819.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051108819</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051239548.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051239548</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051248387.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051248387</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="solid-state-disks-ssds" class="level2">
+<h2 class="anchored" data-anchor-id="solid-state-disks-ssds">Solid State Disks (SSDs)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051431580.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051431580</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ssd-tradeoffs-vs.-rotating-disks" class="level2">
+<h2 class="anchored" data-anchor-id="ssd-tradeoffs-vs.-rotating-disks">SSD tradeoffs vs.&nbsp;rotating disks</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051715488.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051715488</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-cpu-memory-gap" class="level2">
+<h2 class="anchored" data-anchor-id="the-cpu-memory-gap">The CPU-memory gap</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105051857954.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105051857954</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="locality-to-the-rescue" class="level2">
+<h2 class="anchored" data-anchor-id="locality-to-the-rescue">Locality to the rescue!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052014751.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052014751</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-memory-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="example-memory-hierarchy">Example memory hierarchy</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052109127.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052109127</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="locality" class="level2">
+<h2 class="anchored" data-anchor-id="locality">Locality</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052027082.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052027082</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052047171.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052047171</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="qualitative-estimates-of-locality" class="level2">
+<h2 class="anchored" data-anchor-id="qualitative-estimates-of-locality">Qualitative estimates of locality</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052421509.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052421509</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="locality-example" class="level2">
+<h2 class="anchored" data-anchor-id="locality-example">Locality example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052507969.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052507969</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052519356.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052519356</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="memory-hierarchies" class="level2">
+<h2 class="anchored" data-anchor-id="memory-hierarchies">Memory hierarchies</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052533333.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052533333</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="caches" class="level2">
+<h2 class="anchored" data-anchor-id="caches">Caches</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105052923955.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105052923955</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-cache-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="general-cache-concepts">General cache concepts</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105053032275.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105053032275</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105053055659.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105053055659</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105053103069.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105053103069</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-caching-concepts-types-of-cache-misses" class="level2">
+<h2 class="anchored" data-anchor-id="general-caching-concepts-types-of-cache-misses">General caching concepts: types of cache misses</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105053123155.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105053123155</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

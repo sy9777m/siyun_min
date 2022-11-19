@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-19">
+
+<title>Siyun Min - Digital System Circuits midterm</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Digital System Circuits midterm</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 19, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="digital-system-circuits-midterm" class="level1">
+<h1>Digital System Circuits Midterm</h1>
+<section id="what-does-digital-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-digital-mean">What does ‘digital’ mean?</h2>
+<p>Digital signal - signal that at any time one of a finite of possible values</p>
+<p>Analog signal or Continuous signal - one of any infinite of possible values</p>
+<p>Analog signal -&gt; sampling, quantization, coding -&gt; digital signal</p>
+</section>
+<section id="digital-signals-with-only-two-values-binary" class="level2">
+<h2 class="anchored" data-anchor-id="digital-signals-with-only-two-values-binary">Digital signals with only two values: binary</h2>
+<p>A single binary signal: binary digit or bit</p>
+<p>Typically represented as 0 and 1, on or off</p>
+<p>Digital system - takes digital input, generates digital output</p>
+<p>Digital circuit - digital components that together comprise a digital system</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019142744917.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019142744917</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="how-to-encode-text-ascii-unicode" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-encode-text-ascii-unicode">How to encode text: ASCII, Unicode</h2>
+<section id="ascii-american-standard-code-for-information-interchange" class="level3">
+<h3 class="anchored" data-anchor-id="ascii-american-standard-code-for-information-interchange">ASCII (American Standard Code for Information Interchange)</h3>
+<p>7- (or 8-) bit encoding of each letter, number, or symbol</p>
+</section>
+<section id="unicode-universal-code-system" class="level3">
+<h3 class="anchored" data-anchor-id="unicode-universal-code-system">Unicode (Universal Code system)</h3>
+<p>Increasingly popular 16-bit encoding</p>
+<p>데이터 교환을 원활하게 하기 위하여 문자 1개에 부여되는 값을 16bit으로 통일</p>
+</section>
+</section>
+<section id="how-to-encode-numbers-binary-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-encode-numbers-binary-numbers">How to encode numbers: binary numbers</h2>
+<p>Most important use of digital circuit - perform arithmetic computations</p>
+<p>to perform arithmetic computation -&gt; encode numbers as bits</p>
+</section>
+<section id="using-digital-data-in-a-digital-system" class="level2">
+<h2 class="anchored" data-anchor-id="using-digital-data-in-a-digital-system">Using digital data in a digital system</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143049569.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143049569</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="converting-from-binary-to-decimal" class="level2">
+<h2 class="anchored" data-anchor-id="converting-from-binary-to-decimal">Converting from binary to decimal</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143143025.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143143025</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143152970.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143152970</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143202562.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143202562</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hexadecimal-hex" class="level2">
+<h2 class="anchored" data-anchor-id="hexadecimal-hex">Hexadecimal, hex</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143232866.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143232866</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143917198.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143917198</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143934759.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143934759</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019143945772.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019143945772</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bytes-kilobytes-megabytes-and-more" class="level2">
+<h2 class="anchored" data-anchor-id="bytes-kilobytes-megabytes-and-more">Bytes, Kilobytes, Megabytes, and more</h2>
+<p>1 Byte = 8 bits</p>
+<p>1KB = <span class="math inline">\(2^{10}\)</span> bytes</p>
+<p>KB for kilobyte vs.&nbsp;Kb for kilobit</p>
+</section>
+<section id="implementing-digital-systems-programming-microprocessors-vs.-designing-digital-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="implementing-digital-systems-programming-microprocessors-vs.-designing-digital-circuits">Implementing digital systems: programming microprocessors vs.&nbsp;designing digital circuits</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019144427248.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019144427248</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="digital-design-when-microprocessors-arent-good-enough" class="level2">
+<h2 class="anchored" data-anchor-id="digital-design-when-microprocessors-arent-good-enough">Digital design: When microprocessors aren’t good enough</h2>
+<p>With Microprocessors so easy, cheap, and available, why design a digital circuit?</p>
+<ul>
+<li>Microprocessor may be to slow</li>
+<li>or too big, power hungry, or costly</li>
+</ul>
+<p>Commonly, designers partition a system among a microprocessor and custom digital circuits</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019144639391.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019144639391</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019144643649.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019144643649</figcaption><p></p>
+</figure>
+</div>
+<p>Microprocessors (themselves digital) can implement many digital systems easily and inexpensively</p>
+<ul>
+<li>but often not good enough-need custom digital circuits</li>
+</ul>
+</section>
+<section id="switches" class="level2">
+<h2 class="anchored" data-anchor-id="switches">Switches</h2>
+<p>Electronic switches are the basis of binary digital circuits</p>
+<p>Voltage - difference in electric potential between two points</p>
+<p>Resistance - tendency of wire to resist current flow</p>
+<p>Current - flow of charged particles</p>
+<p>A switch has three parts</p>
+<ul>
+<li>Source input, and output - current tries to flow from source input to output</li>
+<li>Control input - voltage that controls whether that current can flow</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019144910074.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019144910074</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-cmos-transistor" class="level2">
+<h2 class="anchored" data-anchor-id="the-cmos-transistor">The CMOS transistor</h2>
+<p>Basic switch in modern ICs</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019144929260.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019144929260</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="boolean-logic-gates---building-blocks-for-digital-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-logic-gates---building-blocks-for-digital-circuits">Boolean logic gates - building blocks for digital circuits</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145027125.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145027125</figcaption><p></p>
+</figure>
+</div>
+<p>Logic gates are better digital circuit building blocks than switches (transistors)</p>
+</section>
+<section id="boolean-algebra-and-its-relation-to-digital-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-algebra-and-its-relation-to-digital-circuits">Boolean Algebra and its relation to digital circuits</h2>
+<p>Variables represent 0 or 1 only</p>
+<p>Operators return 0 or 1 only</p>
+<p>Basic operators</p>
+<ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145129771.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145129771</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="relating-boolean-algebra-to-digital-design" class="level2">
+<h2 class="anchored" data-anchor-id="relating-boolean-algebra-to-digital-design">Relating Boolean Algebra to digital design</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145214878.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145214878</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="not-gate" class="level2">
+<h2 class="anchored" data-anchor-id="not-gate">NOT gate</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145355561.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145355561</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="or-gate" class="level2">
+<h2 class="anchored" data-anchor-id="or-gate">OR gate</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145417114.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145417114</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="and-gate" class="level2">
+<h2 class="anchored" data-anchor-id="and-gate">AND gate</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019145437083.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019145437083</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-that-applies-boolean-algebra-properties" class="level2">
+<h2 class="anchored" data-anchor-id="example-that-applies-boolean-algebra-properties">Example that applies Boolean Algebra properties</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019150627132.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019150627132</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019150731693.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019150731693</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="truth-table-representation-of-boolean-functions" class="level2">
+<h2 class="anchored" data-anchor-id="truth-table-representation-of-boolean-functions">Truth table representation of Boolean functions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019150804826.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019150804826</figcaption><p></p>
+</figure>
+</div>
+<p>Define value for F for each possible combination of input values</p>
+<ul>
+<li>2-input function: 4 rows</li>
+<li>3-input function: 8 rows</li>
+<li>4-input function: 16 rows</li>
+</ul>
+</section>
+<section id="converting-among-representations" class="level2">
+<h2 class="anchored" data-anchor-id="converting-among-representations">Converting among representations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019151016513.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019151016513</figcaption><p></p>
+</figure>
+</div>
+<section id="converting-from-truth-table-to-equation" class="level3">
+<h3 class="anchored" data-anchor-id="converting-from-truth-table-to-equation">Converting from truth table to equation</h3>
+<p>Parity bit - Extra bit added to data, intended to enable detection of error (a bit changed unintentionally)</p>
+<p>Even parity - set parity bit so total number of 1s (data + parity) is even</p>
+</section>
+</section>
+<section id="standard-representation-truth-table" class="level2">
+<h2 class="anchored" data-anchor-id="standard-representation-truth-table">Standard representation: Truth table</h2>
+<p>Only one truth table representation of a given function</p>
+<ul>
+<li>Standard representation-for given function, only one version in standard form exists</li>
+</ul>
+</section>
+<section id="canonical-form---sum-of-minterms" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-form---sum-of-minterms">Canonical form - sum of minterms</h2>
+<p>Truth table too big for numerous inputs</p>
+<p>Use standard form of equation instead</p>
+<ul>
+<li>Known as canonical form</li>
+<li>Boolean algebra - create sum of minterms
+<ul>
+<li>minterms - product term with every function literal appearing exactly once, in true or complemented form</li>
+<li>Just multiply-out equation until sum of product terms</li>
+<li>Then expand each term until all terms are minterms</li>
+</ul></li>
+</ul>
+</section>
+<section id="combinational-logic-design-process" class="level2">
+<h2 class="anchored" data-anchor-id="combinational-logic-design-process">Combinational logic design process</h2>
+<ol type="1">
+<li>Capture behavior - Capture the function</li>
+</ol>
+<p>Create a truth table or equations, whichever is most natural for the given problem, to describe the desired behavior of each output of the combinational logic.</p>
+<ol type="1">
+<li><p>Convert to circuit</p>
+<ol type="1">
+<li><p>Create equations</p>
+<p>This substep is only necessary if you captured the function using a truth table instead of equations. Create an equation for each output by ORing all the minterms for that output. Simplify the equations if desired.</p></li>
+<li><p>Implement as a get-based circuit</p>
+<p>For each output, create a circuit corresponding to the output’s equation. (Sharing gates among multiple outputs is OK optionally)</p></li>
+</ol></li>
+</ol>
+</section>
+<section id="example-keypad-converter" class="level2">
+<h2 class="anchored" data-anchor-id="example-keypad-converter">Example: Keypad converter</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019153813107.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019153813107</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019153818241.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019153818241</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-sprinkler-controller" class="level2">
+<h2 class="anchored" data-anchor-id="example-sprinkler-controller">Example: Sprinkler controller</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019153832137.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019153832137</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019153936469.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019153936469</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="more-gates" class="level2">
+<h2 class="anchored" data-anchor-id="more-gates">More gates</h2>
+<p>NAND - Opposite of AND</p>
+<p>NOR - Opposite of OR</p>
+<p>XOR - Exactly 1 input is 1, for 2-input XOR</p>
+<p>XNOR - Opposite of XOR (‘NOT XOR’)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154029357.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154029357</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="completeness-of-nand" class="level2">
+<h2 class="anchored" data-anchor-id="completeness-of-nand">Completeness of NAND</h2>
+<p>Any boolean function can be implemented using just NAND gates.</p>
+<ul>
+<li>NOT - 1-input NAND</li>
+<li>AND - NAND followed by NOT</li>
+<li>OR - NAND preceded by NOTs</li>
+</ul>
+</section>
+<section id="number-of-possible-boolean-functions" class="level2">
+<h2 class="anchored" data-anchor-id="number-of-possible-boolean-functions">Number of possible boolean functions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154401521.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154401521</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="decoders-and-muxes" class="level2">
+<h2 class="anchored" data-anchor-id="decoders-and-muxes">Decoders and Muxes</h2>
+<p>Decoder - popular combinational logic building block, in addition to logic gates</p>
+<ul>
+<li>Convert input binary number to one high output</li>
+<li>2-input decoder: four possible input binary numbers</li>
+<li>n-input decoder: <span class="math inline">\(2^{n}\)</span> outputs</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154603116.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154603116</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multiplexor-mux" class="level2">
+<h2 class="anchored" data-anchor-id="multiplexor-mux">Multiplexor (Mux)</h2>
+<p>Routes one of its N data inputs to its one output, based on binary value of select inputs</p>
+<ul>
+<li>4 input mux -&gt; needs 2 select inputs to indicate which input to route through</li>
+<li>8 input mux -&gt; 3 select inputs</li>
+<li>N inputs -&gt; <span class="math inline">\(\log_{2}{N}\)</span> selects</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154756284.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154756284</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154825139.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154825139</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154835456.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154835456</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019154949871.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019154949871</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155001367.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155001367</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="additional-considerations---non-ideal-gate-behavior---delay" class="level2">
+<h2 class="anchored" data-anchor-id="additional-considerations---non-ideal-gate-behavior---delay">Additional considerations - non-ideal gate behavior - delay</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155103235.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155103235</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="circuit-delay-and-critical-path" class="level2">
+<h2 class="anchored" data-anchor-id="circuit-delay-and-critical-path">Circuit delay and critical path</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155118740.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155118740</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="active-low-inputs" class="level2">
+<h2 class="anchored" data-anchor-id="active-low-inputs">Active low inputs</h2>
+<p>Data inputs - flow through component</p>
+<p>Control input - influence component behavior</p>
+<ul>
+<li>Normally active high - 1 causes input to carry out its purpose</li>
+<li>Active low - Instead, 0 causes input to carry out its purpose</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155317792.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155317792</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="schematic-capture-and-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="schematic-capture-and-simulation">Schematic capture and simulation</h2>
+<p>Schematic capture - computer tool for user to capture logic circuit graphically</p>
+<p>Simulator - computer tool to show what circuit outputs would be for given inputs</p>
+<ul>
+<li>outputs commonly displayed as waveform</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155433412.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155433412</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="boolean-algebra-properties" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-algebra-properties">Boolean algebra properties</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155449646.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155449646</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-that-applies-boolean-algebra-properties-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-that-applies-boolean-algebra-properties-1">Example that applies Boolean algebra properties</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155513430.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155513430</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155525955.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155525955</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155533495.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155533495</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-applying-demorgans-law" class="level2">
+<h2 class="anchored" data-anchor-id="example-applying-demorgans-law">Example applying DeMorgan’s Law</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155551514.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155551514</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-applying-properties" class="level2">
+<h2 class="anchored" data-anchor-id="example-applying-properties">Example applying properties</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155604379.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155604379</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="complement-of-a-function" class="level2">
+<h2 class="anchored" data-anchor-id="complement-of-a-function">Complement of a function</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019155641260.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019155641260</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="introduction-to-optimization-of-digital-logic-design" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-optimization-of-digital-logic-design">Introduction to optimization of digital logic design</h2>
+<p>Delay - the time from inputs changing to new correct stable output</p>
+<p>Size - the number of transistors</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019161704366.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019161704366</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tradeoff" class="level2">
+<h2 class="anchored" data-anchor-id="tradeoff">Tradeoff</h2>
+<p>Improves some, but worsens other, criteria of interest</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019161711162.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019161711162</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimization-and-tradeoff" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-and-tradeoff">Optimization and tradeoff</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019161722998.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019161722998</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="combinational-logic-optimization-and-tradeoffs" class="level2">
+<h2 class="anchored" data-anchor-id="combinational-logic-optimization-and-tradeoffs">Combinational logic optimization and tradeoffs</h2>
+<p>Two-level size optimization using algebraic methods</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019161833339.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019161833339</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Sum-of-products yield two levels</li>
+<li>Transform sum-of-products equation to have fewest literals and terms</li>
+</ul>
+</section>
+<section id="karnaugh-maps-for-two-level-size-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="karnaugh-maps-for-two-level-size-optimization">Karnaugh maps for two-level size optimization</h2>
+<p>Easy to miss possible opportunities to combine terms when doing algebraically</p>
+<p>Karnaugh Maps (K-maps)</p>
+<ul>
+<li>Graphical method to help us find opportunities to combine terms</li>
+<li>Minterms differing in one variable are adjacent in the map</li>
+<li>Can clearly see opportunities to combine terms</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162046523.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162046523</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162056139.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162056139</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162103174.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162103174</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162110035.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162110035</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162117868.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162117868</figcaption><p></p>
+</figure>
+</div>
+<section id="general-k-map-method" class="level3">
+<h3 class="anchored" data-anchor-id="general-k-map-method">General K-map method</h3>
+<ol type="1">
+<li>Convert the function’s equation into sum-of-minterms form</li>
+<li>Place 1s in the appropriate K-map cells for each minterm</li>
+<li>Cover all 1s by drawing the fewest largest circles, with every 1 included at least once; write the corresponding term for each circle</li>
+<li>OR all the resulting terms to create the minimized function</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162257738.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162257738</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162303804.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162303804</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162317921.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162317921</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="dont-care-input-combinations" class="level2">
+<h2 class="anchored" data-anchor-id="dont-care-input-combinations">Don’t care input combinations</h2>
+<p>What if we know that particular input combinations can never occur?</p>
+<ul>
+<li>On K-map
+<ul>
+<li>Draw Xs for don’t care combinations
+<ul>
+<li>Include X in circle ONLY if minimizes equation</li>
+<li>Don’t include other Xs</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162415602.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162415602</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162442823.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162442823</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162512356.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162512356</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="digital-design-process" class="level2">
+<h2 class="anchored" data-anchor-id="digital-design-process">Digital design process</h2>
+<p>Specification - planning - design entry - functional test - synthesis - post-synthesis test - APR, Parasitic Extraction &amp; Timing checks - Manufacture &amp; hardware validation</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162758455.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162758455</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019162808160.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019162808160</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-an-hdl" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-hdl">What is an HDL?</h2>
+<p>HDL = Hardware Description Language</p>
+<ul>
+<li>Allows for modeling &amp; simulation (with timing) of digital design</li>
+<li>Can be synthesized into hardware (netlist) by synthesis tools (Synopsys, Ambit, FPGA compilers)</li>
+<li>Two major standard in industry &amp; academia
+<ul>
+<li>Verilog - flexible, loose, more common</li>
+<li>VHDL - strongly typed, more common in defense and automotive</li>
+</ul></li>
+<li>It looks like a programming language.</li>
+<li>It is not a programming language.
+<ul>
+<li>It is always critical to recall you are describing hardware.</li>
+<li>This code’s primary purpose is to generate hardware.</li>
+<li>The hardware this code describes (a counter) can be simulated on a computer. In this secondary use of the language, it does act more like programming language.</li>
+</ul></li>
+</ul>
+</section>
+<section id="simulatingvalidating-hdl" class="level2">
+<h2 class="anchored" data-anchor-id="simulatingvalidating-hdl">Simulating/Validating HDL</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019163149377.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019163149377</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-synthesis">What is synthesis?</h2>
+<ul>
+<li>Takes a description of what a circuit does.</li>
+<li>Creates the hardware to do it.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019163252484.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019163252484</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="synthesizing-the-hardware-described" class="level2">
+<h2 class="anchored" data-anchor-id="synthesizing-the-hardware-described">Synthesizing the hardware described</h2>
+<ul>
+<li>All hardware created during synthesis</li>
+</ul>
+</section>
+<section id="why-use-an-hdl" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-an-hdl">Why use an HDL?</h2>
+<p>Enables larger design via rich syntax, modularity</p>
+<ul>
+<li>more abstract than schematics, allows larger designs
+<ul>
+<li>register transfer level description</li>
+<li>wide datapath can be abstracted to a single vector</li>
+<li>synthesis tool does the bulk of the tedious repetitive work vs.&nbsp;schematic capture</li>
+</ul></li>
+<li>Work at transistor/gate level for large designs - cumbersome</li>
+</ul>
+<section id="portable-design" class="level3">
+<h3 class="anchored" data-anchor-id="portable-design">Portable design</h3>
+<p>Behavioral or dataflow Verilog can be synthesized to a new process library with little effort.</p>
+<p>Verilog written in ASCII text. The ultimate in portability. Much more portable than the binary files of a GUI schematic capture tool.</p>
+</section>
+<section id="explore-large-solution-space" class="level3">
+<h3 class="anchored" data-anchor-id="explore-large-solution-space">Explore large solution space</h3>
+<p>Synthesis options can help optimize (power, area, speed)</p>
+<p>Synthesis options and coding styles can help examine tradeoffs</p>
+<ul>
+<li>speed</li>
+<li>power</li>
+<li>area</li>
+</ul>
+<p>Better validated designs</p>
+<ul>
+<li>Verilog itself is used to create the testbench
+<ul>
+<li>flexible method that allows self checking tests</li>
+<li>unified environment</li>
+</ul></li>
+<li>synthesis tools are very good from the boolean correctness point of view
+<ul>
+<li>if you have a logic error in your final design there is a 99.999% change that error exists in your behavioral code</li>
+<li>error caused in synthesis fall in the following categories
+<ul>
+<li>timing</li>
+<li>bad library definitions</li>
+<li>bad coding style</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="other-important-hdl-features" class="level3">
+<h3 class="anchored" data-anchor-id="other-important-hdl-features">Other important HDL features</h3>
+<ul>
+<li>Are highly portable (text)</li>
+<li>Are self-documenting (when commented well)</li>
+<li>Describe multiple levels of abstraction</li>
+<li>Represent parallelism</li>
+<li>Provides many descriptive styles
+<ul>
+<li>structural</li>
+<li>register transfer level (RTL)</li>
+<li>behavioral</li>
+</ul></li>
+<li>Serve as input for synthesis tools</li>
+</ul>
+</section>
+</section>
+<section id="hardware-implementations" class="level2">
+<h2 class="anchored" data-anchor-id="hardware-implementations">Hardware implementations</h2>
+<p>HDLs can be compiled to semi-custom and programmable hardware implementations</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019164417861.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019164417861</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019164457446.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019164457446</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="standard-cells" class="level2">
+<h2 class="anchored" data-anchor-id="standard-cells">Standard cells</h2>
+<p>Library of common gates and structures (cells)</p>
+<p>Decompose hardware in terms of these cells</p>
+<p>Arrange the cells on the chip</p>
+<p>Connect them using metal wiring</p>
+</section>
+<section id="fpgas" class="level2">
+<h2 class="anchored" data-anchor-id="fpgas">FPGAs</h2>
+<p>Programmable hardware</p>
+<p>Use small memories as truth tables of functions</p>
+<p>Decompose circuit into these blocks</p>
+<p>Connect using programmable routing</p>
+<p>SRAM bits control functionally</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019164903281.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019164903281</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-a-netlist" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-netlist">What is a Netlist?</h2>
+<p>A netlist is a ASCII text representation of the interconnect of a schematic.</p>
+<p>Many standard exists</p>
+<ul>
+<li>Spice netlist</li>
+<li>EDIF (Electronic Data Interchange Format)</li>
+<li>Structural Verilog Netlist</li>
+</ul>
+</section>
+<section id="combinational-logic" class="level2">
+<h2 class="anchored" data-anchor-id="combinational-logic">Combinational logic</h2>
+<p>Since HDLs try to abstract hardware design, do we even have to consider the hardware?</p>
+<ul>
+<li>Good hardware design requires ability to analyze a problem to find simplifications</li>
+<li>Multiple variables: throughput, area, latency, power</li>
+<li>Finding an optimal hardware implementation is a computationally complex problem. This synthesis tools need guidance on where to start.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019165132636.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019165132636</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="verilog-module" class="level2">
+<h2 class="anchored" data-anchor-id="verilog-module">Verilog module</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211019165205061.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211019165205061</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

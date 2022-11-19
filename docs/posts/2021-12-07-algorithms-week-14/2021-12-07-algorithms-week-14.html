@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-12-07">
+
+<title>Siyun Min - Algorithms Week 14</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Algorithms Week 14</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 7, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="algorithms-week-14" class="level1">
+<h1>Algorithms week 14</h1>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141940992.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141940992</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="np-completeness" class="level2">
+<h2 class="anchored" data-anchor-id="np-completeness">NP-completeness</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141951071.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141951071</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141957715.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141957715</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-should-we-care" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-we-care">Why should we care?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142007729.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142007729</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimization-decision-problems" class="level2">
+<h2 class="anchored" data-anchor-id="optimization-decision-problems">Optimization &amp; Decision problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142026959.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142026959</figcaption><p></p>
+</figure>
+</div>
+<p>optimization problems를 decision problems로 바꿀 수 있다.</p>
+</section>
+<section id="algorithmic-vs-problem-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="algorithmic-vs-problem-complexity">Algorithmic vs problem complexity</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142758253.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142758253</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="class-of-p-problems" class="level2">
+<h2 class="anchored" data-anchor-id="class-of-p-problems">Class of “P” problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142809652.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142809652</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tractable-intractable-problems" class="level2">
+<h2 class="anchored" data-anchor-id="tractable-intractable-problems">Tractable / Intractable problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142827277.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142827277</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207142837761.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207142837761</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-of-unsolvable-problem" class="level2">
+<h2 class="anchored" data-anchor-id="example-of-unsolvable-problem">Example of unsolvable problem</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190519099.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190519099</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-of-intractable-problems" class="level2">
+<h2 class="anchored" data-anchor-id="example-of-intractable-problems">Example of intractable problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190533317.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190533317</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hamiltonian-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="hamiltonian-cycle">Hamiltonian cycle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190545005.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190545005</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190550406.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190550406</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="traveling-salesman-problem" class="level2">
+<h2 class="anchored" data-anchor-id="traveling-salesman-problem">Traveling salesman problem</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190602257.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190602257</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190607504.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190607504</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190613192.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190613192</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="interactable-problems" class="level2">
+<h2 class="anchored" data-anchor-id="interactable-problems">Interactable problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190623321.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190623321</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="p-vs-np" class="level2">
+<h2 class="anchored" data-anchor-id="p-vs-np">P vs NP</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207190631332.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207190631332</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nondeterministic-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="nondeterministic-algorithms">Nondeterministic algorithms</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191524388.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191524388</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nondeterministic-and-np-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="nondeterministic-and-np-algorithms">Nondeterministic and NP algorithms</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191537537.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191537537</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191542505.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191542505</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="class-of-np-problems" class="level2">
+<h2 class="anchored" data-anchor-id="class-of-np-problems">Class of NP problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191926825.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191926825</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="p-and-np" class="level2">
+<h2 class="anchored" data-anchor-id="p-and-np">P and NP</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191934940.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191934940</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="e.g.-hamiltonian-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="e.g.-hamiltonian-cycle">E.g.: Hamiltonian cycle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207191947479.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207191947479</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="clay-mathematics-institute" class="level2">
+<h2 class="anchored" data-anchor-id="clay-mathematics-institute">Clay mathematics institute</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207192359045.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207192359045</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="is-p-np" class="level2">
+<h2 class="anchored" data-anchor-id="is-p-np">Is P = NP?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207192409180.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207192409180</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="p-and-np-1" class="level2">
+<h2 class="anchored" data-anchor-id="p-and-np-1">P and NP</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207192418865.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207192418865</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="np-completenes-informally" class="level2">
+<h2 class="anchored" data-anchor-id="np-completenes-informally">NP-completenes (informally)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207205120564.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207205120564</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reduction" class="level2">
+<h2 class="anchored" data-anchor-id="reduction">Reduction</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207205230194.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207205230194</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="polynomial-reductions" class="level2">
+<h2 class="anchored" data-anchor-id="polynomial-reductions">Polynomial reductions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207205421881.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207205421881</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reduction-an-example" class="level2">
+<h2 class="anchored" data-anchor-id="reduction-an-example">Reduction: an example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207205432994.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207205432994</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="np-completeness-formally" class="level2">
+<h2 class="anchored" data-anchor-id="np-completeness-formally">NP-completeness (formally)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207205842011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207205842011</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="implications-of-reduction" class="level2">
+<h2 class="anchored" data-anchor-id="implications-of-reduction">Implications of reduction</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210101522.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210101522</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="proving-polynomial-time" class="level2">
+<h2 class="anchored" data-anchor-id="proving-polynomial-time">Proving polynomial time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210158316.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210158316</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="proving-np-completeness-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="proving-np-completeness-in-practice">Proving NP-completeness in practice</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210230497.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210230497</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="proving-np-completeness" class="level2">
+<h2 class="anchored" data-anchor-id="proving-np-completeness">Proving NP-completeness</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210414996.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210414996</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-structure-of-np-completeness-proofs" class="level2">
+<h2 class="anchored" data-anchor-id="the-structure-of-np-completeness-proofs">The structure of NP-completeness proofs</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210428472.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210428472</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="revisit-is-p-np" class="level2">
+<h2 class="anchored" data-anchor-id="revisit-is-p-np">Revisit “Is P = NP?”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210541959.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210541959</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="p-np-complete-problems" class="level2">
+<h2 class="anchored" data-anchor-id="p-np-complete-problems">P &amp; NP-complete problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210555900.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210555900</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210728587.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210728587</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="statisfiability-problem-sat" class="level2">
+<h2 class="anchored" data-anchor-id="statisfiability-problem-sat">Statisfiability problem (SAT)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210740997.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210740997</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cnf-satisfiability" class="level2">
+<h2 class="anchored" data-anchor-id="cnf-satisfiability">CNF satisfiability</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207210752591.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207210752591</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cnf-satisfiability-3-sat" class="level2">
+<h2 class="anchored" data-anchor-id="cnf-satisfiability-3-sat">3-CNF satisfiability (3-SAT)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207211036350.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207211036350</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cnf---3cnf" class="level2">
+<h2 class="anchored" data-anchor-id="cnf---3cnf">CNF -&gt; 3CNF</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207211046609.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207211046609</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="clique" class="level2">
+<h2 class="anchored" data-anchor-id="clique">Clique</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207211127902.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207211127902</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="clique-verifier" class="level2">
+<h2 class="anchored" data-anchor-id="clique-verifier">Clique verifier</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207211855855.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207211855855</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cnf-leq_p-clique" class="level2">
+<h2 class="anchored" data-anchor-id="cnf-leq_p-clique">3-CNF <span class="math inline">\(\leq_{p}\)</span> Clique</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207211937111.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207211937111</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sat-leq_p-clique" class="level2">
+<h2 class="anchored" data-anchor-id="sat-leq_p-clique">3SAT <span class="math inline">\(\leq_{p}\)</span> CLIQUE</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207212038514.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207212038514</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207212044736.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207212044736</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207212050068.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207212050068</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="classes-of-problems" class="level2">
+<h2 class="anchored" data-anchor-id="classes-of-problems">Classes of problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207212059368.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207212059368</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="examples-np-complete-and-np-hard-problems" class="level2">
+<h2 class="anchored" data-anchor-id="examples-np-complete-and-np-hard-problems">Examples NP-complete and NP-hard problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207212756726.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207212756726</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

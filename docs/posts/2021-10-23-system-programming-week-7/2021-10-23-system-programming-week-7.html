@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-23">
+
+<title>Siyun Min - System Programming Week 7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">System Programming Week 7</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 23, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="system-programming-week-7" class="level1">
+<h1>System Programming week 7</h1>
+<section id="memory-layout" class="level2">
+<h2 class="anchored" data-anchor-id="memory-layout">Memory layout</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023220301091.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023220301091</figcaption><p></p>
+</figure>
+</div>
+<p>이런 주소들은 사실 가상 메모리 주소</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023220633873.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023220633873</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023220710523.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023220710523</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="buffer-overflow" class="level2">
+<h2 class="anchored" data-anchor-id="buffer-overflow">Buffer overflow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023220819305.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023220819305</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221014528.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221014528</figcaption><p></p>
+</figure>
+</div>
+<section id="such-problems-are-a-big-deal" class="level3">
+<h3 class="anchored" data-anchor-id="such-problems-are-a-big-deal">Such problems are a big deal</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221327278.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221327278</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="string-library-code" class="level3">
+<h3 class="anchored" data-anchor-id="string-library-code">String library code</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221442145.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221442145</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="vulnerable-buffer-code" class="level3">
+<h3 class="anchored" data-anchor-id="vulnerable-buffer-code">Vulnerable buffer code</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221721448.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221721448</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="buffer-overflow-disassembly" class="level3">
+<h3 class="anchored" data-anchor-id="buffer-overflow-disassembly">Buffer overflow disassembly</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221812079.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221812079</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="buffer-overflow-stack" class="level3">
+<h3 class="anchored" data-anchor-id="buffer-overflow-stack">Buffer overflow stack</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023221849264.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023221849264</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222129261.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222129261</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222138610.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222138610</figcaption><p></p>
+</figure>
+</div>
+<p>00은 문자열의 끝을 표시</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222145796.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222145796</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222201006.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222201006</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222326923.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222326923</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="code-injection-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="code-injection-attacks">Code injection attacks</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222345731.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222345731</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exploits-based-on-buffer-overflows" class="level3">
+<h3 class="anchored" data-anchor-id="exploits-based-on-buffer-overflows">Exploits based on buffer overflows</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222531305.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222531305</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-the-original-internet-worm" class="level3">
+<h3 class="anchored" data-anchor-id="example-the-original-internet-worm">Example: the original internet worm</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222647027.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222647027</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-im-war" class="level3">
+<h3 class="anchored" data-anchor-id="example-im-war">Example: IM War</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222748812.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222748812</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023222905522.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023222905522</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="aside-worms-and-viruses" class="level3">
+<h3 class="anchored" data-anchor-id="aside-worms-and-viruses">Aside: Worms and Viruses</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223020111.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223020111</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="what-to-do-about-buffer-overflow-attacks" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-about-buffer-overflow-attacks">What to do about buffer overflow attacks</h2>
+<section id="avoid-overflow-vulnerabilities-in-code" class="level3">
+<h3 class="anchored" data-anchor-id="avoid-overflow-vulnerabilities-in-code">Avoid overflow vulnerabilities in code</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223131350.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223131350</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="system-level-protections-can-help" class="level3">
+<h3 class="anchored" data-anchor-id="system-level-protections-can-help">System-level protections can help</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223159861.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223159861</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223329811.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223329811</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stack-canaries-can-help" class="level3">
+<h3 class="anchored" data-anchor-id="stack-canaries-can-help">Stack canaries can help</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223446845.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223446845</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223621936.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223621936</figcaption><p></p>
+</figure>
+</div>
+<section id="setting-up-canary" class="level4">
+<h4 class="anchored" data-anchor-id="setting-up-canary">Setting up canary</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223636524.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223636524</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223817021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223817021</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="return-oriented-programming-attacks" class="level3">
+<h3 class="anchored" data-anchor-id="return-oriented-programming-attacks">Return-oriented programming attacks</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023223827063.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023223827063</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="attack-lab" class="level2">
+<h2 class="anchored" data-anchor-id="attack-lab">Attack lab</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211023224310021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211023224310021</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="attack-lab-1" class="level2">
+<h2 class="anchored" data-anchor-id="attack-lab-1">Attack Lab</h2>
+<p><strong>1. 1단계 문제</strong></p>
+<ol type="1">
+<li>문제 기술</li>
+</ol>
+<p>함수가 실행될 때 메모리는 정해진 역할에 따라 구획을 나눈다. 이 때 return address를 담을 공간을 할당하고 padding을 두고 local data를 쌓을 stack의 시작점을 지정한다. 함수가 실행되면서 local data는 쌓이고, stack은 return address를 향해 자란다. (작은 주소에서 큰 주소로 자란다) 그러나 이 padding보다 큰 길이의 local data가 쌓일 경우 다른 용도로 할당된 메모리 공간(return address가 담길 자리)을 침범하면서 segmentation fault, buffer overflow가 발생한다.</p>
+<p>이번 문제는 stack에 할당된 padding보다 긴 데이터를 받아 buffer overflow를 발생시키고, 그 데이터에 실행하고자 하는 함수(touch 1)의 주소를 담아 return address를 담기로 할당했던 메모리에 해당 함수의 memory address를 담아 실행하는 문제이다.</p>
+<ol start="2" type="1">
+<li>해답</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67BF.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80002.bmp 원본 그림의 크기: 가로 679pixel, 세로 183pixel</figcaption><p></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>분석</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67D0.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80003.bmp 원본 그림의 크기: 가로 580pixel, 세로 132pixel</figcaption><p></p>
+</figure>
+</div>
+<p>objdump를 통해 assembly 코드를 확인해본 결과 %rsp에 24(0x18)bytes만큼의 padding을 설정하고(sub $0x18, %rsp), %rdi를 %rsp에 할당해주고, Gets 함수를 호출한다. 따라서 %rdi에 24bytes 만큼의 stack이 할당됐고, buffer overflow를 발생시키기 위해서는 24bytes 초과의 dummy 데이터를 Gets를 통해 전달하면 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67D1.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80011.bmp 원본 그림의 크기: 가로 734pixel, 세로 165pixel</figcaption><p></p>
+</figure>
+</div>
+<p>touch1 함수를 실행하는 것이 목적이므로 return address 담는 %rsp에 touch1 함수의 memory address(00000000004017e6)를 주면 된다. 따라서 24bytes 크기의 dummy data로 padding을 가득 채우고, 이후 touch 1의 memory address를 삽입하여 데이터를 구성했다.</p>
+<p>Gets 함수는 해당 데이터를 읽으면서 padding을 dummy data로 가득 채우게 되고, %rsp(return address가 담길 공간)을 침범하여 해당 공간에 touch1 함수의 memory address를 담게 된다. 따라서 getbuf 함수가 값을 return할 때 %rsp를 참조하게 되면서 touch1 함수가 실행된다.</p>
+<p>dummy data는 00 24개로 구성했고, little endian을 감안하여 dummy data 이후 줄 바꿈을 하고 memory address를 역순으로 삽입했다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67E1.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80002.bmp 원본 그림의 크기: 가로 679pixel, 세로 183pixel</figcaption><p></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>실행결과</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67E2.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80002.bmp 원본 그림의 크기: 가로 679pixel, 세로 183pixel</figcaption><p></p>
+</figure>
+</div>
+<p><strong>2. 2단계 문제</strong></p>
+<ol type="1">
+<li>문제 기술</li>
+</ol>
+<p>1단계와 마찬가지로 buffer overflow를 통해 원하는 코드를 실행하여 결과를 얻는 문제다. 차이는 바로 원하는 코드를 바로 실행하는 것이 아니라 중간 작업을 하고 난 뒤에 함수를 실행하는 것이다. buffer overflow를 통해 중간 작업(comparison 통과를 위한 값을 cookie로 할당)을 수행하고, touch2를 실행하여 comparison 연산을 통과하는 것이다.</p>
+<ol start="2" type="1">
+<li>해답</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp67F3.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000c.bmp 원본 그림의 크기: 가로 571pixel, 세로 49pixel</figcaption><p></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>분석</li>
+</ol>
+<p>1단계는 return 받는 값을 내가 원하는 함수의 주소로 설정해서 해당 함수를 실행하는 것이라면, 2단계는 return 받는 값을 내가 원하는 함수를 실행하기 전에 해야 작업을 하는 주소로 설정해서 해당 작업을 끝내면 내가 원하는 함수가 실행하도록 하는 문제다.</p>
+<p>1단계: buffer overflow -&gt; touch1 실행</p>
+<p>2단계: buffer overflow -&gt; 작업 -&gt; touch2 실행</p>
+<p>해야 하는 작업은 touch2에서 진행되는 input argument와 cookie 값의 비교연산을 통과하기 위해 input argument를 cookie 값으로 바꿔주는 것이다.</p>
+<p>먼저 cookie의 값을 확인했다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6804.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80012.bmp 원본 그림의 크기: 가로 155pixel, 세로 32pixel</figcaption><p></p>
+</figure>
+</div>
+<p>buffer overflow를 통해 return address 자리에는 해당 작업을 수행하는 함수의 주소를 넣어줘야 한다. 그러나 그 작업이 함수를 호출하는 형태로 구현되지 않는다. buffer overflow를 일으키기 위해 stack에 해당 작업을 수행하는 코드를 담아서, buffer overflow가 일어난 getbuf 함수가 반환하는 return의 값이 stack의 맨 처음으로 돌아가도록 구현한다. 이 때 맨 처음으로 돌아가면 우리가 원하는 중간작업을 수행하게 되고, 그 작업이 끝나면 touch2 함수를 실행하는 것이다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6805.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80006.bmp 원본 그림의 크기: 가로 898pixel, 세로 410pixel</figcaption><p></p>
+</figure>
+</div>
+<p>2단계를 pass하기 위해서는 중간에 있는 비교연산을 통과해야 한다. (cmp %edi, 0x202cfc(%rip)) edi값을 cookie 값으로 바꿔줘야 한다. 이는 attck lab instruction(pdf)을 따라 수행했으며 다음과 같이 작성했다. (2-1의 코드와 섞여있다.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6815.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80007.bmp 원본 그림의 크기: 가로 456pixel, 세로 100pixel</figcaption><p></p>
+</figure>
+</div>
+<p>%edi에 쿠키 값을 할당해야 했으므로 쿠키 값인 0x754e7ddd를 %edi에 할당하는 코드를 작성했다.</p>
+<p>중간작업이 끝나면 touch2 함수를 실행해야 한다. touch2 함수의 memory address를 return 해야 하므로 pushq $0x401812와 retq를 작성했다. 이 해결방법은 구글링과 수업자료, attack lab instruction에서 해답을 찾았다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6826.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80008.bmp 원본 그림의 크기: 가로 650pixel, 세로 319pixel</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6827.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80005.bmp 원본 그림의 크기: 가로 586pixel, 세로 209pixel</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6837.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80013.bmp 원본 그림의 크기: 가로 1546pixel, 세로 491pixel</figcaption><p></p>
+</figure>
+</div>
+<p>pushq를 통해 %rbx를 stack의 최상단에 넣고, ret 전에 popq로 %rbx를 빼낸다. return 값이 따로 없으므로 ret 명령어가 실행되도 stack에서 별도의 return address를 받지 않고 다음으로 넘어간다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6858.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80007.bmp 원본 그림의 크기: 가로 456pixel, 세로 100pixel</figcaption><p></p>
+</figure>
+</div>
+<p>pushq를 이용해서 return하고자 하는 값(touch2의 address, 0x401812)을 stack의 최상단에 넣고, retq는 해당 값을 pop하고 바로 그 address로 이동한다.</p>
+<p>이렇게 작성한 assembly 코드를 컴파일 한 뒤 objdump로 disassemble하여 실행코드를 생성했다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6868.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000a.bmp 원본 그림의 크기: 가로 507pixel, 세로 182pixel</figcaption><p></p>
+</figure>
+</div>
+<p>그리고 이 코드를 ans2.txt에 삽입했다. 1단계와 마찬가지로 24개의 dummy와 return address 영역에 buffer overflow로 들어갈 코드를 입력해야 했다. return address 영역에 넣어줄 코드는 다시 stack의 처음(%rdi)으로 돌아와야 하기 때문에 해당 주소를 넣어야 했는데, 실행 때마다 메모리가 동적으로 할당되어 %rdi에 있는 값과 주소가 계속 바뀌므로 Gets 함수 실행 직전의 %rdi 주소를 알아내야 했다.</p>
+<p>gdb를 통해 debug를 진행했고, 아래와 같이 알아냈다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp6879.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000b.bmp 원본 그림의 크기: 가로 624pixel, 세로 497pixel</figcaption><p></p>
+</figure>
+</div>
+<p>getbuf 함수에 breakpoint를 걸고, ni로 함수 내부까지 한 줄 한 줄 실행해서 내려가면서 Type string:을 힌트로 이 때 Gets 함수가 호출되었음을 확인했다. 그리고 info reg rdi 명령어를 통해 이 때의 rdi address를 알아냈다. 이 주소를 buffer overflow를 통해 segmentation fault를 낼 return address 자리에 넣어줬다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp687A.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000c.bmp 원본 그림의 크기: 가로 571pixel, 세로 49pixel</figcaption><p></p>
+</figure>
+</div>
+<p>그렇게 실행하여 테스트에 통과했다.</p>
+<ol start="4" type="1">
+<li>실행결과</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp688B.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000d.bmp 원본 그림의 크기: 가로 688pixel, 세로 185pixel</figcaption><p></p>
+</figure>
+</div>
+<p><strong>2. 2_1단계 문제</strong></p>
+<ol type="1">
+<li>문제 기술</li>
+</ol>
+<p>2단계 문제와 모든 것이 같으나 차이점은 cookie와 비교하는 것이 아니라 내가 두 값을 할당해서, 두 값을 비교하는 것이다.</p>
+<ol start="2" type="1">
+<li>해답</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp689B.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000e.bmp 원본 그림의 크기: 가로 570pixel, 세로 49pixel</figcaption><p></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>분석</li>
+</ol>
+<p>2단계에서는 cookie와 비교연산을 했고, 그 비교를 위한 argument를 내가 할당하는 방식이었다. 이번 2_1단계에서는 내가 두 값을 모두 할당해야 하고, 비교연산이 일어나는 레지스터가 무엇인지 알아내 두 값을 똑같은 값으로 할당하도록 코드만 변경하면 된다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp689C.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000f.bmp 원본 그림의 크기: 가로 803pixel, 세로 385pixel</figcaption><p></p>
+</figure>
+</div>
+<p>comp %esi, %edi 연산을 확인하고, 2단계를 해결한 코드 (shell.s)에서 %esi에 값을 할당하는 연산을 추가하여 disassemble 과정을 통해 코드를 추출하고, 해당 코드를 똑같이 getbuf의 stack에 쌓아주어 실행하였다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp68AD.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80007.bmp 원본 그림의 크기: 가로 456pixel, 세로 100pixel</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp68AE.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000a.bmp 원본 그림의 크기: 가로 507pixel, 세로 182pixel</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp68BE.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c8000e.bmp 원본 그림의 크기: 가로 570pixel, 세로 49pixel</figcaption><p></p>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>실행결과</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./tmp68BF.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">그림입니다. 원본 그림의 이름: CLP000066c80010.bmp 원본 그림의 크기: 가로 699pixel, 세로 182pixel</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

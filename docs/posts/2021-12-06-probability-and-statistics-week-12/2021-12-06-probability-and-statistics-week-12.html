@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-12-06">
+
+<title>Siyun Min - Probability and Statistics Week 12</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Probability and Statistics Week 12</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 6, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="probability-and-statistics-week-12" class="level1">
+<h1>Probability and Statistics week 12</h1>
+<section id="이번-시간-할-일" class="level2">
+<h2 class="anchored" data-anchor-id="이번-시간-할-일">이번 시간 할 일</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213035824.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213035824</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="p-value" class="level2">
+<h2 class="anchored" data-anchor-id="p-value">p-value</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213045022.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213045022</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213103547.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213103547</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213107964.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213107964</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ex-two-sided-p-value-calculation" class="level2">
+<h2 class="anchored" data-anchor-id="ex-two-sided-p-value-calculation">Ex: two-sided p-value calculation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213124016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213124016</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213129120.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213129120</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-sided-t-test" class="level2">
+<h2 class="anchored" data-anchor-id="one-sided-t-test">One-sided t-test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213139906.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213139906</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ex-one-sided-problem" class="level2">
+<h2 class="anchored" data-anchor-id="ex-one-sided-problem">Ex: one sided problem</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213153536.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213153536</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213158025.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213158025</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213202267.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213202267</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hypothesis-testing-process" class="level2">
+<h2 class="anchored" data-anchor-id="hypothesis-testing-process">Hypothesis testing process</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213214260.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213214260</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213218442.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213218442</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207213224248.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207213224248</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="z-test" class="level2">
+<h2 class="anchored" data-anchor-id="z-test">z-test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214304570.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214304570</figcaption><p></p>
+</figure>
+</div>
+<section id="two-sided-problem" class="level3">
+<h3 class="anchored" data-anchor-id="two-sided-problem">two-sided problem</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214315106.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214315106</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-sided-problem" class="level3">
+<h3 class="anchored" data-anchor-id="one-sided-problem">one-sided problem</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214337740.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214337740</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="significance-levels-통계적-유의성" class="level2">
+<h2 class="anchored" data-anchor-id="significance-levels-통계적-유의성">Significance levels (통계적 유의성)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214350498.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214350498</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="type-i-error와-type-ii-error" class="level2">
+<h2 class="anchored" data-anchor-id="type-i-error와-type-ii-error">Type I error와 Type II error</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214403873.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214403873</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="two-sided-problems" class="level2">
+<h2 class="anchored" data-anchor-id="two-sided-problems">Two-sided problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214653290.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214653290</figcaption><p></p>
+</figure>
+</div>
+<section id="ex-엔진오일" class="level3">
+<h3 class="anchored" data-anchor-id="ex-엔진오일">Ex: 엔진오일</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214703584.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214703584</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="two-sided-interval과-p-value" class="level2">
+<h2 class="anchored" data-anchor-id="two-sided-interval과-p-value">Two-sided interval과 p-value</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207214718113.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207214718113</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-sided-problems" class="level2">
+<h2 class="anchored" data-anchor-id="one-sided-problems">One-sided problems</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215016626.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215016626</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215022287.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215022287</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215027555.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215027555</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215033262.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215033262</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215039667.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215039667</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215046492.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215046492</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="comparing-two-population-means" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-two-population-means">Comparing two population means</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215100819.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215100819</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215413162.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215413162</figcaption><p></p>
+</figure>
+</div>
+<section id="ex-코로나-치료제" class="level3">
+<h3 class="anchored" data-anchor-id="ex-코로나-치료제">Ex: 코로나 치료제</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215426195.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215426195</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="paired-sample-vs.-independent-sample" class="level2">
+<h2 class="anchored" data-anchor-id="paired-sample-vs.-independent-sample">Paired sample vs.&nbsp;independent sample</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215445480.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215445480</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="analysis-of-paired-samples" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-of-paired-samples">Analysis of paired samples</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215457831.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215457831</figcaption><p></p>
+</figure>
+</div>
+<section id="ex-신약의-실험" class="level3">
+<h3 class="anchored" data-anchor-id="ex-신약의-실험">Ex: 신약의 실험</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215508710.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215508710</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215513528.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215513528</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215518952.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215518952</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="analysis-of-independent-samples" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-of-independent-samples">Analysis of independent samples</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215533834.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215533834</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="가지의-방법" class="level2">
+<h2 class="anchored" data-anchor-id="가지의-방법">2가지의 방법</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207215542084.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207215542084</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-procedure-smith-sattrthwaite-test" class="level2">
+<h2 class="anchored" data-anchor-id="general-procedure-smith-sattrthwaite-test">General procedure (Smith-Sattrthwaite test)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220156824.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220156824</figcaption><p></p>
+</figure>
+</div>
+<section id="two-sided-problems-1" class="level3">
+<h3 class="anchored" data-anchor-id="two-sided-problems-1">Two-sided problems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220207945.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220207945</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220213811.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220213811</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-sided-problems-1" class="level3">
+<h3 class="anchored" data-anchor-id="one-sided-problems-1">One-sided problems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220225511.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220225511</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220230448.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220230448</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="pooled-variance-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="pooled-variance-procedure">Pooled variance procedure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220242046.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220242046</figcaption><p></p>
+</figure>
+</div>
+<section id="two-sided-problems-2" class="level3">
+<h3 class="anchored" data-anchor-id="two-sided-problems-2">Two-sided problems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220252551.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220252551</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220258923.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220258923</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-sided-problems-2" class="level3">
+<h3 class="anchored" data-anchor-id="one-sided-problems-2">One-sided problems</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220321657.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220321657</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220326191.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220326191</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="inference-on-the-population-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="inference-on-the-population-proportions">Inference on the population proportions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220341943.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220341943</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="chi-square-test" class="level2">
+<h2 class="anchored" data-anchor-id="chi-square-test">Chi-square test</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220536316.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220536316</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="chi-square-statistic" class="level2">
+<h2 class="anchored" data-anchor-id="chi-square-statistic">Chi-square statistic</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220551634.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220551634</figcaption><p></p>
+</figure>
+</div>
+<section id="ex-기계고장" class="level3">
+<h3 class="anchored" data-anchor-id="ex-기계고장">Ex: 기계고장</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220609832.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220609832</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220615398.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220615398</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="이번-시간에-한-일" class="level2">
+<h2 class="anchored" data-anchor-id="이번-시간에-한-일">이번 시간에 한 일</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220625663.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220625663</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="다음-시간" class="level2">
+<h2 class="anchored" data-anchor-id="다음-시간">다음 시간</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220636924.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220636924</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207220646940.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207220646940</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="practice" class="level2">
+<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031747080.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031747080</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031754976.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031754976</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031802400.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031802400</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031810450.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031810450</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031818330.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031818330</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031826890.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031826890</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031835825.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031835825</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031846506.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031846506</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031853865.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031853865</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211208031900560.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211208031900560</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

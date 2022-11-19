@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-18">
+
+<title>Siyun Min - Digital System Circuits Week 7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Digital System Circuits Week 7</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 18, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="digital-system-circuits-week-7" class="level1">
+<h1>Digital System Circuits Week 7</h1>
+<section id="what-is-an-hdl" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-hdl">What is an HDL?</h2>
+<p>HDL = Hardware Description Language</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018084333616.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018084333616</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-synthesis">What is synthesis?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018084430524.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018084430524</figcaption><p></p>
+</figure>
+</div>
+<p>Net list</p>
+</section>
+<section id="why-use-an-hdl" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-an-hdl">Why use an HDL?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018084548539.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018084548539</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="other-important-hdl-features" class="level2">
+<h2 class="anchored" data-anchor-id="other-important-hdl-features">Other important HDL features</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018085017419.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018085017419</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Serve as input for synthesis tools</li>
+</ul>
+</section>
+<section id="hardware-implementations" class="level2">
+<h2 class="anchored" data-anchor-id="hardware-implementations">Hardware implementations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018085503030.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018085503030</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hardware-building-blocks" class="level2">
+<h2 class="anchored" data-anchor-id="hardware-building-blocks">Hardware building blocks</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090138632.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090138632</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="standard-cells" class="level2">
+<h2 class="anchored" data-anchor-id="standard-cells">Standard cells</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090219746.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090219746</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="fpgas" class="level2">
+<h2 class="anchored" data-anchor-id="fpgas">FPGAs</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090432186.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090432186</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-a-netlist" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-netlist">What is a Netlist?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090447851.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090447851</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="verilog-module" class="level2">
+<h2 class="anchored" data-anchor-id="verilog-module">Verilog module</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090657522.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090657522</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018090718849.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018090718849</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="karnaugh-maps-for-two-level-size-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="karnaugh-maps-for-two-level-size-optimization">Karnaugh Maps for Two-level size optimization</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018092000735.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018092000735</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="k-maps" class="level2">
+<h2 class="anchored" data-anchor-id="k-maps">K-maps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018091853424.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018091853424</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018092401575.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018092401575</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018092744449.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018092744449</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018092818681.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018092818681</figcaption><p></p>
+</figure>
+</div>
+<p>circle 하나 당 term 하나 -&gt; 최대한 큰 circle 하나를 그리는 것이 식이 간단해짐</p>
+</section>
+<section id="two-level-size-optimization-using-k-maps" class="level2">
+<h2 class="anchored" data-anchor-id="two-level-size-optimization-using-k-maps">Two-level size optimization using K-maps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018093005514.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018093005514</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018093131691.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018093131691</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018093138860.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018093138860</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018093301896.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018093301896</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dont-care-input-combinations" class="level2">
+<h2 class="anchored" data-anchor-id="dont-care-input-combinations">Don’t care input combinations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211018093520452.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211018093520452</figcaption><p></p>
+</figure>
+</div>
+<p>X는 1에도 포함 될 수도 있고, 0에도 포함 될 수 있다.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

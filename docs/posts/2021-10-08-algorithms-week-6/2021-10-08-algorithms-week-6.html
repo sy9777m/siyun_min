@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-08">
+
+<title>Siyun Min - Algorithms Week 6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Algorithms Week 6</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 8, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="algorithms-week-6" class="level1">
+<h1>Algorithms Week 6</h1>
+<section id="hashing-randomized-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="hashing-randomized-algorithms">Hashing (Randomized algorithms)</h2>
+<p>direct-address tables, hash tables, hash functions</p>
+</section>
+<section id="data-structures" class="level2">
+<h2 class="anchored" data-anchor-id="data-structures">Data structures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008190311416.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008190311416</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008190720235.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008190720235</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191044379.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191044379</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hashing-basics" class="level2">
+<h2 class="anchored" data-anchor-id="hashing-basics">Hashing basics</h2>
+<p>Hash tables are another sort of data structure that allows fast INSERT/DELETE/SEARCH.</p>
+<p>Hash families are the magic behind hash tables.</p>
+<p>Universal hash families are even more magic.</p>
+<p>Hash tables</p>
+<ul>
+<li><span class="math inline">\(O(1)\)</span> expected time INSERT/DELETE/SEARCH</li>
+<li>Worst worst-case performance, but often great in practice.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191351776.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191351776</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="applications-of-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="applications-of-dictionary">Applications of dictionary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191419737.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191419737</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="direct-addressing" class="level2">
+<h2 class="anchored" data-anchor-id="direct-addressing">Direct addressing</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191551590.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191551590</figcaption><p></p>
+</figure>
+</div>
+<p>assumptions</p>
+<ul>
+<li>no duplications (중복이 없음)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191522329.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191522329</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191537816.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191537816</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191605461.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191605461</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191631264.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191631264</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191709672.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191709672</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191741399.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191741399</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="terminology" class="level2">
+<h2 class="anchored" data-anchor-id="terminology">Terminology</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191844584.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191844584</figcaption><p></p>
+</figure>
+</div>
+<p>But we don’t know which ones will show up in advance.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191902750.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191902750</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008191933786.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008191933786</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192047386.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192047386</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192109631.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192109631</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192406610.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192406610</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hash-tables-with-open-addressing" class="level2">
+<h2 class="anchored" data-anchor-id="hash-tables-with-open-addressing">Hash tables with open addressing</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192500232.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192500232</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192545882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192545882</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="worst-case-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="worst-case-analysis">Worst-case analysis</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192639447.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192639447</figcaption><p></p>
+</figure>
+</div>
+<p>Solution: Randoness</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008192736877.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008192736877</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193001984.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193001984</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193010091.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193010091</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193032714.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193032714</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="a-simple-deterministic-hash-function" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-deterministic-hash-function">A simple deterministic hash function</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193056498.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193056498</figcaption><p></p>
+</figure>
+</div>
+<p>mod: 나머지 연산</p>
+<p>n은 소수</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193205471.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193205471</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193212473.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193212473</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193242646.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193242646</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="a-universal-hash-family" class="level2">
+<h2 class="anchored" data-anchor-id="a-universal-hash-family">A universal hash family</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193322293.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193322293</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008193546011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008193546011</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tree-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="tree-algorithms">Tree algorithms</h2>
+<p>Tree basics, Binary search tree, red-black tree</p>
+</section>
+<section id="some-data-structure-for-storing-objects" class="level2">
+<h2 class="anchored" data-anchor-id="some-data-structure-for-storing-objects">Some data structure for storing objects</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204015319.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204015319</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204019470.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204019470</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204029295.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204029295</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204052191.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204052191</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204112618.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204112618</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204204193.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204204193</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="motivation-for-binary-search-tree" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-for-binary-search-tree">Motivation for binary search tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204233121.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204233121</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recall-the-data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="recall-the-data-structure">Recall the data structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204416888.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204416888</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204523232.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204523232</figcaption><p></p>
+</figure>
+</div>
+<p>connected: 어떤 node에서 출발해도 그 어떤 node에 도달 할 수 있다.</p>
+<p>acyclic: 자기 자신으로 돌아오는 cycle이 없다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204804192.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204804192</figcaption><p></p>
+</figure>
+</div>
+<p>forest: tree의 집합</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008204845935.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008204845935</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="binary-tree-terminology" class="level2">
+<h2 class="anchored" data-anchor-id="binary-tree-terminology">Binary tree terminology</h2>
+<p>child를 최대 2개까지 가질 수 있음</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205456362.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205456362</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205549192.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205549192</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="binary-search-tree" class="level2">
+<h2 class="anchored" data-anchor-id="binary-search-tree">Binary search tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205617534.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205617534</figcaption><p></p>
+</figure>
+</div>
+<p>node 선택 -&gt; node의 key 값에 따라 좌우 분류 -&gt; 분류된 집합에서 node 선택 -&gt; 좌우에 붙이고 반복 (recursion)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205908586.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205908586</figcaption><p></p>
+</figure>
+</div>
+<p>이 binary search tree는 unique하지는 않다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205937221.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205937221</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008205957919.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008205957919</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="search-in-a-binary-search-tree" class="level2">
+<h2 class="anchored" data-anchor-id="search-in-a-binary-search-tree">Search in a binary search tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008210404980.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008210404980</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="insert-in-a-binary-search-tree" class="level2">
+<h2 class="anchored" data-anchor-id="insert-in-a-binary-search-tree">Insert in a binary search tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008210603171.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008210603171</figcaption><p></p>
+</figure>
+</div>
+<p><code>x.key == key</code>의 경우엔 binary search tree내의 값들이 다 unique하다고 가정했기 때문에 그냥 넘어가는데, 구현의 문제로 남겨짐.</p>
+</section>
+<section id="delete-in-a-binary-search-tree" class="level2">
+<h2 class="anchored" data-anchor-id="delete-in-a-binary-search-tree">Delete in a binary search tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008210718619.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008210718619</figcaption><p></p>
+</figure>
+</div>
+<p>이 case에서는 그냥 2를 없애고 2의 자리에 1을 붙여주면 되지만…</p>
+<section id="case-1" class="level3">
+<h3 class="anchored" data-anchor-id="case-1">case 1</h3>
+<p>if 3 is a leaf -&gt; just delete it</p>
+</section>
+<section id="case-2" class="level3">
+<h3 class="anchored" data-anchor-id="case-2">case 2</h3>
+<p>if 3 has just one child</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008210826746.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008210826746</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="case-3" class="level3">
+<h3 class="anchored" data-anchor-id="case-3">case 3</h3>
+<p>if 3 has two children, replace 3 with it’s immediate successor, aka next smallest thing after 3</p>
+<p>3의 right child 중에서 가장 left에 있는 descendant를 불러와서 3의 자리에 옮김</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008210921690.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008210921690</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Does this maintain the BST property? yes</li>
+<li>How do we find the immediate successor? SEARCH for 3 in the subtree under 3.right</li>
+<li>How do we remove it when we find it? if 3.1 has 0 or 1 children, do one of the previous cases.</li>
+<li>What if [3.1] has two children? It doesn’t. 3.right의 subtree 중에 가장 좌측에 있는 node이기 때문에 자신보다 작은 left child가 존재할 수 없음. 즉, 2개의 children을 가질 가능성이 없음</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008211203361.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008211203361</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008211311943.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008211311943</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008211730429.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008211730429</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008212344180.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008212344180</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="how-long-do-these-operations-take" class="level2">
+<h2 class="anchored" data-anchor-id="how-long-do-these-operations-take">How long do these operations take?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008212435141.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008212435141</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008212519980.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008212519980</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008212611534.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008212611534</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008212721228.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008212721228</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="homework" class="level2">
+<h2 class="anchored" data-anchor-id="homework">Homework</h2>
+</section>
+<section id="p2-5점-k번째로-많은-원소-찾기" class="level2">
+<h2 class="anchored" data-anchor-id="p2-5점-k번째로-많은-원소-찾기">P2 (<code>5점</code>): K번째로 많은 원소 찾기</h2>
+</section>
+<section id="개요-및-요구사항" class="level2">
+<h2 class="anchored" data-anchor-id="개요-및-요구사항">개요 및 요구사항</h2>
+<ul>
+<li>주어진 길이 n의 정수 배열에서, K번째로 많이 등장한 원소를 반환하는 알고리즘을 작성하세요.</li>
+</ul>
+</section>
+<section id="입출력예" class="level2">
+<h2 class="anchored" data-anchor-id="입출력예">입출력예</h2>
+<p>(입력1) 10 5 1 1 2 2 3 3 4 4 4 5</p>
+<p>(출력1) 5</p>
+<pre><code>4 - 3개
+1 - 2개
+2 - 2개
+3 - 2개
+5 - 1개 
+5번째로 많은 수 == 5</code></pre>
+<p>(입력2) 10 2 1 1 2 2 3 3 4 4 4 5</p>
+<p>(출력2) 1</p>
+<pre><code>4 - 3개
+1 - 2개
+2 - 2개
+3 - 2개
+5 - 1개 
+2번째로 많은 수 == 1 or 2 or 3</code></pre>
+<ul>
+<li>첫째줄에, 배열의 길이 len이 입력됩니다.</li>
+<li>둘째줄에, K가 입력됩니다.</li>
+<li>셋째줄에, 배열의 원소들이 입력됩니다.</li>
+<li>제공한 sample1.txt 파일과, main.cpp 파일을 참고하세요.</li>
+</ul>
+</section>
+<section id="상세조건" class="level2">
+<h2 class="anchored" data-anchor-id="상세조건">상세조건</h2>
+<ul>
+<li>0 &lt; len &lt;= 10,000</li>
+<li>0 &lt; K &lt;= the number of unique elements in arr</li>
+<li>0 &lt; each element &lt;= 10,000</li>
+<li>정답이 다수인 경우, 그 중 하나만 출력해도 정답으로 인정 (위 입력2의 경우 1,2,3 모두 정답으로 인정함)</li>
+<li>자동화된 채점 시스템을 활용할 계획이므로 제공한 템플릿을 활용하되, 기본 제공한 함수 프로토타입 등은 변경하지 말 것.</li>
+<li>구현은 모두 solution.cpp 파일에 하고, 제출도 solution.cpp 파일만 제출.</li>
+<li>(main.cpp/ solution.h 파일은 테스트 용으로만 활용)</li>
+<li>시간제한: 3sec @ 3.0Ghz single core</li>
+<li>공간제한: 없음</li>
+<li>체점환경은 c++17 문법을 사용함.</li>
+</ul>
+</section>
+<section id="제출" class="level2">
+<h2 class="anchored" data-anchor-id="제출">제출</h2>
+<ul>
+<li>소스코드 (solution.cpp) 와 보고서 (학번.txt)를 압축 (학번.zip)하여 제출</li>
+<li>main.cpp, soultion.h, sample1.txt 등 기타 파일들은 포함하지 말 것.</li>
+</ul>
+</section>
+<section id="배점" class="level2">
+<h2 class="anchored" data-anchor-id="배점">배점</h2>
+<ul>
+<li><code>4.5점</code> Correctness &amp; Efficiency
+<ul>
+<li>총 9개의 테스트 케이스에서 항상 정답을 찾아내는지 여부와 시간 제한을 만족하는지 여부를 검증.</li>
+<li>각 테스트케이스를 여러번 실행하여 항상 일관된 정답을 출력하는지 여부를 검증하고, 실행 시간은 평균값을 취하여 검증함.</li>
+<li><code>주의</code> C/C++ 에서 기본제공하는 sorting/selection 라이브러리 사용시 40% 감점 (e.g., nth_element(), sort() 등)</li>
+</ul></li>
+<li><code>0.5점</code> 보고서
+<ul>
+<li>위 문제 해결을 위한 본인의 알고리즘 설계 방법 제시 (소스코드 설명하지 않아도 됨).</li>
+<li>본인이 설계한 알고리즘의 correctness &amp; efficiency 의견 제시.</li>
+</ul></li>
+</ul>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdlib.h&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"p2_solution.h"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> merge<span class="op">(</span><span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="op">&amp;</span>arr<span class="op">,</span> <span class="dt">int</span> l<span class="op">,</span> <span class="dt">int</span> m<span class="op">,</span> <span class="dt">int</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">,</span> j<span class="op">,</span> k<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n1 <span class="op">=</span> m <span class="op">-</span> l <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n2 <span class="op">=</span> r <span class="op">-</span> m<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> L<span class="op">(</span>n1<span class="op">,</span> <span class="dv">0</span><span class="op">),</span> R<span class="op">(</span>n2<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>i<span class="op">;</span> i <span class="op">&lt;</span> n1<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> L<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> arr<span class="op">[</span>l <span class="op">+</span> i<span class="op">];</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>j<span class="op">;</span> j <span class="op">&lt;</span> n2<span class="op">;</span> <span class="op">++</span>j<span class="op">)</span> R<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> arr<span class="op">[</span>m <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> j<span class="op">];</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;</span> n1 <span class="op">&amp;&amp;</span> j <span class="op">&lt;</span> n2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>L<span class="op">[</span>i<span class="op">]</span> <span class="op">&lt;=</span> R<span class="op">[</span>j<span class="op">])</span> <span class="op">{</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            arr<span class="op">[</span>k<span class="op">]</span> <span class="op">=</span> L<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">++</span>i<span class="op">;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            arr<span class="op">[</span>k<span class="op">]</span> <span class="op">=</span> R<span class="op">[</span>j<span class="op">];</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>            <span class="op">++</span>j<span class="op">;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="op">++</span>k<span class="op">;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;</span> n1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>k<span class="op">]</span> <span class="op">=</span> L<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="op">++</span>i<span class="op">;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="op">++</span>k<span class="op">;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>j <span class="op">&lt;</span> n2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>k<span class="op">]</span> <span class="op">=</span> R<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="op">++</span>i<span class="op">;</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="op">++</span>k<span class="op">;</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> mergeSort<span class="op">(</span><span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="op">&amp;</span>arr<span class="op">,</span> <span class="dt">int</span> l<span class="op">,</span> <span class="dt">int</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>l <span class="op">&lt;</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> m <span class="op">=</span> <span class="op">(</span>l <span class="op">+</span> r<span class="op">)</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        mergeSort<span class="op">(</span>arr<span class="op">,</span> l<span class="op">,</span> m<span class="op">);</span></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>        mergeSort<span class="op">(</span>arr<span class="op">,</span> m <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> r<span class="op">);</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>        merge<span class="op">(</span>arr<span class="op">,</span> l<span class="op">,</span> m<span class="op">,</span> r<span class="op">);</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> Solution<span class="op">::</span>kMost<span class="op">(</span><span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="op">&amp;</span>arr<span class="op">,</span> <span class="dt">int</span> len<span class="op">,</span> <span class="dt">int</span> k<span class="op">)</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> count_arr<span class="op">(</span>len<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>i<span class="op">;</span> i <span class="op">&lt;</span> len<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> n <span class="op">=</span> arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        count_arr<span class="op">[</span>n<span class="op">]</span> <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> rank_arr<span class="op">(</span>k<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> index_arr<span class="op">(</span>k<span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span>i<span class="op">;</span> i <span class="op">&lt;</span> len<span class="op">;</span> <span class="op">++</span>i<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> res <span class="op">=</span> count_arr<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>res <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>            <span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span>j<span class="op">;</span> j <span class="op">&lt;</span> k<span class="op">;</span> <span class="op">++</span>j<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="op">(</span>rank_arr<span class="op">[</span>j<span class="op">]</span> <span class="op">&lt;=</span> res<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">int</span> n <span class="op">=</span> k <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">for</span> <span class="op">(</span>n<span class="op">;</span> n <span class="op">&gt;</span> j<span class="op">;</span> <span class="op">--</span>n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>                        rank_arr<span class="op">[</span>n<span class="op">]</span> <span class="op">=</span> rank_arr<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>                        index_arr<span class="op">[</span>n<span class="op">]</span> <span class="op">=</span> index_arr<span class="op">[</span>n <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>                    <span class="op">}</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>                    rank_arr<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> res<span class="op">;</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>                    index_arr<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> i<span class="op">;</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> index_arr<span class="op">[</span>k <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

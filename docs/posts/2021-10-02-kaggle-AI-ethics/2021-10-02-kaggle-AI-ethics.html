@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-02">
+
+<title>Siyun Min - Kaggle - AI Ethics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Kaggle - AI Ethics</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Kaggle</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 2, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="kaggle-intro-to-ai-ethics" class="level1">
+<h1>kaggle Intro to AI Ethics</h1>
+<p>These technologies have the potential to harm or help the people that they serve. By applying an ethical lens, we can work toward identifying the harms that these technologies can cause to people and we can design and build them to reduce these harms - or decide not to build them.</p>
+<p>This course covers several topics:</p>
+<ul>
+<li>In the <strong>human-centered design</strong> lesson, you’ll learn how to design an AI system to ensure that it serves the needs of the people that it is intended for.</li>
+<li>In the <strong>bias</strong> lesson, you’ll determine how AI systems can learn to discriminate against certain groups.</li>
+<li>In the <strong>fairness</strong> lesson, you’ll learn to quantify the extent of the bias in AI systems.</li>
+<li>In the <strong>model cards</strong> lesson, you’ll learn how to use a popular framework for improving public accountability for AI models.</li>
+</ul>
+<section id="human-centered-design-for-ai" class="level2">
+<h2 class="anchored" data-anchor-id="human-centered-design-for-ai">Human-Centered Design for AI</h2>
+<p>Before selecting data and training models, it is important to carefully consider the human needs an AI system should serve - and if it should be built at all.</p>
+<p><strong>Human-centered design (HCD)</strong> is an approach to designing systems that serve people’s needs.</p>
+<p>6 steps</p>
+<section id="understand-peoples-needs-to-define-the-problem." class="level3">
+<h3 class="anchored" data-anchor-id="understand-peoples-needs-to-define-the-problem.">1. Understand people’s needs to define the problem.</h3>
+<p>Your entire team – including data scientists and engineers – should be involved in this step, so that every team member gains an understanding of the people they hope to serve. Your team should include and involve people with diverse perspectives and backgrounds, along race, gender, and other characteristics. Sharpen your problem definition and brainstorm creative and inclusive solutions together.</p>
+</section>
+<section id="ask-if-ai-adds-value-to-any-potential-solution." class="level3">
+<h3 class="anchored" data-anchor-id="ask-if-ai-adds-value-to-any-potential-solution.">2. Ask if AI adds value to any potential solution.</h3>
+<ul>
+<li>Would people generally agree that what you are trying to achieve is a good outcome?</li>
+<li>Would non-AI systems - such as rule-based solutions, which are easier to create, audit and maintain - be significantly less effective than an AI system?</li>
+<li>Is the task that you are using AI for one that people would find boring, repetitive or otherwise difficult to concentrate on?</li>
+<li>Have AI solutions proven to be better than other solutions for similar use cases in the past?</li>
+</ul>
+<p>If you answered no to any of these questions, an AI solution may not be necessary or appropriate.</p>
+</section>
+<section id="consider-the-potential-harms-that-the-ai-system-could-cause" class="level3">
+<h3 class="anchored" data-anchor-id="consider-the-potential-harms-that-the-ai-system-could-cause">3. Consider the potential harms that the AI system could cause</h3>
+<p>Weigh the benefits of using AI against the potential harms, throughout the design pipeline: from collecting and labeling data, to training a model, to deploying the AI system. Consider the impact on users and on society. Your privacy team can help uncover hidden privacy issues and determine whether privacy-preserving techniques like <a href="https://developers.googleblog.com/2019/09/enabling-developers-and-organizations.html">differential privacy</a> or <a href="https://ai.googleblog.com/2017/04/federated-learning-collaborative.html">federated learning</a> may be appropriate. Take steps to reduce harms, including by embedding people - and therefore human judgment - more effectively in data selection, in model training and in the operation of the system. If you estimate that the harms are likely to outweigh the benefits, do not build the system.</p>
+<section id="example" class="level4">
+<h4 class="anchored" data-anchor-id="example">example</h4>
+<p>An online education company wants to use an AI system to ‘read’ and automatically assign scores to student essays, while redirecting company staff to double-check random essays and to review essays that the AI system has trouble with. The system would enable the company to quickly get scores back to students. The company creates a harms review committee, which recommends that the system not be built. Some of the major harms flagged by the committee include: the potential for the AI system to pick up bias against certain patterns of language from training data and amplify it (harming people in the groups that use those patterns of language), to encourage students to ‘game’ the algorithm rather than improve their essays and to reduce the classroom role of education experts while increasing the role of technology experts.</p>
+</section>
+</section>
+<section id="prototype-starting-with-non-ai-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="prototype-starting-with-non-ai-solutions">4. Prototype, starting with non-AI solutions</h3>
+<p>Develop a non-AI prototype of your AI system quickly to see how people interact with it. This makes prototyping easier, faster and less expensive. It also gives you early information about what users expect from your system and how to make their interactions more rewarding and meaningful.</p>
+<p>The people giving feedback should have diverse backgrounds – including along race, gender, expertise and other characteristics. They should also understand and consent to what they are helping with and how.</p>
+</section>
+<section id="provide-ways-for-people-to-challenge-the-system" class="level3">
+<h3 class="anchored" data-anchor-id="provide-ways-for-people-to-challenge-the-system">5. Provide ways for people to challenge the system</h3>
+<p>People who use your AI system once it is live should be able to challenge its recommendations or easily opt out of using it. Put systems and tools in place to accept, monitor and address challenges.</p>
+<p>Talk to users and think from the perspective of a user: if you are curious or dissatisfied with the system’s recommendations, would you want to challenge it by:</p>
+<ul>
+<li>Requesting an explanation of how it arrived at its recommendation?</li>
+<li>Requesting a change in the information you input?</li>
+<li>Turning off certain features?</li>
+<li>Reaching out to the product team on social media?</li>
+<li>Taking some other action?</li>
+</ul>
+</section>
+<section id="build-in-safety-measures" class="level3">
+<h3 class="anchored" data-anchor-id="build-in-safety-measures">6. Build in safety measures</h3>
+<p>Safety measures protect users against harm. They seek to limit unintended behavior and accidents, by ensuring that a system reliably delivers high-quality outcomes. This can only be achieved through extensive and continuous evaluation and testing. Design processes around your AI system to continuously monitor performance, delivery of intended benefits, reduction of harms, fairness metrics and any changes in how people are <em>actually</em> using it.</p>
+<p>Human oversight of your AI system is crucial:</p>
+<ul>
+<li>Create a human ‘red team’ to play the role of a person trying to manipulate your system into unintended behavior. Then, strengthen your system against any such manipulation.</li>
+<li>Determine how people in your organization can best monitor the system’s safety once it is live.</li>
+<li>Explore ways for your AI system to quickly alert a human when it is faced with a challenging case.</li>
+<li>Create ways for users and others to flag potential safety issues.</li>
+</ul>
+</section>
+</section>
+<section id="identifying-bias-in-ai" class="level2">
+<h2 class="anchored" data-anchor-id="identifying-bias-in-ai">Identifying bias in AI</h2>
+<p>ML applications have discriminated against individuals on the basis of race, sex, religion, socioeconomic status, and other categories.</p>
+<section id="bias-is-complex" class="level3">
+<h3 class="anchored" data-anchor-id="bias-is-complex">Bias is complex</h3>
+<p>Bias in data is complex. Flawed data can also result in <strong>representation bias</strong> (covered later in this tutorial), if a group is underrepresented in the training data. For instance, when training a facial detection system, if the training data contains mostly individuals with lighter skin tones, it will fail to perform well for users with darker skin tones. A third type of bias that can arise from the training data is called <strong>measurement bias</strong>, which you’ll learn about below.</p>
+<p>bias can also result from the way in which the ML model is defined, from the way the model is compared to other models, and from the way that everyday users interpret the final results of the model. Harm can come from anywhere in the ML process.</p>
+</section>
+<section id="types-of-bias" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-bias">6 types of bias</h3>
+<section id="historical-bias" class="level4">
+<h4 class="anchored" data-anchor-id="historical-bias">Historical bias</h4>
+<p><strong>Historical bias</strong> occurs when the state of the world in which the data was generated is flawed.</p>
+</section>
+<section id="measurement-bias" class="level4">
+<h4 class="anchored" data-anchor-id="measurement-bias">Measurement bias</h4>
+<p><strong>Measurement bias</strong> occurs when the accuracy of the data varies across groups. This can happen when working with proxy variables (variables that take the place of a variable that cannot be directly measured), if the quality of the proxy varies in different groups.</p>
+</section>
+<section id="aggregation-bias" class="level4">
+<h4 class="anchored" data-anchor-id="aggregation-bias">Aggregation bias</h4>
+<p><strong>Aggregation bias</strong> occurs when groups are inappropriately combined, resulting in a model that does not perform well for any group or only performs well for the majority group. (This is often not an issue, but most commonly arises in medical applications.)</p>
+</section>
+<section id="evaluation-bias" class="level4">
+<h4 class="anchored" data-anchor-id="evaluation-bias">Evaluation bias</h4>
+<p><strong>Evaluation bias</strong> occurs when evaluating a model, if the benchmark data (used to compare the model to other models that perform similar tasks) does not represent the population that the model will serve.</p>
+</section>
+<section id="deployment-bias" class="level4">
+<h4 class="anchored" data-anchor-id="deployment-bias">Deployment bias</h4>
+<p><strong>Deployment bias</strong> occurs when the problem the model is intended to solve is different from the way it is actually used. If the end users don’t use the model in the way it is intended, there is no guarantee that the model will perform well.</p>
+<p>Note that these are <em>not mutually exclusive</em>: that is, an ML application can easily suffer from more than one type of bias.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002021354944.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002021354944</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002021457078.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002021457078</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002021549954.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002021549954</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="ai-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="ai-fairness">AI Fairness</h2>
+<section id="four-fairness-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="four-fairness-criteria">Four fairness criteria</h3>
+<section id="demographic-parity-statistical-parity" class="level4">
+<h4 class="anchored" data-anchor-id="demographic-parity-statistical-parity">1. Demographic parity / statistical parity</h4>
+<p><strong>Demographic parity</strong> says the model is fair if the composition of people who are selected by the model matches the group membership percentages of the applicants.</p>
+<blockquote class="blockquote">
+<p>A nonprofit is organizing an international conference, and 20,000 people have signed up to attend. The organizers write a ML model to select 100 attendees who could potentially give interesting talks at the conference. Since 50% of the attendees will be women (10,000 out of 20,000), they design the model so that 50% of the selected speaker candidates are women.</p>
+</blockquote>
+</section>
+<section id="equal-oppportunity" class="level4">
+<h4 class="anchored" data-anchor-id="equal-oppportunity">2. Equal oppportunity</h4>
+<p><strong>Equal opportunity</strong> fairness ensures that the proportion of people who should be selected by the model (“positives”) that are correctly selected by the model is the same for each group. We refer to this proportion as the <strong>true positive rate</strong> (TPR) or <strong>sensitivity</strong> of the model.</p>
+</section>
+<section id="equal-accuracy" class="level4">
+<h4 class="anchored" data-anchor-id="equal-accuracy">3. Equal accuracy</h4>
+<p>Alternatively, we could check that the model has <strong>equal accuracy</strong> for each group. That is, the percentage of correct classifications (people who should be denied and are denied, and people who should be approved who are approved) should be the same for each group.</p>
+</section>
+<section id="group-unaware-fairness-through-unawareness" class="level4">
+<h4 class="anchored" data-anchor-id="group-unaware-fairness-through-unawareness">4. Group unaware / “Fairness through unawareness”</h4>
+<p><strong>Group unaware</strong> fairness removes all group membership information from the dataset. For instance, we can remove gender data to try to make the model fair to different gender groups. Similarly, we can remove information about race or age.</p>
+<blockquote class="blockquote">
+<p>One difficulty of applying this approach in practice is that one has to be careful to identify and remove proxies for the group membership data. For instance, in cities that are racially segregated, zip code is a strong proxy for race. That is, when the race data is removed, the zip code data should also be removed, or else the ML application may still be able to infer an individual’s race from the data. Additionally, group unaware fairness is unlikely to be a good solution for historical bias.</p>
+</blockquote>
+</section>
+</section>
+<section id="confusion-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="confusion-matrix">Confusion matrix</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./xFZG5fF.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">img</figcaption><p></p>
+</figure>
+</div>
+<p>Note that <strong><em>*group unaware*</em></strong> fairness cannot be detected from the confusion matrix, and is more concerned with removing group membership information from the dataset.</p>
+<p>Also note that none of the examples satisfy more than one type of fairness. For instance, the demographic parity example does not satisfy equal accuracy or equal opportunity. Take the time to verify this now. In practice, it is not possible to optimize a model for more than one type of fairness: to read more about this, explore the <a href="https://arxiv.org/abs/2007.06024">Impossibility Theorem of Machine Fairness</a>. <em>So which fairness criterion should you select, if you can only satisfy one?</em> As with most ethical questions, the correct answer is usually not straightforward, and picking a criterion should be a long conversation involving everyone on your team.</p>
+<p>When working with a real project, the data will be much, much larger. In this case, confusion matrices are still a useful tool for analyzing model performance. One important thing to note, however, is that real-world models typically cannot be expected to satisfy any fairness definition perfectly.</p>
+</section>
+<section id="exercise" class="level3">
+<h3 class="anchored" data-anchor-id="exercise">Exercise</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002023258614.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002023258614</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002023452065.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002023452065</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002023622243.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002023622243</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="model-cards" class="level2">
+<h2 class="anchored" data-anchor-id="model-cards">Model Cards</h2>
+<p>A <strong>model card</strong> is a short document that provides key information about a machine learning model. Model cards increase transparency by communicating information about trained models to broad audiences.</p>
+<p>AI researchers are exploring many ways to communicate key information about models to inform people who use AI systems, people who are affected by AI systems and others.</p>
+<p>Model cards - introduced in a <a href="https://arxiv.org/abs/1810.03993">2019 paper</a> - are one way for teams to communicate key information about their AI system to a broad audience. This information generally includes intended uses for the model, how the model works, and how the model performs in different situations.</p>
+<section id="who-is-the-audience-of-your-model-card" class="level3">
+<h3 class="anchored" data-anchor-id="who-is-the-audience-of-your-model-card">Who is the audience of your model card?</h3>
+<p>A model card should strike a balance between being easy-to-understand and communicating important technical information. When writing a model card, you should consider your audience: the groups of people who are most likely to read your model card. These groups will vary according to the AI system’s purpose.</p>
+</section>
+<section id="what-sections-should-a-model-card-contain" class="level3">
+<h3 class="anchored" data-anchor-id="what-sections-should-a-model-card-contain">What sections should a model card contain?</h3>
+<section id="model-details" class="level4">
+<h4 class="anchored" data-anchor-id="model-details">1. Model Details</h4>
+<ul>
+<li>Include background information, such as developer and model version.</li>
+</ul>
+</section>
+<section id="intended-use" class="level4">
+<h4 class="anchored" data-anchor-id="intended-use">2. Intended Use</h4>
+<ul>
+<li>What use cases are in scope?</li>
+<li>Who are your intended users?</li>
+<li>What use cases are out of scope?</li>
+</ul>
+</section>
+<section id="factors" class="level4">
+<h4 class="anchored" data-anchor-id="factors">3. Factors</h4>
+<ul>
+<li>What factors affect the impact of the model?</li>
+</ul>
+</section>
+<section id="metrics" class="level4">
+<h4 class="anchored" data-anchor-id="metrics">4. Metrics</h4>
+<ul>
+<li>What metrics are you using to measure the performance of the model? Why did you pick those metrics?
+<ul>
+<li>For <strong>classification systems</strong> – in which the output is a class label – potential error types include false positive rate, false negative rate, false discovery rate, and false omission rate. The relative importance of each of these depends on the use case.</li>
+<li>For <strong>score-based analyses</strong> – in which the output is a score or price – consider reporting model performance across groups.</li>
+</ul></li>
+</ul>
+</section>
+<section id="evaluation-data" class="level4">
+<h4 class="anchored" data-anchor-id="evaluation-data">5. Evaluation Data</h4>
+<ul>
+<li>Which datasets did you use to evaluate model performance? Provide the datasets if you can.</li>
+<li>Why did you choose these datasets for evaluation?</li>
+<li>Are the datasets representative of typical use cases, anticipated test cases and/or challenging cases?</li>
+</ul>
+</section>
+<section id="training-data" class="level4">
+<h4 class="anchored" data-anchor-id="training-data">6. Training Data</h4>
+<ul>
+<li>Which data was the model trained on?</li>
+</ul>
+</section>
+<section id="quantitative-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="quantitative-analyses">7. quantitative Analyses</h4>
+<ul>
+<li>How did the model perform on the metrics you chose? Break down performance by important factors and their intersections.</li>
+</ul>
+</section>
+<section id="ethical-considerations" class="level4">
+<h4 class="anchored" data-anchor-id="ethical-considerations">8. Ethical Considerations</h4>
+<ul>
+<li>Describe ethical considerations related to the model, such as sensitive data used to train the model, whether the model has implications for human life, health, or safety, how risk was mitigated, and what harms may be present in model usage.</li>
+</ul>
+</section>
+<section id="caveats-and-recommendations" class="level4">
+<h4 class="anchored" data-anchor-id="caveats-and-recommendations">9. Caveats and Recommendations</h4>
+<ul>
+<li>Add anything important that you have not covered elsewhere in the model card.</li>
+</ul>
+</section>
+</section>
+<section id="how-can-you-use-model-cards-in-your-organization" class="level3">
+<h3 class="anchored" data-anchor-id="how-can-you-use-model-cards-in-your-organization">How can you use model cards in your organization?</h3>
+<p>The use of detailed model cards can often be challenging because an organization may not want to reveal its processes, proprietary data or trade secrets. In such cases, the developer team should think about how model cards can be useful and empowering, without including sensitive information.</p>
+</section>
+</section>
+<section id="learn-more" class="level2">
+<h2 class="anchored" data-anchor-id="learn-more">Learn more</h2>
+<p>To dive deeper into the application of HCD to AI, check out these resources:</p>
+<ul>
+<li>Lex Fridman’s <a href="https://www.youtube.com/watch?v=bmjamLZ3v8A">introductory lecture</a> on Human-Centered Artificial Intelligence</li>
+<li>Google’s People + AI Research (PAIR) <a href="https://pair.withgoogle.com/guidebook/">Guidebook</a></li>
+<li>Stanford Human-Centered Artificial Intelligence (HAI) <a href="https://hai.stanford.edu/research">research</a></li>
+</ul>
+<p>To continue learning about bias, check out the <a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification/overview">Jigsaw Unintended Bias in Toxicity Classification</a> competition that was introduced in this exercise.</p>
+<ul>
+<li>Kaggler <a href="https://www.kaggle.com/christofhenkel">Dieter</a> has written a helpful two-part series that teaches you how to preprocess the data and train a neural network to make a competition submission. <a href="https://www.kaggle.com/christofhenkel/how-to-preprocessing-for-glove-part1-eda">Get started here</a>.</li>
+<li>Many Kagglers have written helpful notebooks that you can use to get started. <a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification/notebooks?sortBy=voteCount&amp;group=everyone&amp;pageSize=20&amp;competitionId=12500">Check them out</a> on the competition page.</li>
+</ul>
+<p>Another Kaggle competition that you can use to learn about bias is the <a href="https://www.kaggle.com/c/inclusive-images-challenge">Inclusive Images Challenge</a>, which you can read more about in <a href="https://ai.googleblog.com/2018/09/introducing-inclusive-images-competition.html">this blog post</a>. The competition focuses on <strong>evaluation bias</strong> in computer vision.</p>
+<ul>
+<li>Explore different types of fairness with an <a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">interactive tool</a>.</li>
+<li>You can read more about equal opportunity in <a href="https://ai.googleblog.com/2016/10/equality-of-opportunity-in-machine.html">this blog post</a>.</li>
+<li>Analyze ML fairness with <a href="https://pair-code.github.io/what-if-tool/learn/tutorials/walkthrough/">this walkthrough</a> of the What-If Tool, created by the People and AI Research (PAIR) team at Google. This tool allows you to quickly amend an ML model, once you’ve picked the fairness criterion that is best for your use case.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

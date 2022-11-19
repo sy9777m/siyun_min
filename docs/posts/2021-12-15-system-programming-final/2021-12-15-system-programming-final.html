@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-12-15">
+
+<title>Siyun Min - System Programming final</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">System Programming final</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 15, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="system-programming-final" class="level1">
+<h1>System Programming final</h1>
+<section id="optimization" class="level2">
+<h2 class="anchored" data-anchor-id="optimization">Optimization</h2>
+<section id="performance-realities" class="level3">
+<h3 class="anchored" data-anchor-id="performance-realities">Performance realities</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215144546753.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215144546753</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimizing-compilers" class="level3">
+<h3 class="anchored" data-anchor-id="optimizing-compilers">Optimizing compilers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215144725841.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215144725841</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="limitations-of-optimizing-compilers" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-of-optimizing-compilers">Limitations of optimizing compilers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215144905925.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215144905925</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215144849316.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215144849316</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimization-blocker-1-memory-aliasing" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-blocker-1-memory-aliasing">Optimization blocker #1: Memory Aliasing</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145343566.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145343566</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145419970.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145419970</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145428740.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145428740</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimization-blocker-2-procedure-calls" class="level3">
+<h3 class="anchored" data-anchor-id="optimization-blocker-2-procedure-calls">Optimization blocker #2: Procedure calls</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145508439.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145508439</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145725188.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145725188</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145752636.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145752636</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145800308.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145800308</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="modern-cpu-design" class="level3">
+<h3 class="anchored" data-anchor-id="modern-cpu-design">Modern CPU design</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215145928096.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215145928096</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="superscalar-processor" class="level3">
+<h3 class="anchored" data-anchor-id="superscalar-processor">Superscalar processor</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150002279.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150002279</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="getting-high-performance" class="level3">
+<h3 class="anchored" data-anchor-id="getting-high-performance">Getting high performance</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150346399.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150346399</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="memory-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="memory-hierarchy">Memory hierarchy</h2>
+<section id="random-access-memory-ram" class="level3">
+<h3 class="anchored" data-anchor-id="random-access-memory-ram">Random-access memory (RAM)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150432950.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150432950</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150509856.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150509856</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nonvolatile-memories" class="level3">
+<h3 class="anchored" data-anchor-id="nonvolatile-memories">Nonvolatile memories</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150522743.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150522743</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="traditional-bus-structure-connecting-cpu-and-memory" class="level3">
+<h3 class="anchored" data-anchor-id="traditional-bus-structure-connecting-cpu-and-memory">Traditional bus structure connecting CPU and memory</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150642886.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150642886</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="memory-readwrite-transaction" class="level3">
+<h3 class="anchored" data-anchor-id="memory-readwrite-transaction">Memory read/write transaction</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150703490.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150703490</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150711785.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150711785</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150722569.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150722569</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150728435.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150728435</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150744275.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150744275</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150800301.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150800301</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="whats-inside-a-disk-drive" class="level3">
+<h3 class="anchored" data-anchor-id="whats-inside-a-disk-drive">What’s inside a disk drive?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150824606.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150824606</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-geometry" class="level3">
+<h3 class="anchored" data-anchor-id="disk-geometry">Disk geometry</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150844651.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150844651</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150906394.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150906394</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="disk-capacity">Disk capacity</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215150917218.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215150917218</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recording-zones" class="level3">
+<h3 class="anchored" data-anchor-id="recording-zones">Recording zones</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151054065.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151054065</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computing-disk-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="computing-disk-capacity">Computing disk capacity</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151122100.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151122100</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-operation" class="level3">
+<h3 class="anchored" data-anchor-id="disk-operation">Disk operation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151150203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151150203</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151200424.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151200424</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-structure" class="level3">
+<h3 class="anchored" data-anchor-id="disk-structure">Disk structure</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151225591.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151225591</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-access" class="level3">
+<h3 class="anchored" data-anchor-id="disk-access">Disk access</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151236801.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151236801</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151244304.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151244304</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151251903.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151251903</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151259432.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151259432</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151306641.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151306641</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151311831.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151311831</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151318227.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151318227</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151326242.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151326242</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151332263.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151332263</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disk-access-time" class="level3">
+<h3 class="anchored" data-anchor-id="disk-access-time">Disk access time</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151349882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151349882</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151400304.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151400304</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="logical-disk-blocks" class="level3">
+<h3 class="anchored" data-anchor-id="logical-disk-blocks">Logical disk blocks</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151431642.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151431642</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="io-bus" class="level3">
+<h3 class="anchored" data-anchor-id="io-bus">I/O bus</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151530662.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151530662</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reading-a-disk-sector" class="level3">
+<h3 class="anchored" data-anchor-id="reading-a-disk-sector">Reading a disk sector</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151613808.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151613808</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151624855.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151624855</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151638756.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151638756</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="solid-state-disks-ssd" class="level3">
+<h3 class="anchored" data-anchor-id="solid-state-disks-ssd">Solid state disks (SSD)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151655459.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151655459</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ssd-performance-characteristics" class="level3">
+<h3 class="anchored" data-anchor-id="ssd-performance-characteristics">SSD performance characteristics</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151749406.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151749406</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ssd-tradeoffs-vs-rotating-disks" class="level3">
+<h3 class="anchored" data-anchor-id="ssd-tradeoffs-vs-rotating-disks">SSD tradeoffs vs rotating disks</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151818028.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151818028</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-cpu-memory-gap" class="level3">
+<h3 class="anchored" data-anchor-id="the-cpu-memory-gap">The CPU-Memory gap</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151840596.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151840596</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="locality" class="level3">
+<h3 class="anchored" data-anchor-id="locality">Locality</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151901313.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151901313</figcaption><p></p>
+</figure>
+</div>
+<p>Temporal locality - 썼던 거 또 쓸 가능성이 높다.</p>
+<p>Spatial locality - 썼던거에서 가까운 것을 쓸 가능성이 높다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215151944282.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215151944282</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="qualitative-estimates-of-locality" class="level3">
+<h3 class="anchored" data-anchor-id="qualitative-estimates-of-locality">Qualitative estimates of locality</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152006223.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152006223</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152033194.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152033194</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="memory-hierarchies" class="level3">
+<h3 class="anchored" data-anchor-id="memory-hierarchies">Memory hierarchies</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152130353.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152130353</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152226080.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152226080</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152628327.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152628327</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="caches" class="level3">
+<h3 class="anchored" data-anchor-id="caches">Caches</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152309457.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152309457</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-cache-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="general-cache-concepts">General cache concepts</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152416373.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152416373</figcaption><p></p>
+</figure>
+</div>
+<section id="general-cache-concepts-hit" class="level4">
+<h4 class="anchored" data-anchor-id="general-cache-concepts-hit">General cache concepts: hit</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152431250.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152431250</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-cache-concepts-miss" class="level4">
+<h4 class="anchored" data-anchor-id="general-cache-concepts-miss">General cache concepts: miss</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152458178.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152458178</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="general-caching-concepts-types-of-cache-misses" class="level3">
+<h3 class="anchored" data-anchor-id="general-caching-concepts-types-of-cache-misses">General caching concepts: types of cache misses</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152535039.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152535039</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152656484.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152656484</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="linking" class="level2">
+<h2 class="anchored" data-anchor-id="linking">Linking</h2>
+<section id="static-linking" class="level3">
+<h3 class="anchored" data-anchor-id="static-linking">Static linking</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152720272.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152720272</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-linkers" class="level3">
+<h3 class="anchored" data-anchor-id="why-linkers">Why linkers?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152745875.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152745875</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152756740.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152756740</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-do-linkers-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-linkers-do">What do linkers do?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152835897.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152835897</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215152924412.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215152924412</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="three-kinds-of-object-files-modules" class="level3">
+<h3 class="anchored" data-anchor-id="three-kinds-of-object-files-modules">Three kinds of object files (modules)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153018895.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153018895</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="executable-and-linkable-format-elf" class="level3">
+<h3 class="anchored" data-anchor-id="executable-and-linkable-format-elf">Executable and linkable format (ELF)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153104282.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153104282</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="elf-object-file-format" class="level3">
+<h3 class="anchored" data-anchor-id="elf-object-file-format">ELF object file format</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153122082.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153122082</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153200856.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153200856</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="linker-symbols" class="level3">
+<h3 class="anchored" data-anchor-id="linker-symbols">Linker symbols</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153255564.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153255564</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="steps-symbol-resolution" class="level3">
+<h3 class="anchored" data-anchor-id="steps-symbol-resolution">Steps: symbol resolution</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153348934.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153348934</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="local-symbols" class="level3">
+<h3 class="anchored" data-anchor-id="local-symbols">Local symbols</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153417302.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153417302</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="how-linker-resolves-duplicate-symbol-definitions" class="level3">
+<h3 class="anchored" data-anchor-id="how-linker-resolves-duplicate-symbol-definitions">How linker resolves duplicate symbol definitions</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153738202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153738202</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="linkers-symbol-rules" class="level3">
+<h3 class="anchored" data-anchor-id="linkers-symbol-rules">Linker’s symbol rules</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153800893.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153800893</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="linker-puzzles" class="level3">
+<h3 class="anchored" data-anchor-id="linker-puzzles">Linker puzzles</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153830231.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153830231</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153922052.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153922052</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153931683.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153931683</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215153950579.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215153950579</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154031403.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154031403</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154110354.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154110354</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="global-variables" class="level3">
+<h3 class="anchored" data-anchor-id="global-variables">Global variables</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154120087.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154120087</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="steps-relocation" class="level3">
+<h3 class="anchored" data-anchor-id="steps-relocation">Steps: relocation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154136732.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154136732</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154146292.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154146292</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154155429.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154155429</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="loading-executable-object-files" class="level3">
+<h3 class="anchored" data-anchor-id="loading-executable-object-files">Loading executable object files</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154243945.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154243945</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="packing-commonly-used-functions" class="level3">
+<h3 class="anchored" data-anchor-id="packing-commonly-used-functions">Packing commonly used functions</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154339943.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154339943</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="old-fashioned-solution-static-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="old-fashioned-solution-static-libraries">Old-fashioned solution: static libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154418757.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154418757</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="creating-static-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="creating-static-libraries">Creating static libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154434218.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154434218</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="commonly-used-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="commonly-used-libraries">Commonly used libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154514939.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154514939</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="linking-with-static-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="linking-with-static-libraries">Linking with static libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154529866.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154529866</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154538381.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154538381</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="using-static-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="using-static-libraries">Using static libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154557361.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154557361</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154604985.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154604985</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="modern-solution-shared-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="modern-solution-shared-libraries">Modern solution: shared libraries</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154719147.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154719147</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154808325.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154808325</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dynamic-linking-at-load-time" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-linking-at-load-time">Dynamic linking at load-time</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154833477.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154833477</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dynamic-linking-at-run-time" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-linking-at-run-time">Dynamic linking at run-time</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154858202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154858202</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154907835.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154907835</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154915330.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154915330</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="linking-summary" class="level3">
+<h3 class="anchored" data-anchor-id="linking-summary">Linking summary</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215154940892.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215154940892</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="library-interpositioning" class="level2">
+<h2 class="anchored" data-anchor-id="library-interpositioning">Library interpositioning</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155013329.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155013329</figcaption><p></p>
+</figure>
+</div>
+<section id="some-interpositioning-applications" class="level3">
+<h3 class="anchored" data-anchor-id="some-interpositioning-applications">Some interpositioning applications</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155034473.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155034473</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155125396.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155125396</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="example-program" class="level3">
+<h3 class="anchored" data-anchor-id="example-program">Example program</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155138897.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155138897</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="compile-time-interpositioning" class="level3">
+<h3 class="anchored" data-anchor-id="compile-time-interpositioning">Compile-time interpositioning</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155209787.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155209787</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155229263.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155229263</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="link-time-interpositioning" class="level3">
+<h3 class="anchored" data-anchor-id="link-time-interpositioning">Link-time interpositioning</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155305908.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155305908</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155318738.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155318738</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="loadrun-time-interpositioning" class="level3">
+<h3 class="anchored" data-anchor-id="loadrun-time-interpositioning">Load/run-time interpositioning</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155358628.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155358628</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155422889.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155422889</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155431503.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155431503</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="interpositioning-recap" class="level3">
+<h3 class="anchored" data-anchor-id="interpositioning-recap">Interpositioning recap</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155445470.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155445470</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="exceptional-control-flow" class="level2">
+<h2 class="anchored" data-anchor-id="exceptional-control-flow">Exceptional control flow</h2>
+<section id="control-flow" class="level3">
+<h3 class="anchored" data-anchor-id="control-flow">Control flow</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215155543089.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215155543089</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="altering-the-control-flow" class="level3">
+<h3 class="anchored" data-anchor-id="altering-the-control-flow">Altering the control flow</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161111328.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161111328</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exceptional-control-flow-1" class="level3">
+<h3 class="anchored" data-anchor-id="exceptional-control-flow-1">Exceptional control flow</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161142036.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161142036</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exceptions" class="level3">
+<h3 class="anchored" data-anchor-id="exceptions">Exceptions</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161250379.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161250379</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="interrupt-vectors" class="level3">
+<h3 class="anchored" data-anchor-id="interrupt-vectors">Interrupt vectors</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161310796.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161310796</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="asynchronous-exceptions-interrupts" class="level3">
+<h3 class="anchored" data-anchor-id="asynchronous-exceptions-interrupts">Asynchronous exceptions (interrupts)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161355576.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161355576</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="synchronous-exceptions" class="level3">
+<h3 class="anchored" data-anchor-id="synchronous-exceptions">Synchronous exceptions</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161416413.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161416413</figcaption><p></p>
+</figure>
+</div>
+<p>Trap - 의도적</p>
+<p>faults - 의도하지 않았으나 복구 가능</p>
+<p>aborts - 의도하지 않았고 복구 불능</p>
+</section>
+<section id="trap-example-opening-file" class="level3">
+<h3 class="anchored" data-anchor-id="trap-example-opening-file">Trap example: opening file</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161442267.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161442267</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="fault-example-page-fault" class="level3">
+<h3 class="anchored" data-anchor-id="fault-example-page-fault">Fault example: page fault</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161523360.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161523360</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="faults-example-invalid-memory-reference" class="level3">
+<h3 class="anchored" data-anchor-id="faults-example-invalid-memory-reference">Faults example: invalid memory reference</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161625510.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161625510</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exception-table-ia32-excerpt" class="level3">
+<h3 class="anchored" data-anchor-id="exception-table-ia32-excerpt">Exception table IA32 (Excerpt)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161649703.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161649703</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="processes" class="level2">
+<h2 class="anchored" data-anchor-id="processes">Processes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161709579.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161709579</figcaption><p></p>
+</figure>
+</div>
+<section id="concurrent-processes" class="level3">
+<h3 class="anchored" data-anchor-id="concurrent-processes">concurrent processes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161745378.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161745378</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="user-view-of-concurrent-processes" class="level3">
+<h3 class="anchored" data-anchor-id="user-view-of-concurrent-processes">User view of concurrent processes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161831969.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161831969</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="context-switching" class="level3">
+<h3 class="anchored" data-anchor-id="context-switching">Context switching</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161848037.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161848037</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="fork-creating-new-processes" class="level3">
+<h3 class="anchored" data-anchor-id="fork-creating-new-processes">fork: creating new processes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161912373.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161912373</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161926846.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161926846</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215161946170.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215161946170</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162011407.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162011407</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162028567.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162028567</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162054274.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162054274</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162103703.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162103703</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exit-ending-a-process" class="level3">
+<h3 class="anchored" data-anchor-id="exit-ending-a-process">exit: ending a process</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162124672.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162124672</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="zombies" class="level3">
+<h3 class="anchored" data-anchor-id="zombies">Zombies</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162138337.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162138337</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162226222.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162226222</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162235277.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162235277</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wait-synchronizing-with-children" class="level3">
+<h3 class="anchored" data-anchor-id="wait-synchronizing-with-children">wait: synchronizing with children</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162306110.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162306110</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162514724.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162514724</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162525382.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162525382</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="waitpid-waiting-for-a-specific-process" class="level3">
+<h3 class="anchored" data-anchor-id="waitpid-waiting-for-a-specific-process">waitpid(): waiting for a specific process</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162607207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162607207</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="execve-loading-and-running-programs" class="level3">
+<h3 class="anchored" data-anchor-id="execve-loading-and-running-programs">execve: loading and running programs</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162638420.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162638420</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162717200.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162717200</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="summary-1">Summary</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162757271.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162757271</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162806878.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162806878</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="exceptional-control-flow-signals" class="level2">
+<h2 class="anchored" data-anchor-id="exceptional-control-flow-signals">Exceptional control flow: signals</h2>
+<section id="the-world-of-multitasking" class="level3">
+<h3 class="anchored" data-anchor-id="the-world-of-multitasking">The world of multitasking</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215162915346.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215162915346</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="programmers-model-of-multitasking" class="level3">
+<h3 class="anchored" data-anchor-id="programmers-model-of-multitasking">Programmer’s model of multitasking</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163033847.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163033847</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="unix-process-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="unix-process-hierarchy">Unix process hierarchy</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163108444.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163108444</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="shell-programs" class="level3">
+<h3 class="anchored" data-anchor-id="shell-programs">Shell programs</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163119120.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163119120</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="simple-shell-eval-function" class="level3">
+<h3 class="anchored" data-anchor-id="simple-shell-eval-function">Simple shell eval function</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163145993.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163145993</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-is-a-background-job" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-background-job">What is a background job?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163159317.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163159317</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="problem-with-simple-shell-example" class="level3">
+<h3 class="anchored" data-anchor-id="problem-with-simple-shell-example">Problem with simple shell example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163213761.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163213761</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ecf-to-the-rescue" class="level3">
+<h3 class="anchored" data-anchor-id="ecf-to-the-rescue">ECF to the rescue!</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163500474.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163500474</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="signals" class="level2">
+<h2 class="anchored" data-anchor-id="signals">Signals</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163537428.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163537428</figcaption><p></p>
+</figure>
+</div>
+<section id="sending-a-signal" class="level3">
+<h3 class="anchored" data-anchor-id="sending-a-signal">Sending a signal</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163615154.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163615154</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="receiving-a-signal" class="level3">
+<h3 class="anchored" data-anchor-id="receiving-a-signal">Receiving a signal</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163701451.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163701451</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="pending-and-blocked-signals" class="level3">
+<h3 class="anchored" data-anchor-id="pending-and-blocked-signals">Pending and blocked signals</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215163738766.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215163738766</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="signal-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="signal-concepts">Signal concepts</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164230478.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164230478</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="process-groups" class="level3">
+<h3 class="anchored" data-anchor-id="process-groups">Process groups</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164258124.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164258124</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sending-signals-with-binkill-program" class="level3">
+<h3 class="anchored" data-anchor-id="sending-signals-with-binkill-program">Sending signals with /bin/kill program</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164328235.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164328235</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sending-signals-from-the-keyboard" class="level3">
+<h3 class="anchored" data-anchor-id="sending-signals-from-the-keyboard">Sending signals from the keyboard</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164354351.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164354351</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="receiving-signals" class="level3">
+<h3 class="anchored" data-anchor-id="receiving-signals">Receiving signals</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164433765.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164433765</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="default-actions" class="level3">
+<h3 class="anchored" data-anchor-id="default-actions">Default actions</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164511607.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164511607</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="installing-signal-handlers" class="level3">
+<h3 class="anchored" data-anchor-id="installing-signal-handlers">Installing signal handlers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211215164524338.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211215164524338</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

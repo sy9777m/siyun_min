@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-06">
+
+<title>Siyun Min - Kaggle - Data Visualization</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Kaggle - Data Visualization</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Kaggle</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 6, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="kaggle-data-visualization" class="level1">
+<h1>kaggle Data Visualization</h1>
+<section id="hello-seaborn" class="level2">
+<h2 class="anchored" data-anchor-id="hello-seaborn">Hello, Seaborn</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211002220017090.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211002220017090</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./I6UEDSK.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">tut0_read_csv</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006173350639.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006173350639</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="line-charts" class="level2">
+<h2 class="anchored" data-anchor-id="line-charts">Line Charts</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006173601495.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006173601495</figcaption><p></p>
+</figure>
+</div>
+<p><code>sns.lineplot</code> tells the notebook that we want to create a line chart.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006173635883.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006173635883</figcaption><p></p>
+</figure>
+</div>
+<p>The first line of code sets the size of the figure to <code>14</code> inches (in width) by <code>6</code> inches (in height). To set the size of <em>any figure</em>, you need only copy the same line of code as it appears. Then, if you’d like to use a custom size, change the provided values of <code>14</code> and <code>6</code> to the desired width and height.</p>
+<section id="plot-a-subset-of-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="plot-a-subset-of-the-data">Plot a subset of the data</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006173716415.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006173716415</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="bar-charts-and-heatmaps" class="level2">
+<h2 class="anchored" data-anchor-id="bar-charts-and-heatmaps">Bar Charts and Heatmaps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006174434647.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006174434647</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006174458977.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006174458977</figcaption><p></p>
+</figure>
+</div>
+<p><code>annot=True</code> - This ensures that the values for each cell appear on the chart.</p>
+</section>
+<section id="scatter-plots" class="level2">
+<h2 class="anchored" data-anchor-id="scatter-plots">Scatter Plots</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006175118494.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006175118494</figcaption><p></p>
+</figure>
+</div>
+<p>To double-check the strength of this relationship, you might like to add a <strong>regression line</strong>, or the line that best fits the data. We do this by changing the command to <code>sns.regplot</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006175125869.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006175125869</figcaption><p></p>
+</figure>
+</div>
+<section id="color-coded-scatter-plots" class="level3">
+<h3 class="anchored" data-anchor-id="color-coded-scatter-plots">Color-coded scatter plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006175155413.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006175155413</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006175219474.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006175219474</figcaption><p></p>
+</figure>
+</div>
+<p>We’ll refer to this plot type as a <strong>categorical scatter plot</strong>, and we build it with the <code>sns.swarmplot</code> command.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006175244044.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006175244044</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="distribution" class="level2">
+<h2 class="anchored" data-anchor-id="distribution">Distribution</h2>
+<section id="histogram" class="level3">
+<h3 class="anchored" data-anchor-id="histogram">Histogram</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006180210150.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006180210150</figcaption><p></p>
+</figure>
+</div>
+<p>We customize the behavior of the command with two additional pieces of information:</p>
+<ul>
+<li><code>a=</code> chooses the column we’d like to plot (<em>in this case, we chose <code>'Petal Length (cm)'</code></em>).</li>
+<li><code>kde=False</code> is something we’ll always provide when creating a histogram, as leaving it out will create a slightly different plot.</li>
+</ul>
+</section>
+<section id="density-plot" class="level3">
+<h3 class="anchored" data-anchor-id="density-plot">Density plot</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006180243443.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006180243443</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="d-kde-plots" class="level3">
+<h3 class="anchored" data-anchor-id="d-kde-plots">2D KDE plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006180306571.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006180306571</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="color-coded-plots" class="level3">
+<h3 class="anchored" data-anchor-id="color-coded-plots">Color-coded plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006180343444.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006180343444</figcaption><p></p>
+</figure>
+</div>
+<p>In this case, the legend does not automatically appear on the plot. To force it to show (for any plot type), we can always use <code>plt.legend()</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006180401868.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006180401868</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="choosing-plot-types-and-custom-styles" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-plot-types-and-custom-styles">Choosing Plot Types and Custom Styles</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./2VmgDnF.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">img</figcaption><p></p>
+</figure>
+</div>
+<p>Since it’s not always easy to decide how to best tell the story behind your data, we’ve broken the chart types into three broad categories to help with this.</p>
+<ul>
+<li><p>Trends</p>
+<p>- A trend is defined as a pattern of change.</p>
+<ul>
+<li><code>sns.lineplot</code> - <strong>Line charts</strong> are best to show trends over a period of time, and multiple lines can be used to show trends in more than one group.</li>
+</ul></li>
+<li><p>Relationship</p>
+<p>- There are many different chart types that you can use to understand relationships between variables in your data.</p>
+<ul>
+<li><code>sns.barplot</code> - <strong>Bar charts</strong> are useful for comparing quantities corresponding to different groups.</li>
+<li><code>sns.heatmap</code> - <strong>Heatmaps</strong> can be used to find color-coded patterns in tables of numbers.</li>
+<li><code>sns.scatterplot</code> - <strong>Scatter plots</strong> show the relationship between two continuous variables; if color-coded, we can also show the relationship with a third <a href="https://en.wikipedia.org/wiki/Categorical_variable">categorical variable</a>.</li>
+<li><code>sns.regplot</code> - Including a <strong>regression line</strong> in the scatter plot makes it easier to see any linear relationship between two variables.</li>
+<li><code>sns.lmplot</code> - This command is useful for drawing multiple regression lines, if the scatter plot contains multiple, color-coded groups.</li>
+<li><code>sns.swarmplot</code> - <strong>Categorical scatter plots</strong> show the relationship between a continuous variable and a categorical variable.</li>
+</ul></li>
+<li><p>Distribution</p>
+<p>- We visualize distributions to show the possible values that we can expect to see in a variable, along with how likely they are.</p>
+<ul>
+<li><code>sns.distplot</code> - <strong>Histograms</strong> show the distribution of a single numerical variable.</li>
+<li><code>sns.kdeplot</code> - <strong>KDE plots</strong> (or <strong>2D KDE plots</strong>) show an estimated, smooth distribution of a single numerical variable (or two numerical variables).</li>
+<li><code>sns.jointplot</code> - This command is useful for simultaneously displaying a 2D KDE plot with the corresponding KDE plots for each individual variable.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006181059400.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006181059400</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211006181110176.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211006181110176</figcaption><p></p>
+</figure>
+</div>
+<p>Seaborn has five different themes: (1)<code>"darkgrid"</code>, (2)<code>"whitegrid"</code>, (3)<code>"dark"</code>, (4)<code>"white"</code>, and (5)<code>"ticks"</code>, and you need only use a command similar to the one in the code cell above (with the chosen theme filled in) to change it.</p>
+</section>
+<section id="final-project" class="level2">
+<h2 class="anchored" data-anchor-id="final-project">Final Project</h2>
+<section id="kaggle-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="kaggle-datasets">Kaggle Datasets</h3>
+<p>You can access Kaggle Datasets by visiting the link below:</p>
+<blockquote class="blockquote">
+<p>https://www.kaggle.com/datasets</p>
+</blockquote>
+<p>The link will bring you to a webpage with a long list of datasets that you can use in your own projects.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

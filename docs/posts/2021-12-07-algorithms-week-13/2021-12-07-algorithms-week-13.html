@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-12-07">
+
+<title>Siyun Min - Algorithms Week 13</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Algorithms Week 13</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 7, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="algorithms-week-13" class="level1">
+<h1>Algorithms week 13</h1>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207124410764.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207124410764</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="greedy-algorithms" class="level2">
+<h2 class="anchored" data-anchor-id="greedy-algorithms">Greedy algorithms</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125150921.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125150921</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="non-example" class="level2">
+<h2 class="anchored" data-anchor-id="non-example">Non-example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125159135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125159135</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125207413.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125207413</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="activity-selection" class="level2">
+<h2 class="anchored" data-anchor-id="activity-selection">Activity selection</h2>
+<section id="example-where-greedy-works" class="level3">
+<h3 class="anchored" data-anchor-id="example-where-greedy-works">Example where greedy works</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125230959.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125230959</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="activity-selection-1" class="level2">
+<h2 class="anchored" data-anchor-id="activity-selection-1">Activity selection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125243425.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125243425</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="greedy-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="greedy-algorithm">Greedy algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125255106.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125255106</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125643256.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125643256</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125650404.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125650404</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125659201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125659201</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125707809.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125707809</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125714728.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125714728</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125723888.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125723888</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125731144.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125731144</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="at-least-its-fast" class="level2">
+<h2 class="anchored" data-anchor-id="at-least-its-fast">At least it’s fast</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125743376.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125743376</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-makes-it-greedy" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-it-greedy">What makes it greedy?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207125758193.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207125758193</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="three-questions" class="level2">
+<h2 class="anchored" data-anchor-id="three-questions">Three questions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130139784.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130139784</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="answers" class="level2">
+<h2 class="anchored" data-anchor-id="answers">Answers</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130150462.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130150462</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="back-to-activity-selection" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-activity-selection">Back to activity selection</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130204867.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130204867</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-does-it-work" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-it-work">Why does it work?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130216147.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130216147</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="assuming-we-can-prove-that" class="level2">
+<h2 class="anchored" data-anchor-id="assuming-we-can-prove-that">Assuming we can prove that</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130228086.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130228086</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="we-never-rule-out-an-optimal-solution" class="level2">
+<h2 class="anchored" data-anchor-id="we-never-rule-out-an-optimal-solution">We never rule out an optimal solution</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130521888.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130521888</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130532927.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130532927</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130541551.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130541551</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130550915.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130550915</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130601278.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130601278</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130610059.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130610059</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130631355.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130631355</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="so-the-algorithm-is-correct" class="level2">
+<h2 class="anchored" data-anchor-id="so-the-algorithm-is-correct">So the algorithm is correct</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207130650827.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207130650827</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sub-problem-graph-view" class="level2">
+<h2 class="anchored" data-anchor-id="sub-problem-graph-view">Sub-problem graph view</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131200965.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131200965</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131207103.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131207103</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131214932.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131214932</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131223065.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131223065</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="answers-1" class="level2">
+<h2 class="anchored" data-anchor-id="answers-1">Answers</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131233461.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131233461</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="another-example-huffman-coding" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-huffman-coding">Another example: Huffman coding</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131250435.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131250435</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131258723.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131258723</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="suppose-we-have-some-distribution-on-characters" class="level2">
+<h2 class="anchored" data-anchor-id="suppose-we-have-some-distribution-on-characters">Suppose we have some distribution on characters</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131316733.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131316733</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="try-0" class="level2">
+<h2 class="anchored" data-anchor-id="try-0">Try 0</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131323243.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131323243</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131328719.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131328719</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131805446.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131805446</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="try-1" class="level2">
+<h2 class="anchored" data-anchor-id="try-1">Try 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131828773.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131828773</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="try-2-prefix-free-coding" class="level2">
+<h2 class="anchored" data-anchor-id="try-2-prefix-free-coding">Try 2: prefix-free coding</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131851032.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131851032</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131907776.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131907776</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131916155.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131916155</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131924584.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131924584</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="a-prefix-free-code-is-a-tree" class="level2">
+<h2 class="anchored" data-anchor-id="a-prefix-free-code-is-a-tree">A prefix-free code is a tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131940349.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131940349</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="some-trees-are-better-than-others" class="level2">
+<h2 class="anchored" data-anchor-id="some-trees-are-better-than-others">Some trees are better than others</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207131953121.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207131953121</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132002609.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132002609</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="optimal-sub-structure" class="level2">
+<h2 class="anchored" data-anchor-id="optimal-sub-structure">Optimal sub-structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132012989.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132012989</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="in-order-to-design-a-greedy-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="in-order-to-design-a-greedy-algorithm">In order to design a greedy algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132026488.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132026488</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>greedily build subtrees, starting with the infrequent letters</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132045635.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132045635</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132054696.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132054696</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132100843.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132100843</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132107452.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132107452</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132116352.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132116352</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132125129.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132125129</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-exactly-was-the-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="what-exactly-was-the-algorithm">What exactly was the algorithm?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132138686.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132138686</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="does-it-work" class="level2">
+<h2 class="anchored" data-anchor-id="does-it-work">Does it work?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132717578.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132717578</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-have-we-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-we-learned">What have we learned?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132729107.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132729107</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recap-i" class="level2">
+<h2 class="anchored" data-anchor-id="recap-i">Recap I</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132738317.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132738317</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="minimum-spanning-tree" class="level2">
+<h2 class="anchored" data-anchor-id="minimum-spanning-tree">Minimum spanning tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132748707.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132748707</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="minimum-spanning-tree-1" class="level2">
+<h2 class="anchored" data-anchor-id="minimum-spanning-tree-1">Minimum spanning tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207132800492.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207132800492</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133312410.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133312410</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133320125.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133320125</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133327857.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133327857</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133335355.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133335355</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-msts" class="level2">
+<h2 class="anchored" data-anchor-id="why-msts">Why MSTs?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133352369.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133352369</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="idea-1" class="level2">
+<h2 class="anchored" data-anchor-id="idea-1">Idea 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133405724.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133405724</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133413229.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133413229</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133420158.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133420158</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133427278.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133427278</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133434180.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133434180</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133441720.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133441720</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133449792.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133449792</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133455751.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133455751</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="weve-discovered-prims-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="weve-discovered-prims-algorithm">We’ve discovered Prim’s algorithm!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207133518905.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207133518905</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134032338.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134032338</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="how-do-we-actually-implement-this" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-actually-implement-this">How do we actually implement this?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134047136.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134047136</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134148373.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134148373</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134136742.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134136742</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="efficient-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="efficient-implementation">Efficient implementation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134430747.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134430747</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134445691.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134445691</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134453471.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134453471</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134502336.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134502336</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134511684.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134511684</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134519342.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134519342</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134527768.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134527768</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134535359.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134535359</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134543507.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134543507</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134552336.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134552336</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134601368.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134601368</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134609199.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134609199</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134618035.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134618035</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134625973.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134625973</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134632861.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134632861</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134640126.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134640126</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134646017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134646017</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="this-should-look-pretty-familiar" class="level2">
+<h2 class="anchored" data-anchor-id="this-should-look-pretty-familiar">This should look pretty familiar</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207134700872.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207134700872</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-thing-that-is-similar-running-time" class="level2">
+<h2 class="anchored" data-anchor-id="one-thing-that-is-similar-running-time">One thing that is similar: running time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135209167.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135209167</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135217731.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135217731</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="thats-not-the-only-greedy-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="thats-not-the-only-greedy-algorithm">That’s not the only greedy algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135232436.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135232436</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135240236.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135240236</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135257433.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135257433</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135303049.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135303049</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135308324.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135308324</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135312825.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135312825</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135321039.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135321039</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135329210.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135329210</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135334453.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135334453</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135339882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135339882</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="weve-discovered-kruskals-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="weve-discovered-kruskals-algorithm">We’ve discovered Kruskal’s algorithm!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207135355389.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207135355389</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207140949415.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207140949415</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="at-each-step-of-kruskals-we-are-maintaining-a-forest" class="level2">
+<h2 class="anchored" data-anchor-id="at-each-step-of-kruskals-we-are-maintaining-a-forest">At each step of Kruskal’s, we are maintaining a forest</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141009574.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141009574</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141015822.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141015822</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141022055.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141022055</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141028740.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141028740</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141034734.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141034734</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="union-find-data-structure-also-called-disjoint-set-data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="union-find-data-structure-also-called-disjoint-set-data-structure">Union-find data structure also called disjoint-set data structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141052286.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141052286</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141058341.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141058341</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141104364.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141104364</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="kruskal-pseudo-code" class="level2">
+<h2 class="anchored" data-anchor-id="kruskal-pseudo-code">Kruskal pseudo-code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141117012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141117012</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="once-more" class="level2">
+<h2 class="anchored" data-anchor-id="once-more">Once more…</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141448215.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141448215</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141454494.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141454494</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141501260.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141501260</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141506607.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141506607</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141512251.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141512251</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141517618.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141517618</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141524970.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141524970</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141531540.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141531540</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141538068.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141538068</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141541742.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141541742</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="running-time" class="level2">
+<h2 class="anchored" data-anchor-id="running-time">Running time</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141551496.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141551496</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="compare-and-contrast" class="level2">
+<h2 class="anchored" data-anchor-id="compare-and-contrast">Compare and contrast</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141601905.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141601905</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="both-prim-and-kruskal" class="level2">
+<h2 class="anchored" data-anchor-id="both-prim-and-kruskal">Both Prim and Kruskal</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141612359.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141612359</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recap" class="level2">
+<h2 class="anchored" data-anchor-id="recap">Recap</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211207141621642.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211207141621642</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

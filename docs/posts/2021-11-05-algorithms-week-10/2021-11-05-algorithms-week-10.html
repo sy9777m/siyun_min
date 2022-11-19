@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-11-05">
+
+<title>Siyun Min - Algorithms Week 10</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Algorithms Week 10</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 5, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="algorithms-week-10" class="level1">
+<h1>Algorithms week 10</h1>
+<section id="back-to-this-example" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-this-example">Back to this example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154620461.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154620461</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dijkstras-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="dijkstras-algorithm">Dijkstra’s algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154634909.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154634909</figcaption><p></p>
+</figure>
+</div>
+<section id="intuition" class="level3">
+<h3 class="anchored" data-anchor-id="intuition">Intuition</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154644192.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154644192</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154653856.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154653856</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154659840.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154659840</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154706273.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154706273</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154713292.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154713292</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154720858.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154720858</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105154730966.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105154730966</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="how-do-we-actually-implement-this" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-actually-implement-this">How do we actually implement this?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155406001.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155406001</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dijkstra-by-example" class="level2">
+<h2 class="anchored" data-anchor-id="dijkstra-by-example">Dijkstra by example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155420483.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155420483</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155431038.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155431038</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155439388.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155439388</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155447468.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155447468</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155622120.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155622120</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155631690.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155631690</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155640018.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155640018</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155649627.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155649627</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155656987.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155656987</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155704100.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155704100</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155711081.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155711081</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155719083.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155719083</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155726009.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155726009</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155735415.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155735415</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dijkstras-algorithm-1" class="level2">
+<h2 class="anchored" data-anchor-id="dijkstras-algorithm-1">Dijkstra’s algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105155747640.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105155747640</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160347966.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160347966</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160354164.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160354164</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160403823.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160403823</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-does-this-work" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-this-work">Why does this work?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160413886.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160413886</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="claim-1" class="level2">
+<h2 class="anchored" data-anchor-id="claim-1">Claim 1</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160426595.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160426595</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="claim-2" class="level2">
+<h2 class="anchored" data-anchor-id="claim-2">Claim 2</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105160437243.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105160437243</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161455991.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161455991</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161506768.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161506768</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161518358.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161518358</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161543479.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161543479</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161552447.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161552447</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161600521.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161600521</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-does-this-work-1" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-this-work-1">Why does this work?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161616726.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161616726</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-did-we-just-learn" class="level2">
+<h2 class="anchored" data-anchor-id="what-did-we-just-learn">What did we just learn?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161628610.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161628610</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="running-time" class="level2">
+<h2 class="anchored" data-anchor-id="running-time">Running time?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161810146.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161810146</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="we-need-a-data-structure-that" class="level2">
+<h2 class="anchored" data-anchor-id="we-need-a-data-structure-that">We need a data structure that:</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105161826227.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105161826227</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="if-we-use-an-array" class="level2">
+<h2 class="anchored" data-anchor-id="if-we-use-an-array">If we use an array</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162124216.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162124216</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162331921.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162331921</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="if-we-use-an-a-red-black-tree" class="level2">
+<h2 class="anchored" data-anchor-id="if-we-use-an-a-red-black-tree">If we use an a red-black tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162136427.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162136427</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="heaps-support-these-operations" class="level2">
+<h2 class="anchored" data-anchor-id="heaps-support-these-operations">Heaps support these operations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162147658.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162147658</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162606249.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162606249</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="say-we-use-a-fibonacci-heap" class="level2">
+<h2 class="anchored" data-anchor-id="say-we-use-a-fibonacci-heap">Say we use a Fibonacci heap</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162619212.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162619212</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dijkstra-is-used-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="dijkstra-is-used-in-practice">Dijkstra is used in practice</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162636344.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162636344</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dijkstra-drawbacks" class="level2">
+<h2 class="anchored" data-anchor-id="dijkstra-drawbacks">Dijkstra drawbacks</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162647934.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162647934</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bellman-ford-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-algorithm">Bellman-Ford algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105162913151.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105162913151</figcaption><p></p>
+</figure>
+</div>
+<p>time complexity가 Dijkstra’s algorithm보다 높다</p>
+</section>
+<section id="recall-shortest-path-problem" class="level2">
+<h2 class="anchored" data-anchor-id="recall-shortest-path-problem">Recall: Shortest path problem</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105194544656.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105194544656</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-negative-edge-weights" class="level2">
+<h2 class="anchored" data-anchor-id="why-negative-edge-weights">Why negative edge weights?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105194756414.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105194756414</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="one-problem-with-negative-edge-weights" class="level2">
+<h2 class="anchored" data-anchor-id="one-problem-with-negative-edge-weights">One problem with negative edge weights</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105195008495.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105195008495</figcaption><p></p>
+</figure>
+</div>
+<p>음의 가중치가 존재할 때, shortest path는 무엇인가 - cycle이 없어야 한다. 무한히 negative cycle을 돌면 -inf 값으로 수렴하기 때문</p>
+<p>그래서 negative cycle이 있을 때 shortest path는 의미가 없다.</p>
+</section>
+<section id="bellman-ford-algorithm-1" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-algorithm-1">Bellman-Ford algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105195238896.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105195238896</figcaption><p></p>
+</figure>
+</div>
+<p>u의 인접노드를 전부 돌면서 최단거리 계산</p>
+</section>
+<section id="for-some-reasons" class="level2">
+<h2 class="anchored" data-anchor-id="for-some-reasons">For some reasons</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105195254112.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105195254112</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bellman-ford" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford">Bellman-Ford</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200639135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200639135</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200756719.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200756719</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200804777.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200804777</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200813046.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200813046</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200819910.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200819910</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200829993.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200829993</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="this-seems-much-slower-than-dijkstra" class="level2">
+<h2 class="anchored" data-anchor-id="this-seems-much-slower-than-dijkstra">This seems much slower than Dijkstra</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105200844470.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105200844470</figcaption><p></p>
+</figure>
+</div>
+<p>m = number of edges</p>
+<p>n = number of vertices</p>
+</section>
+<section id="one-problem-with-negative-edge-weights-1" class="level2">
+<h2 class="anchored" data-anchor-id="one-problem-with-negative-edge-weights-1">One problem with negative edge weights</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105201504489.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105201504489</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bellman-ford-and-negative-edge-weights" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-and-negative-edge-weights">Bellman-Ford and negative edge weights</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105201626437.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105201626437</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="negative-edge-weights" class="level2">
+<h2 class="anchored" data-anchor-id="negative-edge-weights">Negative edge weights</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105201837777.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105201837777</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105201845614.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105201845614</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="back-to-the-correctness" class="level2">
+<h2 class="anchored" data-anchor-id="back-to-the-correctness">Back to the correctness</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105201858968.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105201858968</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="how-bellman-ford-deals-with-negative-weights" class="level2">
+<h2 class="anchored" data-anchor-id="how-bellman-ford-deals-with-negative-weights">How Bellman-Ford deals with negative weights</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105202208598.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105202208598</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bellman-ford-algorithm-2" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-algorithm-2">Bellman-Ford algorithm</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105202220591.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105202220591</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105204044922.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105204044922</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105204054892.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105204054892</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-have-we-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-have-we-learned">What have we learned?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105204109802.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105204109802</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bellman-ford-is-also-used-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="bellman-ford-is-also-used-in-practice">Bellman-Ford is also used in practice</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105204123292.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105204123292</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recap-shortest-paths" class="level2">
+<h2 class="anchored" data-anchor-id="recap-shortest-paths">Recap: shortest paths</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105204135725.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105204135725</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211105205648715.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211105205648715</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

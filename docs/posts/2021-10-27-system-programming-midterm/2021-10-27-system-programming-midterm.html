@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-27">
+
+<title>Siyun Min - System Programming midterm</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">System Programming midterm</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 27, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="system-programming-midterm" class="level1">
+<h1>System Programming midterm</h1>
+<section id="abstraction-is-good-but-dont-forget-reality" class="level2">
+<h2 class="anchored" data-anchor-id="abstraction-is-good-but-dont-forget-reality">Abstraction is good but don’t forget reality</h2>
+<p>Abstraction have limits</p>
+<ul>
+<li>Especially in the presence of bugs</li>
+<li>Need to understand details of underlying implementations</li>
+</ul>
+<p>Useful outcomes from taking system programming</p>
+<ul>
+<li>Able to find and eliminate bugs efficiently</li>
+<li>Able to understand and tune for program performance</li>
+</ul>
+</section>
+<section id="ints-are-not-integers-floats-are-not-reals" class="level2">
+<h2 class="anchored" data-anchor-id="ints-are-not-integers-floats-are-not-reals">Ints are not integers, Floats are not reals</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027041921386.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027041921386</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027041925730.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027041925730</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computer-arithmetic" class="level2">
+<h2 class="anchored" data-anchor-id="computer-arithmetic">Computer arithmetic</h2>
+<p>Does not generate random values</p>
+<p>Cannot assume all usual mathematical properties</p>
+<ul>
+<li>Due to finiteness of representations</li>
+<li>Integer operations satisfy ‘ring’ properties
+<ul>
+<li>Commutativity, associativity, distributivity</li>
+</ul></li>
+<li>Floating point operations satisfy ‘ordering’ properties
+<ul>
+<li>Monotonicity, values of signs</li>
+</ul></li>
+</ul>
+<p>Important issues for compiler writers and serious application programmers.</p>
+</section>
+<section id="youve-got-to-know-assembly" class="level2">
+<h2 class="anchored" data-anchor-id="youve-got-to-know-assembly">You’ve got to know assembly</h2>
+<p>Understanding assembly is key to machine-level execution model</p>
+<ul>
+<li>Behavior of programs in presence of bugs
+<ul>
+<li>High-level language models break down</li>
+</ul></li>
+<li>Tuning program performance
+<ul>
+<li>Understand optimizations done / not done by the compiler</li>
+<li>Understanding sources of program inefficiency</li>
+</ul></li>
+<li>Implementing system software
+<ul>
+<li>Compiler has machine code as target</li>
+<li>Operating systems must manage process state</li>
+</ul></li>
+</ul>
+</section>
+<section id="memory-matters---random-access-memory-is-an-unphysical-abstraction" class="level2">
+<h2 class="anchored" data-anchor-id="memory-matters---random-access-memory-is-an-unphysical-abstraction">Memory matters - Random Access Memory is an unphysical abstraction</h2>
+<p>Memory is not unbounded</p>
+<ul>
+<li>It must be allocated and managed</li>
+<li>Many applications are memory dominated</li>
+</ul>
+<p>Memory referencing bugs especially pernicious</p>
+<ul>
+<li>Effects are distant in both time and space</li>
+</ul>
+<p>Memory performance is not uniform</p>
+<ul>
+<li>Cache and virtual memory effects can greatly affect program performance</li>
+<li>Adapting program to characteristics of memory system can lead to major speed improvements</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027042541071.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027042541071</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027042551119.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027042551119</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="memory-referencing-errors" class="level2">
+<h2 class="anchored" data-anchor-id="memory-referencing-errors">Memory referencing errors</h2>
+<ul>
+<li>C and C++ do not provide any memory protection
+<ul>
+<li>out of bounds array refences</li>
+<li>Invalid pointer values</li>
+<li>Abuses of malloc / free</li>
+</ul></li>
+<li>Can lead to nasty bugs
+<ul>
+<li>Whether or not bug has any affect depends on system and compiler</li>
+<li>Action at a distance
+<ul>
+<li>Corrupted object logically unrelated to one being accessed</li>
+<li>Effect of bug may be first observed long after it is generated</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="theres-more-to-performance-than-asymptotic-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="theres-more-to-performance-than-asymptotic-complexity">There’s more to performance than asymptotic complexity</h2>
+<p>Constant factors matter too</p>
+<p>And even exact op count does not predict performance</p>
+<ul>
+<li>Easily see 10:1 performance range depending on how code written</li>
+<li>Must optimize at multiple levels - algorithm, data representations, procedures, and loops</li>
+</ul>
+<p>Must understand system to optimize performance</p>
+<ul>
+<li>how programs compiled and executed</li>
+<li>how to measure program performance and identify bottlenecks</li>
+<li>how to improve performance without destroying code modularity and generality</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027042938550.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027042938550</figcaption><p></p>
+</figure>
+</div>
+<p>Hierarchical memory organization</p>
+<p>Performance depends on access patterns</p>
+<ul>
+<li>Including how step through multi-dimensional array</li>
+</ul>
+</section>
+<section id="computers-do-more-than-execute-programs" class="level2">
+<h2 class="anchored" data-anchor-id="computers-do-more-than-execute-programs">Computers do more than execute programs</h2>
+<p>They need to get data in and out</p>
+<ul>
+<li>I/O system critical to program reliability and performance</li>
+</ul>
+<p>They communicate with each other over networks</p>
+<ul>
+<li>Many system-level issues arise in presence of network
+<ul>
+<li>Concurrent operations by autonomous processes</li>
+<li>Coping with unreliable media</li>
+<li>Cross platform compatibility</li>
+<li>Complex performance issues</li>
+</ul></li>
+</ul>
+</section>
+<section id="everything-is-bits" class="level2">
+<h2 class="anchored" data-anchor-id="everything-is-bits">Everything is bits</h2>
+<p>Each bits is 0 or 1</p>
+<p>By encoding / interpreting sets of bits in various ways</p>
+<p>Why bits? - Electronic implementation</p>
+<ul>
+<li>Easy to store with bistable elements</li>
+<li>Reliability transmitted on noisy and inaccurate wires</li>
+</ul>
+</section>
+<section id="encoding-byte-values" class="level2">
+<h2 class="anchored" data-anchor-id="encoding-byte-values">Encoding byte values</h2>
+<p>Byte = 8 bits</p>
+<section id="example-data-representations" class="level3">
+<h3 class="anchored" data-anchor-id="example-data-representations">Example data representations</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027043303747.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027043303747</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="boolean-algebra" class="level2">
+<h2 class="anchored" data-anchor-id="boolean-algebra">Boolean algebra</h2>
+<p>Algebraic representation of logic</p>
+<ul>
+<li>Encode true as 1 and false as 0</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027043347856.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027043347856</figcaption><p></p>
+</figure>
+</div>
+<section id="general-boolean-algebras" class="level3">
+<h3 class="anchored" data-anchor-id="general-boolean-algebras">General boolean algebras</h3>
+<p>Operate on bit vectors</p>
+<ul>
+<li>Operations applied bitwise</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027043430808.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027043430808</figcaption><p></p>
+</figure>
+</div>
+<p>All of the properties of boolean algebra apply</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027043452466.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027043452466</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044238795.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044238795</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="bit-level-operations-in-c" class="level2">
+<h2 class="anchored" data-anchor-id="bit-level-operations-in-c">Bit-level operations in C</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044259735.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044259735</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044309599.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044309599</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="contrast-logic-operations-in-c" class="level2">
+<h2 class="anchored" data-anchor-id="contrast-logic-operations-in-c">Contrast: Logic operations in C</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044328800.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044328800</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044336152.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044336152</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="shift-operations" class="level2">
+<h2 class="anchored" data-anchor-id="shift-operations">Shift operations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044421381.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044421381</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="integers" class="level2">
+<h2 class="anchored" data-anchor-id="integers">Integers</h2>
+<section id="encoding-integers" class="level3">
+<h3 class="anchored" data-anchor-id="encoding-integers">Encoding integers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044701071.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044701071</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044716057.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044716057</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044757931.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044757931</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="numeric-ranges" class="level3">
+<h3 class="anchored" data-anchor-id="numeric-ranges">Numeric ranges</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044826093.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044826093</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="values-for-different-word-sizes" class="level3">
+<h3 class="anchored" data-anchor-id="values-for-different-word-sizes">Values for different word sizes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027044913286.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027044913286</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="unsigned-signed-numeric-values" class="level3">
+<h3 class="anchored" data-anchor-id="unsigned-signed-numeric-values">Unsigned &amp; signed numeric values</h3>
+<p>Equivalence</p>
+<ul>
+<li>same encodings for nonnegative values</li>
+</ul>
+<p>Uniqueness</p>
+<ul>
+<li>Every bit pattern represents unique integer value</li>
+<li>Each representable integer has unique bit encoding</li>
+</ul>
+<p>Can inverting mappings</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045039055.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045039055</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045044999.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045044999</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="mapping-between-signed-unsigned" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-between-signed-unsigned">Mapping between signed &amp; unsigned</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045107523.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045107523</figcaption><p></p>
+</figure>
+</div>
+<p>Mappings between unsigned and two’s complement numbers: Keep bit representations and reinterpret</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045221125.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045221125</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045230990.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045230990</figcaption><p></p>
+</figure>
+</div>
+<section id="relation-between-signed-unsigned" class="level3">
+<h3 class="anchored" data-anchor-id="relation-between-signed-unsigned">Relation between signed &amp; unsigned</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045250508.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045250508</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045308052.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045308052</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="signed-vs.-unsigned-in-c" class="level3">
+<h3 class="anchored" data-anchor-id="signed-vs.-unsigned-in-c">Signed vs.&nbsp;unsigned in C</h3>
+<p>Constants</p>
+<ul>
+<li>By default are considered to be signed integers</li>
+<li>Unsigned if have “U” as suffix</li>
+<li><img src="./image-20211027045337350.png" title="fig:" class="img-fluid" alt="image-20211027045337350"></li>
+</ul>
+<p>Casting</p>
+<ul>
+<li>Explicit casting between signed &amp; unsigned same as U2T and T2U</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045359829.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045359829</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Implicit casting also occurs via assignment and procedure calls</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045429660.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045429660</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="casting-surprises" class="level3">
+<h3 class="anchored" data-anchor-id="casting-surprises">Casting surprises</h3>
+<p>Expression evaluation</p>
+<ul>
+<li>If there is a mix of unsigned and signed in single expression, signed values implicitly cast to unsigned</li>
+<li>Including comparison operations</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045512058.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045512058</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="casting-signed---unsigned-basic-rules" class="level3">
+<h3 class="anchored" data-anchor-id="casting-signed---unsigned-basic-rules">Casting signed &lt;-&gt; unsigned: basic rules</h3>
+<ul>
+<li>Bit pattern is maintained</li>
+<li>but reinterpreted</li>
+<li>can have unexpected effects: adding or subtracting <span class="math inline">\(2^{w}\)</span></li>
+<li>Expression containing signed and unsigned int
+<ul>
+<li><code>int</code> is cast to <code>unsigned</code>!!</li>
+</ul></li>
+</ul>
+</section>
+<section id="sign-extension" class="level3">
+<h3 class="anchored" data-anchor-id="sign-extension">Sign extension</h3>
+<p>Task</p>
+<ul>
+<li>Given w-bit signed integer x</li>
+<li>Convert it to w + k-bit integer with same value</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045810403.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045810403</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027045831561.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027045831561</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Converting from smaller to larger integer data type</li>
+<li>C automatically performs sign extension</li>
+</ul>
+<section id="expanding-short-int-to-int" class="level4">
+<h4 class="anchored" data-anchor-id="expanding-short-int-to-int">Expanding (short int to int)</h4>
+<ul>
+<li>Unsigned: zeros added</li>
+<li>Signed: sign extension</li>
+<li>Both yield expected result</li>
+</ul>
+</section>
+<section id="truncating-unsigned-to-unsigned-short" class="level4">
+<h4 class="anchored" data-anchor-id="truncating-unsigned-to-unsigned-short">Truncating (unsigned to unsigned short)</h4>
+<ul>
+<li>Unsigned / signed: bits are truncated</li>
+<li>Result reinterpreted</li>
+<li>Unsigned: mod operation</li>
+<li>Signed: similar to mod</li>
+<li>For small numbers yield expected behavior</li>
+</ul>
+</section>
+</section>
+<section id="unsigned-addition" class="level3">
+<h3 class="anchored" data-anchor-id="unsigned-addition">Unsigned addition</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050155034.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050155034</figcaption><p></p>
+</figure>
+</div>
+<p>Standard addition function</p>
+<ul>
+<li>ignores carry output</li>
+</ul>
+<p>Implementations modular arithmetic</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050240445.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050240445</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050335775.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050335775</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050350882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050350882</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="two-complement-addition" class="level3">
+<h3 class="anchored" data-anchor-id="two-complement-addition">Two-complement addition</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050417014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050417014</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050425030.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050425030</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050435241.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050435241</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050459580.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050459580</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multiplication" class="level3">
+<h3 class="anchored" data-anchor-id="multiplication">Multiplication</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050529807.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050529807</figcaption><p></p>
+</figure>
+</div>
+<p>Maintaining exact results</p>
+<ul>
+<li>would need to keep expanding word size with each product computed</li>
+<li>is done in software, if needed</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050615217.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050615217</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050623133.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050623133</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050636927.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050636927</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050645206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050645206</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="power-of-2-multiply-with-shift" class="level3">
+<h3 class="anchored" data-anchor-id="power-of-2-multiply-with-shift">Power-of-2 multiply with shift</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050706187.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050706187</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050710469.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050710469</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050743532.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050743532</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027050810877.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027050810877</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="arithmetic-basic-rules" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-basic-rules">Arithmetic: Basic rules</h3>
+<section id="addition" class="level4">
+<h4 class="anchored" data-anchor-id="addition">Addition:</h4>
+<ul>
+<li>Unsigned / signed: normal addition followed by truncate, same operation on bit level</li>
+<li>Unsigned - addition mode <span class="math inline">\(2^{w}\)</span>
+<ul>
+<li>Mathematical addition + possible subtraction of <span class="math inline">\(2^{w}\)</span></li>
+</ul></li>
+<li>Signed - modified addition mode <span class="math inline">\(2^{w}\)</span> (result in proper range)
+<ul>
+<li>Mathematical addition + possible addition or subtraction of <span class="math inline">\(2^{w}\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="multiplication-1" class="level4">
+<h4 class="anchored" data-anchor-id="multiplication-1">Multiplication:</h4>
+<ul>
+<li>Unsigned / signed: normal multiplication followed by truncate, same operation on bit level</li>
+<li>Unsigned - multiplication mod <span class="math inline">\(2^{w}\)</span></li>
+<li>Signed - modified multiplication mod <span class="math inline">\(2^{w}\)</span> (result in proper range)</li>
+</ul>
+</section>
+</section>
+<section id="why-should-i-use-unsigned" class="level3">
+<h3 class="anchored" data-anchor-id="why-should-i-use-unsigned">Why should I use unsigned?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027051210460.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027051210460</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027051241526.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027051241526</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027051258484.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027051258484</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="representations-in-memory-pointers-strings" class="level2">
+<h2 class="anchored" data-anchor-id="representations-in-memory-pointers-strings">Representations in memory, pointers, strings</h2>
+<section id="byte-oriented-memory-organization" class="level3">
+<h3 class="anchored" data-anchor-id="byte-oriented-memory-organization">Byte-oriented memory organization</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027051332281.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027051332281</figcaption><p></p>
+</figure>
+</div>
+<p>Programs refer to data by address</p>
+<ul>
+<li>Conceptually, envision it as a very large array of bytes</li>
+<li>An address is like an index into that array
+<ul>
+<li>and, a pointer variable stores an address</li>
+</ul></li>
+</ul>
+<p>System provides private address spaces to each ‘process’</p>
+<ul>
+<li>Think of a process as a program being executed</li>
+<li>So, a program can clobber its own data, but not that of others</li>
+</ul>
+</section>
+<section id="machine-words" class="level3">
+<h3 class="anchored" data-anchor-id="machine-words">Machine words</h3>
+<p>Any given computer has a ‘word size’</p>
+<ul>
+<li>Nominal size of integer-valued data and of addresses</li>
+<li>Until recently, most machines used 32 bits (4 bytes) as word size
+<ul>
+<li>Limits addresses to 4GB</li>
+</ul></li>
+<li>Increasingly, machines have 64-bit word size
+<ul>
+<li>Potentially, could have 18EB (exabytes) of addressable memory</li>
+</ul></li>
+<li>Machines still support multiple data formats
+<ul>
+<li>Fractions or multiples of word size</li>
+<li>Always integral number of bytes</li>
+</ul></li>
+</ul>
+</section>
+<section id="word-oriented-memory-organization" class="level3">
+<h3 class="anchored" data-anchor-id="word-oriented-memory-organization">Word-oriented memory organization</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027065818406.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027065818406</figcaption><p></p>
+</figure>
+</div>
+<p>Addresses specify byte locations</p>
+<ul>
+<li>Address of first byte in word</li>
+<li>Addresses of successive words differ by 4 (32-bit) or 8 (64-bit)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027065857259.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027065857259</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="byte-ordering" class="level3">
+<h3 class="anchored" data-anchor-id="byte-ordering">Byte ordering</h3>
+<p>Conventions</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027065913492.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027065913492</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027065921688.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027065921688</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027065953283.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027065953283</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070043111.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070043111</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070050642.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070050642</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070102449.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070102449</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="representing-strings" class="level3">
+<h3 class="anchored" data-anchor-id="representing-strings">Representing Strings</h3>
+<p>Strings in C</p>
+<ul>
+<li>Represented by array of characters</li>
+<li>Each character encoded in ASCII format
+<ul>
+<li>Standard 7-bit encoding of character set</li>
+</ul></li>
+<li>String should be null-terminated
+<ul>
+<li>Final character = 0</li>
+</ul></li>
+</ul>
+<p>Compatibility</p>
+<ul>
+<li>Byte ordering not an issue</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070247413.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070247413</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="floating-point" class="level2">
+<h2 class="anchored" data-anchor-id="floating-point">Floating point</h2>
+<section id="fractional-binary-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="fractional-binary-numbers">Fractional binary numbers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070611400.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070611400</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070656701.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070656701</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="representable-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="representable-numbers">Representable numbers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070714526.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070714526</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ieee-floating-point" class="level3">
+<h3 class="anchored" data-anchor-id="ieee-floating-point">IEEE Floating point</h3>
+<p>IEEE Standard 754</p>
+<p>Driven by numerical concerns</p>
+<ul>
+<li>Nice standards for rounding, overflow, underflow</li>
+<li>Hard to make fast in hardware
+<ul>
+<li>Numerical analysts predominated over hardware designers in defining standard</li>
+</ul></li>
+</ul>
+</section>
+<section id="floating-point-representation" class="level3">
+<h3 class="anchored" data-anchor-id="floating-point-representation">Floating point representation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070845517.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070845517</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070927661.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070927661</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027070937032.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027070937032</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="normalized-values" class="level3">
+<h3 class="anchored" data-anchor-id="normalized-values">Normalized values</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027071101884.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027071101884</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027072122233.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027072122233</figcaption><p></p>
+</figure>
+</div>
+<p>bias = 127</p>
+<p>127을 기준으로 0과 255만 제외하고, 소수점 1칸을 움직이고 싶으면 Exp = 128, E = 128 - 172 = 1로 계산</p>
+</section>
+<section id="denormalized-values" class="level3">
+<h3 class="anchored" data-anchor-id="denormalized-values">Denormalized values</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027072608278.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027072608278</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="special-values" class="level3">
+<h3 class="anchored" data-anchor-id="special-values">Special values</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027072733402.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027072733402</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027072953531.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027072953531</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="distribution-of-values" class="level3">
+<h3 class="anchored" data-anchor-id="distribution-of-values">Distribution of values</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073027716.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073027716</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073048133.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073048133</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="special-properties-of-the-ieee-encoding" class="level3">
+<h3 class="anchored" data-anchor-id="special-properties-of-the-ieee-encoding">Special properties of the IEEE encoding</h3>
+<p>FP zero same as Integer zero</p>
+<ul>
+<li>all bits = 0</li>
+</ul>
+<p>Can (almost) use unsigned integer comparison</p>
+<ul>
+<li>Must first compare sign bits</li>
+<li>Must consider -0 = 0</li>
+<li>NaNs problematic</li>
+<li><ul>
+<li>Will be greater than any other values</li>
+<li>What should comparison yield?</li>
+</ul></li>
+<li>Otherwise OK
+<ul>
+<li>Denorm vs.&nbsp;normalized</li>
+<li>Normalized vs.&nbsp;infinity</li>
+</ul></li>
+</ul>
+</section>
+<section id="floating-point-operations-basic-idea" class="level3">
+<h3 class="anchored" data-anchor-id="floating-point-operations-basic-idea">Floating point operations: basic idea</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073309010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073309010</figcaption><p></p>
+</figure>
+</div>
+<p>Basic idea</p>
+<ul>
+<li>First compute exact result</li>
+<li>Make it fit into desired precision
+<ul>
+<li>Possibly overflow if exponent too large</li>
+<li>Possibly round to fit into <code>frac</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="rounding" class="level3">
+<h3 class="anchored" data-anchor-id="rounding">Rounding</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073355639.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073355639</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="closer-look-at-round-to-even" class="level3">
+<h3 class="anchored" data-anchor-id="closer-look-at-round-to-even">Closer look at round-to-even</h3>
+<p>Default rounding mode</p>
+<ul>
+<li>hard to get any other kind without dropping into assembly</li>
+<li>All other are statistically biased
+<ul>
+<li>Sum of set of positive numbers will consistently be over- or under-estimated</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073540219.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073540219</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="rounding-binary-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="rounding-binary-numbers">Rounding binary numbers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073643032.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073643032</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="fp-multiplication" class="level3">
+<h3 class="anchored" data-anchor-id="fp-multiplication">FP multiplication</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073655642.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073655642</figcaption><p></p>
+</figure>
+</div>
+<p>Fixing</p>
+<ul>
+<li>If <span class="math inline">\(M \geq 2\)</span>, shift M right, increment E</li>
+<li>If E out of range, overflow</li>
+<li>Round M to fit <code>frac</code> precision</li>
+</ul>
+<p>Implementation</p>
+<ul>
+<li>Biggest chore is multiplying significands</li>
+</ul>
+</section>
+<section id="floating-point-addition" class="level3">
+<h3 class="anchored" data-anchor-id="floating-point-addition">Floating point addition</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073824957.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073824957</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073911945.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073911945</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="mathematical-properties-of-fp-add" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-properties-of-fp-add">Mathematical properties of FP add</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027073929110.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027073929110</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="mathematical-properties-of-fp-mult" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-properties-of-fp-mult">Mathematical properties of FP mult</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027074040391.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027074040391</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="abelian-group" class="level3">
+<h3 class="anchored" data-anchor-id="abelian-group">Abelian group</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027074127882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027074127882</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="floating-point-in-c" class="level3">
+<h3 class="anchored" data-anchor-id="floating-point-in-c">Floating point in C</h3>
+<p><code>float</code> - single precision</p>
+<p><code>double</code> - double precision</p>
+<p>Conversions / casting</p>
+<ul>
+<li>Casting between <code>int, float</code>, and <code>double</code> changes bit representation.</li>
+<li><code>double / float</code> -&gt; int
+<ul>
+<li>Truncates fractional part</li>
+<li>like rounding toward zero</li>
+<li>not defined when out of range or NaN</li>
+</ul></li>
+<li><code>int -&gt; double</code>
+<ul>
+<li>exact conversion, as long as <code>int</code> has <span class="math inline">\(\leq 53\)</span> bit word size</li>
+</ul></li>
+<li><code>int -&gt; float</code>
+<ul>
+<li>will round according to rounding mode</li>
+</ul></li>
+</ul>
+</section>
+<section id="floating-point-puzzles" class="level3">
+<h3 class="anchored" data-anchor-id="floating-point-puzzles">Floating point puzzles</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027074403219.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027074403219</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="dynamic-range-positive-only" class="level3">
+<h3 class="anchored" data-anchor-id="dynamic-range-positive-only">Dynamic range (positive-only)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027074710910.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027074710910</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="intel-x86-processors" class="level2">
+<h2 class="anchored" data-anchor-id="intel-x86-processors">Intel x86 processors</h2>
+<p>Complex instruction set computer (CISC)</p>
+<ul>
+<li>Many different instructions with many different formats
+<ul>
+<li>but, only small subset encountered with Linux programs</li>
+</ul></li>
+<li>Hard to match performance of Reduced Instruction Set Computers (RISC)</li>
+<li>In terms of speed. Less so for low power.</li>
+</ul>
+<p>Added features</p>
+<ul>
+<li>Instructions to support multimedia operations</li>
+<li>Instructions to enable more efficient conditional operations</li>
+<li>Transition from 32 bits to 64 bits</li>
+<li>More cores</li>
+</ul>
+</section>
+<section id="x86-clones-advanced-micro-devices-amd" class="level2">
+<h2 class="anchored" data-anchor-id="x86-clones-advanced-micro-devices-amd">x86 clones: Advanced Micro Devices (AMD)</h2>
+<ul>
+<li>a little bit slow, a lot cheaper</li>
+<li>Developed x86-64, their own extension to 64 bits</li>
+</ul>
+</section>
+<section id="definitions" class="level2">
+<h2 class="anchored" data-anchor-id="definitions">Definitions</h2>
+<p>Architecture - (also ISA: Instruction Set Architecture) The parts of a processor design that one needs to understand or write assembly / machine code.</p>
+<p>Microarchitecture - Implementation of the architecture</p>
+<p>Code forms</p>
+<ul>
+<li>Machine code - The byte-level programs that a processor executes</li>
+<li>Assembly code - A text representation of machine code</li>
+</ul>
+</section>
+<section id="assembly-machine-code-view" class="level2">
+<h2 class="anchored" data-anchor-id="assembly-machine-code-view">Assembly / Machine code view</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075257754.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075257754</figcaption><p></p>
+</figure>
+</div>
+<p>Programmer-visible state</p>
+<ul>
+<li>PC - Program counter
+<ul>
+<li>address of next instruction</li>
+<li>called ‘RIP’</li>
+</ul></li>
+<li>Register file
+<ul>
+<li>heavily used program data</li>
+</ul></li>
+<li>Condition codes
+<ul>
+<li>store status information about most recent arithmetic or logical operation</li>
+<li>used for conditional branching</li>
+</ul></li>
+</ul>
+<p>Memory</p>
+<ul>
+<li>Byte addressable array</li>
+<li>Code and user data</li>
+<li>Stack to support procedures</li>
+</ul>
+</section>
+<section id="turning-c-into-object-code" class="level2">
+<h2 class="anchored" data-anchor-id="turning-c-into-object-code">Turning C into Object code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075420009.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075420009</figcaption><p></p>
+</figure>
+</div>
+<section id="compiling-into-assembly" class="level3">
+<h3 class="anchored" data-anchor-id="compiling-into-assembly">Compiling into assembly</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075451716.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075451716</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="assembly-characteristics-data-types" class="level2">
+<h2 class="anchored" data-anchor-id="assembly-characteristics-data-types">Assembly characteristics: data types</h2>
+<p>‘Integer’ data of 1, 2, 4, or 8 bytes</p>
+<ul>
+<li>Data values</li>
+<li>Addresses (untyped pointers)</li>
+</ul>
+<p>Floating point data of 4, 8, or 10 bytes</p>
+<p>Code - byte sequences encoding series of instructions</p>
+<p>No aggregate types such as arrays or structures</p>
+<ul>
+<li>just contiguously allocated bytes in memory</li>
+</ul>
+</section>
+<section id="assembly-characteristics-operations" class="level2">
+<h2 class="anchored" data-anchor-id="assembly-characteristics-operations">Assembly characteristics: Operations</h2>
+<p>perform arithmetic function on register or memory data</p>
+<p>Transfer data between memory and register</p>
+<ul>
+<li>Load data from memory into register</li>
+<li>Store register data into memory</li>
+</ul>
+<p>Transfer control</p>
+<ul>
+<li>Unconditional jumps to / from procedures</li>
+<li>conditional branches</li>
+</ul>
+</section>
+<section id="object-code" class="level2">
+<h2 class="anchored" data-anchor-id="object-code">Object code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075819838.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075819838</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="machine-instruction-example" class="level2">
+<h2 class="anchored" data-anchor-id="machine-instruction-example">Machine instruction example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075907340.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075907340</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="disassembling-object-code" class="level2">
+<h2 class="anchored" data-anchor-id="disassembling-object-code">Disassembling object code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027075952304.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027075952304</figcaption><p></p>
+</figure>
+</div>
+<p>Disassembler</p>
+<p><code>objdump -d sum</code></p>
+<ul>
+<li>useful tool for examining object code</li>
+<li>Analyzes bit pattern of series of instructions</li>
+<li>Produces approximate rendition of assembly code</li>
+<li>Can be run on either a.out (complete executable) or .o file</li>
+</ul>
+<section id="what-can-be-disassembled" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-be-disassembled">What can be disassembled?</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080055315.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080055315</figcaption><p></p>
+</figure>
+</div>
+<p>Anything that can be interpreted as executable code</p>
+<p>Disassembler examines bytes and reconstructs assembly source</p>
+</section>
+</section>
+<section id="x86-64-integer-registers" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-integer-registers">x86-64 Integer Registers</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080134896.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080134896</figcaption><p></p>
+</figure>
+</div>
+<section id="some-history-ia32-registers" class="level3">
+<h3 class="anchored" data-anchor-id="some-history-ia32-registers">Some history: IA32 registers</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080157590.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080157590</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="moving-data" class="level2">
+<h2 class="anchored" data-anchor-id="moving-data">Moving data</h2>
+<p><code>movq Source, Dest</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080222603.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080222603</figcaption><p></p>
+</figure>
+</div>
+<section id="movq-operand-combinations" class="level3">
+<h3 class="anchored" data-anchor-id="movq-operand-combinations"><code>movq</code> operand combinations</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080309631.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080309631</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="simple-memory-addressing-modes" class="level2">
+<h2 class="anchored" data-anchor-id="simple-memory-addressing-modes">Simple memory addressing modes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080353954.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080353954</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080408919.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080408919</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080425212.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080425212</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080602119.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080602119</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080610058.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080610058</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080617652.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080617652</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080625400.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080625400</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080630845.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080630845</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="complete-memory-addressing-modes" class="level2">
+<h2 class="anchored" data-anchor-id="complete-memory-addressing-modes">Complete memory addressing modes</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027080653122.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027080653122</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094428952.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094428952</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="address-computation-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="address-computation-instruction">Address computation instruction</h2>
+<p><code>leaq Src, Dst</code></p>
+<ul>
+<li><code>Src</code> is address mode expression</li>
+<li>Set <code>Dst</code> to address denoted by expression</li>
+</ul>
+<p>Use</p>
+<ul>
+<li>Computing addresses without a memory reference</li>
+<li>Computing arithmetic expressions of the from <span class="math inline">\(x + k * y\)</span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094541160.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094541160</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="some-arithmetic-operations" class="level2">
+<h2 class="anchored" data-anchor-id="some-arithmetic-operations">Some arithmetic operations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094629212.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094629212</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094634269.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094634269</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094704377.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094704377</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094735037.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094735037</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="processor-state-x86-64-partial" class="level2">
+<h2 class="anchored" data-anchor-id="processor-state-x86-64-partial">Processor State (x86-64, Partial)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094916448.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094916448</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="condition-codes-implicit-setting" class="level2">
+<h2 class="anchored" data-anchor-id="condition-codes-implicit-setting">Condition codes (implicit setting)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027094954382.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027094954382</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095002281.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095002281</figcaption><p></p>
+</figure>
+</div>
+<p>Not set by <code>leaq</code> instruction</p>
+<section id="explicit-setting-compare" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-setting-compare">Explicit setting: Compare</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095056556.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095056556</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="explicit-setting-test" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-setting-test">Explicit setting: test</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095130320.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095130320</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="reading-condition-codes" class="level2">
+<h2 class="anchored" data-anchor-id="reading-condition-codes">Reading condition codes</h2>
+<p>SetX Instructions</p>
+<ul>
+<li>Set low-order bytes of destination to 0 or 1 based on combinations of condition codes</li>
+<li>Does not alter remaining 7 bytes</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095226154.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095226154</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095236908.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095236908</figcaption><p></p>
+</figure>
+</div>
+<p>SetX Instructions - set single byte based on combination of condition codes</p>
+<p>One of addressable byte registers</p>
+<ul>
+<li>Does not alter remaining bytes</li>
+<li>Typically use <code>movzbl</code> to finish job
+<ul>
+<li>32-bit instructions also set upper 32 bits to 0</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095339037.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095339037</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="jumping" class="level2">
+<h2 class="anchored" data-anchor-id="jumping">Jumping</h2>
+<p>jX instructions - Jump to different part of code depending on condition codes</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095421739.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095421739</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="conditional-branch-example-old-style" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-branch-example-old-style">Conditional branch example (old style)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027095444228.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027095444228</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="expressing-with-goto-code" class="level2">
+<h2 class="anchored" data-anchor-id="expressing-with-goto-code">Expressing with Goto code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100123443.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100123443</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-conditional-expression-translation-using-branches" class="level2">
+<h2 class="anchored" data-anchor-id="general-conditional-expression-translation-using-branches">General conditional expression translation (using branches)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100213983.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100213983</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="using-conditional-moves" class="level2">
+<h2 class="anchored" data-anchor-id="using-conditional-moves">Using conditional moves</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100234307.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100234307</figcaption><p></p>
+</figure>
+</div>
+<p>Conditional move instructions</p>
+<ul>
+<li>Instruction supports: <code>if (Test) Dest &lt;- Src</code></li>
+<li>Supported in post-1995 x86 processors</li>
+<li>GCC tries to use them
+<ul>
+<li>But, only when known to be safe</li>
+</ul></li>
+</ul>
+<p>Why?</p>
+<ul>
+<li>Branches are very disruptive instruction flow through pipelines</li>
+<li>Conditional moves do not require control transfer</li>
+</ul>
+</section>
+<section id="conditional-move-example" class="level2">
+<h2 class="anchored" data-anchor-id="conditional-move-example">Conditional move example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100428875.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100428875</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bad-cases-for-conditional-move" class="level2">
+<h2 class="anchored" data-anchor-id="bad-cases-for-conditional-move">Bad cases for conditional move</h2>
+<section id="expensive-computations" class="level3">
+<h3 class="anchored" data-anchor-id="expensive-computations">Expensive computations</h3>
+<p><code>val  = Test(x) ? Hardl(x) : Hard2(x);</code></p>
+<ul>
+<li>both values get computed</li>
+<li>Only makes sense when computations are very simple</li>
+</ul>
+</section>
+<section id="risky-computations" class="level3">
+<h3 class="anchored" data-anchor-id="risky-computations">Risky computations</h3>
+<p><code>val = p ? *p : 0;</code></p>
+<ul>
+<li>Both values get computed</li>
+<li>May have undesirable effects</li>
+</ul>
+</section>
+<section id="computations-with-side-effects" class="level3">
+<h3 class="anchored" data-anchor-id="computations-with-side-effects">Computations with side effects</h3>
+<p><code>val = x &gt; 0 ? x *= 7 : x += 3</code></p>
+<ul>
+<li>Both values get computed</li>
+<li>Must be side-effect free</li>
+</ul>
+</section>
+</section>
+<section id="do-while-loop-example" class="level2">
+<h2 class="anchored" data-anchor-id="do-while-loop-example">Do-while loop example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100719400.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100719400</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="do-while-loop-compilation" class="level2">
+<h2 class="anchored" data-anchor-id="do-while-loop-compilation">Do-while loop compilation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100753177.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100753177</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="general-do-while-translation" class="level2">
+<h2 class="anchored" data-anchor-id="general-do-while-translation">General do-while translation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100829385.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100829385</figcaption><p></p>
+</figure>
+</div>
+<section id="general-while-translation-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-while-translation-1">General while translation #1</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100846135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100846135</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="while-loop-example" class="level2">
+<h2 class="anchored" data-anchor-id="while-loop-example">While loop example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100917193.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100917193</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100933135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100933135</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027100942738.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027100942738</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="for-loop-form" class="level2">
+<h2 class="anchored" data-anchor-id="for-loop-form">For loop form</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101053616.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101053616</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="for-loop---while-loop" class="level2">
+<h2 class="anchored" data-anchor-id="for-loop---while-loop">For loop -&gt; while loop</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101110082.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101110082</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="for-while-conversion" class="level2">
+<h2 class="anchored" data-anchor-id="for-while-conversion">For-while conversion</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101123580.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101123580</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="for-loop-do-while-conversion" class="level2">
+<h2 class="anchored" data-anchor-id="for-loop-do-while-conversion">For loop do-while conversion</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101136420.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101136420</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="switch-statement-example" class="level2">
+<h2 class="anchored" data-anchor-id="switch-statement-example">Switch statement example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101209574.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101209574</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="jump-table-structure" class="level2">
+<h2 class="anchored" data-anchor-id="jump-table-structure">Jump table structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101222818.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101222818</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="switch-statement-example-1" class="level2">
+<h2 class="anchored" data-anchor-id="switch-statement-example-1">Switch statement example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101241191.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101241191</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101324338.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101324338</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="assembly-setup-explanation" class="level2">
+<h2 class="anchored" data-anchor-id="assembly-setup-explanation">Assembly setup explanation</h2>
+<p>Table structure</p>
+<ul>
+<li>each target requires 8 bytes</li>
+<li>base address at <code>.L4</code></li>
+</ul>
+<p>Jumping</p>
+<ul>
+<li>Direct: <code>jmp .L8</code></li>
+<li>Jump target is denoted by label <code>.L8</code></li>
+<li>Indirect: <code>jmp *.L4(, %rdi, 8)</code></li>
+<li>Start of jump table: <code>.L4</code></li>
+<li>Must scale by factor of 8 (addresses are 8 bytes)</li>
+<li>Fetch target from effective address <code>.L4 + x * 8</code>
+<ul>
+<li>only for <span class="math inline">\(0 \leq x \leq 6\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="jump-table" class="level2">
+<h2 class="anchored" data-anchor-id="jump-table">Jump table</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101557124.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101557124</figcaption><p></p>
+</figure>
+</div>
+<section id="code-blocks-x-1" class="level3">
+<h3 class="anchored" data-anchor-id="code-blocks-x-1">Code blocks (<code>x == 1</code>)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101656175.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101656175</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="handling-fall-through" class="level3">
+<h3 class="anchored" data-anchor-id="handling-fall-through">handling fall-through</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101728790.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101728790</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="code-blocks-x-2-x-3" class="level3">
+<h3 class="anchored" data-anchor-id="code-blocks-x-2-x-3">Code blocks (<code>x == 2, x == 3</code>)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101744257.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101744257</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="code-blocks-x-5-x-6-default" class="level3">
+<h3 class="anchored" data-anchor-id="code-blocks-x-5-x-6-default">Code blocks (<code>x == 5, x == 6, default</code>)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027101831338.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027101831338</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="mechanisms-in-procedures" class="level2">
+<h2 class="anchored" data-anchor-id="mechanisms-in-procedures">Mechanisms in procedures</h2>
+<p>passing control</p>
+<ul>
+<li>To beginning of procedure code</li>
+<li>back to return point</li>
+</ul>
+<p>Passing data</p>
+<ul>
+<li>Procedure arguments</li>
+<li>return value</li>
+</ul>
+<p>Memory management</p>
+<ul>
+<li>allocate during procedure execution</li>
+<li>deallocate upon return</li>
+</ul>
+<p>Mechanisms all implemented with machine instructions</p>
+<p>x86-64 implementation of a procedure uses only those mechanisms required</p>
+</section>
+<section id="x86-64-stack" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-stack">x86-64 stack</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103417450.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103417450</figcaption><p></p>
+</figure>
+</div>
+<p>region of memory managed with stack discipline</p>
+<p>grows toward lower addresses</p>
+<p>register <code>%rsp</code> constains lowest stack address</p>
+<ul>
+<li>address of ‘top’ element</li>
+</ul>
+<section id="x86-64-stack-push" class="level3">
+<h3 class="anchored" data-anchor-id="x86-64-stack-push">x86-64 stack: push</h3>
+<p><code>pushq src</code></p>
+<ul>
+<li>Fetch operand at src</li>
+<li>Decrement <code>%rsp</code> by 8</li>
+<li>Write operand address given by <code>%rsp</code></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103538821.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103538821</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-64-stack-pop" class="level3">
+<h3 class="anchored" data-anchor-id="x86-64-stack-pop">x86-64 stack: pop</h3>
+<p><code>popq dest</code></p>
+<ul>
+<li>Read value at address given by <code>%rsp</code></li>
+<li>increment <code>%rsp</code> by 8</li>
+<li>store value at dest (must be register)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103627936.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103627936</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="code-example" class="level2">
+<h2 class="anchored" data-anchor-id="code-example">Code example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103644808.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103644808</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="procedure-control-flow" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-control-flow">Procedure control flow</h2>
+<p>use stack to support procedure call and return</p>
+<p>procedure call: <code>call label</code></p>
+<ul>
+<li>push return address on stack</li>
+<li>jump to label</li>
+</ul>
+<p>return address:</p>
+<ul>
+<li>address of the next instruction right after call</li>
+<li>example from disassembly</li>
+</ul>
+<p>Procedure return: <code>ret</code></p>
+<ul>
+<li>pop address from stack</li>
+<li>jump to address</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103755978.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103755978</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103818672.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103818672</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103905789.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103905789</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103916325.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103916325</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="procedure-data-flow" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-data-flow">Procedure data flow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027103941719.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027103941719</figcaption><p></p>
+</figure>
+</div>
+<section id="data-flow-examples" class="level3">
+<h3 class="anchored" data-anchor-id="data-flow-examples">data flow examples</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104001697.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104001697</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="stack-based-languages" class="level2">
+<h2 class="anchored" data-anchor-id="stack-based-languages">Stack-based languages</h2>
+<p>languages that support recursion</p>
+<ul>
+<li>code must be ‘reentrant’
+<ul>
+<li>multiple simultaneous instantiations of single procedure</li>
+</ul></li>
+<li>need some place to store state of each instantiation
+<ul>
+<li>arguments</li>
+<li>local variables</li>
+<li>return pointer</li>
+</ul></li>
+</ul>
+<p>stack discipline</p>
+<ul>
+<li>state for given procedure needed for limited time
+<ul>
+<li>from when called to when return</li>
+</ul></li>
+<li>callee returns before caller does</li>
+</ul>
+<p>stack allocated in frames</p>
+<ul>
+<li>state for single procedure instantiation</li>
+</ul>
+</section>
+<section id="call-chain-example" class="level2">
+<h2 class="anchored" data-anchor-id="call-chain-example">call chain example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104207381.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104207381</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stack-frame" class="level2">
+<h2 class="anchored" data-anchor-id="stack-frame">Stack frame</h2>
+<p>contents</p>
+<ul>
+<li>return information</li>
+<li>local storage (if needed)</li>
+<li>temporary space (if needed)</li>
+</ul>
+<p>management</p>
+<ul>
+<li>space allocated when enter procedure
+<ul>
+<li>set-up code</li>
+<li>includes push by <code>call</code> instruction</li>
+</ul></li>
+<li>deallocated when return
+<ul>
+<li>finish code</li>
+<li>includes pop by <code>ret</code> instruction</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104310318.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104310318</figcaption><p></p>
+</figure>
+</div>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104326446.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104326446</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104338914.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104338914</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104347201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104347201</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104353955.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104353955</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104402833.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104402833</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104411997.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104411997</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104418160.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104418160</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104426472.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104426472</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104433206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104433206</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104439712.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104439712</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104445710.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104445710</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="x86-64-linux-stack-frame" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-linux-stack-frame">x86-64 / Linux stack frame</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104501895.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104501895</figcaption><p></p>
+</figure>
+</div>
+<p>Current stack frame (‘top’ to bottom)</p>
+<ul>
+<li>‘argument build’: parameters for function about to call</li>
+<li>local variables if can’t keep in registers</li>
+<li>saved register context</li>
+<li>old frame pointer (optional)</li>
+</ul>
+<p>Caller stack frame</p>
+<ul>
+<li>return address
+<ul>
+<li>pushed by <code>call</code> instruction</li>
+</ul></li>
+<li>arguments for this call</li>
+</ul>
+</section>
+<section id="example-incr" class="level2">
+<h2 class="anchored" data-anchor-id="example-incr">Example: <code>incr</code></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027104623434.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027104623434</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110105442.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110105442</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110122509.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110122509</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110132835.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110132835</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110152468.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110152468</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110204358.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110204358</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="register-saving-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="register-saving-conventions">Register saving conventions</h2>
+<p>when procedure <code>yoo</code> calls <code>who</code>:</p>
+<ul>
+<li><code>yoo</code> is the caller</li>
+<li><code>who</code> is the callee</li>
+</ul>
+<p>Can register be used for temporary storage?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110246294.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110246294</figcaption><p></p>
+</figure>
+</div>
+<p>Conventions</p>
+<ul>
+<li>‘caller saved’
+<ul>
+<li>caller saves temporary values in its frame before the call</li>
+</ul></li>
+<li>‘callee saved’
+<ul>
+<li>callee saved temporary values in its frame before using</li>
+<li>callee restores them before returning to caller</li>
+</ul></li>
+</ul>
+</section>
+<section id="x86-64-linux-register-usage" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-linux-register-usage">x86-64 Linux register usage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110355861.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110355861</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110528349.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110528349</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="callee-saved-example" class="level2">
+<h2 class="anchored" data-anchor-id="callee-saved-example">Callee-saved example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110556071.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110556071</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110607046.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110607046</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recursion-function" class="level2">
+<h2 class="anchored" data-anchor-id="recursion-function">Recursion function</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110622761.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110622761</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110734013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110734013</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110745359.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110745359</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110755966.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110755966</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110804783.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110804783</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110812682.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110812682</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027110825578.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027110825578</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="observations-about-recursion" class="level2">
+<h2 class="anchored" data-anchor-id="observations-about-recursion">Observations about recursion</h2>
+<p>Handled without special consideration</p>
+<ul>
+<li><p>stack frames mean that each function call has private storage</p>
+<ul>
+<li>saved registers &amp; local variables</li>
+<li>saved return pointer</li>
+</ul></li>
+<li><p>Register saving conventions prevent one function call from corrupting another’s data</p>
+<ul>
+<li>Unless the C code explicitly does so - buffer overflow</li>
+</ul></li>
+<li><p>Stack discipline follows call / return pattern</p>
+<ul>
+<li>If P calls Q, then Q returns before P</li>
+<li>Last-In, First-Out</li>
+</ul>
+<p>Also works for mutual recursion</p>
+<ul>
+<li>P calls Q; Q calls P</li>
+</ul></li>
+</ul>
+</section>
+<section id="x86-64-procedure-summary" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-procedure-summary">x86-64 Procedure summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111057784.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111057784</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="array-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="array-allocation">Array allocation</h2>
+<p>Basic principle</p>
+<p><code>T A[L];</code></p>
+<ul>
+<li>array of data type T and length L</li>
+<li>contiguously allocated region of L * <code>sizeof(T)</code> bytes in memory</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111236807.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111236807</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="array-access" class="level2">
+<h2 class="anchored" data-anchor-id="array-access">Array access</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111258042.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111258042</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="array-example" class="level2">
+<h2 class="anchored" data-anchor-id="array-example">Array example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111335888.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111335888</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111354692.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111354692</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111434013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111434013</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multidimensional-nested-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="multidimensional-nested-arrays">Multidimensional (nested) arrays</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111455485.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111455485</figcaption><p></p>
+</figure>
+</div>
+<section id="nested-array-example" class="level3">
+<h3 class="anchored" data-anchor-id="nested-array-example">Nested array example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111514213.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111514213</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111536834.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111536834</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111549363.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111549363</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111731205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111731205</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111806092.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111806092</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111924809.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111924809</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027111945470.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027111945470</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027112047282.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027112047282</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="n-n-matrix-code" class="level2">
+<h2 class="anchored" data-anchor-id="n-n-matrix-code">N * N Matrix code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027112137346.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027112137346</figcaption><p></p>
+</figure>
+</div>
+<section id="matrix-access" class="level3">
+<h3 class="anchored" data-anchor-id="matrix-access">16 * 16 matrix access</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113556133.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113556133</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="n-n-matrix-access" class="level3">
+<h3 class="anchored" data-anchor-id="n-n-matrix-access">n * n matrix access</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113609441.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113609441</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="structure-representation" class="level2">
+<h2 class="anchored" data-anchor-id="structure-representation">Structure representation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113624871.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113624871</figcaption><p></p>
+</figure>
+</div>
+<p>Structure represented as block of memory</p>
+<ul>
+<li>big enough to hold all of the fields</li>
+</ul>
+<p>Fields ordered according to declaration</p>
+<ul>
+<li>Even if another ordering could yield a more compact representation</li>
+</ul>
+<p>Compiler determines over size + positions of fields</p>
+<ul>
+<li>Machine-level program has no understanding of the structures in the source code</li>
+</ul>
+</section>
+<section id="generating-pointer-to-structure-member" class="level2">
+<h2 class="anchored" data-anchor-id="generating-pointer-to-structure-member">Generating pointer to structure member</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113744195.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113744195</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="flowwing-linked-list" class="level2">
+<h2 class="anchored" data-anchor-id="flowwing-linked-list">Flowwing linked list</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113801438.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113801438</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="structures-alignment" class="level2">
+<h2 class="anchored" data-anchor-id="structures-alignment">Structures &amp; alignment</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027113814816.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027113814816</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="alignment-priciples" class="level2">
+<h2 class="anchored" data-anchor-id="alignment-priciples">Alignment priciples</h2>
+<p>Aligned data</p>
+<ul>
+<li>primitive data type requires K bytes</li>
+<li>Addres must be multiple of k</li>
+<li>required on some machines; advised on x86-64</li>
+</ul>
+<p>Motivtaion for aligning data</p>
+<ul>
+<li>memory accessed by (alinged) chunks of 4 or 8 bytes (system dependent)
+<ul>
+<li>inefficient to load or store datum that spans quad word boundaries</li>
+<li>virtual memory trickier when datum spans 2 pages</li>
+</ul></li>
+</ul>
+<p>Compiler</p>
+<ul>
+<li>inserts gaps in structure to ensure correct alignment of fields</li>
+</ul>
+</section>
+<section id="specific-cases-of-alignment-x86-64" class="level2">
+<h2 class="anchored" data-anchor-id="specific-cases-of-alignment-x86-64">Specific cases of alignment (x86-64)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114001119.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114001119</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="satisfying-alignment-with-structures" class="level2">
+<h2 class="anchored" data-anchor-id="satisfying-alignment-with-structures">Satisfying alignment with structures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114045668.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114045668</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="meeting-overall-alignment-requirement" class="level2">
+<h2 class="anchored" data-anchor-id="meeting-overall-alignment-requirement">Meeting overall alignment requirement</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114106542.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114106542</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="arrays-of-structures" class="level2">
+<h2 class="anchored" data-anchor-id="arrays-of-structures">arrays of structures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114123050.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114123050</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="accessing-array-elements" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-array-elements">Accessing array elements</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114141994.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114141994</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="saving-space" class="level2">
+<h2 class="anchored" data-anchor-id="saving-space">Saving space</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114318223.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114318223</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-64-linux-memory-layout" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-linux-memory-layout">x86-64 Linux Memory layout</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114335708.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114335708</figcaption><p></p>
+</figure>
+</div>
+<section id="x86-64-example-addresses" class="level3">
+<h3 class="anchored" data-anchor-id="x86-64-example-addresses">x86-64 example addresses</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114406947.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114406947</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114414171.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114414171</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="memory-referencing-bug-example" class="level2">
+<h2 class="anchored" data-anchor-id="memory-referencing-bug-example">Memory referencing bug example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114458228.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114458228</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114508272.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114508272</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="such-problems-are-a-big-deal" class="level2">
+<h2 class="anchored" data-anchor-id="such-problems-are-a-big-deal">Such problems are a BIG deal</h2>
+<p>generally called a ‘buffer overflow’</p>
+<ul>
+<li>When exceeding the memory size allocated for an array</li>
+</ul>
+<p>Why a big deal?</p>
+<ul>
+<li>It’s the #1 technical cause of security vulnerabilities
+<ul>
+<li>#1 overall cause is social enginerring / user ignorance</li>
+</ul></li>
+</ul>
+<p>Most common form</p>
+<ul>
+<li>Unchecked lengths on string inputs</li>
+<li>Particularly for bounded character arrays on the stack
+<ul>
+<li>sometimes referred to as stack smashing</li>
+</ul></li>
+</ul>
+</section>
+<section id="string-library-code" class="level2">
+<h2 class="anchored" data-anchor-id="string-library-code">String library code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114642824.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114642824</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="vulnerable-buffer-code" class="level2">
+<h2 class="anchored" data-anchor-id="vulnerable-buffer-code">Vulnerable buffer code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114659698.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114659698</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="buffer-overflow-disassembly" class="level2">
+<h2 class="anchored" data-anchor-id="buffer-overflow-disassembly">Buffer overflow disassembly</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114714186.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114714186</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="buffer-overflow-stack" class="level2">
+<h2 class="anchored" data-anchor-id="buffer-overflow-stack">Buffer overflow stack</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114727477.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114727477</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114738072.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114738072</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114749245.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114749245</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114800681.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114800681</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027114815004.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027114815004</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027115817640.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027115817640</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="code-injection-attacks" class="level2">
+<h2 class="anchored" data-anchor-id="code-injection-attacks">Code injection attacks</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027115849482.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027115849482</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exploits-based-on-buffer-overflows" class="level2">
+<h2 class="anchored" data-anchor-id="exploits-based-on-buffer-overflows">Exploits based on buffer overflows</h2>
+<p>Buffer overflow bug can allow remote machines to execute arbitrary code on victim machines</p>
+<p>Distressingly common in real programs</p>
+</section>
+<section id="what-to-do-about-buffer-overflow-attacks" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do-about-buffer-overflow-attacks">What to do about buffer overflow attacks</h2>
+<ul>
+<li>avoid overflow vulnerabilities</li>
+<li>employ system-level protections</li>
+<li>have compiler use ‘stack canaries’</li>
+</ul>
+<section id="avoid-overflow-vulnerabilities-in-code" class="level3">
+<h3 class="anchored" data-anchor-id="avoid-overflow-vulnerabilities-in-code">Avoid overflow vulnerabilities in code</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120039759.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120039759</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120046526.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120046526</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="system-level-protections-can-help" class="level3">
+<h3 class="anchored" data-anchor-id="system-level-protections-can-help">System-level protections can help</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120103535.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120103535</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120129353.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120129353</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="stack-canaries-can-help" class="level2">
+<h2 class="anchored" data-anchor-id="stack-canaries-can-help">Stack canaries can help</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120251913.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120251913</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="protected-buffer-disassembly" class="level2">
+<h2 class="anchored" data-anchor-id="protected-buffer-disassembly">Protected buffer disassembly</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120327882.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120327882</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="setting-up-canary" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-canary">Setting up canary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120342746.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120342746</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="checking-canary" class="level2">
+<h2 class="anchored" data-anchor-id="checking-canary">Checking canary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120357226.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120357226</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="return-oriented-programming-attacks" class="level2">
+<h2 class="anchored" data-anchor-id="return-oriented-programming-attacks">Return-oriented programming attacks</h2>
+<p>Challenge (for hackers)</p>
+<ul>
+<li>stack randomization makes it hard to predict buffer location</li>
+<li>marking stack nonexecutable makes it hard to insert binary code</li>
+</ul>
+<p>Alternative strategy</p>
+<ul>
+<li>use existing code</li>
+<li>string together fragments to achieve oeverall desired outcome</li>
+<li>does not overcome stack canaries</li>
+</ul>
+<p>Construct program from gadgets</p>
+<ul>
+<li>sequence of instructions ending in <code>ret</code>
+<ul>
+<li>Encoded by single byte <code>0xc3</code></li>
+</ul></li>
+<li>code positions fixed from run to run</li>
+<li>code is executable</li>
+</ul>
+<section id="gadget-example" class="level3">
+<h3 class="anchored" data-anchor-id="gadget-example">Gadget example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120609710.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120609710</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120623663.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120623663</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="rop-execution" class="level2">
+<h2 class="anchored" data-anchor-id="rop-execution">ROP execution</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211027120726700.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211027120726700</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

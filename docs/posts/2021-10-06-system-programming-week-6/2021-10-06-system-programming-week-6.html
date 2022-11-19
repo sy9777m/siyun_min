@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-10-06">
+
+<title>Siyun Min - System Programming Week 6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">System Programming Week 6</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 6, 2021</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="system-programming-week-6" class="level1">
+<h1>System Programming Week 6</h1>
+<section id="backward-comparability" class="level2">
+<h2 class="anchored" data-anchor-id="backward-comparability">Backward comparability</h2>
+<p>새로운 기술을 개발할 때 이전 기술과도 잘 동작하도록 설계하는 특성</p>
+</section>
+<section id="cisc-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="cisc-architecture">CISC architecture</h2>
+<p>Complex</p>
+</section>
+<section id="isa" class="level2">
+<h2 class="anchored" data-anchor-id="isa">ISA</h2>
+<p>Instruction set of Architecture</p>
+</section>
+<section id="information-flowing-through-cpu-and-memory" class="level2">
+<h2 class="anchored" data-anchor-id="information-flowing-through-cpu-and-memory">Information flowing through CPU and memory</h2>
+<p>Address, Data, Instruction</p>
+<p>Condition code - Status를 표시해주는 코드</p>
+</section>
+<section id="mechanisms-in-procedures" class="level2">
+<h2 class="anchored" data-anchor-id="mechanisms-in-procedures">Mechanisms in procedures</h2>
+<p>Passing control</p>
+<ul>
+<li>to beginning of procedure code</li>
+<li>back to return point</li>
+</ul>
+<p>Passing data</p>
+<ul>
+<li>Procedure arguments</li>
+<li>return value</li>
+</ul>
+<p>Memory management</p>
+<ul>
+<li>Allocate during procedure execution</li>
+<li>deallocate upon return</li>
+</ul>
+<p>Mechanisms all implemented with machine instructions</p>
+<p>x86-64 implementation of a procedure uses only those mechanisms required.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008085851743.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008085851743</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-64-stack" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-stack">x86-64 Stack</h2>
+<p>Region of memory managed with stack discipline</p>
+<p>Grows toward lower addresses</p>
+<p>Register %rsp contains lowest stack address</p>
+<ul>
+<li>address of top element</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008085944955.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008085944955</figcaption><p></p>
+</figure>
+</div>
+<p>stack pointer는 stack의 끝을 나타내는 pointer</p>
+<p>stack은 위에서부터 아래로 쌓이고, heap은 아래에서부터 위로 쌓는다</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090441015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090441015</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090447952.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090447952</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090455907.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090455907</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090506338.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090506338</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="procedure-control-flow" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-control-flow">Procedure control flow</h2>
+<p>Use stack to support procedure call and return</p>
+<p>Procedure call: <code>call label</code></p>
+<ul>
+<li>Push return address on stack</li>
+<li>Jump to label</li>
+</ul>
+<p>Return address:</p>
+<ul>
+<li>Address of the next instruction right after call</li>
+</ul>
+<p>Procedure return: <code>ret</code></p>
+<ul>
+<li>pop address from stack</li>
+<li>jump to address</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090731399.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090731399</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008090817579.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008090817579</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091002521.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091002521</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091011760.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091011760</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091019865.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091019865</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="procedure-data-flow" class="level2">
+<h2 class="anchored" data-anchor-id="procedure-data-flow">Procedure data flow</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091033753.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091033753</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091223043.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091223043</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stack-based-languages" class="level2">
+<h2 class="anchored" data-anchor-id="stack-based-languages">Stack-based languages</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091240033.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091240033</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091429536.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091429536</figcaption><p></p>
+</figure>
+</div>
+<section id="call-chain-example" class="level3">
+<h3 class="anchored" data-anchor-id="call-chain-example">Call chain example</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008091647636.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008091647636</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="stack-frame" class="level2">
+<h2 class="anchored" data-anchor-id="stack-frame">Stack Frame</h2>
+<p>Content</p>
+<ul>
+<li>Return information</li>
+<li>Local storage (if needed)</li>
+<li>Temporary space (if needed)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152722723.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152722723</figcaption><p></p>
+</figure>
+</div>
+<p>Management</p>
+<ul>
+<li>Space allocated when enter procedure
+<ul>
+<li>set-up code</li>
+<li>includes push by <code>call</code> instruction</li>
+</ul></li>
+<li>Deallocated when return
+<ul>
+<li>Finish code</li>
+<li>Includes pop by <code>ret</code> instruction</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152753528.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152753528</figcaption><p></p>
+</figure>
+</div>
+<p>일단 main에서 시작, yoo 호출</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152759216.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152759216</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152815288.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152815288</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152820416.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152820416</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152827847.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152827847</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152835905.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152835905</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152840783.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152840783</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152845893.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152845893</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152850367.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152850367</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152854981.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152854981</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152900343.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152900343</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-64-linux-stack-frame" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-linux-stack-frame">x86-64 / Linux Stack Frame</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008152943633.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008152943633</figcaption><p></p>
+</figure>
+</div>
+<p>Current Stack Frame (Top to Bottom)</p>
+<ul>
+<li>Argument build - Parameters for function about to call</li>
+<li>Local variables if can’t keep in registers</li>
+<li>Saved register context</li>
+<li>Old frame pointer (optional)</li>
+</ul>
+<p>Caller Stack Frame</p>
+<ul>
+<li>Return address
+<ul>
+<li>pushed by <code>call</code> instruction</li>
+</ul></li>
+<li>Arguments for this call</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153204164.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153204164</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153315722.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153315722</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153325561.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153325561</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153405751.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153405751</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153413906.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153413906</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153421612.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153421612</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="register-saving-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="register-saving-conventions">Register Saving Conventions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153603592.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153603592</figcaption><p></p>
+</figure>
+</div>
+<p>CPU내의 register들은 일종의 공유하는 책상 느낌. 내가 쓰다가 남이 쓰면 데이터가 날아갈 수 있는데, 이 데이터를 다른데 보관해둬야 함. 그런데 매번 책상의 모든 데이터를 다 옮기는 것은 불편하니까, 레지스터의 일부는 저장용도로 남겨두는 것.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153715346.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153715346</figcaption><p></p>
+</figure>
+</div>
+<p>경우에 따라 달라서 뭐가 더 좋은지에 대한 구분이 힘듦</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153839239.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153839239</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008153957750.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008153957750</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154055255.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154055255</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154104800.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154104800</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recursive-function" class="level2">
+<h2 class="anchored" data-anchor-id="recursive-function">Recursive function</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154154471.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154154471</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154219682.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154219682</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154335199.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154335199</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154402627.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154402627</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154409542.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154409542</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154423654.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154423654</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="observations-about-recursion" class="level2">
+<h2 class="anchored" data-anchor-id="observations-about-recursion">Observations about recursion</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154442628.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154442628</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-64-procedure-summary" class="level2">
+<h2 class="anchored" data-anchor-id="x86-64-procedure-summary">x86-64 Procedure summary</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154506229.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154506229</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="array-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="array-allocation">Array Allocation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154733853.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154733853</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008154834886.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008154834886</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155015980.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155015980</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155119244.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155119244</figcaption><p></p>
+</figure>
+</div>
+<p><code>movl (base, index, scale), Dest</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155227757.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155227757</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multidimensional-nested-arrays" class="level2">
+<h2 class="anchored" data-anchor-id="multidimensional-nested-arrays">Multidimensional (Nested) Arrays</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155356930.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155356930</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155434657.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155434657</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nested-array-row-access" class="level2">
+<h2 class="anchored" data-anchor-id="nested-array-row-access">Nested Array Row Access</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155511418.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155511418</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155544301.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155544301</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="nested-array-element-access" class="level2">
+<h2 class="anchored" data-anchor-id="nested-array-element-access">Nested Array Element Access</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155707066.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155707066</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155715792.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155715792</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multi-level-array-example" class="level2">
+<h2 class="anchored" data-anchor-id="multi-level-array-example">Multi-level array example</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155829959.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155829959</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008155842362.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008155842362</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008160001130.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008160001130</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="n-m-matrix-code" class="level2">
+<h2 class="anchored" data-anchor-id="n-m-matrix-code">N * M Matrix Code</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008160031292.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008160031292</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="structure-representation" class="level2">
+<h2 class="anchored" data-anchor-id="structure-representation">Structure Representation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008160507000.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008160507000</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008160606843.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008160606843</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="structures-alignment" class="level2">
+<h2 class="anchored" data-anchor-id="structures-alignment">Structures &amp; Alignment</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161026504.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161026504</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="alignment-principles" class="level2">
+<h2 class="anchored" data-anchor-id="alignment-principles">Alignment principles</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161101826.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161101826</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161251491.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161251491</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="satisfying-alignment-with-structures" class="level2">
+<h2 class="anchored" data-anchor-id="satisfying-alignment-with-structures">Satisfying alignment with structures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161301869.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161301869</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="meeting-overall-alignment-requirement" class="level2">
+<h2 class="anchored" data-anchor-id="meeting-overall-alignment-requirement">Meeting overall alignment requirement</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161332164.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161332164</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="array-of-structures" class="level2">
+<h2 class="anchored" data-anchor-id="array-of-structures">Array of structures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161401910.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161401910</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="accessing-array-elements" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-array-elements">Accessing array elements</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161436606.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161436606</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="saving-space" class="level2">
+<h2 class="anchored" data-anchor-id="saving-space">Saving space</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./image-20211008161600410.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">image-20211008161600410</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
