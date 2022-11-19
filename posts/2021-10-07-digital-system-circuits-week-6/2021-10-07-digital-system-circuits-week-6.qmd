@@ -1,0 +1,215 @@
+---
+title: "Digital System Circuits Week 6"
+author: "Siyun Min"
+date: "2021-10-07"
+categories: [SSU]
+---
+# Digital System Circuits Week 6
+
+![image-20211007131425282](./image-20211007131425282.png)
+
+![image-20211007131434954](./image-20211007131434954.png)
+
+![image-20211007131536125](./image-20211007131536125.png)
+
+![image-20211007131654062](./image-20211007131654062.png)
+
+## Completeness of NAND
+
+![image-20211007131705582](./image-20211007131705582.png)
+
+## Number of possible boolean functions
+
+![image-20211007132127367](./image-20211007132127367.png)
+
+## Decoders
+
+![image-20211007132235512](./image-20211007132235512.png)
+
+![image-20211007132708963](./image-20211007132708963.png)
+
+## Multiplexor (Mux)
+
+![image-20211007132821767](./image-20211007132821767.png)
+
+![image-20211007132951199](./image-20211007132951199.png)
+
+![image-20211007133116999](./image-20211007133116999.png)
+
+Decoder: Code -> Signal / Encoder: Signal -> Code
+
+Mux
+
+![image-20211007133339738](./image-20211007133339738.png)
+
+Demux
+
+![image-20211007133402448](./image-20211007133402448.png)
+
+Mux / Demux는 회선의 방향을 결정할 뿐, 0과 1의 결정에는 관여하지 않는다. 어디로 출력이 나갈지, 어디로 입력을 받을지 결정하는 것.
+
+### Muxes commonly together - N-bit Mux
+
+![image-20211007133723156](./image-20211007133723156.png)
+
+![image-20211007133843501](./image-20211007133843501.png)
+
+![image-20211007134315165](./image-20211007134315165.png)
+
+## Critical delay and critical path
+
+![image-20211007134739202](./image-20211007134739202.png)
+
+## Active low inputs
+
+![image-20211007134942656](./image-20211007134942656.png)
+
+## Schematic capture and simulation
+
+![image-20211007135105884](./image-20211007135105884.png)
+
+## Introduction to optimization of digital logic design
+
+How can we build better circuits?
+
+-   Delay - the time from input changing to new correct stable output
+-   Size - the number of transistors
+
+![image-20211008024400694](./image-20211008024400694.png)
+
+![image-20211008024412197](./image-20211008024412197.png)
+
+transistor 갯수는 입력 당 2개 생각하면 됨
+
+## Tradeoff
+
+Improves some, but worsens other, criteria of interest
+
+![image-20211008024628036](./image-20211008024628036.png)
+
+Optimization은 해야 하는 것, Tradeoff는 선택의 문제
+
+## Optimization and Trade off
+
+Optimizations
+
+-   All criteria of interest are improved (or at least kept the same)
+
+Tradeoff
+
+-   Some criteria of interest are improved, while others are worsened.
+
+We obviously prefer optimizations, but often must accept tradeoffs.
+
+-   You can't build a car that is the most comfortable and has the best fuel efficiency, and is the fastest - you have to give up something to gain other things.
+
+# Combinational logic optimization and tradeoffs
+
+![image-20211008025056715](./image-20211008025056715.png)
+
+![image-20211008025218642](./image-20211008025218642.png)
+
+보통 sum-of-products로 주어지는 회로는 two-level size라서 delay는 일정해서 transistor를 줄이는 방향으로 optimization을 한다.
+
+## Algebraic two-level size optimization
+
+![image-20211008025347002](./image-20211008025347002.png)
+
+## Karnaugh maps for two-level size optimization
+
+Karnaugh maps (K-maps)
+
+![image-20211008025721847](./image-20211008025721847.png)
+
+K-map에서 인접한 11은 줄일 수 있다는 의미
+
+# Digital design process
+
+![image-20211008031116729](./image-20211008031116729.png)
+
+## What is an HDL?
+
+![image-20211008032320925](./image-20211008032320925.png)
+
+It looks like a programming language but not a programming language.
+
+-   It is always critical to recall you are describing hardware.
+-   This code's primary purpose is to generate hardware.
+-   The hardware this code describes (a counter) can be simulated on a computer. In this secondary use of the language it does act more like a programming language.
+
+## Simulating / Validating HDL
+
+![image-20211008032329562](./image-20211008032329562.png)
+
+## What is synthesis?
+
+-   Takes a description of what a circuit does
+-   Creates the hardware to do it
+
+![image-20211008032546838](./image-20211008032546838.png)
+
+## Synthesizing the hardware described
+
+-   All hardware created during synthesis
+    -   Even if a is true, still computing d&c
+-   learn to understand how descriptions are translated to hardware
+
+![image-20211008032827627](./image-20211008032827627.png)
+
+## Why use an HDL?
+
+Enables larger designs via rich syntax, modularity
+
+-   more abstract than schematics, allows larger designs
+    -   register transfer level description
+    -   wide datapaths (16, 32, or 64 bits wide) can be abstracted to a single vecotr
+    -   synthesis tool does the bulk of the tedious repetitive work vs schematic capture
+
+Portable design
+
+-   Behavioral or dataflow Verilog can be synthesized to a new process library with little effort
+
+![image-20211008033148367](./image-20211008033148367.png)
+
+![image-20211008033334873](./image-20211008033334873.png)
+
+# Homework
+
+## Week 5
+
+![image-20211008034552330](./image-20211008034552330.png)
+
+![image-20211008034606282](./image-20211008034606282.png)
+
+![image-20211008034615692](./image-20211008034615692.png)
+
+![image-20211008034623776](./image-20211008034623776.png)
+
+![image-20211008034630789](./image-20211008034630789.png)
+
+![image-20211008034638331](./image-20211008034638331.png)
+
+![image-20211008034644713](./image-20211008034644713.png)
+
+## Week 6
+
+![image-20211008034716106](./image-20211008034716106.png)
+
+![image-20211008034722899](./image-20211008034722899.png)
+
+![image-20211008034735938](./image-20211008034735938.png)
+
+![image-20211008041829289](./image-20211008041829289.png)
+
+![image-20211008034747145](./image-20211008034747145.png)
+
+![image-20211008034754012](./image-20211008034754012.png)
+
+![image-20211008034801316](./image-20211008034801316.png)
+
+![image-20211008034811025](./image-20211008034811025.png)
+
+![image-20211008044410708](./image-20211008044410708.png)
+
+![image-20211008034817913](./image-20211008034817913.png)
+

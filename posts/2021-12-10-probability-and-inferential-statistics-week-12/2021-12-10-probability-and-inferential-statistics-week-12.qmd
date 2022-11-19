@@ -1,0 +1,25 @@
+---
+title: "Probability and Inferential Statistics Week 12"
+author: "Siyun Min"
+date: "2021-12-10"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 12
+
+## Lecture note
+
+![prob_infer_stats_week_12_1](./prob_infer_stats_week_12_1.jpg)
+
+![prob_infer_stats_week_12_2](./prob_infer_stats_week_12_2.jpg)
+
+![prob_infer_stats_week_12_3](./prob_infer_stats_week_12_3.jpg)
+
+![prob_infer_stats_week_12_4](./prob_infer_stats_week_12_4.jpg)
+
+![prob_infer_stats_week_12_5](./prob_infer_stats_week_12_5.jpg)
+
+![prob_infer_stats_week_12_6](./prob_infer_stats_week_12_6.jpg)
+
+![prob_infer_stats_week_12_7](./prob_infer_stats_week_12_7.jpg)
+
+![prob_infer_stats_week_12_8](./prob_infer_stats_week_12_8.jpg)

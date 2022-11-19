@@ -1,0 +1,17 @@
+---
+title: "Probability and Inferential Statistics Week 10"
+author: "Siyun Min"
+date: "2021-11-06"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 10
+
+## Lecture note
+
+![probability_and_inferential_statistics_week_10_2](./probability_and_inferential_statistics_week_10_2.jpg)
+
+![probability_and_inferential_statistics_week_10_3](./probability_and_inferential_statistics_week_10_3.jpg)
+
+![probability_and_inferential_statistics_week_10_4](./probability_and_inferential_statistics_week_10_4.jpg)
+
+![probability_and_inferential_statistics_week_10_1](./probability_and_inferential_statistics_week_10_1.jpg)

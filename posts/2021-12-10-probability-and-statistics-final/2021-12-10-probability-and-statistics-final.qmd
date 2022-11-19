@@ -1,0 +1,33 @@
+---
+title: "Probability and Statistics final"
+author: "Siyun Min"
+date: "2021-12-10"
+categories: [SSU]
+---
+# Probability and Statistics week 14
+
+## Summary
+
+![20170361_probability_and_statistics_final_4](./20170361_probability_and_statistics_final_4.jpg)
+
+![20170361_probability_and_statistics_final_5](./20170361_probability_and_statistics_final_5.jpg)
+
+![20170361_probability_and_statistics_final_6](./20170361_probability_and_statistics_final_6.jpg)
+
+![20170361_probability_and_statistics_final_1](./20170361_probability_and_statistics_final_1.jpg)
+
+![20170361_probability_and_statistics_final_2](./20170361_probability_and_statistics_final_2.jpg)
+
+![20170361_probability_and_statistics_final_3](./20170361_probability_and_statistics_final_3.jpg)
+
+## Final exam
+
+![prob_stats_final_2](./prob_stats_final_2.jpg)
+
+![prob_stats_final_3](./prob_stats_final_3.jpg)
+
+![prob_stats_final_4](./prob_stats_final_4.jpg)
+
+![prob_stats_final_5](./prob_stats_final_5.jpg)
+
+![prob_stats_final_1](./prob_stats_final_1.jpg)

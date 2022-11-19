@@ -1,0 +1,75 @@
+---
+title: "System Programming Week 14"
+author: "Siyun Min"
+date: "2021-12-05"
+categories: [SSU]
+---
+# System Programming week 14
+
+## JellyFish: A Fast Skip List with MVCC
+
+![image-20211205051808716](./image-20211205051808716.png)
+
+## Key-value store grows in popularity
+
+![image-20211205051823778](./image-20211205051823778.png)
+
+## Observation of KVS performance
+
+![image-20211205051943933](./image-20211205051943933.png)
+
+## Skip list is a main culprit!
+
+![image-20211205052219269](./image-20211205052219269.png)
+
+## Skip list
+
+![image-20211205052503073](./image-20211205052503073.png)
+
+## Append-only skip list in KVS
+
+![image-20211205052643250](./image-20211205052643250.png)
+
+![image-20211205053226327](./image-20211205053226327.png)
+
+![image-20211205053236560](./image-20211205053236560.png)
+
+## JellyFish: a fast skip list with MVCC
+
+![image-20211205053250583](./image-20211205053250583.png)
+
+![image-20211205053300874](./image-20211205053300874.png)
+
+![image-20211205053307398](./image-20211205053307398.png)
+
+![image-20211205053316177](./image-20211205053316177.png)
+
+## Summary: skip list taxonomy
+
+![image-20211205053329741](./image-20211205053329741.png)
+
+## Evaluation
+
+![image-20211205053358705](./image-20211205053358705.png)
+
+## Db_bench results
+
+![image-20211205053410276](./image-20211205053410276.png)
+
+![image-20211205053418875](./image-20211205053418875.png)
+
+## YCSB results
+
+![image-20211205053438559](./image-20211205053438559.png)
+
+![image-20211205053445847](./image-20211205053445847.png)
+
+## Conclusion
+
+![image-20211205053454810](./image-20211205053454810.png)
+
+## (Back-ups) Lock-free skip list
+
+![image-20211205053510405](./image-20211205053510405.png)
+
+![image-20211205053516735](./image-20211205053516735.png)

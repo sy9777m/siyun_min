@@ -1,0 +1,77 @@
+---
+title: "Probability and Statistics Week 8"
+author: "Siyun Min"
+date: "2021-10-23"
+categories: [SSU]
+---
+# Probability and Statistics week 8
+
+## Relationship between variables
+
+![image-20211023032525857](./image-20211023032525857.png)
+
+i.i.d = independent and identical distribution
+
+![image-20211023032706354](./image-20211023032706354.png)
+
+![image-20211023032730046](./image-20211023032730046.png)
+
+![image-20211023032928880](./image-20211023032928880.png)
+
+## Scatter plot
+
+![image-20211023033038401](./image-20211023033038401.png)
+
+![image-20211023033151602](./image-20211023033151602.png)
+
+![image-20211023033153314](./image-20211023033153314.png)
+
+### jittering
+
+![image-20211023033500356](./image-20211023033500356.png)
+
+### Alpha channel
+
+![image-20211023033522882](./image-20211023033522882.png)
+
+### Scatter plot과 grouping
+
+![image-20211023033600360](./image-20211023033600360.png)
+
+## Correlation
+
+![image-20211023033619397](./image-20211023033619397.png)
+
+## Covariance
+
+![image-20211023033855628](./image-20211023033855628.png)
+
+![image-20211023034007247](./image-20211023034007247.png) 
+
+## Pearson correlation
+
+![image-20211023034137186](./image-20211023034137186.png)
+
+![image-20211023034206791](./image-20211023034206791.png)
+
+## rank-based correlation
+
+![image-20211023034300759](./image-20211023034300759.png)
+
+### Kendall-tau correlations
+
+![image-20211023034322592](./image-20211023034322592.png)
+
+![image-20211023034439368](./image-20211023034439368.png)
+
+### Spearman correlation
+
+![image-20211023034540869](./image-20211023034540869.png)
+
+![image-20211023034648436](./image-20211023034648436.png)
+
+## relation between correlation and casualty
+
+![image-20211023034848204](./image-20211023034848204.png)
+
+![image-20211023034905643](./image-20211023034905643.png)

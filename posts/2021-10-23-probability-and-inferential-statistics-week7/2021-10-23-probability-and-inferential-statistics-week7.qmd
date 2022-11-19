@@ -1,0 +1,44 @@
+---
+title: "Probability and Inferenctial Statistics Week 7"
+author: "Siyun Min"
+date: "2021-10-23"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 7
+
+## Lecture note
+
+![probability_and_inferential_statistics_week_7_Page_1](./probability_and_inferential_statistics_week_7_Page_1.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_2](./probability_and_inferential_statistics_week_7_Page_2.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_3](./probability_and_inferential_statistics_week_7_Page_3.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_4](./probability_and_inferential_statistics_week_7_Page_4.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_5](./probability_and_inferential_statistics_week_7_Page_5.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_6](./probability_and_inferential_statistics_week_7_Page_6.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_7](./probability_and_inferential_statistics_week_7_Page_7.jpg)
+
+![probability_and_inferential_statistics_week_7_Page_8](./probability_and_inferential_statistics_week_7_Page_8.jpg)
+
+## Homework
+
+![20170361_7주차 숙제_Page_1](./20170361_7주차 숙제_Page_1.jpg)
+
+![20170361_7주차 숙제_Page_2](./20170361_7주차 숙제_Page_2.jpg)
+
+![20170361_7주차 숙제_Page_3](./20170361_7주차 숙제_Page_3.jpg)
+
+![20170361_7주차 숙제_Page_4](./20170361_7주차 숙제_Page_4.jpg)
+
+![20170361_7주차 숙제_Page_5](./20170361_7주차 숙제_Page_5.jpg)
+
+![20170361_7주차 숙제_Page_6](./20170361_7주차 숙제_Page_6.jpg)
+
+![20170361_7주차 숙제_Page_7](./20170361_7주차 숙제_Page_7.jpg)
+
+![20170361_7주차 숙제_Page_8](./20170361_7주차 숙제_Page_8.jpg)
+

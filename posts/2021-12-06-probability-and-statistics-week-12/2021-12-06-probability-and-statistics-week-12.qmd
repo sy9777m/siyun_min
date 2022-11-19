@@ -1,0 +1,207 @@
+---
+title: "Probability and Statistics Week 12"
+author: "Siyun Min"
+date: "2021-12-06"
+categories: [SSU]
+---
+# Probability and Statistics week 12
+
+## 이번 시간 할 일
+
+![image-20211207213035824](./image-20211207213035824.png)
+
+## p-value
+
+![image-20211207213045022](./image-20211207213045022.png)
+
+![image-20211207213103547](./image-20211207213103547.png)
+
+![image-20211207213107964](./image-20211207213107964.png)
+
+## Ex: two-sided p-value calculation
+
+![image-20211207213124016](./image-20211207213124016.png)
+
+![image-20211207213129120](./image-20211207213129120.png)
+
+## One-sided t-test
+
+![image-20211207213139906](./image-20211207213139906.png)
+
+## Ex: one sided problem
+
+![image-20211207213153536](./image-20211207213153536.png)
+
+![image-20211207213158025](./image-20211207213158025.png)
+
+![image-20211207213202267](./image-20211207213202267.png)
+
+## Hypothesis testing process
+
+![image-20211207213214260](./image-20211207213214260.png)
+
+![image-20211207213218442](./image-20211207213218442.png)
+
+![image-20211207213224248](./image-20211207213224248.png)
+
+## z-test
+
+![image-20211207214304570](./image-20211207214304570.png)
+
+### two-sided problem
+
+![image-20211207214315106](./image-20211207214315106.png)
+
+### one-sided problem
+
+![image-20211207214337740](./image-20211207214337740.png)
+
+## Significance levels (통계적 유의성)
+
+![image-20211207214350498](./image-20211207214350498.png)
+
+## Type I error와 Type II error
+
+![image-20211207214403873](./image-20211207214403873.png)
+
+## Two-sided problems
+
+![image-20211207214653290](./image-20211207214653290.png)
+
+### Ex: 엔진오일
+
+![image-20211207214703584](./image-20211207214703584.png)
+
+## Two-sided interval과 p-value
+
+![image-20211207214718113](./image-20211207214718113.png)
+
+## One-sided problems
+
+![image-20211207215016626](./image-20211207215016626.png)
+
+![image-20211207215022287](./image-20211207215022287.png)
+
+![image-20211207215027555](./image-20211207215027555.png)
+
+![image-20211207215033262](./image-20211207215033262.png)
+
+![image-20211207215039667](./image-20211207215039667.png)
+
+![image-20211207215046492](./image-20211207215046492.png)
+
+## Comparing two population means
+
+![image-20211207215100819](./image-20211207215100819.png)
+
+![image-20211207215413162](./image-20211207215413162.png)
+
+### Ex: 코로나 치료제
+
+![image-20211207215426195](./image-20211207215426195.png)
+
+## Paired sample vs. independent sample
+
+![image-20211207215445480](./image-20211207215445480.png)
+
+## Analysis of paired samples
+
+![image-20211207215457831](./image-20211207215457831.png)
+
+### Ex: 신약의 실험
+
+![image-20211207215508710](./image-20211207215508710.png)
+
+![image-20211207215513528](./image-20211207215513528.png)
+
+![image-20211207215518952](./image-20211207215518952.png)
+
+## Analysis of independent samples
+
+![image-20211207215533834](./image-20211207215533834.png)
+
+## 2가지의 방법
+
+![image-20211207215542084](./image-20211207215542084.png)
+
+## General procedure (Smith-Sattrthwaite test)
+
+![image-20211207220156824](./image-20211207220156824.png)
+
+### Two-sided problems
+
+![image-20211207220207945](./image-20211207220207945.png)
+
+![image-20211207220213811](./image-20211207220213811.png)
+
+### One-sided problems
+
+![image-20211207220225511](./image-20211207220225511.png)
+
+![image-20211207220230448](./image-20211207220230448.png)
+
+## Pooled variance procedure
+
+![image-20211207220242046](./image-20211207220242046.png)
+
+### Two-sided problems
+
+![image-20211207220252551](./image-20211207220252551.png)
+
+![image-20211207220258923](./image-20211207220258923.png)
+
+### One-sided problems
+
+![image-20211207220321657](./image-20211207220321657.png)
+
+![image-20211207220326191](./image-20211207220326191.png)
+
+## Inference on the population proportions
+
+![image-20211207220341943](./image-20211207220341943.png)
+
+## Chi-square test
+
+![image-20211207220536316](./image-20211207220536316.png)
+
+## Chi-square statistic
+
+![image-20211207220551634](./image-20211207220551634.png)
+
+### Ex: 기계고장
+
+![image-20211207220609832](./image-20211207220609832.png)
+
+![image-20211207220615398](./image-20211207220615398.png)
+
+## 이번 시간에 한 일
+
+![image-20211207220625663](./image-20211207220625663.png)
+
+## 다음 시간
+
+![image-20211207220636924](./image-20211207220636924.png)
+
+![image-20211207220646940](./image-20211207220646940.png)
+
+## Practice
+
+![image-20211208031747080](./image-20211208031747080.png)
+
+![image-20211208031754976](./image-20211208031754976.png)
+
+![image-20211208031802400](./image-20211208031802400.png)
+
+![image-20211208031810450](./image-20211208031810450.png)
+
+![image-20211208031818330](./image-20211208031818330.png)
+
+![image-20211208031826890](./image-20211208031826890.png)
+
+![image-20211208031835825](./image-20211208031835825.png)
+
+![image-20211208031846506](./image-20211208031846506.png)
+
+![image-20211208031853865](./image-20211208031853865.png)
+
+![image-20211208031900560](./image-20211208031900560.png)

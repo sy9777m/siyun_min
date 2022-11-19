@@ -1,0 +1,88 @@
+---
+title: "Digital System Circuits Week 7"
+author: "Siyun Min"
+date: "2021-10-18"
+categories: [SSU]
+---
+# Digital System Circuits Week 7
+
+## What is an HDL?
+
+HDL = Hardware Description Language
+
+![image-20211018084333616](./image-20211018084333616.png)
+
+## What is synthesis?
+
+![image-20211018084430524](./image-20211018084430524.png)
+
+Net list
+
+## Why use an HDL?
+
+![image-20211018084548539](./image-20211018084548539.png)
+
+## Other important HDL features
+
+![image-20211018085017419](./image-20211018085017419.png)
+
+-   Serve as input for synthesis tools
+
+## Hardware implementations
+
+![image-20211018085503030](./image-20211018085503030.png)
+
+## Hardware building blocks
+
+![image-20211018090138632](./image-20211018090138632.png)
+
+## Standard cells
+
+![image-20211018090219746](./image-20211018090219746.png)
+
+## FPGAs
+
+![image-20211018090432186](./image-20211018090432186.png)
+
+## What is a Netlist?
+
+![image-20211018090447851](./image-20211018090447851.png)
+
+## Verilog module
+
+![image-20211018090657522](./image-20211018090657522.png)
+
+![image-20211018090718849](./image-20211018090718849.png)
+
+## Karnaugh Maps for Two-level size optimization
+
+![image-20211018092000735](./image-20211018092000735.png)
+
+## K-maps
+
+![image-20211018091853424](./image-20211018091853424.png)
+
+![image-20211018092401575](./image-20211018092401575.png)
+
+![image-20211018092744449](./image-20211018092744449.png)
+
+![image-20211018092818681](./image-20211018092818681.png)
+
+circle 하나 당 term 하나 -> 최대한 큰 circle 하나를 그리는 것이 식이 간단해짐
+
+## Two-level size optimization using K-maps
+
+![image-20211018093005514](./image-20211018093005514.png)
+
+![image-20211018093131691](./image-20211018093131691.png)
+
+![image-20211018093138860](./image-20211018093138860.png)
+
+![image-20211018093301896](./image-20211018093301896.png)
+
+## Don't care input combinations
+
+![image-20211018093520452](./image-20211018093520452.png)
+
+X는 1에도 포함 될 수도 있고, 0에도 포함 될 수 있다.
+

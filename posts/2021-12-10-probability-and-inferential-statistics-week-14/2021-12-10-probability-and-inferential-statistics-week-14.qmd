@@ -1,0 +1,31 @@
+---
+title: "Probability and Inferential Statistics Week 14"
+author: "Siyun Min"
+date: "2021-12-10"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 14
+
+## Lecture Note
+
+![prob_infer_stats_week_13_14](./prob_infer_stats_week_13_14-16391521786218.jpg)
+
+![prob_infer_stats_week_13_13](./prob_infer_stats_week_13_13-16391521786217.jpg)
+
+![prob_infer_stats_week_13_12](./prob_infer_stats_week_13_12-16391521786219.jpg)
+
+![prob_infer_stats_week_13_11](./prob_infer_stats_week_13_11-163915217862110.jpg)
+
+![prob_infer_stats_week_13_10](./prob_infer_stats_week_13_10-163915217862111.jpg)
+
+![prob_infer_stats_week_13_9](./prob_infer_stats_week_13_9-163915217862112.jpg)
+
+![prob_infer_stats_week_13_8](./prob_infer_stats_week_13_8-163915217862113.jpg)
+
+![prob_infer_stats_week_13_7](./prob_infer_stats_week_13_7-163915217862114.jpg)
+
+![prob_infer_stats_week_13_17](./prob_infer_stats_week_13_17-163915217862115.jpg)
+
+![prob_infer_stats_week_13_16](./prob_infer_stats_week_13_16-163915217862116.jpg)
+
+![prob_infer_stats_week_13_15](./prob_infer_stats_week_13_15-163915217862117.jpg)

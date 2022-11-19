@@ -1,0 +1,27 @@
+---
+title: "Probability and Inferential Statistics Week 9"
+author: "Siyun Min"
+date: "2021-11-05"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 9
+
+## Lecture note
+
+![image-20211105232132539](./image-20211105232132539.png)
+
+![image-20211105234953000](./image-20211105234953000.png)
+
+![image-20211105235018040](./image-20211105235018040.png)
+
+![probability_and_inferential_statistics_week_9_4](./probability_and_inferential_statistics_week_9_4.jpg)
+
+![probability_and_inferential_statistics_week_9_5](./probability_and_inferential_statistics_week_9_5.jpg)
+
+![probability_and_inferential_statistics_week_9_6](./probability_and_inferential_statistics_week_9_6.jpg)
+
+![probability_and_inferential_statistics_week_9_1](./probability_and_inferential_statistics_week_9_1.jpg)
+
+![probability_and_inferential_statistics_week_9_2](./probability_and_inferential_statistics_week_9_2.jpg)
+
+![probability_and_inferential_statistics_week_9_3](./probability_and_inferential_statistics_week_9_3.jpg)

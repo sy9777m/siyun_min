@@ -1,0 +1,83 @@
+---
+title: "Algorithms Week 7"
+author: "Siyun Min"
+date: "2021-10-20"
+categories: [SSU]
+---
+# Algorithms week 7
+
+## Graph algorithms
+
+-   Graph basics
+-   DFS - depth-first search
+-   BFS - breadth-first search
+-   Shortest path finding
+-   more graphs with advanced graph algorithms
+
+## Graph
+
+![image-20211021031858005](./image-20211021031858005.png)
+
+## Undirected graphs
+
+![image-20211021032121783](./image-20211021032121783.png)
+
+![image-20211021032151472](./image-20211021032151472.png)
+
+## Directed graph
+
+![image-20211021032247498](./image-20211021032247498.png)
+
+![image-20211021032307328](./image-20211021032307328.png)
+
+## How do we represent graphs?
+
+### adjacency matrix
+
+![image-20211021032414202](./image-20211021032414202.png)
+
+![image-20211021032502567](./image-20211021032502567.png)
+
+### linked lists
+
+![image-20211021032543944](./image-20211021032543944.png)
+
+## In either case
+
+![image-20211021032718757](./image-20211021032718757.png)
+
+## trade-offs
+
+![image-20211021032854670](./image-20211021032854670.png)
+
+linked lists - generally better for sparse graphs
+
+## Depth-first search
+
+### DFS vs. BFS
+
+![image-20211021032942687](./image-20211021032942687.png)
+
+![image-20211021033056311](./image-20211021033056311.png)
+
+![image-20211021033116054](./image-20211021033116054.png)
+
+![image-20211021034158183](./image-20211021034158183.png)
+
+## DFS finds all the nodes reachable from the starting point
+
+![image-20211021034212281](./image-20211021034212281.png)
+
+![image-20211021034244808](./image-20211021034244808.png)
+
+## Why is it called depth-first?
+
+![image-20211021034303896](./image-20211021034303896.png)
+
+## Running time
+
+![image-20211021034314871](./image-20211021034314871.png)
+
+![image-20211021034324626](./image-20211021034324626.png)
+
+![image-20211021034331060](./image-20211021034331060.png)

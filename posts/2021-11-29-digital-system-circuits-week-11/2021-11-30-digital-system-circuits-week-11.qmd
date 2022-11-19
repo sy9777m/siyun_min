@@ -1,0 +1,55 @@
+---
+title: "Digital System Circuits Week 11"
+author: "Siyun Min"
+date: "2021-11-30"
+categories: [SSU]
+---
+# Digital System Circuits week 11
+
+## D Latch vs. D Flip-Flop
+
+![image-20211130032813685](./image-20211130032813685.png)
+
+## Data types
+
+![image-20211130034059478](./image-20211130034059478.png)
+
+net - node와 node를 이어주는 것
+
+## Data types: Nets
+
+![image-20211130035357091](./image-20211130035357091.png)
+
+![image-20211130035410050](./image-20211130035410050.png)
+
+## Data types: Registers
+
+![image-20211130035424572](./image-20211130035424572.png)
+
+![image-20211130035430154](./image-20211130035430154.png)
+
+## Assignment types
+
+![image-20211130035822500](./image-20211130035822500.png)
+
+## Assignment types: continuous assignment
+
+![image-20211130035837076](./image-20211130035837076.png)
+
+![image-20211130035848204](./image-20211130035848204.png)
+
+## Assignment types: procedural assignment
+
+![image-20211130035903793](./image-20211130035903793.png)
+
+![image-20211130035913396](./image-20211130035913396.png)
+
+![image-20211130035921650](./image-20211130035921650.png)
+
+![image-20211130035933231](./image-20211130035933231.png)
+
+![image-20211130035942965](./image-20211130035942965.png)
+
+## Assignment with delay
+
+![image-20211130035953861](./image-20211130035953861.png)

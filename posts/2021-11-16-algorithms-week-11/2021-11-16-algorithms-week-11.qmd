@@ -1,0 +1,195 @@
+---
+title: "Algorithms Week 11"
+author: "Siyun Min"
+date: "2021-11-16"
+categories: [SSU]
+---
+# Algorithms week 11
+
+## Dynamic programming
+
+-   Bellman-Ford algorithm
+-   Fibonacci Numbers
+-   Floyd-Warshall algorithm
+
+Another problems
+
+-   Longest common subsequence
+-   knapsack
+-   Independent sets
+
+## Bellman-Ford
+
+![image-20211116154308897](./image-20211116154308897.png)
+
+![image-20211116154448448](./image-20211116154448448.png)
+
+## Bellman-Ford vs. Dijkstra
+
+![image-20211116154501152](./image-20211116154501152.png)
+
+## Bellman-Ford
+
+![image-20211116154518038](./image-20211116154518038.png)
+
+![image-20211116154858372](./image-20211116154858372.png)
+
+![image-20211116154908832](./image-20211116154908832.png)
+
+![image-20211116155451181](./image-20211116155451181.png)
+
+![image-20211116155458680](./image-20211116155458680.png)
+
+![image-20211116155506398](./image-20211116155506398.png)
+
+![image-20211116155513536](./image-20211116155513536.png)
+
+### Interpretation of $d^{(i)}$
+
+![image-20211116155534589](./image-20211116155534589.png)
+
+## Why does Bellman-Ford work?
+
+![image-20211116155547256](./image-20211116155547256.png)
+
+### Inductive step
+
+![image-20211116155601590](./image-20211116155601590.png)
+
+## Proof by induction
+
+![image-20211116160310811](./image-20211116160310811.png)
+
+## Bellman-Ford Algorithm
+
+![image-20211116160408418](./image-20211116160408418.png)
+
+## Shortest paths
+
+![image-20211116160420769](./image-20211116160420769.png)
+
+## Aside: Link-state vs Distance-vector
+
+![image-20211116160435312](./image-20211116160435312.png)
+
+## Important thing about Bellman-Ford for the rest of this lecture
+
+![image-20211116163954629](./image-20211116163954629.png)
+
+## Bellman-Ford is an example of dynamic programming!
+
+![image-20211116164016489](./image-20211116164016489.png)
+
+### Example: How to compute Fibonacci numbers
+
+![image-20211116164227743](./image-20211116164227743.png)
+
+## Candidate algorithm
+
+![image-20211116164240307](./image-20211116164240307.png)
+
+![image-20211116164415290](./image-20211116164415290.png)
+
+## Maybe this would be better
+
+![image-20211116164427531](./image-20211116164427531.png)
+
+![image-20211116164711518](./image-20211116164711518.png)
+
+## What is dynamic programming?
+
+![image-20211116164722207](./image-20211116164722207.png)
+
+## Elements of dynamic programming
+
+![image-20211116164928672](./image-20211116164928672.png)
+
+![image-20211116164935415](./image-20211116164935415.png)
+
+![image-20211116164944044](./image-20211116164944044.png)
+
+## Two ways to think about and/or implement DP algorithms
+
+-   Top down
+-   Bottom up
+
+## Bottom up approach
+
+![image-20211116165425927](./image-20211116165425927.png)
+
+![image-20211116165432333](./image-20211116165432333.png)
+
+![image-20211116165438534](./image-20211116165438534.png)
+
+![image-20211116165447382](./image-20211116165447382.png)
+
+## Top down approach
+
+![image-20211116165458926](./image-20211116165458926.png)
+
+### Example of top-down Fibonacci
+
+![image-20211116165514624](./image-20211116165514624.png)
+
+## Memo-ization visualization
+
+![image-20211116165640104](./image-20211116165640104.png)
+
+![image-20211116165648879](./image-20211116165648879.png)
+
+## Dynamic programming
+
+![image-20211116170421334](./image-20211116170421334.png)
+
+## Floyd-Warshall
+
+![image-20211116170436913](./image-20211116170436913.png)
+
+![image-20211116172910024](./image-20211116172910024.png)
+
+## Optimal substructure
+
+![image-20211116173401233](./image-20211116173401233.png)
+
+![image-20211116173412503](./image-20211116173412503.png)
+
+![image-20211116173422232](./image-20211116173422232.png)
+
+![image-20211116173433795](./image-20211116173433795.png)
+
+![image-20211116173444781](./image-20211116173444781.png)
+
+## Aside: simple paths
+
+![image-20211116173941190](./image-20211116173941190.png)
+
+## Case 2 continued
+
+![image-20211116173951578](./image-20211116173951578.png)
+
+![image-20211116174044238](./image-20211116174044238.png)
+
+![image-20211116174050402](./image-20211116174050402.png)
+
+## Floyd-Warshall algorithm
+
+![image-20211116174102136](./image-20211116174102136.png)
+
+## We've basically just shown
+
+![image-20211116185859072](./image-20211116185859072.png)
+
+## What if there are negative cycles?
+
+![image-20211116185913330](./image-20211116185913330.png)
+
+![image-20211116185920257](./image-20211116185920257.png)
+
+## What have we learned?
+
+![image-20211116185933063](./image-20211116185933063.png)
+
+## Graph algorithms
+
+![image-20211116190732161](./image-20211116190732161.png)
+

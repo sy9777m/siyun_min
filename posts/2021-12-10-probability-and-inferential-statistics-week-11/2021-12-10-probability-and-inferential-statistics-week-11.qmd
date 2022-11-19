@@ -1,0 +1,18 @@
+---
+title: "Probability and Inferential Statistics Week 11"
+author: "Siyun Min"
+date: "2021-12-10"
+categories: [SSU]
+---
+# Probability and Inferential Statistics week 11
+
+## Lecture note
+
+![prob_infer_stats_week_11_1](./prob_infer_stats_week_11_1.jpg)
+
+![prob_infer_stats_week_11_2](./prob_infer_stats_week_11_2.jpg)
+
+![prob_infer_stats_week_11_3](./prob_infer_stats_week_11_3.jpg)
+
+![prob_infer_stats_week_11_4](./prob_infer_stats_week_11_4.jpg)
+

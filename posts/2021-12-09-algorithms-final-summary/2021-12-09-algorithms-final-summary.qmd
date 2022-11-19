@@ -1,0 +1,493 @@
+---
+title: "Algorithms Final"
+author: "Siyun Min"
+date: "2021-12-09"
+categories: [SSU]
+---
+# Algorithms final summary
+
+## How do we represent graphs?
+
+![image-20211209000613505](./image-20211209000613505.png)
+
+![image-20211209000621212](./image-20211209000621212.png)
+
+## Trade-offs
+
+![image-20211209000632595](./image-20211209000632595.png)
+
+## DFS
+
+### Running time to explore just the connected component we started in
+
+![image-20211209000717087](./image-20211209000717087.png)
+
+## Topological ordering
+
+![image-20211209000831977](./image-20211209000831977.png)
+
+### DAG (Directed Acyclic Graph)
+
+![image-20211209000759261](./image-20211209000759261.png)
+
+![image-20211209000811117](./image-20211209000811117.png)
+
+directed graph with no directed cycles
+
+### Finish times seems useful
+
+![image-20211209000845819](./image-20211209000845819.png)
+
+![image-20211209000857699](./image-20211209000857699.png)
+
+![image-20211209000925934](./image-20211209000925934.png)
+
+![image-20211209000931435](./image-20211209000931435.png)
+
+![image-20211209000948588](./image-20211209000948588.png)
+
+## BFS
+
+![image-20211209001004783](./image-20211209001004783.png)
+
+### Running time to explore the whole thing
+
+![image-20211209001215828](./image-20211209001215828.png)
+
+### Shortest path
+
+![image-20211209001229430](./image-20211209001229430.png)
+
+## Shortest path problem
+
+![image-20211209001309197](./image-20211209001309197.png)
+
+## Dijkstra algorithm
+
+![image-20211209000434398](/Kevin_Min/images/2021-12-09-algorithms-final/image-20211209000434398.png)
+
+![image-20211209001335284](./image-20211209001335284.png)
+
+### Why does this work?
+
+![image-20211209002512642](./image-20211209002512642.png)
+
+![image-20211209002004336](./image-20211209002004336.png)
+
+![image-20211209002130087](./image-20211209002130087.png)
+
+![image-20211209002249578](./image-20211209002249578.png)
+
+![image-20211209002331356](./image-20211209002331356.png)
+
+![image-20211209002352183](./image-20211209002352183.png)
+
+![image-20211209002447072](./image-20211209002447072.png)
+
+![image-20211209002536085](./image-20211209002536085.png)
+
+### Running time
+
+![image-20211209002549675](./image-20211209002549675.png)
+
+![image-20211209002803483](./image-20211209002803483.png)
+
+![image-20211209002809127](./image-20211209002809127.png)
+
+### If we use a red-black tree
+
+![image-20211209002821345](./image-20211209002821345.png)
+
+### Dijkstra drawbacks
+
+![image-20211209005014090](./image-20211209005014090.png)
+
+## Bellman-Ford
+
+![image-20211209005335064](./image-20211209005335064.png)
+
+![image-20211209005359661](./image-20211209005359661.png)
+
+![image-20211209005413194](./image-20211209005413194.png)
+
+![image-20211209005549151](./image-20211209005549151.png)
+
+### Running time
+
+![image-20211209005614527](./image-20211209005614527.png)
+
+### Bellman-Ford and negative edge weights
+
+![image-20211209005635278](./image-20211209005635278.png)
+
+![image-20211209005849648](./image-20211209005849648.png)
+
+![image-20211209005857800](./image-20211209005857800.png)
+
+![image-20211209013121078](./image-20211209013121078.png)
+
+## Recap: shortest paths
+
+![image-20211209013207753](./image-20211209013207753.png)
+
+## Dynamic programming
+
+![image-20211209013510782](./image-20211209013510782.png)
+
+### Elements of dynamic programming
+
+![image-20211209013541321](./image-20211209013541321.png)
+
+![image-20211209013616339](./image-20211209013616339.png)
+
+![image-20211209013628300](./image-20211209013628300.png)
+
+## Bottom up approach
+
+![image-20211209013652718](./image-20211209013652718.png)
+
+![image-20211209013707973](./image-20211209013707973.png)
+
+## Top down approach
+
+![image-20211209013719208](./image-20211209013719208.png)
+
+## Floyd-Warshall
+
+![image-20211209013837247](./image-20211209013837247.png)
+
+![image-20211209013845254](./image-20211209013845254.png)
+
+### Optimal substructure
+
+![image-20211209013902576](./image-20211209013902576.png)
+
+### How can we find $D^{k}[u, v]$ using $D^{k-1}$
+
+![image-20211209014219712](./image-20211209014219712.png)
+
+![image-20211209014227969](./image-20211209014227969.png)
+
+![image-20211209014233898](./image-20211209014233898.png)
+
+![image-20211209014322974](./image-20211209014322974.png)
+
+![image-20211209014330876](./image-20211209014330876.png)
+
+## Floyd-Warshall algorithm
+
+![image-20211209014349302](./image-20211209014349302.png)
+
+![image-20211209014401446](./image-20211209014401446.png)
+
+## Graph algorithms
+
+![image-20211209014439149](./image-20211209014439149.png)
+
+## Recap
+
+![image-20211209014543078](./image-20211209014543078.png)
+
+## Longest common subsequence
+
+![image-20211209014616466](./image-20211209014616466.png)
+
+![image-20211209014623288](./image-20211209014623288.png)
+
+![image-20211209014633642](./image-20211209014633642.png)
+
+## Recipe for applying dynamic programming
+
+![image-20211209014654548](./image-20211209014654548.png)
+
+## Step 1: optimal substructure
+
+![image-20211209014724644](./image-20211209014724644.png)
+
+## Step 2: find a recursive formulation for the length of the longest common subsequence
+
+![image-20211209014817181](./image-20211209014817181.png)
+
+![image-20211209014843751](./image-20211209014843751.png)
+
+![image-20211209014900506](./image-20211209014900506.png)
+
+## Step 3: use dynamic programming to find the length of the longest common subsequence
+
+![image-20211209015015942](./image-20211209015015942.png)
+
+![image-20211209015039116](./image-20211209015039116.png)
+
+## Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual LCS.
+
+![image-20211209015112353](./image-20211209015112353.png)
+
+![image-20211209015120089](./image-20211209015120089.png)
+
+## Step 5: if needed, code this up like a reasonable person
+
+![image-20211209015202864](./image-20211209015202864.png)
+
+## Knapsack
+
+![image-20211209015228375](./image-20211209015228375.png)
+
+## Step 1: Identify optimal substructure
+
+![image-20211209015846410](./image-20211209015846410.png)
+
+![image-20211209015856760](./image-20211209015856760.png)
+
+## Step 2: Find a recursive formulation for the value of the optimal solution
+
+![image-20211209015937256](./image-20211209015937256.png)
+
+## Step 3: Use dynamic programming to find the value of the optimal solution
+
+![image-20211209020001333](./image-20211209020001333.png)
+
+## Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual solution.
+
+![image-20211209020034357](./image-20211209020034357.png)
+
+![image-20211209020044601](./image-20211209020044601.png)
+
+![image-20211209020056804](./image-20211209020056804.png)
+
+![image-20211209020124989](./image-20211209020124989.png)
+
+## 0/1 knapsack
+
+![image-20211209020149430](./image-20211209020149430.png)
+
+## Step 1: identify optimal substructure
+
+![image-20211209020204533](./image-20211209020204533.png)
+
+![image-20211209020213417](./image-20211209020213417.png)
+
+![image-20211209020228603](./image-20211209020228603.png)
+
+![image-20211209020241679](./image-20211209020241679.png)
+
+![image-20211209020249164](./image-20211209020249164.png)
+
+![image-20211209020259097](./image-20211209020259097.png)
+
+![image-20211209020655701](./image-20211209020655701.png)
+
+## Step 2: find a recursive formulation for the value of the optimal solution
+
+![image-20211209020722384](./image-20211209020722384.png)
+
+## Step 3: use dynamic programming to find the value of the optimal solution
+
+![image-20211209020752779](./image-20211209020752779.png)
+
+![image-20211209020817580](./image-20211209020817580.png)
+
+## Question: how did we know which substructure to use in which variant of knapsack?
+
+![image-20211209020849652](./image-20211209020849652.png)
+
+## Independent set
+
+![image-20211209020920665](./image-20211209020920665.png)
+
+## NP-complete
+
+so we are unlikely to find an efficient algorithm.
+
+## Step 1: Identify optimal substructure
+
+![image-20211209021025874](./image-20211209021025874.png)
+
+### Case 1: the root is not in a maximal independent set
+
+![image-20211209021047954](./image-20211209021047954.png)
+
+### Case 2: the root is in a maximal independent set
+
+![image-20211209021103251](./image-20211209021103251.png)
+
+## Step 2: find a recursive formulation for the value of the optimal solution
+
+![image-20211209021123134](./image-20211209021123134.png)
+
+![image-20211209021139075](./image-20211209021139075.png)
+
+## Step 3: use dynamic programming to find the value of the optimal solution
+
+![image-20211209021201306](./image-20211209021201306.png)
+
+## Greedy algorithms
+
+![image-20211209021324373](./image-20211209021324373.png)
+
+### Unbounded knapsack
+
+![image-20211209021345116](./image-20211209021345116.png)
+
+## Activity selection
+
+![image-20211209021408630](./image-20211209021408630.png)
+
+![image-20211209021414684](./image-20211209021414684.png)
+
+![image-20211209021421917](./image-20211209021421917.png)
+
+### At least it's fast
+
+![image-20211209021433300](./image-20211209021433300.png)
+
+## What makes it greedy?
+
+![image-20211209021444945](./image-20211209021444945.png)
+
+## Three questions
+
+![image-20211209021457797](./image-20211209021457797.png)
+
+![image-20211209021521186](./image-20211209021521186.png)
+
+## Sub-problem graph view
+
+![image-20211209021656538](./image-20211209021656538.png)
+
+![image-20211209021702523](./image-20211209021702523.png)
+
+![image-20211209021707642](./image-20211209021707642.png)
+
+![image-20211209021715120](./image-20211209021715120.png)
+
+## Huffman coding
+
+![image-20211209021950587](./image-20211209021950587.png)
+
+![image-20211209022023177](./image-20211209022023177.png)
+
+## Minimum spanning tree
+
+![image-20211209022115678](./image-20211209022115678.png)
+
+## Prim's algorithm
+
+![image-20211209022141925](./image-20211209022141925.png)
+
+## Kruskal's algorithm
+
+![image-20211209022219290](./image-20211209022219290.png)
+
+![image-20211209022230484](./image-20211209022230484.png)
+
+![image-20211209022237293](./image-20211209022237293.png)
+
+![image-20211209022256998](./image-20211209022256998.png)
+
+## Both Prim and Kruskal
+
+![image-20211209022318333](./image-20211209022318333.png)
+
+## Class of "P" problems
+
+![image-20211209022503811](./image-20211209022503811.png)
+
+![image-20211209022514576](./image-20211209022514576.png)
+
+## Tractable / Intractable problems
+
+![image-20211209022530970](./image-20211209022530970.png)
+
+## Hamiltonian cycle
+
+![image-20211209022658129](./image-20211209022658129.png)
+
+## Traveling salesman problem
+
+![image-20211209022712564](./image-20211209022712564.png)
+
+![image-20211209022725181](./image-20211209022725181.png)
+
+## Intractable problems
+
+![image-20211209022736552](./image-20211209022736552.png)
+
+## P vs. NP
+
+![image-20211209022753608](./image-20211209022753608.png)
+
+## Nondeterministic algorithms
+
+![image-20211209022808803](./image-20211209022808803.png)
+
+## Nondeterministic and NP algorithms
+
+![image-20211209022821913](./image-20211209022821913.png)
+
+![image-20211209022836427](./image-20211209022836427.png)
+
+## Class of "NP" problems
+
+![image-20211209022913587](./image-20211209022913587.png)
+
+![image-20211209022932710](./image-20211209022932710.png)
+
+## Is P = NP?
+
+![image-20211209022959233](./image-20211209022959233.png)
+
+## Reductions
+
+![image-20211209023036923](./image-20211209023036923.png)
+
+## Polynomial reductions
+
+![image-20211209023052857](./image-20211209023052857.png)
+
+![image-20211209023101335](./image-20211209023101335.png)
+
+## NP-completeness
+
+![image-20211209023119201](./image-20211209023119201.png)
+
+![image-20211209023131816](./image-20211209023131816.png)
+
+## Providing NP-completeness in practice
+
+![image-20211209023211015](./image-20211209023211015.png)
+
+![image-20211209023219814](./image-20211209023219814.png)
+
+## P & NP-complete problems
+
+![image-20211209023254097](./image-20211209023254097.png)
+
+![image-20211209023301368](./image-20211209023301368.png)
+
+## Satisfiability problem (SAT)
+
+![image-20211209023325167](./image-20211209023325167.png)
+
+## CNF satisfiability
+
+![image-20211209023337145](./image-20211209023337145.png)
+
+## 3-CNF satisfiability (3-SAT)
+
+![image-20211209023353343](./image-20211209023353343.png)
+
+![image-20211209023400463](./image-20211209023400463.png)
+
+## Clique![image-20211209023409704](./image-20211209023409704.png)
+
+### Clique verifier
+
+![image-20211209023425272](./image-20211209023425272.png)
+
+![image-20211209023432422](./image-20211209023432422.png)
+
+![image-20211209023440986](./image-20211209023440986.png)
+
+## Classes of problems
+
+![image-20211209023501263](./image-20211209023501263.png)
