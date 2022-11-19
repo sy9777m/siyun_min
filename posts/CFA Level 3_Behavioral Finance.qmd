@@ -1,0 +1,583 @@
+---
+title: "CFA Level 3 Behavioral Finance"
+author: "Siyun Min"
+date: "2022-08-31"
+categories: [CFA]
+---
+# Behavioral Finance
+
+## Exam Focus
+
+Expect exam questions that present situations where you must identify which bias or biases are displayed. → justify your answer
+
+<Prospective Theory> → the origin of the Behavioral Finance
+
+## Cognitive errors vs. Emotional biases
+
+- 사람의 2 types of biases
+- remedy: training or accommodation
+
+Traditional finance focuses on how individual should behave. It assumes people are **rational, risk-averse, and selfish utility maximizers** who act in their own self-interests without regard to social values. Such individuals will act as **rational economic men (REM)**, which will led to efficient markets where prices accurately reflect all available, relevant information. Traditional finance is concerned with normative analysis and determining the rational solution to a problem. It uses prescriptive analysis to look for practical tools and methods to find those rational solutions.
+
+Behavioral finance is descriptive, which focuses on describing how individuals actually behave and make decisions. Behavioral finance recognizes that the way information is presented can affect decision-making, leading to both emotional and cognitive biases.
+
+This revealed many of the systematic biases in human decision-making.
+
+the way of information presented = framing
+
+Behavioral finance looks at normal behavior of **individual market participants (Behavioral Finance Micro**) and **the effect of such behavior on markets (Behavioral Finance Macro)**. A better understanding of the biases of clients (and of the professionals who work with those clients) should allow for the construction of portfolios that better approximate the efficiency of traditional finance and with which **clients are better able to adhere to with during adverse conditions.**
+
+# LOS 1.a: Compare and contrast cognitive errors and emotional biases.
+
+Rather than following the processes and steps of a rational economic man (REM), individuals use **shortcuts, rules of thumb, and intuition (known as heuristics) to arrive at decisions quickly.** Additionally, **emotions and social influences affect decision-making.** Cognitive limitations and emotional responses introduce bias into the decision-making process, leading to irrational behaviors and decisions. Behavioral finance assets that biases are not simply errors, which are **random, but are systematic and therefore predictable.**
+
+**Cognitive errors** are due primarily to faulty reasoning and could arise from a lock of understanding proper statistical analysis techniques, information processing mistakes, faulty reasoning, or memory errors. **Such errors can often be minimized or mitigated with better training or information.**
+
+cognitive errors는 잘못된 추론으로 인해 발생
+
+**Emotional biases** are not related to conscious thought and stem from feelings or impulses or intuition. As such they are more **difficult to overcome and may have to be accommodated.** When trying to overcome or mitigate biases that are both emotional and cognitive, success is more likely by focusing on the cognitive issues. (client’s biases)
+
+You should **always** look at the combination of facts and information presented in any question to **see if** the bias in a particular situation is arising more from cognitive or emotional thinking **before determining** if it is likely it can be mitigated or if it must be accommodated.
+
+# LOS 1.b: Discuss commonly recognized behavioral biases and their implications for financial decision making.
+
+# LOS 1.c: Identify and evaluate an individual’s behavioral biases.
+
+## Cognitive errors
+
+Cognitive errors can be divided into 5 “belief perseverance” biases that reflect a desire to stick with a previous decision and 4 “processing errors” where the information analysis process is flawed.
+
+- 과거에 집착 (belief perseverance) - 5개
+- 체계적 오류 (processing errors) - 4개
+
+## Cognitive errors: belief perseverance
+
+### Conservation bias
+
+**Conservation bias** occurs when market participants **rationally form an initial view but then fail to change that view as new information becomes available.** Individuals may react slowly to new data or ignore information that is complex to process.
+
+Consequences and implications of conservatism may include market participants who:
+
+- are unwilling or slow to update a view or forecast for new information, and therefore **hold an investment too long.**
+- portfolio를 바꾸지 않음
+- hold an investment too long to avoid the mental effort or stress of updating a view, when the new information is complex to understand.
+
+The more difficult the thought process or complex the information is, the greater the effort there is correctly updating prior beliefs. This effort is known as **cognitive cost**. The greater the cognitive cost associated with a new source of information, the less likely it is to be correctly processed.
+
+### Confirmation bias
+
+**Confirmation bias** occurs when market participants **look for new information or distort new information to support an existing view.** Psychologists refer to the discomfort individuals feel when presented with information that is contrary to their beliefs as cognitive dissonance. (인지부조화) Subconsciously, human nature rejects this information to avoid the discomfort.
+
+cognitive dissonance를 벗어나고자 하는 systematic effort
+
+Consequences and implications of confirmation may include market participants who:
+
+- consider positive but ignore negative information and therefore hold 1. **investments too long.**
+- set up the decision process or data screens incorrectly to find what they want to see.
+- Underdiversify as they become overly convinced their ideas are correct, 2. **resulting in concentrated positions. (underdiversify)**
+- **3. Over concentrated in the stock of their employer (treasury stock)** believing they have an information advantage in to that security.
+- 4. excessive turnover
+
+### Representativeness bias
+
+**Representativeness bias** occurs when the similarity of objects or events confuses individuals’ assessments regarding the probability of an outcome. **Representativeness** is based on a belief **the past will persist and new information is classified based on past experience or classification.**
+
+대표성의 오류 = classification error (분류의 문제)
+
+→ systematic error → classify하고 나중에 가서 error를 인지하게 됨
+
+소수의 법칙 - sample이 population을 대변하게 되는 현상, but sample is too small.
+
+two forms of representativeness include:
+
+- **base rate neglect**, where the base rate (probability) of the initial classification is not adequately considered.
+- 처음부터 classification criteria가 잘못됨
+- **sample-size neglect** makes the initial classification based on an overly small and potentially unrealistic sample of data.
+
+For example, a fund manager may show strong performance over a three-year time horizon. This may lead investors to assume this manager has superior skill. However, over a short time horizon, results may have arisen from luck rather than skill.
+
+Consequences and implications of representativeness may include market participants who:
+
+- attach too much importance to new pieces of information, or to a small sample. The impacts of such behavior can be **excessive turnover** based on short-term performance. The result can be excessive transaction fees and subsequent underperformance of the asset or fund that participants have switched to.
+- Make decisions based on simple rules of thumb and classification without thorough and more difficult analysis, which incur a high cognitive cost.
+
+Representativeness detection starts with a better understanding of the laws of probability and statistical analysis. By thinking in terms of probabilities, it is more likely risk will be considered and sufficient diversification will occur.
+
+Long-term asset allocation should be implemented to create a diversified portfolio. A long-run perspective should be taken to avoid chasing short-term performance and excessive trading.
+
+The following questions should avoid short-termism and ensure appropriate investments:
+
+- How does the performance compare to similar portfolios (rather than to the general market alone)?
+- Have there been changes in the managers of the portfolio?
+- What is the general reputation of the manager?
+- Has the portfolio or manager changed style or investment approach due to changing conditions?
+
+### Illusion of control bias
+
+**Illusion of control bias** exists when **market participants think they can control or affects outcomes when they cannot.** It is often associated with emotional biases: illusion of knowledge (belief you know things you do not know), self-attribution (Belief you personally caused something to happened), and overconfidence biases (an unwarranted belief you are correct).
+
+self-attribution, 자기기인오류
+
+- 내로남불, 잘 된 건 내 탓, 안 된 건 남 탓
+
+consequences and implications of illusion of control may include market participants who:
+
+- trade more than is appropriate as they mistakenly believe they can control the outcome of a trade or are overconfident in their analysis.
+- excessive turnover
+- fail to adequately diversify because they analyze a narrow range of investments and fail to consider other investments and asset types.
+
+### Hindsight bias
+
+**Hindsight bias** is a **selective memory of past events, actions, or what was knowable in the past, resulting in an individual’s tendency to see things as more predictable than they really are.** Participants tend to remember their correct views and forget the errors. (systematic) They also overestimate what could have been known. **Hindsight bias is sometimes referred to as the I-know-it-all-along phenomenon.**
+
+후견지명, “내 그럴 줄 알았어”
+
+Consequences and implications of hindsight may include market participants who:
+
+- overestimate the rate at which they correctly predicted events which could reinforce an emotional overconfidence bias.
+- **Become overly critical of the performance of others.**
+
+## Cognitive errors: information-processing biases
+
+### Anchoring and adjustment bias
+
+**Anchoring and adjustment bias** occurs when market participants use psychological heuristic experience based trial and error rules to unduly affect probabilities. **Changes are made but in relation to the initial view and therefore the changes are inadequate.** This makes it closely related to conservatism and a reluctance to change as new information is received.
+
+수정 기준점이 문제가 됨
+
+conservatism은 adjustment하지 않음, 그러나 anchoring bias는 adjustment를 하는데 잘못하는 것
+
+Consequences and implications of anchoring and adjustment may include market participants who stay anchoring to an initial estimate and do not adequately adjust for new information.
+
+### Mental accounting bias
+
+**Mental accounting bias** arises when **money is treated differently depending on how it is categorized**. For example a client might mentally treat wages differently from a bonus when determining saving and investment goals. Each mental account has its own budget and reference point and is viewed in isolation, rather than in the context of the individual’s entire budget. This behavior violates the traditional finances assumption that money is fungible and therefore interchangeable between accounts, and that investments are considered in the context of the entire portfolio.
+
+Consequences and implications of mental accounting may include market participants:
+
+- Structuring portfolios in layers to meet different priority goals. This may **help** clients overcome other biases. But it ignores correlation between layers of the portfolio and results can be suboptimal from a traditional perspective.
+- layering = pyramiding = goal-based investing (GBI)각 layer마다 correlation 무시, goal 중심유일하게 positive effect가 있는 bias
+- Failing to lower portfolio risk by adding assets with very low correlation.
+- Segregating return into arbitrary categories of income, realized gains and losses, or unrealized gains and losses. People tend to illogically distinguish between returns from income and capital gains. The tendency is to conserve capital gains but spend income. The result tends to be an overemphasis on income generating assets, resulting in a lower total return.
+- 나이가 들수록 income-generating portfolio 선호income의 source를 구분하는 현상을 보임
+
+Mental accounting could be detected by examining what the portfolio could have achieved if the entire client assets were examined as one portfolio considering the effects of correlation among all parts of the portfolio. An excessive focus on source of return could be detected by analyzing the maximum total return consistent with the investor’s risk objective and constraints.
+
+traditional finance - total return accounting
+
+mental accounting - income source based
+
+### Framing bias
+
+**Framing bias** occurs **when decisions are affected by the way in which the question or data is “framed.”**
+
+Consequences and implications of framing bias may include market participants who:
+
+- fail to properly assess risk and end up overly risk-averse or risk-seeking
+- Choose suboptimal risk for their portfolio or assets based on the way presentation is made.
+- Become overly concerned with short term price movement and trade too often.
+
+### Availability bias
+
+**Availability bias** starts with putting **undue emphasis on the information that is readily available.** Availability bias occurs when individuals judge the probability of an event occurring by the ease with which examples and instances come easily to mind. Ease of recall suggests that if something is easily recalled in memory, it must occur with a higher probability.
+
+Availability bias can be further broken down into the following overlapping causes:
+
+- Retrievability - If an idea or answer can be thought of quicker than others can, it is often chosen as correct, even if it is not.
+- Categorization
+- Narrow range of experience
+- Resonance (공명) - 내가 좋아하니 남도 좋아할 것
+
+Consequences and implications of availability may include market participants who:
+
+- Choose a manager or investment based on advertising or recalling they have heard the name.
+- Limit investment choices to what they are familiar with and fail to consider alternative investments, resulting in:
+- under-diversification inappropriate asset allocation
+- Overreact to recent market conditions while ignoring data on historic performance
+- Place too much emphasis on events that receive a large amount of media attention or advertising.
+
+Problems created by availability include overreacting and trading too much based on recent and easily available news or relying on available information or opinions that are of low quality and relevance. → Herding behavior, 뇌동매매
+
+## Emotional biases
+
+### Loss-aversion bias
+
+**Loss-aversion bias** arises from **feeling more pain from a loss than pleasure from an equal gain.**
+
+The conclusion is that individuals display asymmetrical responses to gains and losses. Kahneman and Tversky found that humans look at decisions as gains or losses relative to a reference rate. Anything below the reference rate is seen a loss, and above the reference rate a gain. → framing bias와 combined
+
+1. reference point의 중요성 → framing bias에 노출
+2. diminishing sensitivity
+3. loss aversion (asymmetric response)
+
+Be sure to understand the difference between risk aversion and loss aversion. As a result, the individual is more likely to take risk in the hope of avoiding losses.
+
+Consequences and implications of loss-aversion may include:
+
+- To avoid having the pain of loss, an investment holder will **tend to hold onto losers too long but may sell winners too quickly**. This tendency is called the **disposition effect.**
+- Trading too much by selling for small gains which raises transaction costs and lowers returns.
+- Incurring too much risk by continuing to hold assets that have deteriorated in quality and lost value.
+- If an initial decline in value occurs, then taking excessive risk in the hope of recovering.
+- Treating money that is made on a trade differently than other funds and taking excess risk with such money. (house money effect)
+- 도박으로 딴 돈은 쉽게 쓴다.mental accounting bias
+
+Myopic loss aversion (MLA) combines loss aversion, mental accounting, and time horizon-based framing. Investors Benartzi and Thaler use MLA to explain the **equity premium puzzle.**
+
+- equity premium puzzle - 주식의 risk premium이 이론 값보다 더 높은 현상
+- MLA - 단기손실회피 (myopic: 근시안적인)
+
+MLA argues that investors are loss averse and evaluate their portfolios too frequently. In the short term, losses are experienced more frequently than when examining performance over a longer time horizon. This short-term focus results in over reaction to short-term losses. The over-focus on short-term losses means that investors require high return potential on equities to justify investing in equity, and explains the equity premium.
+
+### Overconfidence bias
+
+**Overconfidence bias** occurs when **market participants overestimate their own intuitive ability or reasoning.** It can show up as **illusion of knowledge** where they think they do a better job of predicting than they actually do. Combined with **self-attribution bias,** individuals will take personal credit when things go right (**self-enhancing**) but blame others or circumstances for failure (**self-protecting**). While it is both cognitive and emotional, it is more emotional in nature because it is difficult for most individuals to correct and is rooted in the desire to feel good.
+
+Overconfidence arising from an illusion of knowledge is based a general feeling that the individual will be right. **Prediction overconfidence** leads individuals to underestimate uncertainty and standard deviation of their predictions while **certainly overconfidence** occurs when they overstate the probability they will be right. Consequences and implications of overconfidence may include:
+
+- Underestimate risk and overestimate return
+- Under-diversification
+- Excessive turnover and transaction costs resulting in lower return
+
+### Self-control bias
+
+**Self-control bias** occurs when **individuals lack self-discipline and favor immediate gratification over long-term goals.** The tendency for individuals to favor small payoffs now compared to larger payoffs in the future is known as hyperbolic discounting. (쌍곡할인)
+
+- illusion of control bias - control 할 수 있다고 착각
+- long-term saving과 short-term consumption을 스스로 control 할 수 있다고 착각
+
+Consequences and implications of self-control may include:
+
+- Insufficient savings accumulation to fund retirement needs, resulting from favoring current spending over saving.
+- Taking excessive risk in the portfolio to try and compensate for insufficient savings accommodation.
+- An overemphasis on income producing assets to meet shorter-term income needs.
+
+### Status quo bias
+
+Status quo bias occurs when comfort with the existing situation leads to an unwillingness to make changes. Status quo bias is caused by the interaction of loss aversion bias, endowment bias, and regret aversion bias.
+
+- 결과적인 bias, 원인 bias에 의한 현상
+- Do nothing, 현상유지오류
+
+Consequences and implications of status quo may include:
+
+- holding portfolio with inappropriate risk
+- Not considering other, potentially better investment options
+
+Status quo is very hard to overcome so education regarding reasonable risk/return combinations and the danger of overconcentration in an (employer’s) stock is essential. (관성이 있기 때문)
+
+### Endowment bias
+
+**Endowment bias** occurs when an asset is felt to be special and more valuable simply because it is already owned. (소유효과)
+
+Consequences and implications of endowment may include:
+
+- Failing to sell an inappropriate asset resulting in inappropriate asset allocation.
+- Holding things you are familiar with because they provide some intangible sense of comfort.
+
+Endowment is common with inherited assets and might be detected or mitigated.
+
+예) 부모님 회사 주식이라 팔지않고 계속 보유
+
+### Regret-aversion bias
+
+**Regret-aversion bias** occurs when market participants **do nothing out of excess fear that their actions could be wrong.** Their sense of regret and pain is stronger for acts of commission, often resulting in inaction.
+
+Consequences and implications of regret-aversion may include:
+
+- Excess conservatism in the portfolio because it is easy to see that riskier assets do at times underperform. Therefore, do not buy riskier assets and you own’t experience regret when they decline.
+- **Herding behavior** is a form of regret-aversion where participants go with the consensus or popular opinion. essentially the participants tell themselves they are not to blame if others are wrong too.
+- 후회의 강도를 minimize하는 decision을 내림
+- minimize Max(regret of doing something, regret of doing nothing)
+
+## Further implications of biases on investment policy and asset allocation
+
+Investment practitioners who understand behavioral biases have a better chance of constructing and managing portfolios than benefit normal clients. By first acknowledging and then accommodating or modifying biases, more optimal results are likely.
+
+- What are the biases of the client?
+- Are they primarily emotional or cognitive?
+- How do they effect portfolio asset allocation?
+- Should the biases be moderated or adapted to?
+
+# LOS 2.a: Explain the uses and limitations of classifying investors into personality types.
+
+## Classifying investors
+
+traditional finance에는 없는 개념
+
+- because investors in traditional finance are 1) rational, 2) risk-aversion, and 3) utility maximizer.
+
+The traditional finance perspective seeks to educate clients based on more quantitative measures of investing, such as standard deviation and Sharpe ratios, and these are of little interest to the client who reacts more emotionally to investing. The goal of viewing the client/adviser relationship from a psychological perspective as compared to a purely traditional finance is for the adviser to better understand his client and to make better investment decisions. By incorporating behavioral biases into clients’ IPS, clients’ portfolios will tend to be closer to the efficient frontier, and clients will be more trusting and **satisfied** and tend to stay on track with their long-term strategic plans.
+
+satisfying rather than optimal
+
+traditional finance와 behavioral finance는 대척점에 있는 concept이 아니다.
+
+1. long-term
+2. asset allocation이 가능한 portfolio가 좋다, but traditional finance는 optimal solution을 제시하지만 모든 client가 이에 만족하지 않음. 그래서 behavioral finance는 behaviorally modified portfolio를 제시
+
+## Behavioral models
+
+behavioral finance 관점에서 investor classification.
+
+1. The Barnewall two-way model
+2. The Bailard, Biehl, and Kaiser five-way model
+3. The Pompian model
+
+### Barnewall two-way behavioral model
+
+**The Barnewall two-way behavioral model** classifies investors into only two types: passive and active. **Passive investors** are those who have not had to risk their own capital to gain wealth. **Active investors** risk their own capital to gain wealth and usually take an active role in investing their own money.
+
+### Bailard, Biehl, and Kaiser (BB&K) five-way model
+
+The Bailard, Biehl, and Kaiser (BB&K) five-way model classifies investors along two dimensions according to how they approach life in general.
+
+1. adventurer
+    1. confident and impetuous might hold highly concentrated portfolios willing to take chances likes to make own decisions unwilling to take advice advisers find them difficult to work with
+2. celebrity
+    1. anxious and impetuous likes to be the center of attention might have opinions but recognizes limitations seeks and takes advice about investing
+3. individualist
+    1. confident and careful independent and confident likes to make own decisions after careful analysis good to work with because they listen and process information rationally
+4. guardian
+    1. anxious and careful cautious and concerned about the future concerned with the future and protecting assets may seek the advice of someone they perceive as more knowledgeable than themselves
+5. straight arrow
+    1. average investor sensible and secure neither overly confident nor anxious neither overly careful nor impetuous willing to take increased risk for increased expected return
+- y axis - level of confidence in decision making
+- x axis - approach to decision making
+
+individualist, guardian은 consulting, education이 잘 들어감
+
+### Pompian behavioral model
+
+The Pompian behavioral model identifies four behavioral investor types (BITs).
+
+passive investor
+
+- Passive Preserver (PP) - endowment, loss aversion, status quo, regret aversion
+- Friendly Follower (FF) - regret aversion
+
+active investor
+
+- Independent Individualist (II) - overconfidence, self-attribution
+- Active Accumulator (AA) - overconfidence, self-control
+
+## Behavioral Investor Types (BITs)
+
+Pompian model 기반
+
+## Limitations on classifying investors into behavioral types
+
+Many times, individuals act irrationally at unpredictable moments, making it difficult to apply the different behavioral investor traits consistently for any one investor over a period of time.
+
+사람들이 inconsistent한 모습을 보여줌
+
+- Many individuals may simultaneously display both emotional biases and cognitive errors.
+- An individual might display traits of more than one behavioral investor type, making it difficult to place the individual into a single category.
+- As investors age, they will most likely go through behavioral changes, usually resulting in decreased risk tolerance along with becoming more emotional about their investing.
+
+# LOS 2.b: Discuss how behavioral factors affect adviser-client interactions.
+
+## Implications: clients and their portfolios
+
+The goal of the client/adviser relationship is constructing a portfolio that the client is comfortable with and will be happy staying in over the long term. (satisfying portfolio)
+
+The success of the typical client/adviser relationship can be measured in four areas, and each one is enhanced by incorporating behavioral finance traits:
+
+1. The adviser understands the long-term financial goals of the clients.
+2. The adviser maintains a consistent approach with the client.
+3. The adviser acts as the client expects. The adviser have to satisfy client’s expectations.
+4. Both client and adviser benefit from the relationship.
+
+## Risk tolerance questionnaires
+
+Unfortunately, the same individuals can give different answers to the same set of questions depending on their frame of mind or current circumstances. (framing bias)
+
+First, since as individuals responses are affected by the wording of questions (framing), the same questions can produce different results if the structure of the questions is changed only slightly.
+
+Advisers also may interpret what the client says too literally, when client statements should only act as indicators. The successful adviser is able to determine the client’s intent. As a consequence, risk tolerance questionnaires are probably better suited to institutional investors.
+
+# LOS 2.c: Discuss how behavioral factors influence portfolio construction.
+
+## Behavioral factors and portfolio construction
+
+about individual investors
+
+Research on defined contribution and 401k retirement plans in the U.S. indicates ways behavioral finance influences portfolio construction and how the insight gained might be applied in portfolio construction to achieve results more consistent with traditional finance theory.
+
+**Status quo bias** as investors do not make changes to their portfolio even when transaction costs are zero.
+
+To counteract this inertia bias, some companies have autopilot options such as target date funds.
+
+- inertia - 현상유지
+
+**Naive diversification** is when investors equally divide their funds among whatever group of funds is offered.
+
+- 1 / n diversification
+- regret bias로 인한 현상
+
+In either case some argue this is motivated by seeking to avoid regret.
+
+**Excessive concentration** in employer stock is also evident. This could be based on **familiarity and overconfidence.** If past performance has been good and you are familiar with it that would be **naive extrapolation of past results**. Framing and status quo biases can be found in pension funds where the employer matches employee contributions into the plan. **Loyalty effect** is imply a desire to hold employer stock as a sign of loyalty to the company.
+
+**Excessive trading** of holdings is evident in the brokerage account holdings of individuals, even though individuals show status quo in retirement funds. This could be due to **overconfidence** as the individuals think they have superior stock selection skills or **self-selection** as trading-oriented investors put their money in brokerage accounts and others put money in retirement portfolio at their company. Investors also show a **disposition effect** in selling stocks that appreciated but holding on to stocks that depreciate.
+
+- disposition effect - 처분효과, 이익 난 건 빨리 팔고, 손해 난 건 물타기
+
+**Home bias** is seen in under diversification and failing to invest outside the investor’s home country.
+
+# LOS 2.d: Explain how behavioral finance can be applied to the process of portfolio construction.
+
+## Behavioral portfolio theory (BPT)
+
+pyramiding portfolio
+
+Behavioral portfolio theory (BPT) assumes that investors construct their portfolios in layers, with each layer reflecting different risk and return expectations. The investor’s goals are then used to determine the allocation to each layer.
+
+Five-Factor process:
+
+1. Investor goals and the importance of each goal determine the allocation to each layer.
+2. Asset selection will be done by layer and based on the goal for that layer.
+3. The number of assets **in a layer** will reflect the investor’s risk aversion. Risk-averse investors will hold larger numbers of assets in each layer.
+4. If an investor believes she holds an information advantage (has information others do not have), more concentrated positions will be held.
+5. information ratio, benchmark와 다른 portfolio 평가지표 → information quality 평가
+6. If an investor is loss averse, the investor will hold larger cash positions to avoid the possible need to sell assets at a loss to met liquidity needs.
+
+BPT investors maximize wealth, but with a constraints that wealth must have a low probability of failing to meet an arbitrary aspirational level.
+
+- 희망수준 이하로 떨어지지 않게 portfolio 구축
+
+This is also referred to as **mental accounting** because the assets in each layer of the pyramid are viewed separately from each other with no regard to how they are correlated.
+
+- disadvantage
+
+By utilizing the mental accounting of layers to meet goals, the client can better understand the construction portfolio.
+
+- advantage
+
+In the pyramid structure, the most pressing goals are placed on the bottom layer and are met using low-risk, conservative investments. Each successive layer going toward the top of the pyramid is made of riskier assets to accomplish less immediate or less important goals.
+
+# LOS 2.e: Discuss how behavioral factors affect analyst forecasts and recommend remedial actions for analyst biases.
+
+## Implications: other
+
+about analyst
+
+## Analyst forecasts and overconfidence
+
+cognitive and emotional bias
+
+There are several behavioral biases that contribute to overconfidence.
+
+Analysts are subject to the **illusion of knowledge bias** when they think they are smarter than they are. The illusion of knowledge is fueled when analysts collect a large amount of data. Gathering additional information could add to an analyst’s overconfidence without necessarily making the forecast more accurate. The **illusion of control bias** can lead analysts to feel they have all available data and have reduced or eliminated all risk in the forecasting model; hence, the link to overconfidence.
+
+- 모르는데 안다고 착각
+
+Complex financial models can increase overconfidence and the illusion of control. Analysts should avoid **reliance on a particular historic data set (representativeness)** to avoid models that optimize the data set but perform poorly out of sample. A models’ performance out of sample is referred to as its robustness.
+
+Exhibiting **representativeness**, an analyst judges the probability of a forecast being correct on how well the available data represent the outcome. (소수의 법칙)
+
+An analyst exhibits the **availability bias** when he gives undue weight to more recent, readily recalled data.
+
+To subconsciously protect their overconfidence, analysts utilize eco defense mechanisms. One ego defense mechanism is the **self-attribution bias**. (내로남불, good은 내 탓, bad는 남 탓)
+
+**Hindsight bias** is another eco defense mechanism. (기억의 편집, ‘내 그럴 줄 알았어')
+
+There are several actions analysts can take to **minimize (mitigate) overconfidence in their forecasts**. 1) **Self-calibration** is the process of remembering their previous forecasts more accurately in relation to how close the forecast was to the actual outcome.
+
+- population estimation = calibration → 스스로 자기 검증
+
+Analysts should also consider 2) **sample size**. (sample size의 limitation을 이해)
+
+Lastly, Bayes’ formula is a useful tool for reducing behavioral biases when incorporating new information.
+
+Bayes’ theorem allows you to update predicted probabilities of an event by incorporating new information using the following formula:
+
+## Influence by company management
+
+analyst가 주의해야 할 bias
+
+**Framing** refers to a person’s inclination to interpret the same information differently depending on how it presented. In the case of company information, analysts should be aware that a typical management report present accomplishments first.
+
+**Anchoring and adjustment** refers to being “anchored” to a previous data point.
+
+**Availability** refers to the ease with which information is attained or recalled.
+
+Analysts should also look for **self-attribution bias** in management reports that is a direct result of the structures of management compensation packages.
+
+To help avoid the undue influence in management reports, analysts should **focus on quantitative data that is verifiable and comparable** rather than on subjective information provided by management.
+
+## Analyst biases in research
+
+data-related bias
+
+The **confirmation bias** (related to confirming evidence) relates to the tendency to view new information as confirmation of an original forecast. (확증편향)
+
+The **gambler’s fallacy**, in investing terms, is thinking that there will be a reversal to the long-term mean more frequently than actually happens. (도박꾼의 오류)
+
+- 동전 던지기에서 10연속 앞면이 나오면, 다음엔 뒷면이 나올 확률이 높다고 생각하는 오류
+- mean reversion
+
+The **hot hand fallacy** may lead individuals to incorrectly predict the continuation of a recent trend. A **representative bias** is one in which the analyst inaccurately extrapolate past data into the future. (뜨거운 손 오류)
+
+- 골을 계속 넣은 선수가 계속 골을 넣을 것이라 예측하는 오류
+- momentum
+
+There are many actions an analyst can take to prevent bias in research, some of which are the same as when they are interpreting management reports. For example, analysts should be aware of the possibility of **anchoring and adjustment** when they recalibrate forecasts given new information.
+
+# LOS 2.f: Discuss how behavioral factors affect investment committee decision making and recommend techniques for mitigating their effects.
+
+## Investment committees
+
+**Social proof bias** is when a person follows the beliefs of a group.
+
+- 사회적 존재의 가치를 단에서 증명해야 하기 때문에 발생하는 bias
+
+Committees are typically formed with people with similar backgrounds, who therefore approach problems in the same manner. In a group setting, individuals may feel uncomfortable expressing their opinion if it differs with others or a powerful member of the group. Alternatively, sometimes the group members (without proper consideration and evaluation) can support a dominant member’s views or opinions.
+
+- individuals with diverse backgrounds and cultures. Diversity of culture, experience, and skills promotes discussion of different perspectives and contrary views.
+- Members who are not afraid to express their opinions even if they differ from others’ view.
+- A committee chair who encourages members to speak out even if the member’s views are contrary to the group’s views.
+- A mutual respect for all members of the group.
+- Collecting individuals’ views before a discussion can ensure a wider range of opinions are considered, particularly if individuals feel inhibited from expressing their views in group discussion.
+
+# LOS 2.g: Describe how behavioral biases of investors can lead to market characteristics that may not be explained by traditional finance.
+
+## Behavioral finance and market behavior
+
+macro behavioral finance
+
+In an efficient market, one **should not be able to consistently generate excess returns (초과수익은 benchmark가 있어야 함)** using any form of information. Once information is known to investors, it should be instantaneously and fully incorporated into prices. But this does not mean that all apparent pricing exceptions to the efficient market hypothesis are anomalies.
+
+- An excess return before fees and expenses that disappears after properly reflecting all costs required to exploit it is not an anomaly.
+- Some apparent anomalies are simply a reflection of an inadequate pricing model. If another model with an additional risk factor removes the excess return, it may not be an anomaly.
+- Apparent anomalies may be explained by small sample sizes or sample selection bias.
+
+not anomalies, just exceptions
+
+- An anomaly may exist for only the short-run and disappear once it becomes known and exploited. This effect is known as temporary disequilibrium behavior.
+- Some apparent anomalies are a rational reflection of relevant economic factors that are not incorporated into the chosen pricing model. For example, year-end trading anomalies may just reflect rational behavior to reduce taxes.
+
+Jensen’s alpha가 존재한다는 것은 inefficient market based on CAPM이라는 뜻
+
+## Momentum effect
+
+autocorrelation, time series correlation
+
+All forms of the EMH assert technical-price-based trading rules should not add value. A pattern of returns that is correlated with the recent past would be classified as a **momentum effect.**
+
+- weak form EMH의 minimum assumption → technical analysis trading으로 excessive return을 수취 할 수 없다
+
+Herding is when investors trade in the same direction or in the same securities, and possibly even trade contrary to the information they have available to then. Two behavioral biases associated with herding are the **availability bias** (a.k.a. the **recency bias** or **recency effect**) and **fear of regret.**
+
+Regret can lead investors to buy investments they wish they had purchased, which in turn fuels a **trend-chasing effect**. The **disposition effect**, which incorporates loss aversion, stems from overconfidence in mean reversion, resulting in selling winners too early and holding onto losers for too long.
+
+## Financial bubbles and crashes
+
+## Value vs. Growth
+
+Value stocks have low price-to-earnings ratios, high book-to-market values, and low price-to-dividend ratios, with growth stocks having the opposite characteristics.
+
+Other studies have offered **behavioral explanations, identifying the value and growth anomalies as a mispricing** rather than an adjustment for risk. For example, in the **halo effect**, the investor transfers favorable company attributes into thinking that the stock is a good buy. This is a form of representativeness in which investors extrapolate past performance into future expected returns, leading growth stocks to become overvalued.
+
+- Behavioral finance는 mispricing을 anomaly의 원인으로 봄
+
+The **home bias** anomaly is one where investors favor investing in their domestic country as compared to foreign countries.
