@@ -3,20 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "siyun_min"
+  title: "Siyun Min"
   navbar:
     right:
       - about.qmd
       - icon: github
         href: https://github.com/sy9777m
-      - icon: twitter
-        href: https://twitter.com
       - icon: linkedin
         href: https://www.linkedin.com/in/kevinmin77/
 format:
   html:
     theme: darkly
     css: styles.css
-
-
-
