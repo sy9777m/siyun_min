@@ -1,0 +1,238 @@
+---
+title: "Artificial Intelligence 16th"
+author: "Siyun Min"
+date: "2022-10-25"
+categories: [SSU]
+---
+# 16th
+
+# 시험범위
+
+온톨로지까지
+
+---
+
+# 온톨로지 (ontology)
+
+![Untitled](./Untitled.png)
+
+철학에서 존재론을 가리키는 말
+
+어떤 영역의 지식을 공유하고 재사용할 수 있도록 해당 영역의 개념과 관계를 나타내는 어휘를 정의하고 이를 이용해 지식을 표현해 놓은 것
+
+영역(domain)에 있는 개념, 개념에 대한 특성 및 속성, 이들 특성과 속성에 대한 제약조건, 영역에 있는 일부 개체에 대한 정보가 기술
+
+영역에 대한 공통된 어휘(vocabulary) 사용
+
+영역에 대한 공통된 이해 지원
+
+서로 간 토의를 통해 합의를 이룬 것을 표현
+
+컴퓨터에서 다룰 수 있는 형태로 정형화하여 표현
+
+## 온톨로지의 사례
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+## 온톨로지의 지식표현
+
+의미망과 비슷하게 방향성이 있는 그래프로 표현 가능
+
+### RDF (Resource Description Framework)
+
+자원에 대한 메타데이터 (metadata, 데이터에 대한 데이터)를 기술하는 명세 (specification)
+
+특정 대상을 기술하는 간단한 문장 (sentence)
+
+- 주어 (subject) + 서술어 (predicate) + 목적어 (object)로 파악
+- 자원 (대상, resource) - 속성 (특징, 주어와 목적어 관계, attribute) - 값 (value)로 분해
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+### RDFS (Resource Description Framework Schema, RDF schema)
+
+RDF를 사용하여 온톨로지를 표현할 때 사용할 관련 어휘 온톨로지를 정의하는 언어
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+### SPARQL
+
+RDF 형태로 저장된 데이터에 대한 질의어
+
+SQL 유사한 문법
+
+![Untitled](./Untitled%209.png)
+
+### RIF (Rule Interchange Format)
+
+규칙을 정의하고 교환하기 위한 규약
+
+![Untitled](./Untitled%2010.png)
+
+## OWL (Web Ontology Language)
+
+웹 상의 자원과 이들의 속성에 대한 지식을 표현하기 위한 온톨로지 언어
+
+![Untitled](./Untitled%2011.png)
+
+## 온톨로지의 활용
+
+### Semantic web (시맨틱 웹)
+
+웹의 데이터를 소프트웨어 에이전트가 이해하여 지능적으로 활용할 수 있도록 하는 것
+
+웹을 처음 설계한 Tim Bernes-Lee가 주창한 아이디어
+
+의미있는 tag를 정의하여 문서를 기술하기 위해 XML 사용
+
+태그 및 데이터의 의미 해석을 위해 RDF 사용
+
+온톨로지 구축을 통해 태그 및 메타데이터의 의미 해석
+
+## 의미망과 온톨로지
+
+그래프 구조를 이용한 지식 모델링
+
+### 의미망
+
+대상, 관계 등의 표현에 사용되는 용어가 임의적
+
+통일된 표현 관련 규정 부재
+
+### 온톨로지
+
+다른 시스템과 공유 상호운영성 (interoperability)를 위해 명확한 지침에 따라 표현
+
+구축된 정보 및 지식의 재사용에 관심
+
+## 온톨로지와 RDF
+
+### 온톨로지 구축도구
+
+- Protégé
+    - 지식 획득 및 표현을 위한 GUI 기반의 오픈 소스 온톨로지 편집기
+
+![Untitled](./Untitled%2012.png)
+
+# 함수에 의한 지식 표현
+
+## 기호 기반의 지식 표현
+
+기호를 사용하여 대상 표현
+
+대상 간의 관계 표현
+
+규칙, 프레임, 의미망, 논리 등
+
+## 함수 기반의 지식표현
+
+비기호적 지식표현
+
+- 기호대신 수치값과 수치값을 계산하는 함수를 사용하여 지식을 표현
+
+신경망과 딥러닝
+
+- perceptron - 함수식 계산 출력 생성
+- 다층 퍼셉트론
+
+Support Vector Machine
+
+Regression model 등
+
+# 불확실한 지식 표현
+
+![Untitled](./Untitled%2013.png)
+
+# 불확실성의 원인
+
+## 약한 관련성의 지식
+
+약한 인과성 (weak implication)이나 애매한 연관관계 (vague association)인 지식의 표현
+
+- IF (조건)와 THEN (취해야 할 행동) 사이의 연관성의 강도
+
+→ 확신도 (certainty degree) 사용 표현
+
+→ 베이즈 정리 (Bayesian theorem) 사용 표현
+
+## 부정확한 언어 사용
+
+자연어 (natural language)는 본질적으로 모호하고 (vague) 부정확 (imprecise)
+
+- 자주 (frequently), 크다 (big), 무겁다 (heavy)
+
+→ 퍼지이론 (fuzzy theory) 사용 표현
+
+## 불완전하거나 (incomplete) 결손된 (missing) 데이터에 기반한 지식
+
+알려지지 않은 것 (unknown)으로 간주하고 근사적인 추론 (approximate reasoning) 진행
+
+## 상충되는 지식의 통합
+
+모순된 견해 (contradictory opinion)와 상충된 지식 (conflicting knowledge)의 통합
+
+→ 지식 소스 별로 가중치 부여
+
+# 확신도 (certainty factor)
+
+규칙 (rule)과 사실 (fact)의 신뢰정도를 [-1, 1] 구간의 값으로 표현
+
+- 1: 단정적 신뢰, -1: 단정적 불신
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+# 확률기반 불확실성 표현
+
+## probability (확률)
+
+어떤 사건이 일어날 가능성
+
+### 상대빈도확률 (relative frequency probability)
+
+빈도주의자 확률 (frequentist probability)
+
+전체 실험 회수 대비 관심 사건의 상대적 빈도
+
+![Untitled](./Untitled%2019.png)
+
+### 주관적 확률 (subjective probability)
+
+확신 또는 믿음의 정도 (degree of belief)
+
+### joint probability (결합 확률)
+
+$P(A, B), P(A \cap B), P(AB)$사
+
+사건 A와 B가 동시에 일어날 확률
+
+![Untitled](./Untitled%2020.png)
+
+### Conditional probability (조건부 확률)
+
+$P(A|B)$
+
+B가 주어질 때 A가 일어날 확률
+
+$$
+P(A|B) = \frac{P(A \cap B)}{P(B)}, where~P(B) > 0
+$$
+
+![Untitled](./Untitled%2021.png)

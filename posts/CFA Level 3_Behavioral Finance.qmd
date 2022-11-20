@@ -10,7 +10,7 @@ categories: [CFA]
 
 Expect exam questions that present situations where you must identify which bias or biases are displayed. → justify your answer
 
-<Prospective Theory> → the origin of the Behavioral Finance
+Prospective Theory → the origin of the Behavioral Finance
 
 ## Cognitive errors vs. Emotional biases
 

@@ -1,0 +1,49 @@
+---
+title: "Artificial Intelligence 4th"
+author: "Siyun Min"
+date: "2022-09-13"
+categories: [SSU]
+---
+# 4th
+
+# 탐색과 최적화
+
+![Screen Shot 2022-09-13 at 12.10.27 PM.png](./Screen_Shot_2022-09-13_at_12.10.27_PM.png)
+
+![Screen Shot 2022-09-13 at 12.10.33 PM.png](./Screen_Shot_2022-09-13_at_12.10.33_PM.png)
+
+# 상태공간과 탐색
+
+![Screen Shot 2022-09-13 at 12.10.42 PM.png](./Screen_Shot_2022-09-13_at_12.10.42_PM.png)
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+# 맹목적 탐색
+
+graph가 완성되있지 않은 상태에서 탐색 (uninformed search) → 탐색하면서 graph를 완성해 감
+
+### 깊이 우선 탐색 (DFS)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+### 너비 우선 탐색 (BFS)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+### 반복적 깊이심화 탐색 (iterative-deepening search)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+### 양방향 탐색 (bidirectional search)
+
+![Untitled](./Untitled%209.png)

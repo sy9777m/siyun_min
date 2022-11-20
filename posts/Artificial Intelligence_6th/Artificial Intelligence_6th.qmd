@@ -1,0 +1,78 @@
+---
+title: "Artificial Intelligence 6th"
+author: "Siyun Min"
+date: "2022-09-20"
+categories: [SSU]
+---
+# 6th
+
+# 게임 트리 (game tree)
+
+상대가 있는 게임에서 자신과 상대방의 가능한 게임 상태를 나타낸 트리
+
+- tic-tac-toc, 바둑, 장기, 체스 등
+
+게임의 결과는 마지막에 결정
+
+많은 수 (lookahead)를 볼 수록 유리
+
+![Untitled](./Untitled.png)
+
+# $\alpha - \beta$ 가지치기 (prunning)
+
+검토해 볼 필요가 없는 부분을 탐색하지 않도록 하는 기법
+
+DFS로 제한 깊이까지 탐색을 하면서, max node와 min node value 결정
+
+![Untitled](./Untitled%201.png)
+
+## $\alpha$-자르기 (cut-off)
+
+min node의 현재 값이 부모 노드의 현재 값보다 작거나 같으면, 나머지 자식 노드 탐색 중지
+
+## $\beta$-자르기
+
+max node의 현재 값이 부모 노드의 현재 값보다 같거나 크면, 나머지 자식 노드 탐색 중지
+
+# Monte Carlo simulation
+
+특정 확률 분포로부터 무작위 표본 (random sample)을 생성하고, 이 표본에 따라 행동을 하는 과정을 반복하여 결과를 확인하고, 이러한 결과 확인 과정을 반복하여 최종 결정을 하는 것
+
+![Untitled](./Untitled%202.png)
+
+## Monte Carlo tree search (MCTS)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+탐색 공간 (search space)을 무작위 표본 추출 (random sampling)을 하면서 탐색트리를 확장하여 가장 좋아보이는 것을 선택하는 휴리스틱 탐색방법
+
+4개 단계를 반복하여 시간이 허용하는 동안 트리 확장 및 시뮬레이션
+
+1. selection (선택)
+2. expansion (확장)
+3. simulation (시뮬레이션) - Monte Carlo simulation
+4. back propagation (역전파)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)

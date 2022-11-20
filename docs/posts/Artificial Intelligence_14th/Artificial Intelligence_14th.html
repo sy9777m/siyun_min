@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-18">
+
+<title>Siyun Min - Artificial Intelligence 14th</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Artificial Intelligence 14th</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 18, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="th" class="level1">
+<h1>14th</h1>
+</section>
+<section id="의미망-semantic-network" class="level1">
+<h1>의미망 (semantic network)</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>지식을 이항관계 (binary relation)의 집합으로 표현</p>
+<p>노드와 방향성 간선으로 구성되는 그래프를 사용해 지식 표현</p>
+<ul>
+<li>노드 (node)
+<ul>
+<li>대상, 개념, 행위, 상태, 사건</li>
+</ul></li>
+<li>간선 (edge)
+<ul>
+<li>관계가 있는 노드를 연결</li>
+<li>관계에 따른 방향</li>
+<li>관계의 의미를 나타내는 라벨 부여</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="의미망에서-사용되는-관계-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="의미망에서-사용되는-관계-relationship">의미망에서 사용되는 관계 (relationship)</h2>
+<section id="is-a" class="level3">
+<h3 class="anchored" data-anchor-id="is-a">is-a</h3>
+<p>상위 클래스와 하위 클래스 관계 (ex. is-a(조류, 동물)) 또는 클래스와 객체의 관계 (ex. is-a(트위티, 종달새))를 나타내어 계층관계 표현</p>
+<p>사우이 계층의 속성을 상속</p>
+<p>추이적(transitive) 관계 만족</p>
+<p><span class="math display">\[
+is-a(X, Y) \land is-a(Y, Z) \to is-a(X, Z)
+\]</span></p>
+<p><span class="math display">\[
+is-a(펭귄, 조류) \land is-a(조류, 동물) \to is-a(펭귄,동물)
+\]</span></p>
+</section>
+<section id="has-a" class="level3">
+<h3 class="anchored" data-anchor-id="has-a">has-a</h3>
+<p>전체-부분 관계</p>
+<p>part-of와 역관계</p>
+<ul>
+<li>has-a(X, Y)이면 part-of(Y, X) 성립</li>
+</ul>
+<p>추이적 관계 만족</p>
+<p><span class="math display">\[
+has-a(X, Y) \land has-a(Y, Z) \to has-a(X, Z)
+\]</span></p>
+<p><span class="math display">\[
+part-of(X, Y) \land part-of(Y, Z) \to part-of(X, Z)
+\]</span></p>
+</section>
+</section>
+<section id="다항관계를-이항관계로-전개하여-표현한-의미망" class="level2">
+<h2 class="anchored" data-anchor-id="다항관계를-이항관계로-전개하여-표현한-의미망">다항관계를 이항관계로 전개하여 표현한 의미망</h2>
+<p>의미망은 이항관계만을 표현</p>
+<p>다항관계는 relationship을 object로 간주하여 표현 - 사물화 (reification)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망의-추론" class="level2">
+<h2 class="anchored" data-anchor-id="의미망의-추론">의미망의 추론</h2>
+<p>상속(inheritance)을 이용</p>
+<p>질문에 대한 의미망과 지식을 나타내는 의미망을 비교</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>디폴트값(default value, 기본값)을 이용한 추론</p>
+<p>상속관계 이용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>주어진 지식으로부터 새로운 사실을 이끌어내는 추론도 가능</p>
+<p>규칙의 의미망 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망과-프레임" class="level2">
+<h2 class="anchored" data-anchor-id="의미망과-프레임">의미망과 프레임</h2>
+<p>의미망의 프레임으로의 변환</p>
+<ul>
+<li>노드별로 프레임 생성</li>
+<li>노드에서 나가는 간선들을 slot으로 구성</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="장점" class="level2">
+<h2 class="anchored" data-anchor-id="장점">장점</h2>
+<p>지식을 시각적으로 표현할 수 있어 직관적 이해 용이</p>
+<p>노드 추가 또는 변경으로 비교적 쉽게 지식의 추가 및 변경 가능</p>
+<p>개념의 계층관계를 정의하여 속성의 상속관계 지정 가능</p>
+<p>복잡한 지식을 구조화하여 표현 가능</p>
+</section>
+<section id="단점" class="level2">
+<h2 class="anchored" data-anchor-id="단점">단점</h2>
+<p>지식의 양이 많아지면 관리 복잡</p>
+<p>개념이나 관계를 임의로 정의하기 때문에 통일성이 부족</p>
+<p>공유나 재사용에 대한 고려 없음</p>
+<p>논리적 결합 관계나 인과관계를 기술하려고 하면 and, or, implies와 같은 링크 도입 필요</p>
+<ul>
+<li>일관성을 떨어뜨리고 추론과정을 복잡하게 만듦</li>
+</ul>
+<p>기본적으로 정적인 지식의 표현</p>
+<ul>
+<li>추론 과정에서 동적으로 지식의 내용을 바꾸려면 그래프를 동적으로 바꿀 수 있도록 해야 함</li>
+</ul>
+</section>
+</section>
+<section id="스크립트-script" class="level1">
+<h1>스크립트 (script)</h1>
+<p>일반적으로 발생할 수 있는 전형적인 상황에 대한 절차적 지식을 일목요연하게 표현</p>
+<p>전형적인 상황에서 일어나는 일련의 사건(event)을 시간적 순서를 고려하여 기술하는 프레임과 같은 구조의 지식 표현</p>
+<section id="구성요소" class="level2">
+<h2 class="anchored" data-anchor-id="구성요소">구성요소</h2>
+<p>진입조건 (entry conditions) - 스크립트에 기술된 사건들이 일어나기 전에 만족되어야 하는 전제조건</p>
+<p>역할자 (roles) - 스크립트에 관련된 사람 및 대상</p>
+<p>자산 (properties) - 사건 진행 과정에서 사용되는 객체</p>
+<p>트랙 (track) - 어떤 스크립트에서 발생할 수 있는 일련의 사건들이 변형된 형태 식별자</p>
+<p>장면 (scenes) - 실제 일어나는 일련의 사건</p>
+<p>결과조건 (results) - 스크립트의 장면에 있는 사건들이 일어난 이후에 만족되는 조건</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

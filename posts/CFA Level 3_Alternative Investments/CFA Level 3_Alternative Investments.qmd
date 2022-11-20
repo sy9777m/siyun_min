@@ -1,0 +1,1236 @@
+---
+title: "CFA Level 3 Alternative Investments"
+author: "Siyun Min"
+date: "2022-08-31"
+categories: [CFA]
+---
+# Alternative Investments
+
+# LOS 19.a: Discuss how hedge fund strategies may be classified.
+
+## Overview of hedge fund strategies
+
+Key features that distinguish hedge funds from traditional investments include:
+
+- **lower regulatory** and legal constraints
+- flexibility to use **short selling and derivatives**
+- **a larger** investment universe
+- **aggressive** investment exposure
+- comparability free use of **leverage**
+- liquidity constraints for investors
+- lack of transparency
+- higher cost structures
+
+## Classifications of hedge fund strategies
+
+Hedge fund strategies are categorized based on the kinds of securities they invest in the trading strategy used, and the kinds of risk exposures taken.
+
+### Equity related
+
+These fund strategies focus on stocks, and hence the primary source of risk is equity risk.
+
+- long/short equity
+- dedicated short bias
+- equity market neutral
+
+### Event driven
+
+These hedge fund strategies relate to corporate actions such as governance activities, acquisitions, bankruptcies, and other major business events. The main risks of these strategies are **event risk**; the possibility that outcomes will not unfold as expected, including the failure of a merger, credit downgrades, or bankruptcy.
+
+- 내가 원하는 결과가 나오지 않았을 때 위험
+- M&A, distressed가 주 타겟
+- Merger arbitrage
+- Distressed securities
+
+### Relative value
+
+These hedge fund strategies seek to profit from the relative valuation differences between securities. Credit and liquidity risks often complicate these strategies, because the valuation differences being exploited often related to securities with different credit quality or liquidity.
+
+- Credit/liquidity risk → arbitrage
+
+Two relative value strategies:
+
+- fixed income arbitrage
+- convertible bond arbitrage
+
+### Opportunistic
+
+These strategies employ a top-down approach, often consider multiple asset classes, and vary with market conditions. The two opportunistic strategies that will be considered here are **global macro** and **managed futures.**
+
+- global macro
+- managed futures
+
+### Specialist
+
+These hedge fund strategies often require specialized market expertise or knowledge. Often the risks of these strategies arise due to exposure to specific sectors or unusual securities. The two such specialist strategies we will consider in this topic review are **volatility strategies** and **reinsurance strategies**.
+
+- volatility strategy
+- reinsurance strategy
+
+### Multi-manager
+
+These strategies use other hedge fund strategies as building blocks, combining different strategies together and rebalancing exposures over time. The two types of multi-manager hedge funds we will consider are **multi-strategy funds** and **funds-of-funds**.
+
+- multi-strategy funds
+- funds-of-funds
+
+# LOS 19.b: Discuss investment characteristics, strategy implementation, and role in a portfolio of equity-related hedge fund strategies.
+
+## Long/Short Equity
+
+Long/short (L/S) equity hedge funds are straightforward to understand. The fund manager purchase (takes long positions in) stocks that they think will rise in value, and sells (takes short position in) stocks that they believe will fall in value.
+
+### L/S manager’s traits
+
+1. strategic focus
+2. flexibility in holding L/S position overtime
+3. use of leverage
+4. small-cap and growth
+    1. positive exposure - size factor
+    2. negative exposure - value factor
+
+### The goal in L/S equity investing
+
+- find more source of idiosyncratic alpha
+- primarily via stock pricing, secondary by market timing rather than systematic beta
+
+### Deep-dive differentiated analysis needed for sector specific
+
+- telecommunication
+- financials
+- consumer
+- healthcare
+- biotech
+- 때때로 generalist L/S manager는 bio tech과 같은 급격한 sector는 피함
+
+### Investment characteristics
+
+When L/S equity managers combine long and short positions, the resulting L/S funds will typically have a 40%-60% net long exposure, which is beneficial considering that markets generally trend upward over time.
+
+Many L/S equity managers aspire to provide returns comparable to that of a long-only fund but with half the amount of standard deviation.
+
+### Strategy implementation
+
+Because successful implementation of an L/S equity strategy requires managers to identify overpriced and underpriced stocks, the majority of L/S equity funds take a **sector-specific focus**, choosing stocks from a particular industry that they are familiar with. They may also use index funds to achieve a desired exposure. L/S funds that are comparatively market neutral may need to use leverage to achieve worthwhile returns.
+
+### Role in a portfolio
+
+The goal of most L/S equity managers is to attempt to source alpha from long and short exposures to single stocks, while also benefitting from a moderate overall long exposure.
+
+When considering an investment is an L/S equity fund, one should consider whether the investment is worthwhile given the potentially high fees. Taking a traditional long-only equity position may be a more efficient way to achieve a comparable beta exposure.
+
+## Dedicated short selling and short-biased
+
+As the name suggested, **dedicated short-selling** funds seek out securities that are overpriced in order to sell them short. These managers look for poorly managed companies, firms in declining market segments, or even firms with deceitful accounting. **Short-biased** managers use a similar strategy, except that the short position is somewhat offset by a long exposure.
+
+A notable subset of short selling is **activist short selling**, in which the fund manager not only takes a short position in a stock, but also presents research that contends that the stock is overpriced.
+
+### 주가 빠질 회사 찾는 법
+
+1. inherently flawed business model
+2. unsustainable level of leverage
+3. poor corporate governance
+4. accounting gimmicks
+5. CDS spread, corporate yield spread, implied volatility of exchange-traded put option
+6. Altman Z-score to judge bankruptcy potential
+7. Beneish M-score to check fraudulent financial statement
+
+### Short strategy
+
+1. lender가 주가 하락 전에 주식회수를 원하는 경우
+2. sell report 회사 접근 어려움 (block 당함)
+3. uptick rule 적용
+4. 시장이 급락하면 short selling 금지될 수 있음
+5. 성공한 short manager 전략
+    1. down market - short
+    2. up market - 국채 long
+
+### Investment characteristics
+
+Managers using short-biased strategies as well as dedicated short-selling strategies primarily aim to produce a negative correlation with conventional securities. Compared to other hedge fund strategies, expectations of return for short strategies tend to be lower. Compared to L/S equity hedge funds with their balanced beta exposure, short strategy funds tend to have ****greater volatility.
+
+### Strategy implementation
+
+Hedge fund managers go “short” a security by borrowing the security, selling it at the current market price, and then (ideally) profit by repurchasing the same security later at a lower price in order to return it to the lender.
+
+The most challenging part of profiting from shorting stocks is finding securities that are going to lose value. Managers use a bottom-up approach to identify firms with unprofitable business models, bad management, too much debt, or even shady accounting.
+
+A dedicated short seller takes on no long stock exposure; rather, they carefully select stocks for a pure short exposure, typically 60%-120%. A dedicated short manager who wishes to temper the fund’s market exposure will typically do this by holding cash.
+
+Short-biased managers have a similar strategy; however, they may also take on some long exposure, while remaining net short, often 30%-60% net short.
+
+For both dedicated short sellers and short-biased managers, relatively little leverage is used.
+
+### Role in a portfolio
+
+The primary goal of dedicated short-selling and short-biased funds is to produce returns that are uncorrelated (or negatively correlated) with the return or conventional portfolio assets. When successful, these negative correlations provide tremendous benefit to a portfolio.
+
+However, this goal of negative correlation comes at a cost; expected returns for short strategies are relatively low. Historical performance of short strategies suggests that these strategies have produced returns that are unreliable and often underwhelming.
+
+## Equity Market Neutral
+
+Equity market neutral (EMN) strategies seek to attain a near-zero overall exposure to the stock market. They do this by taking long and short positions in various equities; the betas of these positions sum to zero. The alpha of EMN strategies is intended to derived from taking positions in securities that are temporarily mispriced.
+
+### EMN traits
+
+1. take opposite position in equity having divergent valuation
+2. apply leverage to achieve meaningful return
+3. portfolio typically adjusted short-time horizon → highly quantitative methodologies → quant-based EMN manager가 많음 → statistical arbitrage trading model
+4. main source of skills
+    1. security selection
+    2. market timing
+
+### EMN investing traits
+
+1. useful for non-trending or declining market → steady and less-volatile return
+2. leverage가 너무 높으면 portfolio downsizing risk 존재 → excess drawdown이 들어오면 prime broker의 강제매매 (called strategy risk)
+3. fixed income manager - 성과가 낮은 경우 EMN이 매력적인 대안
+
+### Strategy implementation
+
+1. investable universe
+    1. tradable securities
+    2. adequate short-selling potential
+2. analyze securities for buy/sell
+    1. fundamental model
+    2. statistical/momentum-based model
+3. Portfolio construction
+    1. market risk neutrality
+    2. dollar/sector neutrality
+4. availability and cost capital
+    1. desired return profile
+    2. acceptable drawdown risk
+
+### Investment characteristics
+
+- temporary mispricing
+
+While some EMN managers rely on intuition (i.e., discretionary managers), it is more common that they instead rely on a fixed set of rules to identify trade opportunities (i.e., quantitative managers).
+
+Because EMN deliberately hedges away market beta, leverage is generally applied in order to achieve acceptable levels of return.
+
+- Pairs trading - Two stocks with similar characteristics are identified that are respectively overvalued and undervalued. For example, the two securities might represent different share classes of the same firm, or one might be the stock of a firm and the other stock of its holding company. In any case, the securities must be related but relatively mispriced.
+- Stub trading - This EMN strategy involves going long and short shares of a subsidiary and its parent company.
+- Multi-class trading - This strategy entails going long and short relatively mispriced share classes of the same firm, for example non-voting and voting shares. As the pricing of these shares reverts their traditional valuations profits can be made.
+
+Besides investment in stocks, other instruments used to achieve a state of zero beta include options, stock index futures, or other kinds of derivatives.
+
+### Role in a portfolio
+
+EMN portfolios attempt to produce alpha without taking market beta risk. EMN strategies are of particular value in times when markets are market volatile and performing poorly. The construction EMN funds allows these funds to produce less return volatility than funds that rely on beta as a source of return.
+
+# LOS 19.c Discuss investment characteristics, strategy implementation, and role in a portfolio of event-driven hedge fund strategies.
+
+## Event-driven strategies
+
+Event-driven hedge fund strategies are those that attempt to profit form predicting the outcome of corporate events, such as bankruptcies, mergers, restructuring, acquisitions, et cetera.
+
+The main risk that impacts event-driven strategies is event risk. The chance that the outcome of the vent will not be the one anticipated.
+
+## Merger Arbitrage
+
+Merger arbitrage strategies are investment schemes that attempt to earn a return from the uncertainty that exists in the market in the time between an acquisition being announced and when the acquisition is completed.
+
+Hedge fund managers in the merger arbitrage space profit by correctly anticipating the outcome of various deals. One way to view merger arbitrage is to compare it to writing insurance on an acquisition. If the acquisition is completed as planned, the hedge fund earns an insurance premium. If the transaction fails, however, then the hedge fund stands to lose money, analogous to an insurance company making a payout.
+
+### Merger arbitrage traits
+
+1. target price 상승 이유 - 경영권 premium / acquirer price 하락 이유 - dividend 대신 투자 + dilution 발생
+2. hostile M&A가 friendly M&A보다 성공 가능성 낮음
+3. US Data
+    1. 성공률 70 ~ 90%
+    2. return spread 3% ~ 7%
+    3. deal time 3-4 months
+    4. net return 7 ~ 12%
+4. Corporate event - binary model (0 아니면 1)
+
+### Strategy add
+
+1. true source of return - alpha from deal closing
+2. risk management 방식
+    1. target CB 매입 - target price 상승 시 return 증가 / target price 하락 시 bond 유지
+    2. target CDS short - 딜 성공 시 CDS premium 하락 → 수익 실현
+    3. equity index ETF or futures 사용 가능
+    4. target long position hedge
+        1. long OTM put option
+    5. acquirer short position hedge
+        1. long OTM call option
+
+### Investment characteristics
+
+In the case of a merger deal that fails, the price movements that originally occurred when the merger was announced will reverse: the price of the target will fall, and the price of the acquirer will rise. A hedge fund that had taken a position based on the merger succeeding is likely to suffer a significant cost when the deal fails unexpectedly; possibly in the order of a 40% loss. This kind of potential outcome gives merger arbitrage significant left-tail risk.
+
+Compared to typical hedge fund strategies, merger arbitrage is more liquid. (대부분 public corporate)
+
+### Strategy implementation
+
+In the most common merger arbitrage scenario, the portfolio manager takes positions in the securities of the companies involved, with the expectation of successful deal.
+
+Less often, the hedge fund manager may have the opinion that the merger will fail (for example, the deal might be blocked by the government because it would stifle competition.) In this scenario, the fund would take the opposite position to those.
+
+In order to generate a worthwhile level of return, hedge funds pursuing a merger arbitrage strategy will typically apply 300%-500% leverage in order to achieve low-double-digit returns. (high leverage)
+
+One specific variety of merger arbitrage involves cross-border mergers and acquisitions (M&A) where two countries are two regulatory authorities are involved. Such mergers are seen as more risky.
+
+### Role in a portfolio
+
+The Sharpe ratios of merger arbitrage strategies tend to be high, as these strategies usually produce relatively steady returns. However, on top of these steady returns is significant left-tail risk.
+
+## Distressed securities
+
+Hedge funds that pursue a distressed securities strategy take positions in the securities of firms that are in financial distress, including firms that are in bankruptcy or near bankruptcy. Firms may find themselves in this position for a number of reasons, including too much leverage, difficulty competing in their sector, or accounting issues. The securities of such a firm will often trade at greatly depressed prices.
+
+Compounding the discounting of the securities of distressed firms is the fact that institutions such as insurance companies and banks are often not permitted to hold non-investment-grade securities. The selling of such securities can create significant pricing inefficiencies and can open up opportunities for hedge funds seeking profit.
+
+As an alternative to liquidation, a firm may instead be able to reorganize, which may involve renegotiating the company’s liabilities. Holders of debt may be asked to exchange that debt for new equity or to agree to an extension of the maturity. (출자전환)
+
+### Distressed strategy traits
+
+1. long lockup period - redemption limit (2년 이상)
+2. external valuation - 전문가 의존
+    1. level 3 asset under US GAAP
+    2. mark to model price determination
+3. capital structure arbitrage position
+    1. long - 회수 가능 debt
+    2. short - 회수 불능 tranche equity
+4. asset sale의 경우 - fire sale price / reorganization의 경우 - market condition에 영향 받는 debt financing
+
+### Investment characteristics
+
+Considering the various event-driven hedge fund strategies, returns of distressed securities investing strategy tend to be somewhat greater, though generally with larger variability of outcomes.
+
+The lock-up periods for investors in event-driven hedge funds tend to be comparatively long (often allowing no redemption for the first two years), reflecting the fact that the outcome of distressed security investments generally takes an extended period of time to value and exit.
+
+### Strategy implementation
+
+Distressed investing can take different forms. Some managers may make only a passive investment in the distressed securities, while other managers will attempt to acquire the majority of a certain class of security in order to take creditor control during bankruptcy.
+
+Successful distressed securities investing requires a particularly broad range of skills in order to navigate the various legal aspects of the strategy, including the bankruptcy and reorganization proceedings.
+
+While shorting distressed securities is a possibility, the majority of distressed investing takes the form of long investments.
+
+Distressed investing generally makes low use of leverage.
+
+1. sale의 경우 - market expectation 50%, recovery value 75% → then buy debt
+2. reorganization - senior security debt investor가 debt-to-equity swap으로 주주가 되서 기업회생수익 수취
+
+### Role in a portfolio
+
+Distressed securities investing involves moderately high levels of illiquidity due to the nature of the assets being purchased. The returns of distressed securities investing is higher relative to other event-driven strategies, though it can be somewhat unpredictable and sensitive to declines in the overall market.
+
+# LOS 19.d: Discuss investment characteristics, strategy implementation, and role in a portfolio of relative value hedge fund strategies.
+
+## Relative value hedge fund strategies
+
+Relative value strategies attempt to exploit valuation differences between securities. The most common securities used in relative value strategies are hybrid convertible debt, as well as fixed-income securities.
+
+When successful, relative value strategies will earn various premiums over time, including liquidity, credit, and volatility premiums, reflecting differences in liquidity or credit quality between securities. However, in times of turbulent markets, losses can occur.
+
+Two relative value hedge fund strategies that we will consider in detail are fixed-income arbitrage and convertible bond arbitrage.
+
+## Fixed-Income arbitrage
+
+The idea behind fixed-income arbitrage strategies is to take advantage of temporary mispricing of fixed-income instruments, by going long comparatively undervalued securities, and going short comparatively overvalued securities. Idiosyncrasies that might be exploited include yield curve kinks or anticipated changes in the shape of the yield curve.
+
+The securities may be fixed-income instruments of many types, including consumer debt, bank loans, corporate bonds, or sovereign bonds. Hedge fund managers take positions in these securities under the assumption that prices will revert toward their fair values. (mean reversion)
+
+Fixed-income arbitrage strategies often make use of significant leverage, in pursuit of sufficient levels of return.
+
+### Fixed-income investment traits
+
+1. valuation difference source
+    1. credit quality difference - investment grade / non-investment grade
+    2. liquidity difference - on-the-run / off-the-run
+    3. volatility difference - security with embedded option
+2. interest rate risk hedge 방법
+    1. duration neutral position, but government debt sovereign risk와 ABS/MBS의 credit/prepayment risk는 통제가 어려움
+3. 특이한 risk point
+    1. mortgage 관련 채권 → negative convexity, underlying default rate
+    2. off-the-run bond - pricing 왜곡 현상
+    3. municipal bond / 일부 회사채 - liquidity issue 존재
+
+### Strategy implementation
+
+- **Yield curve trades** - In this strategy, the hedge fund manager has a view of how the shape of the yield curve will evolve over time based on macroeconomic forecasts. The portfolio manager makes long and short investments in fixed-income instruments in order to profit from the anticipated yield curve steepening or flattening. As usual, the portfolio manager will profit when the prices of the long securities rise and the prices of the short securities fall. If the positions taken are in securities of different firms, then liquidity, credit, and interest rate risks will be present. For positions in securities of the same issuer, interest rate movements would be the main source of risk.
+- **Carry trades** - In a carry trade, the portfolio manager shorts a low-yielding security and goes long a high-yielding security. The source of return here is twofold; first, from the yield different, and second from the price changes as mean reversion occurs.
+
+Because fixed-income securities tend to be priced fairly efficiently, the amount of profit that can be earned by fixed-income arbitrage is somewhat limited. As a result, substantial leverage is often applied to fixed-income arbitrage strategies. (400% leverage is not uncommon; even 1500% leverage is not unheard of.)
+
+### Investment characteristics
+
+Generally, the return to fixed-income arbitrage strategies are relatively small, so significant levels of leverage are used to increase the amount of return.
+
+The liquidity of fixed-income arbitrage depends on the particular strategy employed and the kinds of fixed income instruments used. Strategies involving U.S. Treasuries are very liquid, while strategies that make use of mortgage-backed securities or foreign instruments, for example, are less liquid.
+
+### Role in a portfolio
+
+Return distributions for a fixed income arbitrageurs tend to be similar to writing puts. If the trade unfolds as expected, the investor will earn a return from the spread narrowing, plus a return from positive carry. However, if the spread between the two instruments widens unexpectedly, the return to the investor may become quite negative.
+
+One drawback to fixed income arbitrage strategies is that their highly leveraged nature can cause modest price volatility to lead to domino effect of margin calls and deleveraging. For example, the Asian Financial Crisis of 1997 and the Russian Ruble Crisis of 1998 led to the collapse of the renowned hedge fund Long-Term Capital Management.
+
+## Convertible bond arbitrage
+
+Convertible bonds are fixed-income debt securities that make regular coupon payments but can additionally be exchanged for a prearranged number of common stock shares. The bond-to-stock conversion is at the bondholder’s discretion, though it is only permitted at certain point in the bond’s life.
+
+One way to view convertible bonds is as a regular bond plus a long call option on the corresponding stock.
+
+Analyzing convertible bonds is extremely complex due to impacts from a number of factors.
+
+The primary goal of convertible bond arbitrage strategies is generally to profit from purchasing the implied volatility of convertible bonds, which is often underpriced. To do this without taking on excess risk, convertible bond arbitrageurs will take on other positions to try to hedge out the delta and gamma risk of the convertible bond holdings.
+
+### CB arbitrage traits
+
+- sporadically issued
+- relatively small size corporate
+- thinly traded
+- fewer covenant than straight bond
+
+### 핵심 issue
+
+- CB에 있는 relatively cheap embedded option을 구분해서 투자하는 것
+    - 그러기 위해 해야 하는 것 → 다른 risk 제거
+    - interest rate risk - interest rate derivatives
+    - credit risk - CDS
+    - market risk - delta 비율 조정 using equity short, put long
+- 어떤 방식을 쓰느냐에 따라 CB arbitrage style이 달라짐
+
+### Manager가 profit을 먹는 경우
+
+1. sufficient large stock price swing & proper periodic rebalancing
+2. relative equity volatility > implied volatility of embedded option (conversion option)
+
+### CB arbitrage를 걱정하게 만드는 상황
+
+1. short squeeze - 대주 반환 request
+2. credit issue - mismatch too wide or too narrow
+3. time decay of embedded option
+
+### Investment characteristics
+
+Convertible bond arbitrage managers encounter two primary sources of liquidity issues; first, because the strategy requires the manager to borrow and then short sell the underlying equity and second, because the fixed income instruments being invested in are often complex niche products.
+
+### Strategy implementation
+
+Convertible arbitrage strategies generally exploit the fact that the options within convertible instruments usually exhibit low implied volatilities when compared to the historical volatilities of the equities that underlie the option. The challenge for the convertible bond arbitrage manager that invests in these convertibles is to hedge away the other sources of risk that are embedded in the convertible security including market risk, interest rate risk, and the credit risk of the bond issuer.
+
+When a convertible bond’s current conversion value is well below the convertible bond price, the out-of-the-money convertible bond will behave much like a straight bond. Conversely, when a convertible bond’s conversion value is above the convertible bond price, the in-the-money call makes the convertible behave much like the corresponding stock.
+
+Significant amounts of leverage are usually used to implement convertible bond strategies, often combining a three times long bond exposure with a two times short equity exposure.
+
+### Role in a portfolio
+
+Convertible arbitrage strategies perform best during periods of normal market conditions, when liquidity is available, when volatility is modest, and when there is a good selection of convertible bonds being issued. Convertible arbitrage may not perform well in period of illiquidity or weak credit.
+
+# LOS 19.e: Discuss investment characteristics, strategy implementation, and role in a portfolio of opportunistic hedge fund strategies.
+
+## Opportunistic hedge fund strategies
+
+Opportunistic hedge fund strategies are a broad class of investing approaches that attempt to extract profits using a wide range of techniques in a broad range of securities markets. Rather than being focused on individual securities, these strategies take a top-down approach to make macro investments on a global basis across regions, sectors, and asset classes.
+
+The returns of opportunistic hedge fund strategies are generally impacted by market cycles, global developments, and international interactions. The risks will depend on the particular strategy and asset class involved.
+
+The implementation of opportunistic hedge fund strategies can be based on a number of broad techniques. Technical analysis uses past price changes to forecast future price movements. Strategic based on fundamentals, on the other hand, attempt to analyze security prices, markets, sectors, and the relationships between markets, using economic data as the input.
+
+Managers using a systematic implementation of their strategies use computer algorithms and rules to determine which trades to make. Managers using a discretionary process instead use their instinct to determine when to trade.
+
+### Opportunistic hedge fund categorization criteria
+
+1. types of analysis - technical vs. fundamental
+2. trading decision 방식 - discretionary vs. systematic
+3. types of instrument / market
+    1. market condition - systematic 증가세 → side effect: trend following overshot cause by momentum signal trigger (herding effect)
+
+## Global Macro strategies
+
+Managers of global macro strategy funds attempt to profit from making correct assessments and forecasts of various global economic variables including inflation, currency exchange rates, yield curves, central bank policies, and the general economic health of different countries.
+
+Global macro managers use a broad range of security types and global asset classes to take positions on these views.
+
+A global macro manager that can identify a global trend early and take a position can profit.
+
+1. thematic 기준
+    1. trading undervalued emerging market currency vs. overvalued US currency using OTC currency swap
+2. region 기준
+    1. Trading stock index futures on Italy FTSE MIB vs. German DAX to capitalize EuroZone equity valuation difference
+
+### Global macro manager traits
+
+1. fairly heterogenous as a group
+2. not dependable as source of short alpha
+3. more antipathy than MF
+
+### Global macro manager가 좋아하는 events
+
+- steep equity market sell-off
+- interest rate regime change
+- currency devaluation
+- volatility spike
+- geopolitical shock by trade war or terrorism
+
+### Investment characteristics
+
+Global macro managers can take positions that are either **thematic** (e.g., go long companies that are anticipated to benefit from expected interest rate hikes, and short companies that will be disadvantaged), or **directional** (e.g., buy firms that will benefit from forthcoming free trade deals.)
+
+Unlike some hedge fund strategies, low-volatility-mean-reverting markets are not generally favorable for global macro returns.
+
+Because global macro managers take investment positions based on their predictions of the future, there is significant potential for unsuccessful investment when global economies do not behave as expected or if unanticipated risks emerge. As a result, the returns of global macro funds tend to be uneven and volatile.
+
+### Strategy implementation
+
+Global macro strategies tend to be based on top-down analysis beginning with scrutiny of the global economy, then macro trends within economies, and so on, in order to identify potential opportunities.
+
+Different global macro managers are likely to implement their strategies using very different techniques; for example, technical analysis vs. fundamental analysis, or discretionary implementation versus systematic implementation.
+
+One commonality between global macro funds is that most tend to apply leverage, often representing 600% or 700% of fund assets.
+
+A manager making directional predictions will generally use fundamental information to determine whether a particular asset is undervalued or overvalued on a historical basis. On the other hand, a manager using a relative value strategy will seek out securities that are overvalued or undervalued compared to one another.
+
+Global macro managers tend to use discretionary approaches more than managed futures managers.
+
+### Role in a portfolio
+
+When added to a portfolio of traditional assets, a global macro hedge fund can bring a significant benefit (not only alpha, but also portfolio diversification).
+
+A successful global macro manager will anticipate changes before other market participants and will then invest in a position and with for the rest of the market to come around. This contrarian tendency can make an allocation to global macro strategies especially useful. For example, some global macro managers anticipated the United States’ subprime mortgage crisis well before the housing bubble began to collapse in 2007.
+
+During times of market stress, global macro funds have historically delivered right-tail skewed returns, which is extremely beneficial from a portfolio diversification perspective. However, this behavior cannot always be relied upon as such diversifying outcomes are not always realized.
+
+## Managed futures
+
+Hedge fund portfolio managers that pursue a managed futures strategy take long and short positions in a variety of derivatives contracts including futures, forwards, options on futures, swaps, and sometimes currencies and commodities.
+
+Managed futures strategies can be as simple as trading index futures on a particular sector, or it can involve very exotic contracts such as futures on the weather.
+
+### Managed futures traits
+
+- cyclicality
+    - Lehman 사태 시 수익성 양호 - high-volatility 시장에서 positive skewness
+    - but 이후 2011 ~ 2018 (mean-reverting market)에서 수익성 악화
+
+### Managed futures keywords
+
+1. pattern recognition trigger
+2. crowding aspect / execution slippage
+3. systematic approach
+4. right tail skewness (positive skewness)
+5. cyclical
+6. Lehman 사태 때 상승, 안정 상황 때 하락
+
+### 전략이 성공하려면
+
+1. consistent approach
+2. avoid overfitting of model
+3. goal - perform well in a future out-of-sample period (실제 상황)
+    1. back-testing (과거 상황)
+
+### Investment characteristics
+
+Managed futures funds do not buy and sell assets; rather, they enter into futures contracts in order to gain the desired exposures.
+
+Because of the mechanics of futures contracts (requiring only a small amount of upfront collateral), managed futures funds can easily apply great amounts of leverage. Typically, a fund will use perhaps 1/8 of its capital as collateral on futures contracts. The only 7/8 or so will be invested in some highly liquid security (such as short-term government bonds) that will serve as collateral for the futures clearinghouse.
+
+Managed futures funds are extremely liquid. The reason for this is that futures contracts themselves are highly liquid; they trade globally and continuously.
+
+One downside of the popularity of managed futures strategies is that **crowding** has occurred. Many market participants pursue the same trades and use similar signals, and execution slippage sometimes occurs.
+
+### Strategy implementation
+
+**Time-series momentum (TSM)**
+
+- 대세상승 long, 대세하락 short → net long/short equity position
+
+TSM trend following, portfolio managers simply follow momentum. They buy securities that have been rising in price and sell securities that have been falling.
+
+**Cross-sectional momentum (CSM)**
+
+- 상승폭 상위종목 long, 하락폭 상위종목 short → net zero beta
+
+CSM strategies, which is carried out within a particular asset class (a cross section of assets). Again, the securities rising fastest are purchased and falling securities are shorted.
+
+The high liquidity of futures contracts allow hedge fund managers to pursue a very wide selection of trading strategies. Generally, portfolio managers will rely on a signal trigger, most often based on volatility or momentum, to prompt the manager to trade.
+
+In addition to using signals to indicate when to enter a trade, portfolio managers will also have rules for closing a position. Exit methodologies can be based on:
+
+- price target
+- momentum reversal
+- time
+- trailing stop-loss
+- some combination of these approaches
+
+The goal of managed futures strategies is to develop rules and signals that work well not only on historical data but also in real-world use. However, the more portfolio managers are suing similar signals, the less effective signals will become.
+
+The size of positions taken are usually based on factors such as correlation and volatility.
+
+### Role in a portfolio
+
+Perhaps the most appealing feature of manage futures is their interaction with other investments. Overall, managed futures have very little correlation with traditional equity and fixed-income assets. The result is that when added to a portfolio, managed futures will generally improve the total risk-adjusted return.
+
+This diversifying characteristics has proven its worth during times of market stress. While other strategies exhibit negative skewness during such period, the positive right-tail skewness of managed futures provide a significant advantage.
+
+# LOS 19.f: Discuss investment characteristics, strategy implementation, and role in a portfolio of specialist hedge fund strategies.
+
+## Specialist strategies
+
+Portfolio managers for specialist hedge fund strategies use their knowledge of a particular market to pursue niche investment opportunities. The purpose of pursuing specialist strategies is to generate returns that are uncorrelated with traditional assets and produce high-risk-adjusted returns. The risks of such strategies are often unique to the particular niche securities being invested in.
+
+## Volatility trading
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled.png)
+
+Once an esoteric pursuit, volatility trading has evolved ever recent years to become a recognized investable asset.
+
+Volatility trading hedge fund managers will trade volatility-related assets globally, across countries and cross asset classes, in order to exploit perceived differences in volatility pricing. The overall goal is to purchase underpriced volatility and sell overpriced volatility.
+
+Another volatility trade is to act as the counterparty to market participants that consistently seek long volatility. Because the negative correlation between stock market returns and equity volatility is high, equity investors seek to buy volatility as a hedge. (Equity long + volatility long) A hedge fund that is willing to sell volatility will earn an insurance-like premium as compensation for taking on this risk; however, such a strategy can unravel in a dramatic fashion.
+
+In the U.S. markets, the most common volatility futures are contracts on the VIX index, which tracks the 30-day implied volatility of the S&P 500 index. VIX contracts tend to be mean reverting because high volatility naturally tends to dissipate over time.
+
+### Volatility trading example
+
+1. Japanese Yen
+2. Asian timezone volatility < western timezone volatility → relative value volatility trading
+3. Nikkei 225 implied volatility < S&P 500 implied volatility → cross-asset volatility trading
+4. Correlation between Equity volatility and Equity market return → negatively correlated (-0.8) → long volatility → hedge against long equity
+
+### Strategy implementation
+
+Hedge fund managers wishing to pursue volatility trading have several options.
+
+One possibility is to build various option strategies, such as straddle, calendar spreads, bull spreads, or bear spreads, using basic exchange-traded options.
+
+A second possibility is to make use of over-the-counter (OTC) options, which are customized to meet the portfolio manager’s specific needs. A drawback of this method, however, is that it introduces counterparty risk plus additional liquidity issues.
+
+A more direct way to trade volatility is to use futures on the VIX index. An advantage of this method is that it is a very direct way to express a view on volatility, without the need for hedging. There are disadvantages though. first, the mean-revering nature of the VIX index’s price and second, many traders and investors crowd into the VIX futures in order to sell volatility and capture the associated premiums, making it difficult to profit from that strategy.
+
+A fourth method of implementing a volatility trading strategy is to enter into an **OTC volatility swap** or alternatively a **variance swap**. (volatility trading) These derivatives provide a relatively pure exposure to volatility. (Note that the name “swap” there is somewhat misleading. Volatility swaps and variance swaps are actually forward contracts with a payoff based on the difference between observed or realized variance multiplied by some notional amount).
+
+### Investable characteristics
+
+The investment characteristics of volatility trading will vary depending on the securities invested in and the positions taken.
+
+Investors that take a short position in volatility will earn premiums and generally produce stable returns under average market conditions. A long position in volatility will display positive convexity, which can be valuable as a hedge.
+
+The liquidity of a volatility trading strategy will depend on the instruments used. Futures and options based on VIX tend to be extremely liquid, and exchange-traded volatility options are liquid as well (especially when the tenor is short). OTC contracts on the other hand are generally less liquid.
+
+The use of futures contracts makes it easy to apply leverage to a volatility trading strategy. The convexity of volatility derivatives means that sometimes large gains can be made from long volatility strategies while taking little risk.
+
+### Role in a portfolio
+
+In a portfolio, a long volatility strategy is a potent diversifiers, because stock market volatility is highly negatively correlated with market returns. The downside of maintaining a long volatility position, however, is that a premium must be paid to the volatility seller.
+
+## Reinsurance/life settlements
+
+In recent years, numerous hedge funds have formed to take advantage of attractive investment opportunities related to insurance policies. In a typical life settlement transaction, an insured person will sell (generally through a broker) their insurance policy to a hedge fund. After the investor pays the insured for the policy, the hedge fund then will be liable for the premium payments and will also receive the death benefit upon the passing of the insured.
+
+Individuals will sell their life insurance contracts when they feel that they no longer benefit from the agreements. Individuals who purchased life insurance policies are incentivized to sell their policies to third-party brokers because those firms will oftentimes pay more for the policy than the issuing insurance company will pay for a surrendered policy. (Cash Surrender Value, CSV)
+
+Catastrophe risk **reinsurance** is another area where hedge funds are increasingly investing. **Catastrophe insurance** covers the holder against earthquakes, tornadoes, hurricanes, floods, and the like. In order to diversify and decrease risk, insurance companies in their normal course of business will sell off some of their risk to reinsurance companies, who may then lay these risks off on hedge funds in exchange for capital. Reinsurance can be a rewarding investment for a hedge fund if sufficient diversity can be obtained. (e.g., vary by geography and types of insurance) if the insurance company provides sufficient loan loss reserves and if the policy premiums are adequate. When considering an investment in catastrophic insurance, the hedge fund considers both typical and worst-case outcomes and compares this to the insurance premiums to be received. Geographic diversity is important, as a specific catastrophic event will tend to affect only a particular part of the world.
+
+### Investment characteristics
+
+Strategies that involve investments in insurance contracts are illiquid, because insurance policies are somewhat difficult to sell after initiation.
+
+### Strategy implementation
+
+The term “life settlement” refers to a secondary market transaction on an insurance policy. A hedge fund that invests in life settlements will analyze various pools of life insurance contracts that brokers offer, and invest in the ones that are predicted to offer an attractive return. After investing, the hedge fund then becomes the beneficiary of these contracts. The investment is successful if the present value of the future insurance payout exceeds the payments made by the hedge fund.
+
+In selecting which insurance policies to invest in, a hedge fund will seek out policies with the following characteristics:
+
+- the purchase price of the policy is low
+- the ongoing premium payments are low
+- the insured person is likely to die relatively soon
+
+One major prerequisite to profiting from life settlements is to develop an accurate alternative estimate of life expectancies. Appraising a life settlement requires a significant amount of skill and knowledge and requires comparing individual policy holders’ outlooks to actuarial averages.
+
+### Role in a portfolio
+
+A very appealing feature of insurance investments in a portfolio is that the risk inherent in these strategies is almost entirely uncorrelated with market risks and business cycles. For example, floods and earthquakes have little or no correlation to the financial markets.
+
+Thus, hedge funds that invest in such assets can add alpha to a portfolio while simultaneously adding return diversification.
+
+# LOs 19.g: Discuss investment characteristics, strategy implementation, and role in a portfolio of multi-manager hedge fund strategies.
+
+## Multi-manager hedge fund strategies
+
+- fund-of-funds
+- multi-strategy hedge funds
+
+## Fund-of-Funds
+
+**benefits:**
+
+- diversification across hedge fund strategies
+- expertise in individual manager selection
+- strategic allocation and style allocation
+- due diligence
+- occasional value-added tactical decisions
+- currency hedging
+- leverage at the portfolio level
+- better liquidity terms vs. individual hedge funds
+- access to certain closed hedge funds
+- economies of scale for monitoring
+- research expertise
+- potential liquidity efficiencies
+- potentially valuable concessions from the underlying funds
+
+**disadvantages:**
+
+- a double layer of fees for the investor
+- lack of transparency into individual hedge funds
+- no performance fees netting
+- additional principal-agent issues
+
+### Investment characteristics
+
+Individual hedge funds have traditionally charged a “2 and 20” fee structure, indicating management fees of 2% plus performance incentive fees of 20%. On op of this, FoF have historically added a 1% management fee, plus a further 20% incentive fee on the total FoF portfolio. (Though over time, these FoF fees have become negotiable and generally smaller.)
+
+- 2/20 or 1/20 + double fee structure
+
+One important feature that FoF serve is making an investment in hedge funds practical for smaller investors, such as small institutions and for moderately wealthy individuals. FoF serve as an entry point into hedge fund investing.
+
+- good for small investors
+
+Aside from providing an accessible path into hedge funds, FoF provide a number of other advantages. For example, FoF may provide access to high-profile managers whose funds are otherwise closed to new investors. Also the larger size of FoF may allow the fund to obtain valuable concessions from the underlying funds’ management. (side letter → fee negotiation)
+
+Liquidity can be a challenge for portfolio managers of funds-of-funds. Typically,  a FoF will require a one-year initial lock-up for investors then will allow somewhat greater liquidity afterwards (e.g., monthly or quarterly redemption). However, the underlying funds may have even stricter limits on liquidity, leaving a FoF manager in a potential squeeze. (FoF squeeze)
+
+Another drawback of funds-of-funds relates to potential netting risk, whereby investors could be required to make significant incentive payments to successful underlying funds, even if the overall performance of a FoF is poor. (몇개 펀드가 손실나서 전체 성과를 말아먹는 상황)
+
+### Strategy implementation
+
+1. Use fund databases plus personal introductions to become familiar with hedge funds available for investment.
+2. Choose an appropriate strategic allocation to different hedge fund strategies.
+3. The manager selection process is initiated, using both top-down and bottom-up techniques.
+4. For each hedge fund strategy, consider a number of candidates following that strategy.
+5. Interview the candidate hedge fund managers.
+6. Review relevant materials such as audit reports.
+7. Examine the funds’ personnel, operational processes, and risk management.
+8. Negotiate with the individual fund managers for lower fees, improved liquidity et cetera.
+9. After the various funds are approved and included in the FoF, an ongoing monitoring process begins, intended to detect major personnel changes, style drift, et cetera.
+
+The FoF’s strategic allocation determines the percentage of total capital that will be invested in each hedge fund style. In addition to this strategic allocation is a tactical allocation, whereby the FoF manager will at various times underweight or overweight the various hedge fund strategies to reflect the FoF manager’s perception of a changing market environment.
+
+### Role in a portfolio
+
+- Greater diversification
+- Steady returns
+- less concentrated exposure to risks
+- less volatility
+- less exposure to the downside risk of any individual fund manager
+
+## Multi-strategy hedge funds
+
+- in-house managers/strategies
+
+Multi-strategy hedge funds that hold a number of other hedge funds where these various funds are pursuing diverse strategies. Also similar to a FoF, multi-strategy hedge funds are intended to use this diversification of strategy to produce steady low-volatility returns.
+
+Unlike a FoF, the sub-funds in multi-strategy hedge funds are run by the same organization, rather than being managed by different hedge fund firms.
+
+### Investment characteristics
+
+1. steady returns and low volatility
+2. FoF보다 operational risk가 undiversified because under the same roof
+3. diversity → somewhat limited ← somewhat similar investment view point
+4. speed is faster → relatively easy with tactical allocation ← managed in-house high internal transparency, fast response
+5. less netting risk attractive fees, pay incentive fees based on total fund performance
+6. FoF와 유사 - initial lockup, limited investor liquidity
+
+steady returns and low volatility
+
+The **operational risks** a multi-strategy fund are not well-diversified as is with a FoF, because all of the operational processes of multi-strategy funds are performed under the same roof.
+
+The diversity of strategies represented by the different funds in multi-strategy funds are often somewhat limited, because the managers employed by a specific multi-strategy fund tend to have somewhat similar investment viewpoints and methods.
+
+A major advantage of multi-strategy funds over a FoF is the speed and relative easy with which tactical allocations can be made. Because each of the multi-strategy funds are managed in-house, it is relatively easy for the multi-strategy manager to reallocate investment from one strategy to another.
+
+Investor fees for a multi-strategy fund are often more attractive than those of a FoF. While FoF investors are subject to netting risk (where hefty performance fees can be paid to some sub-fund managers, despite overall poor FoF performance), multi-strategy funds are more likely to absorb this netting risk internally.
+
+Like a FoF, multi-strategy funds generally limit investor liquidity using redemption periods and initial lock-ups.
+
+### Strategy implementation
+
+Multi-strategy funds carry out their approach by making investments in a number of varying hedge fund strategies.
+
+One key advantage of multi-strategy funds is their ability to make tactical reallocations in addition to a fund’s strategic allocation. Furthermore, the multi-strategy fund’s internal teams are likely to be well informed about why and when capital and leverage should be reallocate, versus a FoF manager for whom the various funds are more opaque. (Coordination is good)
+
+Risk management can also be more effective with a multi-strategy fund. Unlike FoF managers, multi-strategy managers should have an excellent view of correlations and common risks between the various funds.
+
+Multi-strategy funds also enjoy efficiencies that come from multiple hedge fund teams sharing the same administrative resources.
+
+Multi-strategy funds often will make greater use of leverage than the average FoF. Normally, leverage in multi-strategy funds does not pose much of a risk; however, during periods of market stress, small sources of danger can become significant left-tail risks that threaten the survival of the fund. (This kind of scenario lead to the demise of Ritchie Capital in 2005 and Amaranth Advisors in 2006.)
+
+Multi-strategy funds generally have more varied performance than a FoF.
+
+### Role in a portfolio
+
+Multi-strategy funds are intended to improve an investment portfolio by adding diversification and steady, low-volatility returns.
+
+Historically, multi-strategy funds have generally performed better than have funds-of-funds, due to a superior fee structure and greater ability to execute on tactical asset allocation. However, the leveraged nature of multi-strategy funds can sometimes lead to a left-tail blow-up during times of stress.
+
+# LOS 19.h: Describe how factor models may be used to understand hedge fund risk exposures.
+
+## Factor models and portfolio impact of hedge funds
+
+**Conditional linear factor model** to quantify the risk exposures of various hedge fund strategies.
+
+By conditional, a model that takes into account that a fund may behave one way during normal market conditions and behave differently during a period of market turbulence (such as the global financial crisis of 2007-2009).
+
+## Conditional factor risk model
+
+$$
+(\text{Return on }HF_{i})_{t} = \alpha_{i} + \beta_{i, 1}(Factor 1)_{t} + \beta_{i, 2}(Factor 2)_{t} + ... + \beta_{i, K}(Factor K)_{t} + D_{t}\beta_{i, 1}(Factor 1)_{t} + D_{t}\beta_{i, 2}(Factor 2)_{t} + ... + D_{t}\beta_{i, K}(Factor K)_{t} + (error)_{i, t}
+$$
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%201.png)
+
+Any returns not explained by the model’s risk factors would be attributed to either omitted risk factors, alpha (i.e., hedge fund manager skill), or randomness (error).
+
+Hasanhodzic and Lo (2007) used the following six factors:
+
+1. Equity risk (SNP500): S&P 500 total return index
+2. Interest rate risk (BOND): Bloomberg Barclays Corporate AA Intermediate Bond Index
+3. Currency risk (USD): U.S. Dollar Index
+4. Commodity risk (CMDTY): Goldman Sachs Commodity Index (GSCI) total return
+5. Credit risk (CREDIT): Spread between Moody’s Baa and Aaa corporate bond yields
+6. Volatility risk (VIX): CBOE Volatility Index (VIX)
+
+A **stepwise regression** process is useful for creating linear conditional factor models that avoid multicollinearity problems, by avoiding the use of highly correlated risk factors. The process resulted in the BOND and CMDTY factors being dropped due to multicollinearity issues. (CREDIT and SNP500 respectively produced higher adjusted R-squared.)
+
+- autocorrelation이 있는 variable을 제거 (multicollinearity 제거)
+
+The left the following four factors for measuring risk exposures:
+
+1. Equity risk (SNP500)
+2. Currency risk (USD)
+3. Credit risk (CREDIT)
+4. Volatility risk (VIX)
+
+Each hedge fund strategy has different exposures to these various risk factors. These risk factors stem from taking long or short positions in financial instruments that are exposed to these risks.
+
+For example, arbitrage strategies often are generally exposed to credit spread risk and market volatility risk. Event-driven strategies and L/S equity strategies generally have significant exposure to equity (market beta) risk.
+
+## Risk-based approach
+
+8개의 risk factor를 hedge fund 전략 별로 statistical modeling
+
+1. equity market return
+2. size
+3. value
+4. liquidity
+5. duration
+6. inflation
+7. credit spread
+8. currency
+
+### Advantages
+
+1. 정확하게 risk source 파악
+2. 다양한 차원의 part risk 파악
+3. integrated risk management framework 가능
+
+### Disadvantages
+
+1. 분석기관에 따라 sensitivity가 다름
+2. 의사 결정권자에게 설명이 어려움 → implementation 하기 어려움
+
+# LOS 19.i: Evaluate the impact of an allocation to a hedge fund strategy in a traditional investment portfolio.
+
+## Portfolio contribution of hedge fund strategies
+
+When the 20% allocation to hedge funds is added to a traditional 60% stock/40% bond investment portfolio, the resulting allocation is 48% stock, 32% bond, and 20% hedge fund.
+
+## Performance contribution to a 60/40 portfolio
+
+When we add a 20% allocation to most hedge fund strategies to a traditional portfolio, the general result in the following:
+
+- total portfolio standard deviation decreases
+- Sharpe ratio increases
+- Sortino ratio increases
+- Maximum drawdown decreases in approximately one-third of portfolios
+
+The interpretation of these results in that hedge fund strategies generally increase risk-adjusted return and provide diversification to a traditional portfolio of stocks and bonds.
+
+## Risk-adjusted performance
+
+The **Sharpe ratio** is one risk-adjusted measure of performance. The risk measure used to calculate the Sharpe ratio is standard deviation, so both downside and upside standard deviation result in a lower Sharpe ratio.
+
+The **Sortino ratio** is a similar risk-adjusted measure of performance; however, only downside deviations are considered to reflect risk. Risk is measured as variability below a predefined level of return. Because of the left-tail risk present in many hedge fund strategies, the Sortino ratio is generally seen as a superior measure of the risk-adjusted performance of hedge funds.
+
+When 20% allocations to various hedge fund strategies are added to the traditional stock/bond portfolio, notably high Sharpe ratios are also achieved from allocations to these strategies:
+
+- Systematic futures hedge funds
+- Distressed securities
+- Fixed-income arbitrage
+- global macro
+- equity market neutral
+
+The highest Sortino ratios were attained via allocations to the following hedge fund strategies:
+
+- Equity market neutral
+- systematic futures
+- L/S equity
+- event driven
+
+Allocations to the following strategies was found to be effective in generating superior risk-adjusted performance, based on the comparatively higher Sharpe and Sortino ratios:
+
+- systematic futures
+- equity market neutral
+- global macro
+- event-driven hedge fund strategies
+
+On the other hand, it was observed that the following fund strategies do not significantly enhance risk-adjusted performance:
+
+- fund-of-funds
+- multi-strategy
+
+While all of the hedge fund strategies expose the overall portfolio to various kinds of additional portfolio risks, allocating a portion of a stock/bond portfolio to hedge funds generally reduces risk and increases returns.
+
+## Risk Metrics
+
+### Standard deviation
+
+Lowest standard deviations
+
+- dedicated short-biased
+- bear market neutral
+
+low standard deviations
+
+- systematic futures
+- FoF: macro/systematic
+- equity market neutral
+
+little positive impact on reducing standard deviations
+
+- event-driven: distressed securities
+- relative value: convertible arbitrage
+
+An explanation for event-driven: distressed securities’ lack of ability to reduce standard deviation is that these securities tend to take long positions in securities, and outcomes are either mild successes or grand failures.
+
+Relative value: convertible arbitrage do little to improve standard deviation likely because their leveraged nature becomes a liability during times of market volatility.
+
+### Drawdown
+
+**Drawdown (최대 낙폭)** is defined as the peak-to-trough decline for a portfolio, generally quoted as the percentage drop between a peak and the subsequent trough. The **high-water mark (가장 높은 NAV)** refers to the maximum value the portfolio has ever reached.
+
+The hedge fund strategies that produced the smallest maximum drawdowns are various opportunistic strategies:
+
+- global macro
+- systematic futures
+- merger arbitrage
+- equity market neutral
+
+Use of the conditional risk model can show that these strategies perform relatively well during periods of market crisis because they have minimal exposure to credit risk or equity. Furthermore, these strategies benefit from their liquid nature. These properties make opportunistic strategies useful diversifiers for traditional assets.
+
+Other hedge fund strategies had entirely dissimilar drawdown performance. These strategies did little mitigate the traditional portfolio’s maximum drawdown:
+
+- L/S equity
+- Event-driven: distressed securities
+- Relative value: convertible arbitrage
+
+These results are somewhat expected. Using the conditional risk model, we can demonstrate that these particular strategies have significant exposure to equity risk, and furthermore during crisis period they have significant exposure to credit risk as well.
+
+# LOS 20.a: Explain the roles that alternative investments play in multi-asset portfolios.
+
+Alternative investments refers to various types of investment including hedge funds, private equity, private credit, commercial real estate, and real assets. Real assets include agricultural commodities, precious metals, industrial metals, agricultural land, and oil.
+
+- hedge fund
+- real asset (commodity)
+- private real estate
+- private equity
+
+추가 목적
+
+1. Increase Sharpe ratio
+2. Provide income
+3. potential for capital growth
+4. safety (가치보존)
+
+The goal of adding alternative investments to a portfolio is most often to improve the portfolio’s risk and returns profile. Investors may seek alternative investments that provide income, the potential for capital growth, or safety (preservation of value).
+
+Private equity and private credit may be viewed primarily as return-enhancing (and risk-increasing) portfolio investments. Real assets may be viewed as risk-reducing (and thus, lower-return) investments. Hedge funds can fall anywhere along this spectrum, depending on the strategies pursed by their managers.
+
+Equity investments, both public and private, typically provide capital growth. Investments in bonds or real estate may generate income. Real assets and some hedge funds strategies, may diversify risk for an equity portfolio, while private credit may diversify the risk profile for a fixed-income portfolio that is primarily exposed to interest rate risk. Precious metals or government bonds may be seen as safe-haven asset classes.
+
+### Hedge funds
+
+Some hedge fund strategies, such as equity long/short or short bias, may somewhat reduce a portfolio’s overall equity beta but are mainly expected to increase returns through their manager’s security selection skill. Other hedge fund strategies, such as merger arbitrage or global macro, may be less correlated with traditional asset classes.
+
+### Private equity
+
+For a portfolio of public equity securities, an allocation to private equity has limited diversification potential because public and private companies face essentially the same risk factors. Thus, the main function of private equity in the portfolio is to increase expected returns.
+
+### Private credit
+
+This class of alternative investments include both direct lending and distressed debt. Direct lending is primarily an income-producing investment. For a given range of credit quality, the risk-return profile tends to be similar for direct lending and publicly traded debt, except that direct lending has additional risk (and an expected return premium) due to its illiquidity. Distressed debt has a risk-return profile more like equity securities.
+
+### Commercial real estate
+
+Real estate investments can hedge inflation risk.
+
+### Real assets
+
+Assets such as commodities, farm and timberland, and infrastructure also protect against inflation risk. Asset holdings can target particular subsets of inflation risk, such as energy, food, or building materials. Infrastructure investments require a longer time horizon and their correlation with inflation may be limited, for example, by utility rate regulations.
+
+# LOS 20.b: Compare alternative investments and bonds as risk mitigators in relation to a long equity position.
+
+For a short investment horizon, the primary risk facing the investor is returns volatility. Reducing volatility is best achieved by allocating a portion of the portfolio to an asset class with a low correlation of returns with equities.
+
+For alternative investments as an asset class, reported volatility of returns appears lower than the volatility of equity returns, and its correlation with equity returns also appears to be low. However, these statistics are likely to be biased downward for a number of reasons:
+
+- **Appraisal-based** valuations of privately held investments result in smoothing of reported returns.
+- Databases of alternative investment returns are subject to sampling biases, such as **survivorship bias** and **backfill bias**, which result in downside risk being understated in the reported data.
+- Indexes of alternative investment returns reflect some degree of diversification because funds in an index may have low correlations of returns with each other. Thus, the volatility of returns on the index is less than the average volatility of returns on index components.
+
+As a result, both the volatility of alternative investment returns and their correlation with equity returns may be higher than they appear to be in reported data.
+
+By comparison, bonds as an asset class have had a lower correlation with equity returns than alternative investments. In fact, over the 20 years before 2017, their correlation with equity returns has been negative. (The correlation was positive in the two decades before that, when inflation was higher.) As a result, an allocation to bonds is likely to reduce the volatility of an equity portfolio’s returns more than an equal allocation to alternative investments.
+
+- Conclusion, in short-term, bond가 답 because in short-term, volatility 감소 목적
+- Alternative Investment가 우월해보이나
+- appraisal, sampling bias, index issue 때문에 실제로 Alternative Investment의 volatility는 크다, but bond는 지난 20년 간 negative correlation with equity
+- In long-term, target return 달성이 목적 → but bond는 target return이 낮음 → Alternative Investment는 더 높음 → Alternative investment가 우위
+
+With a long time horizon, however, the primary risk is not returns volatility, but failing to achieve a minimum required rate of return over time. Because bonds have a lower expected rate of return than equities, allocating assets to bonds may increase the risk of a portfolio failing to earn its needed rate of return.
+
+In this case, alternative investments can be a better choice for diversification. Because the expected return on alternative investments is higher than that of bonds, over a long time horizon they reduce the risk of failing to meet the portfolio’s return requirements.
+
+# LOS 20.c: Compare traditional and risk-based approaches to defining the investment opportunity set, including alternative investments.
+
+Traditional approaches to defining the **investment opportunity set** include classifying asset groups by liquidity or by how they perform over economic cycles.
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%202.png)
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%203.png)
+
+1. Capital growth asset
+    1. public equity
+    2. Private equity
+2. inflation hedge asset
+    1. real estate
+    2. commodity
+    3. inflation-linked bond
+3. Deflation-hedge asset
+    1. government bond
+
+A **risk factor based approach** to defining asset classes involves statistically estimating their sensitivities to risk factors identified by the manager. Examples may include economic growth and inflation, interest rates and credit spreads, or currency values. They may also include factors such as liquidity, capitalization, and value-versus-growth.
+
+With respect to alternative investments, a risk factor analysis may show that some alternative investment classes are similar to traditional classes in terms of factor sensitivity. For example, private equity returns are sensitive to many of the same risks as public equity, while private credit has many of the same risk sensitivities as publicly traded high yield bonds.
+
+Identifying sources of risk that are common across asset classes is one of the key advantages of a risk factor based approach. This mitigates a limitation of the traditional approaches, which may classify investments into different classes even when they face largely the same risk factors, leading a manager to believe the portfolio is more diversified than it actually is.
+
+Another advantage of a risk-based approach is that by allowing a manager to analyze multiple dimensions of portfolio risk, this approach is useful for developing an integrated risk management framework. In this sense, it can be more useful than the traditional approaches for highlighting the primary drivers of portfolio risk.
+
+Managers using a risk factor based approach must be aware that risk factor estimates can be sensitive to the period used for analysis. The results may also be more difficult to communicate to decision makers and to implement compared to traditional approaches.
+
+# LOS 20.d: Discuss investment considerations that are important in allocating to different types of alternative investments.
+
+An allocation to alternative investments also requires that investors consider a number of factors specific to this asset class. These include the choice of investment vehicles to be used, liquidity concerns, expenses and fees, the tax status of the investments, and the ability to obtain the expertise needed to invest successfully.
+
+Setting return expectations for alternative investments is made more difficult by their short history relative to other asset classes and by the limited validity of the data that are available. A suggested approach to determining an expected return for a particular class of alternative investments is to estimate each of its risk factor exposures, and add the expected returns from these exposures to the risk-free rate. An analyst may add an assumed return for the fund manager’s alpha and subtract fees and taxes, in order to refine this estimate.
+
+risk exposure * risk factor 방식으로 계산
+
+Several characteristics of alternative investments limit the usefulness of mean-variance optimization as a tool for determining their appropriate portfolio allocations. Because of illiquidity and valuation issues, option-like return patterns, and the fact that returns from some strategies tend to be low or negative during a drawdown period and high in later years, we cannot assume returns are normally distributed. (J-curve) Additionally, for alternative investments for which committed capital is not immediately invested by the manager, a portfolio’s effective allocation to the asset class might be less than its target.
+
+mean-variance framework 적용 어려움
+
+1. illiquidity
+2. valuation issue
+3. option-like pattern
+4. commitment vs. drawdown → time gap
+
+## Investment vehicles
+
+A typical structure for an alternative investment vehicle is a **limited partnership**. The investment manager is the **general partner** and investors in the fund are **limited partners**. With this structure, the liability of investors in the fund is limited to the amount they have committed. Often these limited partnerships are registered offshore for tax or reporting reasons.
+
+For investors that lack the needed expertise, investing through a **fund-of-funds** may be appropriate. A fund-of-funds manager can pool capital from investors and use it to invest in limited partnerships. Typically, a fund-of-funds manager will specialize in a particular subset of alternative investment strategies. The benefit of a fund-of-funds is that it provides access to this asset class to investors who otherwise would not have it. The drawback is that they charge an additional layer of fees above those charged by the underlying limited partnerships.
+
+Some investors that are large enough to demand favorable investment terms may establish **separately managed accounts (SMAs)** through which to access alternative investments. SMAs have requirements for both the investor and the fund manager that can make them challenging to implement. Another approach is to establish a limited partnership with a single client, known as a **fund of one**. A risk with SMAs or funs of one is that general partners, when allocating certain investment opportunities to investors, may favor limited partners who are paying the fund’s standard fees.
+
+- single LP fund
+
+Some open-ended mutual funds and “**undertakings for collective investment in transferable securities**” (UCITS) have developed to give smaller investors access to alternative investments. However, these structures are more regulated than the other investment vehicles and may constrain managers’ choice of strategies. As a result, returns on investments through these structures might not achieve the returns realized by the asset class as a whole.
+
+- 거래가능유가증권 집단투자방식
+
+## Liquidity concerns
+
+underlying asset
+
+1. strict closed-end
+2. low liquidity → call provision, investment horizon
+3. no redemption
+
+Both the investments structures and the underlying investments themselves contribute to liquidity risk.
+
+Limited partnerships for alternative investments are typically structured with subscription provisions for accepting capital, lock-up period, and restrictions on redemptions. Hedge funds, for example, may accept new capital quarterly or monthly, impose lock-up periods (often six months or a year) during which limited partners may not make redemptions or may do so only with a penalty, and offer redemptions on a quarterly or annual schedule as well as requiring a notice period prior to redemptions. They may also impose “gates” or maximum amounts that can be redeemed at any one time.
+
+Investment structure
+
+1. subscription agreement
+2. lock-up
+3. redemption
+    1. prior notice
+    2. redemption penalty
+4. gate = maximum redemption amount
+
+For funds in the private equity, private credit, real estate, and real asset sectors, liquidity provisions are often more strict than is typical for hedge funds. Subscriptions are structured in “closes” for new investors, usually over a one-year period. Limited partners commit a stated amount of capital, and the general partner will “call” this capital over an investment period (such as 3 to 5 years) as they identify investment opportunities. Redemptions are typically not available. Instead, the fund will distribute capital over its life (often 10 to 12 years) as it exits its investments. A small secondary market exists for limited partnerships, but transactions often take place at significant discounts to funds’ net asset values and may require approval from the general partner.
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%204.png)
+
+1. Committed capital이 전부 capital call이 안 될 수 있음 → return 왜곡 가능성
+2. Capital call / distribution timing의 불확실성 → return의 측정 어려움
+3. opportunity cost of committed capital
+4. liquidity - hedge fund의 redemption terms
+    1. long-biased hedge fund → liquidity good
+    2. short-biased hedge fund → liquidity bad
+    3. side pocket
+5. redemption이 많으면 GP 운용력 저하
+6. illiquid investment가 늘면 → restrict redemption
+7. Leverage → margin call → LP에게 불리
+8. market turbulence가 오면 Prime Broker (liquidity provider)가 claim → portfolio에 bad egg만 남음
+
+A general partner is not required to call the full amount of committed capital. This is an important consideration when estimating expected returns on a portfolio allocation to alternative investments. A fund may achieve an impressive rate of return, but a limited partner is only earning the return on the portion of committed capital that has been called.
+
+Neither **capital calls** nor distributions occur on a predetermined schedule. Capital may be called (or not) at any time during the **calldown period**. Distributions can occur at any point in the fund’s life, even during the calldown period. This, too, affects how much of a portfolio’s allocation to alternative investments is actually invested at any point in time.
+
+With respect to the liquidity of a fund’s holdings, a potential issue is whether they are consistent with the fund’s redemption terms. This is mostly a consideration for hedge funds; as noted previously, other types of private investment funds generally do not offer redemptions.
+
+Hedge funds that pursue long-only equity strategies tend to hold relatively liquid investments that are consistent with offering redemptions monthly or quarterly. Short positions are less liquid, which can be a concern if funds that hold significant short positions also offer redemptions frequently. Investors should also note that general partners might designate some of a fund’s less liquid holding as not subject to the fund’s ordinary redemption terms. This is referred to as a “**side pocket**.” A fund’s redemption terms may be misleading if a large portion of its holdings are side pocketed.
+
+Frequent redemption periods may limit a general partner’s flexibility to implement strategies with long time horizons or infrequent investment opportunities, such as event-driven strategies. This is particularly true for distressed assets and is the reason funds specializing in those tend to be private equity partnerships rather than hedge funds.
+
+Funds that hold significant portions of illiquid investments, such as some relative value funds, may restrict redemptions under certain market conditions to avoid having to liquidate these assets during crisis periods. One effect of these restrictions is that during such periods, investors may demand redemptions from other hedge funds that have more liquid holdings.
+
+Leverage is another important liquidity consideration because creditors have priority of claims over limited partners. Margin calls may force a leveraged fund to sell its most liquid holdings and be left with its less liquid investments, regardless of which holding the general partner would otherwise prefer to keep.
+
+## Expenses, fees, and taxes
+
+Many alternative investments involve significant fees and expenses, such as the “2 and 20” fee structure of many hedge funds (annual management fee 2% of assets under management, incentive fee 20% of gains). Administrative expenses of a fund may also be passed through to investors.
+
+Funds with calldown structures charge management fees on the amount of committed capital, regardless of how much of it has been called down. This may generate negative returns in the early years of an investment when much of the committed capital is yet to be called.
+
+Investors must ensure that their investments, and the investment vehicles used to invest, are consistent with their tax situations. Some fund strategies may result in short-term taxable income to investors, or may be subject to tax withholding. Investors who need to estimate their annual income for tax reporting may find it difficult to do so given the unpredictable nature of returns from many alternative investments. Tax-exempt organizations must ensure that income from a fund will not be considered to be unrelated to the organization’s purpose, and therefore considered taxable.
+
+## Intermediaries or in-house programs
+
+- build or buy
+- in-house or intermediary
+
+Large investors may consider developing their own program for implementing alternative investments directly rather than using intermediaries such as funds of funds. An in-house program may be appropriate for an investor that needs highly customized solutions, desires close control over its investment program, or wishes to implement co-investments with general partners. The “build or buy” decision depends on whether the investor can produce similar results to those of an intermediary at lower cost or generate returns high enough to offset any costs in excess of the costs charged by an intermediary.
+
+A successful program must be able to identify and invest with the best fund managers. Even if an investor is expert at choosing managers who will generate top returns, those managers may attract more capital than they can invest productively, and therefore close their funds to new investors. Manager may also decline capital from investors whose public reporting requirements they feel would be inconsistent with their proprietary strategies.
+
+Investors must also be able to perform due diligence on managers with whom they wish to invest. This requires access to their key decision makers, both before and during the life of an investment. Without this level of access, an investor may be left in a troubled fund when better-informed investors have already demanded redemptions.
+
+# LOS 20.E: Discuss suitability considerations in allocating to alternative investments.
+
+1. large investor knowledge
+2. low price efficiency
+3. longer time horizon
+4. strong governance system need
+5. low transparency
+
+In general, alternative investments are only suitable for large investors who have or can hire the specialized knowledge necessary to select profitable investments in this asset class. Because of the wide variety and complexity of alternative investment strategies that managers pursue, an investor needs a high level of expertise to understand the risks being undertaken and the market factors that drive the success of various fund strategies.
+
+Alternative investment strategies are largely based on the premise that skilled managers can create value through active management. (alpha source return) For this reason, alternative investments may not be suitable for investors whose philosophy is grounded in a belief in the price-efficiency of market. (beta return source)
+
+- beta investor에게 부적합
+
+Time (investment) horizon is a key consideration in determining the suitability of alternative investments. Private equity and private real assets are generally suitable only for investors with long time horizons (15 years or more). For investors with shorter time horizons, hedge funds with short lock-up periods and strategies that can be exited relatively quickly may be suitable. Hedge funds that focus on liquid instruments such as publicly traded equities or commodity futures are examples.
+
+A successful alternative investments program requires that the investor has a strong governance program. The investor should have a formal investment policy with clear objectives, put decision-making power in the hands of experts, and have a reliable reporting framework.
+
+Investors in alternative investments must be comfortable with a lower level of transparency than is generally available with traditional investments. As private partnerships, the funds are not governed by the reporting requirements that apply to publicly traded companies. When they do issue reports to investors, the level of detail varies widely and reports often arrive with a significant time lag. Many hedge funds use independent administrators to calculate their net asset values, but private equity and private real asset funds typically do not, which gives them wider discretion in asset valuation. (calculation agent) Furthermore, private equity and private real assets may be viewed as “blind pools” in that a fund does not begin acquiring assets until investors have already committed capital to the fund.
+
+# LOS 20.f: Discuss approaches to asset allocation to alternative investments.
+
+- Monte Carlo simulation
+- Mean-variance optimization
+- Risk factor based optimization
+
+These approaches can be used individually or in combination. Regardless of the approach chosen, an investor must consider the statistical properties or alternative investment returns that distinguish them from traditional asset classes.
+
+Modeling the risks and return properties of alternative investments is challenging. Because asset valuations for many alternative investments are based on appraisals, returns data are likely to be artificially smoothed and are often stale. As a result, using these data without adjustment would underestimate risk. Testing returns data for serial correlation is a suggested method for detecting this smoothing effect. If serial correlation is present, statistical techniques exist that can be used to unsmooth the data.
+
+- Modeling is challenging due to the data
+- smoothing 되어 있음 → analyze serial correlation → and then unsmoothing
+
+The distribution of returns is also known to be non-normal, exhibiting skew and excess kurtosis to a greater extent than traditional asset classes. Here, too, the data can be adjusted with statistical methods (such as stochastic volatility, regime switching, or extreme value theory) or by using observed returns instead of an assumed normal distribution of returns. A further limitation is the relatively short history of alternative investments, which may result in small-sample and time-period biases.
+
+One method for modeling a distribution with fat tails (positive excess kurtosis) is to define risk and return properties for two or more distinct market environments, for example, a normal period and a high-volatility period. (normal and non-normal 구분) Returns for each of these can be described with a normal distribution with its own assumed mean and variance. Combining the distributions, using an assumed probability of each environment occurring, results in a non-normal distribution.
+
+### Monte Carlo simulation
+
+1. Decide between asset class returns or risk factors as the variables to be simulated.
+2. Define how the model should behave statistically, for example by accounting for properties like mean reversion, fat-tailed distributions, or unstable correlations.
+3. If the model is based on risk factors, translate them to asset class returns.
+4. Use the resulting asset class return scenarios to develop meaningful outputs, such as the probability of a shortfall to a portfolio’s required or target rate of return.
+
+When using mean-variance optimization with alternative investments, the results may produce an excessive allocation to this asset class, particularly to illiquid investments such as private equity, especially when the data are not properly adjusted for smoothed returns. An optimization model may be designed to constrain the allocation to alternative investments (or any asset class) to be within a minimum and maximum percentage, or to limit overall volatility or downside risk.
+
+Investors should consider the asset allocations suggested by an optimization model to be a guideline rather than a prescription. They must consider the allocation in the context of their objectives and constraints, such as their liquidity requirements. They must also be aware of the limitations of mean-variance optimization. For example, small changes in the inputs may generate significant changes in optimal asset allocations.
+
+A risk factor based approach requires the additional step of translating the optimized risk exposures into an asset allocation. For example, both public and private equity provide exposure to economic growth risk, but the allocation to each depends on the desired exposure to liquidity risk.
+
+One of the limitations of this approach is that asset classes’ return sensitivity to some risk factor exposures might not be stable over time. Another is that correlations among risk factors may behave like correlations among asset class returns and increase during periods of financial stress.
+
+# LOS 20.g: Discuss the importance of liquidity planning in allocating to alternative investments.
+
+## Liquidity management
+
+1. near time calldown
+2. long investment horizon → model is needed
+    1. projecting Cashflow to / from fund
+    2. forecasting annual capital commitment
+    3. maintaining target allocation to alternative investment
+
+Managing liquidity is a crucial aspect of an alternative investments program, especially one that includes private investments with near-term capital calldown periods and long investment horizons. A portfolio must be managed in a way that meets its capital commitments while still providing required liquidity.
+
+An investor can develop forecasting models to help manage liquidity. Examples of liquidity modeling include projecting cash flows to and form a fund and forecasting the annual capital commitments needed to reach and maintain the targeted allocation to alternative investments.
+
+$$
+\text{percentage to be called in period t} \times (\text{committed capital} - \text{capital previously called})
+$$
+
+$$
+\text{percentage to be distributed in period t} * [\text{NAV in period (t - 1)} * (1 + \text{growth rate})]
+$$
+
+![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%205.png)
+
+$$
+\text{NAV in period}_{t} = \text{NAV in period}_{t - 1} \times (1 + \text{growth rate}) + \text{contributions in period t} - \text{distributions in period t}
+$$
+
+Using models such as these, an investor can estimate the cash flows to and from a fund. The investor should understand a model’s sensitivity to changes in model assumptions and how these affect cash flow forecasts.
+
+Liquidity forecasting is also important for managing how a portfolio reaches and maintains its target asset allocations. Take for example a $15 billion portfolio that currently has no investments in private equity but wants to have a 10% allocation to that asset class. This is unlikely to be achievable all at once (and even if it could be, the private equity investments would not be diversified across vintage years as they should).
+
+Instead, the allocation to private equity will need to increase toward its 10% target over a number of years. Importantly, that percentage will be based on the future values of both the overall portfolio and the private equity investments.
+
+Combined with the cash flow forecasting approach described previously for a particular fund, an investor can project the capital commitments needed over a span of years to reach the target allocation, and forecast the need to reinvest future distributions to maintain the target.
+
+A crucial aspect of liquidity planning is having cash available to meet capital calls. Keeping these amounts in cash equivalents has significant opportunity costs. A suggested approach is to invest it in publicly traded securities that may be viewed as proxies for the private investments to which they are committed. For example, capital committed to private real estate but not yet called could be invested in publicly traded real estate investment trusts.
+
+Capital calls, distributions, growth rates, and even fund lifetimes may turn out significantly different than expected. An investor should stress-test liquidity planning models against unexpected events such as delayed fund distributions when expected distributions have been earmarked to meet capital calls.
+
+# LOS 20.h: Discuss considerations in monitoring alternative investment programs.
+
+An alternative investment program must be monitored to ensure that it is achieving its stated goals in terms of return, risk, income, and safety. Its performance should be evaluated in the context of these goals, rather than simply measured against a benchmark.
+
+Even during the period when the allocation is alternative investments is building up to its target, monitoring is necessary to ensure the investments being made are consistent with the objectives of the program. Effective monitoring is particularly important with private and illiquid investment, because these require considerable time to correct if they are out of line with the portfolio’s objectives or if the objectives have changed.
+
+One reason that measuring against a benchmark or peer group can be misleading is the difficulty of selecting a representative one. Because many alternative investment strategies depend heavily on active management, any benchmark chosen is unlikely to be directly comparable to a portfolio’s actual investments in the asset class. In addition, published indexes are often inconsistent with each other in the way they define various alternative investment strategies.
+
+Monitoring of alternative investments can be challenging because their performance reporting can be infrequent and come with significant time lags. A further complication with private investments is that they often report internal rates of return rather than time-weighted rates of return. IRR is influenced by the timing of capital calls and distributions, and therefore, may be subject to manipulation. Investors may prefer to monitor a private fund’s **multiple on invested capital (MOIC)**. MOIC is calculated by dividing the value of the fund’s underlying investments, plus distributions, by total invested capital. Regardless of the metric used, investors should understand how any measure is affected by issues such as stale pricing and appraisal-based valuations. Understanding a fund’s investment holdings qualitatively may be the best approach to judging whether a manager is adding value.
+
+An investor should monitor these issues with respect to an alternative investment fund’s management:
+
+- Key man - A fund’s “key persons” are typically specified in its documents. Limited partners may be able to exercise certain rights if a key person leaves, and should understand the circumstances that caused the departure.
+- Interest alignment - The manager’s interests should be aligned with the investor’s interests. Potential conflicts may exist if the manager raises a new fund that invests in some of the same underlying holdings. If a manager withdraws capital that he had invested alongside the limited partners, they should learn the reasons.
+- Style drift - Because managers have a great deal of discretion over how they invest capital, investors should monitor a fund’s holdings over time for signs of style drift.
+- Risk management - An investor should observe the profile of a fund’s other investors and judge whether they are likely to remain committed for the long term. An unexpected increase in redemptions by other investors may be a warning sign. This could potentially put the fund in a position of having to sell its more attractive holdings to raise cash, leaving the remaining investors with less liquid or more poorly performing assets. A manager may also exercise “gates” that block further redemptions.
+- Other investors (눈치) - A large or unexpected increase in new investors may make more capital available to a manager than he has attractive opportunities to use. If this leads the manager to pursue lesser opportunities, the performance of the fund as a whole may suffer.
+- Auditors (Custodian, 3rd party provider) - A fund should have reliable auditors, custodians, and other third-party service providers. If these relationships change, an investor should understand whether it is for a positive reason (e.g., the fund outgrows the capabilities of a service provider and needs a larger one) or otherwise (e.g., an auditor quits a relationship because of a manager’s actions).

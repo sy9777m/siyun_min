@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-11">
+
+<title>Siyun Min - Artificial Intelligence 12th</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Artificial Intelligence 12th</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 11, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="th" class="level1">
+<h1>12th</h1>
+</section>
+<section id="명제-논리의-추론" class="level1">
+<h1>명제 논리의 추론</h1>
+<section id="추론규칙-inference-rule" class="level2">
+<h2 class="anchored" data-anchor-id="추론규칙-inference-rule">추론규칙 (inference rule)</h2>
+<p>참인 논리식들이 논리적으로 귀결하는 새로운 논리식을 만들어내는 기계적으로 적용되는 규칙</p>
+<section id="긍정논법-modus-ponens" class="level3">
+<h3 class="anchored" data-anchor-id="긍정논법-modus-ponens">긍정논법 (modus ponens)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="부정논법-modus-tollens" class="level3">
+<h3 class="anchored" data-anchor-id="부정논법-modus-tollens">부정논법 (modus tollens)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="삼단논법-syllogism" class="level3">
+<h3 class="anchored" data-anchor-id="삼단논법-syllogism">삼단논법 (syllogism)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="논리융합-resolution" class="level3">
+<h3 class="anchored" data-anchor-id="논리융합-resolution">논리융합 (resolution)</h3>
+<p>일반화된 추론규칙 - 긍정논법, 부정논법, 삼단논법의 규칙을 포함한 추론 규칙</p>
+<p>두 개의 논리합절이 같은 기호의 긍정과 부정의 리터럴을 서로 포함하고 있을 때, 해당 리터럴들을 제외한 나머지 리터럴들의 논리합절을 만들어내는 것</p>
+<p>논리융합식 (resolvent):</p>
+<p><span class="math display">\[
+P \lor q, \neg{P} \lor r \vdash q \lor r
+\]</span></p>
+</section>
+</section>
+<section id="추론규칙의-정당성-sound" class="level2">
+<h2 class="anchored" data-anchor-id="추론규칙의-정당성-sound">추론규칙의 정당성 (sound)</h2>
+<p>추론 규칙에 의해 생성된 논리식은 주어진 논리식들이 논리적으로 귀결하는 것이다.</p>
+<p>즉, 추론 규칙이 만들어낸 것은 항상 참이다.</p>
+</section>
+<section id="추론-규칙의-완전성-complete" class="level2">
+<h2 class="anchored" data-anchor-id="추론-규칙의-완전성-complete">추론 규칙의 완전성 (complete)</h2>
+<p>주어진 논리식들이 논리적으로 귀결하는 것들은 추론 규칙이 찾아 낼 수 있다.</p>
+</section>
+<section id="정리증명-theorem-proving" class="level2">
+<h2 class="anchored" data-anchor-id="정리증명-theorem-proving">정리증명 (theorem proving)</h2>
+<p>공리들을 사용하여 정리가 참인 것을 보이는 것</p>
+<section id="공리-axiom" class="level3">
+<h3 class="anchored" data-anchor-id="공리-axiom">공리 (axiom)</h3>
+<p>추론을 할 때, 참인 것으로 주어지는 논리식</p>
+</section>
+<section id="정리-theorem" class="level3">
+<h3 class="anchored" data-anchor-id="정리-theorem">정리 (theorem)</h3>
+<p>공리들에 추론 규칙을 적용하여 얻어지는 논리식</p>
+</section>
+<section id="구성적-증명-constructive-proof" class="level3">
+<h3 class="anchored" data-anchor-id="구성적-증명-constructive-proof">구성적 증명 (constructive proof)</h3>
+<p>공리들에 추론 규칙들을 적용하여 증명을 만들어 보이는 증명</p>
+</section>
+<section id="논리융합-반박-resolution-refutation" class="level3">
+<h3 class="anchored" data-anchor-id="논리융합-반박-resolution-refutation">논리융합 반박 (resolution refutation)</h3>
+<p>증명할 정리를 부정(negation)한 다음, 논리융합 방법을 적용하여 모순이 발생하는 것을 보여서, 정리가 참임을 증명하는 방법</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="명제-논리의-지식표현" class="level1">
+<h1>명제 논리의 지식표현</h1>
+<section id="명제-논리를-이용한-지식표현" class="level2">
+<h2 class="anchored" data-anchor-id="명제-논리를-이용한-지식표현">명제 논리를 이용한 지식표현</h2>
+<p>문장으로 표현된 지식으로부터 기본 명제들을 추출</p>
+<p>각 명제에 대해 명제기호 부여</p>
+<p>기본 명제들의 논리적 연결관계를 참고하여 대응되는 명제 기호들을 논리기호로 연결하여 논리식 구성</p>
+</section>
+<section id="명제-논리로-표현된-지식에-대한-추론" class="level2">
+<h2 class="anchored" data-anchor-id="명제-논리로-표현된-지식에-대한-추론">명제 논리로 표현된 지식에 대한 추론</h2>
+<p>명제기호가 나타내는 명제의 의미와는 무관</p>
+<p>대수적인 기호연산을 통해서 추론 수행</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="술어-논리-predicate-logic" class="level1">
+<h1>술어 논리 (predicate logic)</h1>
+<p>명제의 내용을 다루기 위해 변수, 함수 등을 도입하고 이들의 값에 따라 참, 거짓이 결정되도록 명제 논리를 확장한 논리</p>
+<section id="술어-predicate" class="level2">
+<h2 class="anchored" data-anchor-id="술어-predicate">술어 (predicate)</h2>
+<p>문장의 ‘주어 + 서술어’ 형태에서 서술어에 해당</p>
+<p>대상의 속성이나 대상 간의 관계를 기술하는 기호</p>
+<p>T 또는 F 값을 갖는 함수</p>
+<p>ex) Student(John), Friend(John, Mary)</p>
+<p>존재한정사(existential quantifier) <span class="math inline">\(\exists\)</span>와 전칭한정사(universal quantifier) <span class="math inline">\(\forall\)</span>사용</p>
+<ul>
+<li>변수의 범위를 고려한 지식을 표현</li>
+</ul>
+<p><span class="math display">\[
+\exists~x~Friend(John, x)
+\]</span></p>
+<p>John은 친구가 한 명은 있다.</p>
+<p><span class="math display">\[
+\forall~x~\exists~y~Friend(x, y)
+\]</span></p>
+<p>누구나 친구가 한 명은 있다.</p>
+</section>
+<section id="함수function" class="level2">
+<h2 class="anchored" data-anchor-id="함수function">함수(function)</h2>
+<p>주어진 인자에 대해서 참, 거짓 값이 아닌 일반적인 값을 반환</p>
+<p>술어나 다른 함수의 인자로 사용</p>
+</section>
+<section id="항term" class="level2">
+<h2 class="anchored" data-anchor-id="항term">항(term)</h2>
+<p>함수의 인자가 될 수 있는 것</p>
+<p>항이 될 수 있는 것: 개체상수, 변수, 함수</p>
+<ol type="1">
+<li>개체상수, 변수는 항이다</li>
+<li><span class="math inline">\(t_{1}, t_{2}, ..., t_{n}\)</span>이 모두 항이고, f가 n개의 인자를 갖는 함수 기호일 때, <span class="math inline">\(f(t_{1}, t_{2}, ..., t_{n})\)</span>은 항이다.</li>
+<li>1과 2에 의해 만들어질 수 있는 것만 항이다.</li>
+</ol>
+</section>
+<section id="술어-논리식에-대한-정형식" class="level2">
+<h2 class="anchored" data-anchor-id="술어-논리식에-대한-정형식">술어 논리식에 대한 정형식</h2>
+<ol type="1">
+<li><span class="math inline">\(t_{1}, t_{2}, ..., t_{n}\)</span>이 모두 항이고, p가 n개의 인자를 갖는 술어 기호일 때, <span class="math inline">\(p(t_{1}, t_{2}, ..., t_{n})\)</span>은 정형식이다.</li>
+<li>p, q가 정형식이면, 논리기호를 사용하여 구성되는 논리식 <span class="math inline">\(\neg{p}, p\lor q, p \land q, p\to q , p \equiv q\)</span>도 정형식이다.</li>
+<li>p(x)가 정형식이고, x가 변수일 때, <span class="math inline">\(\forall{x}~p(x), \exists~x~p(x)\)</span>는 정형식이다.</li>
+<li>1, 2, 3에 의해 만들어질 수 있는 것만 술어 논리의 정형식이다.</li>
+</ol>
+<p><span class="math display">\[
+\forall{x}~\forall{y}~Hourse(x) \lor Dog(y) \to Faster(x, y)
+\]</span></p>
+<p><span class="math display">\[
+\exists{y}~Greyhound(y) \lor (\forall{z}~Rabbit(z) \to Faster(y, z))
+\]</span></p>
+<p><span class="math display">\[
+Horse(Harry)
+\]</span></p>
+<p><span class="math display">\[
+Rabbit(Ralph)
+\]</span></p>
+<p><span class="math display">\[
+\forall~y~Greyhound(y) \to Dog(y)
+\]</span></p>
+<p><span class="math display">\[
+\forall~x~\forall~y~\forall~z~Faster(x, y) \land Faster(y, z) \to Faster(x, y)
+\]</span></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

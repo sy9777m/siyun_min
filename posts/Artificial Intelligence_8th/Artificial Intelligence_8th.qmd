@@ -1,0 +1,111 @@
+---
+title: "Artificial Intelligence 8th"
+author: "Siyun Min"
+date: "2022-09-27"
+categories: [SSU]
+---
+# 8th
+
+# 유전 알고리즘 (genetic algorithm, GA)
+
+생물의 진화를 모방한 집단 기반의 확률적 탐색 기법 (John Holland, 1975)
+
+대표적인 진화 연산 (evolutionary computation)의 하나
+
+- 유전 알고리즘, 유전자 프로그래밍 (genetic programming), 진화 전략 (evolutionary strategy)
+
+생물의 진화
+
+- 염색체 (chromosome)의 유전자 (gene)들이 개체 정보 코딩
+- 적자생존 (fittest survival) / 자연선택 (natural selection)
+    - 환경에 적합도가 높은 개체의 높은 생존 및 후손 번성 가능성
+    - 우수 개체들의 높은 자손 증식 기회
+    - 열등 개체들도 작지만 증식 기회
+- 집단 (population)의 진화
+    - 세대 (generation) 집단의 변화
+- 형질유전과 변이
+    - 부모 유전자들의 교차 (crossover) 상속
+    - 돌연변이 (mutation)에 의한 변이
+
+![Untitled](./Untitled.png)
+
+## 생물 진화의 문제 해결
+
+![Untitled](./Untitled%201.png)
+
+## 후보해 (candidate solution) 표현
+
+### 염색체 (chromosome) 표현
+
+![Untitled](./Untitled%202.png)
+
+### 모집단 (population)
+
+동시에 존재하는 염색체들의 집합
+
+### 적합도 함수 (fitness function)
+
+후보해가 문제의 해 (solution)로서 적합한 정도를 평가하는 함수
+
+## 부모 개체 선택 (selection)
+
+높은 적합도의 개체가 새로운 개체를 생성할 확률이 높도록 함
+
+적합도에 비례하는 선택확률
+
+![Untitled](./Untitled%203.png)
+
+## 유전 연산자 (genetic operator)
+
+새로운 개체 생성
+
+### 교차 (crossover) 연산자
+
+![Untitled](./Untitled%204.png)
+
+### 돌연변이 (mutation) 연산자
+
+![Untitled](./Untitled%205.png)
+
+### 세대 (generation) 교체
+
+엘리트주의 (elitism)
+
+- 우수한 개체를 다음 세대에 유지
+
+![Untitled](./Untitled%206.png)
+
+# 메타 휴리스틱 (meta heuristic)
+
+최적해는 아니지만 우수한 해를 빠르게 찾기 위한 heuristic적인 문제해결 전략
+
+- 유전 알고리즘 (genetic algorithm)
+- 모방 알고리즘 (memetic algorithm)
+- 입자 군집 최적화 (particle swarm optimization, PSO)
+- 개미 집단 (ant colony) 알고리즘
+- 타부 탐색 (Tabu search)
+- 담금질 기법 (simulated annealing)
+- 하모니 탐색 (Harmonic search)
+- 유전 프로그래밍 (genetic programming)
+
+![Untitled](./Untitled%207.png)
+
+# 함수 최적화 (function optimization)
+
+어떤 목적함수 (objective function)가 있을 때, 이 함수를 최대로 하거나 최소로 하는 변수 값을 찾는 최적화 문제
+
+![Untitled](./Untitled%208.png)
+
+## 제약조건 최적화 (constrained optimization)
+
+constraints를 만족시키면서 목적함수를 최적화시키는 변수 값들을 찾는 문제
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+기계학습 방법인 SVM의 학습에서 사용
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)

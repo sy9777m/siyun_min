@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-08-31">
+
+<title>Siyun Min - CFA Level 3 Derivatives and Currency Management</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">CFA Level 3 Derivatives and Currency Management</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">CFA</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 31, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="derivatives-and-currency-management" class="level1">
+<h1>Derivatives and currency management</h1>
+<section id="options-basics-value-at-expiration-and-profit-at-expiration" class="level2">
+<h2 class="anchored" data-anchor-id="options-basics-value-at-expiration-and-profit-at-expiration">Options basics-value at expiration and profit <strong>at expiration</strong></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The primary focus is on the way in which derivative contracts (instruments whose values derive from the economic performance of underlying securities, currencies, or other instruments or factors) may be used to hedge, or change the degree of exposure to, existing positions (for example a holding of a stock, or the exposure to a foreign currency caused by the ownership of an asset or liability in that currency).</p>
+<p>Reading 8 deals with options, mainly focused on options on individual stocks, although the principles apply equally well to options on any other instruments.</p>
+<p>The sequence of topics in our coverage of Reading 8 differs from the LOS order. We start by looking at the payoffs and profits associated with holding option positions to expiration.</p>
+<p>take a position in something = invest</p>
+<ol type="1">
+<li>long - profit when something up</li>
+<li>short - profit when something down</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>goals of derivatives</p>
+<ol type="1">
+<li>hedge</li>
+<li>change the degree of exposure</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In particular, distinguishing between option value and profit (respectively pre- and post-initial premium), and the graphical representation of how they vary with differing values of the underlying price, is very helpful when we move on to analyze more complex strategies.</p>
+<p>Each option contract will specify the underlying to which the right relates:</p>
+<ul>
+<li>Underlying include stocks and stock indices, bonds and bond futures, currencies, commodities, and more abstract factors such as stock volatility.</li>
+</ul>
+<section id="intrinsic-value-and-time-value" class="level3">
+<h3 class="anchored" data-anchor-id="intrinsic-value-and-time-value">Intrinsic value and time value</h3>
+<p>The key determinants of an option’s value are:</p>
+<ul>
+<li>the strike price</li>
+<li>the current level of the underlying</li>
+<li>the remaining time to expiration</li>
+<li>the volatility of the underlying (the expected annualized standard deviation of the underlying over the period to option expiration)</li>
+</ul>
+<p>Market participants may not agree on what an option is worth-most likely because they disagree on the appropriate figure to use for volatility. However, note that all options that trade on exchanges will have a value, which is reflective of the consensus at that point in time. The current value of an option can be used to infer the consensus estimate of volatility for the underlying, known as <strong>implied volatility</strong>. This is done by working backwards through a pricing model, given the other factors can be directly observed.</p>
+<p>Note that <strong>implied volatility</strong> is not the same as <strong>historical (realized) volatility</strong>, which is the square root of the actual realized variance of returns to date.</p>
+<p>It is important to note that the volatility that is used to determine the option value is an estimate of the volatility <strong>looking forward</strong>, which is not the same as actual movement in the stock price.</p>
+<p>Note that the intrinsic value is not the same as the profit to the long, which would have to factor in the premium that the long originally paid for the option. This means that it is perfectly possible for an option to be ITM, but for exercise to result in a loss to the long (if the intrinsic value &lt; initial premium paid).</p>
+<p>At any point before expiration an option also has time value, which reflects what might happen over its remaining life.</p>
+<p>A couple of general principles are worth remembering, namely that with all other factors held constant:</p>
+<ul>
+<li><strong>higher</strong> volatility means <strong>higher</strong> option premiums (both for calls and puts)</li>
+<li><strong>less</strong> time to expiry means <strong>lower</strong> option premiums (both for calls and puts)</li>
+</ul>
+</section>
+</section>
+<section id="data-for-examples" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-examples">Data for examples</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="basic-at-expiration-payoff-diagrams-for-calls-and-puts" class="level2">
+<h2 class="anchored" data-anchor-id="basic-at-expiration-payoff-diagrams-for-calls-and-puts">Basic at-expiration payoff diagrams for calls and puts</h2>
+<section id="calls" class="level3">
+<h3 class="anchored" data-anchor-id="calls">Calls</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>This means that if we know the shape of the value line for a strategy, the profit line will have exactly the same shape.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>It is clear that the maximum loss from a long call occurs when the option expires OTM with zero value, thus equals the premium paid.</p>
+<p>A long call has no maximum profit-the higher the stock price at expiry, the higher the profit on the call, with no upper limit.</p>
+<p>This means that equivalent long and short positions will have identical breakeven values for the underlying, while their maximum losses and profits will just swap around.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The basic motivation for buying a call is to profit from a rise in the underlying price, while limiting the downside.</p>
+<p>When a call is sold (without any hedging position in place) then the position is described as a <strong>naked</strong> (uncovered) <strong>call</strong>, and limited upside from falls in the underlying price is balanced against unlimited potential losses from the underlying rising.</p>
+</section>
+<section id="puts" class="level3">
+<h3 class="anchored" data-anchor-id="puts">Puts</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The basic motivation for buying a put is to profit from a fall in the underlying price, while limiting the downside.</p>
+<p>When a put is sold limited upside from rises in the underlying price is balanced against large (although limited) potential losses from the underlying falling.</p>
+<p>Writing a put option and simultaneously depositing the exercise price into a designated account is called writing a <strong>cash-secured</strong> put, thereby the long is assured that the put writer would be able to purchase the stock, if called on to do so. Simply writing a put without doing this is called a <strong>naked</strong> put.</p>
+</section>
+</section>
+</section>
+<section id="los-8.a-demonstrate-how-an-assets-returns-may-be-replicated-by-using-options." class="level1">
+<h1>LOS 8.a: Demonstrate how an asset’s returns may be replicated by using options.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Suppose both options were for May expiration, then the premium paid for the call would have been $6.26, while the premium received on the put would have been $3.87, for a net initial payment of $6.26 - $3.87 = $2.39.</p>
+<p>This profit calculation has ignored the time value of money, as we do throughout this topic review when we calculate net profits, but in this section let us be a bit more accurate. The premiums are paid “now” (assumed to be 20 March), whereas the value at expiration is in May, 61 days later, so we should not really just net them off.</p>
+<p>As an alternative to buying the call and selling the put, consider buying the underlying XYZ stock in March (for $52.14) and holding it to the May expiration date. If we simultaneously borrow the PV of the strike price then at the May expiration date we will end up with a position with a net value exactly the same as the value of the long call + short put position with a net value exactly the same as sell the stock for the stock price at expiration and will have repay the borrowing (the amount to repay will be the strike price, since the amount borrowed was its present value), leaving us with <span class="math inline">\(S_{T} - X\)</span> as before.</p>
+<p>Since these two positions end up with identical values, irrespective of the stock price at expiration, they must cost the same, so:</p>
+<ul>
+<li>Call premium (paid initially) - put premium (received initially) = initial stock price paid - PV(X) received</li>
+<li>In symbols <strong><span class="math inline">\(c_{0} - p_{0} = S_{0} - PV(X)\)</span></strong>, which can be rearranged to <span class="math inline">\(S_{0} + p_{0} = c_{0} + PV(X)\)</span>.</li>
+</ul>
+<p><strong>Put-call parity</strong></p>
+<p>Were PV(X) exactly equal to <span class="math inline">\(S_{0}\)</span> then put-call parity tells us that the call and put should have identical premiums (Because <span class="math inline">\(c_{0} - p_{0}\)</span> would equal zero). X in that situation would be the fair price for a forward contract.</p>
+<p><strong>Put-call forward parity</strong> substitute <span class="math inline">\(PV(F_{0}(T))\)</span> in place of <span class="math inline">\(S_{0}\)</span>, where <span class="math inline">\(F_{0}(T)\)</span> is the forward price for a contract that matures at the same time as the option expire giving <span class="math inline">\(PV(F_{0}(T)) + p_{0} = c_{0} + PV(X)\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="los-8.b-discuss-the-investment-objectivess-structure-payoff-risks-value-at-expiration-profit-maximum-profit-maximum-loss-and-breakeven-underlying-price-at-expiration-of-a-covered-call-position." class="level1">
+<h1>LOS 8.b: Discuss the investment objectives(s), structure, payoff, risk(s), value at expiration, profit, maximum profit, maximum loss, and breakeven underlying price at expiration of a covered call position.</h1>
+<section id="covered-calls-with-extra-yield-the-main-focus" class="level2">
+<h2 class="anchored" data-anchor-id="covered-calls-with-extra-yield-the-main-focus">Covered calls with extra yield the main focus</h2>
+<p>Suppose an investor has a long position in XYZ stock on 20 March. They think that the stock has limited upside over the next month, and are prepared to sell off upside above $55 ($2.86 above the 20 March stock price of $52.14).</p>
+<p>The classic way of doing this is to sell a call (a <strong>covered call</strong>, because the risk of the short option position is hedged by ownership of the stock), in this case an XYZ APR 55 call. This will (immediately) give premium income of $2.52 (per share) in March. → immediately</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>At $55 the stock has risen by $2.86, and this is thus the maximum gain (ignoring the call premium). Note also that, ignoring the call premium, the breakeven point is the original stock price of $52.14.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The maximum profit equals $2.86 + $2.52 = $5.38, while the breakeven is $2.52 lower than it was without the premium received, which is at $52.14 - $2.52 = $49.62 (up to a $2.52 fall in the stock price is cushioned by the call premium).</p>
+<p>Notice that the profit line has the same general shape as a short put and, as for a short put, the maximum loss is the same as the breakeven (since the loss increases one-for-one below breakeven, but the stock price cannot fall below zero). Thus maximum loss $49.62.</p>
+<p>Since the investor holding the stock believed the stock had limited upside over the month, they have turned upside potential (which they did not need) into cash in hand. They will only end up worse off if the stock price at expiry exceeds $55 + $2.52 = $57.52, which is the level at which the original stock gain/loss line cuts through the net profit line.</p>
+<p>In general, for a covered call:</p>
+<p><span class="math display">\[
+\text{maximum profit at expiry} = X - S_{0} + c_{0}
+\]</span></p>
+<p><span class="math display">\[
+\text{breakeven stock price at expiry} = \text{maximum loss at expiry} = S_{0} - c_{0}
+\]</span></p>
+<p>The motivation in the previous example of a covered call was earning extra yield (the focus was on the premium income). - short OTM call</p>
+<section id="reducing-a-position-at-a-favorable-price" class="level3">
+<h3 class="anchored" data-anchor-id="reducing-a-position-at-a-favorable-price">Reducing a position at a favorable price</h3>
+<p>Short ITM call</p>
+<p>A second scenario where covered calls might be written is when an investor holds a position in a stock and intends to reduce the holding in the near future. She might simply sell 1500 shares at $52.14, realizing $78210, but instead could write 15 exchange-traded XYZ April 50 call contracts (on 1500 shares), receiving a total premium of 1500 * $4.80 = $7200. Note that the options are currently ITM.</p>
+<p>Provided the share price at the April expiry is no lower than $50, the options will get exercised, and Jenkins will be obliged to deliver 1500 shares for 1500 * $50 = $75000. Adding the premium already received to this brings the total proceeds to $75000 + $7200 = $82200, which exceeds the proceeds had she simply sold at the market price on 20 March.</p>
+<p>However, there is a risk: if the XYZ price at expiration is lower than $50 then the calls with not be exercised and the shares will not be sold-the opportunity to sell at the current favorable price will have been missed.</p>
+<p>If the strategy does work as intended, however, Jenkins will have captured the time value embedded in the option price (in this case $4.80 - ($52.14 - $50) = $2.66 per share, which corresponds to 1500 * $2.66 = $3990 (= $82200 - $78210).</p>
+</section>
+<section id="target-price-realization" class="level3">
+<h3 class="anchored" data-anchor-id="target-price-realization">Target price realization</h3>
+<p>short slightly OTM call</p>
+<p>A third motivation is realizing a target price. In this case calls are written with a strike just above the current market price. The idea is that the investor believes the shock should be worth a bit more than its current price, and would be happy to sell it at the slightly-higher price. For example Perkins holds XYZ shares at $52.14 and writes APR 52.5 calls, receiving $3.53 per share. If the calls are exercised in April, then the shares are sold at $52.5 strike price, so a total per share of $52.5 + $3.53 = $56.03 has been realized.</p>
+<p>The dangers are twofold. First, the stock price may rise substantially, in which case Perkins would regret having to sell at $52.5, rather than the higher market price. Second, the stock price might decline, the opportunity to sell at the current level will have been missed.</p>
+<p>The observable difference between these three uses of covered calls is the value of the strike relative to the current stock price:</p>
+<ul>
+<li>For yield enhancement, the calls are OTM (possibly substantially so).</li>
+<li>For reducing a position at a favorable price, the calls are ITM.</li>
+<li>For target price realization, the calls are marginally OTM.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="los-8.c-discuss-the-investment-objectives-structure-payoff-risks-value-at-expiration-profit-maximum-profit-maximum-loss-and-breakeven-underlying-price-at-expiration-of-a-protective-put-position." class="level1">
+<h1>LOS 8.c: Discuss the investment objective(s), structure, payoff, risk(s) value at expiration, profit, maximum profit, maximum loss, and breakeven underlying price at expiration of a protective put position.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\text{BEP of Covered Call} = S_{0} - C_{0}
+\]</span></p>
+<p><span class="math display">\[
+\text{BEP of Protective put} = S_{0} + P_{0}
+\]</span></p>
+<p>For an investor who has a long position in an underlying, the classic options-based hedge is the protective put-buying a put option to protect against the underlying falling in value, while retaining upside.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In general, for a protective put:</p>
+<p><span class="math display">\[
+⁍
+\]</span></p>
+<p><span class="math display">\[
+⁍
+\]</span></p>
+<p><span class="math display">\[
+\text{Maximum profit} = unlimited
+\]</span></p>
+</section>
+<section id="los-8.e-compare-the-effect-of-buying-a-call-on-a-short-underlying-position-with-the-effect-of-selling-a-put-on-a-short-underlying-position." class="level1">
+<h1>LOS 8.e: Compare the effect of buying a call on a short underlying position with the effect of selling a put on a short underlying position.</h1>
+<p>If an investor starts with a short position in the underlying, they will gain if the price falls and lose if the price rises.</p>
+<p>Buying a call (probably above the current stock price) would provide a hedge against the stock rising. This is analogous to the way a protective put hedges a long stock position against a fall in the price:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Similarly, the sale of a put (probably below the current stock price) sells off (part of) the benefit of the stock falling, in the same way <strong>a covered call</strong> sells off the upside of <strong>a long stock</strong> position:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="los-8.f-discuss-the-investment-objectives-structure-payoffs-risks-value-at-expiration-profit-maximum-profit-maximum-loss-and-breakeven-underlying-price-at-expiration-of-the-following-option-strategies-bull-spread-bear-spread-straddle-and-collar." class="level1">
+<h1>LOS 8.f: Discuss the investment objective(s), structure, payoffs, risk(s), value at expiration, profit, maximum profit, maximum loss, and breakeven underlying price at expiration of the following option strategies: bull spread, bear spread, straddle, and collar.</h1>
+<section id="collar" class="level2">
+<h2 class="anchored" data-anchor-id="collar">Collar</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The <strong>collar</strong> is probably best thought of as combination of protective put and covered call.</p>
+<p>An investor who is long the underlying could buy a put (most likely OTM) to hedge the stock’s downside, while at the same time selling a call (also most likely OTM) to sell off the upside and subsidize the cost of the put.</p>
+<p>Usually the put strike is set, then an appropriate call strike is determined such that the call and put have the same premium. In this case there will be no net inflow or outflow at initiation and the investor will have constructed a <strong>zero-cost collar</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Notice, in this case, that the line for stock profit + option values is the same as the net profit line because of the zero net initial premium.</p>
+</section>
+<section id="straddle" class="level2">
+<h2 class="anchored" data-anchor-id="straddle">Straddle</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 29.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The <strong>straddle</strong> is the classic volatility play. A long straddle involves the purchase of an equal number of calls and puts on a given underlying. The options all have the same expiry date and strike.</p>
+<p><strong>Strangles</strong> are like straddles, but the calls and puts have different strikes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The value line for a long straddle is always V-shaped, centered on the strike, where both options expire worthless, so the total value is 0.</p>
+<p>The strategy breaks even at expiration when:</p>
+<ul>
+<li>either the call is $12.41 ITM at $52.50 + $12.41 = $64.91</li>
+<li>or the put is $12.41 ITM at $52.50 - $12.41 = $40.09</li>
+</ul>
+<p>The strategy, if held to expiration, makes larger profits, the further from the strike the underlying ends up (i.e.&nbsp;the more the underlying moves, either way). There is no maximum profit.</p>
+<p>Short straddle</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 31.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="spreads" class="level2">
+<h2 class="anchored" data-anchor-id="spreads">Spreads</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 32.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 33.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Bull and bear spreads are positions that have equal numbers of long options on one strike and short options on a second strike. A spread will either be constructed using calls or using puts.</p>
+<ul>
+<li><strong>Bull</strong> spreads use <strong>long</strong> options on the <strong>lower</strong> strike (<strong>Bull = Buy low</strong>) and <strong>short</strong> options on the <strong>higher</strong> strike.
+<ul>
+<li>bull-call spread</li>
+</ul></li>
+<li><strong>Bear</strong> spreads use <strong>short</strong> options on the <strong>lower</strong> strike and <strong>long</strong> positions on the <strong>higher</strong> strike.
+<ul>
+<li>bear-put spread</li>
+</ul></li>
+</ul>
+<section id="bull-call-spread" class="level3">
+<h3 class="anchored" data-anchor-id="bull-call-spread">Bull call spread</h3>
+<p>Suppose that on 20 March an investor buys an XYZ June 50 call for $7.40 and sells and XYZ June 55 call for $5.20. This will involve a net outlay of $7.40 - $5.20 = $2.20.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 34.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>It is clear that the exposure is bullish, but limited, compared to just having a long call at 50.</p>
+<p>Between the strikes only the long call expires ITM, so the value (payoff) is equal to the difference between the stock price and the lower strike.</p>
+<p>At 55 the value will equal 5, the difference between the strikes. This is also the maximum value, since any further upside to the long call is hedged away by the short call, which goes ITM above 55.</p>
+<p>The maximum loss (when value = 0) is the net premium paid, $2.20.</p>
+<p>Breakeven occurs when the value of the long call exactly compensates for the net premium paid. This will be $2.20 above the lower strike, at $50 + $2.20 = $52.20.</p>
+<p>The maximum profit is the maximum value of $5 less the net premium, thus $5 - $2.20 = $2.80.</p>
+<p>In general, for a bull call spread:</p>
+<ul>
+<li>Maximum loss = net premium paid</li>
+<li>Breakeven = lower strike + net premium paid</li>
+<li>Maximum profit = difference between strikes - net premium paid</li>
+</ul>
+<p>The bull call spread is an example of a <strong>debit spread</strong> since it entails a net outlay: the bought call, with a lower strike, is more valuable then the sold call.</p>
+<p>The other debit spread is the bear put spread.</p>
+</section>
+<section id="bear-put-spread" class="level3">
+<h3 class="anchored" data-anchor-id="bear-put-spread">Bear put spread</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 35.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>It is clear that the exposure is bearish, but limited, compared to just having a long put at 55.</p>
+<p>For a bear put spread:</p>
+<ul>
+<li>maximum loss = net premium paid ($2.74 in this case)</li>
+<li>Breakeven = higher strike - net premium paid ($55 - $2.74 = $52.26)</li>
+<li>Maximum profit = difference between strikes - net premium paid ($5 - $2.74 = $2.26)</li>
+</ul>
+</section>
+<section id="bear-call-and-bull-put-spreads" class="level3">
+<h3 class="anchored" data-anchor-id="bear-call-and-bull-put-spreads">Bear call and bull put spreads</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 36.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>It is also possible, of course, to use calls to create a bear spread, or puts to create a bull spread. In both cases there would be a net inflow of premium (since the relatively more valuable option is sold) and they are referred to as <strong>credit spreads</strong>.</p>
+<p>As a general rule, assume that a bull spread would be constructed using calls and that a bear spread would be constructed using puts (i.e.&nbsp;that debit spreads are to be preferred over credit spreads) unless a question states otherwise.</p>
+<p>For example, a bear call spread could use a short XYZ June 50 call ($7.40) plus a long XYZ June 55 call ($5.20) with a net initial inflow of $7.40 - $5.20 = $2.20.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 37.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\text{Maximum profit} = \text{net premium received}
+\]</span></p>
+<p><span class="math display">\[
+Breakeven = \text{lower strike} + \text{net premium received}
+\]</span></p>
+<p><span class="math display">\[
+\text{Maximum loss} = \text{difference between strikes} - \text{net premium received}
+\]</span></p>
+<p>Similarly, a <strong>bull put spread</strong> is the reverse of a bear put spread, in this case a short XYZ May 55 put ($6.61) and a long XYZ May 50 put ($3.87).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 38.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\text{Maximum profit} = \text{net premium received}
+\]</span></p>
+<p><span class="math display">\[
+Breakeven = \text{higher strike} - \text{net premium received}
+\]</span></p>
+<p><span class="math display">\[
+\text{Maximum loss} = \text{difference between strikes} - \text{net premium received}
+\]</span></p>
+</section>
+</section>
+<section id="adding-a-short-leg-to-a-long-position" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-short-leg-to-a-long-position">Adding a short leg to a long position</h2>
+<p>Both legs of the spread do not necessarily have to be established at the same time, or held for the same length of time. For instance, a trader might have gone long an October 30 call in August, when the stock price was 28, and by September the stock may have risen 38.5, so that he is already sitting on a potential profit. If at that point he thinks it unlikely that the stock price will rise further, he might sell October 40 call, effectively cashing in the upside potential he does not think he needs. This is similar to the motivation behind a covered call.</p>
+</section>
+<section id="generalized-at-expiration-formulas-for-spreads" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-at-expiration-formulas-for-spreads">Generalized at-expiration formulas for spreads</h2>
+<p>In these formulas, net premium means the absolute value of the difference between the premiums.</p>
+<p>For <strong>debit spreads</strong> (bull call and bear put):</p>
+<p><span class="math display">\[
+\text{Maximum loss} = \text{net premium paid}
+\]</span></p>
+<p><span class="math display">\[
+\text{Maximum profit} = \text{difference between strikes} - \text{net premium paid}
+\]</span></p>
+<p>For <strong>credit spreads</strong> (bull put and bear call):</p>
+<p><span class="math display">\[
+\text{Maximum profit} = \text{net premium received}
+\]</span></p>
+<p><span class="math display">\[
+\text{Maximum loss} = \text{difference between strikes} - \text{net premium received}
+\]</span></p>
+<p>For <strong>call spreads</strong>, breakeven = lower strike + net premium</p>
+<p>For <strong>put spreads</strong>, breakeven = higher strike - net premium</p>
+</section>
+<section id="delta-and-gamma" class="level2">
+<h2 class="anchored" data-anchor-id="delta-and-gamma">Delta and Gamma</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 39.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 40.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 41.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>So far, we have only considered values and profits at the point of option expiration; in so doing, we only had to worry about intrinsic value (thus simple one-for-one relationships).</p>
+<p>During their lives, the way in which options respond to changes in the value of the underlying (and other factors) is more complicated, and we will now look at some aspects of this.</p>
+<section id="the-greeks" class="level3">
+<h3 class="anchored" data-anchor-id="the-greeks">The Greeks</h3>
+<ul>
+<li>Delta (<span class="math inline">\(\Delta\)</span>) = change in <strong>option price</strong> per +1 change in <strong>stock price</strong>
+<ul>
+<li>Delta is positive for (long) calls and negative for (long) puts</li>
+</ul></li>
+<li>Gamma (<span class="math inline">\(\Gamma\)</span>) = change in <strong>option delta</strong> per +1 change in <strong>stock price</strong>
+<ul>
+<li>Gamma is positive for (long) calls and for (long) puts</li>
+<li>Short → negative gamma</li>
+</ul></li>
+<li>Theta (<span class="math inline">\(\Theta\)</span>) = daily change in <strong>option price</strong> (effect of <strong>time passing</strong>)
+<ul>
+<li>Theta is negative for (long) calls and (long) puts</li>
+</ul></li>
+<li>Vega (<span class="math inline">\(\nu\)</span>) = change in <strong>option price</strong> per +1% change in <strong>volatility</strong>
+<ul>
+<li>Vega is positive for (long) calls and for (long) puts</li>
+</ul></li>
+</ul>
+<p>Like option premiums, you will not be asked to calculate the values of the Greeks-if needed in a question they would be provided. What is important is an appreciation of the meaning and significant of each one.</p>
+<p>Taking the XYZ stock options as an example, below is the table of option premiums on 20 March (when the stock price was $52.14) as seen before, together with a table of delta at the same point in time:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 42.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>For example, the MAY 55 call ahs a delta of 0.47, meaning that if the stock price rose by $1 to $53.14 then the MAY 55 call would rise, in principle, by $0.47, to $4.02 + $0.47 = $4.49. Note that all other factors are assumed held constant, in particular, time, so the change has to be instantaneous.</p>
+<p>In fact, if we recompute the MAY 55 call premium for the $53.14 stock price, the pricing model gives us a figure of $4.51, slightly higher than the $4.49 predicted by delta. This is because the option price line is not a straight line (other than at expiration), with a curvature measured by <strong>gamma</strong>, so delta itself varies with the underlying.</p>
+<p>The vertical distance between the (total) value line and the intrinsic value line corresponds to the time value, which is at its greatest around ATM, and diminishes the more the potion is ITM or OTM.</p>
+<p>Time value is a reflection of the relative difficulty of hedging an option, and options are harder to hedge when it is unclear whether they are going to <strong>expire</strong> ATM, ITM or OTM. If they are already deeply ITM or OTM there is less uncertainty about this.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 43.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 44.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>For example, the MAY 55 call has a gamma of 0.031, meaning if the share price were $1 higher, the call’s delta would be 0.031 higher: 0.470 + 0.031 = 0.501.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 45.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Puts (long) have negative delta, since the line slopes downwards, but there is a simple rule that applies to both calls and puts regarding the absolute size of delta (i.e., ignoring the sign):</p>
+<p>All other factors held constant:</p>
+<ul>
+<li>The <strong>more ITM</strong> is an option, the <strong>higher</strong> is its (absolute) delta (closer to 1)</li>
+<li>The <strong>more OTM</strong> is an option, the <strong>lower</strong> is its (absolute) delta (closer to 0)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 46.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Gamma is trickier to generalize, but it tends to be higher the closer to ATM an option, <strong>and it at its greatest for ATM options that are close to expiration</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 47.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 48.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="deltas-for-the-underlying-and-for-futures-and-forwards-on-the-underlying" class="level2">
+<h2 class="anchored" data-anchor-id="deltas-for-the-underlying-and-for-futures-and-forwards-on-the-underlying">Deltas for the underlying and for futures and forwards on the underlying</h2>
+<p>It follows directly from the definition of delta that:</p>
+<ul>
+<li>The delta of a <strong>long</strong> position in one unit of the underlying is +1.</li>
+<li>The delta of a <strong>short</strong> position in one unit of the underlying is -1.</li>
+</ul>
+<p>Futures and forwards on underlying that pay no yield (e.g.&nbsp;non-dividend paying stocks) are essentially proxies for the underlying, so they also have deltas of +1 (if long) and -1 (if short).</p>
+</section>
+</section>
+<section id="los-8.d-compare-the-delta-of-covered-call-and-protective-put-positions-with-the-position-of-being-long-an-asset-and-short-a-forward-on-the-underlying-asset." class="level1">
+<h1>LOS 8.d: Compare the delta of covered call and protective put positions with the position of being long an asset and short a forward on the underlying asset.</h1>
+<section id="position-deltas" class="level2">
+<h2 class="anchored" data-anchor-id="position-deltas">Position deltas</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 49.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The overall (or portfolio) delta for a combination of options and positions in the underlying is computed by adding up the individual deltas (being careful with the signs).</p>
+<p>Unless told otherwise, assume that a traded stock option contract is a right over 100 shares. So a long position in an XYZ call option contract, where the potion delta is +0.65, would have a position delta of 100 * 0.65 = 65.</p>
+</section>
+<section id="protective-put-pre-expiry" class="level2">
+<h2 class="anchored" data-anchor-id="protective-put-pre-expiry">Protective put pre-expiry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 50.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 51.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>However, before expiration, the protective put is better thought of as modifying the delta of the long stock from its unhedged value of +1:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 52.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Notice that the stock plus the protective put has a net exposure equivalent to a long call.</p>
+<p>Had we, instead, undertaken a forward contract-based hedge of the stock (selling forward against long stock position) then, given that our forward position would be on exactly the same number of shares as we were holding, we would obtain a position delta of <span class="math inline">\(\text{number of shares} * (\text{delta of long stock} + \text{delta of short forward}) = \text{number of shares} * (+1 + -1) = 0\)</span>, and would be completely hedged against price movements.</p>
+</section>
+<section id="covered-call-pre-expiry" class="level2">
+<h2 class="anchored" data-anchor-id="covered-call-pre-expiry">Covered call pre-expiry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 53.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 54.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>As with the protective put, the position delta varies from close to +1 (when the call is deeply OTM) to close to 0 (when the call is deeply ITM, and virtually all of the stock’s upside is hedged away).</p>
+</section>
+<section id="collar-pre-expiry" class="level2">
+<h2 class="anchored" data-anchor-id="collar-pre-expiry">Collar pre-expiry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 55.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Here is a collar [XYZ stock, long June 50 put (premium = $4.88), short June 55.87 call (premium = $4.88)] shown in the same way, at expiration, and at initiation (91 days before expiration):</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 56.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 57.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Pre-expiry the impact of the collar is to considerably dampen down the variability of the position (to about 15-20% of its unhedged level, in this case).</p>
+</section>
+<section id="bull-call-spread-pre-expiry" class="level2">
+<h2 class="anchored" data-anchor-id="bull-call-spread-pre-expiry">Bull call spread pre-expiry</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 58.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>It is still clear why it is bullish in outlook, but the exposure is highly muted, compared to the position at expiration (look at the values for delta). Notice that resemblance to the position for the collared stock. Something very similar would be seen for the other bull and bear spreads.</p>
+<p>option 보유자는 전부 long gamma</p>
+</section>
+<section id="theta" class="level2">
+<h2 class="anchored" data-anchor-id="theta">Theta</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 59.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 60.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 61.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Theta measures how quickly an option loses value at time passes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 62.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Notice that they are all negative: all other factors equal, less time to expiration means less time value.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 63.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-8.g-describe-uses-of-calendar-spread" class="level1">
+<h1>LOS 8.g: Describe uses of calendar spread</h1>
+<section id="calendar-spreads" class="level2">
+<h2 class="anchored" data-anchor-id="calendar-spreads">Calendar spreads</h2>
+<p>short-dated option 만기까지 market view 기준 1) neutral calendar spread: ATM, 2) bullish calendar spread: higher strike price, 3) bearish calendar spread: lower strike price</p>
+<p>In the spreads we have looked at so far, the options all expired at the same points (as well as being on the same underlying). <strong>Calendar spreads</strong> are the only examples we consider of option strategies where the options have different expirations.</p>
+<p>The basic motivation with calendar spreads is to exploit the difference in <strong>theta</strong> between close-to-expiry and more-distant-from-expiry options.</p>
+<p>A long calendar spread entails buying longer-dated options and selling short-dated options with the same strike and underlying. In principle the premium on the shorter-dated should fall faster then the premium on the longer-dated. Thus more value is gained on the short position than is lost on the long position, and a net profit is realized.</p>
+<p>The options need to be close to ATM so the thetas are the right way around, and little movement should be anticipated in the underlying over the period to expiry of the nearer-dated option (large movement might undermine the profit from the strategy). Both options will either be calls or puts, and the choice between calls and puts will reflect the investor’s view on the longer-term prospects for the stock (calls if bullish, puts if bearish).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 64.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 65.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>A short calendar spread (reserve calendar spread) entails selling longer-dated options and buying shorter-dated options with the same strike and underlying. When options are sufficiently ITM or OTM the theta are relatively higher for the longer-dated options, so this time the belief is that the longer-dated options will lose time value relatively more rapidly, thus the position as a whole should gain.</p>
+<p>The short calendar spread strategy is vulnerable, however, to the underlying moving so the options end up ATM when the shorter-dated option expires (so the longer-dated option premiums rise, unless implied volatility also falls, and overall there is a loss since we are short). If the stock moves at all during the period of the strategy, it would be better for it to move a lot.</p>
+<ul>
+<li>time value 라인을 따라가야 함</li>
+</ul>
+<p>In both cases (long/short calendar spread), the strategy is fundamentally the same: to sell the options that are expected to fall relatively faster as time passes.</p>
+<p>In general:</p>
+<ul>
+<li>A long calendar spread will benefit from a stable market or an increase in implied volatility.</li>
+<li>A short calendar spread will benefit from a stable market or an decrease in implied volatility.</li>
+</ul>
+</section>
+<section id="vega" class="level2">
+<h2 class="anchored" data-anchor-id="vega">Vega</h2>
+<p>Vega measures the effect of a 1% increase in volatility on the value of the option. (implied volatility)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 66.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Vegas are always positive: a more volatile makes all the options on it more valuable (because there is more uncertainly about how things will turn out at expiration, thus more time value).</p>
+<p>All other factors constant, vega is higher the more there is to expiry, but it diminished the further ITM or OTM the option is.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 67.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="an-aside-on-calculating-volatility" class="level2">
+<h2 class="anchored" data-anchor-id="an-aside-on-calculating-volatility">An aside on calculating volatility</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 68.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 69.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 70.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 71.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 72.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 73.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math inline">\(C_{0} = S_{0}N(d_{1}) - Xe^{-rT}N(d_{2}) = f(S_{0}, \sigma, T, X, r)\)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 74.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+d_{1} = \frac{\ln{S_{0}} + (r + \frac{1}{2}\sigma^{2})T - \ln{X}}{\sigma\sqrt{T}}
+\]</span></p>
+<p><span class="math display">\[
+d_{2} = d_{1} - \sigma\sqrt{T} = \frac{\ln{S_{0}} + (r - \frac{1}{2}\sigma^{2})T - \ln{X}}{\sigma\sqrt{T}}
+\]</span></p>
+<p>In converting between volatility (standard deviation) values for different time periods we multiply the volatility number by the <strong>square root</strong> of the ratio between the period lengths. For example, if we have used our pricing model to compute an annualized implied volatility of 57% from the value of an option expiring in two months (of, say, 42 trading days), then assuming a 252-day trading year we could derive an expected two-monthly volatility of <span class="math inline">\(57\% = \sqrt{\frac{42}{252}} = 23.27\%\)</span>. Converting from monthly (21 days) to annual, on the other hand, would entail multiplying by <span class="math inline">\(\sqrt{\frac{252}{21}}\)</span>.</p>
+</section>
+<section id="straddle-pre-expiry" class="level2">
+<h2 class="anchored" data-anchor-id="straddle-pre-expiry">Straddle pre-expiry</h2>
+<p>At a given level of volatility the value varies with the underlying in a more subtle way then the V-shape we saw at expiry. It is still the case that value increases the further the underlying price is from the strike price, but the slope of the line (i.e., the delta) near the strike is close to zero, tending towards +1 as the underlying increases, and toward -1 as the underlying decreases. In particular note how, at a given point in the option’s life, the level of volatility can have a dramatic effect on the value of the position:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 75.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 76.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 77.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Having both a call (with positive delta) and a put (with negative delta) means that we can have a position with a delta close to zero (<strong>delta-neutral</strong>, so we do not care what happens to the underlying price, within reason) but with positive vega.</p>
+<p>Beware, however, that with two long options we will have negative theta, which means that the value will fall over time.</p>
+</section>
+</section>
+<section id="los-8.h-discuss-volatility-skew-and-smile." class="level1">
+<h1>LOS 8.h: Discuss volatility skew and smile.</h1>
+<p>Holding expiration date constant, there are two often-observed patterns in the relationship between implied volatility and strike price:</p>
+<ul>
+<li>A <strong>volatility smile</strong> is where the further-from-ATM options have higher implied volatilities, so we would see a U-shaped (smiling) curve if implied volatility were plotted against strike.</li>
+<li>A <strong>volatility skew</strong> is where implied volatility increases for more OTM puts, and decreases for more OTM calls. This is explained by OTM puts being desirable as insurance against market declines (so their value are bid up by higher demand, and higher values imply higher volatility), while the demand for OTM calls is low.</li>
+</ul>
+<p>Deviations in the skew from historical levels can be used to draw conclusions about market sentiment:</p>
+<ul>
+<li>A shape increase in the level of the skew, plus a surge in the absolute level of implied volatility, is an indicator that market sentiment is turning bearish.</li>
+<li>Higher implied volatilities (relative to historical levels) for OTM calls indicate that investors are bullish, so the demand for OTM calls to take on upside exposure is strong.</li>
+</ul>
+<p>Deviations that are expected to correct could form the basis of trading strategies, which might involve the use of risk reversals.</p>
+<p>For example, if a trader believes that put implied volatility is relatively too high, compared to that for calls, a long risk reversal could be created by buying the OTM call (seen as relatively underpriced) and selling the OTM put (seen as relatively overpriced) for the same expiration. This would create a broadly exposure to the underlying, which could be problematic.</p>
+<p>The following diagram shows values and delta for a risk reversal on PQR stock. The PQR price is currently 50 and the call is bought at a strike of 60, while the put is sold at 40. The call’s implied volatility is 50%, while the put’s implied volatility is 70%. Suppose that this differential is substantially greater than we have seen in the past.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 78.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The aim of the strategy is to make money if the anomalous relationship among the implied volatilities corrects (we went long the options that should gain value and short the options that should lose value if this happens). We were not aiming to bet on the stock price moving (because delta &gt; 0), but we have a net long exposure to the stock. To remove this exposure to the stock (delta) one further trade is necessary: the sale of 300 shares.</p>
+<p>Why 300 shares? Because such a short position will experience equal and opposite gains/losses to the risk reversal, and will hedge the exposure to the stock price. This kind of hedge is called a <strong>delta hedge</strong> because the size of the position on one side of the hedge is adjusted to compensate for the delta of the position on the other side, 1000 shares’ worth of options with a delta of 0.3 are delta-hedged by 1000 * 0.3 = 300 shares.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 79.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Note that the delta of the risk reversal will not stay constant (for example it changes as the stock price changes, and as time passes) and the size of the delta-hedge position will need to be adjusted (this is typical of delta hedges; they are <strong>dynamic hedges</strong> and require periodic rebalancing).</p>
+<p>Finally, be aware of two further pieces of terminology</p>
+<ul>
+<li>There is a <strong>term structure of volatility</strong>, where implied volatilities differ across option maturities (contango is quite common, with longer-dated options having higher implied volatilities).</li>
+<li>An <strong>implied volatility surface</strong> uses a three-dimensional graph, with implied volatility on the z-axis, to examine the joint influence of maturity (x-axis) and strike price (y-axis).</li>
+</ul>
+</section>
+<section id="los-8.i-identify-and-evaluate-appropriate-option-strategies-consistent-with-given-investment-objectives." class="level1">
+<h1>LOS 8.i: Identify and evaluate appropriate option strategies consistent with given investment objectives.</h1>
+</section>
+<section id="los-8.j-demonstrate-the-use-of-options-to-achieve-targeted-equity-risk-exposures." class="level1">
+<h1>LOS 8.j: Demonstrate the use of options to achieve targeted equity risk exposures.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 80.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 81.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 82.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 83.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 84.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 85.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 86.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 87.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 88.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 89.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 90.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 91.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 92.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 93.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 94.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 95.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 96.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 97.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="los-9.a-demonstrate-how-interest-rate-swaps-forwards-and-futures-can-be-used-to-modify-a-portfolios-risk-and-return." class="level1">
+<h1>LOS 9.a: Demonstrate how interest rate swaps, forwards, and futures can be used to modify a portfolio’s risk and return.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 98.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The primary focus here is understanding how to use derivatives to 1) change the beta of an equity portfolio, 2) change the duration of a bond portfolio, 3) change portfolio exposure to various asset classes, 4) create synthetic positions, and 5) lock in an interest rate for anticipated future borrowing or lending.</p>
+<p>Interest rate swaps can be used to alter the duration of a fixed-income portfolio by changing a fixed-rate exposure to a floating-rate exposure, or vice versa.</p>
+<section id="interest-rate-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="interest-rate-swaps">Interest rate swaps</h2>
+<p>A <em>payer swap</em> is a contract to make a series of fixed-rate payments and receive a series of floating-rate payments, both based on a specified <em>notional principal</em> (amount).</p>
+<p>The counterparty to a payer swap has a <em>receiver swap</em> and will receive the fixed-rate payments and make the floating-rate payments.</p>
+<p>The floating-rate payment for the first <em>settlement date</em> is known at contract initiation, but the floating-rate payments for future settlement dates are not. The risk-return characteristics of a swap can be replicated with a capital market trade. For example, issuing a fixed-rate bond and buying an otherwise identical floating-rate bond would generate the same payments as a payer swap.</p>
+</section>
+<section id="converting-a-floating-rate-exposure-to-a-fixed-rate-exposure" class="level2">
+<h2 class="anchored" data-anchor-id="converting-a-floating-rate-exposure-to-a-fixed-rate-exposure">Converting a floating-rate exposure to a fixed-rate exposure</h2>
+<p>A company with a floating-rate exposure can use a payer swap (pay fixed, receive floating) to change in into a fixed-rate exposure.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 99.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 100.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 101.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 102.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="using-interest-rate-swaps-to-alter-portfolio-duration" class="level2">
+<h2 class="anchored" data-anchor-id="using-interest-rate-swaps-to-alter-portfolio-duration">Using interest rate swaps to alter portfolio duration</h2>
+<p>The cash flows on a payer swap can be replicated with two capital markets transactions: issuing a fixed-rate note and purchasing a floating-rate note (FRN).</p>
+<p>Because a fixed-rate note has a greater modified duration than an otherwise identical FRN, a payer swap has a negative duration (increasing in value when interest rates increase) and a receiver swap has a positive duration (decreasing in value when interest rates increase). Adding a payer swap to a fixed-income portfolio will reduce portfolio duration ,while adding a receiver swap to a fixed-income portfolio will increase portfolio duration.</p>
+<p>The notional principal of the interest rate swap to increase (or reduce) portfolio duration (target duration) can be calculated as follows:</p>
+<p><span class="math display">\[
+NP_{s} = (\frac{MD_{T} - MD_{P}}{MD_{s}})(MV_{P})
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 103.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 104.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 105.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="interest-rate-forwards-and-futures" class="level1">
+<h1>Interest rate forwards and futures</h1>
+<section id="forward-rate-agreements-fras" class="level3">
+<h3 class="anchored" data-anchor-id="forward-rate-agreements-fras">Forward rate agreements (FRAs)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 106.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>FRAs are typically used to hedge the uncertainty about a future short-term (단위기간) borrowing or lending rate. Consider a firm that anticipates borrowing a lump sum for 60 days from now. The 60-day interest rate 30 days from now is uncertain. To hedge this uncertainty, the firm could take a long position in an FRA.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 107.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 108.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="short-term-interest-rate-stir-futures" class="level3">
+<h3 class="anchored" data-anchor-id="short-term-interest-rate-stir-futures">Short-term interest rate (STIR) futures</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 109.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The futures price is forward interest rate on deposits starting at the expiry of the future and lasting for 90 days.</p>
+<ul>
+<li>Eurodollar futures</li>
+<li>T-Bond futures</li>
+</ul>
+<p>Using this pricing convention, a long Eurodollar futures position will increase in value as forward rates decrease and decrease in value as forward rates increase. Note that this differs from a long FRA position, which increases in value as forward rates increase and decreases in value as forward rates decrease.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 110.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 111.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Both Eurodollar futures and FRA agreements allow lenders and borrowers to lock in rates for future borrowing and lending. While the pricing mechanisms are different, in both contracts, forward price is a forward rate of interest derived from current LIBOR rates.</p>
+</section>
+<section id="fixed-income-futures" class="level3">
+<h3 class="anchored" data-anchor-id="fixed-income-futures">Fixed-income futures</h3>
+</section>
+<section id="mechanics-of-fixed-income-futures" class="level3">
+<h3 class="anchored" data-anchor-id="mechanics-of-fixed-income-futures">Mechanics of fixed-income futures</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 112.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 113.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 114.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In practice, the majority of bond futures are closed out prior to settlement (The delivery date) by entering an offsetting trade. For futures held until settlement, bond futures include delivery options for the short party. For example, with U.S. Treasury bond futures, the short party may deliver any U.S. Treasury bond with a maturity between 15 and 25 years at contract maturity.</p>
+<p>The price of Treasury bond futures is based on a notional government bond. The notional government bond is assumed to have a coupon rate of 6%. Each eligible bond that can be delivered by the short party is assigned a conversion factor (CF) to reflect its value relative to the notional bond in the contract.</p>
+<p>CFs for eligible Treasury bonds are computed as the clean price of $1 face value of the eligible bond discounted at a yield to maturity of 6%. Note that bonds with a 6% coupon will automatically have a CF of one.</p>
+<p>The short party will receive the principal invoice price on delivery:</p>
+<p><span class="math display">\[
+\text{principal invoice price} - (\text{futures settlement price} / 100) * \$100000 * CF
+\]</span></p>
+<p>Settlement price is quoted with a par of $100. $100000 is the face value of Treasury bond futures.</p>
+<p>In practice, the bond delivered may be between coupon dates at the delivery date, so the short party will also receive any accrued interest on the bond delivered:</p>
+<p><span class="math display">\[
+⁍
+\]</span></p>
+<p>accrued interest - 실제로는 필요 없음. 이미 시장에서 매입 시 지불</p>
+<p>The process to compute the CF is imperfectly largely because it assumes a flat interest rate term structure at 6%. If CFs were perfect, the short party would be indifferent between which of the eligible bonds to deliver. The bias in the computation of CFs means that one of the eligible bonds will generate the greatest gain (or smallest loss) to the short party at delivery. This bond is known as the <strong>cheapest-to-deliver (CTD) bond (long에 가장 유리한 bond)</strong>.</p>
+<p>The cash-and-carry model is still used to price the future. The bond selected to price the future is the CTD. There are two methods to identify the CTD bond. The first method identifies the eligible bond that generates the highest return (implied repo rate) on a cash-and-carry trade. The second method is to find the eligible bond with the lowest basis. Basis is defined as the spot price minus the futures price.</p>
+<p><span class="math display">\[
+Basis = S_{0} - F_{0}(T) &lt; 0
+\]</span></p>
+<p>The Treasury bond with the lowest basis will typically have the highest implied repo rate and be the cheapest to deliver.</p>
+<p>At delivery, the short party will deliver the CTD bond-with a value equal to the clean price plus accrued interest (the dirty or invoice price)-to the long party at the delivery date and receive the settlement price multiplied by the CF plus accrued interest. The CTD bond will be the bond that generates the greatest profit or lowest loss on delivery.</p>
+<p><span class="math display">\[
+\text{profit/(loss) on delivery} = [(\text{settlement price} * CF) + AI_{T}] - (\text{CTD clean price} + AI_{T})
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 115.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 116.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hedging-interest-rate-risk-using-treasury-futures" class="level2">
+<h2 class="anchored" data-anchor-id="hedging-interest-rate-risk-using-treasury-futures">Hedging interest rate risk using treasury futures</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 117.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 118.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 119.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>To hedge the interest rate risk of a long bond portfolio, the fund manager will sell Treasury bond futures. Futures contracts are typically used by portfolio managers to achieve a target duration. Short futures position reduce portfolio duration, while long futures positions increase portfolio duration.</p>
+<p>The starting point when hedging interest rate risk with Treasury futures is to identify the futures contract CTD security. Treasury futures prices will tend to correlate most closely with the CTD bond because the CTD has the lowest basis of any deliverable bond. The implication of this is that the change in the futures price will equal the change in the value of the CTD adjusted by its CF (i.e., the CTD and futures contract have the same duration).</p>
+<p><span class="math display">\[
+\Delta{\text{futures price}} = \frac{\Delta{CTD}}{CF}
+\]</span></p>
+<p><span class="math display">\[
+\Delta{CTD} = \Delta{\text{futures price}} * CF
+\]</span></p>
+<p>To fully hedge (immunize) a portfolio’s value against interest rate changes, the change in portfolio value must be offset by the change in the futures value:</p>
+<p><span class="math display">\[
+\Delta{P} = HR * \Delta{\text{futures price}}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 120.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 121.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In practice, the CTD bond and the bonds in an investor’s portfolio are unlikely to be perfect substitutes. The mismatch between the change in value of an asset or portfolio and the change in value of the derivative used to hedge it is referred to as basis risk or spread risk. The hedge ratio mentioned previously will be effective if the portfolio only contains the CTD bond. If the portfolio does not consist solely of the CTD bond, a duration-based hedge ratio (BPVHR) is calculated to determine the number of futures contracts required for a hedge:</p>
+<p><span class="math display">\[
+BPVHR = \frac{-BPV_{portfolio}}{BPV_{CTD}} * CF
+\]</span></p>
+<p>Basis point value (BPV) is the expected change in value of a security or portfolio given a one basis point (0.01%) change in yield.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 122.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>To achieve a target duration, the formula can be amended to:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 123.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 124.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 125.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In practice, hedging results are not perfect due to three main factors:</p>
+<ol type="1">
+<li>The hedge was constructed using the CTD bond.</li>
+<li>Duration is not a perfect measure of how bond prices react to interest rate changes. Duration ignores the convexity of the bonds.</li>
+<li>Modified duration only captures the impact of parallel movements in the term structure of interest rates.</li>
+</ol>
+</section>
+</section>
+<section id="los-9.b-demonstrate-how-currency-swaps-forwards-and-futures-can-be-used-to-modify-a-portfolios-risk-and-return." class="level1">
+<h1>LOS 9.b: Demonstrate how currency swaps, forwards, and futures can be used to modify a portfolio’s risk and return.</h1>
+<p>Many investors have assets and liabilities denominated in foreign currencies (not their domestic, or local, currency). The exposure of foreign-currency denominated assets and liabilities to changes in exchange rates is termed currency risk.</p>
+<section id="currency-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="currency-swaps">Currency swaps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 126.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The notional amounts are equivalent based on the exchange rate at the inception of the swap. Currency swaps allow borrowers requiring foreign currency to effectively borrow in a foreign currency. This is known as synthetic borrowing.</p>
+<p>The parties to a currency swap may exchange only interest payments, but they may also exchange the notional amounts of each currency at the beginning and the end of the swap. This second case is known as a <strong>cross-currency basis swap</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 127.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 128.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cross-currency-basis" class="level2">
+<h2 class="anchored" data-anchor-id="cross-currency-basis">Cross-currency basis</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 129.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 130.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>For the three decades leading up to the great financial crisis in 2008/2009, the <strong>covered interest rate parity (CIRP)</strong> relationship held quite well. When CIRP holds, borrowing directly in USD should have the same cost as borrowing in a foreign currency and hedging exchange rate risk with a currency swap.</p>
+<p>When the CIRP relationship does not hold, arbitrage profits are theoretically possible, and exploitation of any arbitrage profits should result in zero basis over time. In a frictionless market, cross-currency basis should not exist.</p>
+<p>Since the financial crisis, basis has not been zero, indicating a failure of CIRP.</p>
+<p>Cross-currency basis represents the additional cost of borrowing dollars synthetically with a currency swap relative to the cost of borrowing directly in the USD cash market. Typically, when describing basis we view it from the foreign-currency perspective rather than the USD perspective. If the cost of borrowing dollars synthetically via a swap is greater than the cost of direct USD borrowing, the foreign currency is said to be exhibiting negative basis. Most currencies have shown a negative basis against the dollar since the financial crisis. The implementation is that the USD borrower must accept via CRS a lower interest rate on the foreign-currency interest payments it receives.</p>
+<p>USD fixed-income investors can benefit when foreign currencies have a negative basis versus the USD by swapping USD for foreign currency and investing in foreign-currency denominated bonds and using a currency swap to convert the returns back to USD.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 131.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 132.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 133.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 134.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="currency-forwards-and-future" class="level2">
+<h2 class="anchored" data-anchor-id="currency-forwards-and-future">Currency Forwards and future</h2>
+<p>Currency futures are standardized in terms of quantity of currency to be exchanged and delivery dates, so a futures hedge may not exactly match the requirements of a hedger. The greater liquidity of currency futures is attractive to many investors and currency dealers.</p>
+<p>The hedge ratio for futures can be calculated as:</p>
+<p><span class="math display">\[
+HR = \frac{\text{amount of currency to be exchanged}}{\text{futures contract size}} = \text{number of futures contract}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-9.c-demonstrate-how-equity-swaps-forwards-and-futures-can-be-used-to-modify-a-portfolios-risk-and-return." class="level1">
+<h1>LOS 9.c: Demonstrate how equity swaps, forwards, and futures can be used to modify a portfolio’s risk and return.</h1>
+<section id="equity-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="equity-swaps">Equity swaps</h2>
+<p>Equity swaps can be used to create a synthetic exposure to physical stocks, allowing market participants to increase or decrease their exposure to equity returns. Equity swaps enable users to achieve the economic benefits to share ownership without the cost and expense of ownership.</p>
+<p>The three main types of swaps include the following:</p>
+<ol type="1">
+<li>Pay fixed, receive equity return</li>
+<li>Pay floating, receive equity return</li>
+<li>Pay another equity return, receive equity return</li>
+</ol>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gain exposure to equity when participation in physical market is restricted</td>
+<td>Equity swaps typically require collateral</td>
+</tr>
+<tr class="even">
+<td>avoid tax on physical ownership (i.e., stamp duty)</td>
+<td>Swaps are illiquid</td>
+</tr>
+<tr class="odd">
+<td>Avoid custody fees on physical ownership</td>
+<td>Swaps do not convey voting rights</td>
+</tr>
+<tr class="even">
+<td>Avoid the cost of monitoring physical positions, which may increase due to corporate actions (i.e., dividend payments, stock splits, buy-backs, M&amp;A, etc.)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 136.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 137.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="equity-futures-and-forwards" class="level2">
+<h2 class="anchored" data-anchor-id="equity-futures-and-forwards">Equity futures and forwards</h2>
+<p>Index futures have a multiplier. Futures contract value (<span class="math inline">\() = futures price (point) * multiplier (\)</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 138.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 139.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 140.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="achieving-a-target-portfolio-beta" class="level2">
+<h2 class="anchored" data-anchor-id="achieving-a-target-portfolio-beta">Achieving a target portfolio beta</h2>
+<p>The number of contracts required to change the beta of an existing portfolio can be calculated with the following formula</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 141.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\text{number of futures required} = (\frac{\beta_{t} - \beta_{P}}{\beta_{F}})(\frac{MV_{P}}{F})
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 142.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 143.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cash-equitization" class="level2">
+<h2 class="anchored" data-anchor-id="cash-equitization">Cash equitization</h2>
+<p><strong>Cash equitization</strong> refers to purchasing index futures to replicate the returns that would have been earned by investing the cash in an index with risk and return characteristics similar to those of the portfolio. The major advantages of futures, in this application, are their liquidity and low transaction costs relative to direct investment in the equity markets. Cash equitization is also known as cash securitization or cash outlay.</p>
+<p>An alternative to purchasing futures would be to buy call options and sell put options on the appropriate stock index with the same strike and expiry to create a synthetic forward position.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 144.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 145.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 146.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-9.d-demonstrate-the-use-of-volatility-derivatives-and-variance-swaps." class="level1">
+<h1>LOS 9.d: Demonstrate the use of volatility derivatives and variance swaps.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 147.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The best known measure of market volatility is the CBOE Volatility Index (more commonly known as VIX). The VIX Index measures implied volatility in the S&amp;P 500 Index over a forward period of 30 days. VIX computes a weighted average of implied volatility inferred from S&amp;P 500 traded options (calls and puts) with an average expiration of 30 days.</p>
+<p>Specifically, the VIX Index value is the annualized standard deviation of the expected + / - percentage moves in the S&amp;P 500 Index over the following 30 days. For example, if the VIX was at 20, we could interpret it as telling us that the market expects that the S&amp;P sill stay within a + / - 20% range over one year with a 68% level of confidence. This implies a range <span class="math inline">\(+ / - \frac{20}{\sqrt{12}} = 5.77\%\)</span> over the next 30-day period.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 148.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 149.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>As a rule of thumb, a value lower then 20 represents a low-risk environment and values above 30 represent a high-risk environment. However, very low levels of the VIX Index can indicate an excessively bullish market, while very high levels can imply an excessively bearish market. The performance of VIX over this 19-year period also demonstrates the mean reversion of the index.</p>
+<p>Importantly, empirical studies have shown a negative correlation between the VIX and stock returns, which becomes even more pronounced during downturns. This correlation allows derivatives based on the index to be used to offset the losses on an equity portfolio when volatility increases.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 150.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 151.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 152.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>While investors cannot directly invest in VIX, the CBOE introduced futures based on the VIX Index in 2004 and options in 2006. This has led to volatility being viewed as a separate asset class that can be bought and sold. VIX futures and options offer participants pure-play bets on market volatility.</p>
+<section id="vix-futures" class="level2">
+<h2 class="anchored" data-anchor-id="vix-futures">VIX futures</h2>
+<p>Unlike other futures contracts, the cost-of-carry model cannot be used to determine the fair value of the future because it is not possible to directly invest in spot VIX. The VIX futures price can be interpreted as the expected S&amp;P 500 Index volatility in the 30-day period after the futures contract expiration date.</p>
+<p>An equity holding can be protected from extreme downturns (tail risk) by buying VIX futures.</p>
+<p>The term structure of VIX futures can provide insights into the market’s expectations of volatility over time.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 153.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 154.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Looking at the data on 18 July, 2011, the VIX futures market is in contango. Negative basis defines contango, where basis is computed as spot minus futures price. Longer-dated futures contracts have higher than short-dated futures contracts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 155.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 156.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>VIX futures prices and the VIX Index will converge at contract maturity because VIX futures settle against spot VIX at expiration. For a participant who purchases long-dated VIX futures when the market is in contango (the typical situation), the difference between the spot and futures price will decline over time as the futures price moves toward spot VIX at expiration. The profit or loss generated as the basis moves toward zero over the life of the futures contract is referred to as roll yield.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>position</th>
+<th>term structure</th>
+<th>roll yield</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>long futures position</td>
+<td>contango</td>
+<td>negative</td>
+</tr>
+<tr class="even">
+<td>short futures position</td>
+<td>contango</td>
+<td>positive</td>
+</tr>
+<tr class="odd">
+<td>long futures position</td>
+<td>backwardation</td>
+<td>positive</td>
+</tr>
+<tr class="even">
+<td>short futures position</td>
+<td>backwardation</td>
+<td>negative</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variance-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="variance-swaps">Variance swaps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 157.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Variance swaps</strong> payoffs are based on variance rather than volatility (standard deviation)</p>
+<p>The party receiving the variable payment (the purchaser) will gain on the contract when the realized variance is greater than the implied variance and will lose when the realized variance is less than the implied variance.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 158.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>There is no exchange of notional principal at the initiation of the swap.</p>
+<p><span class="math display">\[
+\text{settlement amount}_{T} = (\text{variance notional})(\text{realized variance} - \text{variance strike})
+\]</span></p>
+<p>The value of the swap is zero at initiation because implied volatility is the best ex ante estimate of realized volatility.</p>
+<p>Long (purchaser) describes the counterparty who receives the realized variance (actual) and pays the swap’s variance strike (implied volatility).</p>
+<ul>
+<li>realized volatility &gt; strike → buyer (long) of swap makes a profit</li>
+<li>realized volatility &lt; strike → buyer (long) of swap makes a loss</li>
+</ul>
+<p>Realized volatility is calculated by taking the neutral log of the daily price relatives, the closing price on day t, divided by the closing price on day t - 1:</p>
+<p><span class="math display">\[
+\text{daily variance} = [\frac{\Sigma^{N - 1}_{i = 1}{R_{i}^{2}}}{(N - 1)}]
+\]</span></p>
+<p>This appears to be an annual variance computation, as most computations we have seen deduct the mean from the numerator before squaring (i.e., <span class="math inline">\(\frac{\Sigma^{N - 1}_{i = 1}{R_{i} - \bar{R}^{2}}}{N-1}\)</span>). In this variance computation, the mean is not deducted. The logic is that we are calculating movement regardless of direction rather than movement around a mean. This has the advantage of making the variance perfectly additive. (iid, normal)</p>
+<p>The notional amount for a variance swap can be expressed as either variance notional (<span class="math inline">\(N_{VAR}\)</span>) or vega notional (<span class="math inline">\(N_{vega}\)</span>).</p>
+<p><span class="math display">\[
+profit/loss = N_{VAR} * (\sigma^{2} - K^{2})
+\]</span></p>
+<p>The market convention is to quote the notional on a swap as vega notional (<span class="math inline">\(N_{vega}\)</span>) rather than variance notional (<span class="math inline">\(N_{VAR}\)</span>).</p>
+<p>Given the relationship between <span class="math inline">\(N_{VAR}\)</span> and <span class="math inline">\(N_{vega}\)</span>, we can calculate the gains or losses on a variance swap with either of them.</p>
+<p><span class="math display">\[
+\text{variance notional} = \frac{\text{vega notional}}{2 * \text{strike price}(K)}
+\]</span></p>
+<p><span class="math display">\[
+\text{profit/(loss)} = N_{VAR} * (\sigma^{2} - K^{2}) = N_{vega} * (\frac{\sigma^{2} - K^{2}}{2K})
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 159.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="convexity" class="level2">
+<h2 class="anchored" data-anchor-id="convexity">Convexity</h2>
+<p>Because the payoffs on a variance swap are based on variance, while the strike price is expressed in terms of volatility, the payoffs for a variance swap are convex with respect to volatility. Compared to the payoffs on a volatility derivative with payoffs that are linear with respect to volatility, 1) when realized volatility is below the strike, the losses on the variance swap are smaller than the losses on the volatility derivative, and 2) when realized volatility is above the strike, the gains on the variance swap are greater than the gains on the volatility derivative. With the variance swap, payoffs are increasing at an increasing rate when volatility rises and decreasing at a decreasing rate when volatility falls.</p>
+<p>Convexity is an attractive feature to those who use variance swaps to hedge tail risk. When equity values fall sharply and volatility increases dramatically, decreases in portfolio value are offset by profits on a variance swap that increase at an accelerating rate.</p>
+</section>
+<section id="mark-to-market" class="level2">
+<h2 class="anchored" data-anchor-id="mark-to-market">Mark to market</h2>
+<p>the value of a variance swap is zero at initiation, but over time, the swap will either gain or lose value as realized and implied volatility diverge. At any point, the expected variance at maturity is simply the time-weighted average of the variance realized over the time since swap inception and the implied variance over the remaining time at maturity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 160.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 161.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-9.e-demonstrate-the-use-of-derivatives-to-achieve-targeted-equity-and-interest-rate-risk-exposures." class="level1">
+<h1>LOS 9.e: Demonstrate the use of derivatives to achieve targeted equity and interest rate risk exposures.</h1>
+<section id="using-equity-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="using-equity-swaps">Using equity swaps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 162.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 163.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="cash-equitization-1" class="level2">
+<h2 class="anchored" data-anchor-id="cash-equitization-1">Cash equitization</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 164.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 165.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-9.f-demonstrate-the-use-of-derivatives-in-asset-allocation-rebalancing-and-inferring-market-expectations." class="level1">
+<h1>LOS 9.f: Demonstrate the use of derivatives in asset allocation ,rebalancing, and inferring market expectations.</h1>
+<section id="asset-allocation-using-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="asset-allocation-using-derivatives">Asset allocation using derivatives</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 166.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 167.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 168.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 169.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 170.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 171.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 172.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 173.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 174.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 175.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="changing-allocations-between-asset-classes-using-swaps" class="level2">
+<h2 class="anchored" data-anchor-id="changing-allocations-between-asset-classes-using-swaps">Changing allocations between asset classes using swaps</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 176.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 177.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 178.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="inferring-market-expectations" class="level2">
+<h2 class="anchored" data-anchor-id="inferring-market-expectations">Inferring market expectations</h2>
+<p>Market expectations are current expectations derived from market prices.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Application</th>
+<th>Derivative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>inferring expectations of FOMC moves</td>
+<td>Fed funds futures</td>
+</tr>
+<tr class="even">
+<td>inferring expectations of inflation</td>
+<td>CPI swaps</td>
+</tr>
+<tr class="odd">
+<td>inferring expectations of future volatility</td>
+<td>VIX futures and options</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="using-fed-funds-futures-to-infer-the-expected-average-federal-fund-rate" class="level2">
+<h2 class="anchored" data-anchor-id="using-fed-funds-futures-to-infer-the-expected-average-federal-fund-rate">Using fed funds futures to infer the expected average federal fund rate</h2>
+<p>Market expectations can use Fed funds futures to infer the expected probabilities of upcoming Fed interest rate changes.</p>
+<ul>
+<li>Federal funds rate</li>
+<li>Federal funds target rate
+<ul>
+<li>This is the rate set by governor of the Federal Reserve in Federal Open Market Committee (FOMC) meetings.</li>
+<li>Note that the Fed does not directly control the FFE rate, but it influences the rate through its monetary policy tools with the goal of keeping it within the target range.</li>
+<li>Fed fund futures are traded on the CME. The futures price reflects the market expectation of the FFE rate at the time of contract maturity. The Fed funds futures price will reflect market expectations about future changes in the Fed funds target rate.</li>
+<li>To determine the probability of a change in the Fed funds target rate, use the following equation:</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\text{percent probability of rate change} = \frac{\text{effective rate implied by futures} - \text{current Fed funds target rate}}{\text{Fed funds rate assuming a rate change} - \text{current Fed target funds rate}}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 179.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 180.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-10.a-analyze-the-effects-of-currency-movements-on-portfolio-risk-and-return." class="level1">
+<h1>LOS 10.a: Analyze the effects of currency movements on portfolio risk and return.</h1>
+<section id="managing-currency-exposure" class="level2">
+<h2 class="anchored" data-anchor-id="managing-currency-exposure">Managing currency exposure</h2>
+<p><strong>The price and Base currencies</strong>: The <strong>base currency</strong> is the denominator of the exchange rate and it is <strong>priced</strong> in terms of the numerator. Unless clearly identified otherwise, the terms “buy” and “sell” refer to the base currency. For example, sell spot 1000000 at CAD/USD 0.9800 is assumed to mean sell for “immediate delivery” 1000000 U.S. dollars and buy 980000 Canadian dollars.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 181.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Buy 500000 USD/CHF six months forward at 1.07 is assumed to mean buy 500000 Swiss francs, settling in six months versus sell USD 535000.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 182.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Bid/asked rules</strong>: Currencies are quoted with a <strong>bid/offered</strong> or <strong>bid/asked price</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 183.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Deliver more CA can be phrased as:</p>
+<ul>
+<li>buy 1.0000 USD and deliver (sell) 0.9810 CAD</li>
+<li>sell 0.9810 CAD and receive (buy) 1.0000 USD</li>
+</ul>
+<p>Receive less CAD can be phrased as:</p>
+<ul>
+<li>sell 1.0000 USD and receive (buy) 0.9790 CAD</li>
+<li>Buy 0.9790 CAD and deliver (sell) 1.0000 USD</li>
+</ul>
+<p><strong>Spot versus forward</strong>: Spot exchange transactions are for immediate settlement and a forward transaction is a price agreed to on a transaction date for delayed (longer than spot) settlement. The forward quote can be given directly or in forward points (an adjustment from the spot quote)</p>
+<p>Forward points are an adjustment to the spot price to determine the forward price. The points are interpreted based on the number of decimal places in which the spot price is quoted.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 184.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 185.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 186.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Offsetting transactions and mark to market</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 187.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 188.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 189.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>An FX swap</strong>: The FX swap is not a currency swap or even a swap as that term is otherwise used. The FX swap rolls over a maturing forward contract using a spot transaction into a new forward contract.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 190.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 191.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Option basics</strong>: For a call and put with identical parameters (time to expiration, strike price, and price of the underlying), the sum of the absolute deltas is 1.00 or 100-delta.</p>
+<p><span class="math display">\[
+C_{0} = S_{0}N(d_{1}) - Xe^{-rT}N(d_{2})
+\]</span></p>
+<p><span class="math display">\[
+P_{0} = Xe^{-rT}N(-d_{2}) - S_{0}N(-d_{1})
+\]</span></p>
+<p><span class="math display">\[
+\frac{\sigma{C_{0}}}{\sigma{S_{0}}} = N(d_{1}), 0 &lt; N(d_{1}) &lt; 1, \frac{\sigma{P_{0}}}{\sigma{S_{0}}} = -N(d_{1}) = N(d_{1}) - 1
+\]</span></p>
+<p><strong>Currency option basics</strong>: Currency options require two currencies and a call on one currency is a put on the other currency. Unless otherwise specified, the option is from the base currency perspective. For example, a call option to buy 10,000,000 at a strike price of ZAR/GBP 14.56 is the right to buy 10,000,000 British pounds and sell 145,600,000 South Africa rand. It is also a put option-the right to sell 145,600,000 South Africa rand and buy 10,000,000 British pounds.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 192.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>GBP - underlying asset</p>
+<p>The important relationships can be summarized as follows:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>As the price of the base currency increases</th>
+<th>The call option to buy the base currency</th>
+<th>The put option to sell the base currency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>from 0 to the strike price</td>
+<td>Is out-of-the-money and rising in value. Delta is shifting from 0.0 toward 0.5 (from a 0-delta to a 50-delta).</td>
+<td>Is in-the-money and falling in value. Delta is shifting from -1.0 toward -0.5 (from a 100-delta to a 50-delta).</td>
+</tr>
+<tr class="even">
+<td>to the strike price</td>
+<td>Is at-the-money. Delta is approximately 0.5 (a 50-delta).</td>
+<td>Is at-the-money. Delta is approximately -0.5 (a 50-delta).</td>
+</tr>
+<tr class="odd">
+<td>from the strike price upward</td>
+<td>Is in-the-money and rising in value. Delta is shifting from 0.5 toward 1.0 (from a 50-delta to a 100-delta).</td>
+<td>Is out-of-the-money and falling in value. Delta is shifting from -0.5 toward 0.0 (from a 50-delta to a 0-delta).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="effects-of-currency-on-portfolio-risk-and-return" class="level2">
+<h2 class="anchored" data-anchor-id="effects-of-currency-on-portfolio-risk-and-return">Effects of currency on portfolio risk and return</h2>
+<p><strong>Domestic currency</strong> or <strong>home currency</strong> → reporting currency</p>
+<p><strong>Foreign currency and foreign asset</strong> are a currency other that the investor’s domestic currency and an asset denominated in that foreign currency. These are sometimes called the local currency and local market, respectively.</p>
+<p><strong>Foreign-currency return</strong> (<span class="math inline">\(R_{FC}\)</span>) is the return of the foreign asset measured in its local (foreign) currency. It can be called the local market return.</p>
+<p><strong>Domestic-currency return</strong> (<span class="math inline">\(R_{DC}\)</span>) is the return in domestic currency units considering both the <strong>foreign-currency return</strong> (<span class="math inline">\(R_{FC}\)</span>) and the percentage change in value of the foreign currency (<span class="math inline">\(R_{FX}\)</span>).</p>
+<p>An investment in assets priced in a currency other than the investor’s domestic currency (a <em>foreign asset</em> priced in a <em>foreign currency</em>) has two sources of risk and return: 1) the return on the assets in the foreign currency and 2) the return on the foreign currency from any change in its exchange rate with the investor’s <em>domestic currency</em>. These returns are multiplicative and an investor’s returns in domestic currency can be calculated as:</p>
+<p><span class="math display">\[
+R_{DC} = (1 + R_{FC})(1 + R_{FX}) - 1 = R_{FC} + R_{FX} + R_{FX}R_{FC} \approx R_{FC} + R_{FX}
+\]</span></p>
+<p>However, there are cases where determining <span class="math inline">\(R_{FX}\)</span> is not simple. If the currency is hedged, then a precise currency units; however, that ending number is not knowable for a risky asset. You will see a naive hedge is normally used and the beginning number of foreign currency units are sold forward. In that case, a simple comparision of <span class="math inline">\(F_{0}\)</span> and <span class="math inline">\(S_{0}\)</span> will not be the true <span class="math inline">\(R_{FX}\)</span>. In that case, you will see a different set of calculations made. You would directly calculate beginning and ending value of the portfolio in the investor’s domestic currency units. Then <span class="math inline">\(R_{DC}\)</span> is (EV - BV) / BV.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 193.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="calculating-portfolio-return-for-multiple-investments-in-foreign-assets" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-portfolio-return-for-multiple-investments-in-foreign-assets">Calculating portfolio return for multiple investments in foreign assets</h2>
+<p>An investor may invest in multiple markets with different currencies. In that case, the domestic portfolio return is a weighted average of the domestic currency returns for each investment.</p>
+<p><span class="math display">\[
+R_{DC} = \Sigma^{n}_{i = 1}{w_{i}R_{DC, i}}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 194.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 195.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 196.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 197.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="risk" class="level2">
+<h2 class="anchored" data-anchor-id="risk">Risk</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 198.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Depends on the standard deviation of <span class="math inline">\(R_{FC}\)</span> and <span class="math inline">\(R_{FX}\)</span>.</li>
+<li>May be higher for our domestic investor because standard deviation of <span class="math inline">\(R_{FX}\)</span> is an additive term in the equation.</li>
+<li>However, correlation also matters. If the correlation between <span class="math inline">\(R_{FX}\)</span> and <span class="math inline">\(R_{FC}\)</span> is negative, the third component of the calculation becomes negative.
+<ul>
+<li>If the correlation is positive, then <span class="math inline">\(R_{FC}\)</span> returns are amplified by <span class="math inline">\(R_{FX}\)</span> returns, increasing the volatility of return to our domestic investor.</li>
+<li>If the correlation is negative, then <span class="math inline">\(R_{FC}\)</span> returns are dampened by <span class="math inline">\(R_{FX}\)</span> returns, decreasing the volatility of return to our domestic investor. (This is discussed further under this reading’s topic of minimum variance hedge ratio).</li>
+</ul></li>
+</ul>
+<p>If <span class="math inline">\(R_{FC}\)</span> is a risk-free return: In this case, its standard deviation and correlation with <span class="math inline">\(R_{FX}\)</span> are zero.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 199.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\sigma{R_{DC}} = \sigma{(R_{FX})}(1 + R_{FX})
+\]</span></p>
+</section>
+</section>
+<section id="los-10.b-discuss-strategic-choices-in-currency-management." class="level1">
+<h1>LOS 10.b: Discuss strategic choices in currency management.</h1>
+<section id="strategic-decisions-on-currency-hedge-policy" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-decisions-on-currency-hedge-policy">Strategic decisions on currency hedge policy</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 200.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>hedge or no-hedge</p>
+<p>Neither academic nor empirical analysis support firm conclusions on currency risk management. Opinions range from doing nothing to active management:</p>
+<ul>
+<li>Arguments made for not hedging currency risk include:
+<ul>
+<li>It is best to avoid the time and cost of hedging or trading currencies.</li>
+<li>In the long-run, unhedged currency effects are a “zero-sum game”; if one currency appreciates, another must depreciate.</li>
+<li>In the long-run, currencies revert to a theoretical fair value.</li>
+</ul></li>
+<li>The argument for active management of currency risk is that, in the short run, currency movement can be extreme, and inefficient pricing of currencies can be exploited to add to portfolio return.</li>
+</ul>
+<p><strong>Currency management strategies</strong> for portfolio with exchange rate risk range from a passive approach of matching benchmark currency exposures to an active strategy that treats currency exposure independently of benchmark exposures and seeks to profit from (rather than hedge the risk of) currency exposures.</p>
+<ul>
+<li><strong>Passive hedging</strong> is rule based and typically matches the portfolio’s currency exposure to that of the benchmark used to evaluate the portfolio’s performance.</li>
+<li><strong>Discretionary hedging</strong> allows the manager to deviate modestly from passively hedging by a specified percentage.</li>
+<li><strong>Active currency management</strong> allows a manager to have greater deviations from benchmark currency exposures. The goal is to create incremental return (alpha), not to reduce risk.</li>
+<li>A <strong>currency overlay</strong> is a broad term covering the outsourcing of currency management. At the extreme, the overlay manager will treat currency as an asset class and may take positions independent of other portfolio assets. The manager is purely seeking currency alpha (incremental return), not risk reduction.</li>
+</ul>
+<p><strong>The IPS</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="strategic-diversification-issues" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-diversification-issues">Strategic diversification issues</h3>
+<ul>
+<li>In the longer run, currency volatility has been lower than in the shorter run, reducing the need to hedge currency in portfolios with a long-term perspective.</li>
+<li>Positive correlation between returns of the asset measured in the foreign currency (<span class="math inline">\(R_{FC}\)</span>) and returns from the foreign asset (<span class="math inline">\(R_{FX}\)</span>) increase volatility of return to the investor (<span class="math inline">\(R_{DC}\)</span>) and increase the need for currency hedging. Negative correlation dampens return volatility and decreases the need to hedge.</li>
+<li>Correlation tends to vary by time period, providing diversification in some periods and not in others, suggesting a varying hedge ratio is appropriate.</li>
+<li>Some investors assert that there is higher positive correlation between asset and currency returns in bond portfolios than in equity portfolios. If that is true, then there is more reason to hedge currency risk in bond portfolios than in equity portfolios.</li>
+<li>The hedge ratio (the percentage of currency exposure to hedge) varies by manager preference.</li>
+</ul>
+</section>
+<section id="strategic-cost-issues" class="level3">
+<h3 class="anchored" data-anchor-id="strategic-cost-issues">Strategic cost issues</h3>
+<p>Hedging is not free and benefits must be weighted versus costs.</p>
+<ul>
+<li>opportunity cost</li>
+<li>bid/ask spread</li>
+<li>The bid/asked transaction cost on a single currency trade is generally small, but repeated transaction costs add up. Full hedging and frequent rebalancing can be costly.</li>
+<li>Purchasing options to hedge involves an upfront option premium cost.</li>
+<li>Forward currency contracts are often shorter term than the hedging period, requiring contracts be rolled over as they mature (an FX swap). The hedge lowers return volatility but the rollover can create cash flow volatility with realized gains and losses on the maturing contracts. Financing cash outflows when interest rates are high can be costly as the interest that would have been earned on the funds is lost.
+<ul>
+<li>cash flow volatility up</li>
+</ul></li>
+<li>One hundred percent hedging has an opportunity cost with no possibility of favorable currency movement.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="los-10.c-formulate-an-appropriate-currency-management-program-given-financial-market-conditions-and-portfolio-objective-and-constraints." class="level1">
+<h1>LOS 10.c: Formulate an appropriate currency management program given financial market conditions and portfolio objective and constraints.</h1>
+<p>In conclusion, the factors that shift the strategic decision formulation toward a benchmark neutral or fully hedged strategy are:</p>
+<ul>
+<li>A short time horizon for portfolio objectives</li>
+<li>high risk aversion</li>
+<li>A client who is unconcerned with the opportunity costs of missing positive currency returns</li>
+<li>High short-term income and liquidity needs</li>
+<li>Significant foreign currency bond exposure</li>
+<li>Low hedging costs</li>
+<li>Clients who doubt the benefits of discretionary management</li>
+</ul>
+</section>
+<section id="los-10.d-compare-active-currency-trading-strategies-based-on-economic-fundamentals-technical-analysis-carry-trade-and-volatility-trading." class="level1">
+<h1>LOS 10.d: Compare active currency trading strategies based on economic fundamentals, technical analysis, carry-trade, and volatility trading.</h1>
+<p>seeking currency alpha</p>
+<p>The strategic decision sets the portfolio’s normal currency hedging policy. If discretion is allowed, the manager can make active tactical decisions within defined boundaries, seeking to increase return. Tactical decisions can be based on four broad approaches.</p>
+<section id="economic-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="economic-fundamentals">Economic fundamentals</h2>
+<p>This approach assumes that, in the long term, currency value will converge to fair value. For example, a fundamental approach may assume purchasing power parity will determine long-run exchange rates.</p>
+<p>Several factors will impact the eventual path of convergence over the short and intermediate terms. Increases in the value of a currency are associated with currencies:</p>
+<ul>
+<li>That are more undervalued relative to their fundamental value.</li>
+<li>That have the greatest rate of increase in their fundamental value.</li>
+<li>With higher real or nominal interest rates.</li>
+<li>With lower inflation relative to other countries.</li>
+<li>Of countries with decreasing risk premiums.</li>
+</ul>
+</section>
+<section id="technical-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="technical-analysis">Technical analysis</h2>
+<ul>
+<li>An <strong>overbought</strong> (or <strong>oversold</strong>) market has gone up (or down) too far and the price is likely to reverse.</li>
+<li>A <strong>support level (지지선)</strong> exists where there are substantial bids from customers to buy.</li>
+<li>A <strong>resistance level (저항선)</strong> exists where there are substantial offers from customers to sell.</li>
+</ul>
+<p>Moving averages of price are often used in technical analysis.</p>
+</section>
+<section id="the-carry-trade" class="level2">
+<h2 class="anchored" data-anchor-id="the-carry-trade">The carry trade</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>A <strong>carry trade</strong> refers to borrowing in a lower interest rate currency and investing the proceeds in a higher interest rate currency. Three issues are important to understand the carry trade.</p>
+<ol type="1">
+<li><p><strong>Covered interest rate parity (CIRP, 이자율 평형이론)</strong> holds by arbitrage and establishes that the difference between spot (<span class="math inline">\(S_{0}\)</span>) and forward (<span class="math inline">\(F_{0}\)</span>) exchange rates equals the difference in the periodic interest rates of the two currencies.</p>
+<ol type="1">
+<li>The currency with the higher interest rate should trade at a <strong>forward discount</strong>, <span class="math inline">\(F_{0} &lt; S_{0}\)</span></li>
+<li>The currency with the lower interest rate should trade at a <strong>forward premium</strong>, <span class="math inline">\(F_{0} &gt; S_{0}\)</span></li>
+</ol></li>
+<li><p>The carry trade is based on a violation of <strong>uncovered interest rate parity (UCIRP)</strong>. UCIRP is an international parity relationship asserting that the forward exchange rate calculated by CIRP is an unbiased estimate of the spot exchange rate that will exist in the future. If this were true:</p>
+<ol type="1">
+<li>The currency with the higher interest rate will decrease in value by the amount of the initial interest rate differential.</li>
+<li>The currency with the lower interest rate will increase in value by the amount of the initial interest rate differential.</li>
+</ol>
+<ul>
+<li>If these expectations were true, a carry trade would earn a zero return.</li>
+</ul></li>
+<li><p>Because the carry trade exploit’s a violation of interest rate parity, it can be referred to as trading the forward rate bias. Historical evidence indicates that:</p>
+<ol type="1">
+<li>Generally, the higher interest rate currency has depreciated less than predicted by interest rate parity or even appreciated and a carry trade has earned a profit.</li>
+<li>However, a small percentage of the time, the higher interest rate currency has depreciated substantially more than predicted by interest rate parity and a carry trade has generated large losses.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div></li>
+</ol>
+<p>Generally, the carry trade is implemented by borrowing in the lower interest rate currencies of developed economies (<strong>funding currencies</strong>) and investing in the higher interest rate currencies of emerging economies (<strong>investing currencies</strong>). Given that periods of financial stress are associated with increasing exchange rate volatility, traders often exit their carry trade positions when exchange rate volatility increases significantly.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The carry trade is generally profitable under normal market conditions. But it can generate large losses in periods of financial distress and high volatility as investors flee high risk (yield) currencies.</p>
+</section>
+<section id="volatility-trading" class="level2">
+<h2 class="anchored" data-anchor-id="volatility-trading">Volatility trading</h2>
+<p>A <strong>strangle</strong> will provide similar but more moderate payoffs to a straddle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-10.e-describe-how-changes-in-factors-underlying-active-trading-strategies-affect-tactical-trading-decisions." class="level1">
+<h1>LOS 10.e: Describe how changes in factors underlying active trading strategies affect tactical trading decisions.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 210.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Some useful tips to sort through the material include the following</p>
+<ul>
+<li>It is easier to work with FX quotes when the foreign currency is the base currency. If quotes are given as B/P, take the reciprocal to make it P/B.</li>
+<li>Hedging is not free.
+<ul>
+<li>Hedges using forwards have no or minimal initial cost but high opportunity cost because the potential upside of the hedged currency is eliminated.</li>
+</ul></li>
+</ul>
+</section>
+<section id="los-10.f-describe-how-forward-contracts-and-fx-foreign-exchange-swaps-are-used-to-adjust-hedge-ratios." class="level1">
+<h1>LOS 10.f: Describe how forward contracts and FX (foreign exchange) swaps are used to adjust hedge ratios.</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 211.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Consider a EUR-based manager who must hedge an initial CHF 10,000,000 of asset exposure. One month later, the asset has appreciated to CHF 11,000,000. Assume the manager can initially sell a one- or three-month contract.</p>
+<ol type="1">
+<li>Initially sell 10,000,000 CHF in the forward market with a one-month forward contract. At contract expiration, roll over the hedge. At rollover, the change in initial contract price will produce a realized gain or loss and cash flow settlement consequences. At the rollover, the size of the new contract can be adjusted to match the new value of the position to be hedged.</li>
+<li>Initial sell 10,000,000 CHF in the forward market with a three-month forward contract. One month later, the manager is underhedged with a CHF 10,000,000 short position versus an asset now worth CHF 11,000,000.
+<ol type="1">
+<li>With a static hedge, the manager would do nothing even though CHF exposure has increased.</li>
+<li>With a dynamic hedge, the manager would increase the hedge to cover the additional exposure by selling an additional CHF 1 million forward for two months to create a total short position of CHF 11 million.</li>
+</ol></li>
+</ol>
+<p>The choice of hedging approach should consider:</p>
+<ul>
+<li>Short term contracts or dynamic hedges with more frequent rebalancing tend to increase transaction costs but improve the hedge results.</li>
+<li>Higher risk aversion suggests more frequent rebalancing.</li>
+<li>Lower risk aversion and strong manager views suggest allowing the manager greater discretion around the strategic hedging policy.</li>
+</ul>
+<section id="roll-yield" class="level2">
+<h2 class="anchored" data-anchor-id="roll-yield">Roll yield</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 212.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>hedge시 horizon 끝날 시 얻는 예상 수익률</p>
+<p>Hedging also exposes the portfolio to <strong>roll yield</strong> or <strong>roll return</strong>. Roll yield is a return from the movement of the forward price over time toward the spot price of an asset. It can be thought of as the profit or loss on a forward or futures contract if the spot price is unchanged at contract expiration. Determining whether the roll yield produces a profit or a loss will depend on two factors: 1) whether the currency is trading at a forward premium or discount and 2) whether is it purchased or sold. Roll yield for a contract held to expiration is determined by initial forward minus spot price divided by initial spot price.</p>
+<p>Roll yield will affect the cost/benefit analysis of whether to hedge the currency risk. Positive roll yield will shift the analysis toward hedging and negative roll yield will shift the analysis away from hedging.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 213.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 214.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Also note that the roll yield is not the total return from selling or buying the forward. (not a real return) The underlying spot price can increase or decrease. The forward price will converge to that unknown spot price at expiration of the forward. The total of the return to the forward position will be the change in price of the forward. That change in price of the forward was two components: 1) the unknown-in-advance change in the spot price, and 2) the known-in-advance roll yield.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 215.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 216.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The CFA text mentions but does not further apply a “similarity” between roll yield and trading the forward rate bias.</p>
+<ul>
+<li>The forward rate bias trade (the carry trade) would buy the ZAR in the spot market to invest in and earn the higher interest rate.</li>
+<li>An investor who needs exposure to the ZAR would buy the ZAR in the forward market at a discount and earn positive roll yield.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 217.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 218.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="los-10.g-describe-trading-strategies-used-to-reduce-hedging-costs-and-modify-the-risk-return-characteristics-of-a-foreign-currency-portfolio." class="level1">
+<h1>LOS 10.g: Describe trading strategies used to reduce hedging costs and modify the risk-return characteristics of a foreign-currency portfolio.</h1>
+<p>The initial forward premium or discount is one cost factor to consider in analyzing the cost/benefit of a currency hedge. To reduce hedging cost, the manager can increase the size of trades that earn positive roll yield and reduce the size of trades that earn negative roll yield.</p>
+<p>Forward hedging also incurs <strong>opportunity cost</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 219.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li><p><strong>Over- or under-hedge with forward contracts</strong> based on the manager’s view. If the manager expects the CHF to appreciate, she can reduce the hedge ratio, hedging less than the full exposure to CHF risk. If successful, this strategy creates “positive convexity”; gains will be increased and losses reduced.</p></li>
+<li><p><strong>Buy at-the-money (ATM) put options (also called protective puts or portfolio insurance)</strong>.</p></li>
+<li><p><strong>Buy out-of-the-money (OTM) put options</strong>. Out-of-the-money puts have deltas that are smaller in magnitude than 0.50, so a 35-delta put is out of the money and a 25-delta put is further out of the money. (protective put이랑 delta로 구분)</p></li>
+<li><p><strong>Collar</strong>. The manager could buy the 35-delta puts on the CHF and sell 35-delta calls on the CHF.</p></li>
+<li><p><strong>Put spread</strong>. Buy OTM puts on the CHF and sell puts that are further out of the money.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 220.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div></li>
+<li><p><strong>Seagull spread</strong></p></li>
+</ol>
+<p>Further alternatives include varying the degree of upside potential and downside protection. The manager can vary the notional amounts of the options.</p>
+<p>All of these strategies are considered “plain vanilla” in that they are combinations of standard options. Exotic options introduce features not found in standard options.</p>
+<ol type="1">
+<li>A <strong>knock-in option</strong> is a plain vanilla option that only comes into existence if the underlying first reaches some prespecified level.
+<ol type="1">
+<li>기준 초과시 option 생성</li>
+</ol></li>
+<li>A <strong>knock-out option</strong> is a standard option that ceases to exists if the underlying reaches some prespecified level.
+<ol type="1">
+<li>기준 초과서 option 소멸</li>
+</ol></li>
+<li><strong>Binary or digital options</strong> pay a fixed amount that does not vary with the difference in price between the strike and underlying price.</li>
+</ol>
+<section id="hedging-multiple-currencies" class="level2">
+<h2 class="anchored" data-anchor-id="hedging-multiple-currencies">Hedging multiple currencies</h2>
+<p>natural hedge</p>
+</section>
+</section>
+<section id="los-10.h-describe-the-use-of-cross-hedges-macro-hedges-and-minimum-variance-hedge-ratios-in-portfolios-exposed-to-multiple-foreign-currencies." class="level1">
+<h1>LOS 10.h: Describe the use of cross-hedges, macro-hedges, and minimum-variance-hedge ratios in portfolios exposed to multiple foreign currencies.</h1>
+<p>A <strong>cross hedge</strong> (sometimes called a <strong>proxy hedge</strong>) refers to hedging with an instrument that is not perfectly correlated with the exposure being hedged. Cross hedges are generally not necessary in currency hedging because forward contracts for virtually all currency pairs are available but cross hedges may improve the efficiency of hedging.</p>
+<p>Cross hedges also introduce additional risk to hedging. (basis risk)</p>
+<p>A <strong>macro hedge</strong> is a type of cross hedge that addresses portfolio-wide risk factors rather than the risk of individual portfolio assets.</p>
+<p>One type of currency macro hedge uses a derivatives contract based on a fixed basket of currencies to modify currency exposure at a macro (portfolio) level.</p>
+<p>The <strong>minimum-variance hedge ratio (MVHR)</strong> is a mathematical approach to determining the hedge ratio. When applied to currency hedging, it is a regression of the past changes in value of the portfolio (<span class="math inline">\(R_{DC}\)</span>) to the past changes in value of the hedging instrument to minimize the value of the tracking error between these two variables. The hedge ratio is the beta (slope coefficient) of that regression.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 221.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 222.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>최초 투자 외화를 얼마나 hedge 해야 하는가?</li>
+</ul>
+<p>The practical implications of this are as follows:</p>
+<ol type="1">
+<li>Our forward hedging examples up to now have been “direct” hedges. For example, a USD portfolio that is long CHF 1,000,000 sells CFH 1,000,000 forward to hedge the risk, a simple one-for-one hedge ratio of the notional exposure.</li>
+<li>Cross hedges or macro hedges are considered “indirect” hedges, the correlation between the currency exposure in the portfolio and a currency contract may not be 1.00 and the minimum-variance hedge ratio may not be one-for-one.</li>
+<li>The MVHR can be used to jointly optimize over changes in value of <span class="math inline">\(R_{FX}\)</span> and <span class="math inline">\(R_{FC}\)</span> to minimize the volatility of <span class="math inline">\(R_{DC}\)</span>.</li>
+</ol>
+<p>To illustrate this use of the MVHR, consider the case of a foreign country (base currency, 투자대상국) where the economy is heavily dependent on imported energy. (투자자의 국가로부터 수입을 의존) Appreciation of the currency (<span class="math inline">\(+R_{FX}\)</span>) would make imports less expensive, which is likely to decrease production costs, increasing profits and asset value (<span class="math inline">\(+R_{FC}\)</span>). <strong>Strong positive correlation between <span class="math inline">\(R_{FX}\)</span> and <span class="math inline">\(R_{FC}\)</span> increases the volatility of <span class="math inline">\(R_{DC}\)</span>. A hedge ratio greater than 1.0 would reduce the volatility of <span class="math inline">\(R_{DC}\)</span></strong>.</p>
+<p>Consider the case of a foreign country where the economy is heavily dependent on exports. Appreciation of the currency (<span class="math inline">\(+R_{FX}\)</span>) would make its exports more expensive, likely reducing sales, profits, and asset values (<span class="math inline">\(-R_{FC}\)</span>). Strong negative correlation between <span class="math inline">\(R_{FX}\)</span> and <span class="math inline">\(R_{FC}\)</span> naturally decrease the volatility of <span class="math inline">\(R_{DC}\)</span>. A hedge ratio less than 1.0 would reduce the volatility of <span class="math inline">\(R_{DC}\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 223.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 224.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="los-10.i-discuss-challenges-for-managing-emerging-market-currency-exposures." class="level1">
+<h1>LOS 10.i: Discuss challenges for managing emerging market currency exposures.</h1>
+<ul>
+<li>Low trading volume leads dealer to charge larger bid/asked spreads.</li>
+<li>Liquidity can be lower and transaction costs higher to exit trades than to enter trades.</li>
+<li>Emerging market currencies return distributions are non-normal with higher probabilities of extreme events and negative skew of returns.</li>
+<li>The higher yield of emerging market currencies will lead to large forward discounts. This produces negative roll yield for investors who need to sell such currencies forward.</li>
+<li>Contagion is common.</li>
+<li>There is tail risk.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 225.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Non-deliverable forwards (NDFs)</strong></p>
+<ul>
+<li>역외선물환, 차익결제 선물환</li>
+</ul>
+<p>NDFs are an alternative to deliverable forwards and require a cash settlement of gains of losses in a developed market currency at settlement rather than a currency exchange.</p>
+<p>A benefit of NDFs is lower credit risk because delivery of the notional amounts of both currencies is not required.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 226.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
