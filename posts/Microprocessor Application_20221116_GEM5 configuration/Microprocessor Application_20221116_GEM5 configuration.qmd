@@ -1,0 +1,113 @@
+---
+title: "Microprocessor Application 2nd"
+author: "Siyun Min"
+date: "2022-09-16"
+categories: [SSU]
+---
+# 20221116 - GEM5 configuration
+
+# Contents
+
+In the previous experiment, we can see that GEM5 can simulate a complete system with devices and user space only programs where system services are directly provided by the simulator in syscall emulation mode (SE mode)
+
+In this experiment, we are going to create and simulate a very simple system including one simple CPU core connected to a system-wide memory bus, and a single DDR3 memory channel connected to the memory bus.
+
+![Untitled](./Untitled.png)
+
+# GEM5 configuration
+
+![Untitled](./Untitled%201.png)
+
+We have already known that the components (CPUs, caches, memory, controller, buses, etc …) used in the simulated system are built from SimObjects.
+
+GEM5 exports all of these objects from their C++ implementation to python. So, from Python configuration script, we can create any SimObject with particular parameters and also specify the interactions between SimObjects.
+
+# Creating a simple system configuration file
+
+![Untitled](./Untitled%202.png)
+
+You should install the Nano Text Editor by the following command
+
+```bash
+$ sudo apt install nano
+```
+
+Let’s start by changing your workplace to gem5 root directory first, then creating a new config file:
+
+```bash
+$ cd gem5
+$ mkdir configs/eclab/lab3
+$ nano configs/eclab/lab3/simple.py
+```
+
+![Untitled](./Untitled%203.png)
+
+Firstly, we should import the GEM5 library and all SimObjects that we have compiled in previous steps.
+
+Then, create the first SimObject named “system” inherited from system class.
+
+The system object will be the parent of all the other objects in our simulated system. It contains a lot of functional information:
+
+- The physical memory ranges
+- The root clock domain
+- The root voltage domain
+- The kernel
+- etc.
+
+![Untitled](./Untitled%204.png)
+
+Inheritance diagram for system class
+
+![Untitled](./Untitled%205.png)
+
+Next, we create a clock domain and set the clock frequency on that domain.
+
+Finally, we specify a voltage domain for this clock domain.
+
+In this experiment, we will use timing mode for the memory simulation, and it can have a size of 512MB.
+
+Please notice that we are working with Python, so all parameters will be converted to C++ equivalent values in the instantiation process.
+
+![Untitled](./Untitled%206.png)
+
+We will start with the simplest timing-based CPU. This CPU model executes each instruction in a single clock cycle to execute.
+
+Then, we create the system-wide memory bus. After that, cache ports will be directly connected to the membus because the system we are going to simulate does not have any caches.
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+Next, we need to create the interrupt controller for the CPU and connect it to the membus.
+
+We also need to create a memory controller and connect it to the membus.
+
+For this system, we will use a simple DDR3 controller, and it will be responsible for the entire memory range of our system.
+
+![Untitled](./Untitled%209.png)
+
+GEM5’s syscall emulation mode does not emulate all of the devices in a system and focuses on simulating the CPU and memory system that all what we need.
+
+Now we have to create another SimObject name ‘process’ and set the processes command to the command we want to run.
+
+Then, create the functional execution contexts in the CPU.
+
+![Untitled](./Untitled%2010.png)
+
+The final thing we need to do is instantiate the system and begin execution.
+
+First, we create the Root object. The instantiation process goes through all of the SimObjects we have created and creates the C++ equivalents.
+
+Once simulation finishes, we can inspect the state on the system.
+
+# Running GEM5 with simple system configuration file
+
+![Untitled](./Untitled%2011.png)
+
+We have created a simple simulation script, and now we can simply run GEM5 from root directory:
+
+```bash
+build/ARM/gem5.opt.configs/eclab/lab3/simple.py
+```
+
+![Untitled](./Untitled%2012.png)

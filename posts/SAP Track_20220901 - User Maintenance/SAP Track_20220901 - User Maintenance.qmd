@@ -1,0 +1,71 @@
+---
+title: "Co-op SAP Track 20220901 - User Maintenance"
+author: "Siyun Min"
+date: "2022-09-01"
+categories: [SSU, SAP]
+---
+# 20220901 - User Maintenance
+
+![Untitled](./Untitled.png)
+
+Application Server
+
+![Untitled](./Untitled%201.png)
+
+System ID - nickname
+
+# Homepage
+
+![Untitled](./Untitled%202.png)
+
+t-code(?) 입력해서 화면으로 이동
+
+## session control
+
+/n - 해당 세션을 종료하고 새로운 창으로 이동
+
+/o - 해당 세션을 유지하고 새로 창을 띄움
+
+/nex - 모든 창을 다 끔
+
+# su01 - User Maintenance
+
+![Untitled](./Untitled%203.png)
+
+## Display Users
+
+### Address
+
+![Untitled](./Untitled%204.png)
+
+### Logon Data
+
+User type
+
+- System, Service - 다중 접속 가능
+
+### Defaults
+
+![Untitled](./Untitled%205.png)
+
+### Roles
+
+![Untitled](./Untitled%206.png)
+
+access control
+
+### Profile
+
+![Untitled](./Untitled%207.png)
+
+### Groups
+
+![Untitled](./Untitled%208.png)
+
+# SAP S/4 HANA Development
+
+ABAP Workbench Fundamental 1-1, p.37
+
+# se38 - ABAP Editor: Initial screen
+
+![Untitled](./Untitled%209.png)

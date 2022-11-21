@@ -1,0 +1,62 @@
+---
+title: "Microprocessor Application 2nd"
+author: "Siyun Min"
+date: "2022-09-14"
+categories: [SSU]
+---
+# 2nd
+
+# History of computer
+
+![Untitled](./Untitled.png)
+
+computer는 계산기
+
+![Untitled](./Untitled%201.png)
+
+# Mind and intelligence
+
+![Untitled](./Untitled%202.png)
+
+# Automata
+
+![Untitled](./Untitled%203.png)
+
+# Automata theory
+
+![Untitled](./Untitled%204.png)
+
+# Automata and system description
+
+![Untitled](./Untitled%205.png)
+
+# Computation and automata
+
+## Theory of computation
+
+How efficiently problems can be solved on a model of computation using an algorithm
+
+- automata theory
+- formal language theory
+- computability theory
+- computational complexity theory
+
+## Algorithm
+
+a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer
+
+# Electronic computers
+
+![Untitled](./Untitled%206.png)
+
+# Women in computer history
+
+![Untitled](./Untitled%207.png)
+
+# Assignment
+
+[http://www.computerhistory.org/timeline/computers/](http://www.computerhistory.org/timeline/computers/)
+
+1 page report
+
+Choose three items in the timeline that you think the most important, and explain why they are important.

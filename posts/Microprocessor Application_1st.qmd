@@ -1,0 +1,14 @@
+---
+title: "Microprocessor Application 1st"
+author: "Siyun Min"
+date: "2022-09-07"
+categories: [SSU]
+---
+# 1st
+
+# Embedded systems
+
+1. design and/or implement basic and advanced I/O techniques, both synchronous and asynchronous and serial/parallel, including interrupts and time considerations.
+    - parallel/serial I/O; synchronous/asynchronous I/O, interrupts and timing
+2. design and implement and example of an embedded system in a non-electronic device, including sensor feedback, low-power, and mobility.
+    - data acquisition & sensors; embedded systems characteristics; low-power operation

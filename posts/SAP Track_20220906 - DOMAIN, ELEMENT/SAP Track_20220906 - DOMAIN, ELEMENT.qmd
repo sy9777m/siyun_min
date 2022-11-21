@@ -1,0 +1,133 @@
+---
+title: "Co-op SAP Track 20220906 - DOMAIN, ELEMENT"
+author: "Siyun Min"
+date: "2022-09-06"
+categories: [SSU, SAP]
+---
+# 20220906 - DOMAIN, ELEMENT
+
+# se80
+
+![Untitled](./Untitled.png)
+
+# se09
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+SSU-01 double click
+
+cts number - IDSK900124
+
+# se03
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+# ABAP Dictionary
+
+![Untitled](./Untitled%206.png)
+
+ABAP의 데이터베이스는 Dictionary 객체라고 하는데, 각각의 필드는 TYPE과 길이를 가지고 있다.
+
+- 이 타입과 사이즈를 DATA ELEMENT가 지정해주고, 그 값을 통제하고 싶을 때 DOMAIN을 사용한다.
+
+# ABAP Dictionary 3가지 data type
+
+Data elements - elementary data type 정의
+
+Structures - data elements의 집합
+
+Table types - structure의 집합
+
+![Untitled](./Untitled%207.png)
+
+# Tables and Fields
+
+테이블은 columns과 rows로 구성
+
+한 field는 unique name의 attribute를 가진다.
+
+테이블은 하나 이상의 key field를 가질 수 있다.
+
+currency (data type: CURR), quantity (QUAN), unit (UNIT)을 포함한 필드에 대한 reference table과 field는 반드시 정의
+
+![Untitled](./Untitled%208.png)
+
+DOMAIN - 기술적 정의
+
+ELEMENT - 비즈니스 의미 부여
+
+![Untitled](./Untitled%209.png)
+
+Field를 정의하는 방법은 3가지
+
+- table, data elements, domains
+
+# Two-level domain concept
+
+business 의미가 다른 element 2개는 같은 type을 사용할 때 domain은 한 개가 된다.
+
+# DOMAIN
+
+![Untitled](./Untitled%2010.png)
+
+SYDATS - 날짜 자료 domain
+
+## Routine
+
+length를 길게 지정하고, 값이 짧게 저장되면, 0000001001로 database에 저장되는데, Routine에 ALPHA를 붙이면 1001로 해당 데이터 조회 가능
+
+![Untitled](./Untitled%2011.png)
+
+package - 개발package (ex. ZEDU_001)
+
+# se11
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+## Create domain
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+CTS에 담아서 운영으로 보냄
+
+![Untitled](./Untitled%2018.png)
+
+activate domain
+
+# ELEMENT
+
+테이블 필드의 도메인 (기술적 속성) 작성 후 내용적인 의미를 부여하기 위해 작성
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+# Assignment
+
+![Untitled](./Untitled%2026.png)
+
+이름, 영문이름, 전화번호 domain, element 만들어오기

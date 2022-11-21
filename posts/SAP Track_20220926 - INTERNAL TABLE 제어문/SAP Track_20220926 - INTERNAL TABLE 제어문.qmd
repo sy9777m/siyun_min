@@ -1,0 +1,711 @@
+---
+title: "Co-op SAP Track 20220926 - INTERNAL TABLE 제어문"
+author: "Siyun Min"
+date: "2022-09-26"
+categories: [SSU, SAP]
+---
+# 20220926 - INTERNAL TABLE 제어문
+
+# INTERNAL TABLE 제어문
+
+## IF statement
+
+![Untitled](./Untitled.png)
+
+IF statement는 비교를 하는 명령어로써 프로그램에서 가장 유용하게 사용
+
+조건에 대한 참과 거짓을 판단하여 참일 경우와 거짓일 경우의 실행부분을 별도도로 지정하여 변수의 값에 따라 다르게 처리할 수 있게 해주는 명령어
+
+![Untitled](./Untitled%201.png)
+
+### IF ~ ENDIF
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'M'.
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'F'.
+  GS_STUDENT-ZTEL = '010-0000-0000'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+### IF~ELSE~ENDIF
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'M'.
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+ELSE.
+  GS_STUDENT-ZTEL = '010-0000-0000'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'F'.
+  GS_STUDENT-ZTEL = '010-0000-0000'.
+ELSE.
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+```
+
+[https://www.notion.so](https://www.notion.so)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+### IF~ELSEIF~ELSE-ENDIF
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'M'.
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+ELSEIF GS_STUDENT-ZGUBUN = 'F'.
+  GS_STUDENT-ZTEL = '010-0000-0000'.
+ELSE.
+  GS_STUDENT-ZTEL = '000'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF GS_STUDENT-ZGUBUN = 'F'.
+  GS_STUDENT-ZTEL = '010-2222-2222'.
+ELSEIF GS_STUDENT-ZGUBUN = 'M'.
+  GS_STUDENT-ZTEL = '010-3333-3333'.
+ELSE.
+  GS_STUDENT-ZTEL = '000'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+### IF~AND~ENDIF
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF ( GS_STUDENT-ZGUBUN = 'F' ) AND ( GS_STUDENT-ZKNAME = '오해원' ).
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF ( GS_STUDENT-ZGUBUN = 'F' ) AND ( GS_STUDENT-ZKNAME = '오해원' ).
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+![Untitled](./Untitled%2045.png)
+
+### IF~OR~ENDIF
+
+![Untitled](./Untitled%2046.png)
+
+spacing 주의
+
+![Untitled](./Untitled%2047.png)
+
+![Untitled](./Untitled%2048.png)
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+![Untitled](./Untitled%2052.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF ( GS_STUDENT-ZGUBUN = 'F' ) OR ( GS_STUDENT-ZKNAME = '오해원' ).
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+IF ( GS_STUDENT-ZGUBUN = 'F' ) OR ( GS_STUDENT-ZKNAME = '오해원' ).
+  GS_STUDENT-ZTEL = '010-1111-1111'.
+  ENDIF.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+![Untitled](./Untitled%2055.png)
+
+![Untitled](./Untitled%2056.png)
+
+## IF statement operators
+
+![Untitled](./Untitled%2057.png)
+
+1. equal
+2. less than
+3. greater than
+4. less than or equal
+5. greater than or equal
+6. not equal
+
+![Untitled](./Untitled%2058.png)
+
+![Untitled](./Untitled%2059.png)
+
+![Untitled](./Untitled%2060.png)
+
+![Untitled](./Untitled%2061.png)
+
+```abap
+DATA: GV_NUM1 TYPE I.
+DATA: GV_NUM2 TYPE I.
+DATA: GV_NUM3 TYPE I.
+
+GV_NUM1 = 100.
+GV_NUM2 = 120.
+GV_NUM3 = 110.
+
+DATA: GV_WRITENUM1 TYPE N LENGTH 3, GV_WRITENUM2 TYPE N LENGTH 3, GV_WRITENUM3 TYPE N LENGTH 3.
+
+GV_WRITENUM1 = GV_NUM1.
+GV_WRITENUM2 = GV_NUM2.
+GV_WRITENUM3 = GV_NUM3.
+
+WRITE: '1번', / 'GV_NUM1: ', GV_WRITENUM1, / 'GV_NUM2: ', GV_WRITENUM2.
+
+IF GV_NUM1 LT GV_NUM2.
+  WRITE: / 'GV_NUM1 is less than GV_NUM2.'.
+ELSE.
+  WRITE: / 'GV_NUM1 is greater than GV_NUM2.'.
+ENDIF.
+
+WRITE: / '2번', / 'GV_NUM1: ', GV_WRITENUM1, / 'GV_NUM2: ', GV_WRITENUM2, / 'GV_NUM3: ', GV_WRITENUM3.
+
+IF ( GV_NUM1 LT GV_NUM2 ) AND ( GV_NUM1 LT GV_NUM3 ).
+  WRITE: / 'GV_NUM1 is less than GV_NUM2 and GV_NUM3.'.
+ELSE.
+  WRITE: / 'GV_NUM1 is greater than GV_NUM2 or GV_NUM3.'.
+ENDIF.
+
+WRITE: / '3번', / 'GV_NUM1: ', GV_WRITENUM1, / 'GV_NUM2: ', GV_WRITENUM2.
+
+IF GV_NUM2 GT GV_NUM1.
+  WRITE: / 'GV_NUM2 is greater than GV_NUM1.'.
+ELSE.
+  WRITE: / 'GV_NUM2 is less than GV_NUM1.'.
+ENDIF.
+
+WRITE: / '4번', / 'GV_NUM1: ', GV_WRITENUM1, / 'GV_NUM2: ', GV_WRITENUM2, / 'GV_NUM3: ', GV_WRITENUM3.
+
+IF ( GV_NUM1 GT GV_NUM2 ) AND ( GV_NUM1 GT GV_NUM3 ).
+  WRITE: / 'GV_NUM1 is the greatest number.'.
+ELSE.
+  WRITE: / 'GV_NUM1 is not the greatest number.'.
+ENDIF.
+```
+
+![Untitled](./Untitled%2062.png)
+
+## LOOP statement
+
+INTERNAL TABLE을 순차적으로 한 줄씩 읽기
+
+- 특정한 구문을 반복하여 처리할 필요가 있을 경우 사용
+- INTERNAL TABLE에 있는 데이터에 대하여 처리 할 필요가 있는 경우 사용
+
+프로그램 속도 저하의 원인이 되기도 하므로 접근성이 중요
+
+![Untitled](./Untitled%2063.png)
+
+![Untitled](./Untitled%2064.png)
+
+![Untitled](./Untitled%2065.png)
+
+![Untitled](./Untitled%2066.png)
+
+![Untitled](./Untitled%2067.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '신현빈'.
+GS_STUDENT-ZENAME = 'Hyeonbin Shin'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2068.png)
+
+![Untitled](./Untitled%2069.png)
+
+![Untitled](./Untitled%2070.png)
+
+![Untitled](./Untitled%2071.png)
+
+![Untitled](./Untitled%2072.png)
+
+### 조건절 제어
+
+![Untitled](./Untitled%2073.png)
+
+WHERE보다 IF가 더 빠름
+
+![Untitled](./Untitled%2074.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT
+  WHERE ZGUBUN = 'F'.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2075.png)
+
+![Untitled](./Untitled%2076.png)
+
+![Untitled](./Untitled%2077.png)
+
+### INDEX 읽기
+
+![Untitled](./Untitled%2078.png)
+
+![Untitled](./Untitled%2079.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT
+  FROM 2 TO 3.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2080.png)
+
+![Untitled](./Untitled%2081.png)
+
+![Untitled](./Untitled%2082.png)
+
+![Untitled](./Untitled%2083.png)
+
+![Untitled](./Untitled%2084.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+CLEAR: GS_STUDENT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT
+  WHERE ZGUBUN = 'F'.
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2085.png)
+
+![Untitled](./Untitled%2086.png)
+
+![Untitled](./Untitled%2087.png)
+
+![Untitled](./Untitled%2088.png)
+
+![Untitled](./Untitled%2089.png)
+
+![Untitled](./Untitled%2090.png)
+
+# in-class practice
+
+1. CBO TABLE ZEDU15_001에서 INTERNAL TABLE에 데이터를 담은 후, 주문현황필드를 새로 만들어 ZSTATUS = 1인 경우 주문현황 필드에 한글로 ‘주문’, ZSTATUS = 2일 경우 ‘반품’이라고 INTERNAL TABLE에 담기
+
+ZSTATUS field를 가져오는 로직은
+
+```abap
+SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE ITAB.
+```
+
+```abap
+DATA: BEGIN OF GT_ORDER OCCURS 0.
+  INCLUDE TYPE ZEDU15_001.
+  DATA: ZORDER TYPE C LENGTH 10,
+END OF GT_ORDER.
+
+SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE GT_ORDER.
+
+LOOP AT GT_ORDER.
+  IF GT_ORDER-Z_STATUS = '1'.
+    GT_ORDER-ZORDER = '주문'.
+  ELSEIF GT_ORDER-Z_STATUS = '2'.
+    GT_ORDER-ZORDER = '반품'.
+  ENDIF.
+  CLEAR: GT_ORDER.
+ENDLOOP.
+```
+
+1. CBO TABLE ZEDU15_002에서 INTERNAL TABLE에 데이터 담은 후, 배송현황필드를 새로 만들어 ZZ_STATUS = 1일 경우 배송현황필드에 ‘주문완료’, ZZ_STATUS = 2일 경우 ‘배송진행’이라고 INTERNAL TABLE에 담기
+
+ZSTATUS field를 가져오는 로직은
+
+```abap
+SELECT * FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF TABLE ITAB.
+```
+
+1. CBO TABLE ZEDU15_001에서 INTERNAL TABLE에 데이터 담은 후, 배송지역에 따라 배송예정일을 계산하여 INTERNAL TABLE에 담기
+    - ZZ_CODE가 서울, 경기일 경우 배송일 = 주문일
+    - ZZ_CODE가 충정도, 전라도, 경상도일 경우 배송일 = 주문일 + 1
+    - ZZ_CODE가 제주일 경우 배송일 = 주문일 + 3
+2. 금액이 만 원 이상이면 사은품 지급을 관리하는 필드를 만들어 (사은품 지급 = ‘X’) INTERNAL TABLE에 관리
+
+금액을 가져오는 로직은
+
+```abap
+SELECT SINGLE Z_SUM FROM ZEDU15_002 INTO L_SUM.
+```
+
+```abap
+DATA: BEGIN OF GT_DELIVERY OCCURS 0.
+  INCLUDE TYPE ZEDU15_002.
+  DATA: ZDELIVERY TYPE C LENGTH 10,
+        ZARRIVAL TYPE D,
+        ZGIFT TYPE C,
+END OF GT_DELIVERY.
+
+SELECT * FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF TABLE GT_DELIVERY.
+
+LOOP AT GT_DELIVERY.
+  IF GT_DELIVERY-ZZ_STATUS = '1'.
+    GT_DELIVERY-ZDELIVERY = '주문완료'.
+  ELSEIF GT_DELIVERY-ZZ_STATUS = '2'.
+    GT_DELIVERY-ZDELIVERY = '배송진행'.
+  ENDIF.
+*  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+BREAK-POINT.
+
+LOOP AT GT_DELIVERY.
+  IF ( GT_DELIVERY-ZZ_CODE = 'A' ) OR ( GT_DELIVERY-ZZ_CODE = 'B' ).
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE.
+  ELSEIF ( GT_DELIVERY-ZZ_CODE = 'C' ) OR ( GT_DELIVERY-ZZ_CODE = 'D' ) or ( GT_DELIVERY-ZZ_CODE = 'E' ).
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE + 1.
+  ELSEIF GT_DELIVERY-ZZ_CODE = 'F'.
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE + 3.
+  ENDIF.
+*  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+BREAK-POINT.
+
+LOOP AT GT_DELIVERY.
+  IF GT_DELIVERY-Z_SUM > 100.
+    GT_DELIVERY-ZGIFT = 'X'.
+  ENDIF.
+*  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+BREAK-POINT.
+```

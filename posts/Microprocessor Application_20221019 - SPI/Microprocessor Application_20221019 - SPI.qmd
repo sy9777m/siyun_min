@@ -1,0 +1,82 @@
+---
+title: "Microprocessor Application 20221019 - SPI"
+author: "Siyun Min"
+date: "2022-10-19"
+categories: [SSU]
+---
+# 20221019 - SPI
+
+Created: October 19, 2022 8:18 PM
+Last edited time: November 9, 2022 12:17 PM
+
+# SPI basics
+
+A communication protocol using 4 wires
+
+- Also known as a 4 wire bus
+
+Used to communicate across small distances
+
+Multiple slaves, single master
+
+Synchronized
+
+![Untitled](./Untitled.png)
+
+Always full duplex
+
+- Communicating in two directions at the same time
+- transmission need not be meaningful
+
+Multiple Mbps transmission speed
+
+Transfers data in 4 to 16 bit characters
+
+Multiple slaves
+
+- Daisy-chaining possible
+
+# SPI protocols
+
+Wires
+
+- Both signals happen for every transmission
+    - Master Out Slave In (MOSI) - carries data out of Master to Slave
+    - Master In Slave Out (MISO) - carries data from Slave to Master
+- System clock (SCLK) - Master produced clock to synchronize data transfer
+- /SS (Slave Select 1…N) - Unique line to select a slave
+
+Shift registers shift in and out data - Master shifts out data to Slave, and shift in data from Slave
+
+![Untitled](./Untitled%201.png)
+
+# Slave selection
+
+Dedicated slave selection vs. Daisy chaining
+
+- Master Set Slave Select low with /SS_N signals
+- Daisy chaining - MOSI - (DIN-DOUT) - (DIN-DOUT)…
+
+![Untitled](./Untitled%202.png)
+
+# Pros and Cons
+
+## Pros
+
+Fast for point-to-point connections
+
+Easily allows streaming/Constant data inflow
+
+No addressing/Simple to implement
+
+Everyone supports it
+
+## Cons
+
+SS makes multiple slaves very complicated
+
+No acknowledgement ability
+
+No inherent arbitration
+
+No flow control

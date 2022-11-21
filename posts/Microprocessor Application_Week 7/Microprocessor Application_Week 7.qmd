@@ -1,0 +1,57 @@
+---
+title: "Microprocessor Application Week 7"
+author: "Siyun Min"
+date: "2022-10-24"
+categories: [SSU]
+---
+# Week 7
+
+# open collector (drain)
+
+“pull-up” aka “open collector (Drain)” aka “wired OR”
+
+- Wire is pulled high by a resistor.
+- If any device pulls the wire low, it goes low.
+
+Pros
+
+- If two devices both drive the bus, it still works!
+
+Cons
+
+- rise-time is very slow
+- Constant power drain
+
+Used in I2C, CAN
+
+![Untitled](./Untitled.png)
+
+# UART
+
+Universal Asynchronous Receiver/Transmitter
+
+hardware that translates between parallel and serial forms.
+
+Commonly used in conjunction with communication standards such as EIA, RS-232, RS-422 or RS-285
+
+The universal designation indicates that the data format and transmission speed are configurable and that the actual electric signaling levels and methods (such as differential signaling etc.) typically are handled by a special driver circuit external to the UART.
+
+# Protocol
+
+Each character is sent as
+
+- a logic low start bit
+- a configurable number of data bits (usually 7 or 8, sometimes 5)
+- an optional parity bit
+- one or more logic high stop bits
+
+a particular bit timing (”baud”)
+
+![Untitled](./Untitled%201.png)
+
+# Variations
+
+UART is actually a generic term that includes a large number of different devices/standards.
+
+- RS-232 is a standard that specifies.
+    - “electrical characteristics and timing of signals the meaning of signals, and the physical size and pin out of connectors.”

@@ -1,0 +1,317 @@
+---
+title: "Co-op SAP Track 20220915 - local data type, global data type"
+author: "Siyun Min"
+date: "2022-09-15"
+categories: [SSU, SAP]
+---
+# 20220915 - local data type, global data type
+
+# Local data type in program
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+```abap
+TYPES T_HELLO(12) TYPE C.
+
+DATA GV_TEXT1 TYPE T_HELLO.
+DATA GV_TEXT2 LIKE GV_TEXT1.
+
+GV_TEXT1 = 'hello world!'.
+GV_TEXT2 = 'Hello World!'.
+
+WRITE: GV_TEXT1, GV_TEXT2.
+```
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+```abap
+TYPES: BEGIN OF T_STUDENT,
+  CODE TYPE C LENGTH 10,
+  NAME TYPE C LENGTH 20,
+  TITLE TYPE C LENGTH 30,
+END OF T_STUDENT.
+
+DATA GS_STUDENT TYPE T_STUDENT.
+
+GS_STUDENT-CODE = 'SSU-01'.
+GS_STUDENT-NAME = '오해원'.
+GS_STUDENT-TITLE = 'Business Administration'.
+
+WRITE: GS_STUDENT-CODE, GS_STUDENT-NAME, GS_STUDENT-TITLE.
+```
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+```abap
+TYPES: BEGIN OF T_STUDENT,
+  CODE TYPE C LENGTH 10,
+  NAME TYPE C LENGTH 20,
+  TITLE TYPE C LENGTH 30,
+END OF T_STUDENT.
+
+TYPES: BEGIN OF T_STUDENT_MORE.
+  INCLUDE TYPE T_STUDENT.
+  TYPES: GRADE TYPE C LENGTH 1,
+END OF T_STUDENT_MORE.
+
+DATA GS_STUDENT TYPE T_STUDENT_MORE.
+
+GS_STUDENT-CODE = 'SSU-01'.
+GS_STUDENT-NAME = '오해원'.
+GS_STUDENT-TITLE = 'Business Administration'.
+GS_STUDENT-GRADE = 'A'.
+
+WRITE: GS_STUDENT-CODE, GS_STUDENT-NAME, GS_STUDENT-TITLE, GS_STUDENT-GRADE.
+```
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+```abap
+DATA: BEGIN OF GS_STUDENT,
+  CODE TYPE C LENGTH 10,
+  NAME TYPE C LENGTH 20,
+  TITLE TYPE C LENGTH 30,
+END OF GS_STUDENT.
+
+GS_STUDENT-CODE = 'SSU-01'.
+GS_STUDENT-NAME = '오해원'.
+GS_STUDENT-TITLE = 'Business Administration'.
+
+WRITE: GS_STUDENT-CODE, GS_STUDENT-NAME, GS_STUDENT-TITLE.
+```
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+```abap
+DATA: BEGIN OF GS_STUDENT,
+  CODE TYPE C LENGTH 10,
+  NAME TYPE C LENGTH 20,
+  TITLE TYPE C LENGTH 30,
+END OF GS_STUDENT.
+
+DATA: BEGIN OF GS_STUDENT_MORE.
+  INCLUDE STRUCTURE GS_STUDENT.
+  DATA: GRADE TYPE C LENGTH 1,
+END OF GS_STUDENT_MORE.
+
+GS_STUDENT_MORE-CODE = 'SSU-01'.
+GS_STUDENT_MORE-NAME = '오해원'.
+GS_STUDENT_MORE-TITLE = 'Business Administration'.
+GS_STUDENT_MORE-GRADE = 'A'.
+
+WRITE: GS_STUDENT_MORE-CODE, GS_STUDENT_MORE-NAME, GS_STUDENT_MORE-TITLE, GS_STUDENT_MORE-GRADE.
+```
+
+![Untitled](./Untitled%2013.png)
+
+# Global data type in ABAP dictionary
+
+모든 프로그램에서 사용 할 수 있는 global data type
+
+ABAP dictionary data type은 ABAP program 내에서 TYPE 구문 이용
+
+![Untitled](./Untitled%2014.png)
+
+## Table, View를 이용한 TYPE 선언
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+```abap
+DATA: GS_SFLIGHT TYPE SFLIGHT.
+
+SELECT SINGLE * FROM SFLIGHT INTO GS_SFLIGHT
+  WHERE CARRID = 'AA'.
+
+WRITE: GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-FLDATE, GS_SFLIGHT-CURRENCY.
+```
+
+![Untitled](./Untitled%2017.png)
+
+SFLIGHT - SAP 기본 테이블
+
+![Untitled](./Untitled%2018.png)
+
+```abap
+DATA: GV_CARRID TYPE SFLIGHT-CARRID,
+      GV_CONNID TYPE SFLIGHT-CONNID,
+      GV_FLDATE TYPE SFLIGHT-FLDATE.
+
+GV_CARRID = 'AA'.
+GV_CONNID = '0017'.
+GV_FLDATE = SY-DATUM.
+
+WRITE: GV_CARRID, GV_CONNID, GV_FLDATE.
+```
+
+![Untitled](./Untitled%2019.png)
+
+## DATA TYPE을 이용한 TYPE 선언
+
+![Untitled](./Untitled%2020.png)
+
+```abap
+* type declaration using data type
+DATA: GV_CARRID TYPE S_CARR_ID,
+      GV_CONNID TYPE S_CONN_ID,
+      GV_FLDATE TYPE S_DATE.
+
+GV_CARRID = 'AA'.
+GV_CONNID = '0017'.
+GV_FLDATE = SY-DATUM.
+
+WRITE: GV_CARRID, GV_CONNID, GV_FLDATE.
+```
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+```abap
+DATA GS_ZEDUS1 TYPE ZEDUS1_001.
+
+GS_ZEDUS1-ZCODE = 'SSU-01'.
+GS_ZEDUS1-ZKNAME = '오해원'.
+GS_ZEDUS1-ZENAME = 'Haewon Oh'.
+GS_ZEDUS1-ZGUBUN = 'F'.
+GS_ZEDUS1-ZTEL = '000-0000-0000'.
+
+WRITE: GS_ZEDUS1-ZCODE, GS_ZEDUS1-ZKNAME, GS_ZEDUS1-ZENAME, GS_ZEDUS1-ZGUBUN, GS_ZEDUS1-ZTEL.
+```
+
+![Untitled](./Untitled%2024.png)
+
+## TYPE GROUP 이용한 TYPE 선언
+
+여러가지 type을 그룹으로 묶어서 선언할 때 사용
+
+모든 프로그램에서 사용할 수 있는 global type이므로 모듈별로 자주 사용하게 되는 타입들을 그룹으로 묶어서 관리
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+```abap
+TYPE-POOL ZTG1 .
+
+TYPES: BEGIN OF ZTG1_ZEDU01,
+  ZCODE(10) TYPE C,
+  ZKNAME(10) TYPE C,
+  ZENAME(30) TYPE C,
+  ZGUBUN TYPE C,
+  END OF ZTG1_ZEDU01.
+
+TYPES ZTG1_ZTEL(13) TYPE C.
+```
+
+![Untitled](./Untitled%2027.png)
+
+```abap
+DATA: GV_ZEDU01 TYPE ZTG1_ZEDU01.
+DATA: GV_TEL TYPE ZTG1_ZTEL.
+
+GV_ZEDU01-ZCODE = 'SSU-01'.
+GV_ZEDU01-ZKNAME = '오해원'.
+GV_ZEDU01-ZENAME = 'Haewon Oh'.
+GV_ZEDU01-ZGUBUN = 'F'.
+GV_TEL = '000-0000-0000'.
+
+WRITE: GV_ZEDU01-ZCODE, GV_ZEDU01-ZKNAME, GV_ZEDU01-ZENAME, GV_ZEDU01-ZGUBUN, GV_TEL.
+```
+
+![Untitled](./Untitled%2028.png)
+
+# Review
+
+![Untitled](./Untitled%2029.png)
+
+## structure vs. table
+
+![Untitled](./Untitled%2030.png)
+
+## TYPES vs. DATA
+
+![Untitled](./Untitled%2031.png)
+
+# In-class practice
+
+1. TABLE SFLIGHT 구조를 가진 구조 선언: TYPES 구문 이용, 필드 모두 선언
+2. TABLE SCARR 구조를 가진 구조선언: TYPES 구문 이용, INCLUDE 사용
+3. TABLE SBOOK를 포함하는 LOCAL STRUCTURE 선언, INCLUDE 사용
+4. TABLE SCARR를 포함 (INCLUDE)한 후, 아래 필드 정의
+    1. SFLIGHT-CONNID
+    2. SFLIGHT-FLDATE
+    3. SFLIGHT-PRICE
+    4. SFLIGHT-CURRENCY
+    5. SFLIGHT-PLANETYPE
+5. 1번에 TYPE으로 정의한 SFLIGHT 구조를 포함하고 TABLE SBUSPART를 포함 (INCLUDE)
+
+```abap
+* NO. 1
+TYPES: BEGIN OF T_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  FLDATE TYPE SFLIGHT-FLDATE,
+  PRICE TYPE SFLIGHT-PRICE,
+  CURRENCY TYPE SFLIGHT-CURRENCY,
+  PLANETYPE TYPE SFLIGHT-PLANETYPE,
+  SEATSMAX  TYPE SFLIGHT-SEATSMAX,
+  SEATSOC TYPE SFLIGHT-SEATSOCC,
+  PAYMENTSUM TYPE SFLIGHT-PAYMENTSUM,
+  SEATSMAX_B TYPE SFLIGHT-SEATSMAX_B,
+  SEATSOCC_B TYPE SFLIGHT-SEATSOCC_B,
+  SEATSMAX_F TYPE SFLIGHT-SEATSMAX_F,
+  SEATSOCC_F TYPE SFLIGHT-SEATSOCC_F,
+  END OF T_SFLIGHT.
+
+* NO.2
+TYPES: BEGIN OF T_SCARR.
+  INCLUDE STRUCTURE SCARR.
+TYPES: END OF T_SCARR.
+
+* NO.3
+DATA: BEGIN OF LS_SBOOK.
+  INCLUDE STRUCTURE SBOOK.
+DATA: END OF LS_SBOOK.
+
+* NO.4
+TYPES: BEGIN OF LS_SCARR.
+  INCLUDE STRUCTURE SCARR.
+  DATA: CONNID TYPE SFLIGHT-CONNID,
+        FLDATE TYPE SFLIGHT-FLDATE,
+        PRICE TYPE SFLIGHT-PRICE,
+        CURRENCY TYPE SFLIGHT-CURRENCY,
+        PLANETYPE TYPE SFLIGHT-PLANETYPE,
+  END OF LS_SCARR.
+
+* NO.5
+TYPES: BEGIN OF LS_SFLIGHT.
+  INCLUDE TYPE T_SFLIGHT.
+  INCLUDE STRUCTURE SBUSPART.
+TYPES:END OF LS_SFLIGHT.
+```
+
+# Shortcut
+
+ctrl + shift + l - 라인 삭제
+
+ctrl + d - 라인 한 줄 더 만들기

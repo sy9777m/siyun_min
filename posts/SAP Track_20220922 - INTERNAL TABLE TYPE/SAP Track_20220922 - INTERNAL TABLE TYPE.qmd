@@ -1,0 +1,530 @@
+---
+title: "Co-op SAP Track 20220922 - INTERNAL TABLE TYPE"
+author: "Siyun Min"
+date: "2022-09-22"
+categories: [SSU, SAP]
+---
+# 20220922 - INTERNAL TABLE TYPE
+
+# ST22
+
+dump - system error
+
+가장 흔한 경우가 error가 있음에도 불구하고 activate 하는 경우
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+# Internal table type
+
+개별 entry에 접근하는 방법
+
+1. STANDARD TABLE: INDEX TABLE
+2. SORTED TABLE: INDEX TABLE, KEY 권장
+3. HASHED TABLE: KEY만 사용
+
+실무에서는 99% STANDARD TABLE만 사용
+
+## STANDARD TABLE
+
+순차적인 INDEX를 가지는 테이블
+
+TREE 구조
+
+INDEX를 이용하여 테이블 ENTRY를 찾을 때 사용
+
+INTERNAL TABLE 내 INDEX - TABLE에서 데이터가 위치하는 라인 순번
+
+KEY - non-unique로 선언 (WITH UNIQUE 구문 사용 불가)
+
+## SORTED TABLE
+
+순차적인 INDEX를 가지는 테이블
+
+KEY 값으로 항상 정렬된 INTERNAL TABLE
+
+INDEX 또는 KEY를 이용하여 테이블 ENTRY를 찾을 때 사용
+
+BINARY SEARCH 이용
+
+KEY - unique / non-unique 둘 다 선언 가능
+
+## HASHED TABLE
+
+순차적인 INDEX를 가지지 않음
+
+HASH 값으로 계산된 KEY 값으로만 탐색
+
+- HASH 알고리즘으로 계산된 것으로 메모리에 저장된 주소 값으로 데이터 탐색
+
+Key - unique 선언 가능
+
+## INTERNAL TABLE value declaration (MOVE)
+
+```abap
+MOVE ITAB1 TO ITAB2 "HEADER
+MOVE ITAB1[] TO ITAB2[] "BODY
+```
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+```abap
+TYPES: BEGIN OF T_STUDENT,
+  ZCODE TYPE ZCODE_1,
+  ZKNAME TYPE ZKNAME_1,
+  ZENAME TYPE ZENAME_1,
+  ZGUBUN TYPE ZGUBUN_1,
+  ZTEL TYPE ZTEL_1,
+  END OF T_STUDENT.
+
+DATA: GT_STUDENT1 TYPE TABLE OF T_STUDENT WITH HEADER LINE.
+DATA: GT_STUDENT2 TYPE TABLE OF T_STUDENT WITH HEADER LINE.
+
+GT_STUDENT1-ZCODE = 'SSU-01'.
+GT_STUDENT1-ZKNAME = '오해원'.
+GT_STUDENT1-ZENAME = 'Haewon Oh'.
+GT_STUDENT1-ZGUBUN = 'F'.
+GT_STUDENT1-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT1.
+
+BREAK-POINT.
+*
+*MOVE GT_STUDENT1 TO GT_STUDENT2.
+*
+*BREAK-POINT.
+
+MOVE GT_STUDENT1[] TO GT_STUDENT2[].
+
+BREAK-POINT.
+```
+
+## INTERNAL TABLE 초기화 (CLEAR)
+
+### HEADER LINE이 없는 INTERNAL TABLE: BODY CLEAR
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+header line이 없는 internal table의 clear는 body clear의 기능
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+CLEAR: GT_STUDENT.
+
+BREAK-POINT.
+```
+
+### HEADER LINE이 있는 INTERNAL TABLE: HEADER CLEAR
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+![Untitled](./Untitled%2035.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+CLEAR: GT_STUDENT.
+
+BREAK-POINT.
+```
+
+### HEADER LINE이 있는 INTERNAL TABLE: BODY CLEAR
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+![Untitled](./Untitled%2042.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+CLEAR: GT_STUDENT[].
+
+BREAK-POINT.
+```
+
+### REFERSH, FREE
+
+REFERSH - INTERNAL TABLE의 데이터만 지우고, 메모리 공간은 그대로
+
+FREE - REFERSH 구문 후 메모리 공간도 반환
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+![Untitled](./Untitled%2045.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+REFRESH: GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2046.png)
+
+![Untitled](./Untitled%2047.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+FREE: GT_STUDENT.
+
+BREAK-POINT.
+```
+
+### SORT
+
+INTERNAL TABLE의 KEY 값으로 SORT
+
+![Untitled](./Untitled%2048.png)
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+![Untitled](./Untitled%2052.png)
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-03'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-02'.
+GT_STUDENT-ZKNAME = '비비'.
+GT_STUDENT-ZENAME = 'BIBI'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '엔믹스'.
+GT_STUDENT-ZENAME = 'NMIXX'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+SORT GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2055.png)
+
+![Untitled](./Untitled%2056.png)
+
+![Untitled](./Untitled%2057.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-02'.
+GT_STUDENT-ZKNAME = '비비'.
+GT_STUDENT-ZENAME = 'BIBI'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-03'.
+GT_STUDENT-ZKNAME = '엔믹스'.
+GT_STUDENT-ZENAME = 'NMIXX'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+SORT GT_STUDENT DESCENDING.
+
+BREAK-POINT.
+```
+
+### SORT BY
+
+선택한 column 기준으로 sort
+
+![Untitled](./Untitled%2058.png)
+
+![Untitled](./Untitled%2059.png)
+
+![Untitled](./Untitled%2060.png)
+
+![Untitled](./Untitled%2061.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-02'.
+GT_STUDENT-ZKNAME = '비비'.
+GT_STUDENT-ZENAME = 'BIBI'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-03'.
+GT_STUDENT-ZKNAME = '엔믹스'.
+GT_STUDENT-ZENAME = 'NMIXX'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+SORT GT_STUDENT BY ZENAME.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2062.png)
+
+![Untitled](./Untitled%2063.png)
+
+### LINES
+
+INTERNAL TABLE에 존재하는 현재 라인 수 반환
+
+![Untitled](./Untitled%2064.png)
+
+### INSERT, APPEND, COLLECT
+
+DB table은 APPEND만 가능
+
+INSERT - INTERNAL TABLE의 데이터를 삽입
+
+APPEND - INTERNAL TABLE의 마지막 라인에 데이터를 삽입
+
+COLLECT - 같은 값이 있으면 숫자 타입은 SUM 값 수행, 같은 값이 없으면 데이터 추가
+
+COLLECT는 sum하려는 column을 제외하고 모든 data가 똑같아야 함
+
+![Untitled](./Untitled%2065.png)
+
+![Untitled](./Untitled%2066.png)
+
+![Untitled](./Untitled%2067.png)
+
+![Untitled](./Untitled%2068.png)
+
+![Untitled](./Untitled%2069.png)
+
+![Untitled](./Untitled%2070.png)
+
+![Untitled](./Untitled%2071.png)
+
+![Untitled](./Untitled%2072.png)
+
+![Untitled](./Untitled%2073.png)
+
+![Untitled](./Untitled%2074.png)
+
+![Untitled](./Untitled%2075.png)
+
+![Untitled](./Untitled%2076.png)
+
+```abap
+DATA: GT_STUDENT LIKE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-02'.
+GT_STUDENT-ZKNAME = '비비'.
+GT_STUDENT-ZENAME = 'BIBI'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+INSERT GT_STUDENT INDEX 1.
+
+BREAK-POINT.
+
+GT_STUDENT-ZSTUCODE = 'SSU-03'.
+GT_STUDENT-ZKNAME = '엔믹스'.
+GT_STUDENT-ZENAME = 'NMIXX'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+COLLECT GT_STUDENT.
+
+BREAK-POINT.
+```
+
+# in-class practice
+
+![Untitled](./Untitled%2077.png)
+
+![Untitled](./Untitled%2078.png)

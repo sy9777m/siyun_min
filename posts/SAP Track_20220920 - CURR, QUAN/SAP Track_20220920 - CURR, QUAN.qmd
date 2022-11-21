@@ -1,0 +1,171 @@
+---
+title: "Co-op SAP Track 20220920 - CURR, QUAN"
+author: "Siyun Min"
+date: "2022-09-20"
+categories: [SSU, SAP]
+---
+# 20220920 - CURR, QUAN
+
+# in-class practice solution
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+## CURR, QUAN
+
+CURRENCY의 경우 SAP는 전 세계에서 사용되는 시스템이기 때문에 화폐 단위가 모두 다르다. 미국의 경우 달러와 센트를 단위로 사용하고, 센트는 소수점 표시가 필요하다. 원화는 소수점 표시가 별도로 필요없기 때문에 SAP에서는 이 부분을 general 하게 사용할 수 있도록 CURRENCY field는 소수점 이하 두 자리를 가지는 형식을 사용한다. 실제 CURRENCY field 값이 0.01이라고 하면 원화일 경우 1원을 의미하고, 달러일 경우 1센트를 의미한다. → currency는 CUKR 형식의 필드 값 참조 해야 한다.
+
+QUAN, 수량 데이터 타입에는 단위 간 호환을 위하여 특별하게 사용되는 형식이기 때문에 이 또한 별도의 처리가 필요하다. → 수량필드는 UNIT 형식의 필드를 참조해야 한다.
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+## debugging
+
+![Untitled](./Untitled%2010.png)
+
+```abap
+BREAK-POINT " debugger 호출
+```
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+display mode에서, activate 한 뒤에 breakpoint 생성 가능
+
+![Untitled](./Untitled%2014.png)
+
+여기서 f5를 누르면 다음으로 넘어감
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+MANDT만 맞춰주면 나머지 field의 move에는 문제가 없다
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+```abap
+* 7
+DATA: T_ORDER TYPE ZEDU1_001.
+
+T_ORDER-PRICE = 100.
+
+CONSTANTS: C_RATE TYPE I VALUE '100'.
+DATA: L_ZSUM TYPE I.
+
+SELECT SINGLE * FROM ZEDU1_001 INTO T_ORDER.
+
+T_ORDER-PRICE = T_ORDER-PRICE * C_RATE.
+
+MOVE T_ORDER-PRICE TO L_ZSUM.
+
+WRITE: / L_ZSUM.
+```
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+암기
+
+```abap
+TABLES: ZEDU1_001.
+CONSTANTS: C_RATE TYPE I VALUE '100'.
+DATA: L_ZSUM TYPE C LENGTH 5.
+
+SELECT SINGLE * FROM ZEDU1_001.
+
+ZEDU1_001-PRICE = ZEDU1_001-PRICE * C_RATE.
+
+WRITE ZEDU1_001-PRICE TO L_ZSUM CURRENCY 'USD'.
+
+WRITE: / L_ZSUM.
+```
+
+![Untitled](./Untitled%2026.png)
+
+# in-class practice
+
+![Untitled](./Untitled%2027.png)
+
+1. 4)
+2. se11
+3. 2)
+4. 4)
+5. 1)
+6. 3)
+
+![Untitled](./Untitled%2028.png)
+
+1. 4)
+2. 4)
+3. 4)
+4. 3) *
+5. se93
+
+![Untitled](./Untitled%2029.png)
+
+1. 4) *
+
+![Untitled](./Untitled%2030.png)
+
+1. 2)
+2. database interface
+3. 2)
+4. MANDT
+5. 3)
+
+![Untitled](./Untitled%2031.png)
+
+1. table, field
+2. column, row
+3. Z
+4. 변수명, 타입
+5. 4, N
+6. P
+7. view
+8. ELEMENT
+9. reference table
+10. TYPE
+
+![Untitled](./Untitled%2032.png)
+
+1. TYPE
+2. INCLUDE
+3. DATA
+4. STRUCTURE, INCLUDE
+5. STRUCTURE
+6. C
+7. SINGLE
+8. sm30
+9. sm34

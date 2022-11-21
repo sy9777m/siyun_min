@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-11-09">
+
+<title>Siyun Min - Microprocessor Application 20221109</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Microprocessor Application 20221109</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 9, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="gem5" class="level1">
+<h1>20221109 - GEM5</h1>
+</section>
+<section id="assignment" class="level1">
+<h1>Assignment</h1>
+<p>GEM5 installation report</p>
+</section>
+<section id="usb-device-basics" class="level1">
+<h1>USB Device Basics</h1>
+<p>Universal Serial Bus (USB) connects between a computer and peripheral devices</p>
+<ul>
+<li>created to replace various slow buses (parallel, serial, and keyboard connections)
+<ul>
+<li>USB 2.0: up to 480Mb/s (35MB/s)</li>
+<li>USB 3.0: up to 6Gb/s (625MB/s)</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./IMG_6140.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">IMG_6140.jpeg</figcaption><p></p>
+</figure>
+</div>
+<p>embedded bus는 보통 AXI 사용</p>
+<ul>
+<li>ARM 기반</li>
+</ul>
+<p>A USB device can never start sending data without first being asked by the host controller</p>
+<p>Single-master implementation</p>
+<ul>
+<li>Host polls various devices</li>
+<li>A device can request a fixed bandwidth (for audio and video I/O)</li>
+</ul>
+<p>Universal Serial Bus is misnomer…</p>
+<ul>
+<li>Actually a tree built out of point-to-point links
+<ul>
+<li>Links are four-wire cables (ground, power, and two signal wires)</li>
+</ul></li>
+</ul>
+<p>misnomer - a wrong or inaccurate name or designation.</p>
+<section id="the-protocol" class="level2">
+<h2 class="anchored" data-anchor-id="the-protocol">The protocol</h2>
+<p>USB protocol defines a set of standards that any device can follow</p>
+<ul>
+<li>No need to write a driver for a device that is in a predefined class and follows that standard,</li>
+<li>predefined classes: storage devices, keyboards, mice, joysticks, network devices, and modems</li>
+<li>No defined standard for video devices and USB-to-serial devices
+<ul>
+<li>A driver is needed for every device.</li>
+</ul></li>
+</ul>
+</section>
+<section id="driver-types" class="level2">
+<h2 class="anchored" data-anchor-id="driver-types">Driver types</h2>
+<p>Linux supports two types of USB drivers</p>
+<ul>
+<li>Drivers on a host system
+<ul>
+<li>Control the USB devices that are plugged into it</li>
+</ul></li>
+<li>Drivers on a device (USB gadget drivers)
+<ul>
+<li>Control how that single device looks to the host computer as a USB device</li>
+</ul></li>
+<li>Some hardware devices can actually be both
+<ul>
+<li>Called USB OTG (On The Go),</li>
+<li>E.g. Android 3.0+, some printers</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="usb-overview" class="level1">
+<h1>USB Overview</h1>
+<p>A USB device has one or more configurations</p>
+<ul>
+<li>E.g. power and bandwidth requirements</li>
+</ul>
+<p>A configuration has one or more interfaces</p>
+<ul>
+<li>E.g. audio data, knobs for speakers</li>
+</ul>
+<p>An interface has one or more settings</p>
+<ul>
+<li>Different quality of services
+<ul>
+<li>E.g. different frame sizes for digital cameras</li>
+</ul></li>
+<li>Also zero or more endpoint
+<ul>
+<li>E.g. bulk, interrupt endpoints</li>
+</ul></li>
+</ul>
+</section>
+<section id="endpoints" class="level1">
+<h1>Endpoints</h1>
+<p>The most basic form of USB communication is through an endpoint.</p>
+<ul>
+<li>Unidirectional: Carries data in one direction
+<ul>
+<li>From the host to device (OUT endpoint)</li>
+<li>From the device to the host (IN endpoint)</li>
+</ul></li>
+</ul>
+<p>Four endpoint types</p>
+<ul>
+<li>CONTROL</li>
+<li>INTERRUPT</li>
+<li>BULK</li>
+<li>ISOCHRONOUS</li>
+</ul>
+<p>Control and bulk endpoints are used for asynchronous data transfers</p>
+<p>Interrupt and isochronous endpoints are periodic with reserved bandwidth</p>
+<p>Endpoint information is in <code>struc usb_endpoint_descriptor</code></p>
+<ul>
+<li>embedded in <code>struc usb_host_endpoint</code></li>
+<li>Note: defined by the USB standard, so not Linux looking</li>
+</ul>
+<p>Some important fields</p>
+<ul>
+<li><code>bEndpointAddress</code> (8-bit)
+<ul>
+<li>Use <code>USB_DIR_OUT</code> and <code>USB_DIR_IN</code> bit masks to determine the direction of data flow</li>
+</ul></li>
+</ul>
+<p><code>bmAttributes</code></p>
+<ul>
+<li>type of the endpoint</li>
+<li><code>&amp; USB_ENDPOINT_XFERTYPE_MASK</code> to determine if the endpoint is of type <code>USB_ENDPOINT_XFER_ISOC</code>, <code>USB_ENDPOINT_XFER_BULK</code>, or <code>USB_ENDPOINT_XFER_INT</code></li>
+</ul>
+<p><code>wMaxPacketSize</code></p>
+<ul>
+<li>Maximum bytes that an endpoint can handle</li>
+<li>Large transfers will be split into multiple transfers</li>
+</ul>
+<p><code>bInterval</code></p>
+<ul>
+<li>For interrupt endpoints, this value specifics the milliseconds between interrupt requests for the endpoint</li>
+</ul>
+<section id="control" class="level2">
+<h2 class="anchored" data-anchor-id="control">CONTROL</h2>
+<p>Used for configuring the device, retrieving information and status about the device, or sending commands to the device.</p>
+<p>Every device has a control endpoint called endpoint 0</p>
+<ul>
+<li>Used by USB core to configure the device at insertion time</li>
+<li>Transfer are guaranteed with reserved bandwidth</li>
+</ul>
+<p>USB가 꽂히는 순간 CONTROL endpoint에서 device의 정보를 읽어감</p>
+</section>
+<section id="interrupt" class="level2">
+<h2 class="anchored" data-anchor-id="interrupt">INTERRUPT</h2>
+<p>Transfer small amounts of data at a fixed rate</p>
+<p>For USB keyboards and mice</p>
+<p>Also used to control the device</p>
+<p>Not for large transfers</p>
+<p>Guaranteed reserved bandwidth</p>
+</section>
+<section id="bulk" class="level2">
+<h2 class="anchored" data-anchor-id="bulk">BULK</h2>
+<p>Transfer large amounts of data</p>
+<p>No data loss</p>
+<p>Not time guaranteed</p>
+<p>A BULK packet might be split up across multiple transfers</p>
+<p>Used for printers, storage, and network devices</p>
+</section>
+<section id="isochronous" class="level2">
+<h2 class="anchored" data-anchor-id="isochronous">ISOCHRONOUS</h2>
+<p>Transfer large amount of data</p>
+<p>For real-time data collections, A/V devices</p>
+<p>Unlike bulk endpoints, no guarantees (potential data loss)</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

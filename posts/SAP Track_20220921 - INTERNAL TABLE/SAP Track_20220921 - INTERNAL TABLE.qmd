@@ -1,0 +1,263 @@
+---
+title: "Co-op SAP Track 20220921 - INTERNAL TABLE"
+author: "Siyun Min"
+date: "2022-09-21"
+categories: [SSU, SAP]
+---
+# 20220921 - INTERNAL TABLE
+
+# Internal TABLE
+
+프로그램 내에서 정의하여 사용할 수 있는 local table
+
+DB에 접근하여 데이터를 조회하고, 조회한 데이터를 local (메모리 영역)에 담아두기
+
+Work area (= structure)는 ABAP 코딩 내에서도 SE11 (ABAP Dictionary)와 같이 수생할 수 있도록 하는 것을 의미하는데, 그것들이 모인 테이블을 INTERNAL TABLE이라고 한다.
+
+```abap
+DATA: LS_DATA TYPE TABLE "after declaring structure
+DATA: LT_DATA TYPE TABLE OF TABLE "internal table
+```
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+## Header line이 있는 테이블
+
+![Untitled](./Untitled%2012.png)
+
+header line이 있는 internal table을 선언하는 방법은 4개
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+```abap
+DATA: GT_STUDENT TYPE ZSTU_1 OCCURS 0 WITH HEADER LINE.
+
+GT_STUDENT-ZSTUCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+## local table type을 이용한 internal table 생성
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+```abap
+TYPES: BEGIN OF S_STUDENT,
+  ZCODE TYPE C LENGTH 10,
+  ZKNAME TYPE C LENGTH 10,
+  ZENAME(30) TYPE C,
+  ZGUBUN(1) TYPE C,
+  ZTEL(13) TYPE C,
+  END OF S_STUDENT.
+
+DATA: GT_STUDENT TYPE STANDARD TABLE OF S_STUDENT WITH HEADER LINE.
+
+GT_STUDENT-ZCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+## local TABLE DATA를 이용한 internal table 생성
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+```abap
+DATA: BEGIN OF GS_STUDENT,
+  ZCODE TYPE C LENGTH 10,
+  ZKNAME TYPE C LENGTH 10,
+  ZENAME(30) TYPE C,
+  ZGUBUN(1) TYPE C,
+  ZTEL(13) TYPE C,
+  END OF GS_STUDENT.
+
+DATA: GT_STUDENT LIKE STANDARD TABLE OF GS_STUDENT WITH HEADER LINE.
+
+GT_STUDENT-ZCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+# Global ABAP Dictionary type을 이용한 internal table 생성
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+```abap
+DATA: GT_SFLIGHT TYPE TABLE OF SFLIGHT.
+DATA: GS_SFLIGHT LIKE LINE OF GT_SFLIGHT.
+
+GS_SFLIGHT-CARRID = 'ABC'.
+GS_SFLIGHT-PLANETYPE = 'BOEING'.
+
+BREAK-POINT.
+
+APPEND GS_SFLIGHT TO GT_SFLIGHT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2045.png)
+
+![Untitled](./Untitled%2046.png)
+
+![Untitled](./Untitled%2047.png)
+
+# header line이 기본으로 포함된 internal table 선언
+
+![Untitled](./Untitled%2048.png)
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+![Untitled](./Untitled%2052.png)
+
+![Untitled](./Untitled%2053.png)
+
+```abap
+DATA: BEGIN OF GT_STUDENT OCCURS 0,
+  ZCODE TYPE C LENGTH 10,
+  ZKNAME TYPE C LENGTH 10,
+  ZENAME(30) TYPE C,
+  ZGUBUN(1) TYPE C,
+  ZTEL(13) TYPE C,
+  END OF GT_STUDENT.
+
+GT_STUDENT-ZCODE = 'SSU-01'.
+GT_STUDENT-ZKNAME = '오해원'.
+GT_STUDENT-ZENAME = 'Haewon Oh'.
+GT_STUDENT-ZGUBUN = 'F'.
+GT_STUDENT-ZTEL = '000-0000-0000'.
+
+BREAK-POINT.
+
+APPEND GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2054.png)
+
+![Untitled](./Untitled%2055.png)
+
+![Untitled](./Untitled%2056.png)

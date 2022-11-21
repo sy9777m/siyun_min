@@ -1,0 +1,103 @@
+---
+title: "Microprocessor Application Week 2"
+author: "Siyun Min"
+date: "2022-10-03"
+categories: [SSU]
+---
+# Week 2
+
+# History of computer
+
+Abacus (주판)
+
+- For arithmetic tasks, used in Babylonia as early as 2400 BC
+
+Slide rule (계산자)
+
+- For solving problems in proportion, trigonometry, multiplication and division, and for various functions, such as squares and cube roots, was developed in the late 16th century and found application in gunnery, surveying and navigation.
+
+![Untitled](./Untitled.png)
+
+컴퓨터는 계산기, 인간이 시킨 일을 반복적으로 수행할 수 있는가
+
+Difference engine
+
+- Charles Babbage, considered the “father of the computer”, originated the concept of a programmable computer.
+
+Analog compjuters
+
+- tide predictor
+
+Digital computers
+
+![Untitled](./Untitled%201.png)
+
+# Mind and intelligence
+
+What is intelligence?
+
+- I don’t either. Then, who is intelligent?
+
+Mind-body problem
+
+- How the human mind and body can causally interact
+
+Kant: Philosophy of mind
+
+- Sensibility, understanding, and reason
+
+![Untitled](./Untitled%202.png)
+
+# Automata
+
+Plural of ‘Automation’
+
+- A self-operating machine or a machine or control mechanism designed to automatically follow a predetermined sequence of operations, or respond to predetermined instructions.
+
+![Untitled](./Untitled%203.png)
+
+자동머신
+
+인간이 지성으로 내리는 판단을 대신 해주는 기계
+
+- ex) 자동으로 체스를 두는 기계, 알파고
+
+# Automata theory
+
+The study of abstract machines and automata, as well as the computational problems that can be solved using them.
+
+What can we do with the machine in the right figure?
+
+![Untitled](./Untitled%204.png)
+
+판단력을 모사
+
+추상화된 자동기계
+
+# Automata and system description
+
+![Untitled](./Untitled%205.png)
+
+A simple finite state machine for what?
+
+- The automation starts in state S1, and transitions to the non-accepting state S2 upon reading the symbol 0.
+
+The result?
+
+- An automation that recognizes strings containing an even (or odd) number of 0s.
+
+# Computation and automata
+
+Theory of computation
+
+- How efficiently problems can be solved on a model of computation, using an algorithm
+- Automata theory
+- Formal language theory
+- Computability theory
+- Computational complexity theory
+
+Algorithm
+
+- a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
+
+Turing machine, Algorithm → microprocessor

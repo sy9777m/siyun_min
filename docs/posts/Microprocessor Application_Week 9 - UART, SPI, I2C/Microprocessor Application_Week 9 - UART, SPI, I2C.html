@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-11-14">
+
+<title>Siyun Min - Microprocessor Application Week 9 - UART, SPI, I2C</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Microprocessor Application Week 9 - UART, SPI, I2C</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 14, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="week-9---uart-spi-i2c" class="level1">
+<h1>Week 9 - UART, SPI, I2C</h1>
+</section>
+<section id="protocol" class="level1">
+<h1>Protocol</h1>
+<p>Each character is sent as</p>
+<ul>
+<li>a logic low start bit</li>
+<li>a configurable number of data bits (usually 7 or 8, sometimes 5)</li>
+<li>an optional parity bit</li>
+<li>one or more logic high stop bits</li>
+</ul>
+<p>A particular bit timing (”baud”)</p>
+<ul>
+<li>“9600-N-8-1” → <baudrate><parity><databits><stopbits></stopbits></databits></parity></baudrate></li>
+<li>“9600-8-N-1” → <baudrate><databits><parity><stopbits></stopbits></parity></databits></baudrate></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="variation" class="level1">
+<h1>Variation</h1>
+<p>UART is actually a generic term that includes a large number of different devices/standards.</p>
+<ul>
+<li>RS-232 is a standard that specifies
+<ul>
+<li>“electrical characteristics and timing of signals, the meaning of signals, and the physical size and pin out of connectors.</li>
+</ul></li>
+</ul>
+</section>
+<section id="signals-only-most-common" class="level1">
+<h1>Signals (only most common)</h1>
+<p>RXD - The signal receiving the data. This will be an input and is usually connected to the TXD line of the downstream device.</p>
+<p>TXD - The signal transmitting the data. This will be an output and is usually connected to the RXD line of the downstream device.</p>
+<p>RTS#: (Ready to Send) signal to indicate that the device is ready to receive data. This will be an output and is usually connected to the CTS# line of the downstream device.</p>
+<p>CTS#: (Clear to Send) signal to identify that it is OK to transmit data to the upstream device. This will be an input and is usually connected to the RTS# line of the upstream device.</p>
+</section>
+<section id="cable-and-connector" class="level1">
+<h1>Cable and connector</h1>
+<p>DTE: data terminating equipment (usually terminal)</p>
+<p>DCE: data circuit-terminating equipment (modem)</p>
+<p>D-sub connector (DB 9 for UART)</p>
+<ul>
+<li>ground and noise issues</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Wiring a DTE device to a DCE device for communication is easy.</p>
+<ul>
+<li>The pins are a one-to-one connection, meaning all wires go from pin x to pin x.</li>
+<li>A straight through cable is commonly used for this application.</li>
+</ul>
+<p>In contrast, wiring two DTE devices together requires crossing the transmit and receive wires.</p>
+<ul>
+<li>This cable is known as a null modem or crossover cable.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="rs-232" class="level1">
+<h1>RS-232</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>letter “J” ASCII code 전송</p>
+<p>위: DTE - DCE</p>
+<p>아래: DCE - DCE</p>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>How fast can we run a UART?</p>
+<p>What are the limitations?</p>
+<p>Why do we need start/stop bits?</p>
+<p>How many data bits can be sent?</p>
+<ul>
+<li>9600-8-N-1 is ok. Is 9600-8192-N-1 ok too?</li>
+</ul>
+</section>
+<section id="spi-basics" class="level1">
+<h1>SPI basics</h1>
+<p>A communication protocol using 4 wires</p>
+<ul>
+<li>Also known as a <strong>4 wire bus</strong></li>
+</ul>
+<p>Used to communicate across small distance</p>
+<p>Multiple Slaves, Single Master</p>
+<p><strong>Synchronized ↔︎ UART (Asynchronous)</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Always Full Duplex</p>
+<ul>
+<li>Communicating in two directions at the same time</li>
+<li>Transmission need not be meaningful</li>
+</ul>
+<p>Multiple Mbps transmission speed</p>
+<p>Transfer data in 4 to 16 bit characters</p>
+<p>Multiple slaves</p>
+<ul>
+<li>Daisy-chaining possible</li>
+</ul>
+</section>
+<section id="spi-protocols" class="level1">
+<h1>SPI protocols</h1>
+<p>Wires</p>
+<ul>
+<li>Master Out Slave In (MOSI): carries data out of Master to Slave</li>
+<li>Master In Slave Out (MISO): carries data from Slave to Master
+<ul>
+<li>Both signals happen for every transmission</li>
+</ul></li>
+<li>System Clock (SCLK): Master produces clock to synchronize data transfer</li>
+<li>/SS (Slave Select 1 … N): Unique line to select a slave.</li>
+</ul>
+<p>Shift registers shift in and out data: Master shifts out data to Slave, and shift in data from Slave.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="slave-selection" class="level1">
+<h1>Slave selection</h1>
+<p>Dedicated Slave selection vs.&nbsp;Daisy chaining</p>
+<ul>
+<li>Master Set Slave Selection low with /SS_N signals</li>
+<li>Daisy chaining: MOSI - (DIN-DOUT) - (DIN-DOUT) …</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>이런 형상을 Daisy chaining이라고 부름</p>
+</section>
+<section id="pros-and-cons" class="level1">
+<h1>Pros and Cons</h1>
+<section id="pros" class="level2">
+<h2 class="anchored" data-anchor-id="pros">Pros</h2>
+<p>Fast for point-to-point connections</p>
+<p>easily allow streaming/constant data inflow</p>
+<p>no addressing/simple to implementation</p>
+<p>Everyone supports it.</p>
+</section>
+<section id="cons" class="level2">
+<h2 class="anchored" data-anchor-id="cons">Cons</h2>
+<p>SS makes multiple slaves very complicated</p>
+<p>No acknowledgement ability</p>
+<p>No inherent arbitration</p>
+<p>No flow control</p>
+</section>
+</section>
+<section id="what-is-i2c-or-i2c" class="level1">
+<h1>What is I2C (or I2C)?</h1>
+<p>Inter-integrated circuits</p>
+<p>Pronounced “Eye-Squared-See”</p>
+<p>Two-wire seal bus protocol</p>
+<p>Invented by Philips in the early 1980’s</p>
+<ul>
+<li>That division now spun-off into NXP</li>
+<li>Originally developed for the internal communication of TV sets</li>
+</ul>
+<p>It becomes popular for embedded systems and PCs for sensors peripheral ICs, and so on.</p>
+</section>
+<section id="specifications" class="level1">
+<h1>Specifications</h1>
+<p>Two-wire seal protocol with “addressing” capability</p>
+<ul>
+<li>Multi-master / Multi-slave</li>
+<li>SDA (data), SCL (clock) lines</li>
+<li>Open-collector: enable interface between different voltage levels</li>
+</ul>
+<p>Speeds up to 3.4Mbit/s</p>
+</section>
+<section id="clock" class="level1">
+<h1>Clock</h1>
+<p>Different from the conventional clocks</p>
+<p>Normally high (kept high by the pull-up)</p>
+<p>Pulsed by the master during data transmission (whether the master is transmitter or receiver)</p>
+<p><strong>Slave device can hold clock low if it needs more time</strong></p>
+<ul>
+<li>우회적인 protocol 구현 가능</li>
+</ul>
+</section>
+<section id="timing-diagram" class="level1">
+<h1>Timing diagram</h1>
+<p>Transmitter/Receiver <span class="math inline">\(\approx\)</span> Master/Slave</p>
+<ul>
+<li>Master always initiate transactions, and slave responds</li>
+<li>(read) transmitter is slave, (write) transmitter is master</li>
+</ul>
+<p>Transmitter sets data on the SDA line, Receiver acknowledges.</p>
+<ul>
+<li>Start condition - Address/Data - Acknowledgement - Stop condition</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="startstop-conditions" class="level1">
+<h1>Start/stop conditions</h1>
+<section id="start-condition" class="level2">
+<h2 class="anchored" data-anchor-id="start-condition">Start condition</h2>
+<p>Master pulls SDA down while SCL is high.</p>
+<p>Normally SDA changes only while SCL is low.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stop-condition" class="level2">
+<h2 class="anchored" data-anchor-id="stop-condition">Stop condition</h2>
+<p>Master pulls SDA high while SCL is high.</p>
+<p>Also used to “abort” transaction.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="addressdata-transmission" class="level1">
+<h1>Address/data transmission</h1>
+<p>Address and data are always sampled on rising edge of clock.</p>
+<p>7 bits address - 8th bit for read/write indication: high/low → R/W - 8 bits data</p>
+<p>Transmission continues with subsequent bytes until master creates stop condition.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,27 @@
+---
+title: "Microprocessor Application 6th"
+author: "Siyun Min"
+date: "2022-10-19"
+categories: [SSU]
+---
+# 6th
+
+# 시험범위
+
+Peripheral, bus, SPI까지
+
+---
+
+# Block Diagram of Exynos 4412
+
+![Untitled](./Untitled.png)
+
+## DMAC (Direct Memory Access Controller)
+
+**Direct memory access** (**DMA**) is a feature of computer systems and allows certain hardware subsystems to access main system [memory](https://en.wikipedia.org/wiki/Computer_memory) independently of the [central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit) (CPU).
+
+[Direct memory access - Wikipedia](https://en.wikipedia.org/wiki/Direct_memory_access)
+
+## Memory map
+
+![Untitled](./Untitled%201.png)

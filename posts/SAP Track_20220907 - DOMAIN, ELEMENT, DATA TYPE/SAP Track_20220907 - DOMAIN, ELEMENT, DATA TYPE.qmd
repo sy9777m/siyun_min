@@ -1,0 +1,229 @@
+---
+title: "Co-op SAP Track 20220907 - DOMAIN, ELEMENT, DATA TYPE"
+author: "Siyun Min"
+date: "2022-09-07"
+categories: [SSU, SAP]
+---
+# 20220907 - DOMAIN, ELEMENT, DATA TYPE
+
+# se11
+
+![Untitled](./Untitled.png)
+
+## DOMAIN
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+## ELEMENT
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+# se80
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+# se90
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+# TABLE
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+Key는 반드시 하나 이상
+
+![Untitled](./Untitled%2040.png)
+
+key는 반드시 값을 가지고 있어야 하기 때문에 (null is not allowed) initial values 체크
+
+![Untitled](./Untitled%2041.png)
+
+ELEMENT를 지정하면 관련 데이터 정보를 끌어옴
+
+ELEMENT가 굳이 필요없는 경우 그냥 FIELD에서 값을 넣으면 됨
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+search help 기능 넣는 section
+
+![Untitled](./Untitled%2045.png)
+
+CURR, QUAN는 반드시 reference를 지정해줘야 함
+
+![Untitled](./Untitled%2046.png)
+
+T001 table
+
+![Untitled](./Untitled%2047.png)
+
+### activate
+
+![Untitled](./Untitled%2048.png)
+
+table 생성 시에는 technical settings이 필수
+
+![Untitled](./Untitled%2049.png)
+
+table 크기에 따라 table이 할당 될 table space의 공간을 결정 ← filesystem 개념
+
+![Untitled](./Untitled%2050.png)
+
+대부분의 table이 transparent table이므로 APPL1을 선택
+
+![Untitled](./Untitled%2051.png)
+
+사이즈는 수정 가능
+
+![Untitled](./Untitled%2052.png)
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+Table is activated.
+
+# se16n
+
+![Untitled](./Untitled%2055.png)
+
+![Untitled](./Untitled%2056.png)
+
+f8 - online (실행)
+
+![Untitled](./Untitled%2057.png)
+
+## se11
+
+![Untitled](./Untitled%2058.png)
+
+![Untitled](./Untitled%2059.png)
+
+![Untitled](./Untitled%2060.png)
+
+### Transparent table
+
+가장 기본적인 table
+
+kna1
+
+![Untitled](./Untitled%2061.png)
+
+![Untitled](./Untitled%2062.png)
+
+DB type 표시
+
+모듈마다 사용하는 table이 정해져있는 경우가 많음
+
+### BSEG
+
+원래는 clustered table인데, 지금은 transparent table로 되어있음
+
+![Untitled](./Untitled%2063.png)
+
+### MARA
+
+![Untitled](./Untitled%2064.png)
+
+## DATA TYPE
+
+![Untitled](./Untitled%2065.png)
+
+![Untitled](./Untitled%2066.png)
+
+![Untitled](./Untitled%2067.png)
+
+![Untitled](./Untitled%2068.png)
+
+### BSEG-DMBTR
+
+![Untitled](./Untitled%2069.png)
+
+# se97
+
+error message 제어
+
+# T-CODE favorite
+
+![Untitled](./Untitled%2070.png)
+
+# Login with other language
+
+![Untitled](./Untitled%2071.png)
+
+# shortcut
+
+ctrl + f2 = 점검
+
+ctrl + f3 = activate

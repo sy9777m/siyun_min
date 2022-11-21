@@ -1,0 +1,56 @@
+---
+title: "Microprocessor Application 4th"
+author: "Siyun Min"
+date: "2022-09-28"
+categories: [SSU]
+---
+# 4th
+
+[Bus (computing) - Wikipedia](https://en.wikipedia.org/wiki/Bus_(computing))
+
+![Untitled](./Untitled.png)
+
+[Communication protocol - Wikipedia](https://en.wikipedia.org/wiki/Communication_protocol)
+
+[BUS Arbitration in Computer Organization - GeeksforGeeks](https://www.geeksforgeeks.org/bus-arbitration-in-computer-organization/)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+[Bus mastering - Wikipedia](https://en.wikipedia.org/wiki/Bus_mastering)
+
+[Direct memory access - Wikipedia](https://en.wikipedia.org/wiki/Direct_memory_access)
+
+[System on a chip - Wikipedia](https://en.wikipedia.org/wiki/System_on_a_chip#Bus-based_communication)
+
+[Network on a chip - Wikipedia](https://en.wikipedia.org/wiki/Network_on_a_chip)
+
+# Address space
+
+Microprocessor thinks the everything around them is a just address.
+
+External devices are located in the space of address - memory map!
+
+Addressable range and address bus width
+
+- 16bit address → $2^{16}$ of objects can be identified.
+
+# Memory map
+
+Address decoding
+
+- Address space with multiple chip devices
+
+ex) Implementing 64KB memory with 4KB devices
+
+- 64 / 4 = 16 * 4KB RAM are required.
+
+How about the address?
+
+- 4K = $4 \times 2^{10} = 2^{12}$ → 12 bits for byte-wise addressing
+- 64K = $64 \times 2^{10} = 2^{12}$ → 16 bits for byte-wise addressing
+
+![Untitled](./Untitled%204.png)

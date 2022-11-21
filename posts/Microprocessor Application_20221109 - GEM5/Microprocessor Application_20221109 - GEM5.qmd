@@ -1,0 +1,167 @@
+---
+title: "Microprocessor Application 20221109"
+author: "Siyun Min"
+date: "2022-11-09"
+categories: [SSU]
+---
+# 20221109 - GEM5
+
+# Assignment
+
+GEM5 installation report
+
+# USB Device Basics
+
+Universal Serial Bus (USB) connects between a computer and peripheral devices
+
+- created to replace various slow buses (parallel, serial, and keyboard connections)
+    - USB 2.0: up to 480Mb/s (35MB/s)
+    - USB 3.0: up to 6Gb/s (625MB/s)
+
+![IMG_6140.jpeg](./IMG_6140.jpeg)
+
+embedded bus는 보통 AXI 사용
+
+- ARM 기반
+
+A USB device can never start sending data without first being asked by the host controller
+
+Single-master implementation
+
+- Host polls various devices
+- A device can request a fixed bandwidth (for audio and video I/O)
+
+Universal Serial Bus is misnomer…
+
+- Actually a tree built out of point-to-point links
+    - Links are four-wire cables (ground, power, and two signal wires)
+
+misnomer - a wrong or inaccurate name or designation.
+
+## The protocol
+
+USB protocol defines a set of standards that any device can follow
+
+- No need to write a driver for a device that is in a predefined class and follows that standard,
+- predefined classes: storage devices, keyboards, mice, joysticks, network devices, and modems
+- No defined standard for video devices and USB-to-serial devices
+    - A driver is needed for every device.
+
+## Driver types
+
+Linux supports two types of USB drivers
+
+- Drivers on a host system
+    - Control the USB devices that are plugged into it
+- Drivers on a device (USB gadget drivers)
+    - Control how that single device looks to the host computer as a USB device
+- Some hardware devices can actually be both
+    - Called USB OTG (On The Go),
+    - E.g. Android 3.0+, some printers
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+# USB Overview
+
+A USB device has one or more configurations
+
+- E.g. power and bandwidth requirements
+
+A configuration has one or more interfaces
+
+- E.g. audio data, knobs for speakers
+
+An interface has one or more settings
+
+- Different quality of services
+    - E.g. different frame sizes for digital cameras
+- Also zero or more endpoint
+    - E.g. bulk, interrupt endpoints
+
+# Endpoints
+
+The most basic form of USB communication is through an endpoint.
+
+- Unidirectional: Carries data in one direction
+    - From the host to device (OUT endpoint)
+    - From the device to the host (IN endpoint)
+
+Four endpoint types
+
+- CONTROL
+- INTERRUPT
+- BULK
+- ISOCHRONOUS
+
+Control and bulk endpoints are used for asynchronous data transfers
+
+Interrupt and isochronous endpoints are periodic with reserved bandwidth
+
+Endpoint information is in `struc usb_endpoint_descriptor`
+
+- embedded in `struc usb_host_endpoint`
+- Note: defined by the USB standard, so not Linux looking
+
+Some important fields
+
+- `bEndpointAddress` (8-bit)
+    - Use `USB_DIR_OUT` and `USB_DIR_IN` bit masks to determine the direction of data flow
+
+`bmAttributes`
+
+- type of the endpoint
+- `& USB_ENDPOINT_XFERTYPE_MASK` to determine if the endpoint is of type `USB_ENDPOINT_XFER_ISOC`, `USB_ENDPOINT_XFER_BULK`, or `USB_ENDPOINT_XFER_INT`
+
+`wMaxPacketSize`
+
+- Maximum bytes that an endpoint can handle
+- Large transfers will be split into multiple transfers
+
+`bInterval`
+
+- For interrupt endpoints, this value specifics the milliseconds between interrupt requests for the endpoint
+
+## CONTROL
+
+Used for configuring the device, retrieving information and status about the device, or sending commands to the device.
+
+Every device has a control endpoint called endpoint 0
+
+- Used by USB core to configure the device at insertion time
+- Transfer are guaranteed with reserved bandwidth
+
+USB가 꽂히는 순간 CONTROL endpoint에서 device의 정보를 읽어감
+
+## INTERRUPT
+
+Transfer small amounts of data at a fixed rate
+
+For USB keyboards and mice
+
+Also used to control the device
+
+Not for large transfers
+
+Guaranteed reserved bandwidth
+
+## BULK
+
+Transfer large amounts of data
+
+No data loss
+
+Not time guaranteed
+
+A BULK packet might be split up across multiple transfers
+
+Used for printers, storage, and network devices
+
+## ISOCHRONOUS
+
+Transfer large amount of data
+
+For real-time data collections, A/V devices
+
+Unlike bulk endpoints, no guarantees (potential data loss)
