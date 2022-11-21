@@ -1,4 +1,5 @@
-./.quarto/
-./_site/
 ./profile.jpg
+./.quarto/
+./posts/
+
 /.quarto/
