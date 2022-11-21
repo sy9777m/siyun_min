@@ -451,5 +451,38 @@
   },
   "posts/Microprocessor Application_2nd/Microprocessor Application_2nd.qmd": {
     "Microprocessor Application_2nd.html": "5842a71d"
+  },
+  "posts/SAP Track_20221004 - READ/SAP Track_20221004 - READ.qmd": {
+    "SAP Track_20221004 - READ.html": "d44c92bd"
+  },
+  "posts/SAP Track_20221005 - GROUPING/SAP Track_20221005 - GROUPING.qmd": {
+    "SAP Track_20221005 - GROUPING.html": "743235ae"
+  },
+  "posts/SAP Track_20220928 - LOOP/SAP Track_20220928 - LOOP.qmd": {
+    "SAP Track_20220928 - LOOP.html": "40017423"
+  },
+  "posts/SAP Track_20220929 - INTERNAL TABLE DELETE/SAP Track_20220929 - INTERNAL TABLE DELETE.qmd": {
+    "SAP Track_20220929 - INTERNAL TABLE DELETE.html": "ee3b4efe"
+  },
+  "posts/SAP Track_20221006 - INSERT, UPDATE, DELETE, MODIFY/SAP Track_20221006 - INSERT, UPDATE, DELETE, MODIFY.qmd": {
+    "SAP Track_20221006 - INSERT, UPDATE, DELETE, MODIFY.html": "1b8ec72d"
+  },
+  "posts/SAP Track_20221005 - DATABASE TABLE/SAP Track_20221005 - DATABASE TABLE.qmd": {
+    "SAP Track_20221005 - DATABASE TABLE.html": "6d81fdbc"
+  },
+  "posts/SAP Track_20221018 - Parameters/SAP Track_20221018 - Parameters.qmd": {
+    "SAP Track_20221018 - Parameters.html": "0887a015"
+  },
+  "posts/SAP Track_20221013 - SUBROUTINE/SAP Track_20221013 - SUBROUTINE.qmd": {
+    "SAP Track_20221013 - SUBROUTINE.html": "b763ae3f"
+  },
+  "posts/SAP Track_20220927 - MODIFY/SAP Track_20220927 - MODIFY.qmd": {
+    "SAP Track_20220927 - MODIFY.html": "2d388624"
+  },
+  "posts/SAP Track_20221012 - PERFORM, PARAMETER/SAP Track_20221012 - PERFORM, PARAMETER.qmd": {
+    "SAP Track_20221012 - PERFORM, PARAMETER.html": "37feb2dd"
+  },
+  "posts/SAP Track_20220926 - INTERNAL TABLE/SAP Track_20220926 - INTERNAL TABLE.qmd": {
+    "SAP Track_20220926 - INTERNAL TABLE.html": "984ecfc9"
   }
 }
