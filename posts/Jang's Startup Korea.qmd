@@ -4,9 +4,9 @@ author: "Siyun Min"
 date: "2022-06-20"
 categories: [Book, Startup]
 ---
-# <장병규의 스타트업 한국>
+# 장병규의 스타트업 한국
 
-[https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-kHPpwi9cdv/cf8e47c2076ac18c1d4896e441d873f8cb20bb67f3a0195e798e797ef039caebd948a8eaa5c63bd2fc7e295b364e91983609f6de280d91769e0a51da3aceb9ab2db7264222638d9694ed00ad93082e76e22959d9653bd03589929ab24ac5a89b9208c9b2](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-kHPpwi9cdv/cf8e47c2076ac18c1d4896e441d873f8cb20bb67f3a0195e798e797ef039caebd948a8eaa5c63bd2fc7e295b364e91983609f6de280d91769e0a51da3aceb9ab2db7264222638d9694ed00ad93082e76e22959d9653bd03589929ab24ac5a89b9208c9b2)
+![](https://contents.kyobobook.co.kr/pdt/4801161651539.jpg)
 
 > 필자는 사람들이 모르는 것은 과소평가하거나 과대평가하는, 그래서 있는 그대로 받아들이지 않는 모습을 종종 발견합니다. 스타트업에 대한 우리 사회의 이해도가 낮기에 가족이 불안해하는 것은 어쩌면 당연합니다.
 > 

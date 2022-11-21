@@ -4,9 +4,9 @@ author: "Siyun Min"
 date: "2022-06-20"
 categories: [Book, Investment]
 ---
-# <듀얼 모멘텀 투자전략>
+# 듀얼 모멘텀 투자전략
 
-[https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-uWzjOP-n1R/53f6ffa424790bd88868f978b9483c1cef969bd371c8d0bad3d268b161d2e4d3986d5bd95cf4bd927999c8bdbdd26a81c1400cc03b4bc4cbac05b823875e9442d38fd15e9535e8f9ec611186c1b7250614e20300bf46fa138c6e8252a33b8925989f3034](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-uWzjOP-n1R/53f6ffa424790bd88868f978b9483c1cef969bd371c8d0bad3d268b161d2e4d3986d5bd95cf4bd927999c8bdbdd26a81c1400cc03b4bc4cbac05b823875e9442d38fd15e9535e8f9ec611186c1b7250614e20300bf46fa138c6e8252a33b8925989f3034)
+![](https://contents.kyobobook.co.kr/pdt/9791188754021.jpg)
 
 > 도대체 모멘텀이란 무엇인가? 투자수익이 지속되는 경향을 말한다. 괜찮았던 투자는 계속해서 괜찮을 것이며, 형편없는 투자는 앞으로도 형편없을 것이다.
 > 
