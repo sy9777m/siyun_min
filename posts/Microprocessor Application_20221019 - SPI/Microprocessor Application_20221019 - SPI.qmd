@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # 20221019 - SPI
 
-Created: October 19, 2022 8:18 PM
-Last edited time: November 9, 2022 12:17 PM
-
 # SPI basics
 
 A communication protocol using 4 wires

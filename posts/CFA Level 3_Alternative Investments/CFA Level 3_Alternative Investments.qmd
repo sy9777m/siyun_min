@@ -575,7 +575,7 @@ Portfolio managers for specialist hedge fund strategies use their knowledge of a
 
 ## Volatility trading
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled.png)
+![Untitled](./Untitled.png)
 
 Once an esoteric pursuit, volatility trading has evolved ever recent years to become a recognized investable asset.
 
@@ -781,7 +781,7 @@ $$
 (\text{Return on }HF_{i})_{t} = \alpha_{i} + \beta_{i, 1}(Factor 1)_{t} + \beta_{i, 2}(Factor 2)_{t} + ... + \beta_{i, K}(Factor K)_{t} + D_{t}\beta_{i, 1}(Factor 1)_{t} + D_{t}\beta_{i, 2}(Factor 2)_{t} + ... + D_{t}\beta_{i, K}(Factor K)_{t} + (error)_{i, t}
 $$
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%201.png)
+![Untitled](./Untitled%201.png)
 
 Any returns not explained by the model’s risk factors would be attributed to either omitted risk factors, alpha (i.e., hedge fund manager skill), or randomness (error).
 
@@ -999,9 +999,9 @@ In this case, alternative investments can be a better choice for diversification
 
 Traditional approaches to defining the **investment opportunity set** include classifying asset groups by liquidity or by how they perform over economic cycles.
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%202.png)
+![Untitled](./Untitled%202.png)
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%203.png)
+![Untitled](./Untitled%203.png)
 
 1. Capital growth asset
     1. public equity
@@ -1077,7 +1077,7 @@ Investment structure
 
 For funds in the private equity, private credit, real estate, and real asset sectors, liquidity provisions are often more strict than is typical for hedge funds. Subscriptions are structured in “closes” for new investors, usually over a one-year period. Limited partners commit a stated amount of capital, and the general partner will “call” this capital over an investment period (such as 3 to 5 years) as they identify investment opportunities. Redemptions are typically not available. Instead, the fund will distribute capital over its life (often 10 to 12 years) as it exits its investments. A small secondary market exists for limited partnerships, but transactions often take place at significant discounts to funds’ net asset values and may require approval from the general partner.
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%204.png)
+![Untitled](./Untitled%204.png)
 
 1. Committed capital이 전부 capital call이 안 될 수 있음 → return 왜곡 가능성
 2. Capital call / distribution timing의 불확실성 → return의 측정 어려움
@@ -1198,7 +1198,7 @@ $$
 \text{percentage to be distributed in period t} * [\text{NAV in period (t - 1)} * (1 + \text{growth rate})]
 $$
 
-![Untitled](Alternative%20Investments%20897dd511355a40e592f0e71db5b7ec5d/Untitled%205.png)
+![Untitled](./Untitled%205.png)
 
 $$
 \text{NAV in period}_{t} = \text{NAV in period}_{t - 1} \times (1 + \text{growth rate}) + \text{contributions in period t} - \text{distributions in period t}

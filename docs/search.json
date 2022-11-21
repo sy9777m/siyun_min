@@ -182,11 +182,137 @@
     "text": "prob_infer_stats_week_13_14\n\n\n\n\n\nprob_infer_stats_week_13_13\n\n\n\n\n\nprob_infer_stats_week_13_12\n\n\n\n\n\nprob_infer_stats_week_13_11\n\n\n\n\n\nprob_infer_stats_week_13_10\n\n\n\n\n\nprob_infer_stats_week_13_9\n\n\n\n\n\nprob_infer_stats_week_13_8\n\n\n\n\n\nprob_infer_stats_week_13_7\n\n\n\n\n\nprob_infer_stats_week_13_17\n\n\n\n\n\nprob_infer_stats_week_13_16\n\n\n\n\n\nprob_infer_stats_week_13_15"
   },
   {
+    "objectID": "posts/SAP Track_20221108 - ALV/SAP Track_20221108 - ALV.html",
+    "href": "posts/SAP Track_20221108 - ALV/SAP Track_20221108 - ALV.html",
+    "title": "Co-op SAP Track 20221108 - ALV",
+    "section": "",
+    "text": "20221108 - ALV\n\n\nCALL Function ALV\nFunction ALV에서 사용되는 ’REUSE_ALV_GRID_DISPLAY’는 Method를 호출 할 때, ABAP Dictionary를 참고하거나, 필드 카탈로그 정의\nABAP Dictionary:\nI_STRUCTURE_NAME = 'DB_TABLE_NAME' \"parameter를 이용하여 정의\n필드 카탈로그:\nEXPORTING\n    IT_FIELDCAT \"parameter 이용\n→ 이렇게 parameter를 이용하여 ALV 내 많은 기능 사용\n\n\nParameter 종류\nI_CALLBACK_PROGRAM: ALV 함수를 호출하고 반환 (SY-REPID로 설정)\nI_CALLBACK_PF_STATUS_SET: ALV 프로그램 내 STATUS 설정\nI_CALLBACK_USER_COMMAND: ALV 프로그램 내 버튼 기능 구현\nI_STRUCTURE_NAME: ALV 구조 설정 (구조체, 테이블)\nI_GRID_TITLE: ALV GRID의 헤더 타이틀\nI_GRID_SETTINGS: ALV GRID 설정 (편집 시 즉시 이벤트 호출)\nIS_LAYOUT: ALV 레이아웃 설정\nIT_FIELDCAT: ALV의 구성 항목칼럼 (필드 카탈로그) 설정\nIT_EXCLUDING: ALV 기본 버튼 제거 항목\nIT_SORT: ALV 조회 시 기본 SORT 칼럼 설정\nIT_FILTER: ALV 조회 시 필터 설정\nI_SAVE: ALV 레이아웃 저장 시 옵션\nIS_VARIANT: ALV 레이아웃을 저장하고 호출하도록 설정\nIT_EVENTS: ALV의 이벤트 정의\n\n\nGUI STATUS\n\nGUI STATUS 생성\n\n\n\n\nUntitled\n\n\n\nGUI STATUS TEXT 입력\n\n\n\n\nUntitled\n\n\n\nApplication Toolbar 입력\n\nStandard toolbar: SAP에 존재하는 모든 스크린에 기본적으로 제공되는 toolbar\nApplication toolbar: 개발자가 추가하는 toolbar\nmenu bar: 표준 프로그램에서 기본적으로 제공하지만, 이 외 추가로 구성하고 싶은 메뉴 설정\n\n\n\nUntitled\n\n\n\nFunction 속성 입력\n\n\n\n\nUntitled\n\n\n\nFunction 텍스트, 아이콘 입력\n\n\n\n\nUntitled\n\n\n\nFunction 키 입력\n\n\n\n\nUntitled\n\n\n\nFunction TYPE\n\n\n\n\nUntitled\n\n\nE: 트랜잭션 종료 시 설정하는 Function type이며, AT-EXIT-COMMAND 모듈 수행\nS: 시스템이 사용하는 Function type\nT: 트랜잭션을 호출하는 Function type\nP: local GUI function type\nH: PROCESS ON HELP REQUEST 이벤트 호출\nSPACE: 표준 APPLICATION Function type\n\nSTANDARD Toolbar 입력\n\n\n\n\nUntitled\n\n\nBACK, EXIT, CANC는 반드시 해야 함\n\nFunction TYPE\n\n\n\n\nUntitled\n\n\n\n\nEVENT\n\n변수선언\n\n\n\n\nUntitled\n\n\n\n이벤트에 필요한 변수 데이터 설정\n\nGS_EVENT-NAME: ALV 표준 함수 내의 ALV 이벤트 이름 설정\nGS_EVENT-FORM: ALV를 호출하는 프로그램 내에서, GUI STATUS를 설정하기 위한 FORM 구문 명 기술\n\n\n\nUntitled\n\n\n\nparameter에 이벤트 추가\n\n\n\n\nUntitled\n\n\n\nCALL BACK parameter 추가\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\nFORM 문을 통해 GUI_STATUS 화면 추가\n\n\n\n\nUntitled\n\n\n\n실행\n\n\n\n\nUntitled\n\n\n\n\nUSER COMMAND\n\nGUI STATUS 생성\n\n\n\n\nUntitled\n\n\nBACK, EXIT, CANC는 반드시 해야 함\n\nparameter 추가\n\n\n\n\nUntitled\n\n\n\nFORM문 생성\n\n\n\n\nUntitled\n\n\n\n실행\n\n\n\n\nUntitled"
+  },
+  {
     "objectID": "posts/2021-10-23-probability-and-statistics-week-7/2021-10-23-probability-and-statistics-week-7.html",
     "href": "posts/2021-10-23-probability-and-statistics-week-7/2021-10-23-probability-and-statistics-week-7.html",
     "title": "Probability and Statistics Week 7",
     "section": "",
     "text": "\\[\n\\\\f(x) = \\frac{\\lambda(\\lambda x)^{k - 1}e^{-\\lambda x}}{\\Gamma{(k)}}\n\\]\n\n\n\nimage-20211023021832347\n\n\n\n\n\n\n\nimage-20211023021847507\n\n\nGamma function 부분적분 \\[\n\\\\\\int{u(x)v^{`}(x)dx} = u(x)v(x) - \\int{u^{`}(x)v(x)dx}\n\\]\n\n\n\n\n\n\n\nimage-20211023022413944\n\n\n\n\n\nimage-20211023022504335\n\n\n\n\n\nimage-20211023022806970\n\n\n\n\n\nimage-20211023022901414\n\n\n\n\n\nimage-20211023023038476\n\n\n\n\n\nimage-20211023023100228\n\n\n\n\n\nimage-20211023023132879\n\n\n\n\n\n\n\n\nimage-20211023023255476\n\n\nexponential distribution의 특별한 형태라고 보면 됨\n\n\n\nimage-20211023023357229\n\n\n\n\n\nimage-20211023023429445\n\n\n\n\n\nimage-20211023023455454\n\n\n\n\n\n\n\n\nimage-20211023023551383\n\n\nbinomial distribution의 특수한 경우\n횟수는 정해져있고, 확률이 미지수\n\n\n\nimage-20211023023702158\n\n\n\n\n\nimage-20211023023720452\n\n\n\n\n\n\n\n\nimage-20211023023745117\n\n\n분포를 모르는 상태에서 normal distribution으로 근사할 수 있기 때문에 자주 사용\n\\(\\mu\\)에 대해 대칭인 함수\n\n\n\nimage-20211023023826385\n\n\n\n\n\nimage-20211023023856524\n\n\nshape이 변하지 않고, \\(\\mu\\)에 따라 shifting이 발생, \\(\\sigma\\)에 따라 scale이 변함\n\n\n\nimage-20211023023907323\n\n\n\n\n\nimage-20211023023934785\n\n\n\n\n\nimage-20211023024013805\n\n\n\n\n\n\n\n\nimage-20211023024106277\n\n\n\n\n\n\n\nimage-20211023024226388\n\n\n\n\n\n\n\n\nimage-20211023024502108\n\n\n\n\n\nimage-20211023024511257\n\n\n\n\n\n\n\n\nimage-20211023024531671\n\n\n독립이 아닌 경우 covariance를 통해 variance를 보정해야 함\n\n\n\nimage-20211023024610848\n\n\n\n\n\nimage-20211023024637157\n\n\n\n\n\nimage-20211023024645346\n\n\n\n\n\n\n\n\nimage-20211023024730273\n\n\n\n\n\nimage-20211023024755095\n\n\n\n\n\n\n\n\n\nimage-20211023024809348\n\n\n\n\n\n\n\n\nimage-20211023025611636\n\n\n\n\n\nimage-20211023025741865\n\n\n\n\n\n\n\n\nimage-20211023025853940\n\n\n\n\n\nimage-20211023030023367\n\n\n\n\n\nimage-20211023030035973\n\n\n\n\n\n\n\nimage-20211023030107470\n\n\n\n\n\n\n\n\nimage-20211023030202474\n\n\n\n\n\n\n\n\n\nimage-20211023030411773\n\n\n\n\n\nimage-20211023030837950\n\n\n\n\n\nimage-20211023030929548\n\n\n\n\n\n\n\n\nimage-20211023031028447\n\n\n\n\n\n\n\n\nimage-20211023031142932\n\n\n\n\n\nimage-20211023031202696\n\n\n\n\n\nimage-20211023031340673\n\n\n\n\n\n\n\n\nimage-20211023031447915\n\n\n\n\n\n\n\n\nimage-20211023031507129\n\n\n\n\n\n\n\n\nimage-20211023031542261\n\n\n\n\n\n\n\nimage-20211023031635507\n\n\n\n\n\n\n\n\n\nimage-20211023031652493\n\n\n\n\n\nimage-20211023031719192\n\n\n\n\n\n\n\nimage-20211023031756575\n\n\n\n\n\nimage-20211023031805423\n\n\n\n\n\n\n\n\n\nimage-20211023032010570\n\n\n\n\n\nimage-20211023032025780\n\n\n\n\n\n\n\nimage-20211023032034214"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f5",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f5",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "F5",
+    "text": "F5\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f6",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f6",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "F6",
+    "text": "F6\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f7",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#f7",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "F7",
+    "text": "F7\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#go-to-statement",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#go-to-statement",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Go to statement",
+    "text": "Go to statement\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#sy-dbcnt",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#sy-dbcnt",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "SY-DBCNT",
+    "text": "SY-DBCNT\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#internal-table-data",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#internal-table-data",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Internal table data",
+    "text": "Internal table data\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#change-selected-rows",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#change-selected-rows",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Change selected rows",
+    "text": "Change selected rows\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#delete-selected-rows",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#delete-selected-rows",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Delete selected rows",
+    "text": "Delete selected rows\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#append-row",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#append-row",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Append row",
+    "text": "Append row\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#insert-row",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#insert-row",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Insert row",
+    "text": "Insert row\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#delete-whole-tablerow-area",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#delete-whole-tablerow-area",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Delete whole table/row area",
+    "text": "Delete whole table/row area\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#table-display-in-alv",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#table-display-in-alv",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Table display in ALV",
+    "text": "Table display in ALV\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#save-in-file",
+    "href": "posts/SAP Track_20221025 - Debugging/SAP Track_20221025 - Debugging.html#save-in-file",
+    "title": "Co-op SAP Track 20221025 - Debugging",
+    "section": "Save in file",
+    "text": "Save in file\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221024 - CASE MESSAGE/SAP Track_20221024 - CASE MESSAGE.html",
+    "href": "posts/SAP Track_20221024 - CASE MESSAGE/SAP Track_20221024 - CASE MESSAGE.html",
+    "title": "Co-op SAP Track 20221024 - CASE MESSAGE",
+    "section": "",
+    "text": "20221024 - CASE MESSAGE\n\n\nCASE~ENDCASE\nCASE - IF문과 같이 조건에 따라 수행문이 달라지는 조건문\nCASE LOGICAL EXPRESSION.\n    WHEN VALUE1\n        PROCESSING1\n    WHEN VALUE2\n        PROCESSING 2\n    WHEN OTHERS\n        PROCESSING 2\nENDCASE.\n\n\n\nUntitled\n\n\n\n\nMESSAGE: SE91\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n역추적\n\n\n\nUntitled\n\n\nREPORT ZEDUR001_20221020 MESSAGE-ID ZMEDU1.\n\n*MESSAGE I000.\n*EXIT.\n\nTABLES: ZEDU1_003, ZEDU1_004.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZEDU1_003.\n  DATA: ZYEAR TYPE ZEDU1_004-ZYEAR,\n        ZSEMESTER TYPE ZEDU1_004-ZSEMESTER,\n        ZGRADE TYPE ZEDU1_004-ZGRADE.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nDATA: BEGIN OF GS_ZEDU15_003.\n  INCLUDE TYPE ZEDU15_003.\nDATA: END OF GS_ZEDU15_003.\nDATA: GT_ZEDU15_003 LIKE TABLE OF GS_ZEDU15_003.\n\nDATA: BEGIN OF GS_ZEDU15_004.\n  INCLUDE TYPE ZEDU15_004.\nDATA: END OF GS_ZEDU15_004.\nDATA: GT_ZEDU15_004 LIKE TABLE OF GS_ZEDU15_004.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  PARAMETERS: P_CODE LIKE ZEDU1_003-BUKRS DEFAULT '1100' OBLIGATORY.\n  SELECT-OPTIONS: S_CODE FOR ZEDU1_003-ZCODE DEFAULT 'SSU-01' TO 'SSU-99' OBLIGATORY.\n  PARAMETERS: P_YEAR LIKE ZEDU1_003-Z_EDATE DEFAULT SY-DATUM OBLIGATORY.\n  PARAMETERS: P_SEMES LIKE ZEDU1_004-ZSEMESTER.\n  SELECT-OPTIONS: S_MAJOR FOR ZEDU1_003-Z_MAJOR MATCHCODE OBJECT ZSH15_3 NO INTERVALS.\n  SELECT-OPTIONS: S_DMAJOR FOR ZEDU1_003-Z_MAJOR_DOUBLE MATCHCODE OBJECT ZSH15_3 MODIF ID M1 NO INTERVALS.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  SELECTION-SCREEN BEGIN OF LINE.\n  PARAMETERS: P_UNGRAD RADIOBUTTON GROUP R1 DEFAULT 'X' USER-COMMAND UC1.\n  SELECTION-SCREEN POSITION 3.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_UNGRAD.\n\n  PARAMETERS: P_GRAD RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 20.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_GRAD.\n\n  PARAMETERS: P_ALL RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 37.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_ALL.\n  SELECTION-SCREEN END OF LINE.\nSELECTION-SCREEN END OF BLOCK B2.\n\nSELECTION-SCREEN BEGIN OF BLOCK B3 WITH FRAME.\n  PARAMETERS: P_GAP LIKE ZEDU1_003-Z_CLASS.\nSELECTION-SCREEN END OF BLOCK B3.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nSTART-OF-SELECTION.\n\n*BREAK-POINT.\n\nPERFORM: SELECT_DATA.\n\nPERFORM: UPDATE_DATA.\n\nWRITE:/ '회사코드', '학생코드', '입학일자', '졸업일자', '학적구분', '휴학구분', '전공학과명',\n    '복수전공학과명', '등록금액', '학기구분', '장학구분', '납부금액'.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  SELECT * FROM ZEDU15_003 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_003 WHERE ZCODE = GS_STUDENT-ZCODE.\n  SELECT * FROM ZEDU15_004 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_004 WHERE ZCODE = GS_STUDENT-ZCODE.\n\n  DATA: LV_SCHOLAR TYPE C.\n  DATA: LV_COUNT TYPE I.\n\n  WRITE:/ GS_STUDENT-BUKRS, GS_STUDENT-ZCODE, GS_STUDENT-Z_EDATE, GS_STUDENT-Z_GDATE,\n  GS_STUDENT-Z_GUBUN, GS_STUDENT-Z_CLASS, GS_STUDENT-Z_MAJOR, GS_STUDENT-Z_MAJOR_DOUBLE,\n  GS_STUDENT-ZSEMESTER.\n\n  LOOP AT GT_ZEDU15_004 INTO GS_ZEDU15_004.\n    CASE GS_ZEDU15_004-ZGRADE.\n      WHEN 'A'.\n        LV_COUNT = LV_COUNT + 1.\n    ENDCASE.\n  ENDLOOP.\n\n  CASE LV_COUNT.\n    WHEN 2.\n      LV_SCHOLAR = 'X'.\n      WRITE: LV_SCHOLAR.\n  ENDCASE.\n\n  DATA: LV_AMOUNT TYPE ZEDU15_003-Z_AMOUNT.\n\n  CASE LV_SCHOLAR.\n    WHEN 'X'.\n      LV_AMOUNT = GS_STUDENT-Z_AMOUNT / 10 * 9.\n      WRITE: LV_AMOUNT.\n    WHEN OTHERS.\n      WRITE: GS_STUDENT-Z_AMOUNT.\n  ENDCASE.\n\n  CLEAR: LV_SCHOLAR, LV_COUNT.\nENDLOOP.\n\nFORM SELECT_DATA.\n  SELECT * FROM ZEDU1_003 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT\n    WHERE BUKRS = P_CODE AND ZCODE IN S_CODE AND Z_EDATE GE '20220101'\n    AND Z_MAJOR IN S_MAJOR AND Z_MAJOR_DOUBLE IN S_DMAJOR.\n\n   SELECT * FROM ZEDU15_003 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_003\n    WHERE BUKRS = P_CODE\n     AND ZCODE IN S_CODE\n     AND Z_EDATE LE P_YEAR\n     AND Z_MAJOR IN S_MAJOR\n     AND Z_MAJOR_DOUBLE IN S_DMAJOR.\n\n   DATA: LV_SEMESTER LIKE ZEDU15_004-ZSEMESTER.\n\n  CASE P_YEAR.\n    WHEN '20220701'.\n     LV_SEMESTER = 1.\n    WHEN OTHERS.\n     LV_SEMESTER = 2.\n  ENDCASE.\n\n   SELECT * FROM ZEDU15_004 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_004\n    WHERE ZCODE = S_CODE AND ZYEAR = '2022'\n    AND ZSEMESTER = LV_SEMESTER.\nENDFORM.\n\nFORM UPDATE_DATA.\n  IF GT_STUDENT IS INITIAL.\n    MODIFY ZEDU1_003 FROM TABLE GT_ZEDU15_003.\n  ELSE.\n    MODIFY ZEDU1_003 FROM TABLE GT_ZEDU15_003.\n  ENDIF.\nENDFORM.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M1'.\n      IF P_UNGRAD = 'X'.\n        SCREEN-ACTIVE = '1'.\n      ELSE.\n        SCREEN-ACTIVE = '0'.\n      ENDIF.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\nENDFORM.\n\n\nTRANSACTION: SE93\nTRANSACTION CODE는 프로그램을 실행시키는 명령어로서, 우리가 개발하게 되는 프로그램을 최종 사용자가 실행할 수 있게 해주는 기능\n\nDialog transaction - TYPE-M에서 사용되는 T-CODE (스크린과 연결)\nReport transaction - TYPE-1 프로그램을 실행하기 위한 T-CODE\nObject-Oriented Transaction - ABAP object에서 class method를 T-CODE로 생성\nVariant transaction - 프로그램의 필드를 조정할 때 이용하여 사용\nParameter Transaction - 트랜잭션이 수행된 스크린 필드에 초기값을 지정\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#conversion_exit_alpha_output",
+    "href": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#conversion_exit_alpha_output",
+    "title": "Co-op SAP Track 20221026 - function",
+    "section": "CONVERSION_EXIT_ALPHA_OUTPUT",
+    "text": "CONVERSION_EXIT_ALPHA_OUTPUT\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#function-group-생성",
+    "href": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#function-group-생성",
+    "title": "Co-op SAP Track 20221026 - function",
+    "section": "Function group 생성",
+    "text": "Function group 생성\nfunction group은 여러 function module을 모아 놓은 container\n\nfunction group은 직접 실행할 수 없어 function을 호출할 때, 호출한 프로그램의 세션 안으로 function group을 전체 load\nfunction을 실행할 때 function이 소속된 group 내의 모든 function이 영향\n\nfunction 하나에 에러가 발생하면 동일 group 내 모든 function이 실행 불가\n\nfunction group의 이름은 26자까지\n\n\nGroup 생성\nse31 내 메뉴 → goto → function group → create group\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n또 다른 group 생성\n\n\n\nUntitled\n\n\nfunction builder (T-CODE: SE37)를 통해 function group과 function이 생성되면 시스템은 자동적으로 main program과 include program을 생성\n이 때, main program의 이름은 SAPL이 function group 앞에 붙어 구성\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#module-생성",
+    "href": "posts/SAP Track_20221026 - function/SAP Track_20221026 - function.html#module-생성",
+    "title": "Co-op SAP Track 20221026 - function",
+    "section": "Module 생성",
+    "text": "Module 생성\n\n\n\nUntitled\n\n\n\nattributes\n\nregular-function module - 일반적으로 사용하는 function module 형태\nremote-enabled module - 동일시스템에서 병렬적으로 호출되거나 다른 시스템에서 호출될 때 사용 (RFC)\nupdate module - 일괄적으로 데이터베이스 변경을 위한 추가적 function\nedit lock - 다른 개발자에 의해 변경이 일어나는 것을 막기 위한 설정. 체크 시, edit lock을 설정한 개발자만이 function 수정 가\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\nIMPORT\nfunction moudle을 호출한 ABAP 프로그램 또는 인터페이스 호출 시, 변수 값을 전달받는 목적으로 사용\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\nTYPE - 파라미터 타입 유형을 지정\n\nTYPE, LIKE, TYPE REF TO\nTYPE REF TO는 CLASS 참조\n\nTYPE REF TO DATA, TYPE REF TO OBJECT…\n\n\n\nAssociated type - 데이터 타입이나 참조할 특정 테이블의 필드를 지정\ndefault value - 파라미터의 초기값\noptional - 파라미터를 선택 사항으DU로 설정\npass by value - 파라미터를 전달받을 때 새로운 메모리에 값을 복사\n\n\n\nEXPORT\nfunction module에서 값을 ABAP 프로그램으로 결과 값을 전달하는 목적 또는 인터페이스의 결과 값을 전달\n\n\n\nUntitled\n\n\n\n\nChanging\nfunction module을 호출한 ABAP 프로그램과 parameter를 동시에 주고 받음\n\n\n\nUntitled\n\n\n\n\nTables parameter\ntables parameter는 하나의 값이 아닌 복수의 값\n즉, internal table의 내용을 주고 받을 때 사용\n\n\n\nUntitled\n\n\n\n\nExceptions\nfunction moudle이 실행되는 동안 exceptions parameter를 사용하면 발생하는 예외사항을 처리 가능\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\nSource\n스크립트 작성 후, 활성화하면 function module 생성 완료\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nDATA: LV_NUM1 TYPE I,\n      LV_NUM2 TYPE I,\n      LV_OPTIONAL TYPE C.\n\nDATA: LV_RESULT TYPE I,\n      LV_MESSAGE TYPE C LENGTH 20.\n\nLV_NUM1 = 3.\nLV_NUM2 = 2.\nLV_OPTIONAL = '+'.\n\nCALL FUNCTION 'ZEDU1_001'\n  EXPORTING\n   I_NUM1            = LV_NUM1\n   I_NUM2            = LV_NUM2\n   I_OPTION          = LV_OPTIONAL\n IMPORTING\n   E_RESULT          = LV_RESULT\n   E_MESSAGE         = LV_MESSAGE\n* TABLES\n*   T_ZEDU1_001       =\n* CHANGING\n*   P_ZEDU1_001       =\n EXCEPTIONS\n   DIV_ZERO          = 1\n   OTHERS            = 2.\n          .\nIF SY-SUBRC <> 0.\nWRITE:/ SY-SUBRC, 'FAILED'.\n\nELSE.\n  WRITE:/ LV_RESULT.\n  WRITE:/ LV_MESSAGE.\nENDIF.\n\n\nTEST DATA\nF8 또는 실행버튼\nIMPORT Parameters에 value 값으로 고정해놓은 값이 자동 입력\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nINPUT 값이 복잡한 데이터에 대해서는 상단에 저장버튼을 누르면 입력한 테스트 데이터를 저장 가\n\n\n\nUntitled\n\n\n저장된 데이터를 호출하여 사용 가능\n\n\n\nUntitled\n\n\nchanging 전달에 대한 result 출력\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\ntables 전달에 대한 result 출력\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\nDebugging\n결과값 ERROR 또는, 조회되지 않는 데이터에 대해서는 디버깅을 통해 확인가\n\n\n\nUntitled\n\n\n\n\nExternal debugging\n타 시스템에서 전달되는 인터페이스 건에 대해서는 외부 디버깅을 통해 오류 확인\n\n\n\nUntitled\n\n\nUSER 등록 - 상단의 utility → settings\n\n\n\nUntitled\n\n\nIF I_NUM2 = 0.\n  RAISE DIV_ZERO.\n  EXIT.\nENDIF.\n\nCASE I_OPTION.\n  WHEN '+'.\n    E_RESULT = I_NUM1 + I_NUM2.\n  WHEN '-'.\n    E_RESULT = I_NUM1 - I_NUM2.\n  WHEN '*'.\n    E_RESULT = I_NUM1 * I_NUM2.\n  WHEN '/'.\n    E_RESULT = I_NUM1 / I_NUM2.\nENDCASE.\n\nIF P_ZEDU1_001 IS INITIAL.\n  SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE T_ZEDU1_001\n    WHERE Z_NUMBER = P_ZEDU1_001-Z_NUMBER\n    AND ZID = P_ZEDU1_001-ZID\n    AND MATNR = P_ZEDU1_001-MATNR.\n\n  IF SY-SUBRC = 0.\n    E_MESSAGE = 'SUCCEEDED'.\n  ENDIF.\nENDIF.\n\nTABLES: ZEDU15_001.\n\nIF T_ZEDU1_001[] IS INITIAL.\n  LOOP AT T_ZEDU1_001.\n    SELECT SINGLE * FROM ZEDU15_001\n      WHERE Z_NUMBER = T_ZEDU1_001-Z_NUMBER\n      AND ZID = T_ZEDU1_001-ZID\n      AND MATNR = T_ZEDU1_001-MATNR.\n\n    MODIFY T_ZEDU1_001 FROM ZEDU15_001.\n  ENDLOOP.\n\n  IF SY-SUBRC = 0.\n    E_MESSAGE = 'SUCCEEDED!'.\n  ENDIF.\nENDIF."
   },
   {
     "objectID": "posts/2021-12-10-probability-and-inferential-statistics-week-12/2021-12-10-probability-and-inferential-statistics-week-12.html",
@@ -271,6 +397,34 @@
     "title": "Artificial Intelligence 17th",
     "section": "집합론",
     "text": "집합론\n자연어의 단어 (word)는 집합의 궁극적인 표현\n\n’자동차’는 자동차의 집합\n’자동차 한 대’는 자동차 집합의 원소 하나\n\n일반 집합 (crisp set, classical set) X\n\n원소 x는 X에 속하거나 (\\(x \\in X\\)), X에 속하지 않거나 (\\(x \\notin X\\)) 둘 중 하나\n집합에 명확한 경계를 긋고, 잡합의 원소에는 1, 원소가 아닌 것에는 0의 소속 (membership)"
+  },
+  {
+    "objectID": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#abap-dictionary를-이용한-alv",
+    "href": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#abap-dictionary를-이용한-alv",
+    "title": "Co-op SAP Track 20221031 - ALV",
+    "section": "ABAP Dictionary를 이용한 ALV",
+    "text": "ABAP Dictionary를 이용한 ALV\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA: GT_SFLIGHT TYPE TABLE OF SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    I_STRUCTURE_NAME = 'SFLIGHT'\n  TABLES\n    T_OUTTAB = GT_SFLIGHT."
+  },
+  {
+    "objectID": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#slis-기반의-alv",
+    "href": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#slis-기반의-alv",
+    "title": "Co-op SAP Track 20221031 - ALV",
+    "section": "SLIS 기반의 ALV",
+    "text": "SLIS 기반의 ALV\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#필드-카탈로그를-이용한-alv",
+    "href": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#필드-카탈로그를-이용한-alv",
+    "title": "Co-op SAP Track 20221031 - ALV",
+    "section": "필드 카탈로그를 이용한 ALV",
+    "text": "필드 카탈로그를 이용한 ALV\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\n필드 카탈로그에 필드추가\n\n\n\nUntitled\n\n\n\n\n필드 카탈로그를 이용하여 ALV 호출\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT\n  WHERE CARRID = 'AA'.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#필드-카탈로그-속성",
+    "href": "posts/SAP Track_20221031 - ALV/SAP Track_20221031 - ALV.html#필드-카탈로그-속성",
+    "title": "Co-op SAP Track 20221031 - ALV",
+    "section": "필드 카탈로그 속성",
+    "text": "필드 카탈로그 속성\n\nCOL_POS: 컬럼의 OUTPUT 순서\n\n\nFIELDNAME: 필드 카탈로그의 필드 이름\nALV 출력 시, internal table의 필드 이름과 같아야 함\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNIDD'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT\n  WHERE CARRID = 'AA'.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nCURRENCY: CURRENCY 단위\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nKEY: KEY 필드 설정\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nJUST: 정렬 (L, R, C)\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nDO_SUM: 합계표\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nNO_ZERO: 0값 삭제\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nNO_SIGN: 출력부호 제거\n실제 데이터가 absolute value가 되는게 아니라 출력만 absolute value로 변경됨\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nOUTPUTLEN: 문자의 열 너비\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nEMPHASIZE: 색상 강조\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nGS_FIELDCAT-EMPHASIZE = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nNO_OUT: 필드 숨김\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nGS_FIELDCAT-NO_OUT = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nGS_FIELDCAT-EMPHASIZE = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nEDIT_MASK: 데이터 포맷 변경\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nGS_FIELDCAT-NO_OUT = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nGS_FIELDCAT-EMPHASIZE = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 4.\nGS_FIELDCAT-FIELDNAME = 'FLDATE'.\nGS_FIELDCAT-SELTEXT_M = '날짜'.\n*GS_FIELDCAT-EDIT_MASK = '____/__/__'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nGS_FIELDCAT-NO_OUT = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nGS_FIELDCAT-EMPHASIZE = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 4.\nGS_FIELDCAT-FIELDNAME = 'FLDATE'.\nGS_FIELDCAT-SELTEXT_M = '날짜'.\nGS_FIELDCAT-EDIT_MASK = '____/__/__'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled\n\n\n\n\nEDIT: 편집모드\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nGS_FIELDCAT-NO_OUT = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-NO_ZERO = 'X'.\nGS_FIELDCAT-NO_SIGN = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nGS_FIELDCAT-EMPHASIZE = 'X'.\nGS_FIELDCAT-EDIT = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 4.\nGS_FIELDCAT-FIELDNAME = 'FLDATE'.\nGS_FIELDCAT-SELTEXT_M = '날짜'.\n*GS_FIELDCAT-EDIT_MASK = '____/__/__'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT\n  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\n\n\nUntitled"
   },
   {
     "objectID": "posts/SAP Track_20220919 - assigning value, CONSTANTS, STATIC, TAB/SAP Track_20220919 - assigning value, CONSTANTS, STATIC, TAB.html#move-a-to-b",
@@ -2485,6 +2639,27 @@
     "text": "image-20211205051808716\n\n\n\n\n\n\n\n\nimage-20211205051823778\n\n\n\n\n\n\n\n\nimage-20211205051943933\n\n\n\n\n\n\n\n\nimage-20211205052219269\n\n\n\n\n\n\n\n\nimage-20211205052503073\n\n\n\n\n\n\n\n\nimage-20211205052643250\n\n\n\n\n\nimage-20211205053226327\n\n\n\n\n\nimage-20211205053236560\n\n\n\n\n\n\n\n\nimage-20211205053250583\n\n\n\n\n\nimage-20211205053300874\n\n\n\n\n\nimage-20211205053307398\n\n\n\n\n\nimage-20211205053316177\n\n\n\n\n\n\n\n\nimage-20211205053329741\n\n\n\n\n\n\n\n\nimage-20211205053358705\n\n\n\n\n\n\n\n\nimage-20211205053410276\n\n\n\n\n\nimage-20211205053418875\n\n\n\n\n\n\n\n\nimage-20211205053438559\n\n\n\n\n\nimage-20211205053445847\n\n\n\n\n\n\n\n\nimage-20211205053454810\n\n\n\n\n\n\n\n\nimage-20211205053510405\n\n\n\n\n\nimage-20211205053516735"
   },
   {
+    "objectID": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#on-field",
+    "href": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#on-field",
+    "title": "Co-op SAP Track 20221109 - REPORT_EVENT",
+    "section": "ON FIELD",
+    "text": "ON FIELD\nSELECTION SCREEN에서 전달되는 특정 필드에 대해 수행\n만약 오류 메세지가 발생하면 해당 필드는 다시 입력 상태가 되도록 설정\n\n\n\nUntitled\n\n\nMESSAGE 하드코딩하는 방법\n\nE는 Error\nI는 information\n\nREPORT ZEDUR001_20221109.\n\nTABLES: SCARR.\n\nSELECT-OPTIONS: S_CARRID FOR SCARR-CARRID.\n\nAT SELECTION-SCREEN ON S_CARRID.\n  IF S_CARRID-LOW NE 'AA'.\n    MESSAGE 'Type AA' TYPE 'E'.\n  ENDIF.\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#on-end-of-field",
+    "href": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#on-end-of-field",
+    "title": "Co-op SAP Track 20221109 - REPORT_EVENT",
+    "section": "ON END OF FIELD",
+    "text": "ON END OF FIELD\nSELECTION SCREEN에서 여러 건의 값을 입력할 때 전체 SELECTION TABLE의 입력 값을 제어 (즉, 상한/하한값, 미입력 값 체크)\n\n\n\nUntitled\n\n\nTABLES: SCARR.\n\nSELECT-OPTIONS: S_CARRID FOR SCARR-CARRID.\n\nAT SELECTION-SCREEN ON S_CARRID.\n  LOOP AT S_CARRID.\n    IF S_CARRID-LOW IS INITIAL.\n      MESSAGE 'Type the lower bound' TYPE 'E'.\n    ENDIF.\n  ENDLOOP."
+  },
+  {
+    "objectID": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#output",
+    "href": "posts/SAP Track_20221109 - REPORT_EVENT/SAP Track_20221109 - REPORT_EVENT.html#output",
+    "title": "Co-op SAP Track 20221109 - REPORT_EVENT",
+    "section": "OUTPUT",
+    "text": "OUTPUT\nSELECTION SCREEN 화면의 LAYOUT 속성을 설정\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: SCARR.\n\nSELECT-OPTIONS: S_CARRID FOR SCARR-CARRID MODIF ID SC1.\n\nAT SELECTION-SCREEN OUTPUT.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'SC1'.\n      SCREEN-INPUT = '0'.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\n\n\n\nUntitled"
+  },
+  {
     "objectID": "posts/SAP Track_20220926 - INTERNAL TABLE/SAP Track_20220926 - INTERNAL TABLE.html#if-statement",
     "href": "posts/SAP Track_20220926 - INTERNAL TABLE/SAP Track_20220926 - INTERNAL TABLE.html#if-statement",
     "title": "Co-op SAP Track 20220926 - INTERNAL TABLE 제어문",
@@ -3381,6 +3556,146 @@
     "text": "Week 1\n\n\nWhat is your microprocessor in your PC?\nHow do we call the microprocessor usually?\nWhat is the meaning of “64bits 3.3GHz Octa-core RISC processor”?\n\nClock frequency, Bus width, Number of cores, instruction set of architecture\nWhat is the real shape of those features?\n\n64bits - bus width\n3.3GHz - clock frequency\nOcta-core - number of cores\nRISC - instruction set architecture\n\n\nClock frequency\n\n\n\nUntitled\n\n\nprocess - data → information\nclock - 내부 register가 동기화되서 움직이는 단위\n얼마나 단위 시간당 연산을 빠르게 하는가\n\n\nParasitic resistance\n\n\n\nUntitled\n\n\n\n\nParasitic capacitance\nTerminal voltage across a capacitor cannot be changed immediately.\nSilicon switches have a parasitic capacitance due to the physical structure.\nSerially connected resistance and capacitance result in a del, which is often called as “RC delay.”\n\n\n\nUntitled\n\n\nRC delay는 모든 종류의 도선에 있는 문제\n\n\nSwitching and delay\nParasitic resistance and capacitance results in RC-delay.\nInput → delay → output\nWe should wait until the output is completely changed!\n\n\n\nUntitled\n\n\nparasitic capacitance가 delay를 만들어냄\nRD delay는 모든 도선에서 벌어지는 일이라 없앨 수가 없다\nRC delay가 계단모양으로 바뀌는 신호를 concave하게 바꿈 → 0이 1로 바뀌는 criteria가 필요\ncriteria를 만들지 않으면 noise에 취약해짐\n일정 입력시간을 보장해야 함\nlogic delay - logically하게 알아먹을 시간을 줘야 한다\n통신의 무결성이 보장되는 수준까지 clock frequency를 줄인 상황\n도선이 어떻게 만들어졌는지에 영향을 받음\n\n\nBus and interconnection\nHow is the data delivered? How can you put and get the data to/from the processor?\n\n\n\nUntitled\n\n\n\n\nData transfer\n\n\n\nUntitled\n\n\n본질적으로 위 예시는 둘 다 똑같음\nSerial - 순서에 맞게 데이터를 보냄\n\nfrequency가 높으면 데이터를 더 빠르게 보낼 수 있음\n\nParallel - serial이 여러개\n\n주고받는 device 사이에\n\n\n\nSingle and multicore architecture\n\n\n\nUntitled\n\n\n\n\nRICS vs. CISC\n\n\n\n\n\n\n\nRICS\nCISC\n\n\n\n\nEmphasis on hardware\nEmphasis on software\n\n\nMultiple instruction sizes and formats\nInstructions of same set with few formats\n\n\nless registers\nUses more registers\n\n\nmore addressing modes\nFewer addressing modes\n\n\nExtensive use of microprogramming\nComplexity in compiler\n\n\nInstruction takes a varying amount of cycle time\nInstructions take one cycle time\n\n\nPipelining is difficult\nPipelining is easy"
   },
   {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#custom-container",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#custom-container",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "CUSTOM CONTAINER",
+    "text": "CUSTOM CONTAINER\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#custom-container---변수선언",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#custom-container---변수선언",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "CUSTOM CONTAINER - 변수선언",
+    "text": "CUSTOM CONTAINER - 변수선언\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#container에-grid-붙이기",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#container에-grid-붙이기",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "CONTAINER에 GRID 붙이기",
+    "text": "CONTAINER에 GRID 붙이기\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#grid---변수선언",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#grid---변수선언",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "GRID - 변수선언",
+    "text": "GRID - 변수선언\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#중간실행",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#중간실행",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "중간실행",
+    "text": "중간실행\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#method-사용",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#method-사용",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "METHOD 사용",
+    "text": "METHOD 사용\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#field-catalog-변수-선언",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#field-catalog-변수-선언",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "FIELD CATALOG 변수 선언",
+    "text": "FIELD CATALOG 변수 선언\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#field-catalog-선언",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#field-catalog-선언",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "FIELD CATALOG 선언",
+    "text": "FIELD CATALOG 선언\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#레이아웃-변수선언",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#레이아웃-변수선언",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "레이아웃 변수선언",
+    "text": "레이아웃 변수선언\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#레이아웃-셋팅",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#레이아웃-셋팅",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "레이아웃 셋팅",
+    "text": "레이아웃 셋팅\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#alv-호출",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#alv-호출",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ALV 호출",
+    "text": "ALV 호출\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#실행",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#실행",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "실행",
+    "text": "실행\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#user-exit-지정",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#user-exit-지정",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "USER-EXIT 지정",
+    "text": "USER-EXIT 지정\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#마무리",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#마무리",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "마무리",
+    "text": "마무리\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_top",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_top",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ZEDUR001_20221121_TOP",
+    "text": "ZEDUR001_20221121_TOP\n*&---------------------------------------------------------------------*\n*&  Include           ZEDUR001_20221121_TOP\n*&---------------------------------------------------------------------*\n\nTABLES: SFLIGHT.\n\nDATA: BEGIN OF GS_SFLIGHT.\n  INCLUDE TYPE SFLIGHT.\nDATA: END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nDATA: OK_CODE TYPE SY-UCOMM.\n\nDATA: GC_CUSTOM TYPE REF TO cl_gui_custom_container.\nDATA: GC_GRID TYPE REF TO CL_GUI_ALV_GRID.\n\nDATA: GT_FCAT TYPE LVC_T_FCAT.\nDATA: GS_FCAT TYPE LVC_S_FCAT.\n\nDATA: GS_LAYO TYPE LVC_S_LAYO."
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_scr",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_scr",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ZEDUR001_20221121_SCR",
+    "text": "ZEDUR001_20221121_SCR\n*&---------------------------------------------------------------------*\n*&  Include           ZEDUR001_20221121_SCR\n*&---------------------------------------------------------------------*\n\nSELECT-OPTIONS : S_CARRID FOR SFLIGHT-CARRID.\nSELECT-OPTIONS : S_FLDATE FOR SFLIGHT-FLDATE."
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_f01",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_f01",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ZEDUR001_20221121_F01",
+    "text": "ZEDUR001_20221121_F01\n*&---------------------------------------------------------------------*\n*&  Include           ZEDUR001_20221121_F01\n*&---------------------------------------------------------------------*\n*&---------------------------------------------------------------------*\n*&      Form  SELECT_DATA\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\n*  -->  p1        text\n*  <--  p2        text\n*----------------------------------------------------------------------*\nFORM SELECT_DATA .\n  SELECT A~CARRID B~CARRNAME A~CONNID A~FLDATE A~PRICE A~CURRENCY\n    INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT\n    FROM SFLIGHT AS A INNER JOIN SCARR AS B\n    ON A~CARRID = B~CARRID\n    WHERE A~CARRID IN S_CARRID\n    AND A~FLDATE IN S_FLDATE.\nENDFORM.\n*&---------------------------------------------------------------------*\n*&      Form  SET_FCAT\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\n*  -->  p1        text\n*  <--  p2        text\n*----------------------------------------------------------------------*\nFORM SET_FCAT .\n  CLEAR: GS_FCAT.\n  GS_FCAT-FIELDNAME = 'CARRID'.\n  GS_FCAT-COLTEXT = '항공코드'.\n  APPEND GS_FCAT TO GT_FCAT.\n\n  CLEAR: GS_FCAT.\n  GS_FCAT-FIELDNAME = 'CONNID'.\n  GS_FCAT-COLTEXT = '편명'.\n  APPEND GS_FCAT TO GT_FCAT.\n\n  CLEAR: GS_FCAT.\n  GS_FCAT-FIELDNAME = 'FLDATE'.\n  GS_FCAT-COLTEXT = '날짜'.\n  APPEND GS_FCAT TO GT_FCAT.\n\n  CLEAR: GS_FCAT.\n  GS_FCAT-FIELDNAME = 'PRICE'.\n  GS_FCAT-COLTEXT = '가격'.\n  APPEND GS_FCAT TO GT_FCAT.\n\nENDFORM.\n*&---------------------------------------------------------------------*\n*&      Form  SET_LAYO\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\n*  -->  p1        text\n*  <--  p2        text\n*----------------------------------------------------------------------*\nFORM SET_LAYO .\n\n  CLEAR: GS_LAYO.\n  GS_LAYO-ZEBRA = 'X'.\n  GS_LAYO-CWIDTH_OPT = 'X'.\n\nENDFORM.\n*&---------------------------------------------------------------------*\n*&      Form  CALL_ALV\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\n*  -->  p1        text\n*  <--  p2        text\n*----------------------------------------------------------------------*\nFORM CALL_ALV .\n  CREATE OBJECT GC_CUSTOM\n    EXPORTING\n*      PARENT                      =\n      CONTAINER_NAME              = 'CON01'\n*      STYLE                       =\n*      LIFETIME                    = lifetime_default\n*      REPID                       =\n*      DYNNR                       =\n*      NO_AUTODEF_PROGID_DYNNR     =\n*    EXCEPTIONS\n*      CNTL_ERROR                  = 1\n*      CNTL_SYSTEM_ERROR           = 2\n*      CREATE_ERROR                = 3\n*      LIFETIME_ERROR              = 4\n*      LIFETIME_DYNPRO_DYNPRO_LINK = 5\n*      others                      = 6\n      .\n  IF SY-SUBRC <> 0.\n*   MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO\n*              WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.\n  ENDIF.\n\n  CREATE OBJECT GC_GRID\n  EXPORTING\n*    I_SHELLSTYLE      = 0\n*    I_LIFETIME        =\n    I_PARENT          = GC_CUSTOM\n*    I_APPL_EVENTS     = space\n*    I_PARENTDBG       =\n*    I_APPLOGPARENT    =\n*    I_GRAPHICSPARENT  =\n*    I_NAME            =\n*    I_FCAT_COMPLETE   = SPACE\n*  EXCEPTIONS\n*    ERROR_CNTL_CREATE = 1\n*    ERROR_CNTL_INIT   = 2\n*    ERROR_CNTL_LINK   = 3\n*    ERROR_DP_CREATE   = 4\n*    others            = 5\n    .\nIF SY-SUBRC <> 0.\n* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO\n*            WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.\nENDIF.\n\n  CALL METHOD GC_GRID->SET_TABLE_FOR_FIRST_DISPLAY\n    EXPORTING\n*      I_BUFFER_ACTIVE               =\n*      I_BYPASSING_BUFFER            =\n*      I_CONSISTENCY_CHECK           =\n*      I_STRUCTURE_NAME              =\n*      IS_VARIANT                    =\n*      I_SAVE                        =\n*      I_DEFAULT                     = 'X'\n      IS_LAYOUT                     = GS_LAYO\n*      IS_PRINT                      =\n*      IT_SPECIAL_GROUPS             =\n*      IT_TOOLBAR_EXCLUDING          =\n*      IT_HYPERLINK                  =\n*      IT_ALV_GRAPHICS               =\n*      IT_EXCEPT_QINFO               =\n*      IR_SALV_ADAPTER               =\n    CHANGING\n      IT_OUTTAB                     = GT_SFLIGHT\n      IT_FIELDCATALOG               = GT_FCAT\n*      IT_SORT                       =\n*      IT_FILTER                     =\n*    EXCEPTIONS\n*      INVALID_PARAMETER_COMBINATION = 1\n*      PROGRAM_ERROR                 = 2\n*      TOO_MANY_LINES                = 3\n*      others                        = 4\n          .\n  IF SY-SUBRC <> 0.\n*   Implement suitable error handling here\n  ENDIF.\nENDFORM."
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_pbo",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_pbo",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ZEDUR001_20221121_PBO",
+    "text": "ZEDUR001_20221121_PBO\n*&---------------------------------------------------------------------*\n*&  Include           ZEDUR001_20221121_PBO\n*&---------------------------------------------------------------------*\n*&---------------------------------------------------------------------*\n*&      Module  ALV_DISPLAY_0100  OUTPUT\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\nMODULE ALV_DISPLAY_0100 OUTPUT.\n\n  PERFORM SET_FCAT.\n  PERFORM SET_LAYO.\n  PERFORM CALL_ALV.\n\nENDMODULE.\n*&---------------------------------------------------------------------*\n*&      Module  STATUS_0100  OUTPUT\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\nMODULE STATUS_0100 OUTPUT.\n  SET PF-STATUS 'STATUS100'.\n  SET TITLEBAR 'T100'.\nENDMODULE."
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_pai",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#zedur001_20221121_pai",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "ZEDUR001_20221121_PAI",
+    "text": "ZEDUR001_20221121_PAI\n*&---------------------------------------------------------------------*\n*&  Include           ZEDUR001_20221121_PAI\n*&---------------------------------------------------------------------*\n*&---------------------------------------------------------------------*\n*&      Module  USER_EXIT  INPUT\n*&---------------------------------------------------------------------*\n*       text\n*----------------------------------------------------------------------*\nMODULE USER_EXIT INPUT.\n  CASE OK_CODE.\n    WHEN 'BACK' OR 'CANC'.\n      LEAVE TO SCREEN 0.\n    WHEN 'EXIT'.\n      LEAVE PROGRAM.\n  ENDCASE.\nENDMODULE."
+  },
+  {
+    "objectID": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#screen100",
+    "href": "posts/SAP Track_20221121 - CLASS ALV/SAP Track_20221121 - CLASS ALV.html#screen100",
+    "title": "Co-op SAP Track 20221121 - CLASS ALV",
+    "section": "SCREEN100",
+    "text": "SCREEN100\nPROCESS BEFORE OUTPUT.\n  MODULE STATUS_0100.\n  MODULE ALV_DISPLAY_0100.\n*\nPROCESS AFTER INPUT.\n  MODULE USER_EXIT AT EXIT-COMMAND.\n  MODULE USER_COMMAND_0100.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
     "objectID": "posts/2021-10-17-CFA-Level-2-Corporate-Finance/2021-10-17-CFA-Level-2-Corporate-Finance.html",
     "href": "posts/2021-10-17-CFA-Level-2-Corporate-Finance/2021-10-17-CFA-Level-2-Corporate-Finance.html",
     "title": "CFA Level 2 Corporate Finance",
@@ -3675,11 +3990,53 @@
     "text": "image-20211207124410764\n\n\n\n\n\n\n\n\nimage-20211207125150921\n\n\n\n\n\n\n\n\nimage-20211207125159135\n\n\n\n\n\nimage-20211207125207413\n\n\n\n\n\n\n\n\n\n\nimage-20211207125230959\n\n\n\n\n\n\n\n\n\nimage-20211207125243425\n\n\n\n\n\n\n\n\nimage-20211207125255106\n\n\n\n\n\nimage-20211207125643256\n\n\n\n\n\nimage-20211207125650404\n\n\n\n\n\nimage-20211207125659201\n\n\n\n\n\nimage-20211207125707809\n\n\n\n\n\nimage-20211207125714728\n\n\n\n\n\nimage-20211207125723888\n\n\n\n\n\nimage-20211207125731144\n\n\n\n\n\n\n\n\nimage-20211207125743376\n\n\n\n\n\n\n\n\nimage-20211207125758193\n\n\n\n\n\n\n\n\nimage-20211207130139784\n\n\n\n\n\n\n\n\nimage-20211207130150462\n\n\n\n\n\n\n\n\nimage-20211207130204867\n\n\n\n\n\n\n\n\nimage-20211207130216147\n\n\n\n\n\n\n\n\nimage-20211207130228086\n\n\n\n\n\n\n\n\nimage-20211207130521888\n\n\n\n\n\nimage-20211207130532927\n\n\n\n\n\nimage-20211207130541551\n\n\n\n\n\nimage-20211207130550915\n\n\n\n\n\nimage-20211207130601278\n\n\n\n\n\nimage-20211207130610059\n\n\n\n\n\nimage-20211207130631355\n\n\n\n\n\n\n\n\nimage-20211207130650827\n\n\n\n\n\n\n\n\nimage-20211207131200965\n\n\n\n\n\nimage-20211207131207103\n\n\n\n\n\nimage-20211207131214932\n\n\n\n\n\nimage-20211207131223065\n\n\n\n\n\n\n\n\nimage-20211207131233461\n\n\n\n\n\n\n\n\nimage-20211207131250435\n\n\n\n\n\nimage-20211207131258723\n\n\n\n\n\n\n\n\nimage-20211207131316733\n\n\n\n\n\n\n\n\nimage-20211207131323243\n\n\n\n\n\nimage-20211207131328719\n\n\n\n\n\nimage-20211207131805446\n\n\n\n\n\n\n\n\nimage-20211207131828773\n\n\n\n\n\n\n\n\nimage-20211207131851032\n\n\n\n\n\nimage-20211207131907776\n\n\n\n\n\nimage-20211207131916155\n\n\n\n\n\nimage-20211207131924584\n\n\n\n\n\n\n\n\nimage-20211207131940349\n\n\n\n\n\n\n\n\nimage-20211207131953121\n\n\n\n\n\n\n\n\nimage-20211207132002609\n\n\n\n\n\n\n\n\nimage-20211207132012989\n\n\n\n\n\n\n\n\nimage-20211207132026488\n\n\n\n\n\ngreedily build subtrees, starting with the infrequent letters\n\n\n\nimage-20211207132045635\n\n\n\n\n\nimage-20211207132054696\n\n\n\n\n\nimage-20211207132100843\n\n\n\n\n\nimage-20211207132107452\n\n\n\n\n\nimage-20211207132116352\n\n\n\n\n\nimage-20211207132125129\n\n\n\n\n\n\n\n\nimage-20211207132138686\n\n\n\n\n\n\n\n\nimage-20211207132717578\n\n\n\n\n\n\n\n\nimage-20211207132729107\n\n\n\n\n\n\n\n\nimage-20211207132738317\n\n\n\n\n\n\n\n\nimage-20211207132748707\n\n\n\n\n\n\n\n\nimage-20211207132800492\n\n\n\n\n\nimage-20211207133312410\n\n\n\n\n\nimage-20211207133320125\n\n\n\n\n\nimage-20211207133327857\n\n\n\n\n\nimage-20211207133335355\n\n\n\n\n\n\n\n\nimage-20211207133352369\n\n\n\n\n\n\n\n\nimage-20211207133405724\n\n\n\n\n\nimage-20211207133413229\n\n\n\n\n\nimage-20211207133420158\n\n\n\n\n\nimage-20211207133427278\n\n\n\n\n\nimage-20211207133434180\n\n\n\n\n\nimage-20211207133441720\n\n\n\n\n\nimage-20211207133449792\n\n\n\n\n\nimage-20211207133455751\n\n\n\n\n\n\n\n\nimage-20211207133518905\n\n\n\n\n\n\n\n\nimage-20211207134032338\n\n\n\n\n\n\n\n\nimage-20211207134047136\n\n\n\n\n\nimage-20211207134148373\n\n\n\n\n\nimage-20211207134136742\n\n\n\n\n\n\n\n\nimage-20211207134430747\n\n\n\n\n\nimage-20211207134445691\n\n\n\n\n\nimage-20211207134453471\n\n\n\n\n\nimage-20211207134502336\n\n\n\n\n\nimage-20211207134511684\n\n\n\n\n\nimage-20211207134519342\n\n\n\n\n\nimage-20211207134527768\n\n\n\n\n\nimage-20211207134535359\n\n\n\n\n\nimage-20211207134543507\n\n\n\n\n\nimage-20211207134552336\n\n\n\n\n\nimage-20211207134601368\n\n\n\n\n\nimage-20211207134609199\n\n\n\n\n\nimage-20211207134618035\n\n\n\n\n\nimage-20211207134625973\n\n\n\n\n\nimage-20211207134632861\n\n\n\n\n\nimage-20211207134640126\n\n\n\n\n\nimage-20211207134646017\n\n\n\n\n\n\n\n\nimage-20211207134700872\n\n\n\n\n\n\n\n\nimage-20211207135209167\n\n\n\n\n\n\n\n\nimage-20211207135217731\n\n\n\n\n\n\n\n\nimage-20211207135232436\n\n\n\n\n\nimage-20211207135240236\n\n\n\n\n\nimage-20211207135257433\n\n\n\n\n\nimage-20211207135303049\n\n\n\n\n\nimage-20211207135308324\n\n\n\n\n\nimage-20211207135312825\n\n\n\n\n\nimage-20211207135321039\n\n\n\n\n\nimage-20211207135329210\n\n\n\n\n\nimage-20211207135334453\n\n\n\n\n\nimage-20211207135339882\n\n\n\n\n\n\n\n\nimage-20211207135355389\n\n\n\n\n\n\n\n\nimage-20211207140949415\n\n\n\n\n\n\n\n\nimage-20211207141009574\n\n\n\n\n\nimage-20211207141015822\n\n\n\n\n\nimage-20211207141022055\n\n\n\n\n\nimage-20211207141028740\n\n\n\n\n\nimage-20211207141034734\n\n\n\n\n\n\n\n\nimage-20211207141052286\n\n\n\n\n\nimage-20211207141058341\n\n\n\n\n\nimage-20211207141104364\n\n\n\n\n\n\n\n\nimage-20211207141117012\n\n\n\n\n\n\n\n\nimage-20211207141448215\n\n\n\n\n\nimage-20211207141454494\n\n\n\n\n\nimage-20211207141501260\n\n\n\n\n\nimage-20211207141506607\n\n\n\n\n\nimage-20211207141512251\n\n\n\n\n\nimage-20211207141517618\n\n\n\n\n\nimage-20211207141524970\n\n\n\n\n\nimage-20211207141531540\n\n\n\n\n\nimage-20211207141538068\n\n\n\n\n\nimage-20211207141541742\n\n\n\n\n\n\n\n\nimage-20211207141551496\n\n\n\n\n\n\n\n\nimage-20211207141601905\n\n\n\n\n\n\n\n\nimage-20211207141612359\n\n\n\n\n\n\n\n\nimage-20211207141621642"
   },
   {
+    "objectID": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#데이터-선언-및-가져오기",
+    "href": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#데이터-선언-및-가져오기",
+    "title": "Co-op SAP Track 20221101 - ALV",
+    "section": "데이터 선언 및 가져오기",
+    "text": "데이터 선언 및 가져오기\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#function을-통한-필드-카탈로그-설정",
+    "href": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#function을-통한-필드-카탈로그-설정",
+    "title": "Co-op SAP Track 20221101 - ALV",
+    "section": "Function을 통한 필드 카탈로그 설정",
+    "text": "Function을 통한 필드 카탈로그 설정\nREUSE_ALV_FIELDCATALOG_MERGE 함수를 호출하면 필드 카탈로그 정보가 internal table에 저장\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#function을-통한-alv-출력",
+    "href": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#function을-통한-alv-출력",
+    "title": "Co-op SAP Track 20221101 - ALV",
+    "section": "function을 통한 ALV 출력",
+    "text": "function을 통한 ALV 출력\nREUSE_ALV_GRID_DISPLAY 함수를 호출하면, internal table 정보를 가지고 ALV 출력\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\n\nDATA: BEGIN OF GT_SFLIGHT OCCURS 0,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  FLDATE LIKE SFLIGHT-FLDATE,\n  PRICE LIKE SFLIGHT-PRICE,\n  END OF GT_SFLIGHT.\n\nSELECT * FROM SFLIGHT INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCALL FUNCTION 'REUSE_ALV_FIELDCATALOG_MERGE'\n  EXPORTING\n    I_PROGRAM_NAME = SY-REPID\n    I_INTERNAL_TABNAME = 'GT_SFLIGHT'\n    I_INCLNAME = SY-REPID\n  CHANGING\n    CT_FIELDCAT = GT_FIELDCAT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT."
+  },
+  {
+    "objectID": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#checkbox",
+    "href": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#checkbox",
+    "title": "Co-op SAP Track 20221101 - ALV",
+    "section": "checkbox",
+    "text": "checkbox\n\n데이터 선언 및 가져오기\n\n\n\nUntitled\n\n\n\n\n필드 카탈로그 할당\n\n\n\nUntitled\n\n\n\n\nfunction을 통한 ALV 출력\nREUSE_ALV_GRID_DISPLAY 함수를 호출하면 internal table 정보를 가지고 ALV 출력\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#신호등-아이콘",
+    "href": "posts/SAP Track_20221101 - ALV/SAP Track_20221101 - ALV.html#신호등-아이콘",
+    "title": "Co-op SAP Track 20221101 - ALV",
+    "section": "신호등 아이콘",
+    "text": "신호등 아이콘\n\n데이터 선언 및 가져오기\n\n\n\nUntitled\n\n\n\n\n필드 카탈로그 할당\n\n\n\nUntitled\n\n\n\n\ninternal table 내 색상 정의\n\n\n\nUntitled\n\n\n\n\nfunction을 통한 ALV 출력\nREUSE_ALV_GRID_DISPLAY 함수를 호출하면, internal table 정보를 가지고 ALV 출력\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nDATA: BEGIN OF GS_SFLIGHT,\n  COLOR TYPE C LENGTH 4,\n  LIGHT TYPE C,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  PRICE LIKE SFLIGHT-PRICE,\n  FLDATE LIKE SFLIGHT-FLDATE,\n  CELLCOLOR TYPE LVC_T_SCOL,\n  CELLBUTTON TYPE LVC_T_STYL,\nEND OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'COLOR'.\nGS_FIELDCAT-SELTEXT_M = '체크'.\nGS_FIELDCAT-ICON = 'X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY = 'X'.\nGS_FIELDCAT-JUST = 'L'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nGS_FIELDCAT-JUST = 'C'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 4.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-EDIT = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nSELECT * FROM SFLIGHT INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nLOOP AT GT_SFLIGHT INTO GS_SFLIGHT.\n  IF GS_SFLIGHT-CONNID = '0017'.\n    GS_SFLIGHT-COLOR = '@52@'.\n  ELSE.\n    GS_SFLIGHT-COLOR = '@09@'.\n  ENDIF.\n\n  MODIFY GT_SFLIGHT FROM GS_SFLIGHT.\nENDLOOP.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT."
+  },
+  {
     "objectID": "posts/Microprocessor Application_1st.html",
     "href": "posts/Microprocessor Application_1st.html",
     "title": "Microprocessor Application 1st",
     "section": "",
     "text": "1st\n\n\nEmbedded systems\n\ndesign and/or implement basic and advanced I/O techniques, both synchronous and asynchronous and serial/parallel, including interrupts and time considerations.\n\nparallel/serial I/O; synchronous/asynchronous I/O, interrupts and timing\n\ndesign and implement and example of an embedded system in a non-electronic device, including sensor feedback, low-power, and mobility.\n\ndata acquisition & sensors; embedded systems characteristics; low-power operation"
+  },
+  {
+    "objectID": "posts/SAP Track_20221020/SAP Track_20221020.html",
+    "href": "posts/SAP Track_20221020/SAP Track_20221020.html",
+    "title": "Co-op SAP Track 20221020",
+    "section": "",
+    "text": "20221020\n\n\n\nUntitled\n\n\nREPORT ZEDUR001_20221020 MESSAGE-ID ZMEDU1.\n\n*MESSAGE I000.\n*EXIT.\n\nTABLES: ZEDU1_003, ZEDU1_004.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZEDU1_003.\n  DATA: ZYEAR TYPE ZEDU1_004-ZYEAR,\n        ZSEMESTER TYPE ZEDU1_004-ZSEMESTER,\n        ZGRADE TYPE ZEDU1_004-ZGRADE.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nDATA: BEGIN OF GS_ZEDU15_003.\n  INCLUDE TYPE ZEDU15_003.\nDATA: END OF GS_ZEDU15_003.\nDATA: GT_ZEDU15_003 LIKE TABLE OF GS_ZEDU15_003.\n\nDATA: BEGIN OF GS_ZEDU15_004.\n  INCLUDE TYPE ZEDU15_004.\nDATA: END OF GS_ZEDU15_004.\nDATA: GT_ZEDU15_004 LIKE TABLE OF GS_ZEDU15_004.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  PARAMETERS: P_CODE LIKE ZEDU1_003-BUKRS DEFAULT '1100' OBLIGATORY.\n  SELECT-OPTIONS: S_CODE FOR ZEDU1_003-ZCODE DEFAULT 'SSU-01' TO 'SSU-99' OBLIGATORY.\n  PARAMETERS: P_YEAR LIKE ZEDU1_003-Z_EDATE DEFAULT SY-DATUM OBLIGATORY.\n  PARAMETERS: P_SEMES LIKE ZEDU1_004-ZSEMESTER.\n  SELECT-OPTIONS: S_MAJOR FOR ZEDU1_003-Z_MAJOR MATCHCODE OBJECT ZSH15_3 NO INTERVALS.\n  SELECT-OPTIONS: S_DMAJOR FOR ZEDU1_003-Z_MAJOR_DOUBLE MATCHCODE OBJECT ZSH15_3 MODIF ID M1 NO INTERVALS.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  SELECTION-SCREEN BEGIN OF LINE.\n  PARAMETERS: P_UNGRAD RADIOBUTTON GROUP R1 DEFAULT 'X' USER-COMMAND UC1.\n  SELECTION-SCREEN POSITION 3.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_UNGRAD.\n\n  PARAMETERS: P_GRAD RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 20.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_GRAD.\n\n  PARAMETERS: P_ALL RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 37.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_ALL.\n  SELECTION-SCREEN END OF LINE.\nSELECTION-SCREEN END OF BLOCK B2.\n\nSELECTION-SCREEN BEGIN OF BLOCK B3 WITH FRAME.\n  PARAMETERS: P_GAP LIKE ZEDU1_003-Z_CLASS.\nSELECTION-SCREEN END OF BLOCK B3.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nSTART-OF-SELECTION.\n\n*BREAK-POINT.\n\nPERFORM: SELECT_DATA.\n\nPERFORM: UPDATE_DATA.\n\nWRITE:/ '회사코드', '학생코드', '입학일자', '졸업일자', '학적구분', '휴학구분', '전공학과명',\n    '복수전공학과명', '등록금액', '학기구분', '장학구분', '납부금액'.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  SELECT * FROM ZEDU15_003 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_003 WHERE ZCODE = GS_STUDENT-ZCODE.\n  SELECT * FROM ZEDU15_004 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_004 WHERE ZCODE = GS_STUDENT-ZCODE.\n\n  DATA: LV_SCHOLAR TYPE C.\n  DATA: LV_COUNT TYPE I.\n\n  WRITE:/ GS_STUDENT-BUKRS, GS_STUDENT-ZCODE, GS_STUDENT-Z_EDATE, GS_STUDENT-Z_GDATE,\n  GS_STUDENT-Z_GUBUN, GS_STUDENT-Z_CLASS, GS_STUDENT-Z_MAJOR, GS_STUDENT-Z_MAJOR_DOUBLE,\n  GS_STUDENT-ZSEMESTER.\n\n  LOOP AT GT_ZEDU15_004 INTO GS_ZEDU15_004.\n    CASE GS_ZEDU15_004-ZGRADE.\n      WHEN 'A'.\n        LV_COUNT = LV_COUNT + 1.\n    ENDCASE.\n  ENDLOOP.\n\n  CASE LV_COUNT.\n    WHEN 2.\n      LV_SCHOLAR = 'X'.\n      WRITE: LV_SCHOLAR.\n  ENDCASE.\n\n  DATA: LV_AMOUNT TYPE ZEDU15_003-Z_AMOUNT.\n\n  CASE LV_SCHOLAR.\n    WHEN 'X'.\n      LV_AMOUNT = GS_STUDENT-Z_AMOUNT / 10 * 9.\n      WRITE: LV_AMOUNT.\n    WHEN OTHERS.\n      WRITE: GS_STUDENT-Z_AMOUNT.\n  ENDCASE.\n\n  CLEAR: LV_SCHOLAR, LV_COUNT.\nENDLOOP.\n\nFORM SELECT_DATA.\n  SELECT * FROM ZEDU1_003 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT\n    WHERE BUKRS = P_CODE AND ZCODE IN S_CODE AND Z_EDATE GE '20220101'\n    AND Z_MAJOR IN S_MAJOR AND Z_MAJOR_DOUBLE IN S_DMAJOR.\n\n   SELECT * FROM ZEDU15_003 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_003\n    WHERE BUKRS = P_CODE\n     AND ZCODE IN S_CODE\n     AND Z_EDATE LE P_YEAR\n     AND Z_MAJOR IN S_MAJOR\n     AND Z_MAJOR_DOUBLE IN S_DMAJOR.\n\n   DATA: LV_SEMESTER LIKE ZEDU15_004-ZSEMESTER.\n\n  CASE P_YEAR.\n    WHEN '20220701'.\n     LV_SEMESTER = 1.\n    WHEN OTHERS.\n     LV_SEMESTER = 2.\n  ENDCASE.\n\n   SELECT * FROM ZEDU15_004 INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU15_004\n    WHERE ZCODE = S_CODE AND ZYEAR = '2022'\n    AND ZSEMESTER = LV_SEMESTER.\nENDFORM.\n\nFORM UPDATE_DATA.\n  IF GT_STUDENT IS INITIAL.\n    MODIFY ZEDU1_003 FROM TABLE GT_ZEDU15_003.\n  ELSE.\n    MODIFY ZEDU1_003 FROM TABLE GT_ZEDU15_003.\n  ENDIF.\nENDFORM.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M1'.\n      IF P_UNGRAD = 'X'.\n        SCREEN-ACTIVE = '1'.\n      ELSE.\n        SCREEN-ACTIVE = '0'.\n      ENDIF.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\nENDFORM."
   },
   {
     "objectID": "posts/SAP Track_20220907 - DOMAIN, ELEMENT, DATA TYPE/SAP Track_20220907 - DOMAIN, ELEMENT, DATA TYPE.html#domain",
@@ -3708,6 +4065,76 @@
     "title": "Co-op SAP Track 20220907 - DOMAIN, ELEMENT, DATA TYPE",
     "section": "DATA TYPE",
     "text": "DATA TYPE\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\nBSEG-DMBTR\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#특징",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#특징",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "특징",
+    "text": "특징\nINCLUDE는 하나의 프로그램이지만, 독립적으로 실행 불가\nINCLUDE 프로그램은 다른 프로그램 내에 내장 (Built in)\nINCLUDE 프로그램은 또 다른 INCLUDE를 포함 가능\nINCLUDE 프로그램은 자기 자신을 호출 불가\nINCLUDE 프로그램은 parameter를 가지지 않는다"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#top-선언부",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#top-선언부",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "TOP 선언부",
+    "text": "TOP 선언부\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#screen-선언부",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#screen-선언부",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "SCREEN 선언부",
+    "text": "SCREEN 선언부\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#data-선언부",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#data-선언부",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "DATA 선언부",
+    "text": "DATA 선언부\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#sub-screen-생성",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#sub-screen-생성",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "SUB SCREEN 생성",
+    "text": "SUB SCREEN 생성\nCALL SCREEN SUB_SCREEN_NAME.\n\n\n\nUntitled\n\n\n\nAttributes\n\n\n\nUntitled\n\n\n\n\nElement list\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#pbo-생성",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#pbo-생성",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "PBO 생성",
+    "text": "PBO 생성\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#gui-status-생성",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#gui-status-생성",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "GUI STATUS 생성",
+    "text": "GUI STATUS 생성\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#exit-command",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#exit-command",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "EXIT COMMAND",
+    "text": "EXIT COMMAND\n\n\n\nUntitled\n\n\n\nGUI STATUS 기능키 (Function Key)에 ‘E’\n\n즉 EXIT COMMAND 설정\n\nMODULE에 USER_EXIT AT EXIT-COMMAND 생성\n\n→ Function Key에 ‘E’ 명령어 들어왔을 때 AT EXIT-COMMAND가 있는 해당 모듈만 실행\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#alv-display",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#alv-display",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "ALV DISPLAY",
+    "text": "ALV DISPLAY\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#pai---user-command",
+    "href": "posts/SAP Track_20221114 - MODULE POOL, INCLUDE/SAP Track_20221114 - MODULE POOL, INCLUDE.html#pai---user-command",
+    "title": "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE",
+    "section": "PAI - USER COMMAND",
+    "text": "PAI - USER COMMAND\n\n\n\nUntitled"
   },
   {
     "objectID": "posts/Jang's Startup Korea.html",
@@ -3764,13 +4191,6 @@
     "title": "Co-op SAP Track 20220908 - CTS, VIEW",
     "section": "view field option",
     "text": "view field option\nR - 오직 읽기만\nH - 숨김처리 (화면에 조회되지 않음)\nS - view 데이터가 활성화 될 때, 해당 필드 기준으로 subset 형성\n\nex. a, b, c 필드 중 a가 S 옵션일 때, view 실행 시 a값을 입력하라는 팝업이 뜨고 입력된 값을 기준으로 b, c 입력\n\n보통 normal로 두고 사용\nkey value를 변경해야 하는 경우 new entry를 생성해서 변경\n\n\n\nUntitled\n\n\nread only - view 데이터는 읽기만 가능하다\nread, change, delete, and insert - 읽기, 변경, 삭제, 추가 가능\nread and change - 존재하는 view 데이터는 변경할 수 있지만 삭제되거나 추가 불가\n\n\n\nUntitled"
-  },
-  {
-    "objectID": "posts/Artificial Intelligence_11th/Artificial Intelligence_11th.html",
-    "href": "posts/Artificial Intelligence_11th/Artificial Intelligence_11th.html",
-    "title": "Artificial Intelligence 11th",
-    "section": "",
-    "text": "Created: October 6, 2022 9:09 AM Last edited time: November 20, 2022 1:13 AM"
   },
   {
     "objectID": "posts/Artificial Intelligence_11th/Artificial Intelligence_11th.html#진리표-truth-table",
@@ -3885,11 +4305,74 @@
     "text": "온톨로지 구축 도구\n\nPretege 등\n지식 획득 및 표현을 위한 GUI 기반의 오픈소스 온톨로지 편집기\n\n\n\nUntitled"
   },
   {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#screen-구성요소",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#screen-구성요소",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "SCREEN 구성요소",
+    "text": "SCREEN 구성요소\n\n스크린 속성\n스크린 요소\n스크린 필드\n스크린 흐름 로직"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-속성",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-속성",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "스크린 속성",
+    "text": "스크린 속성\n스크린 번호, 타입, 이름, 내역, 창 크기 정의 후 SAP 시스템에 스크린 오브젝트 연결\n\n\n\nUntitled\n\n\n\nScreen Number\n프로그램 내부에서 스크린을 구별하는 4자리 숫자\n일반적으로 0100, 0200, 0300 연속적으로 사용\n\n\n\nUntitled\n\n\n\n\nScreen type\n일반적으로 normal 선택\n\n\nNormal\n스크린이 전체 GUI 창을 점유하는 스크린\n\n\nSubscreen\nSubscreen 영역 안에서 사용하는 스크린\n\n\nModal dialog box\n팝업창의 형태로 GUI 창의 한 부분을 사용\n\n\n\nUntitled\n\n\n\n\nNext screen\n호출한 스크린의 PAI가 실행된 후 다음에 실행되는 스크린 번호 지정\n만약 호출한 프로그램이 없다면 트랜잭션은 종료하며 Next Screen에 0 또는 SPACE로 설정하면 프로그램 종료 시 이전의 프로그램으로 복귀\n\n\n\nUntitled\n\n\n\n\nScreen group\n스크린이 실행되고 있는 동안 시스템 변수 SY-DYNGR에 저장\n여러 개의 스크린을 화면 그룹 하나로 지정하여 화면 속성을 변경\n\n\n\nUntitled\n\n\n\n\nHold data\n사용자 프로파일에 저장된 데이터를 스크린 기본 값으로 설정\n통상적으로 세션이 종료될 때까지 유효\n\nABAP Memory 영역에 있는 데이터를 사용하지 않고 사용자 프로파일에 저장된 정보를 기본 값으로 사용하고자 할 때 체크\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-구성",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-구성",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "스크린 구성",
+    "text": "스크린 구성\nINPUT / OUTPUT 필드와 같은 구성 요소들을 가지고 좀 더 다양하게 화면 구성\n\n\n\nUntitled\n\n\n\n화면 레이아웃\nToolbar 기능을 이용하여 자유롭게, 편리하게 디자인\n\n\n\nUntitled\n\n\n\n\nCustom control\nGUI control을 보여주는 영역으로 ALV CLASS에서 사용\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-필드",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-필드",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "스크린 필드",
+    "text": "스크린 필드\n스크린의 작업 영역 메모리에 존재하는 필드\n스크린 구성 요소인 필드는 실행 시점에 어떠한 값을 가지게 될지 모르는 정적인 상태지만, 스크린 필드는 사용자가 입력한 값을 받아 메모리에 저장하고 스크린의 필드에 값을 DISPLAY (=dynpros, dynamic program)\n스크린 필드는 스크린 작업 영역(메모리)에 존재하는 필드로서 PAI 이벤트가 발생하기 전 시점에 ABAP 프로그램에 있는 같은 이름을 가진 필드로 값 전달(복사)\n또한, PBO 이벤트가 종료되는 시점에 다시 ABAP 프로그램에 있는 같은 이름을 가진 필드로부터 값 복사 → 이렇게 값 전달이 이루어지기 위해 유일한 변수 필요: OK_CODE\nMODULE POOL에는 여러 개의 스크린이 존재할 수 있고, 각각의 스크린에 OK_CODE 지정\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-흐름-로직",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#스크린-흐름-로직",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "스크린 흐름 로직",
+    "text": "스크린 흐름 로직\nSCREEN FLOW Logic PBO와 PAI 이벤트로 구성\n\nPBO (Process Before Output)\n스크린이 화면에 보여지기 전에 실행 화면이 처음 실행되면 PBO 실행되고 화면에서 사용자가 이벤트를 발생시키면 PAI 수행 후 다시 PBO 실행\n\n즉, PAI 이벤트 실행 후 PBO 실행으로 스크린 조회\n\n\n\nPAI (Process After Input)\n스크린 상에서 USER 액션이 발생한 후 실행\n사용자가 버튼을 클릭하는 액션을 수행하였을 때 발생하는 이벤트 블록\nPAI 이벤트가 실행된 후 다음 스크린의 PBO 이벤트를 호출\n\n\n스크린 흐름 로직\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#user-액션",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#user-액션",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "USER 액션",
+    "text": "USER 액션\n사용자는 스크린 상에서 INPUT 필드에 값을 넣거나 변경\nPAI 이벤트를 호출 시키기 위해서는\n\nfunction code가 할당된 Application Toolbar에 있는 Function 선택\nElement list에서 OK_CODE 필드가 존재하고, ABAP 프로그램에서 OK_CODE의 변수가 존재한다면, 사용자가 function을 선택했을 때, 그에 할당된 Function CODE가 OK_CODE 변수에 복사\n\n만약 OK_CODE가 설정되지 않은 상태에서 PAI 이벤트가 실행되면 Function code의 값을 채워줄 스크린 필드가 존재하지 않기 때문에 프로그램에서 PAI에 해당하는 작업 수행 불가"
+  },
+  {
+    "objectID": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#특징",
+    "href": "posts/SAP Track_20221110 - MODULE POOL/SAP Track_20221110 - MODULE POOL.html#특징",
+    "title": "Co-op SAP Track 20221110 - MODULE POOL",
+    "section": "특징",
+    "text": "특징\nINCLUDE는 하나의 프로그램이지만 독립적으로 실행 불가\nINCLUDE 프로그램은 다른 프로그램 내에 내장 (Built in)\nINCLUDE 프로그램은 또 다른 INCLUDE를 포함 가능\nINCLUDE 프로그램은 자기 자신을 호출 불가\nINCLUDE 프로그램은 PARAMETER를 가지지 않는다.\nINCLUDE는 보통 프로그램 이름 뒤에 데이터 선언부, SELECTION-SCREEN부, SUBROUTINE부, PBO, PAI로 나누어 관리의 편의성 증대\nINCLUDE ZPROGRAM_TOP\nINCLUDE ZPROGRAM_SCR\nINCLUDE ZPROGRAM_F01\nINCLUDE ZPROGRAM_PBO\nINCLUDE ZPROGRAM_PAI"
+  },
+  {
     "objectID": "posts/2021-12-10-probability-and-inferential-statistics-week-11/2021-12-10-probability-and-inferential-statistics-week-11.html",
     "href": "posts/2021-12-10-probability-and-inferential-statistics-week-11/2021-12-10-probability-and-inferential-statistics-week-11.html",
     "title": "Probability and Inferential Statistics Week 11",
     "section": "",
     "text": "prob_infer_stats_week_11_1\n\n\n\n\n\nprob_infer_stats_week_11_2\n\n\n\n\n\nprob_infer_stats_week_11_3\n\n\n\n\n\nprob_infer_stats_week_11_4"
+  },
+  {
+    "objectID": "posts/SAP Track_20221103 - ALV/SAP Track_20221103 - ALV.html",
+    "href": "posts/SAP Track_20221103 - ALV/SAP Track_20221103 - ALV.html",
+    "title": "Co-op SAP Track 20221103 - ALV",
+    "section": "",
+    "text": "Created: November 3, 2022 6:37 PM Last edited time: November 3, 2022 7:49 PM\nCHAR 72의 문제가 있음\n째니의 테이블 : 네이버 블로그"
+  },
+  {
+    "objectID": "posts/SAP Track_20221103 - ALV/SAP Track_20221103 - ALV.html#it_sort-속성",
+    "href": "posts/SAP Track_20221103 - ALV/SAP Track_20221103 - ALV.html#it_sort-속성",
+    "title": "Co-op SAP Track 20221103 - ALV",
+    "section": "IT_SORT 속성",
+    "text": "IT_SORT 속성\n\nSPOS - 정럴 순서를 지정\nFIELDNAME - 정렬이 필요한 필드명을 지정\nUP - 오름차순을 정렬하는 설정\nDOWN - 내림차순을 내리는 설정\nSUBTOT - 중간합계\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS, ICON.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\nDATA GS_LAYOUT TYPE SLIS_LAYOUT_ALV.\nDATA GT_SORT TYPE SLIS_SORTINFO_ALV OCCURS 0.\nDATA GS_SORT TYPE SLIS_SORTINFO_ALV.\n\nDATA: BEGIN OF GS_SFLIGHT,\n  COLOR TYPE C LENGTH 4,\n  LIGHT TYPE C,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  PRICE LIKE SFLIGHT-PRICE,\n  FLDATE LIKE SFLIGHT-FLDATE,\n  CELLCOLOR TYPE LVC_T_SCOL,\n  CELLBUTTON TYPE LVC_T_STYL,\n  END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY ='X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\n*GS_LAYOUT-NO_COLHEAD = 'X'.\nGS_LAYOUT-ZEBRA = 'X'.\n*GS_LAYOUT-NO_HLINE = 'X'.\n*GS_LAYOUT-EDIT = 'X'.\nGS_LAYOUT-TOTALS_BEFORE_ITEMS = 'X'.\n\nGS_SORT-SPOS = '1'.\nGS_SORT-FIELDNAME = 'CARRID'.\nGS_SORT-UP = 'X'.\nAPPEND GS_SORT TO GT_SORT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n    IS_LAYOUT = GS_LAYOUT\n    IT_SORT = GT_SORT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT.\n\nIT_SORT 속성 - SUBTOTAL\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTYPE-POOLS: SLIS, ICON.\n\nDATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.\nDATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.\nDATA GS_LAYOUT TYPE SLIS_LAYOUT_ALV.\nDATA GT_SORT TYPE SLIS_SORTINFO_ALV OCCURS 0.\nDATA GS_SORT TYPE SLIS_SORTINFO_ALV.\n\nDATA: BEGIN OF GS_SFLIGHT,\n  COLOR TYPE C LENGTH 4,\n  LIGHT TYPE C,\n  CARRID LIKE SFLIGHT-CARRID,\n  CONNID LIKE SFLIGHT-CONNID,\n  PRICE LIKE SFLIGHT-PRICE,\n  FLDATE LIKE SFLIGHT-FLDATE,\n  CELLCOLOR TYPE LVC_T_SCOL,\n  CELLBUTTON TYPE LVC_T_STYL,\n  END OF GS_SFLIGHT.\nDATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.\n\nSELECT * FROM SFLIGHT INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.\n\nCLEAR: GT_FIELDCAT, GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 1.\nGS_FIELDCAT-FIELDNAME = 'CARRID'.\nGS_FIELDCAT-SELTEXT_M = '항공코드'.\nGS_FIELDCAT-KEY ='X'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 2.\nGS_FIELDCAT-FIELDNAME = 'CONNID'.\nGS_FIELDCAT-SELTEXT_M = '편명'.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\nCLEAR: GS_FIELDCAT.\nGS_FIELDCAT-COL_POS = 3.\nGS_FIELDCAT-FIELDNAME = 'PRICE'.\nGS_FIELDCAT-SELTEXT_M = '가격'.\nGS_FIELDCAT-CURRENCY = 'KRW'.\nGS_FIELDCAT-JUST = 'R'.\nGS_FIELDCAT-DO_SUM = 'X'.\nGS_FIELDCAT-OUTPUTLEN = 20.\nAPPEND GS_FIELDCAT TO GT_FIELDCAT.\n\n*GS_LAYOUT-NO_COLHEAD = 'X'.\nGS_LAYOUT-ZEBRA = 'X'.\n*GS_LAYOUT-NO_HLINE = 'X'.\n*GS_LAYOUT-EDIT = 'X'.\nGS_LAYOUT-TOTALS_BEFORE_ITEMS = 'X'.\n\nGS_SORT-SPOS = '1'.\nGS_SORT-FIELDNAME = 'CARRID'.\nGS_SORT-UP = 'X'.\nGS_SORT-SUBTOT = 'X'.\nAPPEND GS_SORT TO GT_SORT.\n\nCALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'\n  EXPORTING\n    IT_FIELDCAT = GT_FIELDCAT\n    IS_LAYOUT = GS_LAYOUT\n    IT_SORT = GT_SORT\n  TABLES\n    T_OUTTAB = GT_SFLIGHT."
   },
   {
     "objectID": "posts/2021-11-05-algorithms-week-10/2021-11-05-algorithms-week-10.html",
@@ -3904,13 +4387,6 @@
     "title": "Probability and Statistics Week 11",
     "section": "",
     "text": "image-20211206024738160\n\n\n\n\n\nimage-20211206024748518\n\n\n\n\n\nimage-20211206024755365\n\n\n\n\n\nimage-20211206024802036\n\n\n\n\n\nimage-20211206024809133\n\n\n\n\n\nimage-20211206024816317\n\n\n\n\n\nimage-20211206024823660\n\n\n\n\n\n\n\n\nimage-20211206033541834\n\n\n\n\n\nimage-20211206033638265\n\n\n\n\n\n\n\n\nimage-20211206033650027\n\n\n\n\n\n\n\n\nimage-20211206033752181\n\n\n\n\n\nimage-20211206033853007\n\n\nUpper case는 Random variable, lower case는 sample observations\n\n\n\n\n\n\nimage-20211206033924773\n\n\n\n\n\nimage-20211206034025732\n\n\n\n\n\nimage-20211206034301459\n\n\n\n\n\nimage-20211206034409819\n\n\n\n\n\nimage-20211206034418384\n\n\n\n\n\n\n\n\nimage-20211206034555612\n\n\n\n\n\nimage-20211206034602293\n\n\n\n\n\nimage-20211206034608090\n\n\n\n\n\n\n\n\nimage-20211206034622709\n\n\n\n\n\nimage-20211206034917674\n\n\n\n\n\nimage-20211206035151310\n\n\n\n\n\n\n\n\nimage-20211206035306472\n\n\n\n\n\n\n\n\nimage-20211206035320848\n\n\n\n\n\n\n\n\nimage-20211206035434673\n\n\n\n\n\nimage-20211206035455172\n\n\n\n\n\n\n\n\nimage-20211206035544513\n\n\n\n\n\nimage-20211206035502182\n\n\n\n\n\nimage-20211206035512963\n\n\n\n\n\nimage-20211206035519676\n\n\n\n\n\nimage-20211206035524521\n\n\n\n\n\nimage-20211206035532547\n\n\n\n\n\n\n\n\nimage-20211206040325272\n\n\n\n\n\nimage-20211206040330630\n\n\n\n\n\n\n\n\nimage-20211206040339993\n\n\n\n\n\n\n\n\nimage-20211206040350877\n\n\n\n\n\nimage-20211206040627183\n\n\n\n\n\nimage-20211206040742797\n\n\n\n\n\n\n\n\nimage-20211206040756903\n\n\nunbiased estimator임을 보장하지 않음\n\n\n\nimage-20211206041051670\n\n\n\n\n\nimage-20211206041101192\n\n\n\n\n\nimage-20211206041111403"
-  },
-  {
-    "objectID": "posts/Microprocessor Application_20221019 - SPI/Microprocessor Application_20221019 - SPI.html",
-    "href": "posts/Microprocessor Application_20221019 - SPI/Microprocessor Application_20221019 - SPI.html",
-    "title": "Microprocessor Application 20221019 - SPI",
-    "section": "",
-    "text": "Created: October 19, 2022 8:18 PM Last edited time: November 9, 2022 12:17 PM"
   },
   {
     "objectID": "posts/Microprocessor Application_20221019 - SPI/Microprocessor Application_20221019 - SPI.html#pros",
@@ -5313,6 +5789,83 @@
     "text": "image-20211130082001213\n\n\n\n\n\n\n\n\nimage-20211130082252959\n\n\n\n\n\nimage-20211130082306677\n\n\n\n\n\n\n\n\nimage-20211130082634417\n\n\n\n\n\n\n\n\nimage-20211130083251074\n\n\n\n\n\n\n\n\nimage-20211130083403163\n\n\n\n\n\n\n\n\nimage-20211130083827060\n\n\n\n\n\n\n\n\nimage-20211130084539154\n\n\n\n\n\n\n\n\nimage-20211130084556792\n\n\n\n\n\n\n\n\nimage-20211130084613846\n\n\n\n\n\n\n\n\nimage-20211130085517868\n\n\n\n\n\n\n\n\nimage-20211130085529349\n\n\n\n\n\n\n\n\nimage-20211130085746028\n\n\n\n\n\n\n\n\nimage-20211130085805136\n\n\n\n\n\n\n\n\nimage-20211130090030853\n\n\n\n\n\nimage-20211130090118533\n\n\n\n\n\n\n\n\nimage-20211130090216696\n\n\n\n\n\n\n\n\nimage-20211130090341262\n\n\n\n\n\n\n\n\nimage-20211130090353718\n\n\n\n\n\n\n\n\nimage-20211130090952730"
   },
   {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#type-1-program-생성",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#type-1-program-생성",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "TYPE-1 program 생성",
+    "text": "TYPE-1 program 생성\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module에서-사용한-parameter-관련하여-변수를-사용할-때-function-module에서-정의한-type과-동일하게-선언-그렇지-않으면-dump-error",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module에서-사용한-parameter-관련하여-변수를-사용할-때-function-module에서-정의한-type과-동일하게-선언-그렇지-않으면-dump-error",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "Function module에서 사용한 parameter 관련하여 변수를 사용할 때, function module에서 정의한 TYPE과 동일하게 선언 (그렇지 않으면 DUMP ERROR)",
+    "text": "Function module에서 사용한 parameter 관련하여 변수를 사용할 때, function module에서 정의한 TYPE과 동일하게 선언 (그렇지 않으면 DUMP ERROR)\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#pattern을-통해-함수-입력",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#pattern을-통해-함수-입력",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "PATTERN을 통해 함수 입력",
+    "text": "PATTERN을 통해 함수 입력\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#pattern을-통해-function-module-자동-생성",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#pattern을-통해-function-module-자동-생성",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "PATTERN을 통해 function module 자동 생성",
+    "text": "PATTERN을 통해 function module 자동 생성\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-exporting",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-exporting",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "ABAP program의 EXPORTING",
+    "text": "ABAP program의 EXPORTING\nfuntion의 IMPORT로 선언한 parameter\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-importing",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-importing",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "ABAP program의 IMPORTING",
+    "text": "ABAP program의 IMPORTING\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-tables",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-tables",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "ABAP program의 TABLES",
+    "text": "ABAP program의 TABLES\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-sy-subrc",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program의-sy-subrc",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "ABAP program의 SY-SUBRC",
+    "text": "ABAP program의 SY-SUBRC\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module-호출",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module-호출",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "function module 호출",
+    "text": "function module 호출\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module-debugging",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#function-module-debugging",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "function module debugging",
+    "text": "function module debugging\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program에서-호출-값에-대하여-test-data-저장",
+    "href": "posts/SAP Track_20221027 - function/SAP Track_20221027 - function.html#abap-program에서-호출-값에-대하여-test-data-저장",
+    "title": "Co-op SAP Track 20221027 - function",
+    "section": "ABAP program에서 호출 값에 대하여 TEST DATA 저장",
+    "text": "ABAP program에서 호출 값에 대하여 TEST DATA 저장\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nDATA: LV_NUM1 TYPE I,\n      LV_NUM2 TYPE I,\n      LV_OPTIONAL TYPE C.\n\nDATA: LV_RESULT TYPE I,\n      LV_MESSAGE TYPE C LENGTH 20.\n\nLV_NUM1 = 3.\nLV_NUM2 = 2.\nLV_OPTIONAL = '+'.\n\nCALL FUNCTION 'ZEDU1_001'\n  EXPORTING\n   I_NUM1            = LV_NUM1\n   I_NUM2            = LV_NUM2\n   I_OPTION          = LV_OPTIONAL\n IMPORTING\n   E_RESULT          = LV_RESULT\n   E_MESSAGE         = LV_MESSAGE\n* TABLES\n*   T_ZEDU1_001       =\n* CHANGING\n*   P_ZEDU1_001       =\n EXCEPTIONS\n   DIV_ZERO          = 1\n   OTHERS            = 2.\n          .\nIF SY-SUBRC <> 0.\nWRITE:/ SY-SUBRC, 'FAILED'.\n\nELSE.\n  WRITE:/ LV_RESULT.\n  WRITE:/ LV_MESSAGE.\nENDIF."
+  },
+  {
     "objectID": "posts/CFA Level 3_Derivatives and currency management/CFA Level 3_Derivatives and currency management.html",
     "href": "posts/CFA Level 3_Derivatives and currency management/CFA Level 3_Derivatives and currency management.html",
     "title": "CFA Level 3 Derivatives and Currency Management",
@@ -6405,6 +6958,48 @@
     "text": "probability (확률)\n어떤 사건이 일어날 가능성\n\n상대빈도확률 (relative frequency probability)\n빈도주의자 확률 (frequentist probability)\n전체 실험 회수 대비 관심 사건의 상대적 빈도\n\n\n\nUntitled\n\n\n\n\n주관적 확률 (subjective probability)\n확신 또는 믿음의 정도 (degree of belief)\n\n\njoint probability (결합 확률)\n\\(P(A, B), P(A \\cap B), P(AB)\\)사\n사건 A와 B가 동시에 일어날 확률\n\n\n\nUntitled\n\n\n\n\nConditional probability (조건부 확률)\n\\(P(A|B)\\)\nB가 주어질 때 A가 일어날 확률\n\\[\nP(A|B) = \\frac{P(A \\cap B)}{P(B)}, where~P(B) > 0\n\\]\n\n\n\nUntitled"
   },
   {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#default-값-설정",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#default-값-설정",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "DEFAULT 값 설정",
+    "text": "DEFAULT 값 설정\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE DEFAULT 'SSU-01'.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE DEFAULT 'SSU-01' SIGN E OPTION EQ.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE DEFAULT 'SSU-01' TO 'SSU-15'.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE DEFAULT 'SSU-01' TO 'SSU-03' SIGN E OPTION BT.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#no-intervals",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#no-intervals",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "NO INTERVALS",
+    "text": "NO INTERVALS\n~TO (상한값)을 보여주지 않음\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE NO INTERVALS.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#no-extension",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#no-extension",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "NO-EXTENSION",
+    "text": "NO-EXTENSION\nMultiple selection 버튼을 숨김\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE NO-EXTENSION.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#visible-length",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#visible-length",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "VISIBLE LENGTH",
+    "text": "VISIBLE LENGTH\n길이 조정\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE VISIBLE LENGTH 3.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#modif-id",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#modif-id",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "MODIF ID",
+    "text": "MODIF ID\n그룹으로 묶어, USERCOMMAND 필드 제어\n출력화면에 대한 수정, Selection Screen 제어\nex) 라디오 버튼 선택에 따라 화면 입력 제어\n\n\n\nUntitled\n\n\n라디오 버튼 선택에 따라 화면 입력 제어 해보기\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  PARAMETERS: P_CHECK AS CHECKBOX DEFAULT 'X' MODIF ID M1.\n  PARAMETERS: P_CHECK2 AS CHECKBOX MODIF ID M2.\nSELECTION-SCREEN END OF BLOCK B2.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M1'.\n      SCREEN-INPUT = 'O'.\n      MODIFY SCREEN.\n    ENDIF.\n  ENDLOOP.\nENDFORM.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nDATA: BEGIN OF GS_STUDENT.\n  INCLUDE TYPE ZSTU_15.\nDATA: END OF GS_STUDENT.\nDATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE.\n  PARAMETERS: P_ZGUBUN LIKE ZSTU_15-ZGUBUN DEFAULT 'F'.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  PARAMETERS: P_CHECK AS CHECKBOX DEFAULT 'X' MODIF ID M1.\n  PARAMETERS: P_CHECK2 AS CHECKBOX MODIF ID M2.\nSELECTION-SCREEN END OF BLOCK B2.\n\nSELECT * FROM ZSTU_15 INTO CORRESPONDING FIELDS OF TABLE GT_STUDENT WHERE ZCODE IN S_ZCODE.\n\nLOOP AT GT_STUDENT INTO GS_STUDENT.\n  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.\nENDLOOP.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M1'.\n*      SCREEN-INPUT = '0'.\n      SCREEN-ACTIVE = '0'.\n      MODIFY SCREEN.\n    ENDIF.\n  ENDLOOP.\nENDFORM.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE MODIF ID M1.\n  PARAMETERS: P_ZGUBUN TYPE ZSTU_15-ZGUBUN MODIF ID M2.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  SELECTION-SCREEN BEGIN OF LINE.\n  PARAMETERS: P_R1 RADIOBUTTON GROUP R1 DEFAULT 'X' USER-COMMAND UC1.\n  SELECTION-SCREEN POSITION 3.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R1.\n\n  PARAMETERS: P_R2 RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 20.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R2.\n  SELECTION-SCREEN END OF LINE.\n\nSELECTION-SCREEN END OF BLOCK B2.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M2'.\n      IF P_R1 = 'X'.\n        SCREEN-ACTIVE = '1'.\n      ELSEIF P_R2 = 'X'.\n        SCREEN-ACTIVE = '0'.\n      ENDIF.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\nENDFORM.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE MODIF ID M1.\n  PARAMETERS: P_ZGUBUN TYPE ZSTU_15-ZGUBUN MODIF ID M2.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  SELECTION-SCREEN BEGIN OF LINE.\n  PARAMETERS: P_R1 RADIOBUTTON GROUP R1 DEFAULT 'X'.\n  SELECTION-SCREEN POSITION 3.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R1.\n\n  PARAMETERS: P_R2 RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 20.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R2.\n  SELECTION-SCREEN END OF LINE.\n\nSELECTION-SCREEN END OF BLOCK B2.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M2'.\n      IF P_R1 = 'X'.\n        SCREEN-ACTIVE = '1'.\n      ELSEIF P_R2 = 'X'.\n        SCREEN-ACTIVE = '0'.\n      ENDIF.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\nENDFORM.\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#search-help",
+    "href": "posts/SAP Track_20221019 - SELECT-OPTIONS/SAP Track_20221019 - SELECT-OPTIONS.html#search-help",
+    "title": "Co-op SAP Track 20221019 - SELECT-OPTIONS",
+    "section": "SEARCH HELP",
+    "text": "SEARCH HELP\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\nMATCHCODE OBJECT\n변수에 할당하여 SEARCH HELP 기능 구현\n\n\n\nUntitled\n\n\nTABLES: ZSTU_15.\n\nSELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.\n  SELECT-OPTIONS: S_ZCODE FOR ZSTU_15-ZCODE MODIF ID M1 MATCHCODE OBJECT ZSH15_2.\n  PARAMETERS: P_ZGUBUN TYPE ZSTU_15-ZGUBUN MODIF ID M2.\nSELECTION-SCREEN END OF BLOCK B1.\n\nSELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.\n  SELECTION-SCREEN BEGIN OF LINE.\n  PARAMETERS: P_R1 RADIOBUTTON GROUP R1 DEFAULT 'X'.\n  SELECTION-SCREEN POSITION 3.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R1.\n\n  PARAMETERS: P_R2 RADIOBUTTON GROUP R1.\n  SELECTION-SCREEN POSITION 20.\n  SELECTION-SCREEN COMMENT (10) FOR FIELD P_R2.\n  SELECTION-SCREEN END OF LINE.\n\nSELECTION-SCREEN END OF BLOCK B2.\n\nAT SELECTION-SCREEN OUTPUT.\n  PERFORM SET_SCREEN.\n\nFORM SET_SCREEN.\n  LOOP AT SCREEN.\n    IF SCREEN-GROUP1 = 'M2'.\n      IF P_R1 = 'X'.\n        SCREEN-ACTIVE = '1'.\n      ELSEIF P_R2 = 'X'.\n        SCREEN-ACTIVE = '0'.\n      ENDIF.\n    ENDIF.\n\n    MODIFY SCREEN.\n  ENDLOOP.\nENDFORM.\n\n\n\nUntitled"
+  },
+  {
     "objectID": "posts/2021-11-06-digital-system-circuits-week-9/2021-11-06-digital-system-circuits-week-9.html",
     "href": "posts/2021-11-06-digital-system-circuits-week-9/2021-11-06-digital-system-circuits-week-9.html",
     "title": "Digital System Circuits Week 9",
@@ -6776,6 +7371,90 @@
     "text": "cross-coupled NOR gate\n\n\n\nimage-20211130023147982\n\n\n\n\n\n\n\n\nimage-20211130023155938\n\n\n\n\n\n\n\n\nimage-20211130023229253\n\n\n\n\n\n\n\n\nimage-20211130023241528\n\n\n\n\n\nimage-20211130023247677\n\n\nInvalid condition = race condition\n\n한 번 바뀌면 다시 바뀌지 않는 상태\n\n\n\n\n\n\n\nimage-20211130023300788\n\n\n\n\n\n\n\n\nimage-20211130023313917\n\n\n\n\n\nimage-20211130023323797\n\n\n\n\n\nimage-20211130023333918\n\n\nglitch - unwanted spark caused by logic gate delay\n\n\n\n\n\n\nimage-20211130023109651\n\n\n\n\n\n\n\n\nimage-20211130030411499\n\n\n\n\n\n\n\n\nimage-20211130030536292\n\n\n\n\n\nimage-20211130030546389\n\n\n\n\n\n\n\n\nimage-20211130030558393\n\n\n\n\n\nimage-20211130031700597\n\n\n\n\n\nimage-20211130031707887\n\n\n\n\n\n\n\n\nimage-20211130032715015"
   },
   {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#객체참조변수",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#객체참조변수",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "객체참조변수",
+    "text": "객체참조변수\nDATA: 변수명 TYPE C, I, \"... (참조대상)\nDATA: 객체명 TYPE REF TO CLASS \"ex) CL_GUI_ALV_GRID"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#객체생성",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#객체생성",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "객체생성",
+    "text": "객체생성\nCREATE OBJECT 객체명\n필요한 이유? → 해당 객체를 생성하여 객체 → CALL METHOD를 통해 기능 구현\n즉, 객체 생성 후 객체 → CALL METHOD SET_TABLE_FOR_FIRST_DISPLAY하여 화면에 ALV 출력"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#부모-class",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#부모-class",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "부모 CLASS",
+    "text": "부모 CLASS\nSUPER CLASS라고도 함\nCL_GUI_CONTAINER\n범용적인 클래스를 두고"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#자식-class",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#자식-class",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "자식 CLASS",
+    "text": "자식 CLASS\nCL_GUI_CUSTOM_CONTAINER\n각각의 기능에 따라 파생된 클래스를 만든 것"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#container",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#container",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "CONTAINER",
+    "text": "CONTAINER\nALV를 뿌려줄 때 어떠한 형태로 그릴 건지 틀을 잡아 줌\nCUSTOM CONTAINER, DOCKING CONTAINER, SPLITTER CONTAINER\n\n\n\nUntitled\n\n\n\nCUSTOM CONTAINER\n해당 위치와 크기를 사용자가 customizing한 대로 뿌려줌\n→ CUSTOM CONTROL 필수\n\n\nDOCKING CONTAINER\n사용자가 정한 위치와 크기가 아닌 프로그램 내에서 화면크기 제어 → CUSTOM CONTROL 불필요\n\n\nSPLITTER CONTAINER\n좌 + 우 or 위 + 아래로 하나의 화면 내에서 영역을 쪼갬 → CUSTOM CONTROL 불필요"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#grid",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#grid",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "GRID",
+    "text": "GRID\n실질적으로 METHOD를 호출하기 위해 사용 (CONTAINER 안에 GRID를 그려 CL_GUI_ALV_GRID 내 SET_TABLE_FOR_FIRST_DISPLAY method를 호출)\nGRID의 부모는 CONTAINER"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#call-screen-100",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#call-screen-100",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "CALL SCREEN 100",
+    "text": "CALL SCREEN 100\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#화면에-대한-변수-선언",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#화면에-대한-변수-선언",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "화면에 대한 변수 선언",
+    "text": "화면에 대한 변수 선언\n프로그램과 연동을 위해 프로그램 내에서도 똑같이 OK_CODE 선언\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#pbo---gui_status_100",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#pbo---gui_status_100",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "PBO - GUI_STATUS_100",
+    "text": "PBO - GUI_STATUS_100\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#pbo---alv_0100",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#pbo---alv_0100",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "PBO - ALV_0100",
+    "text": "PBO - ALV_0100\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#custom_control",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#custom_control",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "CUSTOM_CONTROL",
+    "text": "CUSTOM_CONTROL\n\n\n\nUntitled\n\n\nCUSTOM CONTAINER를 그리기 위해 LAYOUT에 CUSTOM CONTROL 그리기\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled\n\n\n\n\n\nUntitled"
+  },
+  {
+    "objectID": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#custom-container-1",
+    "href": "posts/SAP Track_20221117 - Class ALV/SAP Track_20221117 - Class ALV.html#custom-container-1",
+    "title": "Co-op SAP Track 20221117 - Class ALV",
+    "section": "CUSTOM CONTAINER",
+    "text": "CUSTOM CONTAINER\n\n\n\nUntitled"
+  },
+  {
     "objectID": "posts/Microprocessor Application_5th/Microprocessor Application_5th.html",
     "href": "posts/Microprocessor Application_5th/Microprocessor Application_5th.html",
     "title": "Microprocessor Application 5th",
@@ -6948,7 +7627,7 @@
     "href": "index.html",
     "title": "Siyun Min",
     "section": "",
-    "text": "Artificial Intelligence 20221117\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 17, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221115\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 9 - UART, SPI, I2C\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221110\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 20221109\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221108\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221103\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 17th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 16th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 25, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 15th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 20221019 - SPI\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 6th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 14th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221018 - Parameters\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 13th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221013 - SUBROUTINE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221012 - PERFORM, PARAMETER\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 5th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 12th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 11, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221006 - INSERT, UPDATE, DELETE, MODIFY\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 11th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221005 - GROUPING\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221005 - DATABASE TABLE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221004 - READ\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 10th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 2\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 3\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 4\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220929 - INTERNAL TABLE DELETE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 9th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 4th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220928 - LOOP\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 8th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220927 - MODIFY\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220926 - INTERNAL TABLE 제어문\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220922 - INTERNAL TABLE TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 7th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 3rd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220921 - INTERNAL TABLE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 6th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220920 - CURR, QUAN\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220919 - assigning value, CONSTANTS, STATIC, TABLES\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 2nd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 5th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220915 - local data type, global data type\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 1\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220914 - Predefined ABAP TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 2nd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220913 - SEARCH HELP\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 4th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220908 - CTS, VIEW\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 3rd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMicroprocessor Application 1st\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 7, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220907 - DOMAIN, ELEMENT, DATA TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 7, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220906 - DOMAIN, ELEMENT\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220905 - SAP Application\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220901 - User Maintenance\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Equity\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Private Wealth Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Alternative Investments\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Fixed Income\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCFA Level 3 Behavioral Finance\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Trading, Performance Evaluation, and Manager Selection\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Ethical and Professional Standards\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Capital Market Expectations\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Derivatives and Currency Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Institutional Investors\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Asset Allocation and Related Decisions\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\n듀얼 모멘텀 투자전략\n\n\n\n\n\n\n\nBook\n\n\nInvestment\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\n장병규의 스타트업 한국\n\n\n\n\n\n\n\nBook\n\n\nStartup\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nWHAT I LEARNED LOSING A MILLION DOLLARS\n\n\n\n\n\n\n\nBook\n\n\nInvestment\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLeadership by Persuation\n\n\n\n\n\n\n\nUCB\n\n\nCoursera\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 4, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 29, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 17, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 4, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Ethical and Professional Standards\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Quantitative Methods\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 11-21\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 8\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 8\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Economics\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 21, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Corporate Finance\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 17, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 14, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Alternative Investment\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Data Visualization\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 9-10\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Intro do Deep Learning\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Portfolio Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Feature Engineering\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Data Clearning\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Pandas\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - AI Ethics\n\n\n\n\n\n\n\nKaggle\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 5-8\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 1, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Equity\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Derivatives\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Fixed Income\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Financial Reporting and Analysis\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\nNo matching items"
+    "text": "Co-op SAP Track 20221121 - CLASS ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 21, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221117\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 17, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221117 - Class ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 17, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221115\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221114 - MODULE POOL, INCLUDE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 9 - UART, SPI, I2C\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221110\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221110 - MODULE POOL\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 10, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221109 - REPORT_EVENT\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 20221109\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 9, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221108 - ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221108\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 20221103\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221103 - ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 17th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221101 - ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nNov 1, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221031 - ALV\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221027 - function\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221026 - function\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221025 - Debugging\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 25, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 16th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 25, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221024 - CASE MESSAGE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 24, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221020\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 15th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 20221019 - SPI\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 6th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221019 - SELECT-OPTIONS\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 14th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221018 - Parameters\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 13th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221013 - SUBROUTINE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221012 - PERFORM, PARAMETER\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 5th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 12th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 11, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221006 - INSERT, UPDATE, DELETE, MODIFY\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 11th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221005 - GROUPING\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221005 - DATABASE TABLE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20221004 - READ\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 10th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 2\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 3\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 4\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 3, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220929 - INTERNAL TABLE DELETE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 9th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 4th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220928 - LOOP\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 28, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 8th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220927 - MODIFY\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 27, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220926 - INTERNAL TABLE 제어문\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220922 - INTERNAL TABLE TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 7th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 22, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 3rd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220921 - INTERNAL TABLE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\n\nSep 21, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 6th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220920 - CURR, QUAN\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220919 - assigning value, CONSTANTS, STATIC, TABLES\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 19, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 2nd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 16, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 5th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220915 - local data type, global data type\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 15, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application Week 1\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220914 - Predefined ABAP TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nMicroprocessor Application 2nd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 14, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220913 - SEARCH HELP\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 4th\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 13, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220908 - CTS, VIEW\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nArtificial Intelligence 3rd\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 8, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMicroprocessor Application 1st\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 7, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220907 - DOMAIN, ELEMENT, DATA TYPE\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 7, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220906 - DOMAIN, ELEMENT\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 6, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220905 - SAP Application\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 5, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCo-op SAP Track 20220901 - User Maintenance\n\n\n\n\n\n\n\nSSU\n\n\nSAP\n\n\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Equity\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Private Wealth Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Alternative Investments\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Fixed Income\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCFA Level 3 Behavioral Finance\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Trading, Performance Evaluation, and Manager Selection\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Ethical and Professional Standards\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Capital Market Expectations\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Derivatives and Currency Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Institutional Investors\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 3 Asset Allocation and Related Decisions\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nAug 31, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\n듀얼 모멘텀 투자전략\n\n\n\n\n\n\n\nBook\n\n\nInvestment\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\n장병규의 스타트업 한국\n\n\n\n\n\n\n\nBook\n\n\nStartup\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nWHAT I LEARNED LOSING A MILLION DOLLARS\n\n\n\n\n\n\n\nBook\n\n\nInvestment\n\n\n\n\n\n\n\n\n\n\n\nJun 20, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLeadership by Persuation\n\n\n\n\n\n\n\nUCB\n\n\nCoursera\n\n\n\n\n\n\n\n\n\n\n\nMar 23, 2022\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 10, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Final\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 9, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 14\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nDec 4, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 12\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 13\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 29, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 17, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 11\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 10\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 9\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nNov 4, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Ethical and Professional Standards\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Quantitative Methods\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 11-21\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 28, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 27, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 26, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 8\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferential Statistics Week 8\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 23, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Economics\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 21, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 20, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits midterm\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 19, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 18, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Corporate Finance\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 17, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 7\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 14, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Alternative Investment\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 8, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nDigital System Circuits Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 7, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Data Visualization\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 9-10\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Intro do Deep Learning\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 6\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nOct 6, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Portfolio Management\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nOct 5, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Feature Engineering\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Data Clearning\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - Pandas\n\n\n\n\n\n\n\nKaggle\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nKaggle - AI Ethics\n\n\n\n\n\n\n\nKaggle\n\n\n\n\n\n\n\n\n\n\n\nOct 2, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nTiny Python Project Chapter 5-8\n\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nOct 1, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Statistics Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nProbability and Inferenctial Statistics Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nAlgorithms Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nSystem Programming Week 5\n\n\n\n\n\n\n\nSSU\n\n\n\n\n\n\n\n\n\n\n\nSep 30, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Equity\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 29, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Derivatives\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Fixed Income\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\n  \n\n\n\n\nCFA Level 2 Financial Reporting and Analysis\n\n\n\n\n\n\n\nCFA\n\n\n\n\n\n\n\n\n\n\n\nSep 12, 2021\n\n\nSiyun Min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

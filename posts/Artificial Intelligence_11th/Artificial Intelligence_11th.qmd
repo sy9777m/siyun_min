@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # 11th
 
-Created: October 6, 2022 9:09 AM
-Last edited time: November 20, 2022 1:13 AM
-
 # 명제 논리의 의미
 
 ## 진리표 (truth table)
