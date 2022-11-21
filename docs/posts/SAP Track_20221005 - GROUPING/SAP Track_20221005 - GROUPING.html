@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-05">
+
+<title>Siyun Min - Co-op SAP Track 20221005 - GROUPING</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221005 - GROUPING</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 5, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="grouping" class="level1">
+<h1>20221005 - GROUPING</h1>
+<section id="grouping-1" class="level2">
+<h2 class="anchored" data-anchor-id="grouping-1">GROUPING</h2>
+<p>Aggregate 함수를 사용하려면 SELECT 구문에 GROUP BY를 기술</p>
+<ul>
+<li>AVG - 평균</li>
+<li>COUNT - 개수</li>
+<li>MAX - 최대값</li>
+<li>MIN - 최소값</li>
+<li>STDDEV - 표준편차</li>
+<li>SUM - 합계</li>
+<li>VARIANCE - 분산</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  GV_SUM TYPE I,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  AVG( PRICE ) AS GV_SUM
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT GROUP BY CARRID CONNID.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-GV_SUM.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="having" class="level2">
+<h2 class="anchored" data-anchor-id="having">HAVING</h2>
+<p>GROUP BY로 조회한 SELECT 구문에 그룹의 조건 추가</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  GV_SUM TYPE I,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  AVG( PRICE ) AS GV_SUM
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT GROUP BY CARRID CONNID
+  HAVING AVG( PRICE ) &gt; 1000.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-GV_SUM.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="order-by" class="level2">
+<h2 class="anchored" data-anchor-id="order-by">ORDER BY</h2>
+<p>SELECT 결과로 조회된 데이터가 ORDER BY에 기술된 칼럼 기준으로 정렬</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  GV_SUM TYPE I,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  AVG( PRICE ) AS GV_SUM
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT GROUP BY CARRID CONNID
+  HAVING AVG( PRICE ) &gt; 1000
+  ORDER BY CARRID.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-GV_SUM.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  GV_SUM TYPE I,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  AVG( PRICE ) AS GV_SUM
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT GROUP BY CARRID CONNID
+  HAVING AVG( PRICE ) &gt; 1000
+  ORDER BY CARRID DESCENDING.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-GV_SUM.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  GV_SUM TYPE I,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  AVG( PRICE ) AS GV_SUM
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT GROUP BY CARRID CONNID
+  HAVING AVG( PRICE ) &gt; 1000
+  ORDER BY GV_SUM.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-GV_SUM.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="subquery" class="level2">
+<h2 class="anchored" data-anchor-id="subquery">Subquery</h2>
+<p>Subquery는 SELECT 구문의 WHERE 조건에 또 다른 SELECT 구문을 추가하여 값을 제한</p>
+<p>Subquery를 이용해 특별한 조건을 WHERE 구문에 추가</p>
+<p>Subquery의 SELECT 구문에는 칼럼 하나만 선언</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  PRICE TYPE SFLIGHT-PRICE,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID CONNID PRICE FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  WHERE CARRID IN ( SELECT CARRID
+                      FROM SPFLI
+                     WHERE CARRID = SFLIGHT~CARRID AND CONNID = SFLIGHT~CONNID )
+  AND CARRID = 'AA'
+  AND CONNID LIKE '00%'.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-PRICE.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="database-table-제어---select" class="level1">
+<h1>DATABASE TABLE 제어 - SELECT</h1>
+<section id="join" class="level2">
+<h2 class="anchored" data-anchor-id="join">JOIN</h2>
+<p>관계형 데이터베이스에서 여러 개의 테이블 값을 동시에 읽어올 경우 JOIN을 사용</p>
+<p>두 테이블 간의 연결 조건은 ON을 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="inner-join---교집합" class="level3">
+<h3 class="anchored" data-anchor-id="inner-join---교집합">INNER JOIN - 교집합</h3>
+<pre class="abap"><code>SELECT FIELD FROM TABLE INNER JOIN TABLE2 AS ALIAS</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2018.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  CARRNAME TYPE SCARR-CARRNAME,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT SFLIGHT~CARRID
+  SFLIGHT~CONNID
+  SCARR~CARRNAME
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT INNER JOIN SCARR
+  ON SFLIGHT~CARRID = SCARR~CARRID
+  WHERE SFLIGHT~CARRID = 'AA'.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2019.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="outer-join---합집합" class="level3">
+<h3 class="anchored" data-anchor-id="outer-join---합집합">OUTER JOIN - 합집합</h3>
+<pre class="abap"><code>SELECT FIELD FROM TABLE OUTER JOIN TABLE2 AS ALIAS ON [COND] [OPTIONS]</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2020.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  CARRNAME TYPE SCARR-CARRNAME,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT SFLIGHT~CARRID
+  SFLIGHT~CONNID
+  SCARR~CARRNAME
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FROM SFLIGHT LEFT OUTER JOIN SCARR
+  ON SFLIGHT~CARRID = SCARR~CARRID
+  WHERE SFLIGHT~CARRID = 'AA'.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="for-all-entries" class="level2">
+<h2 class="anchored" data-anchor-id="for-all-entries">FOR ALL ENTRIES</h2>
+<p>INTERNAL TABLE과 DATABASE의 TABLE을 JOIN하는 개념과 유사</p>
+<p>즉, DB TABLE에서 먼저 데이터를 SELECT한 후, 그 결과의 데이터 내에서 다시 한번 조회가 필요할 시 사용</p>
+<pre class="abap"><code>SELECT FIELD FROM TABLE INTO TABLE ITAB1 FOR ALL ENTRIES IN ITAB2 WHERE [COND]</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2022.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>특징</p>
+<ul>
+<li>ITAB의 칼럼과 비교 대상 테이블의 칼럼 타입은 같아야 한다.</li>
+<li>LIKE, BETWEEN, IN과 같은 비교 구문은 사용할 수 없다.</li>
+<li>ITAB이 NULL이면 모든 데이터를 읽는다.</li>
+<li>UNIQUE KEY 기준시, ITAB의 중복된 값은 하나만 남는다.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2023.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2024.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SPFLI,
+  CARRID TYPE SPFLI-CARRID,
+  CONNID TYPE SPFLI-CONNID,
+END OF GS_SPFLI.
+DATA: GT_SPFLI LIKE TABLE OF GS_SPFLI.
+
+DATA: BEGIN OF GS_SFLIGHT,
+  CARRID TYPE SFLIGHT-CARRID,
+  CONNID TYPE SFLIGHT-CONNID,
+  FLDATE TYPE SFLIGHT-FLDATE,
+  PRICE TYPE SFLIGHT-PRICE,
+END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT CARRID
+  CONNID
+  FROM SPFLI
+  INTO CORRESPONDING FIELDS OF TABLE GT_SPFLI
+  WHERE CARRID LIKE 'A%'.
+
+IF GT_SPFLI IS NOT INITIAL.
+SELECT CARRID
+  CONNID
+  FLDATE
+  PRICE
+  FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  FOR ALL ENTRIES IN GT_SPFLI
+  WHERE CARRID = GT_SPFLI-CARRID
+  AND CONNID = GT_SPFLI-CONNID.
+ENDIF.
+
+LOOP AT GT_SFLIGHT INTO GS_SFLIGHT.
+  WRITE: / GS_SFLIGHT-CARRID, GS_SFLIGHT-CONNID, GS_SFLIGHT-FLDATE, GS_SFLIGHT-PRICE.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2025.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

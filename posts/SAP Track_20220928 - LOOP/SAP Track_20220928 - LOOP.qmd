@@ -1,0 +1,448 @@
+---
+title: "Co-op SAP Track 20220928 - LOOP"
+author: "Siyun Min"
+date: "2022-09-28"
+categories: [SSU, SAP]
+---
+# 20220928 - LOOP
+
+```abap
+WRITE AT 1(160) SY-ULINE.
+WRITE: / SY-VLINE,
+  'NUMBER' COLOR 1 CENTERED, 20 SY-VLINE,
+  'ID' COLOR 1 CENTERED, 40 SY-VLINE,
+  'NAME' COLOR 1 CENTERED, 60 SY-VLINE,
+  'VOLUME' COLOR 1 CENTERED, 80 SY-VLINE,
+  'SUM' COLOR 1 CENTERED, 100 SY-VLINE,
+  'STATUS' COLOR 1 CENTERED, 120 SY-VLINE,
+  'ORDER DATE' COLOR 1 CENTERED, 140 SY-VLINE,
+  'ORDER TIME' COLOR 1 CENTERED, 160 SY-VLINE.
+WRITE: / SY-ULINE.
+
+LOOP AT GT_ORDER.
+  WRITE: / SY-VLINE,
+  GT_ORDER-Z_NUMBER, 20 SY-VLINE,
+  GT_ORDER-ZID, 40 SY-VLINE,
+  GT_ORDER-ZNAME, 60 SY-VLINE,
+  GT_ORDER-VOLUM, 80 SY-VLINE,
+  GT_ORDER-Z_SUM, 100 SY-VLINE,
+  GT_ORDER-Z_STATUS, 120 SY-VLINE,
+  GT_ORDER-Z_JDATE, 140 SY-VLINE,
+  GT_ORDER-Z_JTIME, 160 SY-VLINE.
+  WRITE: / SY-ULINE.
+ENDLOOP.
+
+WRITE: / SY-ULINE.
+WRITE: / SY-VLINE,
+  'NUMBER' COLOR 1 CENTERED, 20 SY-VLINE,
+  'ID' COLOR 1 CENTERED, 40 SY-VLINE,
+  'NAME' COLOR 1 CENTERED, 60 SY-VLINE,
+  'VOLUME' COLOR 1 CENTERED, 80 SY-VLINE,
+  'SUM' COLOR 1 CENTERED, 100 SY-VLINE,
+  'STATUS' COLOR 1 CENTERED, 120 SY-VLINE,
+  'AREA CODE' COLOR 1 CENTERED, 140 SY-VLINE,
+  'ORDER DATE' COLOR 1 CENTERED, 160 SY-VLINE,
+  'ORDER TIME' COLOR 1 CENTERED, 180 SY-VLINE,
+  'DELIVERY DATE' COLOR 1 CENTERED, 200 SY-VLINE,
+  'DELIVERY TIME' COLOR 1 CENTERED, 220 SY-VLINE.
+WRITE: / SY-ULINE.
+
+LOOP AT GT_DELIVERY.
+  WRITE: / SY-VLINE,
+    GT_DELIVERY-Z_NUMBER, 20 SY-VLINE,
+    GT_DELIVERY-ZID, 40 SY-VLINE,
+    GT_DELIVERY-ZNAME, 60 SY-VLINE,
+    GT_DELIVERY-VOLUM, 80 SY-VLINE,
+    GT_DELIVERY-Z_SUM, 100 SY-VLINE,
+    GT_DELIVERY-ZZ_STATUS, 120 SY-VLINE,
+    GT_DELIVERY-ZZ_CODE, 140 SY-VLINE,
+    GT_DELIVERY-Z_JDATE, 160 SY-VLINE,
+    GT_DELIVERY-Z_JTIME, 180 SY-VLINE,
+    GT_DELIVERY-Z_BDATE, 200 SY-VLINE,
+    GT_DELIVERY-Z_BTIME, 220 SY-VLINE.
+  WRITE: / SY-ULINE.
+ENDLOOP.
+```
+
+![Untitled](./Untitled.png)
+
+# INTERNAL TABLE 제어문
+
+## LOOP문 처리 시 구문
+
+AT FIRST - INTERNAL TABLE의 첫 번째 값이 실행될 때 수행
+
+AT LAST - INTERNAL TABLE의 마지막 값이 실행될 때 수행
+
+AT NEW F1 - Field F1에 새로운 값이 들어올 때 수행
+
+AT END OF F1 - Field F1의 값이 마지막일 때 수행
+
+### AT FIRST
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+*BREAK-POINT.
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  GS_STUDENT-ZSTUCODE = 'SSU-99'.
+
+  AT FIRST.
+    GS_STUDENT-ZSTUCODE = 'SSU-77'.
+  ENDAT.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+```
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+### AT LAST
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+*BREAK-POINT.
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  GS_STUDENT-ZSTUCODE = 'SSU-99'.
+
+  AT LAST.
+    GS_STUDENT-ZSTUCODE = 'SSU-77'.
+  ENDAT.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+```
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+### AT NEW
+
+![Untitled](./Untitled%2019.png)
+
+AT을 3번째 field에
+
+1. AAA|A
+2. AAA|B
+3. AAA|C
+4. AAB|A
+5. AAB|A
+6. ABB|A
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '신현빈'.
+GS_STUDENT-ZENAME = 'Hyeonbin Shin'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-05'.
+GS_STUDENT-ZKNAME = '박은빈'.
+GS_STUDENT-ZENAME = 'Eunbin Park'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-4444-4444'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+SORT GT_STUDENT DESCENDING BY ZGUBUN ZSTUCODE.
+
+*BREAK-POINT.
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  GS_STUDENT-ZSTUCODE = 'SSU-99'.
+
+  AT NEW ZGUBUN.
+    GS_STUDENT-ZSTUCODE = 'SSU-77'.
+  ENDAT.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+```
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+### AT END OF
+
+![Untitled](./Untitled%2045.png)
+
+AT을 3번째 field에
+
+1. AAA|A
+2. AAA|B
+3. AAA|C
+4. AAB|A
+5. AAB|A
+6. ABB|A
+
+![Untitled](./Untitled%2046.png)
+
+![Untitled](./Untitled%2047.png)
+
+![Untitled](./Untitled%2048.png)
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+![Untitled](./Untitled%2052.png)
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+![Untitled](./Untitled%2055.png)
+
+![Untitled](./Untitled%2056.png)
+
+![Untitled](./Untitled%2057.png)
+
+![Untitled](./Untitled%2058.png)
+
+![Untitled](./Untitled%2059.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '곽튜브'.
+GS_STUDENT-ZENAME = 'kbak'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '010-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '신현빈'.
+GS_STUDENT-ZENAME = 'Hyeonbin Shin'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-05'.
+GS_STUDENT-ZKNAME = '박은빈'.
+GS_STUDENT-ZENAME = 'Eunbin Park'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '010-4444-4444'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+SORT GT_STUDENT DESCENDING BY ZGUBUN ZSTUCODE.
+
+*BREAK-POINT.
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+
+  AT END OF ZGUBUN.
+    GS_STUDENT-ZSTUCODE = 'SSU-77'.
+  ENDAT.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+```
+
+![Untitled](./Untitled%2060.png)
+
+![Untitled](./Untitled%2061.png)
+
+![Untitled](./Untitled%2062.png)
+
+![Untitled](./Untitled%2063.png)
+
+![Untitled](./Untitled%2064.png)
+
+![Untitled](./Untitled%2065.png)
+
+![Untitled](./Untitled%2066.png)

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-09-29">
+
+<title>Siyun Min - Co-op SAP Track 20220929 - INTERNAL TABLE DELETE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20220929 - INTERNAL TABLE DELETE</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 29, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="internal-table-delete" class="level1">
+<h1>20220929 - INTERNAL TABLE DELETE</h1>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>in-class practice</h1>
+<ol type="1">
+<li>주문내역에서 정보를 가져와 특별구매기간 2022년 9월 16일부터 20일까지 가장 먼저 주문한 고객에게 사은품을 제공하는 로직을 구현</li>
+<li>배송내역에서 정보를 가져와 구매한 ID별 제품이 2개 이상이면 사은품 체크: ‘X’
+<ul>
+<li>단, 배송상태가 배송 중이면 제외</li>
+</ul></li>
+</ol>
+<pre class="abap"><code>SELECT ZID, ZNAME, ZZ_STATUS FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF TABLE GT_GIFT</code></pre>
+<pre class="abap"><code>* 1
+DATA: BEGIN OF GT_ORDERGIFT OCCURS 0.
+  INCLUDE TYPE ZEDU15_001.
+  DATA: ZGIFT TYPE C,
+END OF GT_ORDERGIFT.
+
+SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE GT_ORDERGIFT.
+
+*BREAK-POINT.
+
+LOOP AT GT_ORDERGIFT.
+  IF ( GT_ORDERGIFT-Z_JDATE &gt;= '20220916' ) AND ( GT_ORDERGIFT-Z_JDATE &lt;= '20220920' ).
+    GT_ORDERGIFT-ZGIFT = 'X'.
+    MODIFY GT_ORDERGIFT.
+  ENDIF.
+  CLEAR: GT_ORDERGIFT.
+ENDLOOP.
+
+* 2
+DATA: BEGIN OF GT_GIFT OCCURS 0.
+  DATA: ZID TYPE ZEDU15_002-ZID,
+        ZNAME TYPE ZEDU15_002-ZNAME,
+        ZZ_STATUS TYPE ZEDU15_002-ZZ_STATUS,
+        ZGIFT TYPE C,
+END OF GT_GIFT.
+
+SELECT * FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF TABLE GT_GIFT.
+
+*BREAK-POINT.
+
+SORT GT_GIFT BY ZID.
+DATA: ZCOUNT TYPE I VALUE 0.
+
+LOOP AT GT_GIFT.
+  ZCOUNT = ZCOUNT + 1.
+  AT END OF ZID.
+    IF ZCOUNT &gt;= 2.
+      GT_GIFT-ZGIFT = 'X'.
+      MODIFY GT_GIFT TRANSPORTING ZGIFT WHERE ( ZID = GT_GIFT-ZID ) AND ( ZZ_STATUS = '1' ).
+    ENDIF.
+    ZCOUNT = 0.
+  ENDAT.
+
+  CLEAR: GT_GIFT.
+ENDLOOP.</code></pre>
+</section>
+<section id="internal-table-삭제---delete" class="level1">
+<h1>INTERNAL TABLE 삭제 - DELETE</h1>
+<ol type="1">
+<li>LOOP를 통한 라인 삭제</li>
+<li>TABLE KEY를 이용해 라인 삭제</li>
+<li>WHERE 조건을 이용해 라인 삭제</li>
+<li>INDEX를 이용해 라인 삭제</li>
+<li>ADJACENT DUPLICATE 구문을 이용해 중복 라인 삭제</li>
+</ol>
+<section id="loop를-통한-라인-삭제" class="level2">
+<h2 class="anchored" data-anchor-id="loop를-통한-라인-삭제">LOOP를 통한 라인 삭제</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  IF GS_STUDENT-ZGUBUN NE 'M'.
+    DELETE TABLE GT_STUDENT FROM GS_STUDENT.
+  ENDIF.
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="table-key를-이용해-라인-삭제" class="level2">
+<h2 class="anchored" data-anchor-id="table-key를-이용해-라인-삭제">TABLE KEY를 이용해 라인 삭제</h2>
+<p>KEY 값 기준으로 INTERNAL TABLE의 라인 삭제</p>
+<pre class="abap"><code>DELETE TABLE ITAB WITH TABLE KEY F1.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15 WITH NON-UNIQUE KEY ZGUBUN.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+DELETE TABLE GT_STUDENT WITH TABLE KEY ZGUBUN = 'M'.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="where-조건을-이용해-라인-삭제" class="level2">
+<h2 class="anchored" data-anchor-id="where-조건을-이용해-라인-삭제">WHERE 조건을 이용해 라인 삭제</h2>
+<p>WHERE 조건절 기준으로 INTERNAL TABLE 라인 삭제</p>
+<pre class="abap"><code>DELETE ITAB WHERE FIELD = VALUE.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+DELETE GT_STUDENT WHERE ZGUBUN = 'M'.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="index를-이용해-라인-삭제" class="level2">
+<h2 class="anchored" data-anchor-id="index를-이용해-라인-삭제">INDEX를 이용해 라인 삭제</h2>
+<p>INDEX를 이용하여 해당 라인의 값을 삭제</p>
+<pre class="abap"><code>DELETE ITAB INDEX idx.
+
+DELETE ITAB FROM N1 TO N2. "N1 ~ N2 라인 삭제
+DELETE ITAB FROM N1. "N1 이후 모든 라인 삭제
+DELETE ITAB TO N2. "첫 번째부터 N2까지 모든 라인 삭제
+</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+DELETE GT_STUDENT INDEX 2.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2018.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2019.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+*DELETE GT_STUDENT INDEX 2.
+DELETE GT_STUDENT FROM 2 TO 3.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2020.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2022.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+*DELETE GT_STUDENT INDEX 2.
+DELETE GT_STUDENT FROM 2.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2023.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2024.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2025.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-04'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+*DELETE GT_STUDENT INDEX 2.
+DELETE GT_STUDENT TO 2.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2026.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2027.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="adjacent-duplicate-구문을-이용해-중복-라인-삭제" class="level2">
+<h2 class="anchored" data-anchor-id="adjacent-duplicate-구문을-이용해-중복-라인-삭제">ADJACENT DUPLICATE 구문을 이용해 중복 라인 삭제</h2>
+<p>이 구문은 수행하기 전에 반드시 SORT 구문을 통해 정렬해야 원하는 결과를 수행</p>
+<pre class="abap"><code>DELETE ADJACENT DUPLICATE ENTRIES FROM ITAB.
+DELETE ADJACENT DUPLICATE ENTRIES FROM ITAB COMPARING F1.</code></pre>
+<p>COMPARING 하지 않으면 TABLE KEY 값이 중복된 데이터 삭제</p>
+<p>KEY 값을 만약 선언하지 않은 경우 문자열의 선행 필드들이 DEFAULT KEY로 구성</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2028.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2029.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2030.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2031.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2032.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+SORT GT_STUDENT.
+
+BREAK-POINT.
+
+DELETE ADJACENT DUPLICATES FROM GT_STUDENT.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2033.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2034.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2035.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2036.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2037.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2038.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GS_STUDENT TYPE ZSTU_15.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_15.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '레아'.
+GS_STUDENT-ZENAME = 'Lea'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-2222-2222'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '이병헌'.
+GS_STUDENT-ZENAME = 'Byeongheon Lee'.
+GS_STUDENT-ZGUBUN = 'M'.
+GS_STUDENT-ZTEL = '000-3333-3333'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+SORT GT_STUDENT.
+
+BREAK-POINT.
+
+DELETE ADJACENT DUPLICATES FROM GT_STUDENT COMPARING ZCODE.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2039.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2040.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

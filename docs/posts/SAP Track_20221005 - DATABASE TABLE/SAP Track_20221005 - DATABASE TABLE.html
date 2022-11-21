@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-05">
+
+<title>Siyun Min - Co-op SAP Track 20221005 - DATABASE TABLE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221005 - DATABASE TABLE</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 5, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="database-table" class="level1">
+<h1>20221005 - DATABASE TABLE</h1>
+</section>
+<section id="internal-table-제어" class="level1">
+<h1>INTERNAL TABLE 제어</h1>
+<p>SELECT - 조회</p>
+<p>APPEND - 삽입</p>
+<p>INSERT - 삽입</p>
+<p>MODIFY - 수정/삽입</p>
+<p>DELETE - 삭제</p>
+</section>
+<section id="database-table-제어" class="level1">
+<h1>DATABASE TABLE 제어</h1>
+<p>SELECT - 데이터베이스 테이블에서 데이터를 읽음</p>
+<p>INSERT - 데이터베이스 테이블에서 데이터를 추가함</p>
+<p>UPDATE - 데이터베이스 테이블의 값을 변경함</p>
+<p>MODIFY - 수정/삽업 (INSERT + UPDATE)</p>
+<ul>
+<li>UPDATE - 동일한 키 값이 있는 경우</li>
+<li>INSERT - 동일한 키 값이 존재하지 않는 경우</li>
+</ul>
+<p>DELETE - 데이터베이스 테이블의 값을 삭제함</p>
+</section>
+<section id="database-table-제어---select" class="level1">
+<h1>DATABASE TABLE 제어 - SELECT</h1>
+<p>SELECT 문은 기본적으로 <code>SELECT *(field) FROM source INTO target WHERE condition</code>으로 구성된다.</p>
+<p>SELECT field - 조회하고자 하는 테이블 필드명을 나열</p>
+<p>FROM - 조회할 테이블을 지정해주고, 위치는 INTO 앞뒤로 다 가능</p>
+<p>INTO - 조회에서 읽어온 데이터를 변수에 저장하고, 이 변수를 ABAP 프로그램에서 사용</p>
+<p>WHERE - 조회하고자 하는 데이터의 조건</p>
+<section id="select-field" class="level2">
+<h2 class="anchored" data-anchor-id="select-field">SELECT field</h2>
+<section id="single-line" class="level3">
+<h3 class="anchored" data-anchor-id="single-line">Single line</h3>
+<p>데이터베이스에서 하나의 라인 값을 읽어오고자 할 경우 사용</p>
+<p>데이터를 한 건만 가져오기 때문에 원하는 데이터의 조건을 정확히 알고 사용</p>
+<p>WHERE 조건이 잘못되어 여러개의 라인을 읽어오면 임의로 라인 반환</p>
+<pre class="abap"><code>SELECT SINGLE CARRNAME FROM SCARR INTO L_CARRNAME WHERE CARRID = 'AA'</code></pre>
+</section>
+<section id="several-lines" class="level3">
+<h3 class="anchored" data-anchor-id="several-lines">Several lines</h3>
+<p>데이터베이스에서 여러 라인을 조회</p>
+<pre class="abap"><code>SELECT CARRNAME FROM SCARR INTO TABLE GT_SCARR WHERE CARRID = 'AA'</code></pre>
+</section>
+</section>
+<section id="from" class="level2">
+<h2 class="anchored" data-anchor-id="from">FROM</h2>
+<p>데이터를 조회 할 대상 테이블 (또는 뷰) 지정</p>
+<p>하나의 테이블을 지정하거나 여러 개의 테이블을 JOIN 가능</p>
+<p>Alias를 사용하여 테이블명에 별명을 붙일 수도 있음</p>
+<pre class="abap"><code>SELECT * FROM SCARR AS A</code></pre>
+</section>
+<section id="into" class="level2">
+<h2 class="anchored" data-anchor-id="into">INTO</h2>
+<section id="구조체-work-area" class="level3">
+<h3 class="anchored" data-anchor-id="구조체-work-area">구조체 (WORK AREA)</h3>
+<p>여러 칼럼의 한 라인만 조회할 경우 WORK AREA에 할당</p>
+<p><code>CORRESPONDING FIELDS OF</code> 구문을 사용하면 동일 필드명에 값 할당</p>
+<p><em>기호를 사용하면 전체 칼럼을 조회가능하지만, </em>은 비효율적</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRNAME LIKE SCARR-CARRNAME,
+  CARRID LIKE SCARR-CARRID,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT SINGLE CARRID
+  CARRNAME
+  FROM SCARR
+  INTO ( GS_SCARR-CARRID, GS_SCARR-CARRNAME ).
+
+BREAK-POINT.
+
+WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="interal-table" class="level3">
+<h3 class="anchored" data-anchor-id="interal-table">INTERAL TABLE</h3>
+<p>여러 라인을 조회할 경우 INTERNAL TABLE 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO TABLE GT_SCARR
+  WHERE CARRID = 'AA'.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRNAME LIKE SCARR-CARRNAME,
+  CARRID LIKE SCARR-CARRID,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO TABLE GT_SCARR.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRNAME LIKE SCARR-CARRNAME,
+  CARRID LIKE SCARR-CARRID,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRNAME LIKE SCARR-CARRNAME,
+  CARRID LIKE SCARR-CARRID,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID = 'AA'.
+
+BREAK-POINT.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID = 'AB'.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  CARRNAME LIKE SCARR-CARRNAME,
+  CARRID LIKE SCARR-CARRID,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID = 'AA'.
+
+BREAK-POINT.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  APPENDING CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID = 'AB'.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="where" class="level2">
+<h2 class="anchored" data-anchor-id="where">WHERE</h2>
+<p>조회하고자 하는 데이터의 조건</p>
+<p>WHERE 조건은 SELECT 적중 수를 줄여주고 사용자가 우너하는 데이터를 정확하게 선택할 수 있도록 하는 조건</p>
+<p>WHERE 조건에 사용되는 필드가 인덱스에서 사용될 때 속도 향상 (UPDATE, DELETE에서도 같은 명령어 조건 사용)</p>
+<section id="연산자" class="level3">
+<h3 class="anchored" data-anchor-id="연산자">연산자</h3>
+<p>EQ: =</p>
+<p>NE: &lt;&gt;</p>
+<p>LT: &lt;</p>
+<p>LE: ≤</p>
+<p>GT: &gt;</p>
+<p>GE: ≥</p>
+</section>
+<section id="between-a-and-b-interval-조건" class="level3">
+<h3 class="anchored" data-anchor-id="between-a-and-b-interval-조건">BETWEEN A AND B: INTERVAL 조건</h3>
+<pre class="abap"><code>SELECT * FROM TABLE WHERE FIELD BETWEEN A AND B</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2018.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  ZCHECK TYPE C,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID BETWEEN 'AA' AND 'AB'.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2019.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="string-비교" class="level3">
+<h3 class="anchored" data-anchor-id="string-비교">STRING 비교</h3>
+<p>문자열 비교할 시 LIKE 구문 사용</p>
+<pre class="abap"><code>SELECT * FROM TABLE WHERE FIELD LIKE 'A%'</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2020.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  ZCHECK TYPE C,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID LIKE 'A%'.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2021.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="list-value" class="level3">
+<h3 class="anchored" data-anchor-id="list-value">LIST VALUE</h3>
+<p>IN 구문을 사용하여 여러 조건에 속한 경우의 값을 가져온다</p>
+<pre class="abap"><code>SELECT * FROM TABLE WHERE FIELD IN 조건</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2022.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2023.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_SCARR,
+  ZCHECK TYPE C,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID IN ( 'AA', 'AC' ).
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2024.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="range-table" class="level2">
+<h2 class="anchored" data-anchor-id="range-table">RANGE TABLE</h2>
+<section id="선언" class="level3">
+<h3 class="anchored" data-anchor-id="선언">선언</h3>
+<pre class="abap"><code>RANGES GR_NAME FOR TYPE Reference</code></pre>
+<pre class="abap"><code>DATA: BEGIN OF GR_NAME OCCURS 0,
+    SIGN TYPE DDSIGN,
+    OPTION TYPE DDOPTION,
+    LOW LIKE TYPE Reference,
+    HIGH LIKE TYPE Reference,
+END OF GR_NAME.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2025.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="구조" class="level3">
+<h3 class="anchored" data-anchor-id="구조">구조</h3>
+<p>RANGES 변수를 선언하면 변수는 자동적으로 4개의 필드를 가진 INTERNAL TABLE이 됨</p>
+<ul>
+<li>SIGN</li>
+<li>OPTION</li>
+<li>LOW</li>
+<li>HIGH</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2026.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2027.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2028.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2029.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>RANGES GR_SCARR FOR SCARR-CARRID.
+
+DATA: BEGIN OF GS_SCARR,
+  ZCHECK TYPE C,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+GR_SCARR-SIGN = 'I'.
+GR_SCARR-OPTION = 'EQ'.
+GR_SCARR-LOW = 'AA'.
+GR_SCARR-HIGH = 'AC'.
+APPEND GR_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID IN GR_SCARR.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2030.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2031.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2032.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>RANGES GR_SCARR FOR SCARR-CARRID.
+
+DATA: BEGIN OF GS_SCARR,
+  ZCHECK TYPE C,
+  CARRID LIKE SCARR-CARRID,
+  CARRNAME LIKE SCARR-CARRNAME,
+END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+GR_SCARR-SIGN = 'I'.
+GR_SCARR-OPTION = 'BT'.
+GR_SCARR-LOW = 'AA'.
+GR_SCARR-HIGH = 'AC'.
+APPEND GR_SCARR.
+
+SELECT CARRID
+  CARRNAME
+  FROM SCARR
+  INTO CORRESPONDING FIELDS OF TABLE GT_SCARR
+  WHERE CARRID IN GR_SCARR.
+
+LOOP AT GT_SCARR INTO GS_SCARR.
+  WRITE: / GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+ENDLOOP.
+
+BREAK-POINT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2033.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2034.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2035.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2036.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>In-class practice</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2037.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ORDER.
+  INCLUDE TYPE ZEDU15_001.
+  DATA: Z_STATUS_NAME TYPE C LENGTH 10,
+        ZZ_STATUS TYPE ZEDU15_002-ZZ_STATUS,
+        ZZ_STATUS_NAME TYPE C LENGTH 10,
+        ZZ_CODE TYPE ZEDU15_002-ZZ_CODE,
+        ZZ_CODE_NAME TYPE C LENGTH 10,
+END OF GS_ORDER.
+DATA: GT_ORDER LIKE TABLE OF GS_ORDER.
+
+SELECT Z_NUMBER
+  ZID
+  MATNR
+  ZNAME
+  Z_SUM
+  Z_STATUS
+  Z_JDATE
+  FROM ZEDU15_001
+  INTO CORRESPONDING FIELDS OF TABLE GT_ORDER
+  WHERE Z_JDATE BETWEEN '20220901' AND '20220930'.
+
+BREAK-POINT.
+
+RANGES GR_ORDER FOR ZEDU15_001-Z_JDATE.
+
+GR_ORDER-SIGN = 'I'.
+GR_ORDER-OPTION = 'BT'.
+GR_ORDER-LOW = '20221001'.
+GR_ORDER-HIGH = '20221031'.
+APPEND GR_ORDER.
+
+SELECT Z_NUMBER
+  ZID
+  MATNR
+  ZNAME
+  Z_SUM
+  Z_STATUS
+  Z_JDATE
+  FROM ZEDU15_001
+  APPENDING CORRESPONDING FIELDS OF TABLE GT_ORDER
+  WHERE Z_JDATE IN GR_ORDER.
+
+BREAK-POINT.
+
+LOOP AT GT_ORDER INTO GS_ORDER.
+  IF GS_ORDER-Z_STATUS = '1'.
+    SELECT SINGLE ZZ_STATUS FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF GS_ORDER.
+  ELSE.
+    SELECT SINGLE ZZ_CODE FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF GS_ORDER.
+*    WRITE: / GS_ORDER-ZZ_CODE.
+  ENDIF.
+ENDLOOP.
+
+BREAK-POINT.</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

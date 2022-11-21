@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-06">
+
+<title>Siyun Min - Co-op SAP Track 20221006 - INSERT, UPDATE, DELETE, MODIFY</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221006 - INSERT, UPDATE, DELETE, MODIFY</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 6, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="insert-update-delete-modify" class="level1">
+<h1>20221006 - INSERT, UPDATE, DELETE, MODIFY</h1>
+</section>
+<section id="se16n" class="level1">
+<h1>se16n</h1>
+<p>table data management</p>
+</section>
+<section id="database-table-제어-insert" class="level1">
+<h1>DATABASE TABLE 제어-INSERT</h1>
+<section id="single-line" class="level2">
+<h2 class="anchored" data-anchor-id="single-line">Single line</h2>
+<p>테이블에 하나의 line을 삽입하기 위해 사요하며, WA의 데이터를 INSERT 하기 위해서는 WA는 테이블과 같은 구조로 선언 필수</p>
+<pre class="abap"><code>INSERT INTO TABLE VALUES WA
+INSERT TABLE FROM WA</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU1.
+  INCLUDE TYPE ZEDU_1.
+DATA: END OF GS_ZSTU1.
+DATA: GT_ZSTU1 LIKE TABLE OF GS_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-01'.
+GS_ZSTU1-ZKNAME = '오해원'.
+GS_ZSTU1-ZENAME = 'Haewon Oh'.
+GS_ZSTU1-ZGRADE = '4.0'.
+GS_ZSTU1-ZSEMESTER = 7.
+GS_ZSTU1-ZCREDIT = 140.
+
+INSERT INTO ZEDU_1 VALUES GS_ZSTU1.</code></pre>
+</section>
+<section id="several-lines" class="level2">
+<h2 class="anchored" data-anchor-id="several-lines">Several lines</h2>
+<p>INTERNAL TABLE의 모든 값을 한 번에 테이블에 삽입</p>
+<pre class="abap"><code>INSERT TABLE FROM TABLE ITAB
+INSERT TABLE FROM TABLE ITAB ACCEPTING DUPLICATE KEYS</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU1.
+  INCLUDE TYPE ZEDU_1.
+DATA: END OF GS_ZSTU1.
+DATA: GT_ZSTU1 LIKE TABLE OF GS_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-01'.
+GS_ZSTU1-ZKNAME = '오해원'.
+GS_ZSTU1-ZENAME = 'Haewon Oh'.
+GS_ZSTU1-ZGRADE = '4.0'.
+GS_ZSTU1-ZSEMESTER = 7.
+GS_ZSTU1-ZCREDIT = 140.
+APPEND GS_ZSTU1 TO GT_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-02'.
+GS_ZSTU1-ZKNAME = '지수'.
+GS_ZSTU1-ZENAME = 'Jisu'.
+GS_ZSTU1-ZGRADE = '4.1'.
+GS_ZSTU1-ZSEMESTER = 6.
+GS_ZSTU1-ZCREDIT = 120.
+APPEND GS_ZSTU1 TO GT_ZSTU1.
+
+INSERT ZEDU_1 FROM TABLE GT_ZSTU1 ACCEPTING DUPLICATE KEYS.
+
+IF SY-SUBRC = 0.
+  WRITE:/ 'Succeeded to insert'.
+ENDIF.</code></pre>
+</section>
+</section>
+<section id="update" class="level1">
+<h1>UPDATE</h1>
+<section id="single-line-1" class="level2">
+<h2 class="anchored" data-anchor-id="single-line-1">single line</h2>
+<p>테이블에 하나의 line을 변경</p>
+<p>WA의 데이터를 UPDATE하기 위해서는 WA는 테이블과 같은 구조로 선언 필수</p>
+<pre class="abap"><code>UPDATE TABLE FROM WA</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU1.
+  INCLUDE TYPE ZEDU_1.
+DATA: END OF GS_ZSTU1.
+DATA: GT_ZSTU1 LIKE TABLE OF GS_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-01'.
+GS_ZSTU1-ZKNAME = '오해원'.
+GS_ZSTU1-ZENAME = 'Haewon Oh'.
+GS_ZSTU1-ZGRADE = '4.0'.
+GS_ZSTU1-ZSEMESTER = 7.
+GS_ZSTU1-ZCREDIT = 140.
+
+UPDATE ZEDU_1 FROM GS_ZSTU1.
+
+IF SY-SUBRC = 0.
+  WRITE:/ 'Succeeded to update'.
+ENDIF.</code></pre>
+</section>
+<section id="several-lines-1" class="level2">
+<h2 class="anchored" data-anchor-id="several-lines-1">several lines</h2>
+<p>INTERNAL TABLE의 여러 데이터를 한 번에 테이블에 반영</p>
+<pre class="abap"><code>UPDATE TABLE FROM TABLE ITAB</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU1.
+  INCLUDE TYPE ZEDU_1.
+DATA: END OF GS_ZSTU1.
+DATA: GT_ZSTU1 LIKE TABLE OF GS_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-01'.
+GS_ZSTU1-ZKNAME = '오해원'.
+GS_ZSTU1-ZENAME = 'Haewon Oh'.
+GS_ZSTU1-ZGRADE = '4.0'.
+GS_ZSTU1-ZSEMESTER = 7.
+GS_ZSTU1-ZCREDIT = 140.
+APPEND GS_ZSTU1 TO GT_ZSTU1.
+
+GS_ZSTU1-MANDT = SY-MANDT.
+GS_ZSTU1-ZCODE = 'SSU-02'.
+GS_ZSTU1-ZKNAME = '지수'.
+GS_ZSTU1-ZENAME = 'Jisu'.
+GS_ZSTU1-ZGRADE = '4.1'.
+GS_ZSTU1-ZSEMESTER = 6.
+GS_ZSTU1-ZCREDIT = 120.
+APPEND GS_ZSTU1 TO GT_ZSTU1.
+
+UPDATE ZEDU_1 FROM TABLE GT_ZSTU1.
+
+IF SY-SUBRC = 0.
+  WRITE:/ 'Succeeded to update'.
+ENDIF.</code></pre>
+</section>
+<section id="update-set" class="level2">
+<h2 class="anchored" data-anchor-id="update-set">UPDATE SET</h2>
+<p>UPDATE SET 구문을 이용해 개별 칼럼 값을 변경</p>
+<pre class="abap"><code>UPDATE TABLE SET FIELD = '변경할 값' WHERE [COND]</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="delete" class="level1">
+<h1>DELETE</h1>
+<section id="single-line-2" class="level2">
+<h2 class="anchored" data-anchor-id="single-line-2">Single line</h2>
+<p>테이블에 하나의 line을 삭제</p>
+<p>WA의 데이터를 DELETE 하기 위해서는 WA는 테이블과 같은 구조로 선언 필수</p>
+<pre class="abap"><code>DELETE TABLE FROM WA</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="several-lines-2" class="level2">
+<h2 class="anchored" data-anchor-id="several-lines-2">Several lines</h2>
+<p>INTERNAL TABLE의 WHERE 조건에 해당하는 모든 값을 한 번에 삭제</p>
+<pre class="abap"><code>DELETE FROM TABLE WHERE [COND]</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="modify" class="level1">
+<h1>MODIFY</h1>
+<p>MODIFY는 UPDATE 구문과 INSERT 구문을 합한 기능</p>
+<p>KEY 값을 가지는 데이터가 테이블에 존재하면 UPDATE, 존재하지 않을 때는 INSERT 수행</p>
+<section id="single-line-3" class="level2">
+<h2 class="anchored" data-anchor-id="single-line-3">Single line</h2>
+<p>테이블에 하나의 line을 수정</p>
+<p>WA의 데이터를 MODIFY하기 위해서는 WA는 테이블과 같은 구조로 선언 필수</p>
+<pre class="abap"><code>MODIFY TABLE FROM WA</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="several-lines-3" class="level2">
+<h2 class="anchored" data-anchor-id="several-lines-3">Several lines</h2>
+<p>INTERNAL TABLE의 모든 값을 한 번에 변경 또는 추가</p>
+<pre class="abap"><code>MODIFY TABLE FROM TABLE ITAB</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>In-class practice</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>IF GT_ZEDU_001[] IS NOT INITIAL.
+    DELETE ZEDU15_001 FROM TABLE GT_ZEDU_001.
+ENDIF.</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

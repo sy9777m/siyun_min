@@ -1,0 +1,400 @@
+---
+title: "Co-op SAP Track 20220927 - MODIFY"
+author: "Siyun Min"
+date: "2022-09-27"
+categories: [SSU, SAP]
+---
+# 20220927 - MODIFY
+
+# MODIFY
+
+INTERNAL TABLE 변경
+
+1. TABLE KEY를 이용해 한 라인 변경
+2. WHERE 조건을 이용해 여러 라인 변경
+3. INDEX를 이용해 한 라인 변경
+
+## TABLE KEY를 이용해 한 라인 변경
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZTEL = '000-1111-1111'.
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZTEL = '000-1111-1111'.
+MODIFY TABLE GT_STUDENT FROM GS_STUDENT.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+## TABLE KEY를 이용해 한 COLUMN 변경
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+GS_STUDENT-ZTEL = '000-0000-0000'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+BREAK-POINT.
+
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZTEL = '000-1111-1111'.
+MODIFY TABLE GT_STUDENT FROM GS_STUDENT TRANSPORTING ZTEL.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+## WHERE 조건을 이용해 여러 라인 변경
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '신동엽'.
+GS_STUDENT-ZENAME = 'Dongyeop Shin'.
+GS_STUDENT-ZGUBUN = 'M'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  IF GS_STUDENT-ZGUBUN = 'F'.
+    GS_STUDENT-ZTEL = '010-1111-1111'.
+  ELSE.
+    GS_STUDENT-ZTEL = '010-2222-2222'.
+  ENDIF.
+
+  MODIFY GT_STUDENT FROM GS_STUDENT TRANSPORTING ZTEL WHERE ZSTUCODE = GS_STUDENT-ZSTUCODE.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2034.png)
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+## INDEX를 이용해 한 라인 변경
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+![Untitled](./Untitled%2045.png)
+
+![Untitled](./Untitled%2046.png)
+
+![Untitled](./Untitled%2047.png)
+
+![Untitled](./Untitled%2048.png)
+
+```abap
+DATA: GS_STUDENT TYPE ZSTU_1.
+DATA: GT_STUDENT TYPE TABLE OF ZSTU_1 WITH NON-UNIQUE KEY ZSTUCODE.
+
+GS_STUDENT-ZSTUCODE = 'SSU-01'.
+GS_STUDENT-ZKNAME = '오해원'.
+GS_STUDENT-ZENAME = 'Haewon Oh'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-02'.
+GS_STUDENT-ZKNAME = '지수'.
+GS_STUDENT-ZENAME = 'Jisu'.
+GS_STUDENT-ZGUBUN = 'F'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+GS_STUDENT-ZSTUCODE = 'SSU-03'.
+GS_STUDENT-ZKNAME = '신동엽'.
+GS_STUDENT-ZENAME = 'Dongyeop Shin'.
+GS_STUDENT-ZGUBUN = 'M'.
+
+APPEND GS_STUDENT TO GT_STUDENT.
+
+CLEAR: GS_STUDENT.
+
+BREAK-POINT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  IF GS_STUDENT-ZGUBUN = 'F'.
+    GS_STUDENT-ZTEL = '010-1111-1111'.
+  ELSE.
+    GS_STUDENT-ZTEL = '010-2222-2222'.
+  ENDIF.
+
+  MODIFY GT_STUDENT FROM GS_STUDENT INDEX SY-TABIX.
+
+  CLEAR: GS_STUDENT.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+![Untitled](./Untitled%2052.png)
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+![Untitled](./Untitled%2055.png)
+
+# 9/26 in-class practice
+
+```abap
+DATA: BEGIN OF GT_ORDER OCCURS 0.
+  INCLUDE TYPE ZEDU15_001.
+  DATA: ZORDER TYPE C LENGTH 10,
+END OF GT_ORDER.
+
+SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE GT_ORDER.
+
+BREAK-POINT.
+
+LOOP AT GT_ORDER.
+  IF GT_ORDER-Z_STATUS = '1'.
+    GT_ORDER-ZORDER = '주문'.
+  ELSEIF GT_ORDER-Z_STATUS = '2'.
+    GT_ORDER-ZORDER = '반품'.
+  ENDIF.
+  MODIFY GT_ORDER.
+  CLEAR: GT_ORDER.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2056.png)
+
+![Untitled](./Untitled%2057.png)
+
+![Untitled](./Untitled%2058.png)
+
+![Untitled](./Untitled%2059.png)
+
+![Untitled](./Untitled%2060.png)
+
+```abap
+DATA: BEGIN OF GT_DELIVERY OCCURS 0.
+  INCLUDE TYPE ZEDU15_002.
+  DATA: ZDELIVERY TYPE C LENGTH 10,
+        ZARRIVAL TYPE D,
+        ZGIFT TYPE C,
+END OF GT_DELIVERY.
+
+SELECT * FROM ZEDU15_002 INTO CORRESPONDING FIELDS OF TABLE GT_DELIVERY.
+
+*BREAK-POINT.
+
+LOOP AT GT_DELIVERY.
+  IF GT_DELIVERY-ZZ_STATUS = '1'.
+    GT_DELIVERY-ZDELIVERY = '주문완료'.
+  ELSEIF GT_DELIVERY-ZZ_STATUS = '2'.
+    GT_DELIVERY-ZDELIVERY = '배송진행'.
+  ENDIF.
+  MODIFY GT_DELIVERY.
+  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+*BREAK-POINT.
+
+LOOP AT GT_DELIVERY.
+  IF ( GT_DELIVERY-ZZ_CODE = 'A' ) OR ( GT_DELIVERY-ZZ_CODE = 'B' ).
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE.
+  ELSEIF ( GT_DELIVERY-ZZ_CODE = 'C' ) OR ( GT_DELIVERY-ZZ_CODE = 'D' ) or ( GT_DELIVERY-ZZ_CODE = 'E' ).
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE + 1.
+  ELSEIF GT_DELIVERY-ZZ_CODE = 'F'.
+    GT_DELIVERY-Z_BDATE = GT_DELIVERY-Z_JDATE + 3.
+  ENDIF.
+  MODIFY GT_DELIVERY.
+  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+BREAK-POINT.
+
+LOOP AT GT_DELIVERY.
+  IF GT_DELIVERY-Z_SUM >= 100.
+    GT_DELIVERY-ZGIFT = 'X'.
+  ENDIF.
+  MODIFY GT_DELIVERY.
+  CLEAR: GT_DELIVERY.
+ENDLOOP.
+
+BREAK-POINT.
+```
+
+![Untitled](./Untitled%2061.png)
+
+![Untitled](./Untitled%2062.png)
+
+![Untitled](./Untitled%2063.png)
+
+![Untitled](./Untitled%2064.png)
+
+![Untitled](./Untitled%2065.png)
+
+![Untitled](./Untitled%2066.png)
+
+![Untitled](./Untitled%2067.png)
+
+![Untitled](./Untitled%2068.png)
+
+![Untitled](./Untitled%2069.png)
+
+![Untitled](./Untitled%2070.png)
+
+![Untitled](./Untitled%2071.png)
+
+![Untitled](./Untitled%2072.png)
+
+![Untitled](./Untitled%2073.png)
+
+![Untitled](./Untitled%2074.png)
+
+![Untitled](./Untitled%2075.png)
+
+![Untitled](./Untitled%2076.png)

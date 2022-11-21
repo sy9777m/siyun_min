@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-12">
+
+<title>Siyun Min - Co-op SAP Track 20221012 - PERFORM, PARAMETER</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Siyun Min</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221012 - PERFORM, PARAMETER</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 12, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="perform-parameter" class="level1">
+<h1>20221012 - PERFORM, PARAMETER</h1>
+</section>
+<section id="perform" class="level1">
+<h1>PERFORM</h1>
+<p>ABAP 프로그램의 Subroutine: PERFORM, FUNCTION MODULE</p>
+<p>Subroutine의 PERFORM은 FORM으로 시작하여 END FORM으로 종료되는 구문을 의미</p>
+<p>스크립트의 모듈화, 재사용, 구조화를 주목적</p>
+<pre class="abap"><code>PERFORM FORM_NAME. " PERFORM 구문을 통해 Subroutine 호출시
+FORM FORM_NAME. " FORM 구문 수행
+
+ENDFORM.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%201.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="parameter" class="level1">
+<h1>Parameter</h1>
+<p>Subroutine을 호출하는 구문과 호출 받는 구문 사이에 주고 받는 값</p>
+<p>보통 Subroutine 내에서 parameter는 DATA 구문으로 정의하는 일반적인 LOCAL 변수</p>
+<p>Subroutine을 호출할 때 사용되는 parameter: actual parameter (넘겨주는 변수)</p>
+<p>Subroutine에서 사용되는 parameter: formal parameter (받는 변수)</p>
+<p>PERFORM의 USING, CHANGING 구문을 사용하여 parameter 선언 (단, subroutine과 순서를 같게 지정)</p>
+<p>PERFORM에서 parameter 선언: USING, CHANGING 구문 사용 (단, subroutine과 순서를 같게 지정)</p>
+<pre class="abap"><code>FORM [FORM_NAME] USING P1 TYPE type
+FORM [FORM_NAME] USING VALUE(P2) TYPE type
+FORM [FORM_NAME] CHANGING P3 TYPE type
+FORM [FORM_NAME] CHANGING VALUE(P4) TYPE type</code></pre>
+<section id="using" class="level2">
+<h2 class="anchored" data-anchor-id="using">USING</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%202.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%203.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%204.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%205.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%206.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%207.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%208.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA USING P_ZCODE P_ZKNAME.
+
+    DATA LV_ZCODE LIKE ZSTU_15-ZCODE.
+  LV_ZCODE = 'SSU-01'.
+  P_ZCODE = LV_ZCODE.
+
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+ENDFORM.</code></pre>
+</section>
+<section id="using-value" class="level2">
+<h2 class="anchored" data-anchor-id="using-value">USING VALUE</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%209.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2010.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2011.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA USING VALUE(P_ZCODE) P_ZKNAME.
+  DATA LV_ZCODE LIKE ZSTU_15-ZCODE.
+  LV_ZCODE = 'SSU-01'.
+  P_ZCODE = LV_ZCODE.
+
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+
+ENDFORM.</code></pre>
+</section>
+<section id="changing" class="level2">
+<h2 class="anchored" data-anchor-id="changing">CHANGING</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2012.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE CHANGING GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA USING P_ZCODE CHANGING P_ZKNAME.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+ENDFORM.</code></pre>
+</section>
+<section id="changing-value" class="level2">
+<h2 class="anchored" data-anchor-id="changing-value">CHANGING VALUE</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2013.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE CHANGING GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA CHANGING VALUE(P_ZCODE) VALUE(P_ZKNAME).
+
+  DATA: LV_ZCODE LIKE ZSTU_15-ZCODE.
+  LV_ZCODE = 'SSU-01'.
+  P_ZCODE = LV_ZCODE.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+ENDFORM.</code></pre>
+</section>
+<section id="parameter-전달방법" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-전달방법">Parameter 전달방법</h2>
+<p>Subroutine은 Using과 Changing 구문으로 parameter를 주고 받게 되는데, 3가지 유형으로 분류</p>
+<ol type="1">
+<li>call by value</li>
+<li>call by reference</li>
+<li>call by value and result</li>
+</ol>
+<section id="call-by-value" class="level3">
+<h3 class="anchored" data-anchor-id="call-by-value">Call by Value</h3>
+<p>actual parameter와 formal parameter가 물리적으로 다른 메모리 영역을 가짐</p>
+<p>VALUE 구문에서 Formal parameter는 자신의 메모리를 가지고, subroutine을 호출할 때 actual parameter의 값은 formal parameter에 복사됨</p>
+<p>formal parameter의 값이 변경되더라도 actual parameter 값에는 영향을 미치지 않음</p>
+</section>
+<section id="call-by-reference" class="level3">
+<h3 class="anchored" data-anchor-id="call-by-reference">Call by Reference</h3>
+<p>물리적으로 같은 메모리 영역을 공유하여 넘겨주며 같은 주소 값을 가짐</p>
+<p>Formal parameter는 자신의 메모리를 가지지 않고, subroutine이 호출되는 동안 actual parameter의 주소값을 가짐</p>
+<p>즉, Subroutine을 호출한 프로그램의 메모리에서 작업</p>
+</section>
+<section id="call-by-value-and-result" class="level3">
+<h3 class="anchored" data-anchor-id="call-by-value-and-result">Call by Value and Result</h3>
+<p>변수의 값을 넘겨주고 받는 구문에서 작업을 성공적으로 수행하였을 경우 변경된 값을 되돌려줌</p>
+<p>물리적으로는 다른 영역을 사</p>
+</section>
+</section>
+<section id="parameter-type-정의" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-type-정의">Parameter TYPE 정의</h2>
+<p>FORM 구문 내의 Formal parameter는 TYPE과 LIKE 구문을 이용해 모든 ABAP DATA TYPE을 사용</p>
+<p>명시적으로 지정하지 않으면 Generic TYPE으로 정의되고, actual parameter의 기술적 속성을 상속받음</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2014.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE CHANGING GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA USING P_ZCODE TYPE C
+      CHANGING VALUE(P_ZKNAME) TYPE C.
+
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+ENDFORM.</code></pre>
+<pre class="abap"><code>DATA: BEGIN OF GS_ZSTU15.
+  INCLUDE TYPE ZSTU_15.
+DATA: END OF GS_ZSTU15.
+DATA: GT_ZSTU15 LIKE TABLE OF GS_ZSTU15.
+
+DATA: GV_ZKNAME LIKE ZSTU_15-ZKNAME.
+DATA: GV_ZCODE LIKE ZSTU_15-ZCODE.
+
+GV_ZCODE = 'SSU-01'.
+
+PERFORM APPEND_DATA USING GV_ZCODE CHANGING GV_ZKNAME.
+
+WRITE:/ GV_ZCODE, GV_ZKNAME.
+
+FORM APPEND_DATA USING P_ZCODE LIKE GV_ZCODE
+      CHANGING VALUE(P_ZKNAME) LIKE GV_ZKNAME.
+
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO P_ZKNAME WHERE ZCODE = P_ZCODE.
+ENDFORM.</code></pre>
+</section>
+<section id="parameter-structure" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-structure">Parameter STRUCTURE</h2>
+<p>FORM 구문 내의 Formal parameter는 ABAP DICTIONARY 내, STRUCTURE 구문을 이용해 STRUCTURE 타입 정의</p>
+<p>STRUCTURE 타입의 parameter로 전달 시, 타입을 명시하지 않으면 ERROR 발생</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2015.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_STUDENT,
+  ZCODE LIKE ZSTU_15-ZCODE,
+  ZKNAME LIKE ZSTU_15-ZKNAME,
+END OF GS_STUDENT.
+
+PERFORM APPEND_DATA USING GS_STUDENT.
+
+WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.
+
+FORM APPEND_DATA USING PS_STUDENT STRUCTURE GS_STUDENT.
+
+  PS_STUDENT-ZCODE = 'SSU-01'.
+
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO PS_STUDENT-ZKNAME WHERE ZCODE = PS_STUDENT-ZCODE.
+
+ENDFORM.</code></pre>
+</section>
+<section id="parameter-internal-table" class="level2">
+<h2 class="anchored" data-anchor-id="parameter-internal-table">Parameter INTERNAL TABLE</h2>
+<p>FORM 구문 내의 Formal parameter는 ABAP DICTIONARY 내 INTERNAL TABLE을 이용해 타입 정의</p>
+<p>INTERNAL TABLE TYPE의 parameter로 전달 시, 타입을 명시하지 않으면 error 발생</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2016.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_STUDENT,
+  ZCODE LIKE ZSTU_15-ZCODE,
+  ZKNAME LIKE ZSTU_15-ZKNAME,
+END OF GS_STUDENT.
+DATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.
+
+PERFORM APPEND_DATA USING GS_STUDENT GT_STUDENT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.
+ENDLOOP.
+
+FORM APPEND_DATA USING PS_STUDENT LIKE GS_STUDENT
+      PT_STUDENT LIKE GT_STUDENT.
+
+  PS_STUDENT-ZCODE = 'SSU-14'.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO PS_STUDENT-ZKNAME WHERE ZCODE = PS_STUDENT-ZCODE.
+  APPEND PS_STUDENT TO PT_STUDENT.
+
+  PS_STUDENT-ZCODE = 'SSU-12'.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO PS_STUDENT-ZKNAME WHERE ZCODE = PS_STUDENT-ZCODE.
+  APPEND PS_STUDENT TO PT_STUDENT.
+
+ENDFORM.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2017.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: BEGIN OF GS_STUDENT,
+  ZCODE LIKE ZSTU_15-ZCODE,
+  ZKNAME LIKE ZSTU_15-ZKNAME,
+END OF GS_STUDENT.
+DATA: GT_STUDENT LIKE TABLE OF GS_STUDENT.
+
+PERFORM APPEND_DATA USING GT_STUDENT.
+
+LOOP AT GT_STUDENT INTO GS_STUDENT.
+  WRITE:/ GS_STUDENT-ZCODE, GS_STUDENT-ZKNAME.
+ENDLOOP.
+
+FORM APPEND_DATA USING PT_STUDENT TYPE STANDARD TABLE.
+
+  DATA: LS_STUDENT LIKE GS_STUDENT.
+
+  LS_STUDENT-ZCODE = 'SSU-14'.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO LS_STUDENT-ZKNAME WHERE ZCODE = LS_STUDENT-ZCODE.
+  APPEND LS_STUDENT TO PT_STUDENT.
+
+  LS_STUDENT-ZCODE = 'SSU-12'.
+  SELECT SINGLE ZKNAME FROM ZSTU_15 INTO LS_STUDENT-ZKNAME WHERE ZCODE = LS_STUDENT-ZCODE.
+  APPEND LS_STUDENT TO PT_STUDENT.
+
+ENDFORM.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2018.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled%2019.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
