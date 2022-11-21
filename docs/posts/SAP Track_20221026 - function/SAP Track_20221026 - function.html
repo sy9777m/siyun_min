@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-26">
+
+<title>Siyun Min - Co-op SAP Track 20221026 - function</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221026 - function</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 26, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="function" class="level1">
+<h1>20221026 - function</h1>
+</section>
+<section id="function---se37" class="level1">
+<h1>Function - SE37</h1>
+<p>기능별로 모듈화하고 재사용 가능</p>
+<p>subroutine이 local modulariation이라고 하면, function은 global modularization</p>
+<p>function module은 function group이라고 불리는 POOL에 소속</p>
+<ul>
+<li>function group - 개발 패키지처럼 유사한 기능의 function을 모아 놓은 것</li>
+</ul>
+<p>function module은 호출 프로그램에 상관없이 stand-alone 모드에서 디버깅 가능</p>
+<p>function을 호출할 때 input 파라미터를 입력하고 function 수행 결과를 output 파라미터로 받음</p>
+<section id="conversion_exit_alpha_output" class="level2">
+<h2 class="anchored" data-anchor-id="conversion_exit_alpha_output">CONVERSION_EXIT_ALPHA_OUTPUT</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="function-group-생성" class="level2">
+<h2 class="anchored" data-anchor-id="function-group-생성">Function group 생성</h2>
+<p>function group은 여러 function module을 모아 놓은 container</p>
+<ul>
+<li>function group은 직접 실행할 수 없어 function을 호출할 때, 호출한 프로그램의 세션 안으로 function group을 전체 load</li>
+<li>function을 실행할 때 function이 소속된 group 내의 모든 function이 영향
+<ul>
+<li>function 하나에 에러가 발생하면 동일 group 내 모든 function이 실행 불가</li>
+</ul></li>
+<li>function group의 이름은 26자까지</li>
+</ul>
+<section id="group-생성" class="level3">
+<h3 class="anchored" data-anchor-id="group-생성">Group 생성</h3>
+<p>se31 내 메뉴 → goto → function group → create group</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="또-다른-group-생성" class="level3">
+<h3 class="anchored" data-anchor-id="또-다른-group-생성">또 다른 group 생성</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>function builder (T-CODE: SE37)를 통해 function group과 function이 생성되면 시스템은 자동적으로 main program과 include program을 생성</p>
+<p>이 때, main program의 이름은 SAPL이 function group 앞에 붙어 구성</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="module-생성" class="level2">
+<h2 class="anchored" data-anchor-id="module-생성">Module 생성</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="attributes" class="level3">
+<h3 class="anchored" data-anchor-id="attributes">attributes</h3>
+<ol type="1">
+<li>regular-function module - 일반적으로 사용하는 function module 형태</li>
+<li>remote-enabled module - 동일시스템에서 병렬적으로 호출되거나 다른 시스템에서 호출될 때 사용 (RFC)</li>
+<li>update module - 일괄적으로 데이터베이스 변경을 위한 추가적 function</li>
+<li>edit lock - 다른 개발자에 의해 변경이 일어나는 것을 막기 위한 설정. 체크 시, edit lock을 설정한 개발자만이 function 수정 가</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="import" class="level3">
+<h3 class="anchored" data-anchor-id="import">IMPORT</h3>
+<p>function moudle을 호출한 ABAP 프로그램 또는 인터페이스 호출 시, 변수 값을 전달받는 목적으로 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>TYPE - 파라미터 타입 유형을 지정
+<ul>
+<li><code>TYPE</code>, <code>LIKE</code>, <code>TYPE REF TO</code></li>
+<li><code>TYPE REF TO</code>는 CLASS 참조
+<ul>
+<li><code>TYPE REF TO DATA</code>, <code>TYPE REF TO OBJECT</code>…</li>
+</ul>
+<img src="./Untitled 12.png" title="fig:" class="img-fluid" alt="Untitled"></li>
+</ul></li>
+<li>Associated type - 데이터 타입이나 참조할 특정 테이블의 필드를 지정</li>
+<li>default value - 파라미터의 초기값</li>
+<li>optional - 파라미터를 선택 사항으DU로 설정</li>
+<li>pass by value - 파라미터를 전달받을 때 새로운 메모리에 값을 복사</li>
+</ol>
+</section>
+<section id="export" class="level3">
+<h3 class="anchored" data-anchor-id="export">EXPORT</h3>
+<p>function module에서 값을 ABAP 프로그램으로 결과 값을 전달하는 목적 또는 인터페이스의 결과 값을 전달</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="changing" class="level3">
+<h3 class="anchored" data-anchor-id="changing">Changing</h3>
+<p>function module을 호출한 ABAP 프로그램과 parameter를 동시에 주고 받음</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="tables-parameter" class="level3">
+<h3 class="anchored" data-anchor-id="tables-parameter">Tables parameter</h3>
+<p>tables parameter는 하나의 값이 아닌 복수의 값</p>
+<p>즉, internal table의 내용을 주고 받을 때 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exceptions" class="level3">
+<h3 class="anchored" data-anchor-id="exceptions">Exceptions</h3>
+<p>function moudle이 실행되는 동안 exceptions parameter를 사용하면 발생하는 예외사항을 처리 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="source" class="level3">
+<h3 class="anchored" data-anchor-id="source">Source</h3>
+<p>스크립트 작성 후, 활성화하면 function module 생성 완료</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: LV_NUM1 TYPE I,
+      LV_NUM2 TYPE I,
+      LV_OPTIONAL TYPE C.
+
+DATA: LV_RESULT TYPE I,
+      LV_MESSAGE TYPE C LENGTH 20.
+
+LV_NUM1 = 3.
+LV_NUM2 = 2.
+LV_OPTIONAL = '+'.
+
+CALL FUNCTION 'ZEDU1_001'
+  EXPORTING
+   I_NUM1            = LV_NUM1
+   I_NUM2            = LV_NUM2
+   I_OPTION          = LV_OPTIONAL
+ IMPORTING
+   E_RESULT          = LV_RESULT
+   E_MESSAGE         = LV_MESSAGE
+* TABLES
+*   T_ZEDU1_001       =
+* CHANGING
+*   P_ZEDU1_001       =
+ EXCEPTIONS
+   DIV_ZERO          = 1
+   OTHERS            = 2.
+          .
+IF SY-SUBRC &lt;&gt; 0.
+WRITE:/ SY-SUBRC, 'FAILED'.
+
+ELSE.
+  WRITE:/ LV_RESULT.
+  WRITE:/ LV_MESSAGE.
+ENDIF.</code></pre>
+</section>
+<section id="test-data" class="level3">
+<h3 class="anchored" data-anchor-id="test-data">TEST DATA</h3>
+<p>F8 또는 실행버튼</p>
+<p>IMPORT Parameters에 value 값으로 고정해놓은 값이 자동 입력</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>INPUT 값이 복잡한 데이터에 대해서는 상단에 저장버튼을 누르면 입력한 테스트 데이터를 저장 가</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>저장된 데이터를 호출하여 사용 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>changing 전달에 대한 result 출력</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>tables 전달에 대한 result 출력</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="debugging" class="level3">
+<h3 class="anchored" data-anchor-id="debugging">Debugging</h3>
+<p>결과값 ERROR 또는, 조회되지 않는 데이터에 대해서는 디버깅을 통해 확인가</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 29.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="external-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="external-debugging">External debugging</h3>
+<p>타 시스템에서 전달되는 인터페이스 건에 대해서는 외부 디버깅을 통해 오류 확인</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>USER 등록 - 상단의 utility → settings</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 31.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>IF I_NUM2 = 0.
+  RAISE DIV_ZERO.
+  EXIT.
+ENDIF.
+
+CASE I_OPTION.
+  WHEN '+'.
+    E_RESULT = I_NUM1 + I_NUM2.
+  WHEN '-'.
+    E_RESULT = I_NUM1 - I_NUM2.
+  WHEN '*'.
+    E_RESULT = I_NUM1 * I_NUM2.
+  WHEN '/'.
+    E_RESULT = I_NUM1 / I_NUM2.
+ENDCASE.
+
+IF P_ZEDU1_001 IS INITIAL.
+  SELECT * FROM ZEDU15_001 INTO CORRESPONDING FIELDS OF TABLE T_ZEDU1_001
+    WHERE Z_NUMBER = P_ZEDU1_001-Z_NUMBER
+    AND ZID = P_ZEDU1_001-ZID
+    AND MATNR = P_ZEDU1_001-MATNR.
+
+  IF SY-SUBRC = 0.
+    E_MESSAGE = 'SUCCEEDED'.
+  ENDIF.
+ENDIF.
+
+TABLES: ZEDU15_001.
+
+IF T_ZEDU1_001[] IS INITIAL.
+  LOOP AT T_ZEDU1_001.
+    SELECT SINGLE * FROM ZEDU15_001
+      WHERE Z_NUMBER = T_ZEDU1_001-Z_NUMBER
+      AND ZID = T_ZEDU1_001-ZID
+      AND MATNR = T_ZEDU1_001-MATNR.
+
+    MODIFY T_ZEDU1_001 FROM ZEDU15_001.
+  ENDLOOP.
+
+  IF SY-SUBRC = 0.
+    E_MESSAGE = 'SUCCEEDED!'.
+  ENDIF.
+ENDIF.</code></pre>
+</section>
+</section>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>In-class practice</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 32.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

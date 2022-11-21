@@ -1,0 +1,145 @@
+---
+title: "Co-op SAP Track 20221025 - Debugging"
+author: "Siyun Min"
+date: "2022-10-25"
+categories: [SSU, SAP]
+---
+# 20221025 - Debugging
+
+# Debugging
+
+DEBUG - 벌레를 잡다의 의미로 오류를 찾아 수정하는 일을 의미
+
+ABAP Debugger는 ABAP Workbench에 통합된 tool이며, 다른 언어에서는 디버깅을 실행하기 위해 독립 프로그램을 실행하여야 하지만 ABAP은 통합된 환경으로 ABAP 에디터와 디버깅 화면을 자유롭게 변환 가능
+
+1. classic debugger - ABAP 프로그램 실행 시 동일 세션에서 open
+2. new debugger - ABAP 프로그램과 별개의 외부 세션에서 open
+
+명령어 (command) 창에서 /H 입력 후 실행하면 진행
+
+디버깅을 사용할 때, 많이 사용하는 기능키는 F5, F6, F7, F8
+
+- F5 - 한 단계씩 다음 단계로 이동
+- F6 - 한 단계씩 다음 단계로 이동하나, subroutine을 마난게 되면 실행 후 다음 단계로 이동
+- F7 - 현재 실행중인 subroutine을 빠져나와 다음 단계로 이동
+- F8 - 프로그램 실행 또는 다음 중단점까지 실행
+
+![Untitled](./Untitled.png)
+
+## F5
+
+![Untitled](./Untitled%201.png)
+
+## F6
+
+![Untitled](./Untitled%202.png)
+
+## F7
+
+![Untitled](./Untitled%203.png)
+
+## Go to statement
+
+![Untitled](./Untitled%204.png)
+
+## SY-DBCNT
+
+![Untitled](./Untitled%205.png)
+
+## Internal table data
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+## Change selected rows
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+## Delete selected rows
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+## Append row
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+## Insert row
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+## Delete whole table/row area
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+## Table display in ALV
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+![Untitled](./Untitled%2030.png)
+
+![Untitled](./Untitled%2031.png)
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+## Save in file
+
+![Untitled](./Untitled%2035.png)
+
+![Untitled](./Untitled%2036.png)
+
+![Untitled](./Untitled%2037.png)
+
+![Untitled](./Untitled%2038.png)
+
+![Untitled](./Untitled%2039.png)
+
+![Untitled](./Untitled%2040.png)
+
+![Untitled](./Untitled%2041.png)
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+![Untitled](./Untitled%2044.png)
+
+![Untitled](./Untitled%2045.png)
+
+![Untitled](./Untitled%2046.png)

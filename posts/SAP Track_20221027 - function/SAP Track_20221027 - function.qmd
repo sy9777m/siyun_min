@@ -1,0 +1,104 @@
+---
+title: "Co-op SAP Track 20221027 - function"
+author: "Siyun Min"
+date: "2022-10-27"
+categories: [SSU, SAP]
+---
+# 20221027 - function
+
+# Function
+
+ABAP 프로그램 내에서 Function module을 호출 가능
+
+## TYPE-1 program 생성
+
+![Untitled](./Untitled.png)
+
+## Function module에서 사용한 parameter 관련하여 변수를 사용할 때, function module에서 정의한 TYPE과 동일하게 선언 (그렇지 않으면 DUMP ERROR)
+
+![Untitled](./Untitled%201.png)
+
+## PATTERN을 통해 함수 입력
+
+![Untitled](./Untitled%202.png)
+
+## PATTERN을 통해 function module 자동 생성
+
+![Untitled](./Untitled%203.png)
+
+## ABAP program의 EXPORTING
+
+funtion의 IMPORT로 선언한 parameter
+
+![Untitled](./Untitled%204.png)
+
+## ABAP program의 IMPORTING
+
+![Untitled](./Untitled%205.png)
+
+## ABAP program의 TABLES
+
+![Untitled](./Untitled%206.png)
+
+## ABAP program의 SY-SUBRC
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+## function module 호출
+
+![Untitled](./Untitled%209.png)
+
+## function module debugging
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+## ABAP program에서 호출 값에 대하여 TEST DATA 저장
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+```abap
+DATA: LV_NUM1 TYPE I,
+      LV_NUM2 TYPE I,
+      LV_OPTIONAL TYPE C.
+
+DATA: LV_RESULT TYPE I,
+      LV_MESSAGE TYPE C LENGTH 20.
+
+LV_NUM1 = 3.
+LV_NUM2 = 2.
+LV_OPTIONAL = '+'.
+
+CALL FUNCTION 'ZEDU1_001'
+  EXPORTING
+   I_NUM1            = LV_NUM1
+   I_NUM2            = LV_NUM2
+   I_OPTION          = LV_OPTIONAL
+ IMPORTING
+   E_RESULT          = LV_RESULT
+   E_MESSAGE         = LV_MESSAGE
+* TABLES
+*   T_ZEDU1_001       =
+* CHANGING
+*   P_ZEDU1_001       =
+ EXCEPTIONS
+   DIV_ZERO          = 1
+   OTHERS            = 2.
+          .
+IF SY-SUBRC <> 0.
+WRITE:/ SY-SUBRC, 'FAILED'.
+
+ELSE.
+  WRITE:/ LV_RESULT.
+  WRITE:/ LV_MESSAGE.
+ENDIF.
+```

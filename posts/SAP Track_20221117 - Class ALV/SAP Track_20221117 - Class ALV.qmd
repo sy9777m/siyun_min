@@ -1,0 +1,130 @@
+---
+title: "Co-op SAP Track 20221117 - Class ALV"
+author: "Siyun Min"
+date: "2022-11-17"
+categories: [SSU, SAP]
+---
+# 20221117 - Class ALV
+
+# CLASS
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+객체를 만드는 이유 - class에 있는 속성과 method를 사용하기 위해 프로그램에서는 class를 바로 사용하지 못하므로 객체라는 것을 만들어서 class안에 속성과 method 사용
+
+## 객체참조변수
+
+```abap
+DATA: 변수명 TYPE C, I, "... (참조대상)
+DATA: 객체명 TYPE REF TO CLASS "ex) CL_GUI_ALV_GRID
+```
+
+## 객체생성
+
+```abap
+CREATE OBJECT 객체명
+```
+
+필요한 이유? → 해당 객체를 생성하여 객체 → CALL METHOD를 통해 기능 구현
+
+즉, 객체 생성 후 객체 → CALL METHOD SET_TABLE_FOR_FIRST_DISPLAY하여 화면에 ALV 출력
+
+## 부모 CLASS
+
+SUPER CLASS라고도 함
+
+```abap
+CL_GUI_CONTAINER
+```
+
+범용적인 클래스를 두고
+
+## 자식 CLASS
+
+```abap
+CL_GUI_CUSTOM_CONTAINER
+```
+
+각각의 기능에 따라 파생된 클래스를 만든 것
+
+# CUSTOM CONTROL (사용자 제어)
+
+CUSTOM CONTROL CONTAINER를 그리기 위해 LAYOUT에 화면의 위치와 크기를 Customizing
+
+![Untitled](./Untitled%202.png)
+
+## CONTAINER
+
+ALV를 뿌려줄 때 어떠한 형태로 그릴 건지 틀을 잡아 줌
+
+CUSTOM CONTAINER, DOCKING CONTAINER, SPLITTER CONTAINER
+
+![Untitled](./Untitled%203.png)
+
+### CUSTOM CONTAINER
+
+해당 위치와 크기를 사용자가 customizing한 대로 뿌려줌
+
+→ CUSTOM CONTROL 필수
+
+### DOCKING CONTAINER
+
+사용자가 정한 위치와 크기가 아닌 프로그램 내에서 화면크기 제어 → CUSTOM CONTROL 불필요
+
+### SPLITTER CONTAINER
+
+좌 + 우 or 위 + 아래로 하나의 화면 내에서 영역을 쪼갬 → CUSTOM CONTROL 불필요
+
+## GRID
+
+실질적으로 METHOD를 호출하기 위해 사용 (CONTAINER 안에 GRID를 그려 CL_GUI_ALV_GRID 내 SET_TABLE_FOR_FIRST_DISPLAY method를 호출)
+
+GRID의 부모는 CONTAINER
+
+# SAP CLASS
+
+![Untitled](./Untitled%204.png)
+
+# ALV IN CUSTOM CONTAINER
+
+## CALL SCREEN 100
+
+![Untitled](./Untitled%205.png)
+
+## 화면에 대한 변수 선언
+
+프로그램과 연동을 위해 프로그램 내에서도 똑같이 OK_CODE 선언
+
+![Untitled](./Untitled%206.png)
+
+## PBO - GUI_STATUS_100
+
+![Untitled](./Untitled%207.png)
+
+## PBO - ALV_0100
+
+![Untitled](./Untitled%208.png)
+
+## CUSTOM_CONTROL
+
+![Untitled](./Untitled%209.png)
+
+CUSTOM CONTAINER를 그리기 위해 LAYOUT에 CUSTOM CONTROL 그리기
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+## CUSTOM CONTAINER
+
+![Untitled](./Untitled%2016.png)

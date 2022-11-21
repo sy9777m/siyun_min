@@ -1,0 +1,137 @@
+---
+title: "Co-op SAP Track 20221114 - MODULE POOL, INCLUDE"
+author: "Siyun Min"
+date: "2022-11-14"
+categories: [SSU, SAP]
+---
+# 20221114 - MODULE POOL, INCLUDE
+
+# INCLUDE
+
+ABAP 소스 코드를 개별 저장소 개체로 분할
+
+1. Library (모듈화)
+
+INCLUDE 프로그램은 같은 소스 코드를 다른 프로그램에서 사용
+
+1. Order (순서, 가독성)
+
+INCLUDE 프로그램은 복잡한 프로그램을 순서대로 정렬하여 뛰어난 가독성 제공
+
+INCLUDE는 보통 프로그램 이름 뒤에 데이터 선언부, Selection-screen부, Subroutine부, PBO, PAI로 나누어 관리의 편의성 증대
+
+```abap
+INCLUDE ZPROGRAM_TOP
+INCLUDE ZPROGRAM_SCR
+INCLUDE ZPROGRAM_F01
+INCLUDE ZPROGRAM_PBO
+INCLUDE ZPROGRAM_PAI "O01
+```
+
+## 특징
+
+INCLUDE는 하나의 프로그램이지만, 독립적으로 실행 불가
+
+INCLUDE 프로그램은 다른 프로그램 내에 내장 (Built in)
+
+INCLUDE 프로그램은 또 다른 INCLUDE를 포함 가능
+
+INCLUDE 프로그램은 자기 자신을 호출 불가
+
+INCLUDE 프로그램은 parameter를 가지지 않는다
+
+# INCLUDE PROGRAM
+
+![Untitled](./Untitled.png)
+
+## TOP 선언부
+
+![Untitled](./Untitled%201.png)
+
+## SCREEN 선언부
+
+![Untitled](./Untitled%202.png)
+
+## DATA 선언부
+
+![Untitled](./Untitled%203.png)
+
+## SUB SCREEN 생성
+
+```abap
+CALL SCREEN SUB_SCREEN_NAME.
+```
+
+![Untitled](./Untitled%204.png)
+
+### Attributes
+
+![Untitled](./Untitled%205.png)
+
+### Element list
+
+![Untitled](./Untitled%206.png)
+
+## PBO 생성
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+## GUI STATUS 생성
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+## EXIT COMMAND
+
+![Untitled](./Untitled%2013.png)
+
+1. GUI STATUS 기능키 (Function Key)에 ‘E’
+    - 즉 EXIT COMMAND 설정
+2. MODULE에 USER_EXIT AT EXIT-COMMAND 생성
+
+→ Function Key에 ‘E’ 명령어 들어왔을 때 AT EXIT-COMMAND가 있는 해당 모듈만 실행
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+## ALV DISPLAY
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+![Untitled](./Untitled%2024.png)
+
+![Untitled](./Untitled%2025.png)
+
+![Untitled](./Untitled%2026.png)
+
+![Untitled](./Untitled%2027.png)
+
+![Untitled](./Untitled%2028.png)
+
+![Untitled](./Untitled%2029.png)
+
+## PAI - USER COMMAND
+
+![Untitled](./Untitled%2030.png)

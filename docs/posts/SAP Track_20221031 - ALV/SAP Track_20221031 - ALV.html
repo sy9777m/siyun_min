@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-31">
+
+<title>Siyun Min - Co-op SAP Track 20221031 - ALV</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221031 - ALV</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 31, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="alv" class="level1">
+<h1>20221031 - ALV</h1>
+</section>
+<section id="abap-list-viewer" class="level1">
+<h1>ABAP LIST Viewer</h1>
+<p>리스트 화면에 데이터를 조회하거나, 조회된 데이터를 수정/변경하는 목적</p>
+<p>cf.&nbsp;Report program에서 WRITE 구문을 이용하여 LIST 화면을 구성한 것에 조회된 데이터를 엑셀로 내려받은 기능을 추가하려면?</p>
+<ul>
+<li>GUI STATUS 추가</li>
+</ul>
+<p>정렬, 필터 등 사용자가 버튼을 클릭하면 반응하게 하려면?</p>
+<ul>
+<li>이벤트 스크립트를 기술</li>
+</ul>
+<p>→ ALV는 이런 기본적인 사무용 작업들이 이미 포함된 패키지 프로그램으로 제공</p>
+<ul>
+<li>즉, 엑셀 다운, 데이터 정렬, 합계 계산, 정보 필터 같은 기본 작업들은 스크립트를 구현하지 않고 자유롭게 사용</li>
+</ul>
+</section>
+<section id="alv-종류" class="level1">
+<h1>ALV 종류</h1>
+<ol type="1">
+<li>function을 이용하는 방법
+<ul>
+<li>REUSE_ALV_LIST_DISPLAY, REUSE_ALV_GRID_DISPLAY 함수를 이용하여 ALV 프로그램 출력</li>
+<li>스크린을 생성할 필요가 없고, 스크립트를 기술할 필요가 없어 비교적 생산성이 높은 개발 방법을 제공</li>
+</ul></li>
+<li>GRID 컨트롤을 이용하는 방법
+<ul>
+<li>ABAP Object를 이용한 ALV GRID 기술을 이용하여 ALV 프로그램 출력</li>
+</ul></li>
+</ol>
+</section>
+<section id="alv-list" class="level1">
+<h1>ALV-LIST</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GT_SFLIGHT TYPE TABLE OF SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_LIST_DISPLAY'
+  EXPORTING
+      I_STRUCTURE_NAME = 'SFLIGHT'
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="alv-grid" class="level1">
+<h1>ALV-GRID</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>DATA: GT_SFLIGHT TYPE TABLE OF SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+      I_STRUCTURE_NAME = 'SFLIGHT'
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="alv-출력" class="level1">
+<h1>ALV 출력</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="it_fieldcat-parameter와-필드-카탈로그" class="level1">
+<h1>IT_FIELDCAT parameter와 필드 카탈로그</h1>
+<p>필드 카탈로그는 ALV에서 조회되는 칼럼들의 필드 정보를 포함하는 SLIS_T_FIELDCAT_ALV 타입의 테이블 구조를 가지며, ALV는 필드 카탈로그 정보를 저장하는 internal table을 이용해 필드 타입 인식</p>
+<ul>
+<li>ex) 필드가 숫자 or 문자 타입을 구분하고 화면에 보여줄 필드 길이를 지정하기 위해 필드 카탈로그 정보 이용</li>
+</ul>
+<section id="abap-dictionary를-이용한-alv" class="level2">
+<h2 class="anchored" data-anchor-id="abap-dictionary를-이용한-alv">ABAP Dictionary를 이용한 ALV</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA: GT_SFLIGHT TYPE TABLE OF SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    I_STRUCTURE_NAME = 'SFLIGHT'
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+</section>
+<section id="slis-기반의-alv" class="level2">
+<h2 class="anchored" data-anchor-id="slis-기반의-alv">SLIS 기반의 ALV</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="필드-카탈로그를-이용한-alv" class="level2">
+<h2 class="anchored" data-anchor-id="필드-카탈로그를-이용한-alv">필드 카탈로그를 이용한 ALV</h2>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.</code></pre>
+<section id="필드-카탈로그에-필드추가" class="level3">
+<h3 class="anchored" data-anchor-id="필드-카탈로그에-필드추가">필드 카탈로그에 필드추가</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="필드-카탈로그를-이용하여-alv-호출" class="level3">
+<h3 class="anchored" data-anchor-id="필드-카탈로그를-이용하여-alv-호출">필드 카탈로그를 이용하여 ALV 호출</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT,
+  CARRID LIKE SFLIGHT-CARRID,
+  CONNID LIKE SFLIGHT-CONNID,
+  END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  WHERE CARRID = 'AA'.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="필드-카탈로그-속성" class="level2">
+<h2 class="anchored" data-anchor-id="필드-카탈로그-속성">필드 카탈로그 속성</h2>
+<section id="col_pos-컬럼의-output-순서" class="level3">
+<h3 class="anchored" data-anchor-id="col_pos-컬럼의-output-순서">COL_POS: 컬럼의 OUTPUT 순서</h3>
+</section>
+<section id="fieldname-필드-카탈로그의-필드-이름" class="level3">
+<h3 class="anchored" data-anchor-id="fieldname-필드-카탈로그의-필드-이름">FIELDNAME: 필드 카탈로그의 필드 이름</h3>
+<p>ALV 출력 시, internal table의 필드 이름과 같아야 함</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNIDD'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT,
+  CARRID LIKE SFLIGHT-CARRID,
+  CONNID LIKE SFLIGHT-CONNID,
+  END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT
+  WHERE CARRID = 'AA'.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="currency-currency-단위" class="level3">
+<h3 class="anchored" data-anchor-id="currency-currency-단위">CURRENCY: CURRENCY 단위</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="key-key-필드-설정" class="level3">
+<h3 class="anchored" data-anchor-id="key-key-필드-설정">KEY: KEY 필드 설정</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="just-정렬-l-r-c" class="level3">
+<h3 class="anchored" data-anchor-id="just-정렬-l-r-c">JUST: 정렬 (L, R, C)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="do_sum-합계표" class="level3">
+<h3 class="anchored" data-anchor-id="do_sum-합계표">DO_SUM: 합계표</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="no_zero-0값-삭제" class="level3">
+<h3 class="anchored" data-anchor-id="no_zero-0값-삭제">NO_ZERO: 0값 삭제</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="no_sign-출력부호-제거" class="level3">
+<h3 class="anchored" data-anchor-id="no_sign-출력부호-제거">NO_SIGN: 출력부호 제거</h3>
+<p>실제 데이터가 absolute value가 되는게 아니라 출력만 absolute value로 변경됨</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="outputlen-문자의-열-너비" class="level3">
+<h3 class="anchored" data-anchor-id="outputlen-문자의-열-너비">OUTPUTLEN: 문자의 열 너비</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 29.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="emphasize-색상-강조" class="level3">
+<h3 class="anchored" data-anchor-id="emphasize-색상-강조">EMPHASIZE: 색상 강조</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 31.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+GS_FIELDCAT-EMPHASIZE = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 32.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="no_out-필드-숨김" class="level3">
+<h3 class="anchored" data-anchor-id="no_out-필드-숨김">NO_OUT: 필드 숨김</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 33.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+GS_FIELDCAT-NO_OUT = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+GS_FIELDCAT-EMPHASIZE = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 34.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="edit_mask-데이터-포맷-변경" class="level3">
+<h3 class="anchored" data-anchor-id="edit_mask-데이터-포맷-변경">EDIT_MASK: 데이터 포맷 변경</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 35.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+GS_FIELDCAT-NO_OUT = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+GS_FIELDCAT-EMPHASIZE = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 4.
+GS_FIELDCAT-FIELDNAME = 'FLDATE'.
+GS_FIELDCAT-SELTEXT_M = '날짜'.
+*GS_FIELDCAT-EDIT_MASK = '____/__/__'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 36.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+GS_FIELDCAT-NO_OUT = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+GS_FIELDCAT-EMPHASIZE = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 4.
+GS_FIELDCAT-FIELDNAME = 'FLDATE'.
+GS_FIELDCAT-SELTEXT_M = '날짜'.
+GS_FIELDCAT-EDIT_MASK = '____/__/__'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 37.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="edit-편집모드" class="level3">
+<h3 class="anchored" data-anchor-id="edit-편집모드">EDIT: 편집모드</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 38.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TYPE-POOLS: SLIS.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'CARRID'.
+GS_FIELDCAT-SELTEXT_M = '항공코드'.
+GS_FIELDCAT-KEY = 'X'.
+GS_FIELDCAT-JUST = 'L'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'CONNID'.
+GS_FIELDCAT-SELTEXT_M = '편명'.
+GS_FIELDCAT-JUST = 'C'.
+GS_FIELDCAT-NO_OUT = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'PRICE'.
+GS_FIELDCAT-SELTEXT_M = '가격'.
+GS_FIELDCAT-CURRENCY = 'KRW'.
+GS_FIELDCAT-JUST = 'R'.
+GS_FIELDCAT-DO_SUM = 'X'.
+GS_FIELDCAT-NO_ZERO = 'X'.
+GS_FIELDCAT-NO_SIGN = 'X'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+GS_FIELDCAT-EMPHASIZE = 'X'.
+GS_FIELDCAT-EDIT = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 4.
+GS_FIELDCAT-FIELDNAME = 'FLDATE'.
+GS_FIELDCAT-SELTEXT_M = '날짜'.
+*GS_FIELDCAT-EDIT_MASK = '____/__/__'.
+GS_FIELDCAT-OUTPUTLEN = 20.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+SELECT * FROM SFLIGHT
+  INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+  EXPORTING
+    IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_SFLIGHT.</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 39.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>in-class practice</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 40.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<pre class="abap"><code>TABLES: ZEDU15_001, ZEDU15_002.
+
+SELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME.
+SELECT-OPTIONS: S_NUMBER FOR ZEDU15_001-Z_NUMBER.
+PARAMETERS: P_ZID LIKE ZEDU15_001-ZID.
+PARAMETERS: P_MATNR LIKE ZEDU15_002-MATNR.
+PARAMETERS: P_CODE LIKE ZEDU15_002-ZZ_CODE MODIF ID M1.
+SELECTION-SCREEN END OF BLOCK B1.
+
+SELECTION-SCREEN BEGIN OF BLOCK B2 WITH FRAME.
+SELECTION-SCREEN BEGIN OF LINE.
+PARAMETERS: P_R1 RADIOBUTTON GROUP R1 USER-COMMAND UC1.
+SELECTION-SCREEN POSITION 3.
+SELECTION-SCREEN COMMENT (10) FOR FIELD P_R1.
+PARAMETERS: P_R2 RADIOBUTTON GROUP R1.
+SELECTION-SCREEN POSITION 20.
+SELECTION-SCREEN COMMENT (10) FOR FIELD P_R2.
+PARAMETERS: P_R3 RADIOBUTTON GROUP R1 DEFAULT 'X'.
+SELECTION-SCREEN POSITION 37.
+SELECTION-SCREEN COMMENT (10) FOR FIELD P_R3.
+SELECTION-SCREEN END OF LINE.
+SELECTION-SCREEN END OF BLOCK B2.
+
+DATA: BEGIN OF GS_ZEDU1_001.
+  INCLUDE TYPE ZEDU15_001.
+DATA: END OF GS_ZEDU1_001.
+DATA: GT_ZEDU1_001 LIKE TABLE OF GS_ZEDU1_001.
+
+DATA: BEGIN OF GS_ZEDU1_002.
+  INCLUDE TYPE ZEDU15_002.
+  DATA: COLOR TYPE C LENGTH 4,
+        LIGHT TYPE C.
+DATA: END OF GS_ZEDU1_002.
+DATA: GT_ZEDU1_002 LIKE TABLE OF GS_ZEDU1_002.
+
+AT SELECTION-SCREEN OUTPUT.
+PERFORM SET_SCREEN.
+
+START-OF-SELECTION.
+
+IF P_R3 = 'X'.
+  SELECT * FROM ZEDU15_002
+    INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU1_002
+    WHERE ZEDU15_002~Z_NUMBER IN S_NUMBER
+    OR ZEDU15_002~ZID = P_ZID.
+ELSEIF P_R2 = 'X'.
+  SELECT * FROM ZEDU15_002
+    INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU1_002
+    WHERE ZEDU15_002~Z_NUMBER IN S_NUMBER
+    OR ZEDU15_002~ZID = P_ZID
+    AND ZEDU15_002~ZZ_STATUS = '2'.
+ELSEIF P_R1 = 'X'.
+  SELECT * FROM ZEDU15_002
+    INTO CORRESPONDING FIELDS OF TABLE GT_ZEDU1_002
+    WHERE ZEDU15_002~Z_NUMBER IN S_NUMBER
+    OR ZEDU15_002~ZID = P_ZID
+    AND ZEDU15_002~ZZ_STATUS = '1'.
+ENDIF.
+
+IF ( P_ZID IS INITIAL ) OR ( S_NUMBER IS INITIAL ).
+  MESSAGE I000.
+  EXIT.
+ENDIF.
+
+DATA GT_FIELDCAT TYPE SLIS_T_FIELDCAT_ALV.
+DATA GS_FIELDCAT TYPE SLIS_FIELDCAT_ALV.
+
+CLEAR: GT_FIELDCAT, GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 1.
+GS_FIELDCAT-FIELDNAME = 'COLOR'.
+GS_FIELDCAT-SELTEXT_M = '체크'.
+GS_FIELDCAT-ICON = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 2.
+GS_FIELDCAT-FIELDNAME = 'Z_NUMBER'.
+GS_FIELDCAT-SELTEXT_M = '주문번호'.
+GS_FIELDCAT-KEY = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 3.
+GS_FIELDCAT-FIELDNAME = 'ZID'.
+GS_FIELDCAT-SELTEXT_M = '회원ID'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 4.
+GS_FIELDCAT-FIELDNAME = 'MATNR'.
+GS_FIELDCAT-SELTEXT_M = '제품번호'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 5.
+GS_FIELDCAT-FIELDNAME = 'ZNAME'.
+GS_FIELDCAT-SELTEXT_M = '제품명'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 6.
+GS_FIELDCAT-FIELDNAME = 'Z_SUM'.
+GS_FIELDCAT-SELTEXT_M = '주문금액'.
+GS_FIELDCAT-DO_SUM = 'X'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+CLEAR: GS_FIELDCAT.
+GS_FIELDCAT-COL_POS = 7.
+GS_FIELDCAT-FIELDNAME = 'ZZ_CODE'.
+GS_FIELDCAT-SELTEXT_M = '배송지역'.
+APPEND GS_FIELDCAT TO GT_FIELDCAT.
+
+LOOP AT GT_ZEDU1_002 INTO GS_ZEDU1_002.
+  IF P_R1 = 'X'.
+    IF GS_ZEDU1_002-ZZ_STATUS = '2'.
+      GS_ZEDU1_002-COLOR = '@09@'.
+    ELSE.
+      GS_ZEDU1_002-COLOR = '@52@'.
+    ENDIF.
+  ELSEIF P_R2 = 'X'.
+    IF GS_ZEDU1_002-ZZ_STATUS = '2'.
+      GS_ZEDU1_002-COLOR = '@52@'.
+    ELSE.
+      GS_ZEDU1_002-COLOR = '@09@'.
+    ENDIF.
+  ELSE.
+    IF GS_ZEDU1_002-ZZ_STATUS = '2'.
+      GS_ZEDU1_002-COLOR = '@52@'.
+    ELSE.
+      GS_ZEDU1_002-COLOR = '@09@'.
+    ENDIF.
+  ENDIF.
+
+  MODIFY GT_ZEDU1_002 FROM GS_ZEDU1_002.
+ENDLOOP.
+
+CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+EXPORTING
+  IT_FIELDCAT = GT_FIELDCAT
+  TABLES
+    T_OUTTAB = GT_ZEDU1_002.
+
+FORM SET_SCREEN.
+  LOOP AT SCREEN.
+    IF SCREEN-GROUP1 = 'M1'.
+      IF P_R2 = 'X'.
+        SCREEN-ACTIVE = '1'.
+      ELSE.
+        SCREEN-ACTIVE = '0'.
+      ENDIF.
+    ENDIF.
+   MODIFY SCREEN.
+  ENDLOOP.
+ENDFORM.</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,125 @@
+---
+title: "Co-op SAP Track 20221109 - REPORT_EVENT"
+author: "Siyun Min"
+date: "2022-11-09"
+categories: [SSU, SAP]
+---
+# 20221109 - REPORT_EVENT
+
+# INITIALIZATION
+
+SELECTION SCREEN 화면이 열리기 전에 화면 필드 값을 초기화
+
+이벤트 중에서 프로그램을 실행했을 때 가장 먼저 수행
+
+SELECTION SCREEN이 조회되기 전에 작동하므로 변수에 초기 값 설정
+
+즉, INITIALIZATION 이벤트에서 SELECTION-SCREEN에 사용되는 필드들을 초기값 지정하여 사용자가 자주 사용하는 값을 자동으로 입력
+
+# AT SELECTION-SCREEN
+
+사용자가 SELECTION SCREEN에 값을 입력하기 전/후 작동
+
+SELECTION SCREEN에서 INPUT FIELD의 값이 변동되었을 때 실행
+
+INITIALIZATION과 START-OF-SELECTION 사이에 수행되어 사용자 액션에 대해 반응하고, 화면 필드 조정
+
+## ON FIELD
+
+SELECTION SCREEN에서 전달되는 특정 필드에 대해 수행
+
+만약 오류 메세지가 발생하면 해당 필드는 다시 입력 상태가 되도록 설정
+
+![Untitled](./Untitled.png)
+
+MESSAGE 하드코딩하는 방법
+
+- E는 Error
+- I는 information
+
+```abap
+REPORT ZEDUR001_20221109.
+
+TABLES: SCARR.
+
+SELECT-OPTIONS: S_CARRID FOR SCARR-CARRID.
+
+AT SELECTION-SCREEN ON S_CARRID.
+  IF S_CARRID-LOW NE 'AA'.
+    MESSAGE 'Type AA' TYPE 'E'.
+  ENDIF.
+```
+
+![Untitled](./Untitled%201.png)
+
+## ON END OF FIELD
+
+SELECTION SCREEN에서 여러 건의 값을 입력할 때 전체 SELECTION TABLE의 입력 값을 제어 (즉, 상한/하한값, 미입력 값 체크)
+
+![Untitled](./Untitled%202.png)
+
+```abap
+TABLES: SCARR.
+
+SELECT-OPTIONS: S_CARRID FOR SCARR-CARRID.
+
+AT SELECTION-SCREEN ON S_CARRID.
+  LOOP AT S_CARRID.
+    IF S_CARRID-LOW IS INITIAL.
+      MESSAGE 'Type the lower bound' TYPE 'E'.
+    ENDIF.
+  ENDLOOP.
+```
+
+## OUTPUT
+
+SELECTION SCREEN 화면의 LAYOUT 속성을 설정
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+```abap
+TABLES: SCARR.
+
+SELECT-OPTIONS: S_CARRID FOR SCARR-CARRID MODIF ID SC1.
+
+AT SELECTION-SCREEN OUTPUT.
+  LOOP AT SCREEN.
+    IF SCREEN-GROUP1 = 'SC1'.
+      SCREEN-INPUT = '0'.
+    ENDIF.
+
+    MODIFY SCREEN.
+  ENDLOOP.
+```
+
+![Untitled](./Untitled%205.png)
+
+# START-OF-SELECTION
+
+사용자가 실행버튼을 누르면 (F8) 데이터베이스에서 값을 읽는, 즉, SELECT 구문이 사용되는 블록
+
+# END-OF-SELECTION
+
+실행 환경에서 호출되는 마지막 이벤트로서 SELECT 구문에서 모든 데이터를 읽은 후 화면에 WRITE 출력하기 전에 수행
+
+![Untitled](./Untitled%206.png)
+
+```abap
+TABLES: SCARR.
+DATA: GS_SCARR TYPE SCARR,
+      GT_SCARR TYPE TABLE OF SCARR.
+
+SELECT-OPTIONS: S_CARRID FOR SCARR-CARRID MODIF ID SC1.
+
+START-OF-SELECTION.
+  SELECT * FROM SCARR INTO CORRESPONDING FIELDS OF TABLE GT_SCARR.
+
+END-OF-SELECTION.
+  LOOP AT GT_SCARR INTO GS_SCARR.
+    WRITE:/ GS_SCARR-CARRID, GS_SCARR-CARRNAME.
+  ENDLOOP.
+```
+
+![Untitled](./Untitled%207.png)
