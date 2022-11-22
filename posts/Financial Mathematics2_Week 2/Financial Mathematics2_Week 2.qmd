@@ -1,0 +1,159 @@
+---
+title: "Financial Mathematics 2 - Week 2"
+author: "Siyun Min"
+date: "2022-10-03"
+categories: [SSU]
+---
+# Week 2
+
+Created: October 3, 2022 2:57 PM
+Last edited time: October 3, 2022 3:51 PM
+
+# Introduction
+
+Basic derivatives contracts
+
+- forward contracts
+- call options
+- put options
+
+Types of positions
+
+- long position
+- short position
+
+Graphical representation
+
+- Payoff diagrams
+- profit diagrams
+
+# Forward contracts
+
+Definition - a binding agreement (obligation) to buy/sell an underlying asset in the future, at a price set today.
+
+Futures contracts are the same as forward in principle except for some institutional and pricing differences.
+
+A forward contract specifies
+
+- The features and quantity of the asset to be delivered
+- The delivery logistics, such as time, date, and place
+- The price the buyer will pay at the time of delivery
+
+![Untitled](./Untitled.png)
+
+# Reading price quotes
+
+![Untitled](./Untitled%201.png)
+
+# The payoff on a forward contract
+
+Payoff for a contract is its value at expiration
+
+Payoff for
+
+- long forward = spot price at expiration - forward price
+- Short forward = forward price - spot price at expiration
+
+![Untitled](./Untitled%202.png)
+
+# Payoff diagram for forwards
+
+![Untitled](./Untitled%203.png)
+
+# Forward versus outright purchase
+
+![Untitled](./Untitled%204.png)
+
+# Additional considerations
+
+Types of settlement
+
+- Cash settlement - less costly and more practical
+- Physical delivery - often avoided due to significant costs
+
+Credit risk of the counter party
+
+- Major issue for over-the-counter contracts
+    - credit check, collateral, bank letter of credit
+- less severe for exchange-traded contracts
+    - exchange guarantees transactions, requires collateral
+
+# Call options
+
+A non-binding agreement (right but not an obligation) to buy an asset in the future, at a price set today
+
+Preserve the upside potential, while at the same time eliminating the unpleasant downside (for the buyer)
+
+The seller of a call option is obligated to deliver if asked.
+
+![Untitled](./Untitled%205.png)
+
+## Examples
+
+![Untitled](./Untitled%206.png)
+
+# Definition and terminology
+
+A call option gives the owner the right but not the obligation to buy the underlying asset at a predetermined price during a predetermined time period.
+
+Strike (or exercise) price - the amount paid by the option buyer for the asset if he/she decides to exercise.
+
+Exercise - the act of paying the strike price to buy the asset
+
+Expiration - the date by which the option must be exercised or become worthless
+
+Exercise styles - specifies when the option can be exercised
+
+- European-style - can be exercised only at expiration date
+- American-style - can be exercised at any time before expiration
+- Bermudan-style - can be exercised during specific periods
+
+# Payoff/profit of a purchased call
+
+$$
+Payoff = Max[0, \text{spot price at expiration - strike price}]
+$$
+
+$$
+Profit = Payoff - \text{future value of option premium}
+$$
+
+![Untitled](./Untitled%207.png)
+
+# Diagrams for purchased call
+
+![Untitled](./Untitled%208.png)
+
+# Payoff/profit of a written call
+
+$$
+Payoff = -Max[0, \text{spot price at expiration - strike price}]
+$$
+
+$$
+Profit = Payoff + \text{future value of option premium}
+$$
+
+![Untitled](./Untitled%209.png)
+
+# Put options
+
+A put option gives the owner the right but not the obligation to sell the underlying asset at a predetermined price during a predetermined time period
+
+The seller of a put option is obligated to buy if asked
+
+Payoff/profit of a purchased (i.e., long) put
+
+- $Payoff = Max[0, \text{strike price - spot price at expiration}]$
+- $Profit = Payoff - \text{future value of option premium}$
+
+Payoff/profit of a written (i.e., short) put
+
+- $Payoff = -Max[0, \text{strike price - spot price at expiration}]$
+- $Profit = Payoff + \text{future value of option premium}$
+
+![Untitled](./Untitled%2010.png)
+
+## Profit for a long put position
+
+![Untitled](./Untitled%2011.png)

@@ -1,0 +1,52 @@
+---
+title: "Financial Mathematics 2 - Week 4"
+author: "Siyun Min"
+date: "2022-10-03"
+categories: [SSU]
+---
+# Week 4
+
+Created: October 3, 2022 2:57 PM
+Last edited time: October 3, 2022 4:21 PM
+
+# Basic insurance strategies
+
+Options can be
+
+- used to insure long positions (floors)
+- used to insure short positions (caps)
+- written against asset positions (selling insurance)
+
+# Insuring a long position: floors
+
+A put option is combined with a position in the underlying asset
+
+Goal - to insure against a fall in the price of the underlying asset
+
+![Untitled](./Untitled.png)
+
+Buying an asset and a put generates a position that looks like a call!
+
+# Insuring a short position: Caps
+
+A call option is combined with a position in the underlying asset
+
+Goal - to insure against an increase in the price of the underlying asset (when one has a short position in that asset)
+
+![Untitled](./Untitled%201.png)
+
+An insured short position looks like a put!
+
+# Put-call parity
+
+The net cost of buying the index using options must equal the net cost of buying the index using a forward contract
+
+$$
+P + S = C + X/(1 + r)^{T}
+$$
+
+$$
+P + F/(1 + r)^{T} = C + X/(1 + r)^{T}
+$$
+
+This is one of the most important relationships in derivatives!

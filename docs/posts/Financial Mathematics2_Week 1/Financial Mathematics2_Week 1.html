@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-03">
+
+<title>Siyun Min - Financial Mathematics 2 - Week 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Financial Mathematics 2 - Week 1</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 3, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="week-1" class="level1">
+<h1>Week 1</h1>
+<p>Created: October 3, 2022 2:57 PM Last edited time: October 3, 2022 3:23 PM</p>
+</section>
+<section id="what-is-a-derivative" class="level1">
+<h1>What is a derivative?</h1>
+<p>Definition - A financial instrument that has a value determined by the price of something else</p>
+<p>An agreement where you pay $1 if the price of corn is greater than $3 and receive $1 if the price of corn is less that $1 is a derivative</p>
+<ul>
+<li>This contract can be used to speculate on the price of corn or it can be used to reduce risk.</li>
+</ul>
+</section>
+<section id="an-overview-of-financial-markets" class="level1">
+<h1>An overview of financial markets</h1>
+<p>The trading of a financial asset involves at least four discrete steps</p>
+<ul>
+<li>A buyer and a seller must locate one another and agree on a price</li>
+<li>The trade must be cleared (the obligations of each party are specified)</li>
+<li>The trade must be settled (the buyer and the seller must deliver the cash or securities necessary to satisfy their obligations in the required period of time)</li>
+<li>Ownership records are updated.</li>
+</ul>
+<p>Much trading of financial claims takes place on organized exchanges. In the past, the exchange was solely a physical location where traders would buy and sell. Such in-person venues have largely been replaced by electronic networks that provide a virtual trading venue.</p>
+<p>After a trade has taken place, a <strong>clearinghouse</strong> matches the buyers and sellers, keeping track of their obligations and payments. To facilitate these payments and to help manage credit risk, a derivatives clearinghouse typically imposes itself in the transaction, becoming the buyer to all sellers and the sellers to all buyers.</p>
+<p>It is possible for large traders to trade many financial claims directly with a dealer bypassing organized exchanges. Such trading is said to occur in the <strong>over-the-counter</strong> (OTC) market.</p>
+<p>Exchange activity is public and highly regulated.</p>
+<p>Over-the-counter trading is not easy to observe or measure and is generally less regulated.</p>
+<p>For many categories of financial claims, the value of OTC trading is greater than the value traded on exchanges.</p>
+<p>There are at least four different measures of a market and its activity.</p>
+<ul>
+<li><strong>Trading volume</strong> - This measure counts the number of financial claims that change hands.</li>
+<li><strong>Market value</strong> - The market value is the sum of the market value of the claims that could be traded, without regard to whether they have traded.</li>
+<li><strong>Notional value</strong> - Notional value measure the scale of a position, usually with reference to some underlying asset.</li>
+<li><strong>Open interest</strong> (미결제약정) - Open interest measures the total number of contracts for which counterparties have a future obligation to perform. (have a position의 의미로, 앞으로 결제해야 할 의무계약을 가지고 있거나 만기 시 권리행사가 가능한 상태: ex) 선물의 매수 및 매도 상태)</li>
+</ul>
+</section>
+<section id="derivatives-markets" class="level1">
+<h1>Derivatives markets</h1>
+<p>The introduction of derivatives in a market often coincides with an increase in price risk in that market.</p>
+<ul>
+<li>Currencies were permitted to float in 1971 when the gold standard was officially abandoned. The modern market in financial derivatives began in 1972, when the Chicago Mercantile Exchange started trading futures contracts on seven currencies.</li>
+<li>OPEC’s 1973 reduction in the supply of oil was followed by high and variable oil prices.</li>
+<li>U.S. interest rates became more volatile following inflation and recessions in the 1970s.</li>
+<li>The market for natural gas has been deregulated gradually since 1978, resulting in a volatile market in recent years.</li>
+<li>The deregulation of electricity began during the 1990s.</li>
+</ul>
+</section>
+<section id="increased-volatility-led-to-new-and-big-markets" class="level1">
+<h1>Increased volatility led to new and big markets</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="exchange-traded-contracts" class="level1">
+<h1>Exchange traded contracts</h1>
+<p>Contracts proliferated in the last four decades</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-role-of-financial-markets" class="level1">
+<h1>The role of financial markets</h1>
+<p>Insurance companies and individual communities/families have traditionally helped each other to share risks.</p>
+<p>Markets make risk-sharing more efficient</p>
+<ul>
+<li>Diversifiable risks vanish</li>
+<li>Non-diversifiable risks are reallocated to those most willing to hold it.</li>
+</ul>
+</section>
+<section id="the-uses-of-derivatives" class="level1">
+<h1>The uses of derivatives</h1>
+<p><strong>Risk management</strong> - Derivatives are a tool for companies and other users to reduce risks.</p>
+<p><strong>Speculation</strong> - Derivatives can serve as investment vehicles.</p>
+<p><strong>Reduce transaction costs</strong> - Sometimes derivatives provide a lower cost way to undertake a particular financial transaction.</p>
+<p><strong>Regulatory arbitrage</strong> - It is sometimes possible to circumvent regulatory restrictions, taxes, and accounting rules by trading derivatives.</p>
+</section>
+<section id="perspectives-on-derivatives" class="level1">
+<h1>Perspectives on derivatives</h1>
+<p>End users</p>
+<ul>
+<li>Corporations</li>
+<li>investment managers</li>
+<li>investors</li>
+</ul>
+<p>Intermediaries</p>
+<ul>
+<li>Market-makers</li>
+<li>traders</li>
+</ul>
+<p>Economic observers</p>
+<ul>
+<li>Regulators</li>
+<li>researchers</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="financial-engineering-and-security-design" class="level1">
+<h1>Financial engineering and security design</h1>
+<p>The construction of a financial product from other products</p>
+<p>New securities can be designed by using existing securities</p>
+<p>Financial engineering principles</p>
+<ul>
+<li>Facilitate hedging of existing positions</li>
+<li>Allow for creation of customized products</li>
+<li>Enable understanding of complex positions</li>
+<li>Render regulation less effective (혁신인가? 좋은 것일까요?)</li>
+</ul>
+</section>
+<section id="transaction-costs-and-the-bid-ask-spread" class="level1">
+<h1>Transaction costs and the bid-ask spread</h1>
+<p>Buying and selling a financial asset</p>
+<ul>
+<li>Brokers - commissions</li>
+<li>Market-makers - bid-ask spread</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="short-selling" class="level1">
+<h1>Short-selling</h1>
+<p>When price of an asset is expected to fall.</p>
+<ul>
+<li>First - borrow and sell an asset (get $$)</li>
+<li>Then - buy back and return the asset (pay $)</li>
+<li>If price fell in the mean time: profit $ = $$ - $</li>
+<li>The lender must be compensated for dividends received (lease-rate)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Why short-sell?</p>
+<ul>
+<li>speculation</li>
+<li>financing</li>
+<li>hedging</li>
+</ul>
+<p>Credit risk in short-selling</p>
+<ul>
+<li>collateral and ‘haircut’</li>
+</ul>
+<p>Interest received from lender on collateral</p>
+<ul>
+<li>Repo rate in bond markets</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

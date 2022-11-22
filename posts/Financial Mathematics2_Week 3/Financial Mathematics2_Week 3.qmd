@@ -1,0 +1,64 @@
+---
+title: "Financial Mathematics 2 - Week 3"
+author: "Siyun Min"
+date: "2022-10-03"
+categories: [SSU]
+---
+# Week 3
+
+Created: October 3, 2022 2:57 PM
+Last edited time: October 3, 2022 4:08 PM
+
+Long - 매수
+
+Short - 매도
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+# A few items to note
+
+A call option becomes more profitable when the underlying asset appreciates in value
+
+A put option becomes more profitable when the underlying asset depreciates in value
+
+## Moneyness
+
+- In-the-money option - positive payoff if exercised immediately
+- At-the-money option - zero payoff if exercised immediately
+- Out-of-the-money option - negative payoff if exercised immediately
+
+# Options are insurance
+
+homeowner’s insurance is a put option
+
+![Untitled](./Untitled%204.png)
+
+# Equity Linked CDs
+
+![Untitled](./Untitled%205.png)
+
+# Option and forward positions: a summary
+
+![Untitled](./Untitled%206.png)
+
+# Writing call
+
+![Untitled](./Untitled%207.png)
+
+# Writing put
+
+![Untitled](./Untitled%208.png)
+
+# Maximum possible profit
+
+![Untitled](./Untitled%209.png)
+
+# Long call, short put, long forward
+
+![Untitled](./Untitled%2010.png)

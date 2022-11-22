@@ -1,0 +1,143 @@
+---
+title: "Financial Mathematics 2 - Week 5"
+author: "Siyun Min"
+date: "2022-10-03"
+categories: [SSU]
+---
+# Week 5
+
+Created: October 3, 2022 2:57 PM
+Last edited time: October 3, 2022 4:52 PM
+
+# Put-call parity
+
+The net cost of buying the index using options must equal the net cost of buying the index using a forward contract
+
+$$
+P + S = C + X/(1 + r)^{T}
+$$
+
+$$
+P + F/(1 + r)^{T} = C + X/(1 + r)^{T}
+$$
+
+This is one of the most important relationships in derivatives!
+
+# Selling insurance
+
+For every insurance buyer there must be an insurance seller
+
+Strategies used to sell insurance
+
+- **Covered writing** (option overwriting or selling a covered call) is writing an option when there is a corresponding long position in the underlying asset is called covered writing.
+- **Naked writing** is writing an option when the writer does not have a position in the asset.
+
+# Covered writing: Covered calls
+
+![Untitled](./Untitled.png)
+
+Writing a covered call generates the same profit as selling a put!
+
+# Covered writing: Covered puts
+
+![Untitled](./Untitled%201.png)
+
+Writing a covered put generates the same profit as writing a call!
+
+# Synthetic forwards
+
+A synthetic long forward contract
+
+- buying a call and selling a put on the same underlying asset, with each option having the same strike price and time to expiration
+
+![Untitled](./Untitled%202.png)
+
+Differences between a synthetic long forward contract and the actual forward
+
+- The forward contract has a zero premium, while the synthetic forward requires that we pay the net option premium
+- With the forward contract, we pay the forward price, while with the synthetic forward we pay the strike price.
+
+# Spreads and collars
+
+An option spread is a position consisting of only calls or only puts, in which some options are purchased and some written
+
+- Examples: bull spread, bear spread, box spread
+
+A collar is the purchase of a put option and the sale of a call option with a higher strike price, with both options having the same underlying asset and having the same expiration date
+
+- Example: zero-cost collar
+
+# Spreads
+
+A **bull spread** is a position, in which you buy a call and sell an otherwise identical call with a higher strike price
+
+- It is a bet that the price of the underlying asset will increase.
+- Bull spreads can also be constructed using puts.
+
+![Untitled](./Untitled%203.png)
+
+A **bear spread** is a position in which one sells a call and buys an otherwise identical call with a higher strike price.
+
+A **box spread** is accomplished by using options to create a synthetic long forward at one price and a synthetic short forward at a different price.
+
+- A box spread is a means of borrowing or lending money: it has no stock price risk.
+
+A **ratio spread** is constructed by buying m calls at one strike and selling n calls at a different strike with all options having the same time to maturity and same underlying asset
+
+- Ratio spreads can also be constructed using puts.
+
+# Collars
+
+A collar represents a bet that the price of the underlying asset will decrease and resembles a short forward
+
+A zero-cost collar can be created when the premiums of the call and put exactly offset and another.
+
+![Untitled](./Untitled%204.png)
+
+# Speculating on volatility
+
+Options can be used to create positions that are nondirectional with respect to the underlying asset
+
+Examples
+
+- straddles
+- strangles
+- butterfly spreads
+
+Who would use nondirectional positions?
+
+- Investors who do not care whether the stock goes up or down, but only how much it moves, i.e., who speculate on volatility.
+
+# Straddles
+
+Buying a call and a put with the same strike price and time to expiration
+
+![Untitled](./Untitled%205.png)
+
+A straddle is a bet that volatility will be high relative to the market’s assessment.
+
+# Written straddles
+
+Selling a call and put with the same strike price and time to maturity
+
+Unlike a purchased straddle, a written straddle is a bet that volatility will be low relative to the market’s assessment.
+
+![Untitled](./Untitled%206.png)
+
+# Butterfly spreads
+
+Write a straddle + add a strangle = insured written straddle
+
+A butterfly spread insures against large losses on a straddle.
+
+![Untitled](./Untitled%207.png)
+
+## Asymmetric butterfly spreads
+
+![Untitled](./Untitled%208.png)
+
+# Summary of various strategies
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)

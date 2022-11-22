@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-24">
+
+<title>Siyun Min - Financial Mathematics 2 - Week 6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Financial Mathematics 2 - Week 6</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 24, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="week-6" class="level1">
+<h1>Week 6</h1>
+<p>Created: October 24, 2022 1:46 PM Last edited time: October 24, 2022 3:18 PM</p>
+</section>
+<section id="review-of-forward-futures" class="level1">
+<h1>Review of Forward &amp; Futures</h1>
+<section id="cost-of-carry-model-보유비용모형" class="level2">
+<h2 class="anchored" data-anchor-id="cost-of-carry-model-보유비용모형">Cost of carry model (보유비용모형)</h2>
+<p><span class="math display">\[
+F_0(T) = (S_0 + PV(\text{Cost of Carry}) - PV(Dividend)) \times (1 + r \times \frac{T}{365})
+\]</span></p>
+<section id="bond-futures" class="level3">
+<h3 class="anchored" data-anchor-id="bond-futures">Bond Futures</h3>
+<p><span class="math display">\[
+F_0(T) = (S_0 - PV(Interest)) \times (1 + r \times \frac{T}{365})
+\]</span></p>
+</section>
+<section id="stock-futures" class="level3">
+<h3 class="anchored" data-anchor-id="stock-futures">Stock Futures</h3>
+<p><span class="math display">\[
+F_0(T) = (S_0 - PV(Dividend)) \times (1 + r \times \frac{T}{365})
+\]</span></p>
+</section>
+<section id="currency-futures" class="level3">
+<h3 class="anchored" data-anchor-id="currency-futures">Currency Futures</h3>
+<p><span class="math display">\[
+F_0(T) = S_0 \times (1 + (r_a - r_b) \times \frac{T}{365})
+\]</span></p>
+</section>
+</section>
+<section id="basic-assumption" class="level2">
+<h2 class="anchored" data-anchor-id="basic-assumption">Basic assumption</h2>
+<ol type="1">
+<li>손상없이 무한정 보관 가정</li>
+<li>no arbitrage price</li>
+</ol>
+</section>
+<section id="contango-backwardation" class="level2">
+<h2 class="anchored" data-anchor-id="contango-backwardation">Contango, Backwardation</h2>
+<p>Contango - near-term futures price &lt; far-term futures price</p>
+<p>Backwardation - near-term futures price &gt; far-term futures price</p>
+</section>
+</section>
+<section id="introduction-to-swaps" class="level1">
+<h1>Introduction to Swaps</h1>
+<p>A swap is a contract calling for an exchange of payments, on one or more dates, determined by the difference in two prices.</p>
+<p>A swap provides a means to hedge a stream of risky payments.</p>
+<p>A single-payment swap is the same thing. as a cash-settled forward contract.</p>
+</section>
+<section id="an-example-of-a-commodity-swap" class="level1">
+<h1>An example of a commodity swap</h1>
+<p>An industrial producer, IP Inc., needs to buy 100,000 barrels of oil 1 year from today and 2 years from today.</p>
+<p>The forward prices for deliver in 1 year and 2 years and $110 and $111/barrel.</p>
+<p>The 1- and 2-year zero-coupon bond yields are 6% and 6.5%.</p>
+<p>IP can guarantee the cost of buying oil for the next 2 years by entering into long forward contracts for 100,000 barrels in each of the next 2 years. The PV of this cost per barrel is</p>
+<p><span class="math display">\[
+\frac{\$110}{1.06} + \frac{\$111}{1.065^2} = \$ 201.638
+\]</span></p>
+<p>Thus, IP could pay an oil supplier $201.638, and the supplier would commit to delivering one barrel in each of the next two years.</p>
+<p>A prepaid swap is a single payment today to obtain multiple deliveries in the future.</p>
+<p>With a prepaid swap, the buyer might worry about the resulting credit risk. Therefore, a more attractive solution is to defer payment until the oil is delivered, while still fixing the total price.</p>
+<p>Any payments that have a present value of $201.638 are acceptable. Typically, a swap will call for equal payments in each year.</p>
+<ul>
+<li>For example, the payment per year per barrel, x, will have to be $110.483 to satisfy the following equation.</li>
+</ul>
+<p><span class="math display">\[
+\frac{x}{1.06} + \frac{x}{1.065^2} = \$201.638
+\]</span></p>
+<p>We then say that the 2-year swap price is $110,483</p>
+</section>
+<section id="physical-settlement" class="level1">
+<h1>Physical settlement</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="financial-settlement" class="level1">
+<h1>Financial settlement</h1>
+<p>The oil buyer, IP, pays the swap counterparty the difference between $110.483 and the spot price, and the oil buyer then buys oil at the spot price.</p>
+<p>If the difference between $110.483 and the spot price is negative, then the swap counterparty pays the buyer.</p>
+<p>Whatever the market price of oil, the net cost to the buyer is the swap price, $110.483.</p>
+<p><span class="math display">\[
+\text{spot price} - \text{swap price} - \text{spot price} = -\text{swap price} = \text{swap payment} - \text{spot purchase of oil}
+\]</span></p>
+<p>Note that 100,000 is the notional amount of the swap, meaning that 100,000 barrels is used to determine the magnitude of the payments when the swap is settled financially.</p>
+<p>The results for the buyer are the same whether the swap is settled physically or financially. In both cases, the nest cost to the oil buyer is $100.483.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Swaps are nothing more than forward contracts coupled with borrowing and lending money.</p>
+<ul>
+<li>consider the swap price of $100.483/barrel. Relative to the forward curve price of $110 in 1 year and $111 in 2 years, we are overpaying by $0.483 in the first year, and we are underpaying by $0.517 in the second year.</li>
+</ul>
+</section>
+<section id="the-swap-counterparty" class="level1">
+<h1>The swap counterparty</h1>
+<p>The swap counterparty is a dealer, who is, in effect, a broker between buyer and seller.</p>
+<p>The fixed price paid by the buyer, usually, exceeds the fixed price received by the seller. This price difference is a bid-ask spread, and is the dealer’s fee.</p>
+<p>The dealer bears the credit risk of both parties, but is not exposed to price risk.</p>
+<p>The situation where the dealer matches the buyer and seller is called a back-to-back transaction or “matched book” transaction.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Alternatively, the dealer can serve as counterparty and hedge the transaction by entering into long forward or futures contracts.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Note that the net cash flow for the hedge dealer is a loan, where the dealer receives cash in year 1 and repays it in year 2.</p>
+<p>Thus, the dealer also has interest rate exposure (which can be hedged by using Eurodollar contracts or forward rate agreements).</p>
+</section>
+<section id="the-market-value-of-a-swap" class="level1">
+<h1>The market value of a swap</h1>
+<p>The market value of a swap is zero at interception.</p>
+<p>Once the swap is struck, however, its market value will generally no longer be zero because</p>
+<ul>
+<li>the forward prices for oil and interest rates will change over time.</li>
+<li>Even if prices do not change, the market value of swaps can change over time due to the implicit borrowing and lending.</li>
+</ul>
+<p>A buyer wishing to exit the swap could negotiate terms with the original counterparty to eliminate the swap obligation or enter into an offsetting swap with the counterparty offering the best price.</p>
+<p>The market value of the swap is the difference in the PV of payments between the original and new swap rates.</p>
+</section>
+<section id="computing-the-swap-rate" class="level1">
+<h1>Computing the swap rate</h1>
+<section id="notation" class="level2">
+<h2 class="anchored" data-anchor-id="notation">notation</h2>
+<p>Suppose there are n swap settlements, occurring on dates <span class="math inline">\(t_i, i = 1, ..., n\)</span></p>
+<p>The forward prices on these dates are given by <span class="math inline">\(F_{0, t_i}\)</span></p>
+<p>The price of a zero-coupon bond maturing on date <span class="math inline">\(t_i\)</span> is <span class="math inline">\(P(0, t_i)\)</span></p>
+<p>The fixed swap rate is R.</p>
+<p>IF the buyer at time zero were to enter into forward contracts to purchase one unit on each of the n dates, the present value of payments would be the present value of the forward prices, which equals the price of the prepaid swap:</p>
+<p><span class="math display">\[
+\text{Prepaid swap} = \sum_{i = 1}^{n}{F_{0, t_i} P(0, t_i)}
+\]</span></p>
+<p>We determine the fixed swap price, R, by requiring that the present value of the swap payments equal the value of the prepaid swap</p>
+<p><span class="math display">\[
+\sum_{i = 1}^{n}{RP(0, t_i)} = \sum_{i = 1}^{n}{F_{0, t_i} P(0, t_i)}
+\]</span></p>
+<p><span class="math display">\[
+R = \frac{\sum_{i = 1}^{n}{P(0, t_i) F_{0, t_i}}}{\sum_{i = 0}^{n}{P(0, t_i)}}
+\]</span></p>
+<p>Where <span class="math inline">\(\sum_{i = 1}^{n}{P(0, t_i) F_{0, t_i}}\)</span> is the present value of interest payments implied by the strip of forward rates, and <span class="math inline">\(\sum_{i = 0}^{n}{P(0, t_i)}\)</span> is the present value of a $1 annuity.</p>
+<p>We can rewrite equation to make it easier to interpret.</p>
+<p><span class="math display">\[
+R = \sum_{i = 1}^{n}{[\frac{P(0, t_i)}{\sum_{j = 1}^{n}{P(0, t_i)}}]}F_{0, t_i}
+\]</span></p>
+<p>Thus, the fixed swap rate is as a weighted average of the implied forward rates, where zero-coupon bond prices are used to determine the weights.</p>
+</section>
+</section>
+<section id="swaps-with-variable-quantity-and-prices" class="level1">
+<h1>Swaps with variable quantity and prices</h1>
+<p>A buyer with seasonally varying demand might enter into a swap, in which quantities vary over time.</p>
+<p>Consider a swap in which the buyer pays <span class="math inline">\(RQ_{t_i}\)</span>, for <span class="math inline">\(Q_{t_i}\)</span> units of the commodity. The present value of these fixed payments (fixed per unit of the commodity) must equal the prepaid swap price.</p>
+<p><span class="math display">\[
+\sum_{i = 1}^{n}{Q_t F_{0, t_i} P(0, t_i)} = \sum_{i = 1}^{n}{Q_{t_i}RP(0, t_i)}
+\]</span></p>
+<p>Solving for R gives</p>
+<p><span class="math display">\[
+R = \frac{\sum_{i = 1}^{n}{Q_{t_i} P(0, t_i) F_{0, t_i}}}{\sum_{i = 1}^{n}{Q_{t_i} P(0, t_i)}}
+\]</span></p>
+<p>It is also possibly for prices to be time-varying.</p>
+<ul>
+<li>For example, a gas buyer who needs gas for heating can enter into a swap, in which the summer price is fixed at a low value, and the winter price is then determined by the zero present value condition.</li>
+</ul>
+</section>
+<section id="interest-rate-swaps" class="level1">
+<h1>Interest rate swaps</h1>
+<p>Companies use interest rate swaps to modify their interest rate exposure.</p>
+<p>The interest payments are based on the notional principle of the swap.</p>
+<p>The life of the swap is the swap term or swap tenor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="the-swap-curve" class="level1">
+<h1>The swap curve</h1>
+<p>A set of swap rates at different maturities is called the swap curve.</p>
+<p>The swap curve should be consistent with the interest rate curve implied by the Eurodollar futures contract, which is used to hedge swaps.</p>
+<p>Recall that the Eurodollar futures contract provides a set of 3-month forward LIBOR rates. In turn, zero-coupon bond prices can be constructed from implied forward rates. Therefore, we can use this information to compute swap rates.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>3개월 물이라 관례적으로 91/90으로 보정</p>
+<p><span class="math display">\[
+0.00144 = (100 - 99.432) / (4 \times 100) \times \frac{91}{90}
+\]</span></p>
+</section>
+<section id="why-swap-interest-rates" class="level1">
+<h1>Why swap interest rates?</h1>
+<p>Interest rate swaps permit firms to separate credit risk and interest rate risk.</p>
+<ul>
+<li>By swapping its interest rate exposure, a firm can pay the short-term interest rate it desires, but the long-term bondholders will continue to bear most of the credit risk.</li>
+</ul>
+</section>
+<section id="currency-swaps" class="level1">
+<h1>Currency swaps</h1>
+<p>A currency swap entails an exchange of payments in different currencies.</p>
+<p>A currency swap is equivalent to borrowing in one currency and lending in another.</p>
+</section>
+<section id="swaptions" class="level1">
+<h1>Swaptions</h1>
+<p>A swaption is an option to enter into a swap with specified terms. This contract will have a premium.</p>
+<p>A swaption is analogous to an ordinary option, with the present value of the swap obligations (the price of the prepaid swap) as the underlying asset.</p>
+<p>Swaptions can be American or European.</p>
+<p>A payer swaption gives its holder the right, but not the obligation, to pay the fixed price and receive the floating price.</p>
+<ul>
+<li>The holder of a receiver swaption would exercise when the fixed swap price is above the strike.</li>
+</ul>
+<p>A receive swaption gives its holder the right to pay the floating price and receive the fixed strike price.</p>
+<ul>
+<li>The holder of a receiver swaption would exercise when the fixed swap price is below the strike.</li>
+</ul>
+</section>
+<section id="total-return-swaps" class="level1">
+<h1>Total return swaps</h1>
+<p>A total return swap is a swap in which one party pays the realized total return (dividends plus capital gains) on a reference asset, and the other party pays a floating return such as LIBOR.</p>
+<p>The two parties exchange only the difference between these rates.</p>
+<p>The party paying the return on the reference asset is the total return payer.</p>
+<p>Some uses of total return swaps are</p>
+<ul>
+<li>avoiding withholding taxes on foreign stocks.</li>
+<li>management of credit risk.</li>
+</ul>
+<p>A default swap is a swap, in which the seller makes a payment to the buyer if the reference asset experiences a “credit event.”</p>
+<ul>
+<li>A default swap allows the buyer to eliminate bankruptcy risk, while retaining interest rate risk.</li>
+<li>The buyer pays a premium, usually amortized over a series of payments.</li>
+</ul>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p>The swap formulas in different cases all take the same general form.</p>
+<p>Let <span class="math inline">\(f_0(t_i)\)</span> denote the forward price for the floating payment in the swap. Then the fixed swap payment is</p>
+<p><span class="math display">\[
+R = \frac{\sum_{i = 1}^{n}{P(0, t_i) f_0(t_i)}}{\sum_{i = 1}^{n}{P(0, t_i)}}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="assignment" class="level1">
+<h1>Assignment</h1>
+<p>연습문제 8-1, 8-2</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
