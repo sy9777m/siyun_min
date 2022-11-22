@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2021-05-01">
+
+<title>Siyun Min - CFA Level 1 Derivatives</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">CFA Level 1 Derivatives</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">CFA</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 1, 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="derivatives" class="level1">
+<h1>Derivatives</h1>
+<section id="financial-instrument" class="level2">
+<h2 class="anchored" data-anchor-id="financial-instrument">Financial Instrument</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled.png</figcaption><p></p>
+</figure>
+</div>
+<section id="securities" class="level3">
+<h3 class="anchored" data-anchor-id="securities">Securities</h3>
+<ul>
+<li>권리와 의무를 증명하는 문서 형태로 존재하는 금융상품</li>
+<li>주식, 채권 ← 전통적인 금융상품</li>
+</ul>
+</section>
+<section id="contract" class="level3">
+<h3 class="anchored" data-anchor-id="contract">Contract</h3>
+<ul>
+<li>계약서의 형태로 존재하는 금융상품</li>
+<li>Derivatives
+<ul>
+<li>전통적인 금융상품의 가격 움직임에 의해 그 가치가 결정되는 금융상품</li>
+<li>forward, futures, swap, option</li>
+<li>Underlying asset - 기초자산, 파생상품의 가치를 결정하는 금융상품</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>48.b. Contrast forward commitments with contingent claims.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>48.c. Define forward contracts, futures contracts, options (calls and puts), swaps, and credit derivatives and compare their basic characteristics.</p>
+</blockquote>
+</section>
+<section id="forward-commitment" class="level3">
+<h3 class="anchored" data-anchor-id="forward-commitment">Forward commitment</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%201.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>forward contract - 미래 특정시점에 기초자산을 미리 정한 가격으로 매매하기로 약정하는 계약</li>
+<li>futures contract - 미래 특정시점에 기초자산을 미리 정한 가격으로 매매하기로 약정하는 계약, 거래소에 의해 표준화되고, 청산소에 의해 이행이 보증됨</li>
+<li>swap contract - 거래당사자 간에 미래 일정기간 동안 서로 다른 현금흐름을 교환하기로 약정하는 계약
+<ul>
+<li>시리즈로 이루어지는 forward contract와 같음</li>
+</ul></li>
+<li>Forward commitment derivatives의 경우 반드시 계약을 이행해야 할 의무를 쌍방이 가짐
+<ul>
+<li>Bilateral obligation, forward commitment라고 함</li>
+</ul></li>
+<li>사리고 한 사람은 반드시 미리 약정한 가격으로 사야 하고, 팔기로 한 사람은 반드시 미리 약정한 가격으로 팔아야만 함</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%202.png</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="contingent-claim" class="level3">
+<h3 class="anchored" data-anchor-id="contingent-claim">Contingent claim</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%203.png</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%204.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>옵션은 call option, put option으로 나뉨</li>
+<li>call option - 미래 특정시점에 기초자산을 미리 정한 가격으로 살 수 있는 권리</li>
+<li>put option - 미래 특정시점에 기초자산을 미리 정한 가격으로 팔 수 있는 권리</li>
+<li>옵션 계약은 매수자는 권리를 갖고, 매도자는 의무만 가짐
+<ul>
+<li>Unilateral obligation, contingent claims라고 함</li>
+</ul></li>
+<li>매도자는 매수자로부터 프리미엄을 수취함</li>
+<li>권리를 가진 매수자는 옵션의 행사 여부를 선택할 수 있음
+<ul>
+<li>행사할 수도 있고, 안 할 수도 있는데, 행사한다면 옵션 매도자는 반드시 거래에 응해야 함</li>
+</ul></li>
+</ul>
+</section>
+<section id="credit-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="credit-derivatives">Credit Derivatives</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%205.png</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%206.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Credit derivatives는 금융상품에 내재된 credit risk가 기초상품</li>
+<li>대표적인 상품이 CDS로 채권의 파산에 대한 보험상품이다.</li>
+<li>protection buyer는 protection seller로부터 CDS를 매입하고, CDS 프리미엄을 지급한다.</li>
+<li>부도 이벤트가 발생하면 protection seller는 buyer에게 보험금을 제공한다.</li>
+</ul>
+</section>
+</section>
+<section id="market" class="level2">
+<h2 class="anchored" data-anchor-id="market">Market</h2>
+<blockquote class="blockquote">
+<p>48.a. Define a derivative and distinguish between exchange-traded and over-the-counter derivatives.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%207.png</figcaption><p></p>
+</figure>
+</div>
+<section id="exchange-traded-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="exchange-traded-derivatives">Exchange-traded Derivatives</h3>
+<ul>
+<li>장내파생상품</li>
+<li>기초자산의 종류, 계약단위, 만기, 결제방식, 거래시간, 거래방법 등이 표준화 되어있고 제도화 되어 있음</li>
+<li>clearing house를 통해 모든 계약의 거래 상대방이 되게 하고, 계약의 이행을 보증하게 함</li>
+<li>futures, options</li>
+</ul>
+</section>
+<section id="over-the-counter-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="over-the-counter-derivatives">Over-the-counter Derivatives</h3>
+<ul>
+<li>장외파생상품</li>
+<li>거래 당사자간 사적 계약을 통해 이루어짐</li>
+<li>계약조건의 커스터마이징 가능</li>
+<li>거래 상대방이 계약을 이행하지 않을 위험이 있음 - counterparty risk</li>
+<li>forward, swap, option</li>
+</ul>
+<blockquote class="blockquote">
+<p>48.e. Describe purposes of, and controversies related to, derivative markets.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%208.png</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="criticism-of-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="criticism-of-derivatives">Criticism of derivatives</h3>
+<ul>
+<li>too risky</li>
+<li>high leverage</li>
+<li>complex structure</li>
+</ul>
+</section>
+<section id="benefits-of-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="benefits-of-derivatives">benefits of derivatives</h3>
+<ul>
+<li>provide price information
+<ul>
+<li>price discovery</li>
+</ul></li>
+<li>allow risk to be managed and shifted among market participants
+<ul>
+<li>risk management, risk shifting (hedge)</li>
+</ul></li>
+<li>reduce transactions costs</li>
+<li>시장효율성 제고</li>
+</ul>
+</section>
+<section id="risk" class="level3">
+<h3 class="anchored" data-anchor-id="risk">Risk</h3>
+<ul>
+<li>일반적으로 금융에서의 리스크는 변동성을 이야기 함</li>
+<li>보유 금융자산의 가치 상승 및 하락 모든 것이 위험 - 기대치를 벗어나기 때문</li>
+<li>파생상품은 금융자산이 가지고 있는 위험을 제거할 수 있음
+<ul>
+<li>위험을 제거하려면 금융상품을 팔거나, 파생상품을 이용해 원하는 시점까지 위험을 제거할 수 있음</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>48.f. Explain arbitrage and the role it plays in determining prices and promoting market efficiency.</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%209.png</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2010.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>차익거래 기회는 투자자들의 비이성적 행동이나 시장의 비효율에서 발생한다.</li>
+<li>차익이 발생하는 상품의 매수와 매도를 동시에 해야 arbitrage이다.
+<ul>
+<li>추가적인 비용이나 위험부담 없이 이익을 얻어야 한다.</li>
+</ul></li>
+<li>There are two arbitrage arguments that are particularly useful in the study and use of derivatives.
+<ul>
+<li>law of one price</li>
+<li>arbitrage requires an investment
+<ul>
+<li>If a portfolio of securities or assets will have a certain payoff in the future, there is no risk in investing in that portfolio. In order to prevent profitable arbitrage, it must be the case that the return on the portfolio is the risk free rate.</li>
+</ul></li>
+</ul></li>
+<li>forward price는 차익거래가 발생하지 않을 가격으로 결정되어야 함</li>
+</ul>
+</section>
+</section>
+<section id="market-1" class="level2">
+<h2 class="anchored" data-anchor-id="market-1">Market</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2011.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>spot market은 거래시점과 결제가 동일한 시점에 이루어지는 시장이다.</li>
+<li>forward market은 거래시점에 미래시점에 기초자산을 매매하기로 약정하는 시장이다.
+<ul>
+<li>trade 시점과 settlement 시점이 다르다.</li>
+</ul></li>
+<li>forward price는 미래시점에 기초자산을 매매하기로 약정한 가격이다.</li>
+</ul>
+</section>
+<section id="forward-contracts" class="level2">
+<h2 class="anchored" data-anchor-id="forward-contracts">Forward contracts</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2012.png</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2013.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>미래 특정 시점에 특정 기초자산을 미리 정한 가격으로 매매하기로 약정하는 계약</li>
+<li>expiration date - 기초자산을 매매하기로 약정한 미래의 특정 시점</li>
+<li>underlying asset - 매매하기로 약정한 자산, 현물
+<ul>
+<li>financial asset, physical asset or commodity</li>
+</ul></li>
+<li>forward price - 기초자산을 매매하기로 약정한 가격</li>
+<li>position - 투자자의 투자 상태
+<ul>
+<li>long position - 기초자산을 사기로 약정한 사람</li>
+<li>short position - 기초자산을 팔기로 약정한 사람</li>
+</ul></li>
+<li>Private contracts
+<ul>
+<li>counterparty risk or default risk 존재</li>
+<li>customization 가능</li>
+</ul></li>
+<li>Contract date는 미래에 매매하기로 약정하는 계약서를 작성하는 날
+<ul>
+<li>initial cost = 0임
+<ul>
+<li>Contract date의 spot price = 0이라는 가정을 하기 때문</li>
+<li>future, swap도 동일</li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2014.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>payoff - derivative value at expiration
+<ul>
+<li>long position의 경우 payoff = spot price at expiration - forward price at expiration</li>
+</ul></li>
+</ul>
+</section>
+<section id="payoff-and-settlement" class="level2">
+<h2 class="anchored" data-anchor-id="payoff-and-settlement">Payoff and Settlement</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2015.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Payoff is value at expiration
+<ul>
+<li>Payoff of long position = Spot price at t - Forward price at t</li>
+<li>Short position = - long position</li>
+<li>선도계약 당사자 간에는 Zero-sum Game</li>
+</ul></li>
+<li>Settlement - 파생상품 만기 시점의 결재 방식</li>
+</ul>
+</section>
+<section id="valuation" class="level2">
+<h2 class="anchored" data-anchor-id="valuation">Valuation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2016.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Value - 금융상품의 가치</li>
+<li>Risk-averse Investor - 위험회피적 투자자
+<ul>
+<li>위험에 대한 보상을 요구, risk premium</li>
+<li>미래 현금흐름을 할인할 때 spread를 붙여서 할인</li>
+</ul></li>
+<li>Risk-neutral investor - 위험중립적 투자자
+<ul>
+<li>위험에 대한 보상을 요구하지 않음</li>
+<li>Derivatives는 risk-neutral을 기본 가정으로 함 → discount rate = risk free rate</li>
+</ul></li>
+<li>Replication and Arbitrage
+<ul>
+<li>risky asset + Hedged Derivatives = Risk-free Asset
+<ul>
+<li>무위험 결합포트폴리오</li>
+<li>risky asset과 derivatives의 조합으로 무위험 자산의 replication이 가능
+<ul>
+<li>만약 둘 사이에 차이가 있다면 → arbitrage</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="forward-pricing" class="level2">
+<h2 class="anchored" data-anchor-id="forward-pricing">Forward pricing</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2017.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>계약 시점에 가격을 산출하는 process를 pricing이라고 함</li>
+<li>forward pricing model에는 cost of carry model이 있음
+<ul>
+<li>forward price = spot price + carrying cost
+<ul>
+<li>No-arbitrage forward price</li>
+</ul></li>
+<li>assumption
+<ul>
+<li>risk free rate으로 차입이나 대출이 가능 → risk-neutral 가정</li>
+<li>short-selling에 제한이 없음</li>
+<li>no tax, no transaction cost</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="carrying-cost" class="level3">
+<h3 class="anchored" data-anchor-id="carrying-cost">Carrying cost</h3>
+<ul>
+<li>차입하여 매입하는 경우 이자비용 발생</li>
+<li>자기자본으로 매입하는 경우 기회비용 발생</li>
+</ul>
+</section>
+</section>
+<section id="cost-of-carry-model-확장" class="level2">
+<h2 class="anchored" data-anchor-id="cost-of-carry-model-확장">Cost of carry model 확장</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2018.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>underlying asset이 financial asset인 경우 → 보유 편익 발생 가능
+<ul>
+<li>underlying asset의 cash flow → dividend, interest</li>
+<li>보유기간동안의 편익은 보유비용을 감소시키는 효과</li>
+<li>forward price = (spot price - PV(Benefit)) * (1 + risk free rate)^T</li>
+</ul></li>
+<li>underlying asset이 commodity인 경우 → convenience yield가 발생
+<ul>
+<li>convenience yield는 market demand에 즉각적으로 대응할 수 있는 Non-monetary benefit
+<ul>
+<li>회사, 환경에 따라 다르지만 추정 가능</li>
+</ul></li>
+<li>convenience yield는 마찬가지로 보유비용을 감소시킴</li>
+<li>forward price = (spot price + PV(cost) - PV(convenience yield)) * (1 + risk free rate)^T</li>
+</ul></li>
+</ul>
+</section>
+<section id="valuation-1" class="level2">
+<h2 class="anchored" data-anchor-id="valuation-1">Valuation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2019.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>pricing - 계약시점에서 선도가격의 결정</li>
+<li>valuation - 다양한 시점에서 선도가격의 가치</li>
+<li>payoff - 만기 시점의 선도가격의 가치</li>
+<li>파생상품의 현재가치는 미래 발생하는 payoff의 현재 가치</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2020.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>payoff = spot price - forward price</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2021.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>추가적인 benefit or cost가 발생하는 경우 비용은 더 해주고, 이익은 빼준다.</li>
+</ul>
+</section>
+<section id="forward-rate-agreement" class="level2">
+<h2 class="anchored" data-anchor-id="forward-rate-agreement">Forward Rate Agreement</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2022.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>선도금리계약</li>
+<li>미래 일정 구간 동안에 적용할 금리를 미리 약정하는 계약
+<ul>
+<li>미래의 금리를 사고 팔기로 약정하는 계약</li>
+</ul></li>
+<li>underlying asset - forward rate</li>
+</ul>
+<section id="fra-position" class="level3">
+<h3 class="anchored" data-anchor-id="fra-position">FRA position</h3>
+<ul>
+<li>FRA Long position - 선도 금리를 미리 사는 계약, 미래시점에 미리 약정한 금리로 돈을 차입
+<ul>
+<li>금리 상승 위험 hedge
+<ul>
+<li>intereat rate이 오를 것 같으니 지금 사는 것</li>
+</ul></li>
+<li>현물포지션 - 돈을 빌리고자 하는 사람</li>
+</ul></li>
+<li>FRA Short position - 선도 금리를 미리 파는 계약, 미래시점에 미리 약정한 금리로 돈을 빌려줌
+<ul>
+<li>금리 하락 위험 hedge
+<ul>
+<li>interest rate이 떨어질 것 같으니 지금 파는 것</li>
+</ul></li>
+<li>현물포지션 - 돈을 빌려주려고 하는 사람</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="fra-hedge" class="level2">
+<h2 class="anchored" data-anchor-id="fra-hedge">FRA Hedge</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2023.png</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="synthetic-fra" class="level2">
+<h2 class="anchored" data-anchor-id="synthetic-fra">Synthetic FRA</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">./Untitled%2024.png</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>synthetic position - 서로 다른 금융상품을 결합하여 새로운 형태의 금융상품을 만드는 것</li>
+<li>FRA value = synthetic FRA value
+<ul>
+<li>the law of one price</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
