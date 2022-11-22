@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Chapter 9 - Parity and Other option relationship
 
-Created: November 14, 2022 11:58 AM
-Last edited time: November 14, 2022 12:28 PM
-
 # Put-call parity
 
 For European options with the same strike price and time to expiration the parity relationship is

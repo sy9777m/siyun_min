@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Week 6
 
-Created: October 24, 2022 1:46 PM
-Last edited time: October 24, 2022 3:18 PM
-
 # Review of Forward & Futures
 
 ## Cost of carry model (보유비용모형)

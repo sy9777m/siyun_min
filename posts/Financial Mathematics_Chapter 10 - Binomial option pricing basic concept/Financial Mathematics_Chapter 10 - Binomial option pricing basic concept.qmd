@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Chapter 10 - Binomial option pricing: basic concepts
 
-Created: November 14, 2022 12:27 PM
-Last edited time: November 14, 2022 1:17 PM
-
 # Introduction to Binomial option pricing
 
 The binomial option pricing model enables us to determine the price of an option, given the characteristics of the stock or other underlying asset.

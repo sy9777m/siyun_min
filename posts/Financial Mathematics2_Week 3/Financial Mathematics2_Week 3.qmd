@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Week 3
 
-Created: October 3, 2022 2:57 PM
-Last edited time: October 3, 2022 4:08 PM
-
 Long - 매수
 
 Short - 매도

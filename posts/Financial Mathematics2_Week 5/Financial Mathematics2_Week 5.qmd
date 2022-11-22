@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Week 5
 
-Created: October 3, 2022 2:57 PM
-Last edited time: October 3, 2022 4:52 PM
-
 # Put-call parity
 
 The net cost of buying the index using options must equal the net cost of buying the index using a forward contract

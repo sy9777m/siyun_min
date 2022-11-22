@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Week 4
 
-Created: October 3, 2022 2:57 PM
-Last edited time: October 3, 2022 4:21 PM
-
 # Basic insurance strategies
 
 Options can be

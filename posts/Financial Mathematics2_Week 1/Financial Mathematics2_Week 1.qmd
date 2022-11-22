@@ -6,9 +6,6 @@ categories: [SSU]
 ---
 # Week 1
 
-Created: October 3, 2022 2:57 PM
-Last edited time: October 3, 2022 3:23 PM
-
 # What is a derivative?
 
 Definition - A financial instrument that has a value determined by the price of something else
