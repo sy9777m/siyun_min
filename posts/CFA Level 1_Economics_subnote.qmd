@@ -1,0 +1,554 @@
+---
+title: "CFA Level 1 Economics Subnote"
+author: "Siyun Min"
+date: "2021-05-01"
+categories: [CFA]
+---
+# Economics
+
+# Learning Outcome Statement
+
+## Topics in demand and supply analysis
+
+### 12.a. Calculate and interpret prices, income, and cross-price elasticities of demand and describe factors that affect each measure.
+
+- Elasticity is measured as the ratio of the percentage change in one variable to a percentage change in another. Three elasticities related to a demand function are of interest:
+    - own-price elasticity = % change in quantity demanded / % change in own price
+    - cross-price elasticity = % change in quantity demanded / % change in price of related good
+    - income elasticity = % change in quantity demanded / % change in income
+    - |own-price elasticity| > 1 = demand is elastic
+    - |own-price elasticity| < 1 = demand is inelastic
+    - cross-price elasticity > 0 = related good is a substitute
+    - cross-price elasticity < 0 = related good is complement
+    - income elasticity < 0 = good is an inferior good
+    - income elasticity > 0 = good is a normal good
+
+### 12.b. Compare substitution and income effects.
+
+- When the price of a good decreases, the substitution effect leads a consumer to consume more of that good and less of goods for which prices have remained the same.
+- A decrease in the price of a good that a consumer purchases leaves her with unspent income (for the same combination of goods). The effect of this additional income on consumption of the good for which the price has decreased is termed the income effect.
+
+### 12.c. Distinguish between normal goods and inferior goods.
+
+- For a normal good, the income effect of a price decrease is positive-income elasticity of demand is positive.
+- For an inferior good, the income effect of a price decrease is negative-income elasticity of demand is negative. An increase in income reduces demand for an inferior good.
+- A Giffen good is an inferior good for which the negative income effect of a price decrease outweighs the positive substitution effect, that a decrease (increase) in the good's price has a net result of decreasing (increasing) the quantity consumed.
+- A Veblen good is also one for which an increase (decrease) in price results in an increase (decrease) in the quantity consume. However, a Veblen good is not an inferior good and is not supported by the axioms of the theory of demand.
+
+### 12.d. Describe the phenomenon of diminishing marginal returns.
+
+- Marginal returns refer to the additional output that can be produced by using one more unit of a productive input while holding the quantities of other inputs constant. Marginal returns may increase as the first units of an input are added, but as input quantities increase, they reach a point at which marginal returns begin to decrease. Inputs beyond this quantity are said to produce diminishing marginal returns.
+
+### 12.e. Determine and interpret breakeven and shutdown points of production.
+
+- Under perfect competition:
+    - The breakeven quantity of production is the quantity for which price (P) = average total cost (ATC) and total revenue (TR) = total cost (TC).
+    - The firm should shut down in the long run if P < ATC so that TR < TC.
+    - The firm should shut down in the short run (and the long run) if P < average variable cost (AVC) so that TR < total variable cost (TVC).
+- Under imperfect competition (firm faces downward sloping demand):
+    - Breakeven quantity is the quantity for which TR = TC.
+    - The firm should shut down in the long run if TR < TC.
+    - The firm should shut down in the short run (and the long run) if TR < TVC.
+
+### 12.f. Describe how economies of scale and diseconomies of scale affect costs.
+
+- The long-run average total cost (LRATC) curve shows the minimum average total cost for each level of output assuming that the plant size (scale of the firm) can be adjusted.
+- A downward-sloping segment of an LRATC curve indicates economies of scale (increasing returns to scale).
+- Over such a segment, increasing the scale of the firm reduces ATC. An upward-sloping segment of an LRATC curve indicates diseconomies of scale, where average unit costs will rise as the scale of the business (and long-run output) increases.
+
+## The firm and market structure
+
+### 13.a. Describe characteristics of perfect competition, monopolistic competition, oligopoly, and pure monopoly.
+
+- Perfect competition is characterized by:
+    - Many firms, each small relative to market.
+    - Very low barriers to entry into or exit form the industry.
+    - Homogeneous products that are perfect substitutes, noadvertising or branding.
+    - no pricing power.
+- Monopolistic competition is characterized by:
+    - Many firms
+    - Low barriers to entry into or exit from the industry
+    - Differentiated products, heavy advertising and marketing expenditure.
+    - Some pricing power.
+- Oligopoly markets are characterized by:
+    - Few sellers
+    - High barriers to entry into or exit from the industry
+    - Products that may be homogeneous or differentiated by branding and advertising.
+    - Firms that may have significant pricing power.
+- Monopoly is characterized by:
+    - A single firm that comprises the whole market.
+    - Very high barriers to entry into or exit from the industry.
+    - Advertising used to compete with substitute products.
+    - Significant pricing power.
+
+### 13.b. Explain relationships between price, marginal revenue, marginal cost, economic profit, and the elasticity of demand under each market structure.
+
+- Perfect competition:
+    - Price = marginal revenue = marginal cost (in equilibrium)
+    - Perfectly elastic demand, zero economic profit in equilibrium.
+- Monopolistic competition:
+    - Price > marginal revenue = marginal cost (in equilibrium)
+    - Zero economic profit in long-run equilibrium
+- Oligopoly:
+    - Price > marginal revenue = marginal cost (in equilibrium)
+    - May have positive economic profit in long-run equilibrium, but moves toward zero economic profit over time
+- Monopoly:
+    - Price > marginal revenue = marginal cost (in equilibrium)
+    - May have positive economic profit in long-run equilibrium, profits may be zero because of expenditure to preserve monopoly.
+
+### 13.c. Describe a firm's supply function under each market structure.
+
+- Under perfect competition, a firm's short-run supply curve is the portion of the firm's short-run marginal cost curve above average variable cost. A firm's long-run supply curve is the portion of the firm's long-run marginal cost curve above average total cost.
+- Firms operating under monopolistic competition, oligopoly, and monopoly do not have well-defined supply functions, so neither marginal cost curve nor average cost curves are supply in these cases.
+
+### 13.d. Describe and determine the optimal price and output for firms under each market structure.
+
+- All firms maximize profits by producing the quantity of output for which marginal cost equals marginal revenue.
+- Under perfect competition (perfectly elastic demand), marginal revenue also equals price.
+- Firms in monopolistic competition or that operate in oligopoly or monopoly markets all face downward-sloping demand curves. Selling price is determined from the price on the demand curve for the profit maximizing quantity of output.
+
+### 13.e. Explain factors affecting long-run equilibrium under each market structure.
+
+- An increase (decrease) in demand will increase (decrease) economic profits in the short run under all market structures.
+- Positive economic profits result in entry of firms into the industry unless barriers to entry are high. Negative economic profits result in exit of firms from the industry unless barrier to exit are high.
+- When firms enter (exit) an industry, market supply increases (decreases), resulting in a decrease (increase) in market price and an increase (decrease) in the equilibrium quantity traded in the market.
+
+### 13.f. Describe pricing strategy under each market structure.
+
+- Whether a firm operates in perfect competition, monopolistic competition, or is a monopoly, profits are maximized by producing and selling the quantity for which marginal revenue equals marginal cost.
+- Under perfect competition, price equals marginal revenue.
+- Under monopolistic competition or monopoly, firms face downward-sloping demand curves so that marginal revenue is less than price, and the price charged at the profit-maximizing quantity is the price from the firm's demand curve at the optimal (profit-maximizing) level of output.
+- Under oligopoly, the pricing strategy is not clear. Because firm decisions are interdependent, the optimal pricing and output strategy depends on the assumptions made about other firms' cost structures and about competitors' responses to a firm's price changes.
+
+### 13.g. Describe the use and limitations of concentration measures in identifying market structure.
+
+- A concentration ratio for N firms is calculated as the percentage of market sales accounted for by the N largest firms in the industry and is used as a simple measure of market structure and market power.
+- The Herfindahl-Hirschman Index measure of concentration is calculated as the sum of the squared market shares of the largest N firms in an industry and better reflects the effect of mergers on industry concentration.
+- Neither measure actually measures market power directly. Both can be misleading measures of market power when potential competition restricts pricing power.
+
+### 13.h. Identify the type of market structure within which a firm operates.
+
+- To identify the market structure in which a firm is operating, we need to examine the number of firms in its industry, whether products are differentiated or other types of non-price competition exist, and barriers to entry, and compare these to the characteristics that define each market structure.
+
+## Aggregate output, prices, and economic growth
+
+### 14.a. Calculate and explain gross domestic product (GDP) using expenditure and income approaches.
+
+- Gross domestic product (GDP) is the market value of all final goods and services produced within a country during a certain time period.
+- Using the expenditure approach, GDP is calculated as the total amount spent on goods and services produced in the country during a time period.
+- Using the income approach, GDP is calculated as the total income earned by households and businesses in the country during a time period.
+
+### 14.b. Compare the sum-of-value-added and value-of-final-output methods of calculating GDP.
+
+- The expenditure approach to measuring GDP can use the sum-of-value-added method or the value-of-final-output method.
+    - Sum-of-value-added: GDP is calculated by summing the additions to value created at each stage of production and distribution.
+    - Value-of-final-output: GDP is calculated by summing the values of all final goods and services produced during the period.
+
+### 14.c. Compare nominal and real GDP and calculate and interpret the GDP deflator.
+
+- Nominal GDP values goods and services at their current prices. Real GDP measures current year output using prices from a base year.
+- The GDP deflator is a price index that can be used to convert nominal GDP into real GDP by removing the effects of changes in prices.
+
+### 14.d. Compare GDP, national income, personal income, and personal disposable income.
+
+- The four components of gross domestic product are consumption spending, business investment, government spending, and net exports.
+- GDP = C + I + G + (X - M)
+- National income is the income received by all factors of production used in the creation of final output.
+- Personal income is the pretax income received by households.
+- Household disposable income is personal income after taxes.
+
+### 14.e. Explain the fundamental relationship among saving, investment, the fiscal balance, and the trade balance.
+
+- Private saving and investment are related to the fiscal balance and the trade balance.
+- A fiscal deficit must be financed by some combination of a trade deficit or an excess of private saving over private investment.
+- (G - T) = (S - I) - (X - M)
+
+### 14.f. Explain the IS and LM curves and how they combine to generate the aggregate demand curve.
+
+- The IS curve shows the negative relationship between the real interest rate and levels of aggregate income that are equal to planned expenditures at each real interest rate.
+- The LM curve shows, for a given level of the real money supply, a positive relationship between the real interest rate and levels of aggregate income at which demand and supply of real money balances are equal.
+- The points at which the IS curve intersects LM curves for different levels of the real money supply (i.e., for different price levels, holding the nominal money supply constant) form the aggregate demand curve. The aggregate demand curve shows the negative relationship between GDP (real output demanded) and the price level, when other factors are held constant.
+
+### 14.g. Explain the aggregate supply curve in the short run and long run.
+
+- The short-run aggregate supply curve shows the positive relationship between real GDP supplied and the price level, when other factors are held constant. Holding some input costs such as wages fixed in the short run, the curve slops upward because higher output prices result in greater output (real wages fall).
+- Because all input prices are assumed to be flexible in the long run, the long-run aggregate supply curve is perfectly inelastic (vertical). Long-run aggregate supply represent potential GDP, the full employment level of economic output.
+
+### 14.h. Explain causes of movements along and shifts in aggregate demand and supply curves.
+
+- Changes in the price level cause movement along the aggregate demand or aggregate supply curves.
+- Shifts in the aggregate demand curve are caused by changes in household wealth, business and consumer expectations, capacity utilization, fiscal policy, monetary policy, currency exchange rates, and global economic growth rates.
+- Shifts in the short-run aggregate supply curve are caused by changes in nominal wages or other input prices, expectations of future prices, business taxes, business subsidies, and currency exchange rates, as well as by the factors that affect long-run aggregate supply.
+- Shifts in the long-run aggregate supply curve are caused by changes in labor supply and quality, the supply of physical capital, the availability of natural resources, and the level of technology.
+
+### 14.i. Describe how fluctuations in aggregate demand and aggregate supply cause short-run changes in the economy and the business cycle.
+
+- The short-run effects of changes in aggregate demand and in aggregate supply are summarized in the following table:
+
+[AD, AS](https://www.notion.so/212c713e2b034ef585710dca4b94e9d3)
+
+### 14.j. Distinguish between the following types of macroeconomic equilibria: long-run full employment, short-run recessionary gap, short-run inflationary gap, and short-run stagflation.
+
+- In long-run equilibrium, real GDP is equal to full-employment (potential) GDP.
+- An increase in aggregate demand can result in a short-run equilibrium with GDP greater than full-employment GDP, termed an inflationary gap.
+- A decrease in aggregate demand can result in a short-run equilibrium with GDp less than full-employment, termed a recessionary gap.
+- When short-run aggregate supply decreases, the resulting short-run equilibrium is with GDP reduced to less than full-employment GDP but with an increase in the price level, termed stagflation.
+
+### 14.k. Explain how a short-run macroeconomic equilibrium may occur at a level above or below full employment.
+
+- From a situation of long-run equilibrium: an increase in either aggregate demand or aggregate supply can result in a short-run equilibrium with real GDP greater than full employment GDP; a decrease in either aggregate demand or aggregate supply can result in a short-run equilibrium with real GDP less than full employment GDP.
+
+### 14.l. Analyze the effect of combined changes in aggregate supply and demand on the economy.
+
+- Short-run effects of shifts in both aggregate demand and aggregate supply on the price level and real GDP:
+
+[AD, GDP](https://www.notion.so/97f020622ff446e09efb9655cc46ff8d)
+
+### 14.m. Describe sources, measurement, and sustainability of economic growth.
+
+- Sources of economic growth include increases in the supply of labor, increases in human capital, increases in the supply of physical capital, increasing availability of natural resources, and advances in technology.
+- The sustainable rate of economic growth is determined by the rate of increase in the labor force and the rate of increase in labor productivity.
+
+### 14.n. Describe the production function approach to analyzing the sources of economic growth.
+
+- A production function relates economic output to the supply of labor, the supply of capital, and total factor productivity.
+- Total factor productivity is a residual factor, which represents that part of economic growth not accounted for by increases in the supply of labor and capital. Increases in total factor productivity can be attributed to advances in technology.
+
+### 14.o. Distinguish between input growth and growth of total factor productivity as components of economic growth.
+
+- In developed countries, where a high level of capital per worker is available and capital inputs experience diminishing marginal productivity, technological advances that increase total factor productivity are the main source of sustainable economic growth.
+
+## Understanding business cycle
+
+### 15.a. Describe the business cycle and its phases.
+
+- The business cycle has four phases:
+    1. Expansion: Real GDP is increasing
+    2. Peak: Real GDP stops increasing and begins decreasing
+    3. Contraction: Real GDP is decreasing
+    4. Trough: Real GDP stops decreasing and begins increasing
+- Expansions feature increasing output, employment, consumption, investment, and inflation.
+- Contractions are characterized by decreases in these indicators.
+- Business cycles are recurring but do not occur at regular intervals, can differ in strength or severity, and do not persist for specific lengths of time.
+
+### 15.b. Describe how resource use, housing sector activity, and external trade sector activity vary as an economy moves through the business cycle.
+
+- Inventory to sales ratios typically increase late in expansions when sales slow and decrease near the end of contractions when sales begin to accelerate. Firms decrease or increase production to restore their inventory-sales ratios to their desired levels.
+- Because hiring and laying off employees have high costs, firms prefer to adjust their utilization of current employees. As a result, firms are slow to lay off employees early in contractions and slow to add employees early in expansions.
+- Firms use their physical capital more intensively during expansions, investing in new capacity only if they believe the expansion is likely to continue. They use physical capital less intensively during contractions, but they are more likely to reduce capacity by deferring maintenance and not replacing equipment than by selling their physical capital.
+- The level of activity in the housing sector is affected by mortgage rates, demographic changes, the ratio of income to housing prices, and investment or speculative demand for homes resulting from recent price trends.
+- Domestic imports tend to rise with increases in GDP growth and domestic currency appreciation, while increase in foreign incomes and domestic currency depreciation then to increase domestic export volumes.
+
+### 15.c. Describe theories of the business cycle.
+
+- Neoclassical economist believe business cycles are temporary and driven by changes in technology, and that rapid adjustments of wages and other input prices cause the economy to move to full-employment equilibrium.
+- Keynesian economist believe excessive optimism or pessimism among business managers causes business cycles and that contractions can persist because wages are slow to move downward.
+- New Keynesians believe input prices other than wages are also slow to move downward.
+- Monetarists believe inappropriate changes in the rate of money supply growth cause business cycles, and that money supply growth should be maintained at a moderate and predictable rate to support the growth of real GDP.
+- Austrian-school economists believe business cycles are initiated by government intervention that drives interest rates to artificially low levels.
+- Real business cycle theory holds that business cycles can be explained by utility-maximizing actors responding to real economic forces such as external shocks and changes in technology, and that policymakers should not intervene in business cycles.
+
+### 15.d. Describe types of unemployment and compare measures of unemployment.
+
+- Frictional unemployment results from the time it takes for employers looking to fill jobs and employees seeking those jobs to find each other.
+- Structural unemployment results from long-term economic changes that require workers to learn new skills to fill available jobs.
+- Cyclical unemployment is positive (negative) when the economy is producing less (more) than its potential real GDP.
+- A person is considered unemployed if he is not working, is available for work, and is actively seeking work.
+- The labor force includes all people who are either employed or unemployed.
+- The unemployment rate is the percentage of labor force participants who are unemployed.
+
+### 15.e. Explain inflation, hyperinflation, disinflation, and deflation.
+
+- Inflation is a persistent increase in the price level over time. An inflation rate is a percentage increase in the price level from one period to the next.
+- Disinflation is a decrease in the inflation rate over time.
+- Deflation refers to a persistent decrease in the price level.
+
+### 15.f. Explain the construction of indexes used to measure inflation.
+
+- A price index measures the cost of a specific basket of goods and services relative to its cost in a prior (base) period. The inflation rate is most often calculated as the annual percentage change in a price index.
+- The most widely followed price index is the consumer price index (CPI), which is based on the purchasing patterns of a typical household.
+- The GDP deflator and the producer or wholesale price index are also used as measures of inflation.
+- Headline inflation is a percentage change in a price index for all goods.
+- Core inflation is calculated by excluding food and energy prices from a price index because of their high short-term volatility.
+
+### 15.g. Compare inflation measures, including their uses and limitations.
+
+- A Laspeyres price index is based on the cost of a specific basket of goods and services that represents actual consumption in a base period. New goods, quality improvements, and consumers' substitution of lower-priced goods for higher-priced goods over time cause Laspeyres index to be biased upward.
+- A Paasche price index uses current consumption weights for the basket of goods and services for both periods and thereby reduces substitution bias.
+- A Fisher price index is the geometric mean of a Laspeyres and a Paasche index.
+
+### 15.h. Distinguish between cost-push and demand-pull inflation.
+
+- Cost-push inflation results from a decrease in aggregate supply caused by an increase in the real price of an important factor of production, such as labor or energy.
+- Demand-pull inflation results form persistent increase in aggregate demand that increase the price level and temporarily increase economic output above its potential or full-employment level.
+- The non-accelerating inflation rate of unemployment (NAIRU) represents the unemployment rate below which upward pressure on wages is likely to develop.
+- Wage demands reflect inflation expectations.
+
+### 15.i. Interpret a set of economic indicators and describe their uses and limitations.
+
+- Leading indicators have turning points that tend to precede those of the business cycle.
+- Coincident indicators have turning points that tend to coincide with those of the business cycle.
+- Lagging indicators have turning points that tend to occur after those of the business cycle.
+- A limitation of using economic indicators to predict business cycles is that their relationships with the business cycle are inexact and can vary over time.
+
+## Monetary and fiscal policy
+
+### 16.a. Compare monetary and fiscal policy.
+
+- Fiscal policy is a government's use of taxation and spending to influence the economy.
+- Monetary policy deals with determining the quantity of money supplied by the central bank.
+- Both policies aim to achieve economic growth with price level stability, although governments use fiscal policy for social and political reasons as well.
+
+### 16.b. Describe functions and definitions of money.
+
+- Money is defined as a widely accepted medium of exchange. Functions of money include a medium of exchange, a store of value, and a unit of account.
+
+### 16.c. Explain the money creation process.
+
+- In a fractional reserve system, new money created is a multiple of new excess reserves available for lending by banks. The potential multiplier is equal to the reciprocal of the reserve requirement and, therefore, is inversely related to the reserve requirement.
+
+### 16.d. Describe theories of the demand for and supply of money.
+
+- Three factors influence money demand:
+    - Transaction demand, for buying goods and services.
+    - Precautionary demand, to meet unforeseen future needs.
+    - Speculative demand, to take advantage of investment opportunities.
+- Money supply is determined by central banks with the goal of managing inflation and other economic objectives.
+
+### 16.e. Describe the Fisher effect.
+
+- The Fisher effect states that a nominal interest rate is equal to the real interest rate plus the expected inflation rate.
+
+### 16.f. Describe roles and objectives of central banks.
+
+- Central bank roles include supplying currency, acting as banker to the government and to other banks, regulating and supervising the payments system, acting as a lender of last resort, holding the nation's gold and foreign currency reserves, and conducting monetary policy.
+- Central banks have the objective of controlling inflation, and some have additional goals of maintaining currency stability, full employment, positive sustainable economic growth, or moderate interest rates.
+
+### 16.g. Contrast the costs of expected and unexpected inflation.
+
+- High inflation, even when it is perfectly anticipated, imposes costs on the economy as people reduce cash balances because of the higher opportunity costs of holding cash. More significant costs are imposed by unexpected inflation, which reduces the information value of price changes, can make economic cycles worse, and shifts wealth from lenders to borrowers. Uncertainty about the future rate of inflation increases risk, resulting in decreased business investment.
+
+### 16.h. Describe tools used to implement monetary policy.
+
+- Policy tools available to central banks include the policy rate, reserve requirements, and open market operations. The policy rate is called the discount rate in the United States, the refinancing rate by the ECB, and the 2-week repo in the United Kingdom.
+- Decreasing the policy rate, decreasing reserve requirements, and making open market purchases of securities are all expansionary. Increasing the policy rate, increasing reserve requirements, and making open market sales of securities are all contractionary.
+
+### 16.i. Describe the monetary transmission mechanism.
+
+- The transmission mechanism for changes in the central bank's policy rate through to prices and inflation includes one or more of the following:
+    - Short-term bank lending rates.
+    - Asset prices.
+    - Expectations for economic activity and future policy rate changes.
+    - Exchange rates with foreign currencies.
+
+### 16.j. Describe qualities of effective central banks.
+
+- Effective central banks exhibit independence, credibility, and transparency.
+- Independence: The central bank is free from political interference.
+- Credibility: The central bank follows through on its stated policy intentions.
+- Transparency: The central bank makes it clear what economic indicators it uses and reports on the state of hose indicators.
+
+### 16.k. Explain the relationships between monetary policy and economic growth, inflation, interest, and exchange rates.
+
+- A contractionary monetary policy (increase in policy rate) will tend to decrease economic growth, increase market interest rates, decrease inflation, and lead to appreciation of the domestic currency in foreign exchange markets.
+- An expansionary monetary policy (decrease in policy rate) will have opposite effects, tending to increase economic growth, decrease market interest rates, increase inflation, and reduce the value of the currency in foreign exchange markets.
+
+### 16.l. Contrast the use of inflation, interest rate, and exchange rate targeting by central banks.
+
+- Most central banks set target inflation rates, typically 2% to 3%, rather than targeting interest rates as was once common. When inflation is expected to rise above (fall below) the target band, the money supply is decreased (increased) to reduce (increase) economic activity.
+- Developing economies sometimes target a stable exchange rate for their currency relative to that of a developed economy, selling their currency when its value rises above the target rate and buying their currency with foreign reserves when the rate falls below the target. The developing country must follow a monetary policy that supports the target exchange rate and essentially commits to having the same inflation rate as the developed country.
+
+### 16.m. Determine whether a monetary policy is expansionary or contractionary.
+
+- The real trend rate is the long-term sustainable real growth rate of an economy.
+- The neutral interest rate is the sum of the real trend rate and the target inflation rate.
+- Monetary policy is said to be contractionary when the policy rate is above the neutral rate and expansionary when the policy rate is below the neutral rate.
+
+### 16.n. Describe limitations of monetary policy.
+
+- Reasons that monetary policy may not work as intended:
+    - Monetary policy changes may affect inflation expectations to such an extent that long-term interest rates move opposite to short-term interest rates.
+    - Individuals may be willing to hold greater cash balances without a change in short-term rates (liquidity trap).
+    - Banks may be unwilling to lend greater amounts, even when they have increased excess reserves.
+    - Short-term rates cannot be reduced below zero.
+    - Developing economies face unique challenges in utilizing monetary policy due to undeveloped financial markets, rapid financial innovation, and lack of credibility of the monetary authority.
+
+### 16.o. Describe roles and objectives of fiscal policy.
+
+- Fiscal policy refers to the taxing and spending policies of the government.
+- Objective of fiscal policy can include (1) influencing the level of economic activity, (2) redistributing wealth or income, and (3) allocating resources among industries.
+
+### 16.p. Describe tools of fiscal policy, including their advantages and disadvantages.
+
+- Fiscal policy tools include spending tools and revenue tools. Spending tools include transfer payments, current spending (goods and services used by government), and capital spending (investment projects funded by government). Revenue tools include direct and indirect taxation.
+- An advantage of fiscal policy is that indirect taxes can be used to quickly implement social policies and can also be sued to quickly raise revenues at a low cost.
+- Disadvantages of fiscal policy include time lags for implementing changes in direct taxes and time lags for capital spending changes to have an impact.
+
+### 16.q. Describe the arguments about whether the size of a national debt relative to GDP matters.
+
+- Arguments for being concerned with the size of fiscal deficit:
+    - Higher future taxes lead to disincentives to work, negatively affecting long-term economic growth.
+    - Fiscal deficits may not be financed by the market when debt levels are high.
+    - Crowding-out effect as government borrowing increases interest rates and decreases private sector investment.
+- Arguments against being concerned with the size of fiscal deficit:
+    - Debt may be financed by domestic citizens
+    - Deficits for capital spending can boost the productive capacity of the economy.
+    - Fiscal deficits may prompt needed tax reform.
+    - Ricardian equivalence may prevail: private savings rise in anticipation of the need to repay principal on government debt.
+    - When the economy is operating below full employment, deficits do not crowd out private investment.
+
+### 16.r. Explain the implementation of fiscal policy and difficulties of implementation.
+
+- Fiscal policy is implemented by governmental changes in taxing and spending policies.
+- Delays in realizing the effects of fiscal policy changes limit their usefulness.
+- Delays can be caused by:
+    - Recognition lag: Policymakers may not immediately recognize when fiscal policy changes are needed.
+    - Action lag: Governments take time to enact needed fiscal policy changes.
+    - Impact lag: Fiscal policy changes take time to affect economic activity.
+
+### 16.s. Determine whether a fiscal policy is expansionary or contractionary.
+
+- A government has a budget surplus when tax revenues exceed government spending and a deficit when spending exceeds tax revenue.
+- An increase (decrease) in a government budget surplus is indicative of a contractionary (expansionary) fiscal policy. Similarly, an increase (decrease) in a government budget deficit is indicative of an expansionary (contractionary) fiscal policy.
+
+### 16.t. Explain the interaction of monetary and fiscal policy.
+
+- Interaction of monetary and fiscal policies:
+
+[Monetary and fiscal policies](https://www.notion.so/5d0a78d63b2c4196bad1b53c045b8f80)
+
+## International Trade and Capital Flows
+
+### 17.a. Compare gross domestic product and gross national product.
+
+- Gross domestic product is the total value of goods and services produced within a country's borders.
+- Gross national product measures the total value of goods and services produced by the labor and capital supplied by a country's citizens, regardless of where the production takes place.
+
+### 17.b. Describe benefits and costs of international trade.
+
+- Free trade among countries increase overall economic welfare. Countries can benefit from trade because one country can specialize in the production of an export good and benefit from economies of scale. Economic welfare can also be increased by greater product variety, more competition, and a more efficient allocation of resources.
+- Costs of free trade are primarily losses to those in domestic industries that lose business  to foreign competition, especially less efficient producers who leave an industry. While other domestic industries will benefit from freer trade policies, unemployment may increase over the period in which workers are retrained for job in the expanding industries. Some argue that greater income inequality may result, but overall the gains from liberalization of trade policies are thought to exceed the costs, so that the winners could conceivably compensate the losers and still be better off.
+
+### 17.c. Distinguish between comparative advantage and absolute advantage.
+
+- A country is said to have an absolute advantage in the production of a good if it can produce the good at lower cost in terms of resources relative to another country.
+- A country is said to have a comparative advantage in the production of a good if its opportunity cost in terms of other goods that could be produced instead is lower than that of another country.
+
+### 17.d. Compare the Ricardian and Heckscher-Ohlin models of trade and the source(s) of comparative advantage in each model.
+
+- The Ricardian model of trade has only one factor of production-labor. The source of differences in production costs and comparative advantage in Ricardo's model is differences in labor productivity due to differences in technology.
+- Heckscher and Ohlin presented a model in which there are two factors of production-capital and labor. The source of comparative advantage (differences in opportunity costs) in this model is differences in the relative amounts of each factor that countries possess.
+
+### 17.e. Compare types of trade and capital restrictions and their economic implications.
+
+- Types of trade restrictions include:
+    - Tariffs: Taxes on imported good collected by the government.
+    - Quotas: Limits on the amount of imports allowed over some period.
+    - Minimum domestic content: Requirement that some percentage of product content must be form the domestic country.
+    - Voluntary export restraints: A country voluntarily restricts the amount of a good that can be exported, often in the hope of avoiding tariffs or quotas imposed by their trading partners.
+- Within each importing country, all of these restrictions will tend to:
+    - Increase prices of imports and decrease quantities of imports
+    - Increase demand for and quantity supplied of domestically produced goods
+    - Increase producer's surplus and decrease consumer surplus
+- Export subsidies decrease export prices and benefit importing countries at the expense of the government of the exporting country.
+- Restrictions on the flow of financial capital across borders include outright prohibition of investment in the domestic country by foreigners, prohibition of or taxes on the income earned on foreign investments by domestic citizens, prohibition of foreign investment in certain domestic industries, and restrictions on repatriation of earnings of foreign entities operating in a country.
+
+### 17.f. Explain motivations for and advantages of trading blocs, common markets, and economic unions.
+
+- Trade agreements, which increase economic welfare by facilitating trade among member countries, take the following forms:
+    - Free trade area: All barriers to the import and export of goods and services among member countries are removed.
+    - Customs union: Member countries also adopt a common set of trade restrictions with non-members.
+    - Common market: Member countries also remove all barriers to the movement of labor and capital goods among members.
+    - Economic union: Member countries also establish common institutions and economic policy for the union.
+    - Monetary union: Member countries also adopt a single currency.
+
+### 17.g. Describe common objectives of capital restrictions imposed by governments.
+
+- Commonly cited objectives of capital flow restrictions include:
+    - Reducing the volatility of domestic asset prices.
+    - Maintaining fixed exchange rates.
+    - Keeping domestic interest rates low and enabling greater independence regarding monetary policy.
+    - Protecting strategic industries from foreign ownership.
+
+### 17.h. Describe the balance of payments account including their components.
+
+- The balance of payments refers to the fact that increases in a country's assets and decreases in its liabilities must equal (balance with) decreases in its assets and increases in its liabilities. These financial flows are classified into three types:
+    - The current account includes imports and exports of merchandise and services, foreign income from dividends on stock holding and interest on debt securities, and unilateral transfers such as money received from those working abroad and direct foreign aid.
+    - The capital account includes debt forgiveness, assets that migrants bring to or take away from a country, transfer of funds for the purchase or sales of fixed assets, and purchases of non-financial assets, including rights to natural resources, patents, copyrights, trademarks, franchises, and leases.
+    - The financial account includes government-owned assets abroad such as gold, foreign currencies and securities, and direct foreign investment and claims against foreign banks. The financial account also includes foreign-owned assets in the country, domestic government and corporate securities, direct investment in the domestic country, and domestic country currency.
+- Overall, any surplus (deficit) in the current account must be offset by a deficit (surplus) in the capital and financial accounts.
+
+### 17.i. Explain how decisions by consumers, firms, and governments affect the balance of payments.
+
+- In equilibrium, we have the relationship:
+    - exports - imports = private savings + government savings - domestic investment
+    - When total savings is less than domestic investment, exports must be less than imports so that these is a deficit in the current account. Lower levels of private saving, larger government deficits, and high rates of domestic investment all tend to result in or increase a current account deficit. The intuition here is that low private or government savings in relation to private investment in domestic capital requires foreign investment in domestic capital.
+
+### 17.j. Describe functions and objectives of the international organizations that facilitate trade, including the World Bank, the International Monetary Fund, and the World Trade Organization.
+
+- The International Monetary Fund facilitates trade by promoting international monetary cooperation and exchange rate stability, assist in setting up international payments systems, and makes resources available to member countries with balance of payments problems.
+- The World Bank provides low-interest loans, interest-free credits, and grants to developing countries for many specific purposes. It also provides resources and knowledge and helps form private/public partnerships with the overall goal of fighting poverty.
+- The World Trade Organization has the goal of ensuring that trade flows freely and works smoothly. Its main focus is on instituting, interpreting, and enforcing a number of multilateral trade agreements that detail global trade policies for a large majority of the world's trading nations.
+
+## Currency exchange rates
+
+### 18.a. Define an exchange rate and distinguish between nominal and real exchange rates and spot and forward exchange rates.
+
+- Currency exchange rates are given as the price of one uint of currency in terms of another. A nominal exchange rate of 1.44 USD/EUR is interpreted as $1.44 per euro. We refer to the USD as the price currency and the EUR as the base currency.
+- An increase (decrease) in an exchange rate represents an appreciation (depreciation) of the base currency relative to the price currency.
+- A spot exchange rate is the rate for immediate delivery.
+- A forward exchange rate is a rate for exchange of currencies at some future date.
+- A real exchange rate measures changes in relative purchasing power over time.
+- real exchange rate = nominal exchange rate * (CPI base currency / CPI price currency)
+
+### 18.b. Describe functions of and participants in the foreign exchange market.
+
+- The market for foreign exchange is the largest financial market in terms of the value of daily transactions and has a variety of participants, including large multinational banks (the sell side) and corporations, investment fund managers, hedge fund managers, investors, governments, and central banks (the buy side).
+- Participants in the foreign exchange markets are referred to as hedgers if they enter into transactions that decrease an existing foreign exchange risk and as speculators if they enter into transactions that increase their foreign exchange risk.
+
+### 18.c. Calculate and interpret the percentage change in a currency relative to another currency.
+
+- For a change in an exchange rate, we can calculate the percentage appreciation (price goes up) or depreciation (price goes down) of the base currency.
+- To calculate the appreciation or depreciation of the price currency, we first invert the quote so it is now the base currency and then proceed as above.
+
+### 18.d. Calculate and interpret currency cross-rates.
+
+- Given two exchange rate quotes for three different currencies, we can calculate a currency cross rate.
+
+### 18.e. Convert forward quotations expressed on a points basis or in percentage terms into an outright forward quotation.
+
+- Points in a foreign currency quotation are in units of the last digit of the quotation.
+- For a forward exchange rate quote given as a percentage, the percentage (change in the spot rate) is calculated as forward / spot - 1.
+
+### 18.f. Explain the arbitrage relationship between spot rates, forward rates, and interest rates.
+
+- If a forward exchange rate does not correctly reflect the difference between the interest rates for two currencies, an arbitrage opportunity for a riskless profit exists. In this case, borrowing one currency, converting it to the other currency at the spot rate, investing the proceeds for the period, and converting the end-of-period amount back to the borrowed currency at the forward rate will produce more than enough to pay off the initial loan, with the remainder being a riskless profit on the arbitrage transaction.
+
+### 18.g. Calculate and interpret a forward discount or premium.
+
+- To calculate a forward premium or forward discount for Currency B using exchange rates quoted as units of Currency A per unit of Currency Bm use the following formula:
+    - (forward / spot) - 1
+
+### 18.h. Calculate and interpret the forward rate consistent with the spot rate and the interest rate in each currency.
+
+- The condition that must be met so that there is no arbitrage opportunity available is:
+    - forward / spot = (1 + interest rate price currency) / (1 + interest rate base currency)
+    - so that
+    - forward = spot * (1 + interest rate price currency) / (1 + interest rate base currency)
+
+### 18.i. Describe exchange rate regimes.
+
+- Exchange rate regimes for countries that do not have their own currency:
+    - With formal dollarization, a country uses the currency of another country
+    - In a monetary union, several countries use a common currency
+- Exchange rate regimes for countries that have their own currency:
+    - A currency board arrangement is an explicit commitment to exchange domestic currency for a specified foreign currency at a fixed exchange rate.
+    - In a conventional fixed peg arrangement, a country pegs its currency within margins of +- 1% versus another currency.
+    - In a system of pegged exchange rates within horizontal bands or a target zone, the permitted fluctuations in currency value relative to another currency or basket of currencies are wider.
+    - With management of exchange rates within crawling bands, the width of the band that identify permissible exchange rates is increased over time.
+    - When a currency is independently floating, the exchange rate is market-determined.
+
+### 18.j. Explain the effects of exchange rates on countries' international trade and capital flows.
+
+- Elasticities of export and import demand must meet the Marshall-Lerner condition for a depreciation of the domestic currency to reduce an existing trade deficit:
+- Under the absorption approach, national income must increase relative to national expenditure in order to decrease a trade deficit. This can also be viewed as a requirement that national saving must increase relative to domestic investment in order to decrease a trade deficit.

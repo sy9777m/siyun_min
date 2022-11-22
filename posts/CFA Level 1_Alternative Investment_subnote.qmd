@@ -1,0 +1,84 @@
+---
+title: "CFA Level 1 Alternative Investment Subnote"
+author: "Siyun Min"
+date: "2021-05-01"
+categories: [CFA]
+---
+# Alternative Investment
+
+# Learning Outcome Statements
+
+## Introduction to Alternative Investments
+
+### 50.a. Compare alternative investments with traditional investments.
+
+- "Traditional investments" refers to long-only positions in stocks, bonds, and cash.
+- "Alternative investments" refers to some types of assets such as real estate, commodities, and various collectables, as well as some specific structures of investment vehicles.
+- Hedge funds and private equity funds (including venture capital funds) are often structured as limited partnerships; real estate investment trusts (REITs) are similar to mutual funds; and ETSs can contain alternative investments as well.
+- Compared to traditional investments, alternative investments typically have lower liquidity; less regulation and disclosure; higher management fees and more specialized management; potential diversification benefits; more use of leverage, use of derivatives; potentially higher returns; limited and possibly biased historical returns data; problematic historical risk measures; and unique legal and tax considerations.
+
+### 50.b. Describe hedge funds, private equity, real estate, commodities, infrastructures, and other alternative investments, including, as applicable, strategies, sub-categories, potential benefits and risks, fee structures, and due diligence.
+
+- Hedge funds are investment companies that use a variety of strategies and may be highly leveraged, use long and short positions, and use derivatives.
+    - Event-driven strategies include merger arbitrage, distressed/restructuring, activist shareholder, and special situations.
+    - Relative value strategies seek profits from unusual pricing issues.
+    - Macro hedge strategies are "top down" strategies based on global economic trends.
+    - Equity hedge strategies are "bottom up" strategies that take long and short positions in equities and equity derivatives. Strategies include market neutral, fundamental growth, fundamental value, quantitative directional, short bias, and sector specific.
+    - In periods of financial crisis, the correlation of returns between global equities and hedge funds tends to increase, which limits hedge funds' effectiveness as a diversifying asset class.
+    - Due diligence factors for hedge funds are investment strategy, investment process, competitive advantages, track record, longevity of fund, and size (assets under management). Other qualitative factors include management style, key person risk, reputation, investor relations, growth plans, and management of systematic risk.
+- Private equity funds usually invest in the equity of private companies or companies wanting to become private, financing their assets with high levels of debt. This category also includes venture capital funds, which provide capital to companies early in their development.
+    - Leveraged buyouts (LBOs) include management buyouts, in which the existing management team is involved in the purchase, and management buy-ins, in which an external management team replaces the existing management.
+    - Stages of venture capital investing include the formative stage (composed of the angel investing, seed, and early stages); the later stage (expansion); and the mezzanine stage (prepare for IPO).
+    - Methods for exiting investments in portfolio companies include trade sale (sell to a competitor or another strategic buyer); IPO (sell some or all shares to investors); recapitalization (issue portfolio company debt); secondary sale (sell to another private equity firm or other investors); or write-off/liquidation.
+    - Private equity has some historical record of potential diversification benefits. An investor must identify top performing private equity managers to benefit from private equity.
+    - Due diligence factors for private equity include the manager's experience, valuation methods used, fee structure, and drawdown procedures for committed capital.
+- Real estate as an asset class includes residential and commercial real estate, individual mortgages, and pools of mortgages or properties.
+    - It includes direct investment in single properties or loans as well as indirect investment in limited partnerships, which are private securities, and mortgage-backed securities and real estate investment trusts, which are publicly traded.
+    - Reasons to invest in real estate include potential long-term total returns, income form rent payments, diversification benefits, and hedging against inflation.
+    - Forms of real estate investing:
+    
+    [Forms of real estate investing](https://www.notion.so/91128ce5a33842408f5b357fc168ac2a)
+    
+    - Real estate investment categories include residential properties, commercial real estate, REITs, mortgage-backed securities, and timberland and farmland.
+    - Historically, real estate returns are highly correlated with global equity returns but less correlated with global bond returns. The construction methods of real estate indexes may contribute to the low correlation with bond returns.
+    - Due diligence factors for real estate include global and national economic factors, local market conditions, interest rates, and property-specific risks including regulations and abilities of managers. Distressed properties investing and real estate development have additional risk factors to consider.
+- Commodities refers to physical assets such as agricultural products, metals, oil and gas, and other raw materials used in production.
+    - Commodities market exposure can provide an inflation hedge and diversification benefits.
+    - The most common way to invest in commodities is with derivatives. Other methods include exchange-traded funds, equities that are directly linked to a commodity managed futures funds, individual managed accounts, and specialized funds in specific commodity sectors.
+    - Beyond the potential for higher returns and lower volatility benefits to a portfolio, commodity as an asset class may offer inflation protection. Commodities can offset inflation, especially if commodity prices are used to determine inflation indices.
+    - Spot prices for commodities are a function of supply and demand. Global economics, production costs, and storage costs, along with value to user, all factor into prices.
+- Infrastructure refers to long-lived assets that provide public services and are often build or operated by governments.
+    - Infrastructure investments may be classified as greenfield (assets to be built) or brownfield (existing assets).
+    - Liquidity is low for direct investments in infrastructure because the assets are long-lived and tend to be large-scale. However, some liquid investment vehicles exist that are backed by infrastructure assets.
+- Other alternative investments include various types of collectibles, such as cars, wines, and art.
+
+### 50.c. Describe potential benefits of alternative investments in the context of portfolio management.
+
+- The primary motivation for adding alternative investments to a portfolio is to reduce portfolio risk based on the less-than-perfect correlation between alternative asset returns and traditional asset returns.
+- However, because correlations have been variable across time periods and categories of alternative investments, the diversification benefits are not always realized. Additionally, returns correlations can increase during periods of market disruption and decline.
+
+### 50.d. Describe, calculate, and interpret management and incentive fees and net-of-fees returns to hedge funds.
+
+- The total fee for a hedge fund consists of a management fee and an incentive fee.
+- Other fee structure specifications include hurdle rates and high water marks.
+- Funds of funds incur an additional level of management fees.
+- Fee calculations for both management fees and incentive fees can differ by the schedule and method of fee determination.
+
+### 50.e. Describe issues in valuing and calculating returns on hedge funds, private equity, real estate, commodities, and infrastructure.
+
+- Hedge funds often invest in securities that are not actively traded and must estimate their values, and invest in securities that are illiquid relative to the size of a hedge fund's position. Hedge funds may calculate a trading NAV that adjusts for the illiquidity of these securities.
+- A private equity portfolio company may be valued using a market/comparables approach (multiple-based) approach, a discounted cash flow approach, or and asset-based approach.
+- Real estate property valuation approaches include the comparable sales approach, the income approach (multiples or discounted cash flows), and the cost approach. REITs can be valued using an income-based approach or an asset-based approach.
+- A commodity futures price is approximately equal to the spot price compounded at the risk-free rate, plus storage costs, minus the convenience yield.
+
+### 50.f. Describe risk management of alternative investments.
+
+- Risk management of alternative investments requires understanding of the unique circumstances for each category.
+    - Standard deviation of returns may be misleading as a measure of risk.
+    - Use of derivatives introduces operational, financial, counterparty, and liquidity risks.
+    - Performance for some alternative investment categories depends primarily on management expertise.
+    - Hedge funds and private equity funds are less transparent than traditional investments.
+    - Many alternative investments are illiquid.
+    - Indices of historical returns and standard deviations may not be good indicators of future returns and volatility.
+    - Correlations vary across periods and are affected by events.
+- Key items for due diligence include organization, portfolio management, operations and controls, risk management, legal review, and fund terms.
