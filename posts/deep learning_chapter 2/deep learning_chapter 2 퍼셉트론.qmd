@@ -1,0 +1,128 @@
+---
+title: "밑바닥부터 시작하는 딥러닝 1 - Chapter 2"
+author: "Siyun Min"
+date: "2022-11-10"
+categories: [Deep Learning]
+---
+# 1 - chapter 2 퍼셉트론
+
+# 퍼셉트론
+
+다수의 신호를 입력으로 받아 하나의 신호를 출력
+
+신호 - 전류나 강물처럼 흐름이 있는 것
+
+![Untitled](./Untitled.png)
+
+원 - 뉴런, 노드
+
+입력 신호가 뉴런에 보내질 때는 각각 고유한 가중치가 곱해짐
+
+뉴런에서 보내온 신호의 총합이 정해진 한계를 넘어설 때만 1을 출력
+
+- 한계 - 임계값
+
+![Untitled](./Untitled%201.png)
+
+perceptron은 복수의 입력 신호 각각에 고유한 가중치를 부여
+
+가중치는 각 신호가 결과에 주는 영향력을 조절하는 요소로 작용
+
+가중치가 클수록 해당 신호가 그만큼 더 중요하다는 의미
+
+# AND gate
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+# NAND gate
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+# OR gate
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+퍼셉트론으로는 XOR gate 구현 불가
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)
+
+![Untitled](./Untitled%2015.png)
+
+# multi-layer perceptron
+
+![Untitled](./Untitled%2016.png)
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+![Untitled](./Untitled%2020.png)
+
+```python
+def AND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.7
+    tmp = np.sum(w * x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+```
+
+```python
+def NAND(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([-0.5, -0.5])
+    b = 0.7
+    tmp = np.sum(w * x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+
+def OR(x1, x2):
+    x = np.array([x1, x2])
+    w = np.array([0.5, 0.5])
+    b = -0.2
+    tmp = np.sum(w * x) + b
+    if tmp <= 0:
+        return 0
+    else:
+        return 1
+```
+
+```python
+def XOR(x1, x2):
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
+    return y
+```
+
+```python
+print(XOR(0, 0))
+print(XOR(1, 0))
+print(XOR(0, 1))
+print(XOR(1, 1))
+```
