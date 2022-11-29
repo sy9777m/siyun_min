@@ -1,0 +1,78 @@
+---
+title: "The man who solved the market: How Jim Simons launched the quant revolution"
+author: "Siyun Min"
+date: "2021-06-20"
+categories: [Book, Quant, Investment]
+---
+# <The man who solved the market: How Jim Simons launched the quant revolution>
+
+![](https://m.media-amazon.com/images/I/9102tnBjmuL.jpg)
+
+> “Simons is arguably the most successful trader in the history of modern finance. Since 1988, Renaissance’s flagship Medallion hedge fund has generated average annual returns of 66 percent, racking up trading profits of more than $ 100 billion (see Appendix 1 for how I arrive at these numbers). No one in the investment world comes close.”
+> 
+
+역사상 그 어떤 투자자보다 성공적인 수익률을 거두고, 모두가 본능적으로 사고할 때 데이터 기반의 사고를 시작했으며, 지금 우리가 배우는 수학과 데이터 기반 사고에 영향을 끼친 남자가 있다. 퀀트 헤지펀드 르네상스 테크놀로지의 수장, 짐 사이먼스.
+
+> “I was most fascinated by a striking paradox: Simons and his team shouldn’t have been the ones to master the market. Simons never took a single finance class, didn’t care very much for business, and, until he turned forty, only dabbled in trading. A decade later, he still hadn’t made much headway. Heck, Simons didn’t even do applied mathematics, he did theoretical math, the most impractical kind. His firm, located in a sleepy town on the North Shore of Long Island, hires mathematicians and scientists who don’t know anything about investing or the ways of Wall Street. Some are even outright suspicious of capitalism. Yet, Simons and his colleagues are the ones who changed the way investors approach financial markets, leaving an industry of traders, investors, and other pros in the dust. It’s as if a group of tourists, on their first trip to South America, with a few odd-looking tools and meager provisions, discovered El Dorado and proceeded to plunder the golden city, as hardened explorers looked on in frustration.”
+> 
+
+그는 시장을 마스터하지도 않았고, 금융 강의를 수강한 적도 없으며, 이론 수학학자였으며, 그의 펀드는 월스트리트와는 전혀 상관없는 곳에 위치해 있었다. 그러나 그와 그의 직원들은 투자의 방식을 바꿔놓았다.
+
+23살에 박사학위, 암호학과 이론수학에서 두각을 나타내던 학계의 권위자였던 사이먼스는 펀드를 설립하고 파트너를 3번이나 바꿀정도로 data-driven 투자에 몰두했다.
+
+> “Fifty-two years old, Simons had already lived a full life, enjoying enough adventure, accomplishment, and prosperity to satisfy the ambitions of his peers. Yet, there he was, overseeing an investment fund, sweating the market’s daily eruptions.”
+> 
+
+> “Now on his second marriage and third business partner, Simons decided to embrace a radical investing style.”
+> 
+
+> “In trading, as in mathematics, it’s rare to achieve breakthroughs in midlife. Yet, Simons was convinced he was on the verge of something special, maybe even historic.”
+> 
+
+> “He detected early signs of success for his computer system, sparking hope. Besides, Simons didn’t have a lot of options. His once-thriving venture investments weren’t going anywhere, and he sure didn’t want to return to teaching.”
+> 
+
+어릴 때부터 수학에 천부적인 재능과 흥미를 가진 제임스 사이먼스는 자신의 길을 확신하고 있었다...
+
+"삶에서 당신이 좋아하는걸 하라. 당신이 '해야 한다'고 느끼는 것 말고."
+
+"재밌거나 최선이 아닐 수 있다는 걸 알았지만, 나는 괜찮은 걸 할 수 있어. 그냥 난 그런 자신감이 있었어"
+
+> Rather than follow conventional methods, Mercer was tackling his problems with an early form of large-scale machine learning. He and his colleagues were feeding their computers with enough data to enable them to perform tasks on their own. Mercer was nearing his second decade at the computer giant, however, and it still wasn’t clear how much he and the team could accomplish.
+> 
+
+> “The lesson was: Do what you like in life, not what you feel you ‘should’ do,” Simons says. “It’s something I never forgot.”
+> 
+
+> “I realized I might not be spectacular or the best, but I could do something good. I just had that confidence,”
+> 
+
+수학이 지루해진 사이먼스는 우연한 계기로 투자를 접하게 되고 잃어버린 가슴뛰는 흥분을 느끼게 된다.
+
+그는 일찍이 돈의 힘을 알았고, 다른 이들이 자신 위에 올라서는 것을 원하지 않았다. 그는 진정한 부를 갈망했다.
+
+우연한 계기로 접한 투자는 그에게 만족과 즐거움 게다가 경제적 호혜까지 안겨주었다. 그는 운명을 만났다.
+
+> Simons wondered if another kind of job might bring more fulfillment and excitement—and perhaps some wealth, at least enough to pay off his debts. The mounting pressures finally got to Simons. He decided to make a break.
+> 
+
+> Simons saw how wealth can grant independence and influence. “Jim understood at an early age that money is power,” Barbara says. “He didn’t want people to have power over him.”
+> 
+
+> He hungered for true wealth. Simons liked to buy nice things, but he wasn’t extravagant.
+> 
+
+> “Is this it? Am I going to do this my whole life?” he asked Barbara one day at home. “There has to be more.”
+> 
+
+> Simons loved mathematics, but he also needed new adventure. He seemed to thrive on overcoming odds and defying skepticism, and he didn’t see obstacles on the horizon. At just twenty-three, Simons was experiencing an existential crisis.
+> 
+
+> An older friend urged Simons to sell his holdings and pocket his profits, warning that commodity prices are volatile. Simons disregarded the advice. Sure enough, soybean prices tumbled, and Simons barely broke even. The roller-coaster ride might have discouraged some novice investors, but it only whet Simons’s appetite.
+> 
+
+> Simons knew nothing about commodities or how to trade futures (financial contracts promising the delivery of commodities or other investments at a fixed price at a future date), but he became an eager student. At the time, soybeans sold for $ 2.50 per bushel. When the broker said Merrill Lynch’s analysts expected prices to go to three dollars or even higher, Simons’s eyes widened. He bought two futures contracts, watched soybeans soar, and scored several thousand dollars of profits in a matter of days. Simons was hooked. “I was fascinated by the action and the possibility I could make money short-term,” he says.
+> 
+
+> The couple had received $ 5,000 as a wedding gift, and Simons was eager to multiply the cash. He did a bit of research and drove to a Merrill Lynch brokerage office in nearby San Francisco, where he bought shares of United Fruit Company, which sold tropical fruit, and Celanese Corporation, a chemical company.
+>
