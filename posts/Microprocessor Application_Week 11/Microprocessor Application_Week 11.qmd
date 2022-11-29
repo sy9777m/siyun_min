@@ -1,0 +1,51 @@
+---
+title: "Microprocessor Application - Week 11"
+author: "Siyun Min"
+date: "2022-11-24"
+categories: [SSU]
+---
+# Week 11
+
+# Interrupts
+
+What happens during interrupts
+
+How to set them up
+
+An important register - the flags register
+
+# System architecture
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+# Why interrupts?
+
+Interrupts force the current executing process to be preempted
+
+- Without interrupts, a process could only be removed from the processor when it ended or voluntarily yielded
+
+Interrupts allow timely processing of hardware events
+
+Interrupts preclude the need for a (fast) CPU to poll on status of (slow) peripheral hardware
+
+Primary interrupt use cases:
+
+- Peripheral devices use interrupts to request CPU attention
+- The timer interrupt controls the scheduling frequency of a system
+- Processors use interrupts to communicate in multi-processor systems (e.g. for load balancing or synchronization)
+
+# Interrupt vs. polling
+
+Interruptible processor can do multiple jobs at a time
+
+![Untitled](./Untitled%206.png)

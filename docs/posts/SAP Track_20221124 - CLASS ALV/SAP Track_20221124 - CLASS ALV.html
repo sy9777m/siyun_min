@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-11-24">
+
+<title>Siyun Min - Co-op SAP Track 20221124 - CLASS ALV</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Co-op SAP Track 20221124 - CLASS ALV</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+                <div class="quarto-category">SAP</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 24, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="class-alv" class="level1">
+<h1>20221124 - CLASS ALV</h1>
+</section>
+<section id="alv-in-splitter-container" class="level1">
+<h1>ALV IN SPLITTER CONTAINER</h1>
+<ol type="1">
+<li>화면</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>프로그램 생성</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>DOCKING 객체 생성</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>DOCKING 객체 생성 변수</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>SPLITTER 객체 생성</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>SPLITTER 객체 생성 변수</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>METHOD 호출 - GET_CONTAINER</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>GET_CONTAINER 생성 변수</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>CONTAINER에 GRID 붙이기</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>GRID 변수 선언</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>중간 실행</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>필드 카탈로그 변수 선언</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>레이아웃 변수 선언</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>레이아웃 셋팅</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>SORT 변수 선언</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>SORT 세팅</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>ALV 호출</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>결과</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="practice-1" class="level1">
+<h1>PRACTICE 1</h1>
+<section id="zedur001_20221124" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124">ZEDUR001_20221124</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp; Report ZEDUR001_20221124
+*&amp;---------------------------------------------------------------------*
+*&amp;
+*&amp;---------------------------------------------------------------------*
+REPORT ZEDUR001_20221124 MESSAGE-ID ZMEDU15.
+
+INCLUDE ZEDUR001_20221124_TOP.
+INCLUDE ZEDUR001_20221124_SCR.
+INCLUDE ZEDUR001_20221124_F01.
+INCLUDE ZEDUR001_20221124_PBO.
+INCLUDE ZEDUR001_20221124_PAI.
+
+START-OF-SELECTION.
+PERFORM SELECT_DATA.
+
+IF GT_SFLIGHT[] IS NOT INITIAL.
+  IF GT_SCARR[] IS NOT INITIAL.
+    CALL SCREEN 100.
+  ELSE.
+    MESSAGE I100.
+    EXIT.
+  ENDIF.
+ELSE.
+  MESSAGE I100.
+  EXIT.
+ENDIF.</code></pre>
+</section>
+<section id="zedur001_20221124_top" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124_top">ZEDUR001_20221124_TOP</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp;  Include           ZEDUR001_20221124_TOP
+*&amp;---------------------------------------------------------------------*
+
+TABLES: SFLIGHT, SCARR.
+
+DATA: BEGIN OF GS_SFLIGHT.
+  INCLUDE TYPE SFLIGHT.
+DATA: END OF GS_SFLIGHT.
+DATA: GT_SFLIGHT LIKE TABLE OF GS_SFLIGHT.
+
+DATA: BEGIN OF GS_SCARR.
+  INCLUDE TYPE SCARR.
+DATA: END OF GS_SCARR.
+DATA: GT_SCARR LIKE TABLE OF GS_SCARR.
+
+DATA: OK_CODE TYPE SY-UCOMM.
+
+DATA: GC_DOCKING TYPE REF TO CL_GUI_DOCKING_CONTAINER.
+DATA: GC_SPLITTER TYPE REF TO CL_GUI_SPLITTER_CONTAINER.
+
+DATA: GC_CONTAINER1 TYPE REF TO CL_GUI_CONTAINER.
+DATA: GC_CONTAINER2 TYPE REF TO CL_GUI_CONTAINER.
+
+DATA: GC_GRID1 TYPE REF TO CL_GUI_ALV_GRID.
+DATA: GC_GRID2 TYPE REF TO CL_GUI_ALV_GRID.
+
+DATA: GS_FCAT TYPE LVC_S_FCAT.
+DATA: GT_FCAT1 TYPE LVC_T_FCAT.
+DATA: GT_FCAT2 TYPE LVC_T_FCAT.
+
+DATA: GS_LAYO TYPE LVC_S_LAYO.
+DATA: GS_VARIANT TYPE DISVARIANT.
+
+DATA: GS_SORT TYPE LVC_S_SORT.
+DATA: GT_SORT1 TYPE LVC_T_SORT.
+DATA: GT_sORT2 TYPE LVC_T_SORT.</code></pre>
+</section>
+<section id="zedur001_20221124_scr" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124_scr">ZEDUR001_20221124_SCR</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp;  Include           ZEDUR001_20221124_SCR
+*&amp;---------------------------------------------------------------------*</code></pre>
+</section>
+<section id="zedur001_20221124_f01" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124_f01">ZEDUR001_20221124_F01</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp;  Include           ZEDUR001_20221124_F01
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  SELECT_DATA
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM SELECT_DATA .
+  SELECT * FROM SFLIGHT INTO CORRESPONDING FIELDS OF TABLE GT_SFLIGHT.
+
+  SELECT * FROM SCARR INTO CORRESPONDING FIELDS OF TABLE GT_SCARR.
+ENDFORM.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  CREATE_OBJECT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM CREATE_OBJECT .
+CREATE OBJECT GC_DOCKING
+  EXPORTING
+*    PARENT                      =
+    REPID                       = SY-REPID
+    DYNNR                       = SY-DYNNR
+*    SIDE                        = DOCK_AT_LEFT
+    EXTENSION                   = 5000
+*    STYLE                       =
+*    LIFETIME                    = lifetime_default
+*    CAPTION                     =
+*    METRIC                      = 0
+*    RATIO                       =
+*    NO_AUTODEF_PROGID_DYNNR     =
+*    NAME                        =
+*  EXCEPTIONS
+*    CNTL_ERROR                  = 1
+*    CNTL_SYSTEM_ERROR           = 2
+*    CREATE_ERROR                = 3
+*    LIFETIME_ERROR              = 4
+*    LIFETIME_DYNPRO_DYNPRO_LINK = 5
+*    others                      = 6
+    .
+IF SY-SUBRC &lt;&gt; 0.
+* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO
+*            WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.
+ENDIF.
+
+CREATE OBJECT GC_SPLITTER
+  EXPORTING
+*    LINK_DYNNR        =
+*    LINK_REPID        =
+*    SHELLSTYLE        =
+*    LEFT              =
+*    TOP               =
+*    WIDTH             =
+*    HEIGHT            =
+*    METRIC            = cntl_metric_dynpro
+*    ALIGN             = 15
+    PARENT            = GC_DOCKING
+    ROWS              = 2
+    COLUMNS           = 1
+*    NO_AUTODEF_PROGID_DYNNR =
+*    NAME              =
+*  EXCEPTIONS
+*    CNTL_ERROR        = 1
+*    CNTL_SYSTEM_ERROR = 2
+*    others            = 3
+    .
+IF SY-SUBRC &lt;&gt; 0.
+* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO
+*            WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.
+ENDIF.
+
+CALL METHOD GC_SPLITTER-&gt;GET_CONTAINER
+  EXPORTING
+    ROW       = 1
+    COLUMN    = 1
+  RECEIVING
+    CONTAINER = GC_CONTAINER1.
+
+CALL METHOD GC_SPLITTER-&gt;GET_CONTAINER
+  EXPORTING
+    ROW       = 2
+    COLUMN    = 1
+  RECEIVING
+    CONTAINER = GC_CONTAINER2.
+
+CREATE OBJECT GC_GRID1
+  EXPORTING
+*    I_SHELLSTYLE      = 0
+*    I_LIFETIME        =
+    I_PARENT          = GC_CONTAINER1
+*    I_APPL_EVENTS     = space
+*    I_PARENTDBG       =
+*    I_APPLOGPARENT    =
+*    I_GRAPHICSPARENT  =
+*    I_NAME            =
+*    I_FCAT_COMPLETE   = SPACE
+*  EXCEPTIONS
+*    ERROR_CNTL_CREATE = 1
+*    ERROR_CNTL_INIT   = 2
+*    ERROR_CNTL_LINK   = 3
+*    ERROR_DP_CREATE   = 4
+*    others            = 5
+    .
+IF SY-SUBRC &lt;&gt; 0.
+* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO
+*            WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.
+ENDIF.
+
+CREATE OBJECT GC_GRID2
+  EXPORTING
+*    I_SHELLSTYLE      = 0
+*    I_LIFETIME        =
+    I_PARENT          = GC_CONTAINER2
+*    I_APPL_EVENTS     = space
+*    I_PARENTDBG       =
+*    I_APPLOGPARENT    =
+*    I_GRAPHICSPARENT  =
+*    I_NAME            =
+*    I_FCAT_COMPLETE   = SPACE
+*  EXCEPTIONS
+*    ERROR_CNTL_CREATE = 1
+*    ERROR_CNTL_INIT   = 2
+*    ERROR_CNTL_LINK   = 3
+*    ERROR_DP_CREATE   = 4
+*    others            = 5
+    .
+IF SY-SUBRC &lt;&gt; 0.
+* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO
+*            WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.
+ENDIF.
+
+ENDFORM.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  SET_FCAT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM SET_FCAT .
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'CARRID'.
+  GS_FCAT-COLTEXT = '항공코드'.
+  APPEND GS_FCAT TO GT_FCAT1.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'CONNID'.
+  GS_FCAT-COLTEXT = '편명'.
+  APPEND GS_FCAT TO GT_FCAT1.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'FLDATE'.
+  GS_FCAT-COLTEXT = '날짜'.
+  APPEND GS_FCAT TO GT_FCAT1.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'PRICE'.
+  GS_FCAT-COLTEXT = '가격'.
+  GS_FCAT-DO_SUM = 'X'.
+  APPEND GS_FCAT TO GT_FCAT1.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'CARRID'.
+  GS_FCAT-COLTEXT = '항공코드'.
+  APPEND GS_FCAT TO GT_FCAT2.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'CARRIDNAME'.
+  GS_FCAT-COLTEXT = '항공코드명'.
+  APPEND GS_FCAT TO GT_FCAT2.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'CURRCODE'.
+  GS_FCAT-COLTEXT = '통화코드'.
+  APPEND GS_FCAT TO GT_FCAT2.
+
+  CLEAR: GS_FCAT.
+  GS_FCAT-FIELDNAME = 'URL'.
+  GS_FCAT-COLTEXT = 'URL'.
+  APPEND GS_FCAT TO GT_FCAT2.
+ENDFORM.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  SET_LAYO
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM SET_LAYO .
+
+  CLEAR: GS_LAYO.
+  GS_LAYO-ZEBRA = 'X'.
+  GS_LAYO-CWIDTH_OPT = 'X'.
+
+  CLEAR: GS_VARIANT.
+  GS_VARIANT-REPORT = SY-REPID.
+  GS_VARIANT-USERNAME = SY-UNAME.
+
+ENDFORM.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  SET_SORT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM SET_SORT .
+
+  CLEAR:GS_SORT.
+  GS_SORT-FIELDNAME = 'CARRID'.
+  GS_SORT-SUBTOT = 'X'.
+  APPEND GS_SORT TO GT_SORT1.
+
+  CLEAR:GS_SORT.
+  GS_SORT-FIELDNAME = 'CARRID'.
+  GS_SORT-UP = 'X'.
+  APPEND GS_SORT TO GT_SORT2.
+
+ENDFORM.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Form  CALL_ALV
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  --&gt;  p1        text
+*  &lt;--  p2        text
+*----------------------------------------------------------------------*
+FORM CALL_ALV .
+CALL METHOD GC_GRID1-&gt;SET_TABLE_FOR_FIRST_DISPLAY
+  EXPORTING
+*    I_BUFFER_ACTIVE               =
+*    I_BYPASSING_BUFFER            =
+*    I_CONSISTENCY_CHECK           =
+*    I_STRUCTURE_NAME              =
+    IS_VARIANT                    = GS_VARIANT
+    I_SAVE                        = 'A'
+*    I_DEFAULT                     = 'X'
+    IS_LAYOUT                     = GS_LAYO
+*    IS_PRINT                      =
+*    IT_SPECIAL_GROUPS             =
+*    IT_TOOLBAR_EXCLUDING          =
+*    IT_HYPERLINK                  =
+*    IT_ALV_GRAPHICS               =
+*    IT_EXCEPT_QINFO               =
+*    IR_SALV_ADAPTER               =
+  CHANGING
+    IT_OUTTAB                     = GT_SFLIGHT
+    IT_FIELDCATALOG               = GT_FCAT1
+    IT_SORT                       = GT_SORT1
+*    IT_FILTER                     =
+*  EXCEPTIONS
+*    INVALID_PARAMETER_COMBINATION = 1
+*    PROGRAM_ERROR                 = 2
+*    TOO_MANY_LINES                = 3
+*    others                        = 4
+        .
+IF SY-SUBRC &lt;&gt; 0.
+* Implement suitable error handling here
+ENDIF.
+
+CALL METHOD GC_GRID2-&gt;SET_TABLE_FOR_FIRST_DISPLAY
+  EXPORTING
+*    I_BUFFER_ACTIVE               =
+*    I_BYPASSING_BUFFER            =
+*    I_CONSISTENCY_CHECK           =
+*    I_STRUCTURE_NAME              =
+    IS_VARIANT                    = GS_VARIANT
+    I_SAVE                        = 'A'
+*    I_DEFAULT                     = 'X'
+    IS_LAYOUT                     = GS_LAYO
+*    IS_PRINT                      =
+*    IT_SPECIAL_GROUPS             =
+*    IT_TOOLBAR_EXCLUDING          =
+*    IT_HYPERLINK                  =
+*    IT_ALV_GRAPHICS               =
+*    IT_EXCEPT_QINFO               =
+*    IR_SALV_ADAPTER               =
+  CHANGING
+    IT_OUTTAB                     = GT_SCARR
+    IT_FIELDCATALOG               = GT_FCAT2
+    IT_SORT                       = GT_SORT2
+*    IT_FILTER                     =
+*  EXCEPTIONS
+*    INVALID_PARAMETER_COMBINATION = 1
+*    PROGRAM_ERROR                 = 2
+*    TOO_MANY_LINES                = 3
+*    others                        = 4
+        .
+IF SY-SUBRC &lt;&gt; 0.
+* Implement suitable error handling here
+ENDIF.
+
+ENDFORM.</code></pre>
+</section>
+<section id="zedur001_20221124_pbo" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124_pbo">ZEDUR001_20221124_PBO</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp;  Include           ZEDUR001_20221124_PBO
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  STATUS_0100  OUTPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE STATUS_0100 OUTPUT.
+  SET PF-STATUS 'STATUS100'.
+  SET TITLEBAR 'T100'.
+ENDMODULE.
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  ALV_DISPLAY_0100  OUTPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE ALV_DISPLAY_0100 OUTPUT.
+  PERFORM CREATE_OBJECT.
+  PERFORM SET_FCAT.
+  PERFORM SET_LAYO.
+  PERFORM SET_SORT.
+  PERFORM CALL_ALV.
+ENDMODULE.</code></pre>
+</section>
+<section id="zedur001_20221124_pai" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124_pai">ZEDUR001_20221124_PAI</h2>
+<pre class="abap"><code>*&amp;---------------------------------------------------------------------*
+*&amp;  Include           ZEDUR001_20221124_PAI
+*&amp;---------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  USER_EXIT  INPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+MODULE USER_EXIT INPUT.
+  CASE OK_CODE.
+    WHEN 'BACK' OR 'CANC'.
+      LEAVE TO SCREEN 0.
+    WHEN 'EXIT'.
+      LEAVE PROGRAM.
+  ENDCASE.
+ENDMODULE.</code></pre>
+</section>
+<section id="zedur001_20221124---screen-100" class="level2">
+<h2 class="anchored" data-anchor-id="zedur001_20221124---screen-100">ZEDUR001_20221124 - SCREEN 100</h2>
+<pre class="abap"><code>PROCESS BEFORE OUTPUT.
+  MODULE STATUS_0100.
+  MODULE ALV_DISPLAY_0100.
+*
+PROCESS AFTER INPUT.
+  MODULE USER_EXIT AT EXIT-COMMAND.
+* MODULE USER_COMMAND_0100.</code></pre>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
