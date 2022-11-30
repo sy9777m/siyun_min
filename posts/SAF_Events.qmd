@@ -1,0 +1,171 @@
+---
+title: "Events"
+author: "Siyun Min"
+date: "2022-03-22"
+categories: [Essay, UCB, SAF]
+---
+# Events
+
+오늘은 여기 UC Berkeley에 있기만 해도 참여할 수 있는 이벤트들, 그리고 SCET 학생으로서 참여했던 이벤트에 대한 이야기를 쭉 설명해보려고 한다.
+
+직접적으로 학업과 연관있을 때도 있고 없을 때도 있었지만, 엄청난 사람들을 만날 수 있는 이벤트들도 있고, 워크샵 형태로 친해지거나 새로운 영역을 탐구하게 되는 기회가 되기도 한다. 아마 근데 나는 이런 이벤트들을 레버리지 잘 하는 타입도, 못 하는 타입도 아니고 그 중간에 있을거다.
+
+---
+
+# SCET Workshop
+
+SCET에서 진행하는 워크샵은 전부 SCET 프로그램을 듣는 학생들만을 대상으로 진행된다. 서로 얼굴 자주보고 워크샵을 통해 많이 배워가라는 뜻이 담긴 것 같았다. 전에는 스탠포드 vs 버클리 농구 티켓도 구해다 줬는데, 내가 그 날 요세미티를 가고 말았다.
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-ZFvPGw1ieg/f8266020371155e75bc2737ac6d3f6ea86bacf92252698ec854043166cf366762a9f9bfe6739a7e3007be5422de7783128c91dfb67d87dc00dcb7419d472abadc73be9cb43f44b89888a8a70a2e32fc7fd27c4590fccd5e75b74b6090b319c3af7de70a9)
+
+![SCET OT](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-OL2ROWlPNP/7018c13579056b23446080d2eee1cfe9807021f3178d7a4f5b0445a608cc5ae4dc6b79f66b134fb141604c4a467bcfedcb21236b7f68470866984a5b7956b66e62634702f80d0d1672623d3a4ef6e71971e09fc8e25da877c379bcd9a2f378c6fed394b4)
+
+SCET OT
+
+일단 모든 이벤트는 OT부터 시작한다. 첫 글에서 OT 이야기는 길게 했으니 간단하게 다시 소개하자면, 행정적인 부분 설명하고 프로그램 소개하고 앞으로 이런 친구들과 친하게 지내게 될 것이라는 내용이었다. 이 때는 그냥 그렇구나 저렇구나 하는 친구들이었는데 진짜 한 학기 내내 어떻게든 계속 본다. 다들 친해져서 이제는 뭐 서로 농담따먹고 밥 먹고 술 먹고 그러는 사이.
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-kCZwRIy7bG/c58466dcee424fe8403e7c412304d49f91afac393c0735059d2e28f757ab8cc159420fc29ad55e25326a1a2338e2ecc616b196928ebe082bd481ffd6c7208b634b0c1e3bf50c9161853a14c4400038d784e913cc65fa87e4b01dff819b6e6fe45d1201dd)
+
+![SCET Workshop](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-KKil9Ltla2/35d3187e935a4c9caa822c5e481afd72df9fc4493a6395d4bb4d54182e4c89d61de1c024f7c2c490138ec4b741e776575e0db1a4cc2816494fddd21e161243dfa5b01dad033ba1fd01dcf5e180607e214cc867bbee5a25a7a8a279fd28ef41667bf62ea1)
+
+SCET Workshop
+
+가끔 학교 생활 열심히 하다보면 SCET에서 대뜸 캘린더 invitation이 날아온다. 참가 필수 적혀있고, 이런 테마인 워크샵이라고 학생들을 전부 부른다. 가면 Director 중 한 명인 Ken Singer가 주제 하나를 잡고 워크샵을 진행한다. 첫 워크샵은 리더쉽이라는 것이 무엇인지, 서로가 보는 세상이 얼마나 다르고 커뮤니케이션이 얼마나 어려운지 배우는 시간이었다.
+
+이 때 서로 두 명씩 짝을 지어서 등지고 앉아서 그림을 보고 있는 사람은 그림을 설명하고, 그림을 못 보는 사람은 그 설명을 듣고 그림을 그리는 워크샵을 했다. 프랑스 친구랑 짝 지어서 서로 모국어도 아닌 영어로 끙끙 대면서 그림 그렸던 기억이 난다. (한국어로 한국인한테 설명했으면 아주 완벽하게 그렸을 텐데...)
+
+![그 때 그린 그림](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-kZdCMxEvxq/31ea5c3e91241f4a2acb013119f6068f3cbfa1c386765c117c2492aba5b64ca6f1d44639c81dbd1fefd8cf225d883e2b6c8311a6ca38dee85bbfa1ac548fca93513970b8486f7b4d79d2092b3f5bc9e8b4263305b47bf9cb18423aac3574ecd40ab82938)
+
+![SCET Workshop](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-C9q07-APGC/69622982f1133dd17069abaf670eb374b4015d0c4ab976406499e6ec7c9b2bc7d2d473fea55b8774a51dc2c6bf33230e10ca36e4e736cebcb1be5ff19e06de4b289194a85d40c234d1ab6a482c10a7f403bbf0701ff1763d28f37f72b1c72e4fd84793e6)
+
+두 번째 시간은 빵에 커피까지 준비되서 아주 든든하게 아침 먹으면서 했다. 이번 워크샵은 갈등에 대한 워크샵이었다. 갈등이 반드시 나쁘기만 한 것이냐부터 갈등을 어떻게 매니징 할 것인가를 배웠다. 워크샵용 게임도 알게 됐는데, 앞으로 써먹을 일이 있으면 좋겠다는 생각이 들었다.
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-wLNC-mqzXv/40e6259e26c4c5fe7952c862672b1dc4070d80b8ee89f6995cb6da1dcf09f0388097555af9dde0eddea4e527b11cdbbc07e316972bdd53422ace1202c14f1c301e173d0350f61c524d245c5c82cb56bdde9181ffd1c8fe5ba6abe5df110818897cc6fce4)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-nhgsEQ61Ra/1f2209858b5b3cafc9ba1858fadb239c094d8cba52c62ae0c67cb1cc259d48efce4926a15b11f4b1a80b6b702d6c5731ec9b9b7c5f877b69460212f9a17e7f2080695f6defea954412e98d16da1e6311148b057dd6d45ccd27903a307548066a8e66642f)
+
+![워크샵 끝나고 다 같이 버클리 상징인 시계탑에 올라갔었다.](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-0TfCVSdDRB/9fd62b886ff468fc8cbe969becfc5bcbba2ecb4629748c830912ce0f3afd8e80ba27fd90509e9e48aa082282e918cbf30a7f8f42e6f26c2bb2a9dbadbc3f41f0d75176520ba4629a4729054621313f52e6d798e5ff4623162529b7a4d1a5cc13e061152b)
+
+워크샵 끝나고 다 같이 버클리 상징인 시계탑에 올라갔었다.
+
+---
+
+# SCET Events
+
+[https://scet.berkeley.edu/](https://scet.berkeley.edu/)
+
+굳이 SCET 학생이 아니어도, SCET 뉴스레터를 구독하고 있으면 이런 이벤트 저런 이벤트 있어요 하면서 간혹 소식지가 날아온다. 굳이 뉴스레터가 아니어도 홈페이지가 은근 보물창고라 이런 저런 글 뒤져보면 예전 강연들이라던가 Alumni 소식들을 확인 할 수 있다.
+
+![SCET office](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-HHm5LXRYeA/dbf3cb38672bd24a57f9cceb64e44eda1be316851940a017ff1ac87df21aac5ebea906fc8eb0fcb03fafd1204a86eca623f97f8028c56f5eb96bfe840ba4a6d0aa609dbc252306451c809d0944d0b40b78c2ef38d31181e099ddef8fb007ca99ab22cf2b)
+
+SCET office
+
+SCET fellowship Challenge라고 주마다 미션이 나오고 포인트 얻어서 마지막에 celebration하는 이벤트도 진행하던데, 첫 주 참가하고 못 했다. 으쌰으쌰 같이 불타오를 친구가 있으면 잘 할 수 있었다는 변명과 함께 떠내려 보냈다.
+
+---
+
+# Dean's Speaker Series
+
+[https://haas.berkeley.edu/about/speaker-series/deans-speaker-series/](https://haas.berkeley.edu/about/speaker-series/deans-speaker-series/)
+
+Berkeley의 경영대인 Haas에서 진행하는 Dean's Speaker Series다. 처음에는 이런게 있는 줄 몰랐는데, 수강 중인 Haas course 교수님이 PayPal CEO가 온다면서 관심 있으면 참가해보라길래 바로 신청해서 참가해보니 학장 네이밍 붙어서 진행 중인 엄청난 이벤트였다. 덕분에 PayPal CEO 지근 거리에서 보고 끝나고 악수까지 했다는 신기한 경험.
+
+아무튼 저 홈페이지에서 앞으로의 연사들과 일정을 확인할 수 있다. 저번 주에는 Beyond Meat CEO가 Zoom으로 참석했었다. (Haas 빌딩에 수도관이 터져서 홍수(...)가 나는 바람에 전부 virtual로 됐다. 한바탕 재밌었다 ㅋㅋ)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-L6k3zThg_Y/81e89477df4081493d03bb34ce0ff97e4fcf020d3f7429d4bc06909f00dcc7183292f8eaead86c1f82482ccb04b5c2431ccf7235e84508f422db128230e9dfbfaaff64928f3d6c0fbc828c5a8d780e2a985da4f14060bc3fb2bf44de43139368612a2d0a)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-zSVBbIp7do/3141f4f8f5bdb3e1228c8809d8e63f381a46fddd5391ac281191010c9b6b52cb0b58e84e21dbfaa2248c37799f32671c8948162dc68b2045754467ff7c88ed7c74ad6414fc653a07abf28bb8acc73609515606c6a5986a0f429cae6d64254af308298c76)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-shK7pJ4Fth/0dbbcd61d07bd146736cb8e9493938964d13059dc21d5c9123475d3695da3c6ca7cc87c55af1b139a0eecb42a4f8e5fa236212d8153b74f1a04768dd2f2f86bc037d5b9ca98a1c28c9fa266e880d15a759bb94faa7e758b51b8acb42964e6a945ff6a45c)
+
+![PayPal CEO](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-Yz4rWujGQZ/430a060adff7a879c1448831df6f04352356b021bef28cb2488ae1f59c45119b779c9a253a716989df7aedf4e1b8eb49895af797ed97d2bc9d44f032663a10d27c499e632478333b05ba968e9b1e9b738bc1aaaa4d565aac60046e5866e595655c7135c8)
+
+PayPal CEO
+
+개인적으로 가장 기대되는 이벤트는 펩시의 CEO인 인드라 누이 CEO 세션이 가장 기대된다. 이민자 출신, 여성, 콜라 외에선 전부 코카콜라를 앞서가는 펩시를 만들어낸 전설적인 기업가인데, 직접 눈으로 보고 그 아우라를 느끼고 싶은 마음이다.
+
+참고로 Dean's Speaker Series와 비슷한 이벤트는 다른 학교에도 있다. USC Marshall에서 진행하는 이벤트도 참여했었다.
+
+![USC Marshall Dean's Dialogue](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-sYwS_1CPKM/3f9aa19cd4ce6bf41bd67151e9505d418fc8d031ea97018766f6322083351de16c8078d3e59b0234895490e3e2f234afeb962bd54522d100e2d49712c88a677d86de3f810f569528570ce0e52017d020a1b751d2921dfb90cebaf5aa833659970214eb2c)
+
+USC Marshall Dean's Dialogue
+
+---
+
+# International Student Service Events
+
+[https://www.eventbrite.com/o/berkeley-global-international-student-services-25317235729](https://www.eventbrite.com/o/berkeley-global-international-student-services-25317235729)
+
+[https://www.eventbrite.com/o/berkeley-global-access-program-32531438107](https://www.eventbrite.com/o/berkeley-global-access-program-32531438107)
+
+Berkeley Global, International Student Service에서 학기 초에 집중적으로 주관하는 이벤트다. BGA 학생들을 대상으로 쭉쭉 공지가 먼저 나가는데, 나는 친구들이 전부 BGA 학생들이라 공지 받으면 같이 신청해서 참가하고 그랬다. 다양한 친구들 순식간에 많이 사귈 수 있다는 최고의 장점이 있는 이벤트다. 학기 초에는 이런 이벤트 부지런하게 나가야 친구들이 많이 생긴다.
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-g5h5BstTNR/983a4256e32722407c27bb769065bf421e78ef61f671afd620c308d875fa220f890ed42d2f02dbce5495a7b7afe41c6cfe3c6b8cb1a3a7f2d56e541730200d5a780de9d3cef2ab4e921cc6906498d8870ffbcc65ea436a2c08456df9167d2ccbee0c12cf)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-uX5PG2-JqS/8d6219e842118e7af1ec9296c619201f6aaf85e0166fd9d0cd0930d51238bed53998af2367fcc95a4d29b09a22f798714bb8045146a4faacfacedcd5eb61072646efb9977872d073a19994d263a7ab3f3d65aa39002ee2a871022dc7a5a9e9fc49deb317)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-7NpJao90lA/e8ff62f8c48882a78f496962ca04319306e08a1865613e49405b2064469d0d6066a0a059e0310dcf5c325fbd3c57437e6c359440e877922a720d1fa820da1ddb6462e5808c34e0b430ec8e19bf7081d407d04923ea44de971db8000afb22ff96fb50bd53)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-oDNKfEZGOi/d907440e546f2dc032b32b1eb3f26d343153d99a8cded0eecde7d82668d2dc64164499f3661bc6390aab16076f2553ee99288bd58d4f62374ca32d009feda75d1cd31cc97da7fed8cf9d95908fc55b5d033ff9b92e51dc8868301829deeadf28a5f936ec)
+
+![Campus Scavenger Hunt](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-3n61H1wBDW/fea5cf3aad7162c6e1f35a7ad93a2280614097427ec3ab1d1f5fceb675ef0bd0f401b0a2147d0a3727db60b78848826f1ae1ba38687c0628668243d75ac0aff93ba3dba9f0204dff8ec0b335b4c561d8eac6bf6ea8054b30964c267291f7167b6f7defdd)
+
+위에 보이는 미션지 같은 거 주고 이곳저곳 가서 사진찍어서 업로드하라고 그러신다. 상품은 student store gift card. 약소한데 은근 아무것도 모르는 상황에서 친구들이랑 저 종이 부여잡고 지도 뒤져가면서 여기저기 걸어다니면서 이런저런 이야기하면 시간 금방간다. 샌프란시스코 이벤트에서는 그 날 거의 10km를 걸었긴한데... 아무튼 그 친구들이랑 친해졌으니 됐다.
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-b7NRQA3f9H/cf85398cebec7c8b341a8d627370fe49cdc6bf32ee37a2534d955c734e1bec16b464a4f193f8f91c6587cb0a7907340af91a25e4ccecd08a86c65904665e0668301d6a566aeff8756060c21a19a78a268952486d2bd9603ef8fda6575c31a6d2598f67dc)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-rzD_t7li9a/7a38e98ea2b5b91b8a5251c83985d39503401ca406002d3088fa4592c4418d7c538217697697e9fa5149dc4588e3159048b01b2549a74201e7024c46fc52327203abaa5a2e9956b72659fd6ba44f7b03fe1487c4e8209ab0e0d90fa6753219f5d1dcdac2)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-9yx7cp6f76/f93095b76e5340301788e8acf03f349cf40289fe5ac37a04d94cb7e6ee304a8fffab44c1c9b6f4fea39b04b6f759557f6f500602ef972d00ca6aa24faeae6c27955624923bc15782d0e5623be2fe054eaddf41606f851a3587865da20974f3160ed4803a)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-AEaGdeeCVb/15a5a519f0bececada047912be7752df0b9535b5995e5f4a62304fe1b4b397d6169f57369b8ff7b30a74228b57514a50448e754dd74548de32bbfec0b10a87bb9db13fc8c0435347b3b6108ada3c3c2be7cee955dd0690b72b29bb240f625f5d2a0190d5)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-VxygLlJ8rS/33aed765f0f016010dee5ba5c81c18dd421496ebfc0bee923d16b53faeb036f623d88450a9b3b1706d6c2b2ac6a33b21febfacc7e56ba3f36c4c4ad39e89d64b7de71e394949a95023d3a80300e933c43fe96d371a851e05f36e218b8b4a691339bae717)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-w2YHu3sWks/0d1b5f333bd75b129fcf2313fca3d1e2c2a3c65cec35565a2814b5a3d232631eb7f2ab43fde92e1f05d318214b95d2cd5a83243a335a1d1d0d5f51be3fd2f037afc67f569cc98f648d5f8c5cfd9238cc2f52e0dca70f980dc185bbf200288efbd649ef2a)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-pI4MPhj3gl/20f009b4286b07f23b5d75f99b3ce61971da8fb0e40939868d7bd361799c7a4522b56a26cfb3c4d30692ceddc1c832ba716cbe2981e7f62d16dd03dbe7590e10db4d9957ed51cfdb50e775bf85632384ae02d7e031a21c66d67e13a58adcd89d9efe2f91)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-Nj3f5XhEGu/9cbe814f6478cdd8f0c85f355c6d268527c088a9b67ae5ace07b3591c598476f1b26fe0528ecff37e4f34a4f47d86e2cdf063ccce7b5314614310e8353d87785ee78161ae4a8620c2ac9156904b1b61af0369538010f8228aa158283ceaf206dcdd3cb3c)
+
+![](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-yeVW57GWN1/c802d46f14506203c2f5940ded118d4a60b3310d14e09f4f45e2eb6f64fb25771cee8c0cc9b3845840b55c1f6326c70ef15fefaf4e5689a256a1597354b7d4e442f1abd6a5950760b96ea542ea65b53bde51746609056d755751262a1d3f1fec98466137)
+
+![San Fransisco Scavenger Hunt](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-DwRiE1E-kW/0e3b9cc1bc0f684a4632f1f878076f64da1b4932c80704134ba6ba587c4f5f5aa17b3ae9d7ca6f02a6ac197f53069705be0e385b5c143d0a02aa4a29f3b74395d26e67b9074a61fcc964c8e194528a0e27acc7994c74c4a4bfdb55b3784ce6ce2c788d32)
+
+San Fransisco Scavenger Hunt
+
+---
+
+# DECODE events
+
+[https://www.decode.build/](https://www.decode.build/)
+
+실리콘밸리를 기반으로 하고 있는 비영리 재단인 DECODE에서도 다양한 이벤트를 버클리와 스탠포드 학생들을 대상으로 제공한다. 역시나 뉴스레터를 구독하면 이벤트 안내를 받아볼 수 있다. 나는 DECODE 클래스 중 하나인 Decode Silicon Valley Startup Success를 수강하면서 DECODE의 엄청난 네트워크에서 섭외되는 엄청난 연사들의 speaking을 들을 기회를 받았다. MasterClass CEO, YC Partner 등 쟁쟁한 분들이 연사로 오셨거나 앞으로 올 예정이다. (개인적으로 Sendbird의 김동신 대표님이 연사로 섭외되었길래 너무 설레서 엄청 빡시게 준비했었는데, business meeting으로 취소됐다는 이야기를 듣고 조금 슬펐다.)
+
+![엄청 기대했는데! 다음 기회에 뵐 수 있으면 좋겠다.](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-dI0Jpqa2lh/0fa2c51443c59fa584b737dcb1d6e6d9eaefb6c0b05130cb32945d6d017363fe7aad0e33fa772a4f8089c858140865f8fef57fa2632c3af0729bdc930587d5d973f9f76fdcc1afdafcc783e223db194d8c53aa690c83c1101149ad930bf95c6674d25b64)
+
+엄청 기대했는데! 다음 기회에 뵐 수 있으면 좋겠다.
+
+---
+
+# Design Field Notes
+
+[https://jacobsinstitute.berkeley.edu/design-field-notes/](https://jacobsinstitute.berkeley.edu/design-field-notes/)
+
+전에 짤막하게 언급하고 넘어갔었는데, Berkeley에서 진행하는 디자인 수업을 아예 공개 audit을 할 수 있게 오픈한 강의다. 매 주마다 디자인 관련 연사들 모셔서 이것저것 이야기 듣는 수업이다. 나는 디자인에 문외한이라 딱 한 번 참여해서 들어봤다.
+
+![관련은 없는데, Seattle Art Museum가서 찍은 거](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-2LrN00cG4p/53d6ffe834d3b7126fd718f3ae6d680b5ccc443cfb0cd45b53c859668c06fb35be1cad9f207a05f8a168730c8e1d58c714a19cef6c5002b9f502fdefd8c8e0f08ee7eade68c3912e4a0dd2c9154acbec4b588308988572ee05647da4d72e913216ae790d)
+
+---
+
+# Berkeley School of Information
+
+[https://www.ischool.berkeley.edu/events](https://www.ischool.berkeley.edu/events)
+
+정보 대학이라고 불러야 하나, 아무튼 여기도 뉴스레터 구독해두면 이런 이벤트 저런 이벤트 있다고 쭉쭉 날아오고, 이벤트 페이지에 가면 매주 이벤트가 있다. 아무래도 전공이랑 비슷하기도 하고, 이런저런거 들어봐서 소개한다.
+
+![관련은 없는데, Seattle Art Museum가서 찍은 거](https://codahosted.io/docs/9TUJi-0GD4/blobs/bl-mkZ4aibdpk/f813b8669124ac2a1b1092bf25289e5255f0a86c6c3266b74ae06923ee155122c83ac3d0d052f9740fd34aa5dafd2d4aee81ce818f25e76d4705440c33abcfa27ddd2f9a2ac7eaeb9de5aef2504a05b8df3e8d962630823780f49fb760073628c1adec30)
+
+---
+
+이런 저런 이벤트 다니면서 느끼는 거지만, 결국은 중심이 잘 잡혀 있어야 저런 이벤트들도 제대로 써먹을 수 있다는 것. 기회가 홍수라 그냥 참가신청 눌려놓고 안 간 이벤트도 정말 많다. 모쪼록 여기 Bay Area 오시는 분들은 저보다 더 단단히 준비하셔서 많은 것들을 얻어가시길 바라며, 글을 마친다.
