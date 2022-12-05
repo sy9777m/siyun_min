@@ -841,5 +841,20 @@
   },
   "posts/SAF_Experience/SAF_Experience.qmd": {
     "SAF_Experience.html": "ddf967aa"
+  },
+  "posts/Kaggle_Intro to Machine Learning/Kaggle_Intro to Machine Learning.qmd": {
+    "Kaggle_Intro to Machine Learning.html": "cd170c0e"
+  },
+  "posts/Kaggle_Intermediate Machine Learning/Kaggle_Intermediate Machine Learning.qmd": {
+    "Kaggle_Intermediate Machine Learning.html": "d6ba39ee"
+  },
+  "posts/Kaggle_Intro to Programming/Kaggle_Intro to Programming.qmd": {
+    "Kaggle_Intro to Programming.html": "fe8655df"
+  },
+  "posts/Kaggle_Python.qmd": {
+    "Kaggle_Python.html": "0a13ea25"
+  },
+  "posts/Kaggle_Pandas/Kaggle_Pandas.qmd": {
+    "Kaggle_Pandas.html": "2f4f8ff6"
   }
 }

@@ -1,0 +1,306 @@
+---
+title: "Kaggle - Intro to Programming"
+author: "Siyun Min"
+date: "2022-12-02"
+categories: [Kaggle]
+---
+# Intro to Programming
+
+# Arithmetic and Variables
+
+```python
+print("Hello, world!")
+
+# DO NOT REMOVE: Mark this question as completed
+q1.check()
+```
+
+```python
+# TODO: Change the message
+print("Your message here!")
+
+# DO NOT REMOVE: Mark this question as completed 
+q2.check()
+```
+
+```python
+# Uncomment to get a hint
+q3.hint()
+
+# Uncomment to view solution
+q3.solution()
+
+# DO NOT REMOVE: Check your answer
+q3.check()
+```
+
+```python
+# TODO: Set the value of the births_per_min variable
+births_per_min = 250
+
+# TODO: Set the value of the births_per_day variable
+births_per_day = births_per_min * 60 * 24
+
+# DO NOT REMOVE: Check your answer
+q4.check()
+```
+
+```python
+# Load the data from the titanic competition
+import pandas as pd
+titanic_data = pd.read_csv("../input/titanic/train.csv")
+
+# Show the first five rows of the data
+titanic_data.head()
+```
+
+![Untitled](./Untitled.png)
+
+```python
+# Number of total passengers
+total = len(titanic_data)
+print(total)
+
+# Number of passengers who survived
+survived = (titanic_data.Survived == 1).sum()
+print(survived)
+
+# Number of passengers under 18
+minors = (titanic_data.Age < 18).sum()
+print(minors)
+```
+
+```python
+# TODO: Fill in the value of the survived_fraction variable
+survived_fraction = (titanic_data.Survived == 1).sum() / len(titanic_data)
+
+# Print the value of the variable
+print(survived_fraction)
+
+# TODO: Fill in the value of the minors_fraction variable
+minors_fraction = (titanic_data.Age < 18).sum() / len(titanic_data)
+
+# Print the value of the variable
+print(minors_fraction)
+
+# DO NOT REMOVE: Check your answer
+q5.check()
+```
+
+# Functions
+
+```python
+# TODO: Complete the function
+def get_expected_cost(beds, baths):
+    value = 80000 + beds * 30000 + baths * 10000
+    return value
+
+# Check your answer 
+q1.check()
+```
+
+```python
+# TODO: Use the get_expected_cost function to fill in each value
+option_one = get_expected_cost(2, 3)
+option_two = get_expected_cost(3, 2)
+option_three = get_expected_cost(3, 3)
+option_four = get_expected_cost(3, 4)
+
+print(option_one)
+print(option_two)
+print(option_three)
+print(option_four)
+
+# Check your answer
+q2.check()
+```
+
+```python
+# TODO: Finish defining the function
+def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
+    cost = (sqft_walls + sqft_ceiling) / sqft_per_gallon * cost_per_gallon
+    return cost
+
+# Check your answer
+q3.check()
+```
+
+```python
+# TODO: Set the project_cost variable to the cost of the project
+project_cost = get_cost(432, 144, 400, 15)
+
+# Check your answer
+q4.check()
+```
+
+```python
+def get_actual_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):
+    cost = math.ceil((sqft_walls + sqft_ceiling) / sqft_per_gallon) * cost_per_gallon
+    return cost
+
+# Check your answer
+q5.check()
+```
+
+# Data Types
+
+```python
+# TODO: Complete the function
+def get_expected_cost(beds, baths, has_basement):
+    value = 80000 + 30000 * beds + 10000 * baths + 40000 * int(has_basement)
+    return value
+
+# Check your answer 
+q3.check()
+```
+
+```python
+def cost_of_project(engraving, solid_gold):
+    cost = int(solid_gold) * 100 + int(solid_gold) * len(engraving) * 10 + int(not solid_gold) * 50 + int(not solid_gold) * len(engraving) * 7
+    return cost
+
+# Check your answer
+q5.check()
+```
+
+# Conditions and Conditional Statements
+
+```python
+# TODO: Edit the function to return the correct grade for different scores
+def get_grade(score):
+    if score >= 90:
+        grade = "A"
+    elif score >= 80:
+        grade = 'B'
+    elif score >= 70:
+        grade = 'C'
+    elif score >= 60:
+        grade = 'D'
+    else:
+        grade = 'F'
+    return grade
+    
+# Check your answer
+q1.check()
+```
+
+```python
+def cost_of_project(engraving, solid_gold):
+    if solid_gold == True:
+        cost = 100 + len(engraving) * 10
+    else:
+        cost = 50 + len(engraving) * 7
+    return cost
+
+# Check your answer
+q2.check()
+```
+
+```python
+# TODO: Edit the function to return the correct bill for different
+# values of num_gallons
+def get_water_bill(num_gallons):
+    if num_gallons > 30000:
+        bill = num_gallons / 1000 * 10
+    elif num_gallons > 22000:
+        bill = num_gallons / 1000 * 7
+    elif num_gallons > 8000:
+        bill = num_gallons / 1000 * 6
+    else:
+        bill = num_gallons / 1000 * 5
+    return bill
+
+# Check your answer
+q3.check()
+```
+
+```python
+# TODO: Edit the function to return the correct bill for different
+# values of GB
+def get_phone_bill(gb):
+    if gb <= 15:
+        bill = 100
+    else:
+        bill = 100 + (gb - 15) * 1000 * 0.1
+    return bill
+
+# Check your answer
+q4.check()
+```
+
+# Intro to Lists
+
+```python
+# Do not change: Initial menu for your restaurant
+menu = ['stewed meat with onions', 'bean soup', 'risotto with trout and shrimp',
+       'fish soup with cream and onion', 'gyro']
+
+# TODO: remove 'bean soup', and add 'roasted beet salad' to the end of the menu
+menu.remove('bean soup')
+menu.append('roasted beet salad')
+
+# Do not change: Check your answer
+q1.check()
+```
+
+```python
+# Do not change: Number of customers each day for the last month
+num_customers = [137, 147, 135, 128, 170, 174, 165, 146, 126, 159,
+                 141, 148, 132, 147, 168, 153, 170, 161, 148, 152,
+                 141, 151, 131, 149, 164, 163, 143, 143, 166, 171]
+
+# TODO: Fill in values for the variables below
+avg_first_seven = sum(num_customers[:7]) / 7
+avg_last_seven = sum(num_customers[-7:]) / 7
+max_month = max(num_customers)
+min_month = min(num_customers)
+
+# Do not change: Check your answer
+q2.check()
+```
+
+```python
+# DO not change: Define two Python strings
+alphabet = "A.B.C.D.E.F.G.H.I.J.K.L.M.N.O.P.Q.R.S.T.U.V.W.X.Y.Z"
+address = "Mr. H. Potter,The cupboard under the Stairs,4 Privet Drive,Little Whinging,Surrey"
+
+# TODO: Convert strings into Python lists
+letters = alphabet.split('.')
+formatted_address = address.split(',')
+
+# Do not change: Check your answer
+q3.check()
+```
+
+```python
+def percentage_liked(ratings):
+    list_liked = [i>=4 for i in ratings]
+    # TODO: Complete the function
+    percentage_liked = sum(list_liked) / len(ratings)
+    return percentage_liked
+
+# Do not change: should return 0.5
+percentage_liked([1, 2, 3, 4, 5, 4, 5, 1])
+
+# Do not change: Check your answer
+q4.check()
+```
+
+```python
+# TODO: Edit the function
+def percentage_growth(num_users, yrs_ago):
+    growth = (num_users[-1] - num_users[-1 - yrs_ago])/num_users[-1 - yrs_ago]
+    return growth
+
+# Do not change: Variable for calculating some test examples
+num_users_test = [920344, 1043553, 1204334, 1458996, 1503323, 1593432, 1623463, 1843064, 1930992, 2001078]
+
+# Do not change: Should return .036
+print(percentage_growth(num_users_test, 1))
+
+# Do not change: Should return 0.66
+print(percentage_growth(num_users_test, 7))
+
+# Do not change: Check your answer
+q5.check()
+```

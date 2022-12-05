@@ -1,0 +1,574 @@
+---
+title: "Kaggle - Python"
+author: "Siyun Min"
+date: "2022-12-02"
+categories: [Kaggle]
+---
+# Python
+
+Created: December 2, 2022 1:53 PM
+Last edited time: December 2, 2022 5:49 PM
+
+# Hello, Python
+
+```python
+# create a variable called color with an appropriate value on the line below
+# (Remember, strings in Python must be enclosed in 'single' or "double" quotes)
+color = 'blue'
+
+# Check your answer
+q0.check()
+```
+
+```python
+pi = 3.14159 # approximate
+diameter = 3
+
+# Create a variable called 'radius' equal to half the diameter
+radius = 3 / 2
+
+# Create a variable called 'area', using the formula for the area of a circle: pi times the radius squared
+area = pi * radius ** 2
+
+# Check your answer
+q1.check()
+```
+
+```python
+########### Setup code - don't touch this part ######################
+# If you're curious, these are examples of lists. We'll talk about 
+# them in depth a few lessons from now. For now, just know that they're
+# yet another type of Python object, like int or float.
+a = [1, 2, 3]
+b = [3, 2, 1]
+q2.store_original_ids()
+######################################################################
+
+# Your code goes here. Swap the values to which a and b refer.
+# If you get stuck, you can always uncomment one or both of the lines in
+# the next cell for a hint, or to peek at the solution.
+
+temp = a
+a = b
+b = temp
+######################################################################
+
+# Check your answer
+q2.check()
+```
+
+Add parentheses to the following expression so that it evaluates to 1.
+
+```python
+(5 - 3) // 2
+```
+
+Add parentheses to the following expression so that it evaluates to 0.
+
+```python
+8 - (3 * 2) - (1 + 1)
+```
+
+```python
+# Variables representing the number of candies collected by alice, bob, and carol
+alice_candies = 121
+bob_candies = 77
+carol_candies = 109
+
+# Your code goes here! Replace the right-hand side of this assignment with an expression
+# involving alice_candies, bob_candies, and carol_candies
+to_smash = (alice_candies + bob_candies + carol_candies) % 3
+
+# Check your answer
+q4.check()
+```
+
+# Functions and Getting Help
+
+```python
+def round_to_two_places(num):
+    """Return the given number rounded to two decimal places. 
+    
+    >>> round_to_two_places(3.14159)
+    3.14
+    """
+    # Replace this body with your own code.
+    # ("pass" is a keyword that does literally nothing. We used it as a placeholder
+    # because after we begin a code block, Python requires at least one line of code)
+    return round(num, 2)
+
+# Check your answer
+q1.check()
+```
+
+```python
+def to_smash(total_candies, friends = 3):
+    """Return the number of leftover candies that must be smashed after distributing
+    the given number of candies evenly between 3 friends.
+    
+    >>> to_smash(91)
+    1
+    """
+    return total_candies % friends
+
+# Check your answer
+q3.check()
+```
+
+# Booleans and Conditionals
+
+```python
+# Your code goes here. Define a function called 'sign'
+def sign(num):
+    if num > 0:
+        return 1
+    elif num < 0:
+        return -1
+    else:
+        return 0
+# Check your answer
+q1.check()
+```
+
+```python
+def to_smash(total_candies):
+    """Return the number of leftover candies that must be smashed after distributing
+    the given number of candies evenly between 3 friends.
+    
+    >>> to_smash(91)
+    1
+    """
+    print("Splitting", total_candies, 'candy' if total_candies == 1 else "candies")
+    return total_candies % 3
+
+to_smash(91)
+to_smash(1)
+```
+
+```python
+def prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday):
+    # Don't change this code. Our goal is just to find the bug, not fix it!
+    return have_umbrella or (rain_level < 5 and have_hood) or not (rain_level > 0 and is_workday)
+
+# Change the values of these inputs so they represent a case where prepared_for_weather
+# returns the wrong answer.
+have_umbrella = False
+rain_level = 0.0
+have_hood = False
+is_workday = False
+
+# Check what the function returns given the current values of the variables above
+actual = prepared_for_weather(have_umbrella, rain_level, have_hood, is_workday)
+print(actual)
+
+# Check your answer
+q3.check()
+```
+
+```python
+def is_negative(number):
+    if number < 0:
+        return True
+    else:
+        return False
+
+def concise_is_negative(number):
+    return number < 0 # Your code goes here (try to keep it to one line!)
+
+# Check your answer
+q4.check()
+```
+
+```python
+def wants_all_toppings(ketchup, mustard, onion):
+    """Return whether the customer wants "the works" (all 3 toppings)
+    """
+    return onion and mustard and ketchup
+
+# Check your answer
+q5.a.check()
+```
+
+```python
+def wants_plain_hotdog(ketchup, mustard, onion):
+    """Return whether the customer wants a plain hot dog with no toppings.
+    """
+    return not ketchup and not mustard and not onion
+
+# Check your answer
+q5.b.check()
+```
+
+```python
+def exactly_one_sauce(ketchup, mustard, onion):
+    """Return whether the customer wants either ketchup or mustard, but not both.
+    (You may be familiar with this operation under the name "exclusive or")
+    """
+    return (ketchup or mustard) and not (ketchup and mustard)
+
+# Check your answer
+q5.c.check()
+```
+
+```python
+def exactly_one_topping(ketchup, mustard, onion):
+    """Return whether the customer wants exactly one of the three available toppings
+    on their hot dog.
+    """
+    return (ketchup or mustard or onion) and not (ketchup and mustard) and not (ketchup and onion) and not (mustard and onion)
+
+# Check your answer
+q6.check()
+```
+
+# Lists
+
+```python
+def select_second(L):
+    """Return the second element of the given list. If the list has no second
+    element, return None.
+    """
+    if len(L) < 2:
+        return None
+    else:
+        return L[1]
+
+# Check your answer
+q1.check()
+```
+
+```python
+def losing_team_captain(teams):
+    """Given a list of teams, where each team is a list of names, return the 2nd player (captain)
+    from the last listed team
+    """
+    return teams[-1][1]
+
+# Check your answer
+q2.check()
+```
+
+```python
+def purple_shell(racers):
+    """Given a list of racers, set the first place racer (at the front of the list) to last
+    place and vice versa.
+    
+    >>> r = ["Mario", "Bowser", "Luigi"]
+    >>> purple_shell(r)
+    >>> r
+    ["Luigi", "Bowser", "Mario"]
+    """
+    racers[0], racers[-1] = racers[-1], racers[0]
+    
+# Check your answer
+q3.check()
+```
+
+```python
+a = [1, 2, 3]
+b = [1, [2, 3]]
+c = []
+d = [1, 2, 3][1:]
+
+# Put your predictions in the list below. Lengths should contain 4 numbers, the
+# first being the length of a, the second being the length of b and so on.
+lengths = [len(a), len(b), len(c), len(d)]
+
+# Check your answer
+q4.check()
+```
+
+```python
+def fashionably_late(arrivals, name):
+    """Given an ordered list of arrivals to the party and a name, return whether the guest with that
+    name was fashionably late.
+    """
+    return name in arrivals[round(len(arrivals) / 2):-1]
+
+# Check your answer
+q5.check()
+```
+
+# Loops and List Comprehensions
+
+```python
+def has_lucky_number(nums):
+    """Return whether the given list of numbers is lucky. A lucky list contains
+    at least one number divisible by 7.
+    """
+    for num in nums:
+        if num % 7 == 0:
+            return True
+    
+    return False
+
+# Check your answer
+q1.check()
+```
+
+```python
+def elementwise_greater_than(L, thresh):
+    """Return a list with the same length as L, where the value at index i is 
+    True if L[i] is greater than thresh, and False otherwise.
+    
+    >>> elementwise_greater_than([1, 2, 3, 4], 2)
+    [False, False, True, True]
+    """
+    result = []
+    for l in L:
+        result.append(l > thresh)
+    
+    return result
+
+# Check your answer
+q2.check()
+
+```
+
+```python
+def menu_is_boring(meals):
+    """Given a list of meals served over some period of time, return True if the
+    same meal has ever been served two days in a row, and False otherwise.
+    """
+    for i in range(1, len(meals)):
+        if meals[i - 1] == meals[i]:
+            return True
+        
+    return False
+
+# Check your answer
+q3.check()
+```
+
+```python
+def estimate_average_slot_payout(n_runs):
+    """Run the slot machine n_runs times and return the average net profit per run.
+    Example calls (note that return value is nondeterministic!):
+    >>> estimate_average_slot_payout(1)
+    -1
+    >>> estimate_average_slot_payout(1)
+    0.5
+    """
+    sum = 0
+    for i in range(n_runs):
+        sum += play_slot_machine()
+        
+    return sum / n_runs
+```
+
+# Strings and Dictionaries
+
+```python
+a = ""
+length = len(a)
+q0.a.check()
+```
+
+```python
+b = "it's ok"
+length = len(b)
+q0.b.check()
+```
+
+```python
+c = 'it\'s ok'
+length = len(c)
+q0.c.check()
+```
+
+```python
+d = """hey"""
+length = len(d)
+q0.d.check()
+```
+
+```python
+e = '\n'
+length = len(e)
+q0.e.check()
+```
+
+```python
+def is_valid_zip(zip_code):
+    """Returns whether the input string is a valid (5 digit) zip code
+    """
+    return len(zip_code) == 5 and str.isdigit(zip_code)
+
+# Check your answer
+q1.check()
+```
+
+```python
+def word_search(doc_list, keywords):
+    """
+    Takes a list of documents (each document is a string) and a keyword. 
+    Returns list of the index values into the original list for all documents 
+    containing the keyword.
+
+    Example:
+    doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+    >>> word_search(doc_list, 'casino')
+    >>> [0]
+    """
+    result = []
+    for i, s in enumerate(doc_list):
+        s = [w.lower().rstrip('.,?') for w in s.split()]
+        if keywords in s:
+            result.append(i)
+    
+    return result
+
+# Check your answer
+q2.check()
+```
+
+```python
+def multi_word_search(doc_list, keywords):
+    """
+    Takes list of documents (each document is a string) and a list of keywords.  
+    Returns a dictionary where each key is a keyword, and the value is a list of indices
+    (from doc_list) of the documents containing that keyword
+
+    >>> doc_list = ["The Learn Python Challenge Casino.", "They bought a car and a casino", "Casinoville"]
+    >>> keywords = ['casino', 'they']
+    >>> multi_word_search(doc_list, keywords)
+    {'casino': [0, 1], 'they': [1]}
+    """
+    result = {}
+    for k in keywords:
+        result[k] = []
+        
+    for i, s in enumerate(doc_list):
+        s = [w.lower().rstrip('.,?') for w in s.split()]
+        for k in keywords:
+            if k in s:
+                result[k].append(i)
+    
+    return result
+
+# Check your answer
+q3.check()
+```
+
+# Working with External Libraries
+
+```python
+# Import the jimmy_slots submodule
+from learntools.python import jimmy_slots
+# Call the get_graph() function to get Jimmy's graph
+graph = jimmy_slots.get_graph()
+graph
+
+def prettify_graph(graph):
+    """Modify the given graph according to Jimmy's requests: add a title, make the y-axis
+    start at 0, label the y-axis. (And, if you're feeling ambitious, format the tick marks
+    as dollar amounts using the "$" symbol.)
+    """
+    graph.set_title("Results of 500 slot machine pulls")
+    # Complete steps 2 and 3 here
+
+graph = jimmy_slots.get_graph()
+prettify_graph(graph)
+graph
+```
+
+```python
+# Import luigi's full dataset of race data
+from learntools.python.luigi_analysis import full_dataset
+
+# Fix me!
+def best_items(racers):
+    winner_item_counts = {}
+    for i in range(len(racers)):
+        # The i'th racer dictionary
+        racer = racers[i]
+        # We're only interested in racers who finished in first
+        if racer['finish'] == 1:
+            for item in racer['items']:
+                # Add one to the count for this item (adding it to the dict if necessary)
+                if item not in winner_item_counts:
+                    winner_item_counts[i] = 0
+                winner_item_counts[i] += 1
+
+        # Data quality issues :/ Print a warning about racers with no name set. We'll take care of it later.
+        if racer['name'] is None:
+            print("WARNING: Encountered racer with unknown name on iteration {}/{} (racer = {})".format(
+                i+1, len(racers), racer['name'])
+                 )
+    return winner_item_counts
+
+# Try analyzing the imported full dataset
+best_items(full_dataset)
+```
+
+```python
+def blackjack_hand_greater_than(hand_1, hand_2):
+    """
+    Return True if hand_1 beats hand_2, and False otherwise.
+    
+    In order for hand_1 to beat hand_2 the following must be true:
+    - The total of hand_1 must not exceed 21
+    - The total of hand_1 must exceed the total of hand_2 OR hand_2's total must exceed 21
+    
+    Hands are represented as a list of cards. Each card is represented by a string.
+    
+    When adding up a hand's total, cards with numbers count for that many points. Face
+    cards ('J', 'Q', and 'K') are worth 10 points. 'A' can count for 1 or 11.
+    
+    When determining a hand's total, you should try to count aces in the way that 
+    maximizes the hand's total without going over 21. e.g. the total of ['A', 'A', '9'] is 21,
+    the total of ['A', 'A', '9', '3'] is 14.
+    
+    Examples:
+    >>> blackjack_hand_greater_than(['K'], ['3', '4'])
+    True
+    >>> blackjack_hand_greater_than(['K'], ['10'])
+    False
+    >>> blackjack_hand_greater_than(['K', 'K', '2'], ['3'])
+    False
+    """
+    hand_1_score, hand_2_score = 0, 0
+    a_count_1, a_count_2 = 0, 0
+    
+    for h in hand_1:
+        if 'J' == h or 'Q' == h or 'K' == h:
+            hand_1_score += 10
+        elif 'A' == h:
+            hand_1_score += 1
+            a_count_1 += 1
+        else:
+            hand_1_score += int(h)
+            
+    for h in hand_2:
+        if 'J' == h or 'Q' == h or 'K' == h:
+            hand_2_score += 10
+        elif 'A' == h:
+            hand_2_score += 1
+            a_count_2 += 1
+        else:
+            hand_2_score += int(h)
+    
+    if hand_1_score > 21:
+        return False
+    elif hand_2_score > 21:
+        return True
+    elif hand_1_score < hand_2_score and a_count_1 > 0:
+        for i in range(a_count_1):
+            if hand_1_score + 10 < 21:
+                hand_1_score += 10
+            if hand_1_score > hand_2_score:
+                return True
+        return hand_1_score > hand_2_score
+    elif hand_1_score > hand_2_score and a_count_2 > 0:
+        for i in range(a_count_2):
+            if hand_2_score + 10 < 21:
+                hand_2_score += 10
+            if hand_1_score > hand_2_score:
+                return True
+        return hand_1_score > hand_2_score
+    else:
+        return hand_1_score > hand_2_score
+
+# Check your answer
+q3.check()
+```
