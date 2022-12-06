@@ -1,0 +1,307 @@
+---
+title: "Computer Architecture - Pipelining review"
+author: "Siyun Min"
+date: "2022-10-21"
+categories: [Coursera]
+---
+# Pipelining review
+
+The readings for this lecture are H&P5 C-1 - C-26, C-30 - C-58, C-61 - C-81 (H&P4 A-1 - A-54, A-56 - A-77)
+
+**Book abbreviations:**
+
+- H&P5 = Computer Architecture: A Quantitative Approach (5th Edition), 2011
+- H&P4 = Computer Architecture: A Quantitative Approach (4th Edition), 2007
+- S&L = Modern Processor Design: Fundamentals of Superscalar Processors (1st Edition), 2005, reissued 2013.
+
+---
+
+# Agenda
+
+![Untitled](./Untitled.png)
+
+# What happens when the processor is too large?
+
+Time multiplex resources!
+
+# Microcontrol unit (Maurice Wilkes, 1954)
+
+![Untitled](./Untitled%201.png)
+
+# Microcoded microarchitecture
+
+![Untitled](./Untitled%202.png)
+
+# A bus-based datapath for RISC
+
+![Untitled](./Untitled%203.png)
+
+fetch one instruction: program counter → bus → memory address register → main memory → bus → instruction register → do some math in ALU → back to store to the register
+
+Instructions are depending on instructions.
+
+# An ideal pipeline
+
+![Untitled](./Untitled%204.png)
+
+# Unpipelined datapath for MIPS
+
+![Untitled](./Untitled%205.png)
+
+It is good for number of instructions per cycle. It is done in one instruction.
+
+# Simplified unpipelined datapath
+
+![Untitled](./Untitled%206.png)
+
+# Pipelined datapath
+
+![Untitled](./Untitled%207.png)
+
+put registers between the phases
+
+Mostly, time to access memory is the majority of the time.
+
+# Pipelined control
+
+![Untitled](./Untitled%208.png)
+
+adding pipeline registers to the controller
+
+# “Iron law” of processor performance
+
+![Untitled](./Untitled%209.png)
+
+$$
+performance = \text{instruction per program} \times \text{cycle per instruction (CPI)} \times \text{time per cycle}
+$$
+
+$$
+\text{low CPI} = \text{high IPC}
+$$
+
+## CPI Examples
+
+![Untitled](./Untitled%2010.png)
+
+# Technology assumptions
+
+![Untitled](./Untitled%2011.png)
+
+Intel Pentium 4 has 44 pipeline stages
+
+# Pipeline diagrams
+
+![Untitled](./Untitled%2012.png)
+
+# Pipeline diagrams: transactions vs. time
+
+![Untitled](./Untitled%2013.png)
+
+# Pipeline diagrams: space vs. time
+
+![Untitled](./Untitled%2014.png)
+
+# Instructions interact with each other in pipeline
+
+![Untitled](./Untitled%2015.png)
+
+# Overview of structural hazards
+
+![Untitled](./Untitled%2016.png)
+
+# Example structural hazard: unified memory
+
+![Untitled](./Untitled%2017.png)
+
+![Untitled](./Untitled%2018.png)
+
+![Untitled](./Untitled%2019.png)
+
+Fetching of the 3rd add and access memory of the LW occur at the same time. It tries to access memory at the same time.
+
+# Example structural hazard: 2-cycle memory
+
+![Untitled](./Untitled%2020.png)
+
+![Untitled](./Untitled%2021.png)
+
+Trying to load data from M0 and M1 at the same time.
+
+Solution - Stall: 
+
+![Untitled](./Untitled%2022.png)
+
+![Untitled](./Untitled%2023.png)
+
+Loading and adding at the same time doesn’t make structural hazard.
+
+# Overview of data hazards
+
+![Untitled](./Untitled%2024.png)
+
+It is not about data precision. It is about dependency of instruction on the previous data.
+
+# Example data hazard
+
+![Untitled](./Untitled%2025.png)
+
+# Feedback to resolve hazards
+
+![Untitled](./Untitled%2026.png)
+
+Feed a signal to the previous stage.
+
+# Resolving data hazards with stalls (interlocks)
+
+![Untitled](./Untitled%2027.png)
+
+# Stalled stages and pipeline bubbles
+
+![Untitled](./Untitled%2028.png)
+
+# Stall control logic
+
+![Untitled](./Untitled%2029.png)
+
+# Stall control logic (ignoring jumps & branches)
+
+![Untitled](./Untitled%2030.png)
+
+# Source & destination registers
+
+![Untitled](./Untitled%2031.png)
+
+Not every instruction use read or write.
+
+# Deriving the stall signal
+
+![Untitled](./Untitled%2032.png)
+
+![Untitled](./Untitled%2033.png)
+
+![Untitled](./Untitled%2034.png)
+
+![Untitled](./Untitled%2035.png)
+
+This is not the full story.
+
+This only takes into account instructions where the destination is available right at the end of the execute stage.
+
+# Hazards due to loads & stores
+
+![Untitled](./Untitled%2036.png)
+
+You cannot load data until the data arrives at the right end of the circle.
+
+![Untitled](./Untitled%2037.png)
+
+# Data hazards due to loads and store
+
+![Untitled](./Untitled%2038.png)
+
+# Adding bypassing to the datapath
+
+![Untitled](./Untitled%2039.png)
+
+to improve performance more
+
+Bypass doesn’t always help.
+
+# Deriving the bypass signal
+
+![Untitled](./Untitled%2040.png)
+
+# The bypass signal
+
+![Untitled](./Untitled%2041.png)
+
+# Bypass and stall signals
+
+![Untitled](./Untitled%2042.png)
+
+![Untitled](./Untitled%2043.png)
+
+# Fully bypassed datapath
+
+![Untitled](./Untitled%2044.png)
+
+# Control hazards
+
+![Untitled](./Untitled%2045.png)
+
+What is common among these examples?
+
+- We don’t do the commands until decode the opcode.
+
+# Opcode decoding bubble
+
+![Untitled](./Untitled%2046.png)
+
+basic control hazard
+
+There is no data hazard here.
+
+# Speculate next address is PC + 4
+
+![Untitled](./Untitled%2047.png)
+
+# Jump pipeline diagrams
+
+![Untitled](./Untitled%2048.png)
+
+# Pipelining conditional branches
+
+![Untitled](./Untitled%2049.png)
+
+![Untitled](./Untitled%2050.png)
+
+![Untitled](./Untitled%2051.png)
+
+# New stall signal
+
+![Untitled](./Untitled%2052.png)
+
+# Control equations for PC and IR Muxes
+
+![Untitled](./Untitled%2053.png)
+
+![Untitled](./Untitled%2054.png)
+
+# Branch pipeline diagrams
+
+![Untitled](./Untitled%2055.png)
+
+# Reducing branch penalty
+
+![Untitled](./Untitled%2056.png)
+
+# Branch delay slots
+
+![Untitled](./Untitled%2057.png)
+
+# Branch pipeline diagrams
+
+![Untitled](./Untitled%2058.png)
+
+# Why an instruction may not be dispatched every cycle (CPI > 1)
+
+![Untitled](./Untitled%2059.png)
+
+# Other control hazards
+
+![Untitled](./Untitled%2060.png)
+
+Instruction does invalid.
+
+Interrupt - ex) divide by zero error, memory fault
+
+They are unexpected things coming into the middle of instructions.
+
+---
+
+# Sparse matrix
+
+In [numerical analysis](https://en.wikipedia.org/wiki/Numerical_analysis) and [scientific computing](https://en.wikipedia.org/wiki/Scientific_computing), a **sparse matrix** or **sparse array** is a [matrix](https://en.wikipedia.org/wiki/Matrix_(mathematics)) in which most of the elements are zero.
+
+[Sparse matrix - Wikipedia](https://en.wikipedia.org/wiki/Sparse_matrix)

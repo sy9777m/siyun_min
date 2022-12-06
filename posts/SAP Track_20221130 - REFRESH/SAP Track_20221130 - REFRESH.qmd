@@ -1,0 +1,45 @@
+---
+title: "Co-op SAP Track 20221130 - REFRESH"
+author: "Siyun Min"
+date: "2022-11-30"
+categories: [SSU, SAP]
+---
+# 20221130 - REFRESH
+
+# REFERSH
+
+1. USER COMMAND - APPEND 기능 추가
+
+![Untitled](./Untitled.png)
+
+1. REFRESH PERFORM 생성
+
+![Untitled](./Untitled%201.png)
+
+1. CALL METHOD
+
+![Untitled](./Untitled%202.png)
+
+![Untitled](./Untitled%203.png)
+
+1. 변수 선언
+
+![Untitled](./Untitled%204.png)
+
+![Untitled](./Untitled%205.png)
+
+![Untitled](./Untitled%206.png)
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+1. COL, ROW 지정
+
+![Untitled](./Untitled%209.png)
+
+![Untitled](./Untitled%2010.png)
+
+1. 데이터 저장
+
+![Untitled](./Untitled%2011.png)

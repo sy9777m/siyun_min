@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-11">
+
+<title>Siyun Min - Computer Architecture - Instruction set architecture, microcode</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Computer Architecture - Instruction set architecture, microcode</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Coursera</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 11, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="instruction-set-architecture-microcode" class="level1">
+<h1>Instruction set architecture, microcode</h1>
+<section id="readings-for-instruction-set-architectures-microcodes" class="level2">
+<h2 class="anchored" data-anchor-id="readings-for-instruction-set-architectures-microcodes"><strong>Readings for Instruction Set Architectures, Microcodes</strong></h2>
+<p>The readings for this lecture are H&amp;P5 Chapter 1 (H&amp;P4 Chapter 1), and H&amp;P5 Appendix A (H&amp;P4 Appendix B).</p>
+<p><strong>Book abbreviations:</strong></p>
+<ul>
+<li>H&amp;P5 = Computer Architecture: A Quantitative Approach (5th Edition), 2011</li>
+<li>H&amp;P4 = Computer Architecture: A Quantitative Approach (4th Edition), 2007</li>
+<li>S&amp;L = Modern Processor Design: Fundamentals of Superscalar Processors (1st Edition), 2005, reissued 2013.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="fundamentals-of-quantitative-design-and-analysis" class="level1">
+<h1>Fundamentals of Quantitative Design and Analysis</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>This growth rate, combined with the cost advantages of a mass-produced microprocessor, led to an increasing fraction of the computer business being based on microprocessors.</p>
+<p>Two significant changes in the computer marketplace</p>
+<ul>
+<li>The virtual elimination of assembly language programming reduced the need for object-code compatibility.</li>
+<li>The creation of standardized, vendor-independent operating systems, such as UNIX and its clone, Linux, lowered the cost and risk of brining out a new architecture.</li>
+</ul>
+<p>The RISC-based machines focused on attention of designers on two critical performance techniques, the exploitation of instruction-level parallelism (initially through pipelining and later through multiple instruction issue) and the use of caches (initially in simple forms and later using more sophisticated organizations and optimizations).</p>
+<p>The hardware renaissance led to the fourth impact, which is on software development. This 25,000-fold performance improvement since 1987 allowed programmers today to trade performance for productivity.</p>
+<p>Alas also shows that this 17-year hardware renaissance is over. Since 2003, single-processor performance improvement has dropped to less than 22% per year due to the twin hurdles of maximum power dissipation of air-cooled chips and the lack of more instruction-level parallelism to exploit efficiently. Indeed, in 2004 Intel canceled its high-performance would be via multiple processors per chip rather than via faster uniprocessors.</p>
+<section id="classes-of-computers" class="level2">
+<h2 class="anchored" data-anchor-id="classes-of-computers">Classes of computers</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="servers" class="level3">
+<h3 class="anchored" data-anchor-id="servers">Servers</h3>
+<p>Different characteristics</p>
+<ul>
+<li>availability</li>
+<li>scalability</li>
+<li>designed for efficient throughput. That is, the overall performance of the server-in terms of transactions per minute or Web pages served per second-is what is crucial.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="clusterswarehouse-scale-computers" class="level3">
+<h3 class="anchored" data-anchor-id="clusterswarehouse-scale-computers">Clusters/warehouse-scale computers</h3>
+<p>Clusters are collections of desktop computers or servers connected by local area networks to act as a single larger computer. The largest of the clusters are called <em>warehouse-scale computers (WSCs)</em>, in that they are designed so that tens of thousands of servers can act as one.</p>
+<p>WSCs are related to servers, in that <strong>availability</strong> is critical. The difference from servers is that WSCs use redundant inexpensive components as the building blocks, relying on a software layer to catch and isolate the many failures that will happen with computing at this scale. Note that scalability for a WSC is handled by the local area network connecting the computers and not by integrated computer hardware, as in the case of servers.</p>
+<p><em>Supercomputers</em> are related to WSCs in that they are equally expensive, costing hundreds of millions of dollars, but supercomputers differ by emphasizing floating-point performance and by running large, communication-intensive batch programs that can run for weeks at a time. This tight coupling leads to use of much faster internal networks. In contrast, WSCs emphasize interactive applications, large-scale storage, dependability, and high Internet bandwidth.</p>
+</section>
+<section id="embedded-computers" class="level3">
+<h3 class="anchored" data-anchor-id="embedded-computers">Embedded computers</h3>
+<p>Other embedded devices are more limited in hardware and software sophistication.</p>
+</section>
+<section id="classes-of-parallelism-and-parallel-architectures" class="level3">
+<h3 class="anchored" data-anchor-id="classes-of-parallelism-and-parallel-architectures">Classes of parallelism and parallel architectures</h3>
+<p><em>Data-level parallelism (DLP)</em> arises because there are many data items that can be operated on at the same time.</p>
+<p><em>Task-level parallelism (TLP)</em> arises because tasks of work are created that can operate independently and largely in parallel.</p>
+<p>Computer hardware in turn can exploit these two kinds of application parallelism in four major ways:</p>
+<ol type="1">
+<li><em>Instruction-level parallelism</em> exploits data-level parallelism at modest levels with compiler help using ideas like pipelining and at medium levels using ideas like speculative execution.</li>
+<li><em>Vector architectures and graphic processor units (GPUs)</em> exploit data-level parallelism by applying a single instruction to a collection of data in parallel.</li>
+<li><em>Thread-level parallelism</em> exploits either data-level parallelism or task-level parallelism in a tightly coupled hardware model that allows for interaction among parallel threads.</li>
+<li><em>Request-level parallelism</em> exploits parallelism among largely decoupled tasks specified by the programmer or the operating system.</li>
+</ol>
+<p>There four ways for hardware to support the data-level parallelism and task-level parallelism go back 50 years. When Michael Flynn [1966] studied the parallel computing efforts in the 1960s, he found a simple classification whose abbreviations we still use today. He looked at the parallelism in the instruction and data streams called for by the instructions at the most constrained component of the multiprocessor, and placed all computers into one of four categories:</p>
+<ol type="1">
+<li><em>Single instruction stream, single data stream (SISD)</em> - This category is the uniprocessor. The programmer thinks of it as the standard sequential computer, but it can exploit instruction-level parallelism.</li>
+<li><em>Single instruction stream, multiple data streams (SIMD)</em> - The same instruction is executed by multiple processors using different data streams. SIMD computers exploit data-level parallelism by applying the same operations to multiple items of data in parallel. Each processor has its own data memory (hence the MD of SIMD), but there is a single instruction memory and control processor, which fetches and dispatches instructions.</li>
+<li><em>Multiple instruction streams, single data stream (MISD)</em> - No commercial multiprocessor of this type has been built to date, but it rounds out this simple classification.</li>
+<li><em>Multiple instruction streams, multiple data streams (MIMD)</em> - Each processor fetches its own instructions and operates on its own data, and it targets task-level parallelism. In general, MIMD is more flexible than SIMD and thus more generally applicable, but it is inherently more expensive than SIMD.</li>
+</ol>
+</section>
+</section>
+<section id="defining-computer-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="defining-computer-architecture">Defining computer architecture</h2>
+<p>Determine what attributes are important for a new computer, then design a computer to maximize performance and energy efficiency while staying within cost, power, and availability constraints.</p>
+<section id="instruction-set-architecture-the-myopic-view-of-computer-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="instruction-set-architecture-the-myopic-view-of-computer-architecture">Instruction set architecture: the myopic view of computer architecture</h3>
+<p>The ISA serves as the boundary between the software and hardware.</p>
+<p>Seven dimensions of an ISA:</p>
+<ol type="1">
+<li><em>Class of ISA</em> - Nearly all ISAs today are classified as general-purpose register architectures, where the operands are either registers or memory locations. The two popular versions of this class are register-memory ISAs, such as the 80x86, which can access memory as part of many instructions, and load-store ISAs, such as ARM and MIPS, which can access memory only with load or store instructions. All recent ISAs are load-store.</li>
+<li><em>Memory addressing</em> - Virtually all desktop and server computers, including the 80x86, ARM, and MIPS, use byte addressing to access memory operands. Some architectures, like ARM and MIPS, require that objects must be aligned.</li>
+<li><em>Addressing modes</em> - In addition to specifying registers and constant operands, addressing modes specify the address of a memory object.</li>
+<li><em>Types and sizes of operands</em> - Like most ISAs, 80x86, ARM, and MIPS support operand sizes of 8-bit (ASCII character), 16-bit (Unicode character of half word), 32-bit (integer or word), 64-bit (double word or long integer), and IEEE 754 floating point in 32-bit (single precision) and 64-bit (double precision). The 80x86 also supports 80-bit floating point (extended double precision).</li>
+<li><em>Operations</em> - The general categories of operations are data transfer, arithmetic logical, control, and floating point.</li>
+<li><em>Control flow instructions</em> - Virtually all ISAs, including these three, support conditional branches, unconditional jumps, procedure calls, and returns. All three use PC-relative addressing, where the branch address is specified by an address field that is added to the PC.</li>
+<li><em>Encoding an ISA</em> - There are two basic choices on encoding: fixed length and variable length.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>The other challenges facing the computer architecture beyond ISA design are particularly acute at the present, when the differences among instruction sets are small and when there are distinct application areas.</p>
+</section>
+<section id="genuine-computer-architecture-designing-the-organization-and-hardware-to-meet-goals-and-functional-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="genuine-computer-architecture-designing-the-organization-and-hardware-to-meet-goals-and-functional-requirements">Genuine computer architecture: designing the organization and hardware to meet goals and functional requirements</h3>
+<p>The implementation of a computer has two components: organization and hardware. The term organization includes the high-level aspects of a computer’s design, such as the memory system, the memory interconnect, and the design of the internal processor or CPU (central processing unit-where arithmetic, logic, branching, and data transfer are implemented). The term microarchitecture is also used instead of organization.</p>
+<p>The switch to multiple processors per microprocessor led to the term core to also be used for processor. Instead of saying multiprocessor microprocessor, the term multicore has caught on.</p>
+<p>The architecture overs all three aspects of computer design-instruction set architecture, organization or microarchitecture, and hardware.</p>
+<p>Computer architecture must design a computer to meet functional requirements as well as price, power, performance, and availability goals.</p>
+<p>Architects must also be aware of important trends in both the technology and the use of computers, as such trends affect not only the future cost but also the longevity of an architecture.</p>
+</section>
+<section id="trends-in-technology" class="level3">
+<h3 class="anchored" data-anchor-id="trends-in-technology">Trends in technology</h3>
+<p><em>Integrated circuit logic technology</em></p>
+<p><em>Semiconductor DRAM (dynamic random-access memory)</em> - Now that most DRAM chips are primarily shipped in DIMM modules, it is harder to track chip capacity, as DRAM manufacturers typically offer several capacity products at the same time to match DIMM capacity.</p>
+<blockquote class="blockquote">
+<p>DIMM (dual in-line memory module) is a type of computer memory that is natively 64 bits, enabling fast data transfer. DIMM is a module that contains one or several random access memory (<a href="https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory">RAM</a>) chips on a small circuit board with pins that connect it to the computer motherboard. The DIMM stores each data bit in a separate memory cell. DIMMs use a 64-bit data path, since processors used in personal computers have a 64-bit data width. DIMMs are typically used in desktop PCs, laptops, printers and other devices.</p>
+</blockquote>
+<p><a href="https://www.techtarget.com/searchstorage/definition/DIMM">What is DIMM (dual in-line memory module)? - Definition from WhatIs.com</a></p>
+<p><em>Semiconductor Flash (electrically erasable programmable read-only memory)</em> - This nonvolitile semiconductor memory is the standard storage device in PMDs, and its rapidly increasing popularity has fueled its rapid growth rate in capacity.</p>
+<p><em>Magnetic disk technology</em> - Disks are 15 to 25 times cheaper per bit than Flash. Given the slowed growth rate of DRAM, disks are now 300 to 500 times cheaper per bit than DRAM. This technology is central to server and warehouse scale storage.</p>
+<p><em>Network technology</em> - Network performance depends both on the performance of switches and on the performance of the transmission system.</p>
+</section>
+<section id="performance-trends-bandwidth-over-latency" class="level3">
+<h3 class="anchored" data-anchor-id="performance-trends-bandwidth-over-latency">Performance trends: bandwidth over latency</h3>
+<p>Bandwidth or throughput is the total amount of work done in a given time, such as megabytes per second for a disk transfer. In contrast, latency or response time is the time between the start and the completion of an event, such as milliseconds for a disk access.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Clearly, bandwidth has outpaced latency across these technologies and will likely continue to do so.</p>
+</section>
+<section id="scaling-of-transistor-performance-and-wires" class="level3">
+<h3 class="anchored" data-anchor-id="scaling-of-transistor-performance-and-wires">Scaling of transistor performance and wires</h3>
+<p>Integrated circuit processes are characterized by the <em>feature size</em>, which is the minimum size of a transistor or a wire in either the x or y dimension.</p>
+<p>The increase in transistor performance, however, is more complex. As feature sizes shrink, devices shrink quadratically in the horizontal dimension and also shrink in the vertical dimension. The shrink in the vertical dimension requires a reduction in operating voltage to maintain correct operation and reliability of the transistors. This combination of scaling factors leads to a complex interrelationship between transistor performance and process feature size. To a first approximation, transistor performance improves linearly with decreasing feature size.</p>
+<p>Although transistors generally improve in performance with decreased feature size, wires in an integrated circuit do not. In particular, the signal delay for a wire increases in proportion to the product of its resistance and capacitance. Of course, as feature size shrink, wires get shorter, but the resistance and capacitance per unit length get worse. This relationship is complex, since both resistance and capacitance depend on detailed aspects of the process, the geometry of a wire, the loading on a wire, and even the adjacency to other structures.</p>
+<p>In general, however, wire delay scales poorly compared to transistor performance, creating additional challenges for the designer.</p>
+</section>
+</section>
+<section id="trends-in-power-and-energy-in-integrated-circuits" class="level2">
+<h2 class="anchored" data-anchor-id="trends-in-power-and-energy-in-integrated-circuits">Trends in power and energy in integrated circuits</h2>
+<p>Today, power is the biggest challenge facing the computer designer for nearly every class of computer. First, power must be brought in and distributed around the chip, and modern microprocessors use hundreds of pins and multiple interconnect layers just for power and ground. Second, power is dissipated as head and must be removed.</p>
+<section id="power-and-energy-a-systems-perspective" class="level3">
+<h3 class="anchored" data-anchor-id="power-and-energy-a-systems-perspective">Power and energy: a systems perspective</h3>
+<p>What is the maximum power a processor ever requires? Meeting this demand can be important to ensuring correct operation. Modern processors can vary widely in power consumption with high peak currents; hence, they provide voltage indexing methods that allow the processor to slow down and regulate voltage within a wider margin. Obviously, doing so decreases performance.</p>
+<p>What is the sustained power consumption? This metric is widely called the thermal design power (TDP), since it determines the cooling requirement. A typical power supply for a system is usually sized to exceed the TDP, and a cooling system is usually designed to match or exceed TDP. Failure to provide adequate cooling will allow the junction temperature in the processor to exceed its maximum value, resulting in device failure and possibly permanent damage. Modern processors provide two features to assist in managing heat, since the maximum power (and hence heat and temperature rise) can exceed the long-term average specified by the TDP. First, as the thermal temperature approaches the junction temperature limit, circuitry reduces the clock rate, thereby reducing power. Should this technique not be successful, a second thermal overload trip is activated to power down the chip.</p>
+<p>The third factor that designers and users need to consider is energy and energy efficiency. In general, energy is always a better metric because it is tied to a specific task and the time required for that task. In particular, the energy to execute a workload is equal to the average power times the execution time for the workload.</p>
+<p>When is power consumption a useful measure? The primary legitimate use is as a constraint.</p>
+</section>
+<section id="energy-and-power-within-a-microprocessor" class="level3">
+<h3 class="anchored" data-anchor-id="energy-and-power-within-a-microprocessor">Energy and power within a microprocessor</h3>
+<p>The energy required per transistor:</p>
+<p><span class="math display">\[
+Energy_{dynamic} \propto \text{Capacitive load} \times Voltage^{2}
+\]</span></p>
+<p>The energy of a single transition:</p>
+<p><span class="math display">\[
+Energy_{dynamic} \propto 1/2 \times \text{Capacitive load} \times Voltage^{2}
+\]</span></p>
+<p>The power required per transistor</p>
+<p><span class="math display">\[
+Power_{dynamic} \propto 1/2 \times \text{Capacitive load} \times Voltage^{2} \times \text{Frequency switched}
+\]</span></p>
+<p>Clearly, dynamic power and energy are greatly reduced by lowering the voltage. The capacitive load is a function of the number of transistors connected to an output and the technology, which determines the capacitance of the wires and the transistors.</p>
+<p>As we move from one process to the next, the increase in the number of transistors switching and the frequency with which they switch dominate the decrease in load capacitance and voltage, leading to an overall growth in power consumption and energy.</p>
+<p>Given the equation above, you would expect clock frequency growth to slow down if we cannot reduce voltage or increase power per chip.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Power is now the major constraint to using transistor.</p>
+<p>Many techniques to try to improve energy efficiency despite flat clock rates and constant supply volatge:</p>
+<ol type="1">
+<li>Do nothing well</li>
+<li>Dynamic voltage-frequency scaling (DVFS) - Modern microprocessors typically offer a few clock frequencies and voltages in which to operate that use lower power and energy.</li>
+<li>Design for typical case - The “emergency slowdown” allows manufacturers to design for a more typical case and then rely on this safety mechanism (ex. low power mode) if someone really does run programs that consume much more power than is typical.</li>
+<li>Overclocking - For single threaded code, these microprocessors can turn off all cores but one and run it at an even higher clock rate.</li>
+</ol>
+<p>Static power is becoming an important issue because leakage current flows even when a transistor is off:</p>
+<p><span class="math display">\[
+Power_{static} \propto Current_{static} \times Voltage
+\]</span></p>
+<p>Increasing the number of transistors increases power even if they are idle, and leakage current increases in processors with smaller transistor sizes. As a result, very low power systems are even turning off the power supply (power gating) to inactive modules to control loss due to leakage.</p>
+<p>Finally, because the processor is just a portion of the whole energy cost of a system, it can make sense to use a faster, less energy-efficient processor to allow the rest of the system to go into a sleep mode. This strategy is known as <em>race-to-halt</em>.</p>
+<p>The importance of power and energy has increased the scrutiny on the efficiency of an innovation, so the primary evaluation now is tasks per joule or performance per watt as opposed to performance per <span class="math inline">\(mm^{2}\)</span> of silicon.</p>
+</section>
+</section>
+<section id="trends-in-cost" class="level2">
+<h2 class="anchored" data-anchor-id="trends-in-cost">Trends in cost</h2>
+<section id="the-impact-of-time-volume-and-commoditization" class="level3">
+<h3 class="anchored" data-anchor-id="the-impact-of-time-volume-and-commoditization">The impact of time, volume, and commoditization</h3>
+<p>The cost of a manufactured computer component decreases over time even without major improvements in the basic implementation technology. The underlying principle that drives costs down is the learning curve-manufacturing costs decrease over time. The learning curve itself is best measured by change in yield-the percentage of manufactured devices that survives the testing procedure. Whether it is a chip, a board, or a system, designs that have twice the yield will have half the cost.</p>
+<p>Volume is a second key factor in determining cost. Increasing volumes affect cost in several ways. First, they decrease the time needed to get down the learning curve, which is partly proportional to the number of systems (or chips) manufactured. Second, volume decreases cost, since it increases purchasing and manufacturing efficiency.</p>
+<p>Commodities are products that are sold by multiple vendors in large volumes and are essentially identical.</p>
+</section>
+<section id="cost-of-an-integrated-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="cost-of-an-integrated-circuit">Cost of an integrated circuit</h3>
+<p>In an increasingly competitive computer market place where standard parts-disks, flash memory, DRAMs, and so on-are becoming a significant portion of any system’s costs, integrated circuit costs are becoming a greater portion of the cost that varies between computers, especially in the high-volume, cost-sensitive portion of the market. Indeed, with personal mobile devices’ increasing reliance of whole systems on a chip (SOC), the cost of the integrated circuits it much of the cost of the PMD. Thus, computer designers must understand the costs of chips to understand the costs of current computer.</p>
+<p>Although the costs of integrated circuits have dropped exponentially, the basic process of silicon manufacture is unchanged: A wafer is still tested and chopped into dies that are packaged.</p>
+<p><span class="math display">\[
+\text{Cost of integrated circuit} = \frac{\text{Cost of die} + \text{Cost of testing die} + \text{Cost of packaging and final test}}{\text{Final test yield}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Cost of die} = \frac{\text{Cost of wafer}}{\text{Dies per wafer} \times \text{Die yield}}
+\]</span></p>
+<p>The number of dies per wafer is approximately the area of the wafer divided by the area of the die. It can be more accurately estimated by</p>
+<p><span class="math display">\[
+\text{Dies per wafer} = \frac{\pi \times (\text{Wafer diameter} / 2)^{2}}{\text{Die area}} - \frac{\pi \times \text{Wafer diameter}}{\sqrt{2 \times \text{Die area}}}
+\]</span></p>
+<p><span class="math display">\[
+\text{Die yield} = \text{Wafer yield} \times 1 / (1 + \text{Defects per unit area} \times \text{Die area})^{N}
+\]</span></p>
+<p>What should a computer designer remember about chip costs? The manufacturing process dictates the wafer cost, wafer yield, and defects per unit area, so the sole control of the designer is die area. In practice, because the number of defects per unit area is small, the number of good dies per wafer, and hence the cost per die, grows roughly as the square of the die area. The computer designer affects die size, and hence cost, both by what functions are included on or excluded from the die and by the number of I/O pins.</p>
+<p>Before we have a part that is ready for use in a computer, the die must be tested (to separate the good dies from the bad), packaged, and tested again after packaging. These steps all add significant costs.</p>
+<p>The above analysis has focused on the variable costs of producing a functional die, which is appropriate for high-volume integrated circuits. There is, however, one very important part of the fixed costs that can significantly affect the cost of an integrated circuit for low volumes (less than 1 million parts), namely, the cost of a mask set. Each step in the integrated circuit process requires a separate mask. Thus, for modern high-density fabrication processes with four to six metal layers, mask costs exceed $1M. Obviously, this large fixed cost affects the cost of prototyping and debugging runs and, for small-volume production, can be a significant part of the production cost. Since mask costs are likely to continue to increase, designers may incorporate reconfigurable logic to enhance the flexibility of a part or choose to use gate arrays (which have fewer custom mask levels) and thus reduce the cost implications of masks.</p>
+</section>
+<section id="cost-of-manufacturing-versus-cost-of-operation" class="level3">
+<h3 class="anchored" data-anchor-id="cost-of-manufacturing-versus-cost-of-operation">Cost of manufacturing versus cost of operation</h3>
+<p>The amortized purchase price of servers and networks is just over 60% of the monthly cost to operate a warehouse-scale computer, assuming a short lifetime of the IT equipment of 3 to 4 years. About 30% of the monthly operational costs are for power use and the amortized infrastructure to distribute power and to cool the IT equipment, despite this infrastructure being amortized over 10 years. Thus, to lower operational costs in a warehouse-scale computer, computer architects need to use energy efficiently.</p>
+</section>
+</section>
+<section id="dependability" class="level2">
+<h2 class="anchored" data-anchor-id="dependability">Dependability</h2>
+<p>Historically, integrated circuits were one of the most reliable components of a computer. Although their pins many be vulnerable, and faults may occur over communication channels, the error rate inside the chip was very low. That conventional wisdom is changing as we head to feature sizes of 32nm and smaller, as both transient faults and permanent faults will become more commonplace, so architects must design systems to cope with these challenges.</p>
+<p>Computers are designed and constructed at different layers of abstraction. Thus, utter failure of a module at one level may be considered merely a component error in a higher-level module. This distinction is helpful in trying to find ways to build dependable computers.</p>
+<p>One difficult question is deciding when a system is operating properly. This philosophical point became concrete with the popularity of Internet services. Infrastructure providers started offering service level agreements (SLAs) or service level objectives (SLOs) to guarantee that their networking or power service would be dependable.</p>
+<p>Systems alternate between two states of service with respect to an SLA:</p>
+<ol type="1">
+<li>Service accomplishment, where the service is delivered as specified.</li>
+<li>Service interruption, where the delivered service is different from the SAL.</li>
+</ol>
+<p>Transitions between two states are caused by failures (from state 1 to state 2) or restorations (2 to 1). Quantifying these transitions leads to the two main measures of dependability.</p>
+<ul>
+<li>Module reliability is a measure of the continuous service accomplishment (or, equivalently, of the time to failure) from a reference initial instant. Hence, the mean time of failure (MTTF) is a reliability measure. The reciprocal of MTTF is a rate of failures, generally reported as failures per billion hours of operation, or FIT (for failures in time). Service interruption is measured as mean time to repair (MTTR). Mean time between failures (MTBF) is simply the sum of MTTF + MTTR. Although MTBF is widely used, MTTF is often the more appropriate term. If a collection of modules has exponentially distributed lifetimes-meaning that the age of a module is not important in probability of failure-the overall failure rate of the collection is the sum of the failure rates of the modules.</li>
+<li>Module availability is a measure of the service accomplishment with respect to the alternation between the two states of accomplishment and interruption.</li>
+</ul>
+<p><span class="math display">\[
+\text{Module availability} = \frac{MTTF}{(MTTF + MTTR)}
+\]</span></p>
+<p>Note that reliability and availability are now quantifiable metrics, rather than synonyms for dependability. From these definitions, we can estimate reliability of a system quantitatively if we make some assumptions about the reliability of components and that failures are independent.</p>
+<p>The primary way to cope with failure is redundancy, either in time (repeat the operation to see if it still erroneous) or in resources (have other components to take over from the one that failed). Once the component is replaced and the system fully repaired, the dependability of the system is assumed to be as good as new.</p>
+</section>
+<section id="measuring-reporting-and-summarizing-performance" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-reporting-and-summarizing-performance">Measuring, reporting, and summarizing performance</h2>
+<p>X is n times faster than Y.</p>
+<p><span class="math display">\[
+n = \frac{\text{Execution time}_{Y}}{\text{Execution time}_{X}} = \frac{\frac{1}{Performance_{Y}}}{\frac{1}{Performance_{X}}} = \frac{Performance_{X}}{Performance_{Y}}
+\]</span></p>
+<p>Unfortunately, time is not always the metric quoted in comparing the performance of computers. Our position is that the only consistent and reliable measure of performance is the execution time of real programs, and that all proposed alternatives to time as the metric or to real programs as the items measured have eventually led to misleading claims or even mistakes in computer design.</p>
+<p>Even execution time can be defined in different ways depending on what we count.</p>
+<section id="benchmarks" class="level3">
+<h3 class="anchored" data-anchor-id="benchmarks">Benchmarks</h3>
+<p>The best choice of benchmarks to measure performance is real application.</p>
+<ul>
+<li>Kernels, which are small, key pieces of real applications.</li>
+<li>Toy programs, which are 100-line programs from beginning programming assignments, such as quicksort.</li>
+<li>Synthetic benchmarks, which are fake programs invented to try to match the profile and behavior of real applications, such as Dhrystone.</li>
+</ul>
+<p>Another issue is the conditions under which the benchmarks are run.</p>
+<p>Desktop benchmarks divides into two broad classes: processor-intensive benchmarks and graphics-intensive benchmarks, although many graphics benchmarks include intensive processor activity.</p>
+<p>Just as servers have multiple functions, so are there multiple types of benchmarks. The simplest benchmark is perhaps a processor throughput-oriented-benchmark.</p>
+<p>Other than SPEC rate, most server applications and benchmarks have significant I/O activity arising from either disk or network traffic, including benchmarks for file server systems, for Web servers, and for database and transaction-processing systems.</p>
+<p>Transaction-processing (TP) benchmarks measure the ability of a system to handle transactions that consist of database accesses and updates.</p>
+</section>
+<section id="reporting-performance-results" class="level3">
+<h3 class="anchored" data-anchor-id="reporting-performance-results">Reporting performance results</h3>
+<p>The guiding principle of reporting performance measurements should be reproducibility-list everything another experimenter would need to duplicate the results. These reports are excellent sources for finding the real costs of computing systems, since manufacturers compete on high performance and cost-performance.</p>
+</section>
+</section>
+<section id="quantitative-principles-of-computer-design" class="level2">
+<h2 class="anchored" data-anchor-id="quantitative-principles-of-computer-design">Quantitative principles of computer design</h2>
+<section id="take-advantage-of-parallelism" class="level3">
+<h3 class="anchored" data-anchor-id="take-advantage-of-parallelism">Take advantage of parallelism</h3>
+<p>Taking advantage of parallelism is one of the most important methods for improving performance.</p>
+<p>Our first example is the use of parallelism at the system level. The workload of handling requests can be spread among the processors and disks, resulting in improved throughput. Being able to expand memory and the number of processors and disks is called scalability, and it is a valuable asset for servers. Spreading of data across many disks for parallel reads and writes enables data-level parallelism.</p>
+<p>At the level of an individual processor, taking advantage of parallelism among instructions is critical to achieving high performance. The basic idea behind pipelining is to overlap instruction execution to reduce the total time to complete an instruction sequence. A key insight that allows pipelining to work is that not every instruction depends on its immediate predecessor, so executing the instructions completely or partially in parallel may be possible. Pipelining is the best-known example of instruction-level parallelism.</p>
+<p>Parallelism can also be exploited at the level of detailed digital design.</p>
+</section>
+<section id="principle-of-locality" class="level3">
+<h3 class="anchored" data-anchor-id="principle-of-locality">Principle of locality</h3>
+<p>Important fundamental observations have come from properties of programs. The most important program property that we regularly exploit is the principle of locality: Programs tend to reuse data and instructions they have used recently.</p>
+<p>Two different types of locality have been observed. <em>Temporal locality</em> states that recently accessed items are likely to be accessed in the near future. <em>Spatial locality</em> says that items whose addresses are near one another tend to be referenced close together in time.</p>
+</section>
+<section id="focus-on-the-common-case" class="level3">
+<h3 class="anchored" data-anchor-id="focus-on-the-common-case">Focus on the common case</h3>
+<p>Perhaps the most important and pervasive principle of computer design is to focus on the common case: In making a design trade-off, favor the infrequent case over the infrequent case. This principle applies when determining how to spend resources, since the impact of the improvement is higher if the occurrence is frequent.</p>
+<p>Focusing on the common case works for power as well as for resource allocation and performance.</p>
+<p>The frequent case is often simpler and can be done faster than the infrequent case. This emphasis may slow down the case when overflow occurs, but if that is rate then overall performance will be improved by optimizing for the normal case.</p>
+<p>A fundamental law, called Amdahl’s law, can be used to quantify this principle.</p>
+</section>
+<section id="amdahls-law" class="level3">
+<h3 class="anchored" data-anchor-id="amdahls-law">Amdahl’s law</h3>
+<p>Amdahl’s law sates that the performance improvement to be gained from using some faster mode of execution is limited by the fraction of the time the faster mode can be used.</p>
+<p><span class="math display">\[
+Speedup = \frac{\text{Performance for entire task using the enhancement when possible}}{\text{Performance for entire task without using the enhancement}} = \frac{\text{Execution time for entire task without using the enhancement}}{\text{Execution time for entire task using the enhancement when possible}}
+\]</span></p>
+<p>Speedup tells us how much faster a task will run using the computer with the enhancement as opposed to the original computer.</p>
+<p>Amdahl’s law gives us a quick way to find the speedup from some enhancement, which depends on two factors:</p>
+<ol type="1">
+<li>The fraction of the computation time in the original computer that can be converted to take advantage of the enhancement.</li>
+<li>The improvement gained by the enhanced execution mode, that is, how much faster the task would run if the enhanced mode were used for the entire program-this value is the time of the original mode over the time of the enhanced mode. If the enhanced mode takes, asy, 2 seconds for a portion of the program, while it is 5 seconds in the original mode, the improvement is 5/2. We will call this value, which is always greater than 1, <span class="math inline">\(Speedup_{enhanced}\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+\text{Execution time}_{new} = \text{Execution time}_{old} \times ((1 - Fraction_{enhanced}) + \frac{Fraction_{enhanced}}{Speedup_{enhanced}})
+\]</span></p>
+<p><span class="math display">\[
+Speedup_{overall} = \frac{\text{Execution time}_{old}}{\text{Execution time}_{new}}
+\]</span></p>
+<p>We needed the fraction consumed by the new and improved version: often it is difficult to measure these times directly.</p>
+</section>
+<section id="the-processor-performance-equation" class="level3">
+<h3 class="anchored" data-anchor-id="the-processor-performance-equation">The processor performance equation</h3>
+<p><span class="math display">\[
+\text{CPU time} = \frac{\text{CPU clock cycles for a program}}{\text{Clock rate}}
+\]</span></p>
+<p><span class="math display">\[
+CPI = \frac{\text{CPU clock cycles for a program}}{\text{Instruction count}}
+\]</span></p>
+<p><span class="math display">\[
+\text{CPU time} = \text{Instruction count} \times \text{Cycles per instruction} \times \text{Clock cycle time}
+\]</span></p>
+<p><span class="math display">\[
+\frac{Instructions}{Program} \times \frac{Clock cycles}{Instruction} \times \frac{Seconds}{Clock cycle} = \frac{Seconds}{Program} = \text{CPU time}
+\]</span></p>
+<p>As this formula demonstrates, processor performance is dependent upon three characteristics: clock cycle (or rate), clock cycles per instruction, and instruction count. Furthermore, CPU time is equally dependent on these three characteristics.</p>
+<p>Unfortunately, it is difficult to change one parameter in complete isolation from others because the basic technologies involved in changing each characteristic are interdependent.</p>
+<ul>
+<li>Clock cycle time-Hardware technology and organization</li>
+<li>CPI-Organization and instruction set architecture</li>
+<li>Instruction count-Instruction set architecture and compiler technology</li>
+</ul>
+</section>
+</section>
+<section id="fallacies-and-pitfalls" class="level2">
+<h2 class="anchored" data-anchor-id="fallacies-and-pitfalls">Fallacies and pitfalls</h2>
+<section id="fallacy-multiprocessors-are-a-silver-bullet" class="level3">
+<h3 class="anchored" data-anchor-id="fallacy-multiprocessors-are-a-silver-bullet">Fallacy: Multiprocessors are a silver bullet</h3>
+<p>Multiple processors per chip do not guarantee lower power; it’s certainly possible to design a multicore chip that uses more power.</p>
+</section>
+<section id="pitfall-falling-prey-to-amdahls-heartbreaking-law" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-falling-prey-to-amdahls-heartbreaking-law">Pitfall: Falling prey to Amdahl’s heartbreaking law</h3>
+<p>Only when the overall speedup is disappointing do we recall that we should have measured first before we spent so much effort enhancing it.</p>
+</section>
+<section id="pitfall-a-single-point-of-failure" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-a-single-point-of-failure">Pitfall: A single point of failure</h3>
+<p>No matter how much more dependable we make the power supplies, as we did in our example, the single fan will limit the reliability of the disk subsystem.</p>
+</section>
+<section id="fallacy-hardware-enhancements-that-increase-performance-improve-energy-efficiency-or-are-at-worst-energy-neutral" class="level3">
+<h3 class="anchored" data-anchor-id="fallacy-hardware-enhancements-that-increase-performance-improve-energy-efficiency-or-are-at-worst-energy-neutral">Fallacy: Hardware enhancements that increase performance improve energy efficiency or are at worst energy neutral</h3>
+</section>
+<section id="fallacy-benchmarks-remain-valid-indefinitely" class="level3">
+<h3 class="anchored" data-anchor-id="fallacy-benchmarks-remain-valid-indefinitely">Fallacy: Benchmarks remain valid indefinitely</h3>
+<p>Several factors influence the usefulness of a benchmark as a predictor of real performance, and some change over time. A big factor influencing the usefulness of a benchmark is its ability to resist “benchmark engineering” or “benchmarketing.” Once a benchmark becomes standardized and popular, there is tremendous pressure to improve performance by targeted optimizations or by aggressive interpretation of the rules for running the benchmark.</p>
+</section>
+<section id="fallacy-the-rated-mean-time-to-failure-of-disks-is-1200000-hours-of-almost-140-years-so-disks-practically-never-fail." class="level3">
+<h3 class="anchored" data-anchor-id="fallacy-the-rated-mean-time-to-failure-of-disks-is-1200000-hours-of-almost-140-years-so-disks-practically-never-fail.">Fallacy: The rated mean time to failure of disks is 1,200,000 hours of almost 140 years, so disks practically never fail.</h3>
+<p>0.9% would fail per year, or 4.4% over a 5-year lifetime.</p>
+<p>Moreover, those high numbers are quoted assuming limited ranges of temperature and vibration, if they are exceeded, then all bets are off.</p>
+</section>
+<section id="fallacy-peak-performance-tracks-observed-performance." class="level3">
+<h3 class="anchored" data-anchor-id="fallacy-peak-performance-tracks-observed-performance.">Fallacy: Peak performance tracks observed performance.</h3>
+<p>The only university true definition of peak performance is “the performance level a computer is guaranteed not to exceed.” It varies from 5% to 58%. Since the gap is so large and can vary significantly by benchmark peak performance is not generally useful in predicting observed performance.</p>
+</section>
+<section id="pitfall-fault-detection-can-lower-availability" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-fault-detection-can-lower-availability">Pitfall: Fault detection can lower availability</h3>
+<p>This apparently ironic pitfall is because computer hardware has a fair amount of state that may not always be critical to proper operation.</p>
+<p>In processors that try to aggressively exploit instruction-level parallelism, not all the operations are needed for correct execution of the program.</p>
+<p>The pitfall is in detecting faults without providing a mechanism to correct them. These engineers are unlikely to design another computer without ECC on external caches.</p>
+</section>
+</section>
+<section id="concluding-remarks" class="level2">
+<h2 class="anchored" data-anchor-id="concluding-remarks">Concluding remarks</h2>
+<p>Hardware-software cooperation has become a key to high-performance memory systems, just as it has to high-performance pipelines.</p>
+<p>We look at instruction-level parallelism (ILP), of which pipelining is the simplest and most common form. Exploiting ILP is one of the most important techniques for building high-speed uniprocessors.</p>
+<p>The classic and oldest approach is vector architecture, and we start there to lay down the principles of SIMD design. The SIMD instruction set extensions found in most desktop microprocessors today. The third piece is an in-depth explanation of how modern graphics processing units (GPUs) works. Most GPU descriptions are written from the programmer’s perspective, which usually hides how the computer really works.</p>
+<p>Instead of using parallelism to overlap individual instructions, multiprocessing uses parallelism to allow multiple instruction streams to be executed simultaneously on different processors. Our focus is on the dominant form of multiprocessors, shared-memory multiprocessors, though we introduce other types as well and discuss the broad issues that arise in any multiprocessor.</p>
+<p>We introduce clusters and then go into depth on warehouse-scale computers (WSCs), which computer architects help design. The concerns of price-performance and energy efficiency of the earlier chapters applies to WSCs, as does the quantitative approach to making decisions.</p>
+<hr>
+</section>
+</section>
+<section id="what-is-computer-architecture" class="level1">
+<h1>What is computer architecture?</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>In its broadest definition, computer architecture is the design of the abstraction/implementation layers that allow us to execute information processing applications efficiently using manufacturing technologies.</p>
+</section>
+<section id="abstractions-in-modern-computing-systems" class="level1">
+<h1>Abstractions in modern computing systems</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computer-architecture-is-constantly-changing" class="level1">
+<h1>Computer architecture is constantly changing</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computers-then" class="level1">
+<h1>Computers then…</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="computers-now" class="level1">
+<h1>Computers now</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sequential-processor-performance" class="level1">
+<h1>Sequential processor performance</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="course-structure" class="level1">
+<h1>Course structure</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="course-content-computer-organization" class="level1">
+<h1>Course content computer organization</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="architecture-vs.-microarchitecture" class="level1">
+<h1>Architecture vs.&nbsp;microarchitecture</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="software-developments" class="level1">
+<h1>Software developments</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="compatibility-problem-at-ibm" class="level1">
+<h1>Compatibility problem at IBM</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ibm-360-design-premises" class="level1">
+<h1>IBM 360: Design premises</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ibm-360-a-general-purpose-register-gpr-machine" class="level1">
+<h1>IBM 360: A general-purpose register (GPR) machine</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ibm-360-initial-implementations" class="level1">
+<h1>IBM 360: initial implementations</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="ibm-360-47-years-later-the-zseries-z11-microprocessor" class="level1">
+<h1>IBM 360: 47 years later… The zSeries z11 microprocessor</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="same-architecture-different-microarchitecture" class="level1">
+<h1>Same architecture different microarchitecture</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="different-architecture-different-microarchitecture" class="level1">
+<h1>Different architecture different microarchitecture</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="where-do-operands-come-from-and-where-do-results-go" class="level1">
+<h1>Where do operands come from and where do results go?</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 29.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stack-based-instruction-set-architecture-isa" class="level1">
+<h1>Stack-based instruction set architecture (ISA)</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 31.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="evaluation-of-expressions" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-of-expressions">Evaluation of expressions</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 32.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 33.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 34.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 35.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 36.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 37.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 38.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 39.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="hardware-organization-of-the-stack" class="level1">
+<h1>Hardware organization of the stack</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 40.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="stack-operations-and-implicit-memory-references" class="level2">
+<h2 class="anchored" data-anchor-id="stack-operations-and-implicit-memory-references">Stack operations and implicit memory references</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 41.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="stack-size-and-memory-references" class="level2">
+<h2 class="anchored" data-anchor-id="stack-size-and-memory-references">Stack size and memory references</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 42.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 43.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="machine-model-summary" class="level1">
+<h1>Machine model summary</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 44.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="classes-of-instructions" class="level1">
+<h1>Classes of instructions</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 45.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>REP MOVSB - store and copy</p>
+</section>
+<section id="addressing-modes-how-to-get-operands-from-memory" class="level1">
+<h1>Addressing modes: how to get operands from memory</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 46.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="data-types-and-sizes" class="level1">
+<h1>Data types and sizes</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 47.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="isa-encoding" class="level1">
+<h1>ISA encoding</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 48.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="x86-ia-32-instruction-encoding" class="level1">
+<h1>x86 (IA-32) instruction encoding</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 49.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="mips64-instruction-encoding" class="level1">
+<h1>MIPS64 instruction encoding</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 50.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="real-world-instruction-sets" class="level1">
+<h1>Real world instruction sets</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 51.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="why-the-diversity-in-isas" class="level1">
+<h1>Why the diversity in ISAs?</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 52.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="recap" class="level1">
+<h1>Recap</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 53.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 54.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
