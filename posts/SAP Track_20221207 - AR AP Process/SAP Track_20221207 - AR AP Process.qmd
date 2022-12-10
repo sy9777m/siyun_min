@@ -1,0 +1,79 @@
+---
+title: "Co-op SAP Track 20221207 - AR/AP Process"
+author: "Siyun Min"
+date: "2022-12-07"
+categories: [SSU, SAP]
+---
+# 20221207 - AR/AP Process
+
+process
+
+- 냉동피자 제조기업
+
+![Untitled](./Untitled.png)
+
+SD - 구매
+
+MM - 판매
+
+PP - 생산
+
+FI - 재무
+
+CO - 원가
+
+# AR Process
+
+## 판매 Process
+
+![Untitled](./Untitled%201.png)
+
+## 판매 전표
+
+![Untitled](./Untitled%202.png)
+
+## 판매 데이터 수익성 분석
+
+제품 출하 및 청구서 발행 시 해당 오더의 매출 및 매출원가가 수익성분석에 실시간 반영되며, 의사결정자가 원하는 다양한 관점 별로 수익성 분석이 제공된다.
+
+결산 후에는 실제 원가와 비교하여 차이 원인을 분석 할 수 있다.
+
+![Untitled](./Untitled%203.png)
+
+# AP Process
+
+## 구매 process
+
+![Untitled](./Untitled%204.png)
+
+## 구매 전표
+
+![Untitled](./Untitled%205.png)
+
+## 구매 데이터 제조원가 계산
+
+생산활동 (PP)에서 받은 제조 데이터를 기반으로 표준원가를 추정하고 원재료의 입고, 송장 단계 시 구매 된 실제 가격에 기반하여 실제 원가가 결정되면 결산 후에 실제 원가와 표준 원가의 차이 분을 수익성 분석에 집계한다.
+
+![Untitled](./Untitled%206.png)
+
+# Customizing: SPRO
+
+Customizing: Execute project
+
+![Untitled](./Untitled%207.png)
+
+SAP Reference IMG
+
+![Untitled](./Untitled%208.png)
+
+# Create Vendor: FK01
+
+![Untitled](./Untitled%209.png)
+
+구매처 마스터 생성 t-code
+
+- customization 셋팅이 다 끝나면 가능
+
+# Number range object maintenance: SNRO
+
+![Untitled](./Untitled%2010.png)
