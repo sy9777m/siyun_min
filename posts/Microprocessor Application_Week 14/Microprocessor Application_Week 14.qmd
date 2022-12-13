@@ -1,0 +1,142 @@
+---
+title: "Microprocessor Application - Week 14"
+author: "Siyun Min"
+date: "2022-12-12"
+categories: [SSU]
+---
+# Week 14
+
+# Acceleration?
+
+Evolution of Bitcoin miner
+
+- x100000000 improvement in just five years!
+
+![Untitled](./Untitled.png)
+
+# Evolution of Bitcoin miner
+
+From 2009, the amount of hashing power in the Bitcoin network has grown exponentially
+
+- 2009: the miners hashing 8 million times per second
+- 2010: 116,000 million times per second
+- 2014: 10,000,000,000 million times per second
+
+It is mostly done by the competition in the hardware used in the network because the SHA-256 algorithm is hard to be accelerate in SW
+
+- 2010: CPU → GPU
+- 2011: GPU → FPGA
+- 2013: FPGA → ASIC
+
+# How to make NN fast?
+
+optimize network
+
+- use of better filter set
+- topology pruning- edges, nodes, depths…
+
+use of better machine
+
+- GPU, TPU, VLIW, etc…
+
+# Operations in CNN
+
+terms
+
+![Untitled](./Untitled%201.png)
+
+![Untitled](./Untitled%202.png)
+
+Activation function
+
+- Input: input FMAP, filter weight
+- output: output FMAP
+
+![Untitled](./Untitled%203.png)
+
+simple implementation of CONV layer with 7 loop layers
+
+![Untitled](./Untitled%204.png)
+
+# What should be accelerated?
+
+![Untitled](./Untitled%205.png)
+
+Cong et. al “Minimizing Computation in Convolutional Neural Networks”, ICANN 2014
+
+Chen at. al, “Using data flow to optimize energy efficiency of deep neural network”, IEEE MICRO, 2017
+
+# Computational acceleration
+
+Memory access consumes order of magnitude higher resources compared to the computation
+
+But, anyhow, 90% of computation is occupied by convolution
+
+- convolution is the sequence of Dot-Product (vector matrix multiplication)
+- how to accelerate the dot-product?
+
+# Performance metrics
+
+CPI - Cycles per instruction (clock cycles per instruction, clocks per instruction, or CPI) is one aspect of a processor’s performance: the average number of clock cycles per instruction for a program or program fragment
+
+It is the multiplicative inverse of instructions per cycle (IPC)
+
+MIPS: million instructions per second
+
+![Untitled](./Untitled%206.png)
+
+# Discussion
+
+How can CPI value be smaller than 1.00?
+
+- effect of pipeline
+
+Why does “Branch (BL)” instruction has 1.00 CPI value?
+
+- result of a stall in pipeline
+
+![Untitled](./Untitled%207.png)
+
+![Untitled](./Untitled%208.png)
+
+# Dot-product engine
+
+## Dot-product
+
+$$
+a • b = \sum_{i = 1}^{n}{a_i b_i} = a_1b_1 + a_2b_2 + ... + a_nb_n
+$$
+
+How many computation do we need?
+
+- For 2x2 matrix input and weight
+- 4 multiplication and 3 addition
+
+![Untitled](./Untitled%209.png)
+
+Multiply accumulate (MAC) unit
+
+- Accept multiple inputs and calculate at once
+
+For 2x2 matrix input and weight in the previous page,
+
+- When we need 2 cycles for MUL, 1 cycle for ADD
+- A dot-product needs 11 cycles in total
+
+If dot-product engine can obtain the result in a cycle
+
+and the dot-product occupy 90% of processor time,
+
+Then we can save 0.9 * 10/11 = 81.8% of CPU time!!
+
+# Hardwares for DNN
+
+![Untitled](./Untitled%2010.png)
+
+![Untitled](./Untitled%2011.png)
+
+![Untitled](./Untitled%2012.png)
+
+![Untitled](./Untitled%2013.png)
+
+![Untitled](./Untitled%2014.png)

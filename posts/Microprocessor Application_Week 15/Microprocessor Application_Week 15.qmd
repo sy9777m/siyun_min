@@ -1,0 +1,84 @@
+---
+title: "Microprocessor Application - Week 15"
+author: "Siyun Min"
+date: "2022-12-12"
+categories: [SSU]
+---
+# Week 15
+
+# USB Device Basics
+
+Universal Serial Bus (USB) connects between a computer and peripheral devices
+
+- created to replace various slow buses (parallel, serial, and keyboard connections)
+    - USB 2.0: up to 480Mb/s (35MB/s)
+    - USB 3.0: up to 6Gb/s (625MB/s)
+
+A USB device can never start sending data without first being asked by the host controller
+
+Single-master implementation
+
+- Host polls various devices
+- A device can request a fixed bandwidth (for audio and video I/O)
+
+Universal Serial Bus is a misnomer…
+
+- actually a tree built out of point-to-point links
+    - Links are four-wire cables (ground, power, and two signal wires)
+
+## The protocol
+
+USB protocol defines a set of standards that any device can follow
+
+- no need to write a driver for a device that is in a predefined class and follows that standard,
+- predefined classes: storage devices, keyboards, mice, joysticks, network devices, and modems
+- no defined standard for video devices and USB-to-serial devices
+    - A driver is needed for every device
+
+## Driver types
+
+Linux supports two types of USB drivers
+
+- Drivers on a host system
+    - control the USB devices that are plugged into it
+- Drivers on a device (USB gadget drivers)
+    - control how that single device looks to the host computer as a USB device
+- some hardware devices can actually be both
+    - called USB OTG (On The Go)
+    - E.g. Android 3.0+, some printers
+
+![Untitled](./Untitled.png)
+
+![Untitled](./Untitled%201.png)
+
+# USB overview
+
+A USB device has one or more configurations
+
+- E.g., power and bandwidth requirements
+
+A configuration has one or more interfaces
+
+- E.g., audio data, knobs for speakers
+
+An interface has one or more settings
+
+- Different quality of services
+    - E.g., different frame sizes for digital cameras
+- Also zero or more endpoints
+    - E.g., bulk, interrupt endpoints
+
+# Endpoints
+
+The most basic form of USB communication is through an endpoint
+
+- Unidirectional: Carries data in one direction
+    - from the host to device (OUT endpoint)
+    - from the device to the host (In endpoint)
+
+Four endpoint types
+
+- CONTROL
+- INTERRUPT
+- BULK
+- ISOCHRONOUS
