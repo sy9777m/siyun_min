@@ -242,10 +242,10 @@ p = \frac{e^{\alpha h} - d}{u - d}
 <section id="black-scholes" class="level1">
 <h1>Black-Scholes</h1>
 <p><span class="math display">\[
-C = Se^{\delta T}N(d_1) - Ke^{-rT}N(d_2)
+C = Se^{-\delta T}N(d_1) - Ke^{-rT}N(d_2)
 \]</span></p>
 <p><span class="math display">\[
-P = Ke^{-rT}N(-d_2) - Se^{\delta T}N(-d_1)
+P = Ke^{-rT}N(-d_2) - Se^{-\delta T}N(-d_1)
 \]</span></p>
 <p><span class="math display">\[
 d_1 = \frac{\ln{S / K} + (r - \delta + \frac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}, d_2 = d_1 - \sigma\sqrt{T}

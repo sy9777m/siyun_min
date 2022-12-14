@@ -108,11 +108,11 @@ $$
 # Black-Scholes
 
 $$
-C = Se^{\delta T}N(d_1) - Ke^{-rT}N(d_2)
+C = Se^{-\delta T}N(d_1) - Ke^{-rT}N(d_2)
 $$
 
 $$
-P = Ke^{-rT}N(-d_2) - Se^{\delta T}N(-d_1)
+P = Ke^{-rT}N(-d_2) - Se^{-\delta T}N(-d_1)
 $$
 
 $$
