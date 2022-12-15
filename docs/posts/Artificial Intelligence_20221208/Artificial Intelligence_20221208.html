@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-12-08">
+
+<title>Siyun Min - Artificial Intelligence 20221208</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Artificial Intelligence 20221208</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 8, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="section" class="level1">
+<h1>20221208</h1>
+<section id="몬테카를로-학습-monte-carlo-learning-mc" class="level2">
+<h2 class="anchored" data-anchor-id="몬테카를로-학습-monte-carlo-learning-mc">몬테카를로 학습 (Monte-Carlo learning, MC)</h2>
+<section id="monte-carlo-prediction-몬테카를로-예측" class="level3">
+<h3 class="anchored" data-anchor-id="monte-carlo-prediction-몬테카를로-예측">Monte-Carlo prediction (몬테카를로 예측)</h3>
+<p>샘플링을 통해 상태 가치 함수를 학습</p>
+<p>충분한 에피소드 (episode, a sample)를 거치고 나면 상태 가치 함수가 정답에 가까워 짐</p>
+<p><span class="math display">\[
+V_{n + 1}(s) = \frac{1}{n}\sum_{i = 1}^n{G_i} = \frac{1}{n}(G_n + \sum_{i = 1}^{n - 1}{G_i}) = \frac{1}{n}(G_n + (n - 1) \frac{1}{n - 1}\sum_{i = 1}^{n - 1}{G_i}) = \frac{1}{n}(G_n + (n - 1)V_n(s)) = V_n(s) + \frac{1}{n}(G_n - V_n(s))
+\]</span></p>
+<p>이전 상태 가치 함수와 새로운 획득 보상과의 차를 더해 상태 가치 함수를 업데이트 함</p>
+<p><span class="math inline">\(G_n - V_n(s)\)</span>: 오차 (error)</p>
+<p>1/n을 <span class="math inline">\(\alpha\)</span>로 치환하여 학습 속도 (learning rate)로 여김 →</p>
+<p><span class="math display">\[
+V_{n + 1}(s) = V_n(s) + \alpha(G_n - V_n(s))
+\]</span></p>
+<p>총 획득 보상 G는 에피소드가 끝나야 알 수 있음</p>
+</section>
+<section id="몬테카를로-제어" class="level3">
+<h3 class="anchored" data-anchor-id="몬테카를로-제어">몬테카를로 제어</h3>
+<p>상태가치 함수 대신 행동가치 함수를 사용</p>
+<p><span class="math display">\[
+Q_{n + 1}(s, a) = Q(s, a) + \alpha(G_n - Q_n(s, a))
+\]</span></p>
+</section>
+</section>
+<section id="시간차-학습-temporal-difference-learning-td" class="level2">
+<h2 class="anchored" data-anchor-id="시간차-학습-temporal-difference-learning-td">시간차 학습 (temporal-difference learning, TD)</h2>
+<section id="시간차-예측" class="level3">
+<h3 class="anchored" data-anchor-id="시간차-예측">시간차 예측</h3>
+<p><span class="math display">\[
+V(S_t) = V(S_t) + \alpha (R_t - V(S_t)) \gets G_n = r_{t + 1} + \gamma V(S_{t + 1}) = V(S_t) + \alpha (r_{t + 1} + \gamma V(S_{t + 1}) - V(S_t))
+\]</span></p>
+<p>몬테카를로 예측과 다르게 매 시간마다 가치 함수를 갱신할 수 있음</p>
+<p>다음 상태 가치로 가치 함수를 갱신함으로 TD는 부트스트랩 알고리즘</p>
+</section>
+</section>
+<section id="sarsa-state-action-reward-state-action-강화학습" class="level2">
+<h2 class="anchored" data-anchor-id="sarsa-state-action-reward-state-action-강화학습">SARSA (State-Action-Reward-State-Action) 강화학습</h2>
+<p>On-policy 시간차 제어 (on-policy temporal-difference control)</p>
+<section id="정책-결정" class="level3">
+<h3 class="anchored" data-anchor-id="정책-결정">정책 결정</h3>
+<p>Greedy method (탐욕 방법)</p>
+<ul>
+<li>현재 상태에서 가장 큰 행동 가치함수 값을 주는 행동을 선택</li>
+</ul>
+<p><span class="math display">\[
+\pi(s) = argmax Q(s, a)
+\]</span></p>
+<p><span class="math inline">\(\epsilon\)</span>-greedy method</p>
+<ul>
+<li><span class="math inline">\(1 - \epsilon\)</span>의 확률로는 탐욕방법처럼 수행하고, <span class="math inline">\(\epsilon\)</span>의 확률로는 무작위로 행동을 선택</li>
+</ul>
+<p>정책 결정으로부터 샘플 (s, a, r, s’, a’)를 구성해서 Q를 계산함</p>
+<p><span class="math display">\[
+Q(s, a) = Q(s, a) + \alpha(r + \gamma Q(s' + a') - Q(s, a))
+\]</span></p>
+<p>다음 상태 s’에서 가장 큰 Q값을 이용하여 Q함수를 갱신</p>
+</section>
+</section>
+<section id="q-learning-알고리즘과-dqn-deep-q-network-강화학습" class="level2">
+<h2 class="anchored" data-anchor-id="q-learning-알고리즘과-dqn-deep-q-network-강화학습">Q-learning 알고리즘과 DQN (Deep Q-network) 강화학습</h2>
+<p>현재 상태 s에서 <span class="math inline">\(\epsilon\)</span>-greedy 방법을 적용함으로써 현재 상태 s에서 행동 a를 실행하여 보상 r을 받고, 다음 상태 s’를 결정하여, 샘플 (s, a, r, s’)를 구성</p>
+<p>Bellman 최적 방정식을 이용하여 Q(s, a)를 갱신함</p>
+<p><span class="math display">\[
+Q(s, a) = Q(s, a) + \alpha (r + \gamma argmax Q(s', a') - Q(s, a))
+\]</span></p>
+<ul>
+<li>Q함수를 갱신하기 위해 다음 상태 s’에서의 행동 a’를 결정하는 정책을 최대로 하는 행동 a’, 실제로 다음 상태로 가서 하는 행동을 결정하는 정책이 다름 (off-policy 정책)</li>
+</ul>
+<p>여기서, Q함수를 심층신경망을 사용하면 DQN (Deep Q-network)이 됨</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="강화학습-알고리즘" class="level1">
+<h1>강화학습 알고리즘</h1>
+<p>몬테카를로 방법 (Monte Carlo method)</p>
+<p>시간 차이 학습 (temporal difference learning, TD-learning)</p>
+<p>정책 그레디언트 알고리즘 (policy gradient algorithm)</p>
+<ul>
+<li>연속구간 행동을 갖는 강화학습</li>
+</ul>
+</section>
+<section id="역강화-학습-inverse-reinforcement-learning" class="level1">
+<h1>역강화 학습 (inverse reinforcement learning)</h1>
+<p>보상함수가 직접적으로 제공되지 않는 경우 적용</p>
+<p>전문가의 바람직한 행동 시연이 가능한 상황</p>
+<p>시연을 관측한 데이터로부터 보상함수를 학습 → 보상함수를 사용하여 가치함수를 학습하고 정책 결정</p>
+<p>상태 s에 대한 전형적인 보상함수 R(s)의 표현</p>
+<ul>
+<li>상태 s의 특징 <span class="math inline">\(\phi_i(s)\)</span>들에 대한 선형결합 표현</li>
+</ul>
+<p><span class="math display">\[
+R(s) = \sum_{i = 1}^N{\omega_i \phi_i(s)}
+\]</span></p>
+</section>
+<section id="계획수립-planning" class="level1">
+<h1>계획수립 (planning)</h1>
+<p>주어진 계획수립 문제의 임의의 <strong>초기 상태</strong>에서 <strong>목표 상태</strong> 중의 하나로 도달할 수 있게 하는 <strong>일련의 행동</strong>을 생성하는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>계획 (plan): pickup(c) → putdown(c, floor) → pickup(b) → putdown(b, a) → pickup(c) → putdown (c, b)</p>
+<section id="계획수립의-사례" class="level2">
+<h2 class="anchored" data-anchor-id="계획수립의-사례">계획수립의 사례</h2>
+<p>일상에서 한하게 일어나는 일</p>
+<ul>
+<li>하루 계획</li>
+<li>등교길의 교통편 이용 계획</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="로봇의-계획수립" class="level3">
+<h3 class="anchored" data-anchor-id="로봇의-계획수립">로봇의 계획수립</h3>
+<p>움직임 계획수립 (motion planning)</p>
+<ul>
+<li>원하는 움직임 작업을 수행하도록 제약조건을 만족시키면서 최소의 비용으로 일련의 움직임을 찾아내는 일</li>
+</ul>
+<p>경로 계획수립 (path planning)</p>
+<ul>
+<li>시작 위치에서 목적 위치로 가기 위해 관절이나 바퀴를 이동시킬 순차적인 위치를 결정하는 일</li>
+</ul>
+<p>궤적 계획수립 (trajectory planning)</p>
+<ul>
+<li>주어진 경로와 제약조건 및 물리적인 특성을 고려하여 매 시점의 관절 등의 위치, 속도, 가속도 등을 결정하는 일</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="강화학습에서-정책policy의-학습" class="level3">
+<h3 class="anchored" data-anchor-id="강화학습에서-정책policy의-학습">강화학습에서 정책(policy)의 학습</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>스퀘줄링 문제</p>
+<p>프로젝트 관리</p>
+<p>군사작전 계획</p>
+<p>정보수집</p>
+<p>자원관리</p>
+</section>
+</section>
+<section id="계획수립-문제의-구성요소" class="level2">
+<h2 class="anchored" data-anchor-id="계획수립-문제의-구성요소">계획수립 문제의 구성요소</h2>
+<p>초기 상태 (initial state)에 대한 명세 (description)</p>
+<p>원하는 목표 상태 (goal state)에 대한 명세</p>
+<p>가능한 행동 (action)들에 대한 명세</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="agent-에이전트와-계획수립" class="level2">
+<h2 class="anchored" data-anchor-id="agent-에이전트와-계획수립">agent (에이전트)와 계획수립</h2>
+<section id="에이전트" class="level3">
+<h3 class="anchored" data-anchor-id="에이전트">에이전트</h3>
+<p>위임받은 일을 자율적(autonomous)이고 지능적 (intelligent)하게 처리하는 개체</p>
+<p>소프트웨어 에이전트, 물리적 에이전트 (robot)</p>
+<p>어떻게 일을 할지 (how)를 말하지 않고, 목적 (goal, what)만을 말하면 알아서 처리할 수 있는 능력 필요</p>
+<ul>
+<li>계획수립 (planning)이 핵심 요소)</li>
+</ul>
+</section>
+</section>
+<section id="계획수립-문제의-형태" class="level2">
+<h2 class="anchored" data-anchor-id="계획수립-문제의-형태">계획수립 문제의 형태</h2>
+<p>고전적 계획수립 (classical planning)</p>
+<p>마르코프 결정과정 (Markov Decision Process, MDP)</p>
+<p>부분관측 마르코프 결정과정 (Partially Observable Markov Decision Process, POMDP)</p>
+<p>다중 에이전트 (multi-agent) 계획수립</p>
+</section>
+<section id="고전적-계획수립-문제-classical-planning-problem" class="level2">
+<h2 class="anchored" data-anchor-id="고전적-계획수립-문제-classical-planning-problem">고전적 계획수립 문제 (classical planning problem)</h2>
+<p>가장 간단한 계획수립 문제 무류</p>
+<p>일련의 행동들을 수행한 이후의 세계(world)의 상태 예측 가능</p>
+<p>계획은 일련의 행동들로 정의</p>
+<ul>
+<li>목표 상태에 도달하기 위해 어떤 행동들을 해야 하는지 미리 결정할 수 있음</li>
+</ul>
+<section id="기본-전제" class="level3">
+<h3 class="anchored" data-anchor-id="기본-전제">기본 전제</h3>
+<p>초기 상태는 하나만 주어진다</p>
+<p>행동들은 지속시간이 없고, 행동의 결과가 결정적이고, 한 번에 하나의 행동만 수행될 수 있다</p>
+<p>행동을 하는 에이전트는 하나 뿐이다.</p>
+</section>
+</section>
+<section id="마르코프-결정과정-문제-markov-decision-process-mdp" class="level2">
+<h2 class="anchored" data-anchor-id="마르코프-결정과정-문제-markov-decision-process-mdp">마르코프 결정과정 문제 (Markov Decision Process, MDP)</h2>
+<p>행동들의 결과는 비결정적이고(nondeterministic)이고, 에이전트가 행동을 통제할 수 있는 문제</p>
+<p>강화학습(reinforcement learning)에 관심을 갖는 문제</p>
+<section id="이산시간-마르코프-결정과정-문제-discrete-time-markov-decision-processes-discrete-time-mdp" class="level3">
+<h3 class="anchored" data-anchor-id="이산시간-마르코프-결정과정-문제-discrete-time-markov-decision-processes-discrete-time-mdp">이산시간 마르코프 결정과정 문제 (discrete-time Markov decision processes, discrete-time MDP)</h3>
+<p>행동들은 지속시간이 없다</p>
+<p>행동의 결과가 확률에 따라 결정되어 비결정적이다</p>
+<p>행동의 결과는 관측 가능하여 확인할 수 있다</p>
+<p>보상함수(reward function)를 최대화하는 것을 목적으로 한다</p>
+<p>행동을 하는 에이전트는 하나 뿐이다.</p>
+</section>
+</section>
+<section id="부분관측-마르코프-결정과정-partially-observable-markov-decision-process-pomdp" class="level2">
+<h2 class="anchored" data-anchor-id="부분관측-마르코프-결정과정-partially-observable-markov-decision-process-pomdp">부분관측 마르코프 결정과정 (partially observable Markov decision process, POMDP)</h2>
+<p>행동의 결과가 확률에 따라 결정되는 비결정적인 마르코프 결정과정</p>
+<p>행동의 결과는 부분적으로(간접적으로) 관측</p>
+<ul>
+<li>현재 상태를 정확히 알 수 없고 확률적인 분포로만 추정</li>
+</ul>
+<p>현재 상태에 대한 확률적인 분포를 믿음(belif)이라고 함</p>
+<p>행동을 하면서 이러한 믿음을 계속 갱신</p>
+</section>
+<section id="다중-에이전트-계획수립-문제-multi-agent-planning" class="level2">
+<h2 class="anchored" data-anchor-id="다중-에이전트-계획수립-문제-multi-agent-planning">다중 에이전트 계획수립 문제 (multi-agent planning)</h2>
+<p>여러 에이전트가 있는 계획수립 문제</p>
+<p>다중 에이전트의 작업에서 필요한 사항</p>
+<ul>
+<li>하나의 공동 목표를 위한 에이전트들이 계획수립을 하는 것</li>
+<li>작업 및 자원에 대한 협상을 통해 계획을 정제하는 것</li>
+<li>목표의 달성을 위해 에이전트들의 작업을 조정하는 것</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,2685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-27">
+
+<title>Siyun Min - Artificial Intelligence - midterm review</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Artificial Intelligence - midterm review</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 27, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="midterm-review" class="level1">
+<h1>midterm review</h1>
+</section>
+<section id="지능-knowledge" class="level1">
+<h1>지능 (knowledge)</h1>
+<p>본능적이나 자동적으로 행동하는 대신에, 생각하고 이해하여 행동하는 능력</p>
+</section>
+<section id="인공지능-artificial-intelligence" class="level1">
+<h1>인공지능 (artificial intelligence)</h1>
+<p>인공적으로 만든 지능</p>
+<p>사람의 생각과 관련된 활동</p>
+<ul>
+<li>의사결정, 문제해결, 학습 등의 활동을 자동화하는 것</li>
+</ul>
+<p>사람이 하면 더 잘할 수 있는 일을 컴퓨터가 하도록 하는 방법을 찾는 학문</p>
+<p>지능이 요구되는 일을 할 수 있는 기계를 만드는 예술</p>
+<p>지능적인 에이전트를 설계하는 학문</p>
+<p>인지하고 추론하고 행동할 수 있도록 하는 컴퓨팅에 관련된 학문</p>
+<p>인공물이 지능적인 행위를 하도록 하는 것</p>
+<p>사람이 의식적으로 하는 행동을 컴퓨터가 할 수 있도록 하는 것</p>
+<section id="turing-test-튜링-테스트" class="level2">
+<h2 class="anchored" data-anchor-id="turing-test-튜링-테스트">Turing test (튜링 테스트)</h2>
+<p>지능의 조작적 정의 (operational definition)</p>
+<ul>
+<li>조작적 정의 - 측정할 수 있는 조건으로 추상적 속성을 기술</li>
+</ul>
+<p>imitation game (흉내 게임)</p>
+<p>Dartmouth conference ,1956에서 John Maccarthy가 AI 용어 제안</p>
+</section>
+<section id="강한-인공지능-strong-ai" class="level2">
+<h2 class="anchored" data-anchor-id="강한-인공지능-strong-ai">강한 인공지능 (strong AI)</h2>
+<p>사람과 같은 지능</p>
+<p>마음을 가지고 사람처럼 느끼면서 지능적으로 행동하는 기계</p>
+<p>추론, 문제해결, 판단, 계획, 의사소통, 자아의식 (self-awareness), 감정 (sentiment), 지혜 (sapience), 양심 (conscience)</p>
+<p>튜링테스트</p>
+</section>
+<section id="약한-인공지능-weak-ai-narrow-ai" class="level2">
+<h2 class="anchored" data-anchor-id="약한-인공지능-weak-ai-narrow-ai">약한 인공지능 (weak AI, narrow AI)</h2>
+<p>특정 문제를 해결하는 지능적 행동</p>
+<p>사람의 지능적 행동을 흉내 낼 수 있는 수준</p>
+<p>대부분의 인공지능 접근 방향</p>
+<section id="중국인-방-사고실험-chinese-room-thought-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="중국인-방-사고실험-chinese-room-thought-experiment">중국인 방 사고실험 (Chinese room thought experiment)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>문 밑으로 중국어로 쓴 질문지를 전달</p>
+<p>방 안에서 중국어를 모르는 사람이 글자모양에 따른 중국어 단어 조합 방법 매뉴얼을 참조하여 답변에 대한 단어 조합</p>
+<p>조합된 단어들을 문 밖으로 내보냄</p>
+<p>문 밖 사람은 중국어를 이해하는 사람이 방 안에 있다고 생각</p>
+<p>단지 흉내만 내고 이해하는 것은 아님 → 이해하지 못하고 흉내낼 수 있어도 지능적 (intelligent) 행동</p>
+</section>
+</section>
+</section>
+<section id="인공지능의-역사" class="level1">
+<h1>인공지능의 역사</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="년-이전" class="level2">
+<h2 class="anchored" data-anchor-id="년-이전">1960년 이전</h2>
+<p>1946년 펜실베니아 대학, ENIAC 개발</p>
+<p>큰 기대와 여러가지 시도, 매우 제한된 성공</p>
+<p>LISP 언어 개발</p>
+<p>논리 기반 지식표현 및 추론</p>
+<p>perceptron 모델</p>
+<ul>
+<li>초기 신경망 모델</li>
+</ul>
+<p>수단-목표 분석 (means-ends analysis) 기법</p>
+<ul>
+<li>범용 문제해결을 목표로 한 GPS (General Problem Solver) 개발</li>
+</ul>
+<section id="means-ends-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="means-ends-analysis">Means-ends analysis</h3>
+<p>해결해야 하는 문제를 상태 (state)로 정의</p>
+<p>현재 상태와 목적 상태 (goal state) 간의 차이 계산</p>
+<p>목적 상태로 도달하기 위한 조작자 (operator, 연산자) 선택 적용하는 과정의 반복</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>조작자 - 문제의 상태를 변화시키는 데 사용하는 작업이나 행동</p>
+</section>
+</section>
+<section id="년대에서-1980년대-초반" class="level2">
+<h2 class="anchored" data-anchor-id="년대에서-1980년대-초반">1970년대에서 1980년대 초반</h2>
+<p>일반적인 방법보다는 특정 문제 영역에 효과적인 방법을 찾는 연구</p>
+<p>전문가 시스템 (expert system)</p>
+<ul>
+<li>특정 영역의 문제에 대해서는 전문가 수준의 해답을 제공</li>
+<li>1970년대 초반부터 1980년대 중반 상업적 성공 사례</li>
+<li>MYCIN, PROSPECTOR, DENDRAL</li>
+</ul>
+<p>전문가 시스템 개발 도구 (expert system shell) 개발</p>
+<p>Prolog 언어 개발</p>
+<ul>
+<li>지식의 표현과 추론을 지원하는 논리 (logic) 기반 언어</li>
+</ul>
+<section id="mycin" class="level3">
+<h3 class="anchored" data-anchor-id="mycin">MYCIN</h3>
+<p>스탠포드 대학에서 개발한 전염성 혈액 질환 진단</p>
+<p>일반 의사보다 높은 정확도</p>
+</section>
+<section id="prospector" class="level3">
+<h3 class="anchored" data-anchor-id="prospector">PROSPECTOR</h3>
+<p>광물탐사 데이터 분석</p>
+</section>
+<section id="dendral" class="level3">
+<h3 class="anchored" data-anchor-id="dendral">DENDRAL</h3>
+<p>화학식과 질량 스펙트럼 데이터로부터 유기화합물의 분자구조 결정</p>
+<p>스탠포드 대학의 Edward Feigenbaum 팀 개발</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="년대-중반에서-1990년대" class="level2">
+<h2 class="anchored" data-anchor-id="년대-중반에서-1990년대">1980년대 중반에서 1990년대</h2>
+<p>신경망 모델 발전</p>
+<ul>
+<li>다층 퍼셉트론 (multi-layer perceptron, MLP) - 신경망의 르네상스</li>
+<li>오차 역전파 (error backpropagation) 알고리즘</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>퍼지이론 (fuzzy theory)</p>
+<ul>
+<li>언어적인 애매한 정보를 정량화하여 표현</li>
+</ul>
+<p>진화연산</p>
+<ul>
+<li>진화개념을 문제해결에 도입</li>
+<li>유전자 알고리즘, 진화 프로그래밍 등</li>
+</ul>
+<p>확률적 그래프 모델</p>
+<ul>
+<li>그래프 이론과 확률론을 결합</li>
+<li>컴퓨터 비전, 로보틱스, 자연어 처리, 진단 등에 적용</li>
+</ul>
+<p>서포트 벡터 머신 (support vector machine, SVM)</p>
+</section>
+<section id="년대-이후" class="level2">
+<h2 class="anchored" data-anchor-id="년대-이후">2000년대 이후</h2>
+<p>에이전트 (agent)</p>
+<ul>
+<li>위임받은 일을 자율적으로 처리</li>
+</ul>
+<p>시맨틱 웹 (semantic web)</p>
+<ul>
+<li>컴퓨터가 웹 상의 자원을 이해하여 처리</li>
+</ul>
+<p>기계학습 (machine learning)</p>
+<p>데이터 마이닝 (data mining)</p>
+<p>딥러닝 (deep learning)</p>
+<p>상업적 성공사례 다수 출현</p>
+<ul>
+<li>애플 Siri, 구글 now, MS Cortana</li>
+<li>IBM Watson</li>
+<li>로봇 - Boston dynamics 군사용 로봇 BigDog, 재난구조 로봇 Atlas</li>
+<li>자율주행 자동차</li>
+<li>클라우드 앱 서비스</li>
+</ul>
+<section id="튜링테스트-최초-통과-프로그램" class="level3">
+<h3 class="anchored" data-anchor-id="튜링테스트-최초-통과-프로그램">튜링테스트 최초 통과 프로그램</h3>
+<p>Eugene Goostman</p>
+<p>13세인 우크라이나 소년 캐릭터의 챗봇 (chatbot)</p>
+<p>튜링 사망 60주년을 기념하여 진행한 이벤트에서 튜링 테스트 통과</p>
+<ul>
+<li>30명의 검사자가 5분씩 대화, 33%가 사람으로 판정</li>
+<li>제한적 상황에 대한 통과</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="인공지능의-연구분야---요소-기술" class="level1">
+<h1>인공지능의 연구분야 - 요소 기술</h1>
+<section id="탐색-search" class="level2">
+<h2 class="anchored" data-anchor-id="탐색-search">탐색 (search)</h2>
+<p>문제의 답이 될 수 있는 것들의 집합을 공간 (space)으로 간주하고, 문제에 대한 최적의 해를 찾기 위해 공간을 체계적으로 찾아보는 것</p>
+<p>무정보탐색</p>
+<ul>
+<li>bfs, dfs</li>
+</ul>
+<p>휴리스틱 탐색</p>
+<ul>
+<li>언덕오르기 탐색, 최선 우선탐색, 빔 탐색, A* 알고리즘</li>
+</ul>
+<p>게임트리 탐색</p>
+<ul>
+<li>mini-max 알고리즘, <span class="math inline">\(\alpha-\beta\)</span> 가지치기 (pruning), Monte Carlo tree search</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="지식표현-knowledge-representation" class="level2">
+<h2 class="anchored" data-anchor-id="지식표현-knowledge-representation">지식표현 (knowledge representation)</h2>
+<p>문제 해결에 이용하거나 심층적 추론을 할 수 있도록 지식을 효과적으로 표현하는 방법</p>
+<ul>
+<li>IF-THEN 규칙 (rule)</li>
+<li>frame (프레임)</li>
+<li>semantic net (의미망)</li>
+<li>논리 (logic) - 명제논리 (propositional logic), 술어논리 (predicate logic)</li>
+<li>스트립트</li>
+<li>불확실한 지식 표현</li>
+<li>확률 그래프 모델</li>
+<li>온톨로지 기술 언어: RDF, OWL</li>
+</ul>
+</section>
+<section id="추론-inference" class="level2">
+<h2 class="anchored" data-anchor-id="추론-inference">추론 (inference)</h2>
+<p>가정이나 전제로부터 결론을 이끌어내는 것</p>
+<p>규칙기반 시스템의 추론</p>
+<ul>
+<li>전향 추론 (forward inference) - 결론 도출</li>
+<li>후향 추론 (backward inference) - 전제 도출</li>
+</ul>
+<p>확률모델의 추론</p>
+<ul>
+<li>관심 대상의 확률 또는 확률분포를 결정하는 것</li>
+<li>베이즈 정리 (Bayesian theorem) 및 주변화 (marginalization) 이용</li>
+</ul>
+<p><span class="math display">\[
+P(A) = \sum_{b}{P(A, B = b)}
+\]</span></p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="기계학습-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="기계학습-machine-learning">기계학습 (machine learning)</h2>
+<p>경험을 통해서 나중에 유사하거나 같은 일 (task)를 더 효율적으로 처리할 수 있도록 시스템의 구조나 파라미터를 바꾸는 것</p>
+<p>컴퓨터가 지식을 갖게 만드는 작업</p>
+<section id="supervised-learning-지도학습" class="level3">
+<h3 class="anchored" data-anchor-id="supervised-learning-지도학습">supervised learning (지도학습)</h3>
+<ul>
+<li>입력과 대응하는 출력을 데이터로 제공하고 대응관계의 함수 찾기</li>
+<li>입력 (문제)과 대응하는 출력 (답)을 데이터로 제공하고 대응 관계의 함수 또는 패턴을 찾는 것</li>
+<li>분류, 회귀</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="비지도학습-unsupervised-learning" class="level3">
+<h3 class="anchored" data-anchor-id="비지도학습-unsupervised-learning">비지도학습 (unsupervised learning)</h3>
+<ul>
+<li>데이터만 주어진 상태에서 유사한 것들을 서로 묶어 군집을 찾거나 확률분포 표현</li>
+<li>답이 없는 문제들만 있는 데이터들로 부터 패턴을 추출하는 것</li>
+<li>군집화, 밀도추정, 토픽 모델링</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="강화학습-reinforcement-learning" class="level3">
+<h3 class="anchored" data-anchor-id="강화학습-reinforcement-learning">강화학습 (reinforcement learning)</h3>
+<ul>
+<li>상황별 행동에 따른 시스템의 보상 값(reward value)만을 이용하여 시스템에 대한 바람직한 행동 정책(policy) 찾기</li>
+<li>문제에 대한 직접적인 답을 주지는 않지만 경험을 통해 기대보상 (expected reward)이 최대가 되는 정책 (policy)을 찾는 학습</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="계획수립-planning" class="level2">
+<h2 class="anchored" data-anchor-id="계획수립-planning">계획수립 (planning)</h2>
+<p>현재 상태에서 목표하는 상태에 도달하기 위해 수행해야 할 일련의 행동 순서를 결정하는 것</p>
+<p>작업 수행 절차 계획</p>
+<p>로봇의 움직임 계획</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="주요-응용-분야" class="level2">
+<h2 class="anchored" data-anchor-id="주요-응용-분야">주요 응용 분야</h2>
+<section id="전문가-시스템-expert-system" class="level3">
+<h3 class="anchored" data-anchor-id="전문가-시스템-expert-system">전문가 시스템 (expert system)</h3>
+<p>특정 문제 영역에 대해 전문가 수준의 해법을 제공하는 것</p>
+<p>간단한 제어시스템에서부터 복잡한 계산과 추론을 요구하는 의료 진단, 고장 진단, 추천시스템</p>
+<p>작업 중요도가 높은 분야의 경우 추천 정보로 활용</p>
+<ul>
+<li>최종 결정은 현장 작업자가 담당</li>
+<li>원자력 발전소, 항공우주 분야 등</li>
+</ul>
+<p>지식 표현과 추론 부분을 분리하여 구성</p>
+<ul>
+<li>지식만 변경하면 변화하는 환경에 쉽게 대응</li>
+</ul>
+<p>규칙기반 시스템 (rule-based system)을 통한 구현</p>
+</section>
+<section id="데이터-마이닝-data-mining" class="level3">
+<h3 class="anchored" data-anchor-id="데이터-마이닝-data-mining">데이터 마이닝 (data mining)</h3>
+<p>실제 대규모 데이터에서 암묵적인, 이전에 알려지지 않은, 잠재적으로 유용할 것 같은 정보를 추출하는 체계적인 과정</p>
+<p>기계학습, 통계학 기법 적용</p>
+<p>연관 규칙, 분류 패턴, 군집화 패턴, 텍스트 마이닝, 그래프 마이닝, 추천, 시각화 (visualization)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="패턴-인식-pattern-recognition" class="level3">
+<h3 class="anchored" data-anchor-id="패턴-인식-pattern-recognition">패턴 인식 (pattern recognition)</h3>
+<p>데이터에 있는 패턴이나 규칙성을 찾는 것</p>
+<p>문자 인식 - 인쇄체, 필기체</p>
+<p>음성인식</p>
+<p>영상인식</p>
+<p>텍스트 패턴 인식 (텍스트 마이닝)</p>
+<p>센서 신호 인식 (레이더, 라이다, 소나 등)</p>
+<p>이상치 (outlier) 탐지</p>
+</section>
+<section id="자연어-처리-natural-language-processing" class="level3">
+<h3 class="anchored" data-anchor-id="자연어-처리-natural-language-processing">자연어 처리 (natural language processing)</h3>
+<p>사람이 사용하는 일반 언어로 작성된 문서를 처리하고 이해하는 분야 형태소 부분석, 구문 분석, 품사 태깅, 의미 분석</p>
+<p>언어모델, 주제어 추출, 개체명 인식</p>
+<p>문서 요약</p>
+<p>기계번역 (machine translation)</p>
+<p>질의 응답</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="컴퓨터-비전-computer-vision" class="level3">
+<h3 class="anchored" data-anchor-id="컴퓨터-비전-computer-vision">컴퓨터 비전 (computer vision)</h3>
+<p>컴퓨터를 이용하여 시각 기능을 갖는 기계장치를 만들려는 분야</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="음성인식" class="level3">
+<h3 class="anchored" data-anchor-id="음성인식">음성인식</h3>
+<p>사람의 음성 언어를 컴퓨터가 해석해 그 내용을 문자 데이터로 전환하는 처리</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="로보틱스-robotics" class="level3">
+<h3 class="anchored" data-anchor-id="로보틱스-robotics">로보틱스 (robotics)</h3>
+<p>로봇에 관련된 기술 분야로서 기계공학, 센서공학, 마이크로 일렉트로닉스, 인공지능 기술 등을 종합적으로 활용</p>
+<p>지능로봇 (intelligent robots)</p>
+<ul>
+<li>인공지능 기술을 활용하는 로봇</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="에이전트-agent" class="level3">
+<h3 class="anchored" data-anchor-id="에이전트-agent">에이전트 (agent)</h3>
+<p>사용자로부터 위임받은 일을 자율적으로 수행하는 시스템</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>소프트웨어 에이전트 (software agent)</p>
+<ul>
+<li>채팅 봇 (chatting bot) - Siri, Tay</li>
+</ul>
+<p>물리적 에이전트 (physical agent)</p>
+<ul>
+<li>로봇 (robot)</li>
+</ul>
+<p>반응형 에이전트 (reactive agent)</p>
+<ul>
+<li>단순히 입력에 대해서 정해진 반응</li>
+</ul>
+<p>숙고형 에이전트 (deliberate agent)</p>
+<ul>
+<li>자신의 지식을 활용하여 목표를 달성하기 위한 계획을 수립하고 수행</li>
+</ul>
+<p>학습 에이전트</p>
+<ul>
+<li>경험 (즉, 행동과 그 결과)이 누적됨에 따라 점점 똑똑해지도록 학습</li>
+</ul>
+</section>
+</section>
+<section id="최근-동향" class="level2">
+<h2 class="anchored" data-anchor-id="최근-동향">최근 동향</h2>
+<section id="휴대전화의-위상-변화" class="level3">
+<h3 class="anchored" data-anchor-id="휴대전화의-위상-변화">휴대전화의 위상 변화</h3>
+<p>통신 단말 → 정보 단말 (지능화)</p>
+</section>
+<section id="인공지능-비서-서비스" class="level3">
+<h3 class="anchored" data-anchor-id="인공지능-비서-서비스">인공지능 비서 서비스</h3>
+<p>애플의 Siri와 구글의 Now</p>
+<p>음성으로 대화하면서 필요한 정보를 제공받을 수 있는 서비스</p>
+<p>음성인식 (voice recognition)</p>
+<p>자연어 처리 (natural language processing)</p>
+<p>정보검색 (information retrieval)</p>
+<p>추천 (recommendation)</p>
+</section>
+<section id="ibm-watson" class="level3">
+<h3 class="anchored" data-anchor-id="ibm-watson">IBM Watson</h3>
+<p>자연어로 주어진 질문에 대답을 하는 인공지능 시스템</p>
+<p>자연어 처리, 정보 검색, 지식 표현 및 추론, 기계학습 이용 질의에 대한 답변</p>
+<ul>
+<li>비구조화 데이터 (unstructured data) 분석</li>
+<li>복잡한 질문 이해</li>
+<li>답변 제공</li>
+<li>의료, 금융, 유통 등 다양한 분야에 활용</li>
+</ul>
+</section>
+<section id="exobrain-프로젝트" class="level3">
+<h3 class="anchored" data-anchor-id="exobrain-프로젝트">ExoBrain 프로젝트</h3>
+<p>한국어 질의응답 시스템</p>
+</section>
+<section id="자율주행-자동차-driverless-car" class="level3">
+<h3 class="anchored" data-anchor-id="자율주행-자동차-driverless-car">자율주행 자동차 (driverless car)</h3>
+<p>구글 자동차</p>
+<ul>
+<li>2017년 누적 주행 거리가 600만 킬로미터 이상인 주행 테스트</li>
+<li>자회사 Waymo에서 자율주행 자동차 개발</li>
+</ul>
+<p>유수 자동차 회사 및 IT 기업에서 개발연구 진행</p>
+<ul>
+<li>Tesla Motors, Volvo, GM, Daimler, Ford, Audi, BMW, Hyundai, Naver Labs 등</li>
+</ul>
+<p>미국 자동차공학회 (SAE)의 자동화 단계</p>
+<ul>
+<li>단계 0 - 완전 수동</li>
+<li>단계 1 - 차선 유지, 자동 크루즈, 자동 주차 등 운전자 보조 수준</li>
+<li>단계 2 - 특정 조건에서 자율 주행을 하지만, 운전자가 주목을 해야 하는 부분 자동화 수준</li>
+<li>단계 3 - 특정 조건에서 자율주행이 되는 조건부 자율주행 수준</li>
+<li>단계 4 - 고도 자동화 수준</li>
+<li>단계 5 - 완전 자동화 수준</li>
+</ul>
+</section>
+<section id="로보틱스" class="level3">
+<h3 class="anchored" data-anchor-id="로보틱스">로보틱스</h3>
+<p>다양한 상황에서 적합한 행동을 하기 위한 여러 인공지능 기술 활용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="기계번역-machine-translation" class="level3">
+<h3 class="anchored" data-anchor-id="기계번역-machine-translation">기계번역 (machine translation)</h3>
+<p>Google translate</p>
+<ul>
+<li>언어간 교차번역</li>
+</ul>
+<p>인공지능 바둑 프로그램 (AlphaGo)</p>
+<ul>
+<li>구글 DeepMind 개발</li>
+<li>기계학습과 병렬처리로 구현</li>
+</ul>
+</section>
+<section id="클라우드-서비스-앱" class="level3">
+<h3 class="anchored" data-anchor-id="클라우드-서비스-앱">클라우드 서비스 앱</h3>
+<p>스마트폰을 데이터 입출력 단말기로 사용</p>
+<p>핵심 처리는 클라우드 서버에서 담당</p>
+<p>구글의 앱 goggles</p>
+<ul>
+<li>이미지 인식 스마트폰 앱</li>
+<li>기기에서 찍힌 사진을 기반으로 한 검색</li>
+</ul>
+</section>
+<section id="deep-learning의-컴퓨터-비전에서-성공적-사례" class="level3">
+<h3 class="anchored" data-anchor-id="deep-learning의-컴퓨터-비전에서-성공적-사례">deep learning의 컴퓨터 비전에서 성공적 사례</h3>
+<p>영상분류</p>
+<p>의미적 영역 분할</p>
+<p>객체검출</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>이미지 주석달기</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>화풍에 따른 그림 그리지</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="인공지능의-영향" class="level2">
+<h2 class="anchored" data-anchor-id="인공지능의-영향">인공지능의 영향</h2>
+<section id="인공지능-기술-도입" class="level3">
+<h3 class="anchored" data-anchor-id="인공지능-기술-도입">인공지능 기술 도입</h3>
+<p>자동화 → 생산성 향상</p>
+<p>일자리 문제</p>
+<ul>
+<li>블루칼라 일자리 축소</li>
+<li>화이트칼라 일자리 축소
+<ul>
+<li>금융 및 법률분야 - 복잡한 데이터 분석 수행</li>
+<li>언론분야 - 로봇 저널리즘</li>
+<li>의료분야 - 진단 및 처방</li>
+</ul></li>
+<li>신규 직업 출현 기대</li>
+<li>노동력 잉여 발생</li>
+</ul>
+<p>사회적 문제 초래</p>
+<ul>
+<li>고용 및 일자리, 기회의 불평등, 양극화 등</li>
+</ul>
+</section>
+<section id="인공지능의-윤리" class="level3">
+<h3 class="anchored" data-anchor-id="인공지능의-윤리">인공지능의 윤리</h3>
+<p>자율주행 자동차의 돌발 상황에 대한 프로그래밍</p>
+<ul>
+<li>모든 가능한 상황에 대한 고려 필요</li>
+<li>돌발 상황에서 희생자를 선택하는 프로그래밍 요구</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>마음이 없는 인공지능</p>
+<p>살상용 자율무기 (LAWS: Lethal autonomous weapon systems)</p>
+<ul>
+<li>인간의 개입 없이 스스로 표적을 찾아내고 제거하는 무기</li>
+<li>잘못된 판단의 문제</li>
+<li>인명 살상을 위한 프로그래밍</li>
+</ul>
+</section>
+<section id="인공지능-기술의-오용" class="level3">
+<h3 class="anchored" data-anchor-id="인공지능-기술의-오용">인공지능 기술의 오용</h3>
+<p>개인 신원 확인 기술</p>
+<ul>
+<li>지문, 얼굴사진, 목소리, 필체 등</li>
+</ul>
+<p>인공지능 기술 이용한 위조 데이터 생성</p>
+<ul>
+<li>사생활 침해</li>
+<li>인간 존엄성 도전</li>
+</ul>
+</section>
+<section id="특이점-singularity" class="level3">
+<h3 class="anchored" data-anchor-id="특이점-singularity">특이점 (singularity)</h3>
+<p>기술의 수준이 어느 한 순간 기하급수적으로 증가하는 시점</p>
+<p>인공지능의 특이점</p>
+<ul>
+<li>인공지능이 인간의 지능보다 더 진보하게 되는 시점</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="상태-공간과-탐색" class="level1">
+<h1>상태 공간과 탐색</h1>
+<section id="탐색-search-1" class="level2">
+<h2 class="anchored" data-anchor-id="탐색-search-1">탐색 (search)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 28.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>문제의 해 (solution)이 될 수 있는 것들의 집합을 공간 (space)으로 간주하고, 문제에 대한 최적의 해를 찾기 위해 공간을 체계적으로 찾아보는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 29.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>해 (solution) - 일련의 동작으로 구성되거나 하나의 상태로 구성</p>
+<p>상태 (state) - 특정 시점에 문제의 세계가 처해있는 상황</p>
+<p>세계 (world) - 문제에 포함된 대상들과 이들의 상황을 포괄적으로 지칭</p>
+<p>상태공간 (state space)</p>
+<ul>
+<li>문제 해결 과정에서 초기 상태로부터 도달할 수 있는 모든 상태들의 집합</li>
+<li>문제의 해가 될 가능성이 있는 모든 상태들의 집합</li>
+<li>초기상태 (initial state) - 문제가 주어진 시점의 시작 상태</li>
+<li>목표상태 (goal state) - 문제에서 원하는 최종 상태</li>
+</ul>
+<section id="상태공간-그래프-state-space-graph" class="level3">
+<h3 class="anchored" data-anchor-id="상태공간-그래프-state-space-graph">상태공간 그래프 (state space graph)</h3>
+<p>상태공간에서 각 행동에 따른 상태의 변화를 나타낸 그래프</p>
+<ul>
+<li>노드 - 상태</li>
+<li>링크 - 행동</li>
+</ul>
+<p>일반적인 문제에서는 상태공간이 매우 큼</p>
+<ul>
+<li>미리 상태 공간 그래프를 만들기 어려움</li>
+<li>탐색과정에서 그래프 생성</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 30.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 31.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="맹목적-탐색-blind-search" class="level1">
+<h1>맹목적 탐색 (blind search)</h1>
+<p>상태 공간 정보를 이용하지 않고 정해진 순서에 따라 상태 공간 그래프를 점차 생성해가면서 해를 탐색하는 방법</p>
+<section id="깊이-우선-탐색-depth-first-search-dfs" class="level2">
+<h2 class="anchored" data-anchor-id="깊이-우선-탐색-depth-first-search-dfs">깊이 우선 탐색 (depth-first search, DFS)</h2>
+<p>초기 노드에서 시작하여 깊이 방향으로 탐색</p>
+<p>목표 노드에 도달하면 종료</p>
+<p>더 이상 진행할 수 없으면, 백트래킹 (backtracking, 되짚어가기)</p>
+<p>방문한 노드는 재방문하지 않음</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 32.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 33.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 34.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>메모리공간 사용 효율적</p>
+<p>최단경로 해 탐색 보장 불가</p>
+</section>
+<section id="너비-우선-탐색-breadth-first-search-bfs" class="level2">
+<h2 class="anchored" data-anchor-id="너비-우선-탐색-breadth-first-search-bfs">너비 우선 탐색 (breadth-first search, BFS)</h2>
+<p>초기 노드에서 시작하여 모든 자식 노드를 확장하여 생성</p>
+<p>목표 노드가 없으면 단말노드에서 다시 자식 노드 확장</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 35.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 36.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>최단경로 해 탐색 보장</p>
+<p>메모리 공간 사용 비효율</p>
+</section>
+<section id="반복적-깊이심화-탐색-interative-deepening-search" class="level2">
+<h2 class="anchored" data-anchor-id="반복적-깊이심화-탐색-interative-deepening-search">반복적 깊이심화 탐색 (interative-deepening search)</h2>
+<p>깊이 한계가 있는 깊이 우선탐색을 반복적으로 적용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 37.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>최단경로 해 보장</p>
+<p>메모리 공간 사용 효율적</p>
+<p>반복적 깊이 우선 탐색에 따른 비효율성</p>
+<ul>
+<li>실제 비용이 크게 늘지 않음</li>
+</ul>
+<p>맹목적 탐색 적용 시 우선 고려 대상</p>
+</section>
+<section id="양방향-탐색-bidirectional-search" class="level2">
+<h2 class="anchored" data-anchor-id="양방향-탐색-bidirectional-search">양방향 탐색 (bidirectional search)</h2>
+<p>초기 노드와 목적 노드에서 동시에 너비 우선 탐색을 진행</p>
+<p>중간에 만나도록하여 초기 노드에서 목표노드로 최단 경로를 찾는 방법</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 38.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="정보이용-탐색-informed-search" class="level1">
+<h1>정보이용 탐색 (informed search)</h1>
+<p>휴리스틱 탐색 (heuristic search)</p>
+<p>언덕 오르기 방법, 최상 우선 탐색, 빔 탐색, A* 알고리즘 등</p>
+<section id="heuristic-휴리스틱" class="level2">
+<h2 class="anchored" data-anchor-id="heuristic-휴리스틱">Heuristic (휴리스틱)</h2>
+<p>시간이나 정보가 불충분하여 합리적인 판단을 할 수 없거나, 굳이 체계적이고 합리적인 판단을 할 필요가 없는 상황에서 신속하게 어림짐작하는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 39.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="언덕오르기-방법-hill-climbing-method" class="level2">
+<h2 class="anchored" data-anchor-id="언덕오르기-방법-hill-climbing-method">언덕오르기 방법 (hill climbing method)</h2>
+<p>지역 탐색 (local search), 휴리스틱 탐색 (heuristic search), greedy algorithm</p>
+<p>현재 노드에서 휴리스틱에 의한 평가값이 가장 좋은 이웃 노드 하나를 확장해가는 탐색방법 → 탐욕 알고리즘 (greedy algorithm)</p>
+<p>국소 최적해 (local optimal solution)에 빠질 가능성</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 40.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="최상-우선-탐색-best-first-search" class="level2">
+<h2 class="anchored" data-anchor-id="최상-우선-탐색-best-first-search">최상 우선 탐색 (best-first search)</h2>
+<p>확장 중인 노드들 중에서 목표 노드까지 남은 거리가 가장 짧은 노드를 확장하여 탐색</p>
+<p>남은 거리를 정확히 알 수 없으므로 휴리스틱 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 41.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 42.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="beam-search-빔-탐색" class="level2">
+<h2 class="anchored" data-anchor-id="beam-search-빔-탐색">beam search (빔 탐색)</h2>
+<p>휴리스틱에 의한 평가값이 우수한 일정 개수의 확장 가능한 노드만을 메로리에 관리하면서 최상 우선탐색을 적용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 43.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 44.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="a-알고리즘" class="level2">
+<h2 class="anchored" data-anchor-id="a-알고리즘">A* 알고리즘</h2>
+<p>추정한 전체 비용 <span class="math inline">\(\hat{f}(n)\)</span>을 최소로 하는 노드를 확장해 가는 방법</p>
+<p><span class="math inline">\(f(n)\)</span>: 노드 n을 경유하는 전체 비용</p>
+<ul>
+<li>현재 노드 n까지 이미 투입된 비용 <span class="math inline">\(g(n)\)</span>과 목표 노드까지의 남은 비용 <span class="math inline">\(h(n)\)</span>의 합</li>
+</ul>
+<p><span class="math display">\[
+f(n) = g(n) + h(n)
+\]</span></p>
+<p><span class="math inline">\(h(n)\)</span>: 남은 비용의 정확한 예측 불가</p>
+<ul>
+<li><span class="math inline">\(\hat{h}(n)\)</span>: <span class="math inline">\(h(n)\)</span>에 대응하는 휴리스틱 함수 (heuristic function)</li>
+</ul>
+<p><span class="math inline">\(\hat{f}(n)\)</span>: 노드 n을 경유하는 추정 전체 비용</p>
+<ul>
+<li><span class="math inline">\(\hat{f}(n) = g(n) + \hat{h}(n)\)</span></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 45.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="허용성-admissibility" class="level3">
+<h3 class="anchored" data-anchor-id="허용성-admissibility">허용성 (admissibility)</h3>
+<p><span class="math inline">\(\hat{h}(n) \leq h(n)\)</span>이면, 허용성을 갖는다. 허용성을 갖는 휴리스틱 함수를 사용하는 A* 알고리즘은 항상 최적해를 찾는다는 것이 증명되어 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 46.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="게임에서의-탐색" class="level1">
+<h1>게임에서의 탐색</h1>
+<section id="게임트리-game-tree" class="level2">
+<h2 class="anchored" data-anchor-id="게임트리-game-tree">게임트리 (game tree)</h2>
+<p>상대가 있는 게임에서 자신과 상대방의 가능한 게임 상태를 나타낸 트리</p>
+<ul>
+<li>tac-tac-toc, 바둑, 장기, 체스 등</li>
+</ul>
+<p>게임의 결과는 마지막에 결정</p>
+<p>많은 수 (lookahead)를 볼 수록 유리</p>
+<section id="mini-max-게임-트리" class="level3">
+<h3 class="anchored" data-anchor-id="mini-max-게임-트리">mini-max 게임 트리</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 47.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="mini-max-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="mini-max-algorithm">mini-max algorithm</h2>
+<p>MAX node - 자신에 해당하는 노드로 자기에게 유리한 최대값 선택</p>
+<p>MIN node - 상대방에 해당하는 노드로 최소값 선택</p>
+<p>단말 노드부터 위로 올라가면서 최소 (minimum)-최대 (maximum) 연산을 반복하여 자신이 선택할 수 있는 방법 중 가장 좋은 것 같은 값을 결정</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 48.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 49.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="alpha-beta-가지치기-prunning" class="level2">
+<h2 class="anchored" data-anchor-id="alpha-beta-가지치기-prunning"><span class="math inline">\(\alpha-\beta\)</span> 가지치기 (prunning)</h2>
+<p>검토해 볼 필요가 없는 부분을 탐색하지 않도록 하는 기법</p>
+<p>깊이 우선 탐색으로 제한 깊이까지 탐색을 하면서, max node와 min node의 값 결정</p>
+<ul>
+<li><span class="math inline">\(\alpha\)</span> 자르기 (cut-off) - MIN 노드의 현재 값이 부모노드의 현재 값보다 작거나 같으면, 나머지 자식 노드 탐색 중지</li>
+<li><span class="math inline">\(\beta\)</span> 자르기 - MAX 노드의 현재 값이 부모노드의 현재 값보다 같거나 크면, 나머지 자식 노드 탐색 중지</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 50.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="몬테-카를로-시뮬레이션-monte-carlo-simulation" class="level2">
+<h2 class="anchored" data-anchor-id="몬테-카를로-시뮬레이션-monte-carlo-simulation">몬테 카를로 시뮬레이션 (Monte Carlo Simulation)</h2>
+<p>특정 확률 분포로부터 무작위 표본 (random sample)을 생성하고, 이 표본에 따라 행동을 하는 과정을 반복하여 결과를 확인하고, 이러한 결과확인 과정을 반복하여 최종 결정을 하는 것</p>
+<section id="monte-carlo-tree-search-mcts-몬테카를로-트리-탐색" class="level3">
+<h3 class="anchored" data-anchor-id="monte-carlo-tree-search-mcts-몬테카를로-트리-탐색">Monte Carlo Tree Search, MCTS (몬테카를로 트리 탐색)</h3>
+<p>형세 판단을 위해 휴리스틱이 필요 없음</p>
+<p>단말노드 상태에서 무작위로 게임을 많이 해보는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 51.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 52.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 53.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 54.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 55.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 56.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>탐색 공간 (search space)을 무작위 표본추출 (ramdom sampling)을 하면서, 탐색트리를 확장하여 가장 좋아 보이는 것을 선택하는 휴리스틱 탐색방법</p>
+<p>4개 단계를 반복하여 시간이 허용하는 동안 트리 확장 및 시뮬레이션</p>
+<p>선택 (selection) → 확장 (expansion) → 시뮬레이션 (simulation): Monte Carlo Simulation → 역전파 (back propagation)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 57.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>일정 깊이까지 탐색하지 않고, 도움이 될 것 같은 부분을 점진적으로 확장해가며 게임 트리를 만들어 감.</p>
+</section>
+<section id="selection-선택-tree-policy-적용" class="level3">
+<h3 class="anchored" data-anchor-id="selection-선택-tree-policy-적용">selection (선택): tree policy 적용</h3>
+<p>루트노드에서 시작</p>
+<p>정책에 따라 자식 노드를 선택하여 단말 노드까지 내려감</p>
+<ul>
+<li>승률과 노드 방문횟수 고려하여 선택</li>
+<li>UCB (Upper Confidence Bound) 정책: UCB가 큰 것 선택</li>
+</ul>
+<p><span class="math display">\[
+\frac{Q(v^`)}{N(v^`)} + C \sqrt{\frac{2 \ln{N(v)}}{N(v^`)}}
+\]</span></p>
+<p><span class="math inline">\(v:\)</span> 부모노드, <span class="math inline">\(v`:\)</span> 자식노드, <span class="math inline">\(N(v^`):\)</span> 방문 횟수, <span class="math inline">\(Q(v^`):\)</span> 점수 (이긴 횟수)</p>
+<p>상수 C는 이미 해본 게임에서의 승률을 반영하는 정도와 방문횟수가 작은 노드를 더 탐색해보도록 하는 기회의 반영 정도를 조절 → C가 크면 기회를 더 많이 반영</p>
+<p>판의 형세 판단을 위해 휴리스틱을 사용하는 대신, 가능한 많은 수의 몬테카를로 시뮬레이션 수행</p>
+<p>일정 조건을 만족하는 부분은 트리로 구성하고, 나머지 부분은 몬테카를로 시뮬레이션</p>
+<ul>
+<li>가능성이 높은 수(move)들에 대해서 노드를 생성하여 트리의 탐색 폭을 줄이고, 트리 깊이를 늘리지 않기 위해 몬테카를로 시뮬레이션을 적용</li>
+<li>탐색공간 축소</li>
+</ul>
+</section>
+<section id="확장-expansion" class="level3">
+<h3 class="anchored" data-anchor-id="확장-expansion">확장 (expansion)</h3>
+<p>단말노드에서 트리 정책에 따라 노드 추가</p>
+<ul>
+<li>ex) 일정 횟수 이상 시도된 수 (move)가 있으면 해당 수에 대한 노드 추가</li>
+</ul>
+</section>
+<section id="시뮬레이션-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="시뮬레이션-simulation">시뮬레이션 (simulation)</h3>
+<p>기본 정책 (default policy)에 의한 몬테카를로 시뮬레이션 적용</p>
+<p>무작위 선택 (random moves) 또는 약간 똑똑한 방법으로 게임 끝날 때까지 진행</p>
+</section>
+<section id="역전파-backpropagation" class="level3">
+<h3 class="anchored" data-anchor-id="역전파-backpropagation">역전파 (backpropagation)</h3>
+<p>단말 노드에서 루트 노드까지 올라가면서 승점 반영</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 58.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="동작-선택-방법" class="level3">
+<h3 class="anchored" data-anchor-id="동작-선택-방법">동작 선택 방법</h3>
+<p>가장 승률이 높은, 루트의 자식 노드 선택</p>
+<p>가장 빈번하게 방문한, 루트의 자식 노드 선택</p>
+<p>승률과 빈도가 가장 큰, 루트의 자식 노드 선택</p>
+<ul>
+<li>없으면 조건을 만족하는 것이 나올 때가지 탐색 반복</li>
+</ul>
+<p>자식 노드의 confidence bound 값의 최소 값이 가장 큰, 루트의 자식 노드 선택</p>
+</section>
+</section>
+</section>
+<section id="제약조건-만족-문제-constraint-satisfaction-problem" class="level1">
+<h1>제약조건 만족 문제 (constraint satisfaction problem)</h1>
+<p>주어진 제약조건을 만족하는 해 (solution)를 찾는 문제</p>
+<p>탐색 관점에서 볼 때 목표상태는 제약조건을 모두 만족해야 함</p>
+<p>문제 영역의 변수 (domain variable), 변수가 가질 수 있는 후보 값의 집합, 제약 조건들로 정의됨</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 59.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>탐색 기반의 해결방법</p>
+<ul>
+<li>백트래킹 탐색</li>
+<li>제약조건 전파</li>
+</ul>
+<section id="backtracking-search" class="level2">
+<h2 class="anchored" data-anchor-id="backtracking-search">backtracking search</h2>
+<p>깊이 우선 탐색을 하는 것처럼 변수에 허용되는 값을 하나씩 대입</p>
+<p>모든 가능한 값을 대입해서 만족하는 것이 없으면 이전 단계로 돌아가서 이전 단계의 변수에 다른 값을 대입</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 60.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="제약조건-전파-constraint-propagation" class="level2">
+<h2 class="anchored" data-anchor-id="제약조건-전파-constraint-propagation">제약조건 전파 (constraint propagation)</h2>
+<p>인접 변수 간의 제약조건에 따라 각 변수에 허용될 수 없는 값들을 제거하는 방식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 61.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 62.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 63.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 64.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 65.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="최적화-optimization" class="level1">
+<h1>최적화 (optimization)</h1>
+<p>여러가지 허용되는 값들 중에서 주어진 기준을 가장 잘 만족하는 것을 선택하는 것 → 최적 조건의 값들을 찾는 탐색문제임</p>
+<p>제약조건 (contraint condition)</p>
+<p>목적함수 (objective function)</p>
+<ul>
+<li>최적화 문제에서 최적해는 목적함수의 값을 최소 또는 최대가 되는 값임</li>
+</ul>
+<p>조합 최적화 (combinational optimization)</p>
+<ul>
+<li>유전 알고리즘</li>
+</ul>
+<p>함수 최적화 (function optimization)</p>
+<ul>
+<li>최대 경사법</li>
+<li>제약함수 최적화</li>
+</ul>
+<section id="조합-최적화-combinational-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="조합-최적화-combinational-optimization">조합 최적화 (combinational optimization)</h2>
+<p>순회 판매자 문제 (TSP)와 같이 주어진 항목들의 조합으로 해가 표현되는 최적화 문제</p>
+<p>제약조건 - 모든 도시를 한 번만 경유함</p>
+<p>목적함수 - 경로의 길이</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 66.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>대부분 NP-hard 문제</p>
+<ul>
+<li>최적해를 구하는 것은 포기하고 근사해 (suboptimal solution)를 빠른 시간 안에 찾으려고 함</li>
+</ul>
+</section>
+<section id="유전알고리즘-genetic-algorithm-ga" class="level2">
+<h2 class="anchored" data-anchor-id="유전알고리즘-genetic-algorithm-ga">유전알고리즘 (genetic algorithm, GA)</h2>
+<p>생물의 진화를 모방한 집단 기반의 확률점 탐색 기법</p>
+<p>대표적인 진화 연산 (evolutionary computation)의 하나</p>
+<ul>
+<li>유전 알고리즘, 유전자 프로그래밍 (genetic programming), 진화 전략 (evolutionary strategy)</li>
+</ul>
+<p>생물의 진화</p>
+<ul>
+<li>염색체 (chromosome)의 유전자 (gene)들이 개체 정보 코딩</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 67.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>적자생존 (fittest survival) / 자연선택 (natural selection)
+<ul>
+<li>환경에 적합도가 높은 개체의 높은 생존 및 후손 번성 가능성</li>
+<li>우수 개체들의 높은 자손 증식 기회</li>
+<li>열등 개체들도 작지만 증식 기회</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 68.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>집단(population)의 진화
+<ul>
+<li>세대 (generation) 집단의 변화</li>
+</ul></li>
+<li>형질 유전과 변이
+<ul>
+<li>부모 유전자들의 교차 (crossover) 상속</li>
+<li>돌연변이 (mutation)에 의한 변이</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 69.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 70.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>생물 진화와 문제 해결</p>
+<ul>
+<li>개체 ↔︎&nbsp;후보 해 (candidate solution)</li>
+<li>환경 ↔︎&nbsp;문제 (problem)</li>
+<li>적합도 ↔︎&nbsp;해의 품질 (quality)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 71.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="후보해-candidate-solution-표현" class="level3">
+<h3 class="anchored" data-anchor-id="후보해-candidate-solution-표현">후보해 (candidate solution) 표현</h3>
+<p>염색체 (chromosome) 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 72.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>모집단 (population)</p>
+<ul>
+<li>동시에 존재하는 염색체들의 집합</li>
+</ul>
+<p>적합도 함수 (fitness function)</p>
+<ul>
+<li>후보해가 문제의 해 (solution)로서 적합한 정도를 평가하는 함수</li>
+</ul>
+<p>부모 개체 선택 (selection)</p>
+<ul>
+<li>높은 적합도의 개체가 새로운 개체를 생성할 확률이 높도록 함</li>
+<li>적합도에 비례하는 선택확률</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 73.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>유전연산자 (genetic operator)</p>
+<ul>
+<li>새로운 개체 생성</li>
+<li>교차 (crossover) 연산자</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 74.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>돌연변이 (mutation) 연산자</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 75.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>세대 (generation) 교체</p>
+<ul>
+<li>엘리트 주의 (elitism) - 우수한 개체를 다음 세대에 유지</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 76.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="메타-휴리스틱-meta-heuristics" class="level1">
+<h1>메타 휴리스틱 (Meta heuristics)</h1>
+<p>최적해는 아니지만 우수한 해를 빠르게 찾기 위한 휴리스틱적인 문제해결 전략</p>
+<ul>
+<li>genetic algorithm (유전 알고리즘)</li>
+<li>memetic algorithm (모방 알고리즘)</li>
+<li>particle swarm optimization, PSO (입자 군집 최적화)</li>
+<li>ant colony algorithm (개미집단 알고리즘)</li>
+<li>tabu search (타부 탐색)</li>
+<li>simulated annealing (담금질 기법)</li>
+<li>harmonic search (하모니 탐색)</li>
+<li>genetic programming (유전 프로그래밍)</li>
+</ul>
+</section>
+<section id="함수-최적화-function-optimization" class="level1">
+<h1>함수 최적화 (function optimization)</h1>
+<p>어떤 목적함수 (object function)가 있을 때, 이 함수를 최대로 하거나 최소로 하는 변수 값을 찾는 최적화 문제</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 77.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="제약조건-최적화-constraints-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="제약조건-최적화-constraints-optimization">제약조건 최적화 (constraints optimization)</h2>
+<p>제약조건 (contraints)을 만족시키면서 목적함수를 최적화시키는 변수 값들을 찾는 문제</p>
+<p>기계학습인 SVM의 학습에서 사용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 78.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 79.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 80.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 81.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="라그랑주-승수법-lagrangian-multiplier-method" class="level3">
+<h3 class="anchored" data-anchor-id="라그랑주-승수법-lagrangian-multiplier-method">라그랑주 승수법 (Lagrangian Multiplier method)</h3>
+<p>제약조건 최적화 문제를 라그랑주 함수로 변환한 다음, 쌍대 함수를 최적화하여 해결하는 방법</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 82.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="회귀-regression-문제의-최적-함수" class="level2">
+<h2 class="anchored" data-anchor-id="회귀-regression-문제의-최적-함수">회귀 (regression) 문제의 최적 함수</h2>
+<p>주어진 데이터를 가장 잘 근사 (approximation)하는 함수</p>
+<p>최소 평균제곱법 (least mean square method)</p>
+<ul>
+<li>오차함수 (error function) 또는 에너지 함수 (energy function)를 최소로 하는 함수를 찾는 방법</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 83.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="경사-하강법-gradient-descent-method" class="level2">
+<h2 class="anchored" data-anchor-id="경사-하강법-gradient-descent-method">경사 하강법 (gradient descent method)</h2>
+<p>함수의 최소값 위치를 찾는 문제에서 오차 함수의 그레디언트 (gradient) 반대 방향으로 조금씩 움직여가며 최적의 파라미터를 찾으려는 방법</p>
+<p>데이터의 입력가 출력을 이용하여 각 파라미터에 대한 그레디언트를 계산하여 파라미터를 반복적으로 조금씩 조정</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 84.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="gradient" class="level3">
+<h3 class="anchored" data-anchor-id="gradient">gradient</h3>
+<p>각 파라미어테 대해 편미분한 벡터</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 85.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="최대-경사법-gradient-descent-method" class="level2">
+<h2 class="anchored" data-anchor-id="최대-경사법-gradient-descent-method">최대 경사법 (gradient descent method)</h2>
+<p>회귀모델, 신경망 등의 기본 학습 방법</p>
+<p>국소해 (local minimum)에 빠질 위험</p>
+<p>개선된 형태의 여러 방법 존재</p>
+</section>
+</section>
+<section id="지식-표현" class="level1">
+<h1>지식 표현</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 86.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="데이터-data" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-data">데이터 (data)</h2>
+<p>특정 분야에서 관측된 아직 가공되지 않은 것</p>
+<p>사실인 것처럼 관측되지만 오류나 잡음을 포함 가능</p>
+</section>
+<section id="정보-information" class="level2">
+<h2 class="anchored" data-anchor-id="정보-information">정보 (information)</h2>
+<p>데이터를 가공하여 어떤 목적이나 의미를 갖도록 한 것</p>
+</section>
+<section id="지식-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="지식-knowledge">지식 (knowledge)</h2>
+<p>정보를 취합하고 분석하여 얻은 대상에 대해 사람이 이해한 것</p>
+<p>경험이나 교육을 통해 얻어진 전문적인 이해 (understanding)과 체계화된 문제 해결 능력</p>
+<p>어떤 주제나 분야에 대한 이론적 또는 실제적인 이해, 또는 현재 알려진 사실과 정보의 모음</p>
+<section id="암묵지-tacit-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="암묵지-tacit-knowledge">암묵지 (tacit knowledge)</h3>
+<p>형식을 갖추어 표현하기 어려운, 학습과 경험을 통해 쌓은 지식</p>
+</section>
+<section id="형식지-explicit-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="형식지-explicit-knowledge">형식지 (explicit knowledge)</h3>
+<p>비교적 쉽게 형식을 갖추어 표현될 수 있는 지식</p>
+</section>
+<section id="절차적-지식-procedural-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="절차적-지식-procedural-knowledge">절차적 지식 (procedural knowledge)</h3>
+<p>문제해결의 절차 기술</p>
+</section>
+<section id="선언적-지식-declarative-knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="선언적-지식-declarative-knowledge">선언적 지식 (declarative knowledge)</h3>
+<p>어떤 대상의 성질, 특성이나 관계 서술</p>
+</section>
+<section id="컴퓨터를-통한-지식-표현-및-처리" class="level3">
+<h3 class="anchored" data-anchor-id="컴퓨터를-통한-지식-표현-및-처리">컴퓨터를 통한 지식 표현 및 처리</h3>
+<p>프로그램이 쉽게 처리할 수 있도록 정형화된 형태로 표현</p>
+<p>규칙, 프레임, 논리, 의미망, 스크립트, 수치적 함수 등</p>
+</section>
+</section>
+<section id="지혜-wisdom" class="level2">
+<h2 class="anchored" data-anchor-id="지혜-wisdom">지혜 (wisdom)</h2>
+<p>경험과 학습을 통해서 얻은 지식보다 높은 수준의 통찰</p>
+</section>
+</section>
+<section id="규칙-rule" class="level1">
+<h1>규칙 (rule)</h1>
+<p>‘~이면 이다’ 또는 ’하면 ~하다’와 같은 조건부의 지식을 표현하는 IF-THEN 형태의 문장</p>
+<p>직관적, 이해하기 쉬움</p>
+<section id="규칙-획득-및-표현" class="level2">
+<h2 class="anchored" data-anchor-id="규칙-획득-및-표현">규칙 획득 및 표현</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 87.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 88.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="if" class="level3">
+<h3 class="anchored" data-anchor-id="if">IF</h3>
+<p>주어진 정보나 사실에 대응될 조건</p>
+<p>조건부 (conditional part, antecedent)</p>
+</section>
+<section id="then" class="level3">
+<h3 class="anchored" data-anchor-id="then">THEN</h3>
+<p>조건부가 만족될 때의 판단이나 행동</p>
+<p>결론부 (conclusion, consequent)</p>
+</section>
+</section>
+<section id="규칙의-구성" class="level2">
+<h2 class="anchored" data-anchor-id="규칙의-구성">규칙의 구성</h2>
+<section id="조건부" class="level3">
+<h3 class="anchored" data-anchor-id="조건부">조건부</h3>
+<p>둘 이상의 조건을 AND 또는 OR로 결합하여 구성 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 89.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="결론부" class="level3">
+<h3 class="anchored" data-anchor-id="결론부">결론부</h3>
+<p>여러개의 판단 또는 행동 포함 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 90.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="규칙을-통한-지식-표현" class="level2">
+<h2 class="anchored" data-anchor-id="규칙을-통한-지식-표현">규칙을 통한 지식 표현</h2>
+<section id="인과관계" class="level3">
+<h3 class="anchored" data-anchor-id="인과관계">인과관계</h3>
+<p>원인을 조건부에 결과는 결론부에</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 91.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="추천" class="level3">
+<h3 class="anchored" data-anchor-id="추천">추천</h3>
+<p>상황을 조건부에 기술하고 이에 따른 추천 내용을 결론부에 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 92.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="지시" class="level3">
+<h3 class="anchored" data-anchor-id="지시">지시</h3>
+<p>상황을 조건부에 기술하고 이에 따른 지시 내용을 결론부에 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 93.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="전략-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="전략-strategy">전략 (strategy)</h3>
+<p>일련의 규칙들로 표현</p>
+<p>이전 단계의 판정 결과에 따라 다음 단계에 고려할 규칙이 결정</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 94.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="heuristic-휴리스틱-1" class="level3">
+<h3 class="anchored" data-anchor-id="heuristic-휴리스틱-1">heuristic (휴리스틱)</h3>
+<p>경험적인 지식을 표현하는 것</p>
+<p>전문가적 견해는 최적을 항상 보장하는 것이 아니고 일반적으로 바람직한 것을 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 95.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="프레임-frame" class="level1">
+<h1>프레임 (frame)</h1>
+<p>특정 객체 또는 개념에 대한 전형적인 지식을 slot의 집합으로 표현하는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 96.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="slot-슬롯" class="level2">
+<h2 class="anchored" data-anchor-id="slot-슬롯">Slot (슬롯)</h2>
+<p>객체의 속성 (attribute)을 기술하는 것</p>
+<p>슬롯 이름 (slot name)과 슬롯 값 (slot value)으로 구성</p>
+<section id="슬롯-값-slot-value" class="level3">
+<h3 class="anchored" data-anchor-id="슬롯-값-slot-value">슬롯 값 (slot value)</h3>
+<p>복수 개의 패싯(facet)과 데몬 (demon)으로 구성</p>
+</section>
+<section id="facet-패싯" class="level3">
+<h3 class="anchored" data-anchor-id="facet-패싯">facet (패싯)</h3>
+<p>‘측면’ 또는 ’양상’을 의미</p>
+<p>속성에 대한 부가적인 정보를 지정하기 위해 사용</p>
+<p>패싯 이름과 패싯 값의 쌍으로 구성</p>
+<p>패싯 이름</p>
+<ul>
+<li>value - 속성 값 (수, 문자열, 다른 프레임의 포인터 등)</li>
+<li>data-type - 속성값의 자료형</li>
+<li>default - 디폴트값 (속성값이 주어지지 않을 때 사용되는 초기값)</li>
+<li>require - 슬롯에 들어갈 수 있는 값이 만족해야 할 제약조건</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 97.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="demon-데몬" class="level3">
+<h3 class="anchored" data-anchor-id="demon-데몬">demon (데몬)</h3>
+<p>지정된 조건을 만족할 때 실행할 절차적 지식 (procedure)을 기술</p>
+<p>슬롯 값으로 데몬 실행조건과 데몬 이름의 쌍</p>
+<p>데몬 실행조건의 예</p>
+<ul>
+<li>if_needed - 슬롯 값을 알아야 할 때 (즉, 사용하려고 할 때)</li>
+<li>if_Added - 슬롯 값이 추가될 때</li>
+<li>if_removed - 슬롯 값이 제거될 때</li>
+<li>if_modified - 슬롯 값이 수정될 떄</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 98.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="프레임의-종류" class="level2">
+<h2 class="anchored" data-anchor-id="프레임의-종류">프레임의 종류</h2>
+<p>클래스 (class) 프레임</p>
+<ul>
+<li>부류 (class)에 대한 정보 표현</li>
+</ul>
+<p>인스턴스 (instance) 프레임</p>
+<ul>
+<li>특정 객체에 대한 정보 표현</li>
+</ul>
+</section>
+<section id="프레임-계층구조-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="프레임-계층구조-hierarchy">프레임 계층구조 (hierarchy)</h2>
+<p>상위 프레임</p>
+<ul>
+<li>클래스를 나타내는 프레임</li>
+</ul>
+<p>하위 프레임</p>
+<ul>
+<li>하위 클래스 프레임 또는 상위 클래스 프레임의 객체</li>
+<li>상위 프레임을 상속 (inheritance) 받음</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 99.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 100.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="프레임과-규칙을-결합한-지식-표현" class="level2">
+<h2 class="anchored" data-anchor-id="프레임과-규칙을-결합한-지식-표현">프레임과 규칙을 결합한 지식 표현</h2>
+<p>프레임은 특정 개념이나 대상에 대한 속성들 표현</p>
+<ul>
+<li>관련된 속성들을 하나의 덩어리로 관리</li>
+</ul>
+<p>규칙을 사용하여 조건적인 지식 표현</p>
+<ul>
+<li>데몬에 규칙 사용 또는 규칙의 조건부나 결론부에서 프레임 사용</li>
+</ul>
+<p>대부분의 규칙기반 시스템에서 객체 (object) 개념 사용</p>
+<ul>
+<li>객체의 표현에 프레임 사용 가능</li>
+</ul>
+</section>
+<section id="프레임-vs-클래스와-객체" class="level2">
+<h2 class="anchored" data-anchor-id="프레임-vs-클래스와-객체">프레임 vs 클래스와 객체</h2>
+<p>클래스와 객체</p>
+<ul>
+<li>소프트웨어 개발에 있어서 모듈화, 재사용성 및 유지보수의 용이성을 고려한 프로그래밍 개념</li>
+<li>정보은닉 등 정보 접근에 대한 제한 메커니즘</li>
+</ul>
+<p>프레임</p>
+<ul>
+<li>사람이 특정 대상에 대해 갖는 지식의 표현을 목표</li>
+<li>슬롯의 특정 상황에 따라 자동으로 호출되는 데몬 개념</li>
+</ul>
+</section>
+</section>
+<section id="논리-logic" class="level1">
+<h1>논리 (logic)</h1>
+<p>말로 표현된 문장들에 대한 타당한 추론을 위해 기호를 사용하여 문장들을 표현하고 기호의 조작을 통해 문장들의 참 또는 거짓을 판정하는 분야</p>
+</section>
+<section id="명제-논리-propositional-logic" class="level1">
+<h1>명제 논리 (propositional logic)</h1>
+<section id="명제-proposition" class="level2">
+<h2 class="anchored" data-anchor-id="명제-proposition">명제 (proposition)</h2>
+<p>참, 거짓을 분명하게 판정할 수 있는 문장</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 101.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>명제를 P, Q 등과 같은 기호로 표현</p>
+<p>명제 기호의 진리값 (truth value)을 사용하여 명제들에 의해 표현되는 문장들의 진리값 결정</p>
+<p>문장 자체의 내용에 대해서는 무관심, 문장의 진리값에만 관심</p>
+</section>
+<section id="기본-명제-primitive-proposition" class="level2">
+<h2 class="anchored" data-anchor-id="기본-명제-primitive-proposition">기본 명제 (primitive proposition)</h2>
+<p>하나의 진술 (statement)로 이루어진 최소 단위의 명제</p>
+</section>
+<section id="복합-명제-compound-proposition" class="level2">
+<h2 class="anchored" data-anchor-id="복합-명제-compound-proposition">복합 명제 (compound proposition)</h2>
+<p>기본 명제들이 경합되어 만들어진 명제</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 102.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="명제-논리의-구문" class="level2">
+<h2 class="anchored" data-anchor-id="명제-논리의-구문">명제 논리의 구문</h2>
+<section id="논리식-logical-expression" class="level3">
+<h3 class="anchored" data-anchor-id="논리식-logical-expression">논리식 (logical expression)</h3>
+<p>명제를 기호로 표현한 형식</p>
+<p>명제기호</p>
+<ul>
+<li>참과 거짓을 나타내는 T와 F, 명제 기호를 연결하는 논리기호인 <span class="math inline">\(\neg, \lor, \land, \to, \equiv\)</span>를 사용하여 구성</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 103.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="리터럴-literal" class="level3">
+<h3 class="anchored" data-anchor-id="리터럴-literal">리터럴 (literal)</h3>
+<p>명제기호 P와 명제기호 <span class="math inline">\(\neg{P}\)</span> 부정</p>
+</section>
+<section id="절-clause" class="level3">
+<h3 class="anchored" data-anchor-id="절-clause">절 (clause)</h3>
+<p>리터럴들이 논리합으로만 연결되거나 논리곱으로만 연결된 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 104.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="논리곱-정규형-conjunctive-normal-form-cnf" class="level3">
+<h3 class="anchored" data-anchor-id="논리곱-정규형-conjunctive-normal-form-cnf">논리곱 정규형 (conjunctive normal form, CNF)</h3>
+<p>논리합 절들이 논리곱으로 연결되어 있는 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 105.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="논리합-정규형-disjunctive-normal-form-dnf" class="level3">
+<h3 class="anchored" data-anchor-id="논리합-정규형-disjunctive-normal-form-dnf">논리합 정규형 (disjunctive normal form, DNF)</h3>
+<p>논리곱 절들이 논리합으로 연결되어 있는 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 106.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="정형식-well-formed-formula-wff" class="level3">
+<h3 class="anchored" data-anchor-id="정형식-well-formed-formula-wff">정형식 (well-formed formula, wff)</h3>
+<p>논리에서 문법에 맞는 논리식</p>
+<p>명제논리에 대한 정형식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 107.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="진리표-truth-table" class="level2">
+<h2 class="anchored" data-anchor-id="진리표-truth-table">진리표 (truth table)</h2>
+<p>논리 기호에 따라 참, 거짓 값을 결합하는 방법을 나타낸 표</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 108.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="논리식의-해석-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="논리식의-해석-interpretation">논리식의 해석 (interpretation)</h3>
+<p>논리식의 진리값을 결정하는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 109.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>우선 각 명제기호의 진리값 결정 필요</p>
+<ul>
+<li>명제기호에 ’명제’를 대응시키고, 해당 명제의 진리값을 결정</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 110.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>대응된 명제를 명제 기호의 외연 또는 의미 (denotation)라 함</p>
+</section>
+<section id="논리식의-모델-model" class="level3">
+<h3 class="anchored" data-anchor-id="논리식의-모델-model">논리식의 모델 (model)</h3>
+<p>논리식의 명제기호에 참값 (T) 또는 거짓값 (F)을 할당한 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 111.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>모델이 주어지면 진리표를 사용하여 논리식의 진리값 결정, 즉 해석 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 112.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>n개의 명제기호가 논리식에 사용된다면 각각 T 또는 F값을 가질 수 있기 때문에, 총 <span class="math inline">\(2^n\)</span>개의 모델이 존재</p>
+</section>
+<section id="타당한-논리식-valid-logical-expression" class="level3">
+<h3 class="anchored" data-anchor-id="타당한-논리식-valid-logical-expression">타당한 논리식 (valid logical expression)</h3>
+<p>모든 가능한 모델에 대해서 항상 참(T)인 논리식</p>
+<p>항진식 (tautology)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 113.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="항위식-contradiction" class="level3">
+<h3 class="anchored" data-anchor-id="항위식-contradiction">항위식 (contradiction)</h3>
+<p>모든 가능한 모델에 대해서 항상 거짓이 되는 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 114.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="충족가능한-satisfiable-논리식" class="level3">
+<h3 class="anchored" data-anchor-id="충족가능한-satisfiable-논리식">충족가능한 (satisfiable) 논리식</h3>
+<p>참으로 만들 수 있는 모델이 하나라도 있는 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 115.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="충족불가능한-unsatisfiable-논리식" class="level3">
+<h3 class="anchored" data-anchor-id="충족불가능한-unsatisfiable-논리식">충족불가능한 (unsatisfiable) 논리식</h3>
+<p>참으로 만들 수 있는 모델이 전혀 없는 논리식</p>
+<p>항위식인 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 116.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="동치관계-equivalence-relation의-논리식" class="level3">
+<h3 class="anchored" data-anchor-id="동치관계-equivalence-relation의-논리식">동치관계 (equivalence relation)의 논리식</h3>
+<p>어떠한 모델에 대해서도 같은 값을 갖는 두 논리식</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 117.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="동치관계를-이용한-논리식의-변환" class="level3">
+<h3 class="anchored" data-anchor-id="동치관계를-이용한-논리식의-변환">동치관계를 이용한 논리식의 변환</h3>
+<p>논리식의 동치관계를 이용하면 임의의 논리식을 논리곱 정규형 (CNF)과 같은 정형식으로 변환</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 118.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="논리적-귀결-logical-entailment" class="level3">
+<h3 class="anchored" data-anchor-id="논리적-귀결-logical-entailment">논리적 귀결 (logical entailment)</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 119.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="추론-inference-1" class="level2">
+<h2 class="anchored" data-anchor-id="추론-inference-1">추론 (inference)</h2>
+<section id="귀납적-추론-inductive-inference" class="level3">
+<h3 class="anchored" data-anchor-id="귀납적-추론-inductive-inference">귀납적 추론 (inductive inference)</h3>
+<p>관측된 복수의 사실들을 일반화 (generalization)하여 일반적인 패턴 또는 명제를 도출하는 것</p>
+</section>
+<section id="연역적-추론-deductive-inference" class="level3">
+<h3 class="anchored" data-anchor-id="연역적-추론-deductive-inference">연역적 추론 (deductive inference)</h3>
+<p>참인 사실들 또는 명제들로부터 새로운 참인 사실 또는 명제를 도출하는 것</p>
+</section>
+<section id="논리에서의-추론" class="level3">
+<h3 class="anchored" data-anchor-id="논리에서의-추론">논리에서의 추론</h3>
+<p>함의(<span class="math inline">\(\to\)</span>)의 논리적 관계를 이용하여 새로운 논리식을 유도해 내는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 120.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="추론-규칙-inference-rule" class="level3">
+<h3 class="anchored" data-anchor-id="추론-규칙-inference-rule">추론 규칙 (inference rule)</h3>
+<p>참인 논리식들이 논리적으로 귀결하는 새로운 논리식을 만들어내는 기계적으로 적용되는 규칙</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 121.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="논리-융합-resolution" class="level3">
+<h3 class="anchored" data-anchor-id="논리-융합-resolution">논리 융합 (resolution)</h3>
+<p>일반화된 추론규칙</p>
+<ul>
+<li>긍정 논법, 부정 논법, 삼단 논법의 규칙을 포함한 추론 규칙</li>
+</ul>
+<p>두개의 논리합절이 같은 기호의 긍정과 부정의 리터럴을 서로 포함하고 있을 때, 해당 리터럴들을 제외한 나머지 리터럴들의 논리합절을 만들어내는 것</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 122.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="추론-규칙의-정당성-sound" class="level3">
+<h3 class="anchored" data-anchor-id="추론-규칙의-정당성-sound">추론 규칙의 정당성 (sound)</h3>
+<p>추론 규칙에 의해 생성된 논리식은 주어진 논리식들이 논리적으로 귀결하는 것이다</p>
+<p>즉, 추론 규칙이 만들어 낸 것은 항상 참이다</p>
+</section>
+<section id="추론-규칙의-완전성-complete" class="level3">
+<h3 class="anchored" data-anchor-id="추론-규칙의-완전성-complete">추론 규칙의 완전성 (complete)</h3>
+<p>주어진 논리식들이 논리적으로 귀결하는 것들은 추론 규칙이 찾아 낼 수 있다.</p>
+</section>
+<section id="정리증명-theorem-proving" class="level3">
+<h3 class="anchored" data-anchor-id="정리증명-theorem-proving">정리증명 (theorem proving)</h3>
+<p>공리 (axiom)</p>
+<ul>
+<li>추론을 할 때 참인 것으로 주어지는 논리식</li>
+</ul>
+<p>정리 (theorem)</p>
+<ul>
+<li>공리들에 추론 규칙을 적용하여 얻어지는 논리식</li>
+</ul>
+<p>정리증명</p>
+<ul>
+<li>공리들을 사용하여 정리가 참인 것을 보이는 것</li>
+<li>구성적 증명 (constructive proof)
+<ul>
+<li>공리들에 추론 규칙들을 적용하여 증명을 만들어 보이는 증명</li>
+</ul></li>
+<li>논리융합 반박 (resolution refutation)
+<ul>
+<li>증명할 정리를 부정(negation)한 다음, 논리융합 방법을 적용하여 모순이 발생하는 것을 보여서 정리가 참임을 증명하는 방법</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 123.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="명제논리의-지식표현" class="level2">
+<h2 class="anchored" data-anchor-id="명제논리의-지식표현">명제논리의 지식표현</h2>
+<p>문장으로 표현된 지식으로부터 기본 명제들을 추출</p>
+<p>각 명제에 대해 명제기호 부여</p>
+<p>기본 명제들의 논리적 연결 관계를 참고하여 대응되는 명제 기호들을 논리기호로 연결하여 논리식 구성</p>
+<section id="명제-논리로-표현된-지식에-대한-추론" class="level3">
+<h3 class="anchored" data-anchor-id="명제-논리로-표현된-지식에-대한-추론">명제 논리로 표현된 지식에 대한 추론</h3>
+<p>명제기호가 나타나는 명제의 의미와는 무과</p>
+<p>대수적인 기호연산을 통해서 추론 수행</p>
+</section>
+</section>
+</section>
+<section id="술어-논리-predicate-logic" class="level1">
+<h1>술어 논리 (predicate logic)</h1>
+<p>명제의 내용을 다루기 위해 변수, 함수 등을 도입하고 이들의 값에 따라 참, 거짓이 결정되도록 명제논리를 확장한 논리</p>
+<section id="predicate-술어" class="level2">
+<h2 class="anchored" data-anchor-id="predicate-술어">predicate (술어)</h2>
+<p>문장의 ‘주어 + 서술어’ 형태에서 서술어에 해당</p>
+<p>대상의 속성이나 대상 간의 관계를 기술하는 기호</p>
+<p>참 (T) 또는 거짓 (F) 값을 갖는 함수</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 124.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="술어-논리의-구문" class="level2">
+<h2 class="anchored" data-anchor-id="술어-논리의-구문">술어 논리의 구문</h2>
+<p>존재 한정사 (existential quantifier) <span class="math inline">\(\exist\)</span>와 전칭한정사 (univeral quantifier) <span class="math inline">\(\forall\)</span> 사용</p>
+<p>변수의 범위를 고려한 지식을 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 125.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="함수-function" class="level2">
+<h2 class="anchored" data-anchor-id="함수-function">함수 (function)</h2>
+<p>주어진 인자에 대해서 참, 거짓 값이 아닌 일반적인 값을 반환</p>
+<p>술어나 다른 함수의 인자로 사용</p>
+</section>
+<section id="항-term" class="level2">
+<h2 class="anchored" data-anchor-id="항-term">항 (term)</h2>
+<p>함수의 인자가 될 수 있는 것</p>
+<p>항이 될 수 있는 것 - 개체 상수, 변수, 함수</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 126.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="술어-논리에-대한-정형식" class="level2">
+<h2 class="anchored" data-anchor-id="술어-논리에-대한-정형식">술어 논리에 대한 정형식</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 127.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="일차-술어논리-first-order-predicate-logic-fol" class="level2">
+<h2 class="anchored" data-anchor-id="일차-술어논리-first-order-predicate-logic-fol">일차 술어논리 (first-order predicate logic, FOL)</h2>
+<p>변수에만 전칭 한정사와 존재 한정사를 쓸 수 있도록 한 술어논리</p>
+</section>
+<section id="고차-술어논리-high-order-predicate-logic" class="level2">
+<h2 class="anchored" data-anchor-id="고차-술어논리-high-order-predicate-logic">고차 술어논리 (high-order predicate logic)</h2>
+<p>변수 뿐만 아니라 함수, 술어 기호 등에 대해서 전칭 한정사와 존재 한정사를 쓸 수 있도록 한 술어 논리</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 128.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="술어-논리를-이용한-지식-표현" class="level2">
+<h2 class="anchored" data-anchor-id="술어-논리를-이용한-지식-표현">술어 논리를 이용한 지식 표현</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 129.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="술어-논리의-추론" class="level2">
+<h2 class="anchored" data-anchor-id="술어-논리의-추론">술어 논리의 추론</h2>
+<section id="술어-논리식의-cnf로의-변환-과정" class="level3">
+<h3 class="anchored" data-anchor-id="술어-논리식의-cnf로의-변환-과정">술어 논리식의 CNF로의 변환 과정</h3>
+<ol type="1">
+<li>전칭 한정사와 존재 한정사를 논리식의 맨 앞으로 끌어내는 변환</li>
+<li>전칭 한정사에 결합된 변수
+<ol type="1">
+<li>임의의 값 허용</li>
+</ol></li>
+<li>존재 한정사에 결합된 변수
+<ol type="1">
+<li>대응되는 술어 기호를 참 (T)으로 만드는 값을 변수에 대응시킴</li>
+<li>스콜렘 함수 (Skolem function)
+<ol type="1">
+<li>존재 한정사에 결합된 변수를 해당 술어의 전칭 한정사에 결합된 다른 변수들의 새로운 함수로 대체</li>
+</ol></li>
+</ol></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 130.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="단일화-unification-과정" class="level3">
+<h3 class="anchored" data-anchor-id="단일화-unification-과정">단일화 (unification) 과정</h3>
+<p>논리융합 (resolution)을 적용할 때는 대응되는 리터럴이 같아지도록, 변수의 값을 맞춰주는 과정</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 131.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="술어-논리로-지식의-증명" class="level3">
+<h3 class="anchored" data-anchor-id="술어-논리로-지식의-증명">술어 논리로 지식의 증명</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 132.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 133.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="논리-프로그래밍-언어" class="level2">
+<h2 class="anchored" data-anchor-id="논리-프로그래밍-언어">논리 프로그래밍 언어</h2>
+<section id="horn-clause-horn-절" class="level3">
+<h3 class="anchored" data-anchor-id="horn-clause-horn-절">Horn clause (Horn 절)</h3>
+<p>논리식을 논리합의 형태로 표현할 때 <span class="math inline">\(\neg{A(x)} \lor \neg{B(x)} \lor C(x)\)</span>와 같이 긍정인 리터럴을 최대 하나만 허용</p>
+</section>
+<section id="prolog" class="level3">
+<h3 class="anchored" data-anchor-id="prolog">prolog</h3>
+<p>Horn 절만 허용하는 논리 프로그래밍 언어</p>
+<p>backtracking을 이용하여 실행</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 134.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="의미망-semantic-network" class="level1">
+<h1>의미망 (semantic network)</h1>
+<p>지식을 이항관계 (binary relation)의 집합으로 표현</p>
+<p>노드와 방향성 간선으로 구성되는 그래프를 사용해 지식 표현</p>
+<section id="node-노드" class="level2">
+<h2 class="anchored" data-anchor-id="node-노드">node (노드)</h2>
+<ul>
+<li>대상, 개념, 행위, 상태, 사건</li>
+</ul>
+</section>
+<section id="간선-edge" class="level2">
+<h2 class="anchored" data-anchor-id="간선-edge">간선 (edge)</h2>
+<p>관계가 있는 노드를 연결</p>
+<p>관계에 따른 방향</p>
+<p>관계의 의미를 나타내는 라벨 부여</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 135.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망에서-사용되는-관계-relationship" class="level2">
+<h2 class="anchored" data-anchor-id="의미망에서-사용되는-관계-relationship">의미망에서 사용되는 관계 (relationship)</h2>
+<section id="is-a" class="level3">
+<h3 class="anchored" data-anchor-id="is-a">is-a</h3>
+<p>상위 클래스와 하위 클래스 관계, 또는 클래스와 객체의 관계를 나타내어 계층 관계 표현</p>
+<p>상위 계층의 속성을 상속</p>
+<p>추이적 (transitive) 관계 만족</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 136.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="has-a" class="level3">
+<h3 class="anchored" data-anchor-id="has-a">has-a</h3>
+<p>전체-부분 관계</p>
+<p>part-of와 역관계</p>
+<ul>
+<li>has-a(x, y)이면 part-of(y, x) 성립</li>
+<li>추이적 관계 만족</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 137.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="다항관계를-이항관계로-전개하여-표현한-의미망" class="level2">
+<h2 class="anchored" data-anchor-id="다항관계를-이항관계로-전개하여-표현한-의미망">다항관계를 이항관계로 전개하여 표현한 의미망</h2>
+<p>의미망은 이항 관계만을 표현</p>
+<p>다항관계는 relationship (관계)을 object (객체)로 간주하여 표현</p>
+<ul>
+<li>사물화 (reification)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 138.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망에서-추론" class="level2">
+<h2 class="anchored" data-anchor-id="의미망에서-추론">의미망에서 추론</h2>
+<p>상속 (inheritance)을 이용</p>
+<p>질문에 대한 의미망과 지식을 나타내는 의미망을 비교</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 139.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>디폴트 값 (default value, 기본값)을 이용한 추론</p>
+<p>상속 관계 이용</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 140.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>주어진 지식으로부터 새로운 사실을 이끌어내는 추론도 가능</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 141.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망과-프레임" class="level2">
+<h2 class="anchored" data-anchor-id="의미망과-프레임">의미망과 프레임</h2>
+<p>의미망의 프레임으로의 변환</p>
+<ul>
+<li>노드별로 프레임 생성</li>
+<li>노드에서 나가는 간선들을 슬롯 (slot)으로 구성</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 142.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망-표현의-장점" class="level2">
+<h2 class="anchored" data-anchor-id="의미망-표현의-장점">의미망 표현의 장점</h2>
+<p>지식을 시각적으로 표현할 수 있어 직관적 이해 용이</p>
+<p>노드 추가 또는 변경으로 비교적 쉽게 지식의 추가 및 변경 가능</p>
+<p>개념의 계층관계를 정의하여 속성의 상속 관계 지정 가능</p>
+<p>복잡한 지식을 구조화하여 표현 가능</p>
+</section>
+<section id="의미망-표현의-단점" class="level2">
+<h2 class="anchored" data-anchor-id="의미망-표현의-단점">의미망 표현의 단점</h2>
+<p>지식의 양이 많아지면 관리 복잡</p>
+<p>개념이나 관계를 임의로 정의하기 때문에 통일성이 부족</p>
+<p>공유나 재사용에 대한 고려 없음</p>
+<p>논리적 결합 관계나 인과관계를 기술하려고 하면 and, or, implies와 같은 링크 도입 필요</p>
+<ul>
+<li>일관성을 떨어뜨리고 추론 과정을 복잡</li>
+</ul>
+<p>기본적으로 정적인 지식의 표현</p>
+<ul>
+<li>추론 과정에서 동적으로 지식의 내용을 바꾸려면 그래프를 동적으로 바꿀 수 있도록 해야 함</li>
+</ul>
+</section>
+</section>
+<section id="스크립트-script" class="level1">
+<h1>스크립트 (script)</h1>
+<p>일반적으로 발생할 수 있는 전형적인 상황에 대한 절차적 지식을 일목요연하게 표현</p>
+<p>전형적인 상황에서 일어나는 일련의 사건 (event)을 시간적 순서를 고려하여 기술하는 프레임과 같은 구조의 지식 표현</p>
+<p>구성요소</p>
+<ul>
+<li>진입조건 (entry condition)
+<ul>
+<li>스크립트에 기술된 사건들이 일어나기 전에 만족되어야 하는 전제조건</li>
+</ul></li>
+<li>역할자 (roles)
+<ul>
+<li>스크립트에 관련된 사람 및 대상</li>
+</ul></li>
+<li>자산 (properties)
+<ul>
+<li>사건 진행 과정에서 사용되는 객체</li>
+</ul></li>
+<li>트랙 (track)
+<ul>
+<li>어떤 스크립트에서 발생할 수 있는 일련의 사건들이 변형된 형태 식별자</li>
+</ul></li>
+<li>장면 (scenes)
+<ul>
+<li>실제 일어나는 일련의 사건</li>
+</ul></li>
+<li>결과조건 (results)
+<ul>
+<li>스크립트의 장면에 있는 사건들이 일어난 이후에 만족되는 조건</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 143.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="온톨로지-ontology" class="level1">
+<h1>온톨로지 (ontology)</h1>
+<p>어떤 영역의 지식을 공유하고 재사용할 수 있도록 해당 영역의 개념과 관계를 나타내는 어휘를 정의하고 이를 이용해 지식을 표현해 놓은 것</p>
+<p>영역(domain)에 있는 개념, 개념에 대한 특성 및 속성, 이들 특성과 속성에 대한 제약조건, 영역에 있는 일부 개체에 대한 정보가 기술</p>
+<p>영역에 대한 공통된 어휘 (vocabulary) 사용</p>
+<p>영역에 대한 공통된 이해 지원</p>
+<p>서로 간 토의를 통해 합의를 이룬 것을 표현</p>
+<p>컴퓨터에서 다룰 수 있는 형태로 정형화하여 표현</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 144.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 145.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 146.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 147.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<section id="온톨로지의-지식표현" class="level2">
+<h2 class="anchored" data-anchor-id="온톨로지의-지식표현">온톨로지의 지식표현</h2>
+<p>의미망과 비슷하게 방향성이 있는 그래프로 표현 가능</p>
+<section id="rdf-resource-description-framework" class="level3">
+<h3 class="anchored" data-anchor-id="rdf-resource-description-framework">RDF (resource description framework)</h3>
+<p>자원에 대한 메타데이터 (metadata, 데이터에 대한 데이터)를 기술하는 명세 (specification)</p>
+<p>특정 대상을 기술하는 간단한 문장 (sentence)</p>
+<ul>
+<li>주어 (subject) + 서술어 (predicate) + 목적어 (object)로 파악</li>
+<li>자원 (대상; resource) - 속성 (특징, 주어와 목적어 관계, attribute) - 값 (value)로 분해</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 148.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 149.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="rdfs-resource-description-framework-schema-rdf-schema" class="level3">
+<h3 class="anchored" data-anchor-id="rdfs-resource-description-framework-schema-rdf-schema">RDFS (Resource description framework schema, RDF schema)</h3>
+<p>RDF를 사용하여 온톨로지를 표현할 때 사용할 관련 어휘 온톨로지를 정의하는 언어</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 150.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 151.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sparql" class="level3">
+<h3 class="anchored" data-anchor-id="sparql">SPARQL</h3>
+<p>RDF 형태로 저장된 데이터에 대한 질의어</p>
+<p>SQL 유사한 문법</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 152.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="rif-rule-interchange-format" class="level3">
+<h3 class="anchored" data-anchor-id="rif-rule-interchange-format">RIF (rule interchange format)</h3>
+<p>규칙을 정의하고 교환하기 위한 규약</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 153.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="owl-web-ontology-language" class="level3">
+<h3 class="anchored" data-anchor-id="owl-web-ontology-language">OWL (Web ontology language)</h3>
+<p>웹 상의 자원과 이들 속성에 대한 지식을 표현하기 위한 온톨로지 언어</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 154.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="온톨로지의-활용" class="level2">
+<h2 class="anchored" data-anchor-id="온톨로지의-활용">온톨로지의 활용</h2>
+<section id="semantic-web-시맨틱-웹" class="level3">
+<h3 class="anchored" data-anchor-id="semantic-web-시맨틱-웹">semantic web (시맨틱 웹)</h3>
+<p>웹의 데이터를 소프트웨어 에이전트가 이해하여 지능적으로 활용할 수 있도록 하는 것</p>
+<p>의미있는 태그 (tag)를 정의하여 문서를 기술하기 위해 XML 사용</p>
+<p>태그 및 데이터의 의미 해석을 위해 RDF 사용</p>
+<p>온톨로지 구축을 통해 태그 및 메타데이터의 의미 해석</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 155.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="의미망과-온톨로지" class="level3">
+<h3 class="anchored" data-anchor-id="의미망과-온톨로지">의미망과 온톨로지</h3>
+<p>그래프 구조를 이용한 지식 모델링</p>
+<p>의미망</p>
+<ul>
+<li>대상, 관계 등의 표현에 사용되는 용어가 임의적</li>
+<li>통일된 표현 관련 규정 부재</li>
+</ul>
+<p>온톨로지</p>
+<ul>
+<li>다른 시스템과 공유와 상호운영성 (interoperability)를 위해 명확한 지침에 따라 표현</li>
+<li>구축된 정보 및 지식의 재사용에 관심</li>
+</ul>
+</section>
+</section>
+<section id="온톨로지-구축도구" class="level2">
+<h2 class="anchored" data-anchor-id="온톨로지-구축도구">온톨로지 구축도구</h2>
+<p>Protege 등</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 156.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
