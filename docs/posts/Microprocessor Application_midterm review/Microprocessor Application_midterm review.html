@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siyun Min">
+<meta name="dcterms.date" content="2022-10-24">
+
+<title>Siyun Min - Microprocessor Application - midterm review</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Siyun Min</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">Siyun Min</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sy9777m"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/kevinmin77/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Microprocessor Application - midterm review</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">SSU</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Siyun Min </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 24, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="midterm-review" class="level1">
+<h1>midterm review</h1>
+</section>
+<section id="clock-frequency" class="level1">
+<h1>Clock frequency</h1>
+<p><span class="math display">\[
+f = \frac{1}{tp}, tp = \frac{1}{f}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="parasitic-resistance" class="level1">
+<h1>Parasitic resistance</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="parasitic-capacitance" class="level1">
+<h1>Parasitic capacitance</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Terminal voltage across a capacitor cannot be changed immediately.</p>
+<p>Silicon switches have a parasitic capacitance due to the physical structure.</p>
+<p>Serially connected resistance and capacitance result in a del, which is often called as “RC delay.”</p>
+</section>
+<section id="switching-and-delay" class="level1">
+<h1>Switching and delay</h1>
+<p>Parasitic resistance and capacitance results in RC-delay.</p>
+<p>Input → delay → output</p>
+<p>We should wait until the output is completely changed!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="bus-and-interconnection" class="level1">
+<h1>Bus and interconnection</h1>
+<p>How is the data delivered? How can you put and get the data to/from the processor?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="data-transfer" class="level1">
+<h1>Data transfer</h1>
+<section id="serial" class="level2">
+<h2 class="anchored" data-anchor-id="serial">Serial</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="parallel" class="level2">
+<h2 class="anchored" data-anchor-id="parallel">Parallel</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="risc-vs.-cisc" class="level1">
+<h1>RISC vs.&nbsp;CISC</h1>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>CISC</th>
+<th>RISC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>emphasis on hardware</td>
+<td>emphasis on software</td>
+</tr>
+<tr class="even">
+<td>multiple instruction sizes and formats</td>
+<td>instructions of same set with few formats</td>
+</tr>
+<tr class="odd">
+<td>less registers</td>
+<td>uses more registers</td>
+</tr>
+<tr class="even">
+<td>more addressing modes</td>
+<td>fewer addressing modes</td>
+</tr>
+<tr class="odd">
+<td>extensive use of microprogramming</td>
+<td>complexity in compiler</td>
+</tr>
+<tr class="even">
+<td>instructions take a varying amount of cycle time</td>
+<td>instructions take one cycle time</td>
+</tr>
+<tr class="odd">
+<td>pipelining is difficult</td>
+<td>pipelining is easy</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mind-and-intelligence" class="level1">
+<h1>Mind and intelligence</h1>
+<p>What is intelligence?</p>
+<ul>
+<li>I don’t either. Then, who is intelligent?</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Mind-body problem</p>
+<ul>
+<li>How the human mind and body can causally interact</li>
+</ul>
+<p>Kant: philosophy of mind</p>
+<ul>
+<li>sensibility, understanding and reason</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="automata" class="level1">
+<h1>Automata</h1>
+<p>A self-operating machine, or a machine or control mechanism designed to automatically follow a predetermined sequence of operations, or respond to predetermined instructions.</p>
+<section id="automata-theory" class="level2">
+<h2 class="anchored" data-anchor-id="automata-theory">Automata theory</h2>
+<p>The study of abstract machines and automata, as well as the computational problems that can be solved using them.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>What can we do with the machine?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>An automation that recognizes strings containing an even (or odd) number of 0s.</p>
+</section>
+</section>
+<section id="computation-and-automata" class="level1">
+<h1>Computation and automata</h1>
+<p>Theory of computation</p>
+<ul>
+<li>How efficiently problems can be solved on a model of computation, using an algorithm</li>
+<li>automata theory</li>
+<li>formal language theory</li>
+<li>computability theory</li>
+<li>computational complexity theory</li>
+</ul>
+<p>algorithm</p>
+<ul>
+<li>a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer</li>
+</ul>
+</section>
+<section id="electronic-computers" class="level1">
+<h1>Electronic computers</h1>
+<p>Arithmetic units and combination logics with relay, vacuum tube, and transistors</p>
+</section>
+<section id="performance-density-power" class="level1">
+<h1>Performance, density, power</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>more transistors with higher frequency</p>
+<p>knee points around 2000 ~ 2005</p>
+<p>hurdles to be tackled</p>
+<ul>
+<li>power</li>
+<li>temperature</li>
+</ul>
+</section>
+<section id="future-of-microprocessor" class="level1">
+<h1>Future of microprocessor</h1>
+<p>In the next 20 years</p>
+<ul>
+<li>Package power/total energy consumption limits number of logic transistors</li>
+<li>Organizing the logic - multiple cores and customization</li>
+<li>Orchestrating data movement - memory hierarchies and interconnects</li>
+<li>Pushing the envelope - extreme circuits, variability, resilience</li>
+<li>Software challenges renewed - programmability versus efficiency</li>
+</ul>
+</section>
+<section id="microprocessor-internals" class="level1">
+<h1>Microprocessor internals</h1>
+<section id="control-unit-cu" class="level2">
+<h2 class="anchored" data-anchor-id="control-unit-cu">Control unit (CU)</h2>
+<p>decodes the program instruction in the IR, selecting machine resources such as a data source register and a particular arithmetic operation, and coordinates activation of those resources.</p>
+</section>
+<section id="arithmetic-logic-unit-alu" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-logic-unit-alu">Arithmetic logic unit (ALU)</h2>
+<p>performs mathematical and logical operations</p>
+</section>
+<section id="register-pile" class="level2">
+<h2 class="anchored" data-anchor-id="register-pile">Register pile</h2>
+</section>
+<section id="registers" class="level2">
+<h2 class="anchored" data-anchor-id="registers">Registers</h2>
+<section id="program-counter-pc" class="level3">
+<h3 class="anchored" data-anchor-id="program-counter-pc">Program counter (PC)</h3>
+<p>an incrementing counter that keeps track of the memory address of the instruction that is to be executed next or in other words, holds the address of the instruction to be executed next.</p>
+</section>
+<section id="memory-address-register-mar" class="level3">
+<h3 class="anchored" data-anchor-id="memory-address-register-mar">Memory address register (MAR)</h3>
+<p>holds the address of a memory block to be read from or written to</p>
+</section>
+<section id="memory-data-register-mdr" class="level3">
+<h3 class="anchored" data-anchor-id="memory-data-register-mdr">Memory data register (MDR)</h3>
+<p>a two-way register that holds data fetched from memory (and ready for the CPU to process) or data waiting to be stored in memory. (This is also known as the memory buffer register (MBR).)</p>
+</section>
+<section id="instruction-register-ir" class="level3">
+<h3 class="anchored" data-anchor-id="instruction-register-ir">Instruction register (IR)</h3>
+<p>a temporary holding ground for the instruction that has just been fetched from memory</p>
+</section>
+</section>
+<section id="ex-arm7-tdmi-structure" class="level2">
+<h2 class="anchored" data-anchor-id="ex-arm7-tdmi-structure">Ex) ARM7-TDMI structure</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="execution-cycle" class="level1">
+<h1>Execution cycle</h1>
+<p>Automatic execution of instruction</p>
+<ul>
+<li>Turing machine</li>
+<li>a machine that mechanically operates on a tape</li>
+<li>On this tape are symbols, which the machine can read and write, one at a time, using a tape head</li>
+<li>Operation is a finite set of elementary instructions such as “in state 42, if the symbol seen is 0, write a 1”</li>
+<li>Turing imagines not a mechanism, but a person whom he calls the “computer”, who executes these deterministic mechanical rules slavishly (or as Turing puts it, “in a desultory manner”)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="instruction-cycle" class="level1">
+<h1>Instruction cycle</h1>
+<p>5 stage pipelined instruction cycle</p>
+<section id="fetching-the-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-the-instruction">Fetching the instruction</h2>
+<p>The next instruction is fetched from the memory address that is currently stored in the program counter (PC), and stored in the instruction register (IR).</p>
+</section>
+<section id="decode-the-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="decode-the-instruction">Decode the instruction</h2>
+<p>The encoded instruction in the IR (instruction register) is interpreted by the decoder.</p>
+</section>
+<section id="read-the-effective-address" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-effective-address">Read the effective address</h2>
+<p>If the instruction has an indirect address, the effective address is read from main memory, and any required data is fetched from main memory to be processed and then placed into data registers.</p>
+</section>
+<section id="execute-the-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="execute-the-instruction">Execute the instruction</h2>
+<p>The control unit of the CPU passes the decoded information as a sequence of control signals to the relevant function units of the CPU to perform the actions required by the instruction.</p>
+</section>
+</section>
+<section id="memory-devices" class="level1">
+<h1>Memory devices</h1>
+<section id="read-only-memory-non-volatile" class="level2">
+<h2 class="anchored" data-anchor-id="read-only-memory-non-volatile">Read-only memory (non-volatile)</h2>
+<p>ROM - programmed at factory</p>
+<p>PROM and EPROM - programmable and erasable ROM</p>
+<p>Flash memory</p>
+</section>
+<section id="random-access-memory-volatile" class="level2">
+<h2 class="anchored" data-anchor-id="random-access-memory-volatile">Random access memory (volatile)</h2>
+<p>SRAM, DRAM</p>
+</section>
+<section id="emerging-memory-technologies" class="level2">
+<h2 class="anchored" data-anchor-id="emerging-memory-technologies">Emerging memory technologies</h2>
+<p>Phase-change memory (PCM), STT-RAM, MRAM</p>
+</section>
+</section>
+<section id="io-devices" class="level1">
+<h1>I/O devices</h1>
+<p>Input devices - mouse, tablet, switches</p>
+<p>output devices</p>
+<ul>
+<li>printer, relays</li>
+<li>displays - LEDs, CRT and TFT…</li>
+</ul>
+<p>Input/output devices - hard disk</p>
+</section>
+<section id="io-methods" class="level1">
+<h1>I/O methods</h1>
+<p>From/to microprocessor</p>
+<ul>
+<li>memory mapped I/O</li>
+<li>I/O mapped I/O</li>
+<li>interrupt</li>
+</ul>
+<p>Direct memory access</p>
+</section>
+<section id="address-space" class="level1">
+<h1>Address space</h1>
+<p>Microprocessors thinks the everything around them is a just address.</p>
+<p>External devices are located in the space of address - memory map!</p>
+<p>Addressable range and address bus width</p>
+<ul>
+<li>16bit address → <span class="math inline">\(2^{16}\)</span> of objects can be identified</li>
+</ul>
+</section>
+<section id="memory-map" class="level1">
+<h1>Memory map</h1>
+<p>address decoding</p>
+<ul>
+<li>address space with multiple chip devices</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 14.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="address-decoding" class="level1">
+<h1>Address decoding</h1>
+<p>How to select a specific device according to the address from the microprocessor?</p>
+<ul>
+<li>generate chip select signal with a specific combination of address</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>By using demultiplexer, we can generate a signal to select a specific devices when we have enough memory space!</p>
+<p>What will happen when we use lower 4 bits instead of higher 4 bits?</p>
+<ul>
+<li>Memory map is divided are not continuous.</li>
+</ul>
+</section>
+<section id="memory-interface-signals-in-microprocessor" class="level1">
+<h1>Memory interface signals in microprocessor</h1>
+<p>address bus, data bus, control signals</p>
+</section>
+<section id="high-z" class="level1">
+<h1>High-Z</h1>
+<p>What should the other devices do when they are not selected?</p>
+<ul>
+<li>Acts like unconnected</li>
+<li>high-Z in tri-state buffer</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="volatile-memory-sram" class="level1">
+<h1>Volatile memory: SRAM</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="register-interface" class="level1">
+<h1>Register interface</h1>
+<p>Communication between the processor and external IPs in the systems.</p>
+<ul>
+<li>External communication from the processor only can be done by memory read and write to a certain address.</li>
+<li>Configure and control the behavior of the IPs over registers
+<ul>
+<li>configuration by setting registers</li>
+<li>trigger an operation by setting a certain bit</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 21.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="asynchronous-serial-communication" class="level1">
+<h1>Asynchronous serial communication</h1>
+<p>Eliminates the need for a clock signal between the transmitter and receiver</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 22.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+<p>Timing should be maintained by each system</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 23.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="synchronous-serial-communication" class="level1">
+<h1>Synchronous serial communication</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="data-serialization" class="level1">
+<h1>Data serialization</h1>
+<p>Counter + shift register</p>
+<ul>
+<li>send bit by bit until counter meets the length of data frame</li>
+</ul>
+</section>
+<section id="motivation-for-serial-communication" class="level1">
+<h1>Motivation for serial communication</h1>
+<p>Connect different systems together</p>
+<ul>
+<li>two embedded systems</li>
+<li>a desktop and an embedded system</li>
+</ul>
+<p>connect different chips together in the same embedded system</p>
+<ul>
+<li>MCU (Microcontroller Unit, microprocessor) to peripheral</li>
+<li>MCU to MCU</li>
+</ul>
+<p>Without using a lot of I/O lines</p>
+<ul>
+<li>I/O lines require I/O pads which cost and size</li>
+<li>I/O lines require PCB area which costs and size</li>
+<li>often at relatively low data rates</li>
+<li>but sometimes at higher data rates</li>
+</ul>
+<p>So, what are our options?</p>
+<ul>
+<li>Universal synchronous/Asynchronous receiver transmitter, also known as USART</li>
+</ul>
+</section>
+<section id="serial-bus-design" class="level1">
+<h1>Serial bus design</h1>
+<p>Number of wires</p>
+<p>asynchronous or synchronous</p>
+<p>speed of transferring data</p>
+<p>Can it support more than two endpoints?</p>
+<p>Can it support more than one master?</p>
+<p>How do we support flow control?</p>
+<p>How does it handle errors/noise?</p>
+</section>
+<section id="multidrop-bus-mdb" class="level1">
+<h1>Multidrop bus (MDB)</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 25.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="how-to-handle-multiple-potential-bus-drivers" class="level1">
+<h1>How to handle multiple (potential) bus drivers?</h1>
+<p>Tri-state devices, just have one device drive at a time. Everyone can read though.</p>
+<ul>
+<li>Pros - very common, fairly fast, pin-efficient</li>
+<li>cons
+<ul>
+<li>tri-state devices can be slow, especially drive-to-tri-state</li>
+<li>need to be sure two folks not driving simultaneously</li>
+</ul></li>
+</ul>
+<p>Most common solution (at least historically)</p>
+<ul>
+<li>Ethernet, PCI, etc.</li>
+</ul>
+<section id="mux" class="level2">
+<h2 class="anchored" data-anchor-id="mux">MUX</h2>
+<p>just have each device generate its data, and have a MUX select.</p>
+<ul>
+<li>That’s a low of pins.</li>
+<li>Consider a 32-bit bus with 6 potential drivers.
+<ul>
+<li>how many pins needed for the MUX? 64 pins</li>
+</ul></li>
+<li>not generally realistic for an “on-PCB” design as we’ll need an extra device (or a lot of pins on one device)
+<ul>
+<li>but reasonable on-chip, in fact AHB, APB do this.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 26.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="uart-universal-asynchronous-receivertransmitter" class="level1">
+<h1>UART (Universal Asynchronous Receiver/Transmitter)</h1>
+<p>Hardware that translates between parallel and serial forms</p>
+<p>The universal designation indicates that the data format and transmission speeds are configurable and that the actual electric signaling levels and methods (such as differential signaling etc.) typically are handled by a special driver circuit external to the UART.</p>
+</section>
+<section id="protocol" class="level1">
+<h1>Protocol</h1>
+<p>Each character is sent as</p>
+<ul>
+<li>a logic low start bit</li>
+<li>a configurable number of data bits</li>
+<li>an optional parity bit</li>
+<li>one or more logic high stop bits</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Untitled 27.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Untitled</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="variations" class="level1">
+<h1>Variations</h1>
+<p>UART is actually a generic term that includes a large number of different devices/standards.</p>
+<ul>
+<li>RS-232 is a standard that specifies
+<ul>
+<li>Electrical characteristics and timing of signals, the meaning of signals, and the physical size and pin out of connectors.</li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
