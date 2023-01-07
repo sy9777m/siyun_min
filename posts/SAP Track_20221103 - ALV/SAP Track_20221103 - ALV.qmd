@@ -6,9 +6,6 @@ categories: [SSU, SAP]
 ---
 # 20221103 - ALV
 
-Created: November 3, 2022 6:37 PM
-Last edited time: November 3, 2022 7:49 PM
-
 CHAR 72의 문제가 있음
 
 [째니의 테이블 : 네이버 블로그](https://blog.naver.com/jenny_table/222116898031)

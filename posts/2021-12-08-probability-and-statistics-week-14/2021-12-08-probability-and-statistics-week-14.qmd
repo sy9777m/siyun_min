@@ -28,54 +28,54 @@ categories: [SSU]
 
 ## Transformation
 
-![image-20211208042254510](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208042254510.png)
+![image-20211208042254510](./image-20211208042254510.png)
 
 ## Inverse transformation
 
-![image-20211208042306456](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208042306456.png)
+![image-20211208042306456](./image-20211208042306456.png)
 
 ## 주의해야 할 것
 
-![image-20211208042315155](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208042315155.png)
+![image-20211208042315155](./image-20211208042315155.png)
 
-![image-20211208042321286](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208042321286.png)
+![image-20211208042321286](./image-20211208042321286.png)
 
 ## Multiple regression
 
-![image-20211208042332389](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208042332389.png)
+![image-20211208042332389](./image-20211208042332389.png)
 
 ## How to fit?
 
-![image-20211208043013463](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043013463.png)
+![image-20211208043013463](./image-20211208043013463.png)
 
 ## Multiple regression
 
-![image-20211208043023190](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043023190.png)
+![image-20211208043023190](./image-20211208043023190.png)
 
-![image-20211208043028637](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043028637.png)
+![image-20211208043028637](./image-20211208043028637.png)
 
 ## Matrix algebra for multiple regression
 
-![image-20211208043040999](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043040999.png)
+![image-20211208043040999](./image-20211208043040999.png)
 
-![image-20211208043047102](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043047102.png)
+![image-20211208043047102](./image-20211208043047102.png)
 
-![image-20211208043052820](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043052820.png)
+![image-20211208043052820](./image-20211208043052820.png)
 
-![image-20211208043058265](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043058265.png)
+![image-20211208043058265](./image-20211208043058265.png)
 
 ## Nonlinear regression
 
-![image-20211208043921131](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043921131.png)
+![image-20211208043921131](./image-20211208043921131.png)
 
 ## 이번 시간에 한 일
 
-![image-20211208043932412](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208043932412.png)
+![image-20211208043932412](./image-20211208043932412.png)
 
 ## Practice
 
-![image-20211208054439298](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208054439298.png)
+![image-20211208054439298](./image-20211208054439298.png)
 
-![image-20211208054446153](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208054446153.png)
+![image-20211208054446153](./image-20211208054446153.png)
 
-![image-20211208054452961](/Kevin_Min/images/2021-12-08-probability-and-statistics-week-14/image-20211208054452961.png)
+![image-20211208054452961](./image-20211208054452961.png)

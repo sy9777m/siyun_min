@@ -6,9 +6,6 @@ categories: [Essay, UCB, SAF]
 ---
 # The Berkeley Method of Entrepreneurship
 
-Created: June 15, 2022 2:37 PM
-📨 Project: https://www.notion.so/SAF-Marketing-Internship-9f3d758230ce499da24e058a3e92cb14
-
 ![대학 캠퍼스는 이래야 하는 것 같다.](./Untitled.png)
 
 대학 캠퍼스는 이래야 하는 것 같다.

@@ -6,9 +6,6 @@ categories: [Kaggle]
 ---
 # Python
 
-Created: December 2, 2022 1:53 PM
-Last edited time: December 2, 2022 5:49 PM
-
 # Hello, Python
 
 ```python
