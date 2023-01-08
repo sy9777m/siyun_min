@@ -73,7 +73,7 @@ stockholder, creditors (suppliers, bankers), taxing authorities (Internal Revenu
 
 일반적으로 인정되는 회계원칙 - accounting standards, 기업의 재무보고의 원칙
 
-Principles that have substantial authoritative support (such as FASB standards, Interpretations, APb opinions).
+Principles that have substantial authoritative support (such as FASB standards, Interpretations, APB opinions).
 
 Financial Accounting Standard Board (FASB): 1973년 이후 GAAP의 독립적인 제정기관
 
@@ -193,7 +193,7 @@ Financial statement representing total non-owner transactions, excluding capital
 
 기업 실체의 순자산 변동액 중에서 주주와의 자본거래를 제외한 총손익거래를 나타내는 재무제표
 
-Other comprehensive income (기타포괄손익)은 당기에 발생한 총포괄손익 (수이고가 비용) 중에서 당기손익 (net income) 사항을 제외한 나머지 손익을 말한다.
+Other comprehensive income (기타포괄손익)은 당기에 발생한 총포괄손익 (수익과 비용) 중에서 당기손익 (net income) 사항을 제외한 나머지 손익을 말한다.
 
 ## Statement of cash flow (현금흐름표)
 
@@ -261,14 +261,14 @@ Full disclosure principle (완전공시의 원칙)
 
 | type | characteristics |
 | --- | --- |
-| Proprietorship (개인사업자) | - Business owned by one person, relatively small type business
-- 사업을 개시하기 위한 별도의 special legal requirement가 요구되지 않는다
-- The owner liable for all debts of business (Unlimited liability)
-- There is no legal distinction between the business and the owner |
+| Proprietorship (개인사업자) | Business owned by one person, relatively small type business
+사업을 개시하기 위한 별도의 special legal requirement가 요구되지 않는다
+The owner liable for all debts of business (Unlimited liability)
+There is no legal distinction between the business and the owner |
 | Partnership
-(파트너십) | - A business owned by two or more persons associated as partners
-- 개인사업자와 동일하게 별도의 법률적 요구사항은 필요 없고 동압자간에 agreements만 필요하다
-- Each partner has unlimited personal liability for the debt of the partnership
-- Partnership transactions must be kept separate from the personal activities of the partners. |
-| Corporate (법인) | - A business organizes a separate legal entity
-- Stockholders has limited liability (not personally liable for the debt of the corporation) |
+(파트너십) | A business owned by two or more persons associated as partners
+개인사업자와 동일하게 별도의 법률적 요구사항은 필요 없고 동압자간에 agreements만 필요하다
+Each partner has unlimited personal liability for the debt of the partnership
+Partnership transactions must be kept separate from the personal activities of the partners. |
+| Corporate (법인) | A business organizes a separate legal entity
+Stockholders has limited liability (not personally liable for the debt of the corporation) |
